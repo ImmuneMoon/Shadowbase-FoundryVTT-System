@@ -1,0 +1,35 @@
+<!-- systems\shadowbase\templates\items\item-skill-sheet.hbs -->
+
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Skill Name"/></h1>
+    </div>
+  </header>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+      <div class="form-group">
+        <label for="system.level">Skill Level</label>
+        <input type="number" name="system.level" value="{{system.level}}" placeholder="e.g., 12" />
+      </div>
+
+      <div class="form-group">
+        <label for="system.relativeLevel">Relative Level</label>
+        <input type="text" name="system.relativeLevel" value="{{system.relativeLevel}}" placeholder="e.g., DX/A" />
+      </div>
+
+      <div class="form-group">
+        <label for="system.points">Point Cost</label>
+        <input type="number" name="system.points" value="{{system.points}}" placeholder="Auto-calculates on sheet" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="system.notes">Description / Notes</label>
+      <textarea name="system.notes" rows="6" placeholder="Description or specialization notes...">{{system.notes}}</textarea>
+    </div>
+  </section>
+</form>

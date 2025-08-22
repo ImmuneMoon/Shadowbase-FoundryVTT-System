@@ -1,0 +1,183 @@
+
+{
+  "Actor": {
+    "version": "3.1.0",
+    "types": ["character"],
+    "character": {
+      "player": "",
+      "species": "",
+      "campaign": "",
+      "points": {
+        "total": 0,
+        "spent": 0,
+        "remaining": 0,
+        "powerPoints": 0,
+        "lightSidePoints": 0,
+        "darkSidePoints": 0
+      },
+      "credits": {
+        "total": 0
+      },
+      "details": {
+        "height": "",
+        "weight": "",
+        "age": 0,
+        "sizeModifier": 0,
+        "isDroid": false,
+        "appearance": "",
+        "techLevel": ""
+      },
+      "languages": "",
+      "culturalFamiliarities": "",
+      "literacy": "",
+      "attributes": {
+        "strength": { "value": 10, "points": 0 },
+        "dexterity": { "value": 10, "points": 0 },
+        "iq": { "value": 10, "points": 0 },
+        "health": { "value": 10, "points": 0 }
+      },
+      "characteristics": {
+        "hitPoints": { "base": 0, "final": 0, "points": 0, "current": 0, "max": 0 },
+        "will": { "base": 0, "final": 0, "points": 0, "current": 0 },
+        "perception": { "base": 0, "final": 0, "points": 0, "current": 0 },
+        "vision": { "base": 0, "final": 0, "points": 0 },
+        "hearing": { "base": 0, "final": 0, "points": 0 },
+        "tasteAndSmell": { "base": 0, "final": 0, "points": 0 },
+        "touch": { "base": 0, "final": 0, "points": 0 },
+        "endurancePoints": { "base": 0, "final": 0, "points": 0, "current": 0, "max": 0 },
+        "forcePoints": { "base": 0, "final": 0, "points": 0, "current": 0, "max": 0 },
+        "frightCheck": { "base": 0, "final": 0, "points": 0, "current": 0 },
+        "basicSpeed": { "base": 0, "final": 0, "points": 0, "current": 0 },
+        "basicMove": { "base": 0, "final": 0, "points": 0, "current": 0 },
+        "damage": {
+          "thrust": "",
+          "swing": ""
+        },
+        "basicLift": "",
+        "defenses": {
+          "dodge": 0,
+          "parry": 0,
+          "block": 0
+        },
+        "dr": {
+          "head": 0, "torso": 0, "leftArm": 0, "rightArm": 0, "leftLeg": 0,
+          "rightLeg": 0, "leftHand": 0, "rightHand": 0, "leftFoot": 0, "rightFoot": 0
+        }
+      },
+      "narrative": {
+        "description": "",
+        "background": "",
+        "notes": ""
+      },
+      "maneuvers": {
+        "aim": false,
+        "allOutDefense": false
+      },
+      "activeParrySkillId": "",
+      "activeBlockSkillId": "",
+      "activeLightsaberFormId": null,
+      "forceAlignment": 0
+    }
+  },
+  "Item": {
+    "version": "3.1.0",
+    "types": [
+      "advantage", "disadvantage", "quirk", "skill", "forcePower",
+      "combatTechnique", "lightsaberForm", "equipment", "meleeWeapon",
+      "blaster", "explosive", "armor", "lightsaber", "vehicle"
+    ],
+    "templates": {
+      "base": {
+        "notes": "",
+        "points": 0
+      }
+    },
+    "advantage": { "templates": ["base"] },
+    "disadvantage": { "templates": ["base"] },
+    "quirk": { "templates": ["base"] },
+    "skill": {
+      "templates": ["base"],
+      "level": 0,
+      "relativeLevel": ""
+    },
+    "forcePower": {
+      "templates": ["base"],
+      "level": 0,
+      "cpCost": 0,
+      "fpCost": 0,
+      "epCost": 0,
+      "requirements": "",
+      "baseSkill": "",
+      "alignment": "Grey"
+    },
+    "combatTechnique": {
+      "templates": ["base"],
+      "level": 0,
+      "cpCost": 0,
+      "epCost": 0,
+      "requirements": ""
+    },
+    "lightsaberForm": {
+      "templates": ["base"],
+      "level": 0,
+      "cpCost": 0,
+      "fpCost": 0,
+      "epCost": 0,
+      "requirements": ""
+    },
+    "equipment": {
+      "templates": ["base"],
+      "weight": 0,
+      "quantity": 1,
+      "cost": 0
+    },
+    "meleeWeapon": {
+      "templates": ["base"],
+      "combat": {
+        "skill": "",
+        "damage": "",
+        "rollableDamage": ""
+      },
+      "modifications": []
+    },
+    "blaster": {
+      "templates": ["base"],
+      "combat": {
+        "skill": "",
+        "damage": "",
+        "rollableDamage": ""
+      },
+      "modifications": []
+    },
+    "lightsaber": {
+      "templates": ["base"],
+      "combat": {
+        "skill": "",
+        "damage": "",
+        "rollableDamage": ""
+      }
+    },
+    "explosive": {
+      "templates": ["base"],
+      "quantity": 1,
+      "combat": {
+        "skill": "",
+        "damage": "",
+        "rollableDamage": ""
+      },
+      "modifications": []
+    },
+    "armor": {
+      "templates": ["base"],
+      "drValue": 0,
+      "locations": [],
+      "isShield": false,
+      "shieldActive": false,
+      "modifications": []
+    },
+    "vehicle": {
+      "templates": ["base"],
+      "modifications": []
+    }
+  }
+}

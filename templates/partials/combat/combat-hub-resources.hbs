@@ -1,0 +1,28 @@
+<!-- systems\shadowbase\templates\partials\combat\combat-hub-resources.hbs -->
+
+<div class="section-box">
+  <h4 class="font-semibold text-primary">Resource Pools</h4>
+  <div class="grid grid-cols-3 gap-2 mt-1">
+    <div class="resource-item">
+      <label class="text-xs">Hit Points</label>
+      <div class="flex items-center gap-1">
+        <input type="number" name="system.characteristics.hitPoints.current" value="{{system.characteristics.hitPoints.current}}" class="w-full text-center" />
+        <span class="text-sm text-muted-foreground">/ {{system.characteristics.hitPoints.max}}</span>
+      </div>
+    </div>
+    <div class="resource-item">
+      <label class="text-xs">Endurance</label>
+        <div class="flex items-center gap-1">
+        <input type="number" name="system.characteristics.endurancePoints.current" value="{{system.characteristics.endurancePoints.current}}" class="w-full text-center" />
+        <span class="text-sm text-muted-foreground">/ {{system.characteristics.endurancePoints.max}}</span>
+      </div>
+    </div>
+    <div class="resource-item">
+      <label class="text-xs">Force</label>
+      <div class="flex items-center gap-1">
+        <input type="number" name="system.characteristics.forcePoints.current" value="{{system.characteristics.forcePoints.current}}" class="w-full text-center" />
+        <span class="text-sm text-muted-foreground">/ {{system.characteristics.forcePoints.max}}</span>
+      </div>
+    </div>
+  </div>
+</div>

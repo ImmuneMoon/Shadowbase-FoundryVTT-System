@@ -1,0 +1,26 @@
+<!-- systems\shadowbase\templates\partials\inventory\actor-vehicles.hbs -->
+
+<div class="section-box">
+    <h3 class="section-header collapsible-header">
+        <span><i class="fas fa-chevron-down"></i> Vehicles & Starships</span>
+        <div class="item-controls">
+            <a class="item-create" title="Add Vehicle" data-type="vehicle"><i class="fas fa-plus"></i></a>
+        </div>
+    </h3>
+    <ul class="item-list collapsible-content">
+        {{#each inventory.starships as |item|}}
+            <li class="item-entry" data-item-id="{{item._id}}">
+                <div class="item-header">
+                    <span class="item-name">{{item.name}}</span>
+                    <div class="item-controls">
+                        <a class="item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+                        <a class="item-delete" title="Delete"><i class="fas fa-trash"></i></a>
+                    </div>
+                </div>
+                <div class="item-details">
+                    <span>{{item.system.baseChassis}}</span>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</div>

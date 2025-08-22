@@ -1,0 +1,198 @@
+
+[
+  {
+    "name": "Adherent to a Mandalorian Tradition",
+    "description": "You follow a minor, specific Mandalorian custom, even if you are not Mandalorian. This could be tapping your chest before combat, refusing to sit with your back to a door, or reciting a particular proverb in stressful situations.",
+    "pointCost": -1
+  },
+  {
+    "name": "Always wears a specific item of clothing",
+    "description": "You have a signature piece of apparel—a battered helmet, a lucky charm on a necklace, a specific style of worn leather gloves—that you are never seen without.",
+    "pointCost": -1
+  },
+  {
+    "name": "Atheist/Skeptic",
+    "description": "In a galaxy where the Force is a tangible reality, you are deeply skeptical of its power, dismissing it as superstition, Jedi mind tricks, or misunderstood technology.",
+    "pointCost": -1
+  },
+  {
+    "name": "Broad-minded",
+    "description": "You are exceptionally open to new ideas, cultures, and alien customs, rarely passing judgment.",
+    "pointCost": -1
+  },
+  {
+    "name": "Careful",
+    "description": "You are meticulous and cautious, often double-checking your gear, plans, and surroundings. This is not cowardice, but a deep-seated need for preparedness.",
+    "pointCost": -1
+  },
+  {
+    "name": "Chauvinistic",
+    "description": "You believe your species, homeworld, or culture is inherently superior to all others.",
+    "pointCost": -1
+  },
+  {
+    "name": "Congenial",
+    "description": "You are naturally friendly and eager to please.",
+    "pointCost": -1
+  },
+  {
+    "name": "Curious",
+    "description": "You have a strong desire to know things, sometimes to your detriment. You might poke your nose into places it doesn't belong or ask too many questions.",
+    "pointCost": -1
+  },
+  {
+    "name": "Czerka Loyalist (Minor)",
+    "description": "You believe that Czerka Corporation, despite its reputation, is a force for order and progress in the galaxy. You tend to defend their actions and trust their representatives.",
+    "pointCost": -1
+  },
+  {
+    "name": "Dark Side Tainted",
+    "description": "You feel a subtle pull from the Dark Side. When confronted with a choice, you feel a fleeting temptation to take the faster, more aggressive path. This does not mean you are evil, but you must actively resist these impulses. GM Note: This may require occasional self-control rolls in moments of extreme anger or fear.",
+    "pointCost": -1
+  },
+  {
+    "name": "Dislikes a specific group",
+    "description": "You have an irrational aversion to a particular group, such as droids, a specific alien species (e.g., 'I can't stand the chittering of Verpine'), or a corporate entity.",
+    "pointCost": -1
+  },
+  {
+    "name": "Distractible",
+    "description": "Your attention wanders easily. A passing datapad screen or an interesting conversation can pull you away from the task at hand.",
+    "pointCost": -1
+  },
+  {
+    "name": "Dreamer",
+    "description": "Your head is often in the clouds, contemplating philosophies, grand plans, or far-off places, sometimes at the expense of paying attention to the here-and-now.",
+    "pointCost": -1
+  },
+  {
+    "name": "Dull",
+    "description": "You have very little imagination and a strictly literal, pragmatic view of the world.",
+    "pointCost": -1
+  },
+  {
+    "name": "Egotistical",
+    "description": "You talk about yourself and your accomplishments frequently, often exaggerating your role in successful endeavors.",
+    "pointCost": -1
+  },
+  {
+    "name": "Follows a strict personal code",
+    "description": "You have a set of self-imposed rules you will not break (e.g., 'Never deal with Hutts,' 'Always pay my debts,' 'Never leave a squadmate behind').",
+    "pointCost": -1
+  },
+  {
+    "name": "Force-Insensitive Commentary",
+    "description": "You frequently make light of the Force, referring to Jedi abilities as \"hokey religions\" or \"fancy laser sword tricks,\" not out of malice, but out of a genuine lack of understanding.",
+    "pointCost": -1
+  },
+  {
+    "name": "Haunted by the War",
+    "description": "The horrors of the Mandalorian Wars have left a mark. You might occasionally fall silent, lost in a memory, or have a low tolerance for loud, sudden noises that remind you of blaster fire.",
+    "pointCost": -1
+  },
+  {
+    "name": "Humble",
+    "description": "You consistently downplay your own achievements and importance.",
+    "pointCost": -1
+  },
+  {
+    "name": "Imaginative",
+    "description": "You have a vivid imagination, which can be a source of brilliant ideas or baseless paranoia.",
+    "pointCost": -1
+  },
+  {
+    "name": "Incurious",
+    "description": "You are content with what you know and rarely seek out new information or experiences.",
+    "pointCost": -1
+  },
+  {
+    "name": "Jedi Sympathizer",
+    "description": "You hold the Jedi Order in high regard, perhaps idealizing the tales of their wisdom and prowess. You are more likely to trust and help individuals you believe to be Jedi.",
+    "pointCost": -1
+  },
+  {
+    "name": "Light Side Affinity",
+    "description": "You have a natural inclination toward compassion and serenity. You feel a pang of guilt when you act selfishly and find it easier to show mercy than to seek revenge. GM Note: This quirk might offer a small, situational bonus (+1) to resist fear or intimidation when protecting others.",
+    "pointCost": -1
+  },
+  {
+    "name": "Likes a specific group",
+    "description": "You have a notable fondness for a particular group, such as Wookiees, droids, or a specific alien culture.",
+    "pointCost": -1
+  },
+  {
+    "name": "Nosy",
+    "description": "You are actively interested in other people's business and may eavesdrop or snoop.",
+    "pointCost": -1
+  },
+  {
+    "name": "Old Republic Patriot",
+    "description": "You are a staunch believer in the ideals of the Republic, even as its bureaucracy and military struggles are laid bare by the war. You may salute Republic soldiers or speak fondly of Coruscant.",
+    "pointCost": -1
+  },
+  {
+    "name": "Oversensitive",
+    "description": "You are easily insulted or emotionally wounded by perceived slights.",
+    "pointCost": -1
+  },
+  {
+    "name": "Prejudiced Against Droids",
+    "description": "You view droids not just with dislike, but as inferior objects. You might call them \"clankers\" or \"tin cans\" and refuse to acknowledge them as anything more than tools.",
+    "pointCost": -1
+  },
+  {
+    "name": "Proud",
+    "description": "You have a strong sense of self-worth and dignity and will react poorly to insults or challenges to your honor.",
+    "pointCost": -1
+  },
+  {
+    "name": "Responsive",
+    "description": "You are a 'go-getter' who is always the first to volunteer or act on a new idea.",
+    "pointCost": -1
+  },
+  {
+    "name": "Shy",
+    "description": "You are uncomfortable in social situations, especially with strangers, and tend to speak only when spoken to.",
+    "pointCost": -1
+  },
+  {
+    "name": "Squeamish",
+    "description": "You are easily unnerved by the sight of blood, gore, or serious injury.",
+    "pointCost": -1
+  },
+  {
+    "name": "Staid",
+    "description": "You are serious, sober, and not given to flights of fancy or strong emotional displays.",
+    "pointCost": -1
+  },
+  {
+    "name": "Struggles with a particular technology",
+    "description": "You are inept with a common piece of tech. For example, you might be unable to operate astromech droids properly.",
+    "pointCost": -1
+  },
+  {
+    "name": "Talkative",
+    "description": "You talk constantly, filling silences with chatter, stories, or observations, sometimes revealing more than you should.",
+    "pointCost": -1
+  },
+  {
+    "name": "Tech Scavenger",
+    "description": "You have a habit of compulsively stripping downed droids, broken equipment, or abandoned consoles for spare parts, convinced they might be useful later. You often have pockets full of random wires, power cells, and processors.",
+    "pointCost": -1
+  },
+  {
+    "name": "Uncongenial",
+    "description": "You are grumpy, reserved, and generally difficult to get along with.",
+    "pointCost": -1
+  },
+  {
+    "name": "Vow",
+    "description": "You have a minor vow, such as never drinking alcohol or never refusing a request for aid from a child.",
+    "pointCost": -1
+  },
+  {
+    "name": "Wary of Force Users",
+    "description": "Having seen or heard of the power wielded by Jedi and their dark counterparts, you are inherently suspicious of anyone who can use the Force. You keep your distance and watch them closely.",
+    "pointCost": -1
+  }
+]

@@ -1,0 +1,108 @@
+{
+  "id": "shadowbase",
+  "title": "ShadowBase - Shadows of The Mandalorian War",
+  "description": "A custom system for the GURPS-based Shadows of the Mandalorian Wars campaign.",
+  "version": "1.0.1",
+  "authors": [
+    {
+      "name": "Fulllion Creative Works"
+    }
+  ],
+  "compatibility": {
+    "minimum": "11",
+    "verified": "13"
+  },
+  "esmodules": [
+    "scripts/shadowbase.js"
+  ],
+  "styles": [
+    "styles/sheet.css"
+  ],
+  "packs": [
+    {
+      "name": "skills",
+      "label": "Skills",
+      "path": "packs/skills.db",
+      "type": "Item",
+      "system": "shadowbase"
+    },
+    {
+      "name": "advantages",
+      "label": "Advantages",
+      "path": "packs/advantages.db",
+      "type": "Item",
+      "system": "shadowbase"
+    },
+    {
+      "name": "disadvantages",
+      "label": "Disadvantages",
+      "path": "packs/disadvantages.db",
+      "type": "Item",
+      "system": "shadowbase"
+    },
+    {
+      "name": "quirks",
+      "label": "Quirks",
+      "path": "packs/quirks.db",
+      "type": "Item",
+      "system": "shadowbase"
+    },
+    {
+      "name": "forcepowers",
+      "label": "Force Powers",
+      "path": "packs/forcepowers.db",
+      "type": "Item",
+      "system": "shadowbase"
+    },
+    {
+      "name": "combattechniques",
+      "label": "Combat Techniques",
+      "path": "packs/combattechniques.db",
+      "type": "Item",
+      "system": "shadowbase"
+    },
+    {
+      "name": "lightsaberforms",
+      "label": "Lightsaber Forms",
+      "path": "packs/lightsaberforms.db",
+      "type": "Item",
+      "system": "shadowbase"
+    },
+    {
+      "name": "vehicles",
+      "label": "Vehicles",
+      "path": "packs/vehicles.db",
+      "type": "Item",
+      "system": "shadowbase"
+    },
+    {
+      "name": "weapons",
+      "label": "Weapons",
+      "path": "packs/weapons.db",
+      "type": "Item",
+      "system": "shadowbase"
+    },
+    {
+      "name": "armor",
+      "label": "Armor",
+      "path": "packs/armor.db",
+      "type": "Item",
+      "system": "shadowbase"
+    },
+    {
+      "name": "lightsabers",
+      "label": "Lightsabers",
+      "path": "packs/lightsabers.db",
+      "type": "Item",
+      "system": "shadowbase"
+    }
+  ],
+  "languages": [],
+  "socket": false,
+  "grid": {
+    "distance": 1,
+    "units": "yd"
+  },
+  "primaryTokenAttribute": "characteristics.hitPoints",
+  "secondaryTokenAttribute": "characteristics.forcePoints"
+}

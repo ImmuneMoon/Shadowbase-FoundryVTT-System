@@ -1,0 +1,53 @@
+
+[
+  {
+    "name": "Power Shot / Power Attack",
+    "baseSkill": "Any Ranged or Melee Weapon skill",
+    "levels": [
+      { "level": 1, "cpCost": 10, "epCost": 1, "effect": "You make a single attack with a -1 penalty to skill, but if it hits, you inflict +1 damage. This attack takes your full turn and prevents you from defending (treat as an All-Out Attack, but you specify 'Strong').", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "epCost": 2, "effect": "You make a single attack with no penalty to skill, and if it hits, you inflict +2 damage. This attack takes your full turn and prevents you from defending.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "epCost": 3, "effect": "You make a single attack with +1 bonus to skill, and if it hits, you inflict +3 damage. This attack takes your full turn and prevents you from defending. Additionally, if the attack is a melee attack and hits by 3 or more, the target must make a HT roll or be knocked back 1 yard.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "epCost": 4, "effect": "You make a single attack with +2 bonus to skill, and if it hits, you inflict +4 damage. This attack still takes your full turn and prevents you from defending. If the attack is a melee attack and hits by 3 or more, the target must make a HT-1 roll or be knocked back 2 yards and fall prone. If a ranged attack, a critical hit can bypass up to 2 points of the target's DR.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Critical Strike / Called Shot",
+    "baseSkill": "Any Melee or Ranged Weapon skill",
+    "levels": [
+      { "level": 1, "cpCost": 10, "epCost": 1, "effect": "You make a single attack with a -3 penalty to skill. If successful, you may choose a specific hit location (e.g., arm, leg) as if using the Aim/Targeted Attack rules. If the attack hits the chosen location, it causes +1 additional injury on the hit location, regardless of damage type.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "epCost": 2, "effect": "You make a single attack with a -2 penalty to skill. If successful, you may choose a specific hit location. If the attack hits the chosen location, it causes +2 additional injury. If the attack is a melee attack and hits a limb, the target's next action with that limb is at a -1 penalty.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "epCost": 3, "effect": "You make a single attack with a -1 penalty to skill. If successful, you may choose a specific hit location. If the attack hits the chosen location, it causes +3 additional injury. If the attack is a melee attack and hits a limb, the target's next action with that limb is at a -2 penalty, or they must make a HT roll to avoid dropping what they hold in that hand.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "epCost": 4, "effect": "You make a single attack with no penalty to skill. If successful, you may choose a specific hit location. If the attack hits the chosen location, it causes +4 additional injury. If the attack is a melee attack and hits a limb, the target must make a HT-1 roll or drop what they hold and suffer a -3 penalty to actions with that limb for 1d turns. For a ranged attack to the torso, if damage penetrates, it causes a wound modifier as if it were a Vitals hit.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Flurry / Rapid Shot",
+    "baseSkill": "Any Melee or Ranged Weapon skill",
+    "levels": [
+      { "level": 1, "cpCost": 10, "epCost": 2, "effect": "You make two attacks against the same target in a single turn. Both attacks are made at a -3 penalty to skill. You cannot defend on this turn (treat as an All-Out Attack, 'Double').", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "epCost": 3, "effect": "You make two attacks against the same target in a single turn. Both attacks are made at a -2 penalty to skill. You cannot defend on this turn.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "epCost": 4, "effect": "You make two attacks against the same target in a single turn. Both attacks are made at a -1 penalty to skill. You cannot defend on this turn. Additionally, if both attacks hit, the target suffers a -1 penalty to their active defenses on the following turn.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "epCost": 5, "effect": "You make three attacks against the same target in a single turn. All attacks are made at a -2 penalty to skill. You cannot defend on this turn. If at least two attacks hit, the target suffers a -2 penalty to their active defenses on the following turn, and must make a HT roll or be Stunned for 1 turn.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Stun Attack",
+    "baseSkill": "Brawling, Melee, or Ranged skill",
+    "levels": [
+      { "level": 1, "cpCost": 10, "epCost": 1, "effect": "You make a single attack at -2 penalty to skill. If it hits and inflicts any damage (even 0 HP), the target must make a HT roll or be stunned for 1 turn. This attack deals half normal damage (or no damage if using a non-lethal setting on a blaster).", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "epCost": 2, "effect": "You make a single attack at -1 penalty to skill. If it hits and inflicts any damage, the target must make a HT-1 roll or be stunned for 1d turns. This attack deals half normal damage.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "epCost": 3, "effect": "You make a single attack at no penalty to skill. If it hits and inflicts any damage, the target must make a HT-2 roll or be stunned for 1d+1 turns. This attack deals half normal damage. On a critical hit, the target is stunned for 1d turns and falls unconscious for 1d minutes on a failed HT roll.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "epCost": 4, "effect": "You make a single attack with a +1 bonus to skill. If it hits and inflicts any damage, the target must make a HT-3 roll or be stunned for 1d+2 turns. This attack deals half normal damage. On a critical hit, the target is stunned for 1d+1 turns and falls unconscious for 1d hours on a failed HT roll.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Disarming Strike",
+    "baseSkill": "Any Ranged or Melee Weapon skill",
+    "levels": [
+      { "level": 1, "cpCost": 10, "epCost": 1, "effect": "You make a single attack at -3 penalty to skill, targeting the opponent's weapon or held item. If it hits, the target must make a DX roll to avoid dropping the item. This attack deals half normal damage to the item (or the limb if no item DR) if applicable.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "epCost": 2, "effect": "You make a single attack at -2 penalty to skill, targeting the opponent's weapon or held item. If it hits, the target must make a DX-1 roll to avoid dropping the item. This attack deals half normal damage to the item.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "epCost": 3, "effect": "You make a single attack at -1 penalty to skill, targeting the opponent's weapon or held item. If it hits, the target must make a DX-2 roll to avoid dropping the item. This attack deals normal damage to the item (or limb). If the target fails by 3 or more, the item flies 1d yards away.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "epCost": 4, "effect": "You make a single attack with no penalty to skill, targeting the opponent's weapon or held item. If it hits, the target must make a DX-3 roll to avoid dropping the item. This attack deals normal damage to the item. If the target fails by 3 or more, the item flies 1d+2 yards away. On a critical hit, the item is instantly disarmed and broken (if fragile) or severely damaged (if durable), or the target takes full damage to the limb and suffers a critical limb injury.", "requirements": "Master" }
+    ]
+  }
+]

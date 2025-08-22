@@ -1,0 +1,31 @@
+<!-- systems\shadowbase\templates\partials\core\actor-force-alignment.hbs -->
+<div class="section-box">
+  <div class="section-header">
+    <h3>Force Alignment</h3>
+  </div>
+
+  <div class="force-alignment-container">
+    <div class="force-alignment-slider-wrapper">
+      <div class="force-alignment-center-marker"></div>
+      <input
+        type="range"
+        name="system.forceAlignment"
+        value="{{system.forceAlignment}}"
+        min="-100"
+        max="100"
+        step="1"
+        class="force-alignment-slider"
+      />
+    </div>
+    <div class="alignment-labels">
+      <span class="dark-side"><i class="fas fa-moon"></i> Dark Side</span>
+      <input
+        type="number"
+        name="system.forceAlignment"
+        value="{{system.forceAlignment}}"
+        class="alignment-input"
+      />
+      <span class="light-side">Light Side <i class="fas fa-sun"></i></span>
+    </div>
+  </div>
+</div>

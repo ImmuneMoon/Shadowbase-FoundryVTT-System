@@ -1,0 +1,85 @@
+<!-- systems\shadowbase\templates\partials\abilities\actor-traits.hbs -->
+
+<div class="section-box">
+    <h3 class="section-header collapsible-header">
+        <span><i class="fas fa-chevron-down"></i> Advantages </span>
+        <div class="item-controls">
+            <a class="item-create" title="Add Adv" data-type="advantage"><i class="fas fa-plus"></i></a>
+        </div>
+    </h3>
+    <ol class="item-list">
+        {{#each itemsByType.advantage as |item id|}}
+        <li class="item-entry" data-item-id="{{item._id}}">
+            <div class="item-header">
+                <a class="item-name rollable">{{item.name}}</a>
+                <div class="item-controls">
+                    <a class="item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                    <a class="item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                </div>
+            </div>
+            <div class="item-details">
+                Points: {{item.system.points}}
+            </div>
+            <div class="item-description" style="display: none;">
+                {{item.system.notes}}
+            </div>
+        </li>
+        {{/each}}
+    </ol>
+</div>
+
+<div class="section-box">
+    <h3 class="section-header collapsible-header">
+        <span><i class="fas fa-chevron-down"></i> Disadvantages </span>
+        <div class="item-controls">
+            <a class="item-create" title="Add Disadv" data-type="disadvantage"><i class="fas fa-plus"></i></a>
+        </div>
+    </h3>
+    <ol class="item-list">
+        {{#each itemsByType.disadvantage as |item id|}}
+        <li class="item-entry" data-item-id="{{item._id}}">
+            <div class="item-header">
+                <a class="item-name rollable">{{item.name}}</a>
+                <div class="item-controls">
+                    <a class="item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                    <a class="item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                </div>
+            </div>
+            <div class="item-details">
+                Points: {{item.system.points}}
+            </div>
+            <div class="item-description" style="display: none;">
+                {{item.system.notes}}
+            </div>
+        </li>
+        {{/each}}
+    </ol>
+</div>
+
+<div class="section-box">
+    <h3 class="section-header collapsible-header">
+        <span><i class="fas fa-chevron-down"></i> Quirks </span>
+        <div class="item-controls">
+            <a class="item-create" title="Add Quirk" data-type="quirk"><i class="fas fa-plus"></i></a>
+        </div>
+    </h3>
+    <ol class="item-list">
+        {{#each itemsByType.quirk as |item id|}}
+        <li class="item-entry" data-item-id="{{item._id}}">
+            <div class="item-header">
+                <a class="item-name rollable">{{item.name}}</a>
+                <div class="item-controls">
+                    <a class="item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                    <a class="item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                </div>
+            </div>
+             <div class="item-details">
+                Points: {{item.system.points}}
+            </div>
+            <div class="item-description" style="display: none;">
+                {{item.system.notes}}
+            </div>
+        </li>
+        {{/each}}
+    </ol>
+</div>

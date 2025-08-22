@@ -1,0 +1,29 @@
+<!-- systems\shadowbase\templates\items\item-weapon-sheet.hbs -->
+
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Weapon Name"/></h1>
+    </div>
+  </header>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+    <div class="form-group">
+      <label for="system.combat.skill">Required Skill</label>
+      <input type="text" name="system.combat.skill" value="{{system.combat.skill}}" />
+    </div>
+    <div class="form-group">
+      <label for="system.combat.damage">Damage</label>
+      <input type="text" name="system.combat.damage" value="{{system.combat.damage}}" />
+    </div>
+    
+    {{!-- Add more weapon-specific fields as needed --}}
+
+    <div class="form-group">
+      <label for="system.notes">Notes / Modifications</label>
+      <textarea name="system.notes">{{system.notes}}</textarea>
+    </div>
+  </section>
+</form>

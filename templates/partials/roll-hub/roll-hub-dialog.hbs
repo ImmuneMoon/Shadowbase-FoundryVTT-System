@@ -1,0 +1,136 @@
+<!-- systems\shadowbase\templates\partials\roll-hub-dialog.hbs -->
+<div class="roll-hub-dialog">
+
+    {{!-- Custom Roll Section --}}
+    <h3 class="section-header">Custom Roll</h3>
+    <div class="custom-roll-section grid-3-col section-box">
+        <div>
+            <label for="custom-roll-num-dice" class="resource-label">Dice</label>
+            <input id="custom-roll-num-dice" type="number" value="3" class="custom-roll-input" name="custom-roll-num-dice"/>
+        </div>
+        <div>
+            <label for="custom-roll-num-sides" class="resource-label">Sides</label>
+            <input id="custom-roll-num-sides" type="number" value="6" class="custom-roll-input" name="custom-roll-num-sides"/>
+        </div>
+        <div>
+            <label for="roll-modifier" class="resource-label">Modifier</label>
+            <input id="roll-modifier" type="number" value="0" class="custom-roll-input" name="roll-modifier"/>
+        </div>
+        <div class="col-span-full">
+            <button class="custom-roll-button rollable" type="button" style="width: 100%;" data-roll-type="custom" data-label="Custom Roll"><i class="fas fa-dice-d20"></i> Roll Custom Dice</button>
+        </div>
+    </div>
+
+
+    {{!-- Core Stats Section --}}
+    <h3 class="section-header">Core Stats &amp; Defenses</h3>
+    <div class="grid-3-col section-box">
+        {{#each system.attributes as |attr key|}}
+            <a class="roll-item roll-link rollable" data-roll-type="attribute" data-target="{{attr.value}}" data-label="{{capitalize key}}" data-macro-type="attribute" data-macro-key="{{key}}">
+                <div class="roll-label-container"><span class="roll-label">{{capitalize key}} ({{attr.value}})</span></div>
+                <i class="fas fa-dice-d20"></i>
+            </a>
+        {{/each}}
+        <a class="roll-item roll-link rollable" data-roll-type="attribute" data-target="{{system.characteristics.will.final}}" data-label="Will" data-macro-type="attribute" data-macro-key="will.final">
+            <div class="roll-label-container"><span class="roll-label">Will ({{system.characteristics.will.final}})</span></div>
+            <i class="fas fa-dice-d20"></i>
+        </a>
+        <a class="roll-item roll-link rollable" data-roll-type="attribute" data-target="{{system.characteristics.perception.final}}" data-label="Perception" data-macro-type="attribute" data-macro-key="perception.final">
+            <div class="roll-label-container"><span class="roll-label">Perception ({{system.characteristics.perception.final}})</span></div>
+            <i class="fas fa-dice-d20"></i>
+        </a>
+         <a class="roll-item roll-link rollable" data-roll-type="attribute" data-target="{{system.characteristics.frightCheck.final}}" data-label="Fright Check" data-macro-type="attribute" data-macro-key="frightCheck.final">
+            <div class="roll-label-container"><span class="roll-label">Fright Check ({{system.characteristics.frightCheck.final}})</span></div>
+            <i class="fas fa-dice-d20"></i>
+        </a>
+        <a class="roll-item roll-link rollable" data-roll-type="action" data-target="{{system.characteristics.basicSpeed.final}}" data-label="Initiative" data-macro-type="action" data-macro-key="initiative">
+            <div class="roll-label-container"><span class="roll-label">Initiative ({{system.characteristics.basicSpeed.final}})</span></div>
+            <i class="fas fa-dice-d20"></i>
+        </a>
+        <a class="roll-item roll-link rollable" data-roll-type="action" data-target="{{system.characteristics.defenses.dodge}}" data-label="Dodge" data-macro-type="action" data-macro-key="dodge">
+            <div class="roll-label-container"><span class="roll-label">Dodge ({{system.characteristics.defenses.dodge}})</span></div>
+            <i class="fas fa-dice-d20"></i>
+        </a>
+        <a class="roll-item roll-link rollable" data-roll-type="action" data-target="{{system.characteristics.defenses.parry}}" data-label="Parry {{activeParrySkillName}}" data-macro-type="action" data-macro-key="parry">
+            <div class="roll-label-container"><span class="roll-label truncate">Parry ({{system.characteristics.defenses.parry}})</span></div>
+            <i class="fas fa-dice-d20"></i>
+        </a>
+        <a class="roll-item roll-link rollable" data-roll-type="action" data-target="{{system.characteristics.defenses.block}}" data-label="Block {{activeBlockSkillName}}" data-macro-type="action" data-macro-key="block">
+            <div class="roll-label-container"><span class="roll-label truncate">Block ({{system.characteristics.defenses.block}})</span></div>
+            <i class="fas fa-dice-d20"></i>
+        </a>
+    </div>
+
+    {{!-- Skills Section --}}
+    <h3 class="section-header">Skills</h3>
+    <div class="grid-2-col section-box">
+        {{#each skills as |skill|}}
+            <a class="roll-item roll-link rollable" data-roll-type="skill" data-item-id="{{skill._id}}">
+                <div class="roll-label-container"><span class="roll-label">{{skill.name}} ({{skill.system.level}})</span></div>
+                <i class="fas fa-dice-d20"></i>
+            </a>
+        {{/each}}
+    </div>
+
+    {{!-- Weapons Section --}}
+    <h3 class="section-header">Weapons</h3>
+    <div class="grid-2-col section-box">
+        {{#each weapons as |weapon|}}
+            <div class="roll-item weapon-roll-item">
+                <div class="roll-label-container"><span class="roll-label">{{weapon.name}}</span></div>
+                <div class="roll-buttons">
+                    <button class="roll-button roll-link rollable" data-roll-type="attack" data-item-id="{{weapon._id}}"><i class="fas fa-crosshairs"></i> Atk</button>
+                    <button class="roll-button roll-link rollable" data-roll-type="damage" data-item-id="{{weapon._id}}" data-damage="{{weapon.system.combat.rollableDamage}}"><i class="fas fa-tint"></i> Dmg</button>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    
+     {{!-- Abilities --}}
+    <h3 class="section-header">Abilities</h3>
+    <div class="grid-2-col section-box">
+       {{#each forcePowers as |power|}}
+         <a class="roll-item roll-link rollable" data-roll-type="skill" data-item-id="{{power._id}}">
+            <div class="roll-label-container"><span class="roll-label">{{power.name}} (Lvl {{power.system.level}})</span></div>
+            <i class="fas fa-dice-d20"></i>
+        </a>
+      {{/each}}
+       {{#each combatTechniques as |technique|}}
+         <a class="roll-item roll-link rollable" data-roll-type="skill" data-item-id="{{technique._id}}">
+            <div class="roll-label-container"><span class="roll-label">{{technique.name}} (Lvl {{technique.system.level}})</span></div>
+            <i class="fas fa-fist-raised"></i>
+        </a>
+      {{/each}}
+    </div>
+
+    {{!-- Lightsaber Forms Section --}}
+    <h3 class="section-header">Lightsaber Forms</h3>
+    <div class="section-box">
+        {{#each actor.items as |item|}}
+            {{#if (eq item.type "lightsaberForm")}}
+                <div class="roll-item weapon-roll-item">
+                    <div class="roll-label-container"><span class="roll-label">{{item.name}} (Lvl {{item.system.level}})</span></div>
+                    <div class="roll-buttons">
+                        {{#if (eq ../system.activeLightsaberFormId item._id)}}
+                            <button class="activate-form-button active" data-action="activate-form" data-item-id="{{item._id}}"><i class="fas fa-check-circle"></i> Active</button>
+                        {{else}}
+                            <button class="activate-form-button" data-action="activate-form" data-item-id="{{item._id}}"><i class="far fa-circle"></i> Activate</button>
+                        {{/if}}
+                    </div>
+                </div>
+            {{/if}}
+        {{/each}}
+    </div>
+
+    {{!-- Rollable Equipment Section --}}
+    <h3 class="section-header">Rollable Items</h3>
+    <div class="grid-2-col section-box">
+        {{#each system.rollableEquipment as |entry|}}
+            <a class="roll-item roll-link rollable" data-roll-type="{{entry.rollInfo.type}}" data-item-id="{{entry.item._id}}" data-target="{{entry.rollInfo.target}}" data-label="{{entry.rollInfo.label}}" data-macro-type="skill" data-macro-key="{{entry.rollInfo.key}}">
+                <div class="roll-label-container"><span class="roll-label">{{entry.rollInfo.label}}</span></div>
+                <i class="fas fa-dice-d20"></i>
+            </a>
+        {{/each}}
+    </div>
+
+</div>

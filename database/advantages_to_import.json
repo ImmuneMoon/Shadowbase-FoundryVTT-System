@@ -1,0 +1,252 @@
+
+[
+  {
+    "name": "Absolute Direction",
+    "points": 5,
+    "description": "You always know which way is north and can recall any direction you have moved in. Useful for navigation through treacherous territories."
+  },
+  {
+    "name": "Absolute Timing",
+    "points": 2,
+    "description": "You always know the precise time without needing a clock. Valuable for coordinating precise ambushes or meeting illicit contacts."
+  },
+  {
+    "name": "Acute Senses",
+    "description": "Your sense of Smell, Taste, Touch, Vision, or Hearing is exceptionally sharp. (+1 per level).",
+    "levels": [
+      { "level": 1, "points": 2, "description": "+1 to one sense." },
+      { "level": 2, "points": 4, "description": "+2 to one sense." },
+      { "level": 3, "points": 6, "description": "+3 to one sense." },
+      { "level": 4, "points": 8, "description": "+4 to one sense." },
+      { "level": 5, "points": 10, "description": "+5 to one sense." }
+    ]
+  },
+  {
+    "name": "Altered Time Rate",
+    "description": "You perceive and react to the world much faster than normal.",
+    "levels": [
+      { "level": 1, "points": 100, "description": "Level 1 Altered Time Rate." }
+    ]
+  },
+  { "name": "Ally", "points": 1, "description": "You have a loyal friend or group who will help you. Cost varies based on power and frequency." },
+  { "name": "Alternate Identity", "points": 5, "description": "You have a legally established false identity. Cost is 5 for a basic ID, 15 for a well-established one." },
+  { "name": "Ambidexterity", "points": 5, "description": "You are equally skilled with both hands, suffering no off-hand penalty. Allows for versatile combat and multi-tasking." },
+  { "name": "Animal Empathy", "points": 5, "description": "You have a natural rapport with non-sentient creatures." },
+  {
+    "name": "Appearance",
+    "description": "Your physical attractiveness. Can be increased. (Attractive [4], Stunning [20])",
+    "levels": [
+      { "level": 1, "points": 4, "description": "Attractive" },
+      { "level": 2, "points": 12, "description": "Handsome/Beautiful" },
+      { "level": 3, "points": 16, "description": "Very Handsome/Beautiful" },
+      { "level": 4, "points": 20, "description": "Stunning/Transcendent" }
+    ]
+  },
+  { "name": "Catfall", "points": 10, "description": "You have an innate ability to land on your feet and reduce falling damage." },
+  {
+    "name": "Charisma",
+    "description": "You are naturally charming and persuasive, gaining bonuses to reaction rolls and influence skills. Can be taken in levels.",
+    "levels": [
+      { "level": 1, "points": 5, "description": "+1 to reaction rolls." },
+      { "level": 2, "points": 10, "description": "+2 to reaction rolls." },
+      { "level": 3, "points": 15, "description": "+3 to reaction rolls." },
+      { "level": 4, "points": 20, "description": "+4 to reaction rolls." }
+    ]
+  },
+  { "name": "Claim to Hospitality", "points": 1, "description": "A specific culture or group is honor-bound to provide you with food and shelter. Cost varies." },
+  { "name": "Closure", "points": 5, "description": "You are excellent at solving puzzles and seeing patterns with incomplete information." },
+  { "name": "Combat Reflexes", "points": 15, "description": "You react quickly to threats. +1 to initiative, faster recovery from surprise, and extra defense rolls." },
+  { "name": "Common Sense", "points": 10, "description": "The GM will warn you if you are about to do something foolish or dangerous." },
+  {
+    "name": "Compartmentalized Mind",
+    "description": "You can maintain multiple separate trains of thought simultaneously.",
+    "levels": [
+      { "level": 1, "points": 50, "description": "Can maintain two separate trains of thought." }
+    ]
+  },
+  { "name": "Composed", "points": 5, "description": "You are unusually calm under pressure, gaining a bonus to Fright Checks and resistance to mental attacks." },
+  { "name": "Contact", "points": 1, "description": "You have an informant who can provide information. Cost varies." },
+  { "name": "Contact Group", "points": 5, "description": "You have access to a network of contacts. Cost varies." },
+  { "name": "Core World Diplomat/Aristocrat", "points": 15, "description": "Wealth (Comfortable), Status 1, +1 Diplomacy, +1 Savoir-Faire." },
+  { "name": "Cultural Adaptability", "points": 10, "description": "You quickly learn and adapt to new cultures and social norms, reducing penalties for cultural unfamiliarity." },
+  { "name": "Danger Sense", "points": 15, "description": "You possess an instinctive ability to detect impending threats or danger. The GM will secretly roll against your Perception." },
+  { "name": "Doesn't Breathe", "points": 20, "description": "You do not need to breathe. Standard for droids." },
+  { "name": "Double-Jointed", "points": 5, "description": "You are incredibly flexible, granting bonuses to escape bonds." },
+  { "name": "Eidetic Memory", "points": 10, "description": "You have perfect recall of everything you have ever seen or heard." },
+  {
+    "name": "Enhanced Defenses",
+    "description": "Improves your ability to defend against attacks. Includes Parry, Block, and Dodge. Cost is per level for a specific defense.",
+    "levels": [
+      { "level": 1, "points": 5, "description": "+1 to one defense." },
+      { "level": 2, "points": 10, "description": "+2 to one defense." },
+      { "level": 3, "points": 15, "description": "+3 to one defense." }
+    ]
+  },
+  {
+    "name": "Enhanced Move",
+    "description": "You move much faster than your Basic Move would indicate.",
+    "levels": [
+      { "level": 1, "points": 20, "description": "Level 1 Enhanced Move." }
+    ]
+  },
+  { "name": "Enhanced Time Sense", "points": 45, "description": "You perceive time at an accelerated rate, allowing you to move and react much faster. Grants extra actions or significant defensive bonuses." },
+  {
+    "name": "Extra Attack",
+    "description": "You can make an additional attack in a single turn.",
+    "levels": [
+      { "level": 1, "points": 25, "description": "One extra attack." }
+    ]
+  },
+  {
+    "name": "Fearlessness",
+    "description": "You are more resistant to fear and intimidation. Each level grants a bonus to Fright Checks.",
+    "levels": [
+      { "level": 1, "points": 2, "description": "+1 to Fright Checks." },
+      { "level": 2, "points": 4, "description": "+2 to Fright Checks." },
+      { "level": 3, "points": 6, "description": "+3 to Fright Checks." }
+    ]
+  },
+  { "name": "Fit", "points": 5, "description": "You are unusually robust and healthy, with bonuses to EP recovery and resistance to illness." },
+  {
+    "name": "Force Perception",
+    "description": "Enhanced ability to perceive and interpret the Force. +1 to Sense per level.",
+    "levels": [
+      { "level": 1, "points": 5, "description": "+1 to Sense rolls for Force phenomena." }
+    ]
+  },
+  { "name": "Force Sensitive", "points": 5, "description": "You can feel the Force. Prerequisite for all Force-related abilities." },
+  {
+    "name": "Force Training",
+    "description": "Represents dedicated instruction in the ways of the Force.",
+    "levels": [
+      { "level": 1, "points": 10, "description": "Unlocks Adept tier Force Powers and grants +1 max FP." },
+      { "level": 2, "points": 25, "description": "Unlocks Expert tier Force Powers and grants an additional +1 max FP (total +2)." },
+      { "level": 3, "points": 45, "description": "Unlocks Master tier Force Powers and grants an additional +2 max FP (total +4)." }
+    ]
+  },
+  {
+    "name": "Gizmo",
+    "description": "You have a knack for pulling exactly the right small item out of nowhere at a critical moment. Can be taken in levels.",
+    "levels": [
+      { "level": 1, "points": 5, "description": "One gizmo per session." },
+      { "level": 2, "points": 10, "description": "Two gizmos per session." },
+      { "level": 3, "points": 15, "description": "Three gizmos per session." }
+    ]
+  },
+  { "name": "High Pain Threshold", "points": 10, "description": "You are unusually resistant to the effects of pain, suffering fewer penalties from injury." },
+  { "name": "Higher Purpose", "points": 5, "description": "You are dedicated to a single, lofty goal, gaining a +1 to any roll that directly advances this cause." },
+  { "name": "Indomitable", "points": 15, "description": "You have an unbreakable will, gaining a bonus to resist mental attacks and persuasion." },
+  { "name": "Injury Tolerance", "points": 5, "description": "You lack certain vulnerable parts or are harder to injure. Cost varies." },
+  { "name": "Intuition", "points": 15, "description": "You have a knack for guessing correctly without conscious reasoning; the GM will give you occasional insights." },
+  { "name": "Language Talent", "points": 10, "description": "You have a natural aptitude for learning languages, gaining a bonus to language-related skill rolls." },
+  { "name": "Legal Enforcement Powers", "points": 5, "description": "You possess the authority to enforce laws. Point value varies by scope." },
+  { "name": "Legal Immunity", "points": 5, "description": "You are immune to prosecution by certain legal authorities. Cost varies." },
+  {
+    "name": "Lifting ST",
+    "description": "Your strength for lifting and carrying is greater than your striking strength.",
+    "levels": [
+      { "level": 1, "points": 3, "description": "+1 ST for lifting." },
+      { "level": 2, "points": 6, "description": "+2 ST for lifting." }
+    ]
+  },
+  { "name": "Literacy", "points": 10, "description": "You can read and write in your native language." },
+  {
+    "name": "Longevity",
+    "description": "You age more slowly than others of your species. Can be taken in levels.",
+    "levels": [
+      { "level": 1, "points": 2, "description": "Age at half the normal rate." }
+    ]
+  },
+  { "name": "Luck", "points": 15, "description": "You are unusually fortunate; the GM will occasionally give you rerolls or favorable circumstances." },
+  { "name": "Extraordinary Luck", "points": 30, "description": "You are extremely fortunate; the GM will give you more rerolls." },
+  { "name": "Mandalorian Combat Aptitude", "points": 20, "description": "+1 DX, +1 to two combat skills, Composed, High Pain Threshold." },
+  {
+    "name": "Military Rank",
+    "description": "You hold an official rank in a military organization, granting authority. Cost is 5 points per rank level.",
+    "levels": [
+      { "level": 1, "points": 5, "description": "Rank 1." },
+      { "level": 2, "points": 10, "description": "Rank 2." }
+    ]
+  },
+  {
+    "name": "Night Vision",
+    "description": "You can see in low-light conditions, reducing darkness penalties.",
+    "levels": [
+      { "level": 1, "points": 1, "description": "-1 to darkness penalties." },
+      { "level": 2, "points": 2, "description": "-2 to darkness penalties." }
+    ]
+  },
+  { "name": "Patron", "points": 5, "description": "A powerful individual or organization provides you with aid. Cost varies." },
+  {
+    "name": "Payload",
+    "description": "You have internal storage space for carrying objects discreetly.",
+    "levels": [
+      { "level": 1, "points": 1, "description": "1 lb payload." }
+    ]
+  },
+  { "name": "Perfect Balance", "points": 15, "description": "You have an extraordinary sense of balance, making you very difficult to knock down." },
+  { "name": "Peripheral Vision", "points": 15, "description": "You have a 360-degree field of vision, making it impossible to surprise you from behind." },
+  {
+    "name": "Pressure Support",
+    "description": "You can survive in high or low-pressure environments without special equipment.",
+    "levels": [
+      { "level": 1, "points": 5, "description": "Level 1 Pressure Support." }
+    ]
+  },
+  { "name": "Rapid Healing", "points": 5, "description": "You recover from injury more quickly than average." },
+  {
+    "name": "Regeneration",
+    "description": "You heal from injuries at an astonishing rate. (25pts for Slow, 50 for Fast, 75 for Very Fast)",
+    "levels": [
+      { "level": 1, "points": 25, "description": "Slow Regeneration." }
+    ]
+  },
+  { "name": "Regrowth", "points": 40, "description": "You can regrow lost limbs and organs over time." },
+  { "name": "Reputation", "points": 5, "description": "Your renown (good or bad) within a specific group. Point cost varies." },
+  { "name": "Republic Military Discipline", "points": 15, "description": "Fearlessness, Sense of Duty (Republic), +1 Leadership, +1 Tactics." },
+  { "name": "Resistant", "points": 1, "description": "You are unusually resistant to a specific type of hazard. Cost varies." },
+  { "name": "Sealed", "points": 15, "description": "Your body is a closed system, allowing you to survive in a vacuum or underwater without a suit." },
+  { "name": "Security Clearance", "points": 2, "description": "You have official permission to access secret information or restricted locations. Cost varies." },
+  { "name": "Sensitive", "points": 5, "description": "You can sense strong supernatural phenomena, though you cannot use powers yourself." },
+  {
+    "name": "Serendipity",
+    "description": "You have an uncanny knack for being in the right place at the right time. Cost is per level.",
+    "levels": [
+      { "level": 1, "points": 15, "description": "Level 1 Serendipity." }
+    ]
+  },
+  { "name": "Signature Gear", "points": 1, "description": "You own a specific piece of equipment that is particularly reliable or useful. Point cost varies." },
+  { "name": "Single-Minded", "points": 5, "description": "You gain a +1 bonus to any task that requires more than an hour of concentration." },
+  { "name": "Social Chameleon", "points": 5, "description": "You are skilled at blending into new social situations, quickly negating penalties for cultural unfamiliarity." },
+  {
+    "name": "Status",
+    "description": "You have high social standing, affecting reaction rolls. Cost is 5 points per level.",
+    "levels": [
+      { "level": 1, "points": 5, "description": "Status Level 1." }
+    ]
+  },
+  { "name": "Talent", "points": 5, "description": "You have a natural aptitude for a group of related skills. Cost varies." },
+  {
+    "name": "Temperature Tolerance",
+    "description": "You are comfortable in a wider range of extreme temperatures than normal.",
+    "levels": [
+      { "level": 1, "points": 1, "description": "Level 1 Temperature Tolerance." }
+    ]
+  },
+  { "name": "Underworld Savvy", "points": 15, "description": "Contacts (Criminal), +1 Streetwise, +1 Scrounging, Intuition." },
+  { "name": "Unfazeable", "points": 15, "description": "You are immune to mundane surprise and mentally unshakable when faced with horrific sights." },
+  { "name": "Very Fit", "points": 15, "description": "You are exceptionally robust and healthy, with greater bonuses than Fit." },
+  { "name": "Very Rapid Healing", "points": 15, "description": "You heal from injuries much faster." },
+  { "name": "Voice", "points": 10, "description": "You have a remarkable voice, granting a +2 to reaction rolls and some social skills." },
+  {
+    "name": "Wealth",
+    "description": "Your financial resources. Ranges from Comfortable (10) to Filthy Rich (30).",
+    "levels": [
+      { "level": 1, "points": 10, "description": "Comfortable" },
+      { "level": 2, "points": 20, "description": "Wealthy" },
+      { "level": 3, "points": 30, "description": "Very Wealthy" }
+    ]
+  },
+  { "name": "Weapon Master", "points": 20, "description": "You are exceptionally skilled with a specific weapon type. Cost varies by scope (20-45 points)." },
+  { "name": "Zeroed", "points": 10, "description": "You have no official records. To the galaxy at large, you do not exist." }
+]

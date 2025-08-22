@@ -1,0 +1,515 @@
+/*******************************************************************************
+ *
+ * ShadowBase System --- Main Stylesheet
+ *
+ *
+ ******************************************************************************/
+
+/*********************************
+ * 1. ROOT & FONT DEFINITIONS
+ *********************************/
+:root {
+  --background: #1A1A1A;
+  --foreground: #EAEAEA;
+  --card: #212121;
+  --primary: #ADD8E6;
+  --primary-foreground: #0D1B2A;
+  --accent: #B096B3;
+  --accent-foreground: #0D1B2A;
+  --destructive: #B91C1C;
+  --destructive-foreground: #FEF2F2;
+  --border: #333333;
+  --input-bg: #292929;
+  --sheet-padding: 1rem;
+  --border-radius: 0.375rem;
+  --tab-cut-size: 1rem; /* Control the size of the 45-degree cut */
+}
+
+/*********************************
+* 2. GENERAL SHEET LAYOUT
+*********************************/
+.shadowbase.sheet.actor {
+  background-color: var(--background);
+  color: var(--foreground);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+}
+
+.shadowbase .window-content {
+  background: var(--background);
+  color: var(--foreground);
+  padding: 0;
+}
+
+.shadowbase .sheet-body {
+  padding: var(--sheet-padding);
+}
+
+/*********************************
+* 3. HEADER & TITLE BAR
+*********************************/
+.shadowbase .sheet-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem var(--sheet-padding);
+  background-color: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+.shadowbase .header-logo { color: var(--accent); font-size: 1.25em; font-weight: 700; display: flex; align-items: center; gap: 8px;}
+.shadowbase .header-button-container { display: flex; gap: 8px; }
+
+/* Styles for the new header content container */
+.shadowbase .header-content-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to a single column */
+  gap: 1rem;
+  padding: var(--sheet-padding);
+}
+/* On wider screens, use a two-column layout */
+@media (min-width: 1024px) {
+  .shadowbase .header-content-container {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+.shadowbase .header-content-container .section-box {
+  margin-bottom: 0; /* Remove bottom margin inside the grid */
+}
+
+/*********************************
+* 4. TABS
+*********************************/
+.shadowbase .sheet-tabs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--background);
+}
+.shadowbase .sheet-tabs .item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+    color: var(--primary);
+    background-color: var(--card);
+    border: none;
+    border-bottom: 1px solid var(--border);
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    clip-path: polygon(var(--tab-cut-size) 0%, 100% 0%, calc(100% - var(--tab-cut-size)) 100%, 0% 100%);
+    margin-left: calc(-1 * var(--tab-cut-size));
+}
+.shadowbase .sheet-tabs .item:first-child {
+    margin-left: 0;
+    clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--tab-cut-size)) 100%, 0% 100%);
+}
+.shadowbase .sheet-tabs .item:hover {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+    transform: translateY(-2px);
+}
+.shadowbase .sheet-tabs .item.active {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border-bottom-color: var(--primary);
+    transform: none;
+    z-index: 10;
+}
+.shadowbase .sheet-tabs .item.active:hover {
+    background-color: var(--primary);
+}
+.shadowbase .sheet-tabs .item .fas {
+    margin-right: 0.5rem;
+}
+
+/*********************************
+* 5. SECTIONS & GRIDS
+*********************************/
+.shadowbase .section-box {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--sheet-padding);
+  margin-bottom: 1rem;
+}
+
+.shadowbase .section-header {
+  color: var(--accent); font-weight: 700; font-size: 1.25em; padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border); margin-bottom: 1rem; display: flex; align-items: center;
+}
+.shadowbase .section-header .item-controls { margin-left: auto; }
+
+.shadowbase .section-box h4 {
+    color: var(--destructive);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/*********************************
+* 6. LISTS (Traits, Skills)
+*********************************/
+.shadowbase .item-list { list-style: none; margin: 0; padding: 0; }
+.shadowbase .item-entry { padding: 8px 4px; border-bottom: 1px solid var(--border); }
+.shadowbase .item-entry:last-child { border-bottom: none; }
+.shadowbase .item-header { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.shadowbase .item-name { color: var(--primary); font-weight: 500; }
+.shadowbase .item-details { color: var(--foreground); opacity: 0.9; font-size: 0.85em; margin-top: 4px; }
+.shadowbase .item-desc { color: var(--foreground); opacity: 0.9; font-size: 0.9em; margin-top: 5px; padding-left: 5px; }
+
+/*********************************
+* 7. FORMS & INTERACTIVE
+*********************************/
+.shadowbase button, .dialog .dialog-buttons button {
+  background-color: var(--input-bg); color: var(--foreground); border: 1px solid var(--border);
+  border-radius: var(--border-radius); padding: 0.5rem 1rem; font-weight: 500;
+  cursor: pointer; transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+.shadowbase button:hover, .dialog .dialog-buttons button:hover {
+  background-color: var(--accent); border-color: var(--accent); color: var(--accent-foreground) !important;
+}
+.shadowbase button.primary, .dialog .dialog-buttons button.default {
+  background-color: var(--primary); color: var(--primary-foreground) !important; border-color: var(--primary);
+}
+.shadowbase button.primary:hover, .dialog .dialog-buttons button.default:hover {
+  background-color: var(--primary-foreground); color: var(--primary) !important; border-color: var(--primary);
+}
+.shadowbase button.destructive { background: var(--destructive); color: var(--destructive-foreground) !important; border-color: var(--destructive); }
+.shadowbase button.destructive:hover { background: var(--destructive-foreground); color: var(--destructive) !important; border-color: var(--destructive-foreground); }
+
+.shadowbase .roll-link, .shadowbase .item-controls .item-control {
+  cursor: pointer; color: var(--accent); transition: color 0.2s;
+}
+.shadowbase .roll-link:hover, .shadowbase .item-controls .item-control:hover { color: var(--primary); }
+.shadowbase .item-controls { display: flex; gap: 10px; align-items: center; }
+.shadowbase .item-controls .item-delete { color: var(--destructive); }
+.shadowbase .item-controls .item-delete:hover { color: var(--destructive-foreground); background-color: var(--destructive); border-radius: 50%; padding: 2px;}
+
+.shadowbase input, .shadowbase textarea, .shadowbase select {
+  background: var(--input-bg); border: 1px solid var(--border); border-radius: 3px;
+  color: var(--foreground) !important; padding: 5px;
+}
+.shadowbase input:focus, .shadowbase textarea:focus, .shadowbase select:focus {
+  border-color: var(--accent); outline: none;
+}
+.shadowbase input[readonly] { background-color: #2c2c2c; }
+
+/*********************************
+* 8. Actor Header Specifics (Profile Image etc.)
+*********************************/
+.shadowbase .actor-profile-img {
+    width: 150px;
+    height: 198px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+}
+
+/*********************************
+* 9. PRIMARY & SECONDARY STATS GRID
+*********************************/
+.shadowbase .primary-stats-grid, .shadowbase .secondary-stats-grid {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+}
+.shadowbase .primary-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+.shadowbase .secondary-stats-grid {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.shadowbase .attribute-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the top */
+    gap: 0.25rem;
+}
+.shadowbase .attribute-label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+.shadowbase .attribute-value-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+.shadowbase .attribute-value-input {
+    font-size: 1.25rem;
+    width: 100%;
+    max-width: 6rem; /* Limit width */
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    color: var(--foreground);
+    font-weight: bold;
+    border-radius: 0;
+}
+.shadowbase .attribute-value-input:focus {
+    outline: none;
+    box-shadow: none;
+    border-bottom: 1px solid var(--accent);
+}
+.shadowbase .attribute-points-cost {
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+}
+
+.shadowbase .current-max {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+.shadowbase .current-max input {
+    max-width: 60px; /* Adjust as needed */
+}
+
+/*********************************
+* 10. FORCE ALIGNMENT SLIDER
+*********************************/
+.shadowbase .force-alignment-container {
+    display: grid;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+}
+.shadowbase .force-alignment-slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.shadowbase .force-alignment-slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: linear-gradient(to right, hsl(var(--destructive)), hsl(var(--muted)), hsl(var(--primary)));
+    border-radius: 4px;
+    outline: none;
+}
+.shadowbase .force-alignment-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--foreground);
+    border: 2px solid var(--background);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -6px; /* Center thumb on track */
+}
+.shadowbase .force-alignment-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--foreground);
+    border: 2px solid var(--background);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.shadowbase .force-alignment-center-marker {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 12px;
+    width: 2px;
+    background-color: var(--background);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 1px;
+}
+.shadowbase .alignment-labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--muted-foreground);
+}
+.shadowbase .alignment-labels .dark-side {
+    color: hsl(var(--destructive));
+    display: flex; align-items: center; gap: 4px;
+}
+.shadowbase .alignment-labels .light-side {
+    color: hsl(var(--primary));
+    display: flex; align-items: center; gap: 4px;
+}
+.shadowbase .alignment-input {
+    width: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--foreground);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+}
+.shadowbase .alignment-input:focus {
+    border-bottom-color: var(--accent);
+}
+
+/*********************************
+* 11. DIALOG BOX STYLES
+*********************************/
+.dialog .window-content { background: var(--card) !important; color: var(--foreground) !important; }
+.dialog input, .dialog select, .dialog textarea { background: var(--input-bg); border: 1px solid var(--border); color: var(--foreground) !important; }
+.dialog .dialog-buttons { border-top: 1px solid var(--border); padding-top: 10px; margin-top: 10px; }
+
+/*********************************
+* 12. DR & HIT LOCATION TABLE
+*********************************/
+.shadowbase .dr-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.shadowbase .dr-table th, .shadowbase .dr-table td {
+  border: 1px solid var(--border);
+  padding: 6px;
+  text-align: left;
+  font-size: 0.8rem;
+}
+.shadowbase .dr-table th {
+  background-color: var(--card);
+  color: var(--primary); /* Level 3: Blue */
+  font-weight: bold;
+}
+
+.shadowbase label {
+    color: var(--primary); /* Blue */
+}
+
+/*********************************
+* 13. COMBAT HUB
+*********************************/
+.shadowbase .combat-hub-container > h3 {
+    color: var(--accent);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-transform: none;
+    padding-left: 5px;
+}
+
+.shadowbase .combat-hub h3 {
+    color: var(--accent);
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: none;
+}
+
+.shadowbase .combat-hub h5 {
+    color: var(--destructive);
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 0.75rem;
+    text-transform: none;
+}
+
+.shadowbase .combat-hub .grid-3col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+}
+
+.shadowbase .combat-hub .resource-item, .shadowbase .combat-hub .maneuver-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.shadowbase .combat-hub .resource-item label, .shadowbase .combat-hub .maneuver-toggle label {
+    font-size: 0.8rem;
+}
+.shadowbase .combat-hub .resource-item input {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.shadowbase .combat-hub .maneuver-toggle .toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+}
+.shadowbase .combat-hub .weapons-list {
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 8px; /* For scrollbar */
+}
+.shadowbase .weapon-entry-detailed {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  background-color: rgba(0,0,0,0.1);
+}
+.shadowbase .weapon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shadowbase .weapon-name {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--primary);
+}
+.shadowbase .weapon-actions {
+    display: flex;
+    gap: 4px;
+}
+.shadowbase .weapon-actions .roll-button {
+  padding: 4px 8px;
+  font-size: 0.8em;
+}
+.shadowbase .roll-damage {
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
+  border-color: var(--destructive);
+}
+.shadowbase .roll-damage:hover {
+  background-color: var(--destructive-foreground);
+  color: var(--destructive) !important;
+  border-color: var(--destructive);
+}
+.shadowbase .weapon-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+.shadowbase .weapon-stat {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  padding: 4px;
+  border-radius: 3px;
+  text-align: center;
+}
+.shadowbase .weapon-stat.full-width {
+    grid-column: 1 / -1; /* Make it span all columns */
+}
+.shadowbase .weapon-stat label {
+  font-weight: 600;
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  font-size: 0.65rem;
+}
+.shadowbase .weapon-stat span {
+  font-weight: bold;
+  color: var(--foreground);
+}

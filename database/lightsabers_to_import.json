@@ -1,0 +1,159 @@
+
+{
+  "handgrips": [
+    {
+      "name": "Standard Lightsaber",
+      "damage": "5d6 burning",
+      "acc": 4,
+      "parry": 3,
+      "cost": 5000
+    },
+    {
+      "name": "Dual-Bladed Lightsaber (Saberstaff)",
+      "damage": "5d6 burning per blade",
+      "acc": 4,
+      "parry": 4,
+      "cost": 7500
+    },
+    {
+      "name": "Lightsaber Pike (Saberpike)",
+      "damage": "5d6 burning",
+      "acc": 4,
+      "parry": 2,
+      "reach": "1, 2",
+      "cost": 6000
+    },
+    {
+      "name": "Lightsaber Whip (Lightwhip)",
+      "damage": "2d6 burning",
+      "acc": 2,
+      "parry": -1,
+      "reach": "1-3 yards",
+      "cost": 8000
+    },
+    {
+      "name": "Shoto / Short Lightsaber",
+      "damage": "4d6 burning",
+      "acc": 3,
+      "parry": 2,
+      "cost": 4000
+    },
+    {
+      "name": "Curved-hilt Lightsaber",
+      "damage": "5d6 burning",
+      "acc": 4,
+      "parry": 3,
+      "cost": 5500
+    },
+    {
+      "name": "Crossguard Lightsaber",
+      "damage": "5d6 burning",
+      "acc": 4,
+      "parry": 4,
+      "cost": 6000
+    }
+  ],
+  "power_cells": [
+    {
+      "name": "Standard Diatium Power Cell",
+      "cost": 2000,
+      "hits": 3000
+    },
+    {
+      "name": "Corusca Gem Power Cell",
+      "cost": 10000,
+      "hits": 15000
+    },
+    {
+      "name": "Phond Power Cell",
+      "cost": 4000,
+      "hits": 6000
+    }
+  ],
+  "lenses": [
+    {
+      "name": "Standard Focusing Lens",
+      "cost": 1500
+    },
+    {
+      "name": "Dragite Lens",
+      "cost": 3500
+    },
+    {
+      "name": "Firkrann Crystal Lens",
+      "cost": 5000
+    },
+    {
+      "name": "Jenruax Focusing Lens",
+      "cost": 7500
+    }
+  ],
+  "emitters": [
+    {
+      "name": "Standard Emitter Matrix",
+      "cost": 1000
+    },
+    {
+      "name": "Phobium Emitter",
+      "cost": 3000
+    },
+    {
+      "name": "Velmorite Emitter",
+      "cost": 6000
+    },
+    {
+      "name": "Dual-Phase Emitter",
+      "cost": 8000
+    }
+  ],
+  "primary_crystals": [
+    { "name": "Blue", "cost": 4000, "effect": "Standard damage (8d(6) burn), +1 to Force points." },
+    { "name": "Green", "cost": 4000, "effect": "Standard damage (8d(6) burn), +1 to Force points." },
+    { "name": "Yellow", "cost": 6000, "effect": "Standard damage (8d(6) burn), +1 to Force points." },
+    { "name": "Red", "cost": 6000, "effect": "Standard damage (8d(6) burn), +1 to Force points." },
+    { "name": "Red (Synthetic)", "cost": 8000, "effect": "Standard damage (8d+3(6) burn)." },
+    { "name": "Green (Synthetic)", "cost": 8000, "effect": "Standard damage (8d+3(6) burn)." },
+    { "name": "Orange", "cost": 8000, "effect": "Standard damage (8d(6) burn), x1.25 to Force points." },
+    { "name": "Purple", "cost": 8000, "effect": "Standard damage (8d(6) burn), x1.25 to Force points." },
+    { "name": "Cyan", "cost": 8000, "effect": "Standard damage (8d(6) burn), x1.25 to Force points." },
+    { "name": "Magenta", "cost": 25000, "effect": "Standard damage (8d(6) burn), x1.5 to Force points." },
+    { "name": "White/Silver", "cost": 50000, "effect": "Standard damage (8d(6) burn), x1.5 to Force points." },
+    { "name": "Black", "cost": 200000, "effect": "Standard damage (8d(6) burn), x2 to Force points." }
+  ],
+  "power_crystals": [
+    { "name": "Barab Ore Ingot", "cost": 2000, "effect": "+1d radiation damage." },
+    { "name": "Bondar", "cost": 500, "effect": "Target must make an HT+1 roll or be stunned." },
+    { "name": "Corusca Gem", "cost": 20000, "effect": "+3 to hit, +1d6 damage, ignores ½ DR on targeted armor." },
+    { "name": "Damind", "cost": 3000, "effect": "+3 to hit." },
+    { "name": "Danite", "cost": 1000, "effect": "+1 to Sense Force powers." },
+    { "name": "Dragite", "cost": 6000, "effect": "On a successful hit, target must make an HT roll or suffer from a sonic-based Affliction (Moderate Pain)." },
+    { "name": "Eralam", "cost": 9000, "effect": "+2 to hit, +2 damage." },
+    { "name": "Firkran", "cost": 3000, "effect": "+2 to hit." },
+    { "name": "Hurrikaine", "cost": 10000, "effect": "An opponent attempting to parry or block takes a -3 penalty." },
+    { "name": "Jenruax", "cost": 8000, "effect": "Grants the wielder the Enhanced Parry (Lightsaber) advantage at +1, +2 damage." },
+    { "name": "Kaiburr (Kiber)", "cost": 310000, "effect": "+3d6 damage, +3 to all Force powers, grants Regeneration (1 HP per minute)." },
+    { "name": "Kasha", "cost": 1500, "effect": "+1 to hit, +2 to Will for resisting mental influence." },
+    { "name": "Krathracithe", "cost": 30000, "effect": "+2 to Dark Side Force abilities (Dark Side users only)." },
+    { "name": "Kontarite", "cost": 20000, "effect": "The lightsaber is completely silent, negating the usual auditory signature." },
+    { "name": "Krayt Dragon Pearl", "cost": 110000, "effect": "+3 to hit, +2d6 damage." },
+    { "name": "Lorrdian Gemstone", "cost": 8000, "effect": "+1 to lightsaber combat skill, +1 to Parry (Lightsaber)." },
+    { "name": "Luxum", "cost": 8000, "effect": "+2 to hit, +1d6 damage vs. droids, damage has the Surge enhancement." },
+    { "name": "Mephite", "cost": 1000, "effect": "+1 to Alter Force powers." },
+    { "name": "Nextor", "cost": 2000, "effect": "+1 to hit, +1 Armor Divisor." },
+    { "name": "Obsidia", "cost": 25000, "effect": "+3 damage, +1d6 damage vs. Light Side users (Dark Side users only)." },
+    { "name": "Opila", "cost": 5000, "effect": "+3 damage, +2d6 damage on a critical hit." },
+    { "name": "Phond", "cost": 2000, "effect": "+1d6 damage." },
+    { "name": "Pontite", "cost": 1000, "effect": "+1 to Control Force powers." },
+    { "name": "Qixoni", "cost": 90000, "effect": "+5 damage, grants Energy Reserve (Force) +5 (Dark Side users only)." },
+    { "name": "Relacite", "cost": 12000, "effect": "+2 to all Force powers." },
+    { "name": "Rubat", "cost": 2000, "effect": "+1 to hit, +1 damage." },
+    { "name": "Ruusan", "cost": 3000, "effect": "+1 to Will and +1 to Charisma." },
+    { "name": "Saphit", "cost": 50000, "effect": "+3 to hit, +2 damage." },
+    { "name": "Sigil", "cost": 18000, "effect": "+1 to hit, +2d6 damage." },
+    { "name": "Solari", "cost": 70000, "effect": "+3 to hit, +3 damage, +1d6 damage vs. Dark Side users (Light Side users only)." },
+    { "name": "Stygium", "cost": 12000, "effect": "+1 to hit, +1 to DX, and +4 to Stealth skill when the blade is ignited." },
+    { "name": "Ultima-Pearl", "cost": 6000, "effect": "+3 to hit, +2 damage, +1d6 damage on a critical hit, -2 to Armoury (Lightsaber) skill for installation." },
+    { "name": "Upari", "cost": 7000, "effect": "+3 to hit, +1d6 damage." },
+    { "name": "Velmorite", "cost": 4000, "effect": "+1 to DX, +1 Armor Divisor." }
+  ]
+}

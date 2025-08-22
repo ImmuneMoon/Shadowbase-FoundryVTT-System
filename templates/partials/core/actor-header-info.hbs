@@ -1,0 +1,40 @@
+<!-- systems\shadowbase\templates\partials\core\actor-header-info.hbs -->
+
+<div class="grid grid-cols-1 sm:grid-cols-[150px_1fr] gap-6">
+    <div class="flex-shrink-0">
+        <img class="actor-profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+    </div>
+    
+    <div class="flex flex-col gap-4">
+        <h1 class="charname text-3xl font-bold font-headline text-primary border-b-2 border-primary/20 pb-2">
+            <input name="name" type="text" value="{{actor.name}}" placeholder="Character Name"/>
+        </h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm">
+            <div class="flex flex-col">
+                <label class="text-xs text-muted-foreground uppercase tracking-wider">Player</label>
+                <input name="system.player" type="text" value="{{system.player}}" placeholder="Player Name" class="bg-transparent border-0 border-b p-1 focus:ring-0 focus:border-accent" />
+            </div>
+            <div class="flex flex-col">
+                <label class="text-xs text-muted-foreground uppercase tracking-wider">Campaign</label>
+                <input name="system.campaign" type="text" value="{{system.campaign}}" placeholder="Campaign Name" class="bg-transparent border-0 border-b p-1 focus:ring-0 focus:border-accent" />
+            </div>
+            <div class="flex flex-col">
+                <label class="text-xs text-muted-foreground uppercase tracking-wider">Species</label>
+                <input name="system.species" type="text" value="{{system.species}}" placeholder="Species" class="bg-transparent border-0 border-b p-1 focus:ring-0 focus:border-accent" />
+            </div>
+            <div class="flex flex-col">
+                <label class="text-xs text-muted-foreground uppercase tracking-wider">Total Points</label>
+                <input name="system.points.total" type="number" value="{{system.points.total}}" placeholder="150" class="bg-transparent border-0 border-b p-1 focus:ring-0 focus:border-accent" />
+            </div>
+             <div class="flex flex-col">
+                <label class="text-xs text-muted-foreground uppercase tracking-wider">Spent Points</label>
+                <input name="system.points.spent" type="number" value="{{system.points.spent}}" readonly class="bg-transparent border-0 border-b p-1 focus:ring-0" />
+            </div>
+            <div class="flex flex-col">
+                <label class="text-xs text-muted-foreground uppercase tracking-wider">Remaining Points</label>
+                <input name="system.points.remaining" type="number" value="{{system.points.remaining}}" readonly class="bg-transparent border-0 border-b p-1 focus:ring-0" />
+            </div>
+        </div>
+    </div>
+</div>

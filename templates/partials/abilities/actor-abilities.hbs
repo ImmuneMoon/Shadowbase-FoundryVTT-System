@@ -1,0 +1,89 @@
+<!-- systems\shadowbase\templates\partials\abilities\actor-abilities.hbs -->
+<div class="section-box">
+    <div class="section-group">
+        <h3 class="section-header collapsible-header">
+            <span><i class="fas fa-chevron-down"></i> Force Powers</span>
+            <div class="item-controls">
+                <a class="item-create" title="Add Force Power" data-type="forcePower"><i class="fas fa-plus"></i></a>
+            </div>
+        </h3>
+    <ul class="item-list collapsible-content">
+    {{#each abilities.forcePowers as |item|}}
+                <li class="item-entry" data-item-id="{{item._id}}">
+                    <div class="item-header">
+                        <span class="item-name">{{item.name}} (Lvl {{item.system.level}})</span>
+                        <div class="item-controls">
+                            <a class="item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+                            <a class="item-delete" title="Delete"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div class="item-details text-xs">
+                        <p><strong>Costs:</strong> CP [{{item.system.cpCost}}], FP [{{item.system.fpCost}}], EP [{{item.system.epCost}}]</p>
+                        <p><strong>Requirements:</strong> {{item.system.requirements}}</p>
+                        <p class="text-muted-foreground mt-1"><strong>Effect:</strong> {{item.system.effect}}</p>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+<div class="section-box">
+    <div class="section-group">
+        <h3 class="section-header collapsible-header">
+            <span><i class="fas fa-chevron-down"></i> Combat Techniques</span>
+            <div class="item-controls">
+                <a class="item-create" title="Add Combat Technique" data-type="combatTechnique"><i class="fas fa-plus"></i></a>
+            </div>
+        </h3>
+    <ul class="item-list collapsible-content">
+    {{#each abilities.combatTechniques as |item|}}
+                <li class="item-entry" data-item-id="{{item._id}}">
+                    <div class="item-header">
+                        <span class="item-name">{{item.name}} (Lvl {{item.system.level}})</span>
+                        <div class="item-controls">
+                            <a class="item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+                            <a class="item-delete" title="Delete"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div class="item-details text-xs">
+                        <p><strong>Costs:</strong> CP [{{item.system.cpCost}}], EP [{{item.system.epCost}}]</p>
+                        <p><strong>Requirements:</strong> {{item.system.requirements}}</p>
+                        <p class="text-muted-foreground mt-1"><strong>Effect:</strong> {{item.system.effect}}</p>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+<div class="section-box">
+    <div class="section-group">
+        <h3 class="section-header collapsible-header">
+            <span><i class="fas fa-chevron-down"></i> Lightsaber Forms</span>
+            <div class="item-controls">
+                <a class="item-create" title="Add Lightsaber Form" data-type="lightsaberForm"><i class="fas fa-plus"></i></a>
+            </div>
+        </h3>
+        <ul class="item-list collapsible-content">
+    {{#each abilities.lightsaberForms as |item|}}
+    <li class="item-entry" data-item-id="{{item._id}}">
+                    <div class="item-header">
+                        <span class="item-name">{{item.name}} (Lvl {{item.system.level}})</span>
+                        <div class="item-controls">
+                            <a class="item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+                            <a class="item-delete" title="Delete"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                    {{#with (getFormDetails item.name item.system.level)}}
+                    <div class="item-details text-xs">
+                        <p><strong>Costs:</strong> CP [{{this.cpCost}}], FP [{{this.fpCost}}], EP [{{this.epCost}}]</p>
+                        <p><strong>Requirements:</strong> {{this.baseSkill}}</p>
+                        <p class="text-muted-foreground mt-1"><strong>Effect:</strong> {{this.effect}}</p>
+                    </div>
+                    {{/with}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

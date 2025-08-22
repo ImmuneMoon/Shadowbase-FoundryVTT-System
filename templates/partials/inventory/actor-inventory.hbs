@@ -1,0 +1,51 @@
+<!-- systems\shadowbase\templates\partials\inventory\actor-inventory.hbs -->
+
+<div class="section-box">
+    <h3 class="section-header collapsible-header">
+        <span><i class="fas fa-chevron-down"></i> General Equipment</span>
+        <div class="item-controls">
+            <a class="item-create" title="Add Equipment" data-type="equipment"><i class="fas fa-plus"></i></a>
+        </div>
+    </h3>
+    <ul class="item-list collapsible-content">
+        {{#each inventory.general as |item|}}
+            <li class="item-entry" data-item-id="{{item._id}}">
+                <div class="item-header">
+                    <span class="item-name">{{item.name}}</span>
+                    <div class="item-controls">
+                        <a class="item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+                        <a class="item-delete" title="Delete"><i class="fas fa-trash"></i></a>
+                    </div>
+                </div>
+                <div class="item-details">
+                    <span>Qty: {{item.system.quantity}}, Wt: {{item.system.weight}} lbs, Cost: {{item.system.cost}} cr</span>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+<div class="section-box">
+    <h3 class="section-header collapsible-header mt-4">
+        <span><i class="fas fa-chevron-down"></i> Armor</span>
+        <div class="item-controls">
+            <a class="item-create" title="Add Armor" data-type="armor"><i class="fas fa-plus"></i></a>
+        </div>
+    </h3>
+    <ul class="item-list collapsible-content">
+        {{#each inventory.armor as |item|}}
+            <li class="item-entry" data-item-id="{{item._id}}">
+                <div class="item-header">
+                    <span class="item-name">{{item.name}}</span>
+                    <div class="item-controls">
+                        <a class="item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+                        <a class="item-delete" title="Delete"><i class="fas fa-trash"></i></a>
+                    </div>
+                </div>
+                <div class="item-details">
+                    <span>DR: {{item.system.drValue}}, Cost: {{item.system.cost}} cr, Wt: {{item.system.weight}} lbs</span>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</div>

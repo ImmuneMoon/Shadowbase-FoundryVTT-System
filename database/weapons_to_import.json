@@ -1,0 +1,442 @@
+
+{
+  "blasters": [
+    {
+      "name": "Blaster Pistol",
+      "damage": "2d burn",
+      "acc": 3,
+      "range": "300/1000",
+      "rof": 3,
+      "shots": "15(3)",
+      "recoil": 1,
+      "cost": 500,
+      "st": 9,
+      "bulk": -1,
+      "weight": 2.5
+    },
+    {
+      "name": "Mandalorian Blaster",
+      "damage": "2d+1 burn",
+      "acc": 4,
+      "range": "350/1100",
+      "rof": 3,
+      "shots": "15(3)",
+      "recoil": 1,
+      "cost": 650,
+      "st": 9,
+      "bulk": -1,
+      "weight": 2.8
+    },
+    {
+      "name": "GenoHaradan Blaster",
+      "damage": "2d burn",
+      "acc": 5,
+      "range": "300/1000",
+      "rof": 3,
+      "shots": "12(3)",
+      "recoil": 1,
+      "cost": 900,
+      "st": 9,
+      "bulk": -1,
+      "weight": 3
+    },
+    {
+      "name": "Arkanian Pistol",
+      "damage": "2d+2 burn",
+      "acc": 4,
+      "range": "320/1050",
+      "rof": 3,
+      "shots": "15(3)",
+      "recoil": 1,
+      "cost": 800,
+      "st": 9,
+      "bulk": -1,
+      "weight": 3.2
+    },
+    {
+      "name": "Zabrak Blaster Pistol",
+      "damage": "3d burn",
+      "acc": 4,
+      "range": "350/1100",
+      "rof": 3,
+      "shots": "12(3)",
+      "recoil": 2,
+      "cost": 1100,
+      "st": 10,
+      "bulk": -2,
+      "weight": 3.5,
+      "notes": "On a successful hit, target must make a HT roll or be Stunned for 1d6 sec."
+    },
+    {
+      "name": "Heavy Blaster",
+      "damage": "3d burn",
+      "acc": 4,
+      "range": "400/1200",
+      "rof": 3,
+      "shots": "10(3)",
+      "recoil": 2,
+      "cost": 800,
+      "st": 10,
+      "bulk": -2,
+      "weight": 4
+    },
+    {
+      "name": "Arkanian Heavy Pistol",
+      "damage": "3d+1 burn",
+      "acc": 5,
+      "range": "420/1300",
+      "rof": 3,
+      "shots": "10(3)",
+      "recoil": 2,
+      "cost": 1200,
+      "st": 10,
+      "bulk": -2,
+      "weight": 4.5
+    },
+    {
+      "name": "Zabrak Tystel Mark III",
+      "damage": "3d+2 burn",
+      "acc": 4,
+      "range": "400/1200",
+      "rof": 3,
+      "shots": "12(3)",
+      "recoil": 2,
+      "cost": 1500,
+      "st": 11,
+      "bulk": -2,
+      "weight": 5,
+      "notes": "Can be used as a club for thr cr damage."
+    },
+    {
+      "name": "Mandalorian Heavy Pistol",
+      "damage": "4d burn",
+      "acc": 4,
+      "range": "450/1400",
+      "rof": 3,
+      "shots": "10(3)",
+      "recoil": 3,
+      "cost": 2000,
+      "st": 12,
+      "bulk": -3,
+      "weight": 5.5,
+      "notes": "Can be used as a club for thr+1 cr damage."
+    },
+    {
+      "name": "Hold Out Blaster",
+      "damage": "1d burn",
+      "acc": 2,
+      "range": "100/400",
+      "rof": 3,
+      "shots": "5(3)",
+      "recoil": 1,
+      "cost": 400,
+      "st": 6,
+      "bulk": -1,
+      "weight": 1.5,
+      "notes": "+2 to Holdout skill checks."
+    },
+    {
+      "name": "Bothan Quick Draw",
+      "damage": "1d+1 burn",
+      "acc": 3,
+      "range": "120/500",
+      "rof": 3,
+      "shots": "6(3)",
+      "recoil": 1,
+      "cost": 600,
+      "st": 7,
+      "bulk": -1,
+      "weight": 1.8
+    },
+    {
+      "name": "Bothan Needler",
+      "damage": "1d+2 burn",
+      "acc": 3,
+      "range": "150/600",
+      "rof": 3,
+      "shots": "5(3)",
+      "recoil": 1,
+      "cost": 850,
+      "st": 7,
+      "bulk": -1,
+      "weight": 2
+    },
+    {
+      "name": "Blaster Carbine",
+      "damage": "3d burn",
+      "acc": 5,
+      "range": "500/1800",
+      "rof": 5,
+      "shots": "20(3)",
+      "recoil": 2,
+      "cost": 900,
+      "st": 10,
+      "bulk": -3,
+      "weight": 7
+    },
+    {
+      "name": "Cinnagaran Carbine",
+      "damage": "4d(2) burn",
+      "acc": 7,
+      "range": "600/2000",
+      "rof": 5,
+      "shots": "20(3)",
+      "recoil": 2,
+      "cost": 1400,
+      "st": 10,
+      "bulk": -2,
+      "weight": 8
+    },
+    {
+      "name": "Blaster Rifle",
+      "damage": "4d burn",
+      "acc": 5,
+      "range": "600/2000",
+      "rof": 5,
+      "shots": "20(3)",
+      "recoil": 2,
+      "cost": 1200,
+      "st": 10,
+      "bulk": -4,
+      "weight": 9
+    },
+    {
+      "name": "Mandalorian Assault Rifle",
+      "damage": "4d+2 burn",
+      "acc": 7,
+      "range": "650/2400",
+      "rof": 8,
+      "shots": "30(3)",
+      "recoil": 3,
+      "cost": 2800,
+      "st": 11,
+      "bulk": -4,
+      "weight": 12,
+      "notes": "On hit, target must make a HT-2 roll or be Stunned for 1d6 sec."
+    },
+    {
+      "name": "Zabrak Battle Cannon",
+      "damage": "5d+1(2) burn",
+      "acc": 8,
+      "range": "700/2800",
+      "rof": 3,
+      "shots": "15(5)",
+      "recoil": 4,
+      "cost": 4500,
+      "st": 12,
+      "bulk": -6,
+      "weight": 14,
+      "notes": "A heavy weapon that ignores 1/2 DR."
+    },
+    {
+      "name": "Light Repeating Blaster",
+      "damage": "5d burn",
+      "acc": 6,
+      "range": "700/2500",
+      "rof": 10,
+      "shots": "50(5)",
+      "recoil": 2,
+      "cost": 3000,
+      "st": 11,
+      "bulk": -5,
+      "weight": 18
+    },
+    {
+      "name": "Medium Repeating Blaster",
+      "damage": "5d+2 burn",
+      "acc": 6,
+      "range": "750/2800",
+      "rof": 10,
+      "shots": "50(5)",
+      "recoil": 2,
+      "cost": 4000,
+      "st": 12,
+      "bulk": -6,
+      "weight": 22
+    },
+    {
+      "name": "Blaster Cannon",
+      "damage": "6d burn",
+      "acc": 7,
+      "range": "800/3200",
+      "rof": 8,
+      "shots": "75(8)",
+      "recoil": 3,
+      "cost": 6000,
+      "st": 13,
+      "bulk": -7,
+      "weight": 25
+    },
+    {
+      "name": "Baragwin Assault Gun",
+      "damage": "6d+2 burn",
+      "acc": 7,
+      "range": "700/2500",
+      "rof": 12,
+      "shots": "100(10)",
+      "recoil": 3,
+      "cost": 7500,
+      "st": 12,
+      "bulk": -6,
+      "weight": 24,
+      "notes": "Also deals 3d sonic damage in a 2-yard radius around the point of impact. Upgradeable."
+    },
+    {
+      "name": "Heavy Repeating Blaster",
+      "damage": "6d+2 burn",
+      "acc": 7,
+      "range": "800/3500",
+      "rof": 12,
+      "shots": "100(10)",
+      "recoil": 3,
+      "cost": 8000,
+      "st": 13,
+      "bulk": -7,
+      "weight": 30
+    },
+    {
+      "name": "Mandalorian Heavy Repeater",
+      "damage": "7d burn",
+      "acc": 7,
+      "range": "800/3500",
+      "rof": 12,
+      "shots": "100(10)",
+      "recoil": 3,
+      "cost": 9500,
+      "st": 13,
+      "bulk": -7,
+      "weight": 32,
+      "notes": "Inflicts +1d(5) ion damage."
+    },
+    {
+      "name": "Baragwin Heavy Repeater",
+      "damage": "7d+2 burn",
+      "acc": 8,
+      "range": "800/3500",
+      "rof": 12,
+      "shots": "150(12)",
+      "recoil": 4,
+      "cost": 15000,
+      "st": 14,
+      "bulk": -8,
+      "weight": 35,
+      "notes": "Also deals 4d fire damage in a 2-yard radius around the point of impact. Upgradeable."
+    },
+    {
+      "name": "DC-17m Anti-Armor Grenade Launcher",
+      "damage": "6d(5) cr ex",
+      "acc": 2,
+      "range": "200/800",
+      "rof": 1,
+      "shots": "1 (3i)",
+      "recoil": 1,
+      "st": 9,
+      "bulk": -5,
+      "weight": 9.5,
+      "cost": 12000,
+      "notes": "Uses Gunnery (Grenade Launcher) skill. Damage has armor divisor (5) and 2-yard blast radius. Ammo is cr. 400/shot."
+    }
+  ],
+  "melee": [
+    {
+      "name": "Stun Baton", "skill": "Broadsword", "damage": "sw+1 cr / Stun", "reach": "1", "parry": "+0", "st": 8, "cost": 600, "weight": 3
+    },
+    {
+      "name": "Shock Baton", "skill": "Broadsword", "damage": "sw+1 cr / Shock", "reach": "1", "parry": "+0", "st": 8, "cost": 750, "weight": 3
+    },
+    {
+      "name": "Shock Gauntlet", "skill": "Brawling", "damage": "thr cr / Shock", "reach": "C", "parry": "+0", "st": 8, "cost": 500, "weight": 2
+    },
+    {
+      "name": "Electro-staff", "skill": "Staff", "damage": "sw+2 cr / Shock", "reach": "1, 2", "parry": "+2U", "st": 10, "cost": 3500, "weight": 8
+    },
+    {
+      "name": "Short Sword", "skill": "Shortsword", "damage": "thr imp / sw-2 cut", "reach": "1", "parry": "+0", "st": 7, "cost": 300, "weight": 2
+    },
+    {
+      "name": "Long Sword", "skill": "Broadsword", "damage": "sw+1 cut / thr+1 imp", "reach": "1", "parry": "+0", "st": 10, "cost": 500, "weight": 3
+    },
+    {
+      "name": "Krath War Blade", "skill": "Broadsword", "damage": "sw+1 cut / thr+2 imp", "reach": "1", "parry": "+0", "st": 10, "cost": 750, "weight": 3, "notes": "Acc +1. Dark Side tainted."
+    },
+    {
+      "name": "Vibroblade", "skill": "Shortsword", "damage": "sw-1 cut / thr imp; +1d cut/imp", "reach": "1", "parry": "+0", "st": 7, "cost": 450, "weight": 2.5
+    },
+    {
+      "name": "Echani Vibroblade", "skill": "Shortsword", "damage": "sw-1 cut / thr imp; +1d+2 cut/imp", "reach": "1", "parry": "+1", "st": 7, "cost": 900, "weight": 2.5, "notes": "Acc +2. Also deals +1d-2 Cold damage on hit."
+    },
+    {
+      "name": "Vibrosword", "skill": "Broadsword", "damage": "sw+1 cut / thr+1 imp; +1d cut/imp", "reach": "1", "parry": "+0", "st": 10, "cost": 800, "weight": 4
+    },
+    {
+      "name": "Quarterstaff", "skill": "Staff", "damage": "sw+2 cr / thr+1 cr", "reach": "1, 2", "parry": "+2", "st": 9, "cost": 50, "weight": 4
+    },
+    {
+      "name": "Gaffi Stick", "skill": "Two-Handed Axe/Mace", "damage": "sw+3 cr / thr+2 imp", "reach": "1, 2*", "parry": "+0U", "st": 10, "cost": 150, "weight": 10
+    },
+    {
+      "name": "Gamorrean Battleaxe", "skill": "Axe/Mace", "damage": "sw+4 cut", "reach": "1", "parry": "-1U", "st": 12, "cost": 300, "weight": 12
+    },
+    {
+      "name": "Wookiee Warblade", "skill": "Broadsword", "damage": "sw+2 cut", "reach": "1, 2", "parry": "+0", "st": 11, "cost": 800, "weight": 5
+    },
+    {
+      "name": "Double-Bladed Sword", "skill": "Two-Handed Sword", "damage": "sw+2 cut / thr+1 imp", "reach": "1", "parry": "+0", "st": 11, "cost": 900, "weight": 7
+    },
+    {
+      "name": "Echani Ritual Brand", "skill": "Two-Handed Sword", "damage": "sw+2 cut / thr+2 imp", "reach": "1", "parry": "+1", "st": 11, "cost": 1600, "weight": 7
+    },
+    {
+      "name": "Vibro Double-Blade", "skill": "Two-Handed Sword", "damage": "sw+2 cut / thr+1 imp; +1d cut/imp", "reach": "1", "parry": "+0", "st": 11, "cost": 1800, "weight": 9
+    },
+    {
+      "name": "Vibro-knife", "skill": "Knife", "damage": "thr imp / sw-2 cut; +1d imp/cut", "reach": "1", "parry": "+0", "st": 7, "cost": 150, "weight": 2, "notes": "Ultrasonic vibrations. Concealable."
+    }
+  ],
+  "exotic_and_primitive": {
+    "flamethrowers": [
+      {
+        "name": "Mandalorian Wrist Flamer", "damage": "2d6 burn", "acc": 1, "range": 10, "shots": 5, "st": 8, "bulk": -2, "cost": 1800
+      },
+      {
+        "name": "Czerka \"Purge\" Flamethrower", "damage": "3d6 burn", "acc": 2, "range": 20, "shots": 10, "st": 11, "bulk": -5, "cost": 3500
+      }
+    ],
+    "slugthrowers": [
+      {
+        "name": "Czerka Slugthrower Pistol", "damage": "2d6+1 pi+", "acc": 2, "range": "180/2,000", "rof": 3, "shots": "12+1", "st": 9, "rcl": -2, "cost": 450
+      },
+      {
+        "name": "Mandalorian Ripper", "damage": "4d6 pi (2)", "acc": 4, "range": "450/2,800", "rof": 10, "shots": "30+1", "st": 10, "rcl": -2, "cost": 4000
+      },
+      {
+        "name": "Tusken Cycler Rifle", "damage": "5d6 pi++", "acc": 5, "range": "800/4,500", "rof": 1, "shots": "5+1", "st": 11, "rcl": -3, "cost": 2200
+      }
+    ],
+    "gauntlet_and_concealed": [
+      {
+        "name": "\"Stinger\" Gauntlet", "damage": "By Ammo", "acc": 1, "range": "50/150", "rof": 1, "shots": "5+1", "st": 5, "bulk": -1, "cost": 2500
+      }
+    ]
+  },
+  "explosives": {
+    "grenades": [
+      { "name": "Adhesive Grenade", "damageEffect": "Affliction (HT-2)", "weight": 1, "cost": 350, "lc": "2" },
+      { "name": "Concussion Grenade", "damageEffect": "6d6 cr ex + Affliction (HT)", "weight": 1, "cost": 200, "lc": "2" },
+      { "name": "CryoBan Grenade", "damageEffect": "3d6 burn (Cold) + Affliction (HT)", "weight": 1, "cost": 600, "lc": "2" },
+      { "name": "Ion Grenade", "damageEffect": "6d6(5) cr ex", "weight": 1, "cost": 450, "lc": "2" },
+      { "name": "Plasma Grenade", "damageEffect": "8d6(2) burn ex", "weight": 1, "cost": 2200, "lc": "1" },
+      { "name": "Poison Grenade", "damageEffect": "3d6 tox (Resist HT-3)", "weight": 1, "cost": 700, "lc": "1" },
+      { "name": "Sonic Grenade", "damageEffect": "4d6 fat + Affliction (HT-2)", "weight": 0.5, "cost": 500, "lc": "2" },
+      { "name": "Thermal Detonator", "damageEffect": "6d6*2(3) cr ex", "weight": 1, "cost": 1500, "lc": "1" }
+    ],
+    "mines": [
+      { "name": "Fragmentation Mine", "damageEffect": "5d6 [2d] cr ex", "weight": 2, "cost": 350, "lc": "2" },
+      { "name": "Stun Mine", "damageEffect": "Affliction (HT-3)", "weight": 2, "cost": 400, "lc": "2" },
+      { "name": "Gas Mine", "damageEffect": "Varies by agent", "weight": 3, "cost": 650, "lc": "1" },
+      { "name": "Laser Trip Mine", "damageEffect": "6d6 burn ex", "weight": 1.5, "cost": 500, "lc": "2" },
+      { "name": "EMP Mine", "damageEffect": "6d6(5) cr ex", "weight": 2, "cost": 600, "lc": "2" },
+      { "name": "Plasma Mine", "damageEffect": "10d6(2) burn ex", "weight": 4, "cost": 3000, "lc": "1" }
+    ]
+  }
+}

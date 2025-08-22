@@ -1,0 +1,59 @@
+<!-- systems\shadowbase\templates\partials\combat\combat-hub-weapons.hbs -->
+
+<div class="section-box">
+    <div class="space-y-3">
+        {{#each items.weapons as |weapon id|}}
+        <div class="weapon-entry-detailed">
+            <div class="weapon-header">
+                <span class="weapon-name truncate">
+                    {{#if weapon.system.customName}}
+                        {{weapon.system.customName}}
+                    {{else if weapon.system.baseExplosiveName}}
+                        {{weapon.system.baseExplosiveName}} (x{{weapon.system.quantity}})
+                    {{else}}
+                        {{weapon.name}}
+                    {{/if}}
+                </span>
+                <div class="weapon-actions">
+                    <button class="roll-button" data-roll-type="weapon-attack" data-item-id="{{weapon._id}}">
+                        <i class="fas fa-dice-d20"></i>
+                    </button>
+                    <button class="roll-button roll-damage" data-roll-type="weapon-damage" data-item-id="{{weapon._id}}">
+                        <i class="fas fa-tint"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="weapon-details">
+                <div class="weapon-stat">
+                    <label>Damage</label>
+                    <span>
+                        {{#if weapon.system.finalDamage}}
+                            {{weapon.system.finalDamage}}
+                        {{else if weapon.system.calculatedDamage}}
+                            {{weapon.system.calculatedDamage}}
+                        {{else if weapon.system.finalDamageEffect}}
+                            {{weapon.system.finalDamageEffect}}
+                        {{else}}
+                            {{weapon.system.baseDamage}}
+                        {{/if}}
+                    </span>
+                </div>
+                <div class="weapon-stat">
+                    <label>Type</label>
+                    <span>
+                        {{#if weapon.system.finalDamageType}}
+                            {{weapon.system.finalDamageType}}
+                        {{else if weapon.system.calculatedDamageType}}
+                            {{weapon.system.calculatedDamageType}}
+                        {{else}}
+                            &mdash;
+                        {{/if}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <p class="text-xs text-muted-foreground text-center py-2">No weapons in inventory.</p>
+        {{/each}}
+    </div>
+</div>

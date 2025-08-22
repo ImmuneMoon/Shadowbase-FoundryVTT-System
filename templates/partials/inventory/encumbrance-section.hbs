@@ -1,0 +1,111 @@
+<!-- systems\shadowbase\templates\partials\inventory\encumbrance-section.hbs -->
+
+<div class="section-box">
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 items-end">
+        {{!-- First Row --}}
+        <div class="form-row" data-field-name="basicLift">
+            <label for="basicLift" class="font-medium text-sm text-foreground">Basic Lift</label>
+            <input value="{{system.characteristics.basicLift}}" readonly class="bg-muted/50 text-center" name="basicLift" id="basicLift" />
+        </div>
+        <div class="form-row" data-field-name="currentEncumbranceLevel">
+            <label for="currentEncumbranceLevel" class="font-medium text-sm text-foreground">Encumbrance</label>
+            <input value="{{system.currentEncumbrance.level}}" readonly class="bg-muted/50 font-semibold text-center" name="currentEncumbranceLevel" id="currentEncumbranceLevel" />
+        </div>
+        <div class="form-row" data-field-name="currentMove">
+            <label for="currentMove" class="font-medium text-sm text-foreground">Current Move</label>
+            <input value="{{system.currentEncumbrance.move}}" readonly class="bg-muted/50 font-semibold text-center" name="currentMove" id="currentMove" />
+        </div>
+
+        {{!-- Second Row --}}
+        <div class="form-row" data-field-name="currentDodge">
+            <label for="currentDodge" class="font-medium text-sm text-foreground">Current Dodge</label>
+            <div class="flex items-center gap-2">
+                <input value="{{system.currentEncumbrance.dodge}}" readonly class="bg-muted/50 font-semibold text-center flex-grow" name="currentDodge" id="currentDodge" />
+                <button type="button" class="roll-button h-10 w-10 shrink-0" data-roll-type="action" data-action-key="dodge" data-target="{{system.currentEncumbrance.dodge}}" data-label="Dodge">
+                    <i class="fas fa-dice-d20"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="form-row" data-field-name="selectedParrySkill">
+            <label for="selectedParrySkill" class="font-medium text-sm text-foreground">Parry ({{system.characteristics.defenses.parry}})</label>
+            <div class="flex items-center gap-2">
+                <select name="system.activeParrySkillId" class="parry-select flex-grow h-10">
+                    {{#each system.parryOptions as |option|}}
+                        <option value="{{option.id}}" data-value="{{option.value}}" {{#if (eq option.id ../system.activeParrySkillId)}}selected{{/if}}>
+                            {{option.name}} ({{option.value}})
+                        </option>
+                    {{/each}}
+                </select>
+                <button type="button" class="roll-button h-10 w-10 shrink-0" data-roll-type="action" data-action-key="parry" data-target="{{system.characteristics.defenses.parry}}" data-label="Parry">
+                    <i class="fas fa-dice-d20"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="form-row" data-field-name="selectedBlockSkill">
+            <label for="selectedBlockSkill" class="font-medium text-sm text-foreground">Block ({{system.characteristics.defenses.block}})</label>
+            <div class="flex items-center gap-2">
+                 <select name="system.activeBlockSkillId" class="block-select flex-grow h-10">
+                    {{#if system.blockOptions}}
+                        {{#each system.blockOptions as |option|}}
+                            <option value="{{option.id}}" data-value="{{option.value}}" {{#if (eq option.id ../system.activeBlockSkillId)}}selected{{/if}}>
+                                {{option.name}} ({{option.value}})
+                            </option>
+                        {{/each}}
+                    {{else}}
+                        <option value="">No Block Skill</option>
+                    {{/if}}
+                </select>
+                <button type="button" class="roll-button h-10 w-10 shrink-0" data-roll-type="action" data-action-key="block" data-target="{{system.characteristics.defenses.block}}" data-label="Block">
+                    <i class="fas fa-dice-d20"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+            
+    <div class="mt-4 overflow-x-auto">
+        <table class="text-xs dr-table">
+            <thead>
+                <tr>
+                    <th>Encumbrance Level</th>
+                    <th>Max Weight</th>
+                    <th>Move</th>
+                    <th>Dodge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="{{#if (eq system.currentEncumbrance.level 'None')}}bg-accent/20{{/if}}">
+                    <td>None</td>
+                    <td>&le; {{system.encumbranceLevels.none.weight}} lbs</td>
+                    <td>{{system.encumbranceLevels.none.move}}</td>
+                    <td>{{system.encumbranceLevels.none.dodge}}</td>
+                </tr>
+                 <tr class="{{#if (eq system.currentEncumbrance.level 'Light')}}bg-accent/20{{/if}}">
+                    <td>Light</td>
+                    <td>&le; {{system.encumbranceLevels.light.weight}} lbs</td>
+                    <td>{{system.encumbranceLevels.light.move}}</td>
+                    <td>{{system.encumbranceLevels.light.dodge}}</td>
+                </tr>
+                 <tr class="{{#if (eq system.currentEncumbrance.level 'Medium')}}bg-accent/20{{/if}}">
+                    <td>Medium</td>
+                    <td>&le; {{system.encumbranceLevels.medium.weight}} lbs</td>
+                    <td>{{system.encumbranceLevels.medium.move}}</td>
+                    <td>{{system.encumbranceLevels.medium.dodge}}</td>
+                </tr>
+                <tr class="{{#if (eq system.currentEncumbrance.level 'Heavy')}}bg-accent/20{{/if}}">
+                    <td>Heavy</td>
+                    <td>&le; {{system.encumbranceLevels.heavy.weight}} lbs</td>
+                    <td>{{system.encumbranceLevels.heavy.move}}</td>
+                    <td>{{system.encumbranceLevels.heavy.dodge}}</td>
+                </tr>
+                 <tr class="{{#if (eq system.currentEncumbrance.level 'X-Heavy')}}bg-accent/20{{/if}}">
+                    <td>X-Heavy</td>
+                    <td>&le; {{system.encumbranceLevels.xheavy.weight}} lbs</td>
+                    <td>{{system.encumbranceLevels.xheavy.move}}</td>
+                    <td>{{system.encumbranceLevels.xheavy.dodge}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

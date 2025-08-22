@@ -1,0 +1,20 @@
+<!-- systems\shadowbase\templates\partials\combat\actor-combat-hub.hbs -->
+
+<div class="combat-hub-container">
+    <h3 class="text-xl font-semibold font-headline text-accent mb-4">Combat Hub</h3>
+    <div class="section-box combat-hub">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+        
+        {{!-- Left Column: Pools & Defenses --}}
+        <div class="space-y-4">
+          {{> "systems/shadowbase/templates/partials/combat/combat-hub-resources.hbs"}}
+          {{> "systems/shadowbase/templates/partials/combat/combat-hub-defenses.hbs"}}
+        </div>
+
+        {{!-- Right Column: Weapons --}}
+        <div class="space-y-2">
+          {{> "systems/shadowbase/templates/partials/combat/combat-hub-weapons.hbs"}}
+        </div>
+      </div>
+    </div>
+</div>

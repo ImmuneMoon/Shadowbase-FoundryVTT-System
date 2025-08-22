@@ -1,0 +1,39 @@
+<!-- systems\shadowbase\templates\partials\abilities\actor-skills.hbs -->
+
+<div class="section-box">
+    <h3 class="section-header collapsible-header">
+        <span><i class="fas fa-chevron-down"></i> Skills </span>
+        <div class="item-controls">
+            <a class="item-create" title="Add Skill" data-type="skill"><i class="fas fa-plus"></i></a>
+        </div>
+    </h3>
+    <ul class="item-list collapsible-content">
+        {{#each skills as |item|}}
+            <li class="item-entry" data-item-id="{{item._id}}">
+                <div class="item-header">
+                    <span class="item-name">{{item.name}}</span>
+                    <div class="item-controls">
+                        <a class="item-edit" title="Edit Skill"><i class="fas fa-edit"></i></a>
+                        <a class="item-delete" title="Delete Skill"><i class="fas fa-trash"></i></a>
+                    </div>
+                </div>
+                <div class="item-details text-xs">
+                    <div class="skill-detail-row">
+                        <span><strong>Level:</strong> {{item.system.level}}</span>
+                    </div>
+                    <div class="skill-detail-row">
+                        <span><strong>Relative:</strong> {{item.system.relativeLevel}}</span>
+                    </div>
+                    <div class="skill-detail-row">
+                        <span><strong>Points:</strong> [{{item.system.points}}]</span>
+                    </div>
+                    {{#if item.system.notes}}
+                    <div class="skill-detail-row skill-notes-display text-muted-foreground mt-1">
+                        <p><strong>Notes:</strong> {{item.system.notes}}</p>
+                    </div>
+                    {{/if}}
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</div>

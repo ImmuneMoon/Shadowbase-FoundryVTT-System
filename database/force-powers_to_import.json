@@ -1,0 +1,276 @@
+
+[
+  {
+    "name": "Force Sight",
+    "description": "Allows perception of the world through the Force, bypassing blindness, illusions, or even physical obstructions like smoke or darkness.",
+    "category": "Sense Powers",
+    "alignment": "Grey",
+    "baseSkill": "Sense (IQ/Will)",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 2, "effect": "You can perceive the world through the Force, bypassing blindness, illusions, and normal darkness within 25 yards. You gain 360-degree vision.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 1, "effect": "Range extends to 50 yards. You can detect living beings through thin objects within 5 yards. Gain +1 to Perception to detect hidden opponents.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 1, "effect": "Range extends to 100 yards. You can see through heavier objects within 10 yards. Gain +2 to defend against surprise attacks.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 0, "effect": "Range is limitless in a Force-rich environment. You can discern emotional states and immediate intentions within 50 yards. You can no longer be surprised.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Farsight",
+    "description": "The Force-user can extend their senses beyond normal limits, perceiving events and locations at great distances through the Force, as if physically present.",
+    "category": "Sense Powers",
+    "alignment": "Grey",
+    "baseSkill": "Sense (IQ/Will)",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 3, "effect": "Project senses to a familiar location within 100 miles for 1 minute.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 4, "effect": "Project senses to any location on the same planet for 5 minutes.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 5, "effect": "Project senses to any location within the same star system for 10 minutes.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 6, "effect": "Project senses to a neighboring star system for 30 minutes. Can perform rudimentary Perception rolls in the viewed area.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Precognition",
+    "description": "The Force-user receives glimpses or warnings of future events, providing insight into impending danger, important developments, or potential outcomes.",
+    "category": "Sense Powers",
+    "alignment": "Grey",
+    "baseSkill": "Sense (IQ/Will) or Observation (Per/Average)",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 2, "effect": "Receive vague premonitions of immediate danger (seconds to minutes).", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 3, "effect": "Premonitions become clearer, foreshadowing events within the next hour.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 4, "effect": "Receive premonitions of significant events occurring within the next day.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 5, "effect": "Experience powerful premonitions of major events spanning days to weeks. Provides a permanent +1 bonus to all Danger Sense rolls.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Psychometry",
+    "description": "The Force-user can perceive echoes of the past by touching an object or entering a location where strong emotions or significant events have occurred.",
+    "category": "Sense Powers",
+    "alignment": "Grey",
+    "baseSkill": "Sense (IQ/Will)",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 2, "effect": "By touching an object with a strong, recent history, you gain vague sensory hints of its past for 1 minute.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 3, "effect": "Gain clearer impressions and specific details from objects with a significant history for up to 5 minutes.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 4, "effect": "Project your senses into past events you perceive, experiencing them as if present for up to 10 minutes.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 5, "effect": "Witness any event related to a person or location by concentrating on them, even without direct physical contact, for up to 30 minutes.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Concealment",
+    "description": "The user masks their presence in the Force, making them difficult for other Force-sensitives to detect.",
+    "category": "Sense Powers",
+    "alignment": "Grey",
+    "baseSkill": "Stealth (DX/Average) or a contested Sense roll",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 2, "effect": "You can hide your Force signature. Other Force-sensitives must win a Quick Contest of Sense vs. your Stealth to detect you. Costs 1 FP per 10 min to maintain.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 3, "effect": "You impose a -2 penalty on any Sense roll to detect your presence. You can extend this concealment to one willing adjacent person. Costs 1 FP per 30 min.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 4, "effect": "You impose a -4 penalty on detection rolls. You can conceal a small group (up to 3 people) in a 2-yard radius. Costs 1 FP per hour.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 5, "effect": "You are completely invisible to Force senses unless you use an overt Force power. You can conceal a group of up to 5 people. Costs 1 FP per hour.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Push/Pull",
+    "description": "The Force-user can telekinetically push or pull objects and beings.",
+    "category": "Control Powers",
+    "alignment": "Grey",
+    "baseSkill": "Telekinesis (IQ/Hard)",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 2, "effect": "Exert a telekinetic force equal to your Basic Lift (BL) on objects within 10 yards. Cannot inflict damage directly.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 2, "effect": "Force increases to 2xBL within 20 yards. Can attempt to disarm an opponent or push/pull a person, causing them to fall prone.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 3, "effect": "Force increases to 4xBL within 50 yards. Can inflict 1d-3 crushing damage with thrown objects, or 1d on a pushed person.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 4, "effect": "Force increases to 8xBL within 100 yards. Can hurl a person up to 5 yards, causing 2d crushing damage.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Jump/Leap",
+    "description": "The Force-user enhances their physical jump or leap through an application of the Force.",
+    "category": "Control Powers",
+    "alignment": "Grey",
+    "baseSkill": "Movement (IQ/Hard)",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 1, "effect": "Double your effective Jumping skill distance.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 1, "effect": "Triple your effective Jumping skill distance.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 2, "effect": "Quadruple your effective Jumping skill distance. Can perform a \"Force-assisted pounce\" attack.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 3, "effect": "Multiply your effective Jumping skill distance by five. Can use for \"Controlled Descent\" to negate falling damage.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Speed",
+    "description": "The Force-user accelerates their body and mind, allowing them to move and react with incredible swiftness.",
+    "category": "Control Powers",
+    "alignment": "Grey",
+    "baseSkill": "Movement (IQ/Hard)",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 2, "effect": "Gain +2 to Basic Move and +0.5 Basic Speed for 1d turns.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 3, "effect": "Gain +4 to Basic Move and +1.0 Basic Speed for 1d+1 turns. Gain +1 to Active Defenses.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 4, "effect": "Gain +6 to Basic Move and +1.5 Basic Speed for 1d+2 turns. Gain +2 to Active Defenses and one extra attack per turn.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 5, "effect": "Gain +8 to Basic Move and +2.0 Basic Speed for 1d+3 turns. Gain +3 to Active Defenses and two extra attacks per turn at a -1 penalty.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Barrier",
+    "description": "The Force-user creates a protective shield of pure energy to deflect or absorb incoming attacks.",
+    "category": "Control Powers",
+    "alignment": "Grey",
+    "baseSkill": "Will",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 2, "effect": "Create a personal barrier with DR 5 against one incoming attack. (1 FP/turn to maintain)", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 3, "effect": "Project a stationary wall or a bubble around yourself and an ally with DR 10. (2 FP/turn to maintain)", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 4, "effect": "Create a defensive bubble up to 5 yards in radius with DR 15. (2 FP/turn to maintain)", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 5, "effect": "Manifest a nearly impenetrable dome up to 10 yards in radius with DR 25. (3 FP/turn to maintain)", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Rage",
+    "description": "The user channels their anger and pain into a terrifying surge of physical power, sacrificing defense for raw offensive capability.",
+    "category": "Control Powers",
+    "alignment": "DS",
+    "baseSkill": "Will",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 4, "effect": "For 1 minute, you gain +2 ST, but suffer -1 to all Active Defenses. You must make a self-control roll to avoid attacking the nearest target (friend or foe).", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 4, "effect": "For 1 minute, you gain +3 ST and +1 HT, but suffer -2 to all Active Defenses. Self-control roll is at +1.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 5, "effect": "For 1 minute, you gain +4 ST, +2 HT, and +1 to Basic Speed, but cannot Parry. Self-control roll is at +2.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 5, "effect": "For 1 minute, you gain +5 ST, +3 HT, +1 to Basic Speed, and DR 2 (Tough Skin). You cannot use Active Defenses. Self-control roll is at +4.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Mind Trick",
+    "description": "The Force-user subtly influences the minds of others, planting suggestions, causing confusion, or altering perceptions.",
+    "category": "Alter Powers",
+    "alignment": "Grey",
+    "baseSkill": "Mind Control (IQ/Hard) or Influence (IQ/Average)",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 2, "effect": "(Influence) Plant a simple, non-harmful suggestion in one non-Force-sensitive being within 5 yards. Requires a Quick Contest of skill vs. Will.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 3, "effect": "(Force Persuasion) Plant a more complex suggestion or alter a minor perception. Range increases to 10 yards. Can target up to two beings.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 4, "effect": "(Peaceful Resolution) Compel a simple, non-suicidal action. Range increases to 20 yards. Can target up to three beings, or one Force-sensitive at a penalty.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 5, "effect": "(Create Illusion) Create minor hallucinations or compel complex actions. Range is 50 yards. Can target up to five beings.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Lightning",
+    "description": "The Force-user generates raw electrical energy from their fingertips, unleashing potent bolts of Force lightning upon their foes.",
+    "category": "Alter Powers",
+    "alignment": "DS",
+    "baseSkill": "Innate Attack (Energy) (DX/Hard)",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 3, "effect": "(Sith Spark) Project a single bolt at a target within 10 yards, inflicting 1d burning damage.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 4, "effect": "(Forked Lightning) Project a more potent bolt within 20 yards, inflicting 2d burning damage. Can be maintained as a continuous stream.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 5, "effect": "(Lightning Conduit) Project a torrent within 30 yards, inflicting 3d burning damage. Can chain to hit up to 3 targets.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 6, "effect": "(Force Storm) Unleash a devastating surge within 50 yards, inflicting 4d burning damage, or a 3-yard cone for 2d damage.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Shock",
+    "description": "The Force-user can project a concentrated burst of Force energy that stuns or incapacitates a single target.",
+    "category": "Alter Powers",
+    "alignment": "Grey",
+    "baseSkill": "Will",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 2, "effect": "Target within 5 yards suffers a -1 penalty to DX-based rolls and Active Defenses for 1 turn.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 3, "effect": "Range increases to 10 yards. Target suffers a -2 penalty for 1d turns and loses 1 EP.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 4, "effect": "Range increases to 20 yards. Target suffers a -3 penalty for 1d+1 turns and loses 2 EP.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 5, "effect": "Range increases to 30 yards. Target suffers a -4 penalty for 1d+2 turns, loses 3 EP, and must make a HT roll or fall unconscious.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Storm",
+    "description": "The Force-user conjures a devastating localized storm of Force energy, unleashing a torrent of destructive power upon an area.",
+    "category": "Alter Powers",
+    "alignment": "DS",
+    "baseSkill": "Will",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 4, "effect": "Create a 1-yard radius sphere within 10 yards, inflicting 1d crushing damage.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 6, "effect": "Expands to a 2-yard radius sphere within 20 yards, inflicting 2d crushing damage.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 8, "effect": "Expands to a 3-yard radius sphere within 30 yards, inflicting 3d crushing damage.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 10, "effect": "Expands to a 5-yard radius sphere within 50 yards, inflicting 4d crushing damage.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Scream",
+    "description": "An uncontrolled, raw release of Force energy triggered by extreme anger, pain, or frustration.",
+    "category": "Alter Powers",
+    "alignment": "DS",
+    "baseSkill": "Will",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 3, "effect": "All beings within a 3-yard radius must make a HT roll or be mentally stunned for 1 turn.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 4, "effect": "All targets in a 5-yard radius suffer 1d crushing damage and must make a HT-1 roll or be knocked prone.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 6, "effect": "Radius increases to 8 yards, inflicts 2d crushing damage, and all targets must make a HT-2 roll or be stunned for 1d turns.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 8, "effect": "Radius increases to 12 yards, inflicts 3d crushing damage, and may temporarily deafen those who fail a HT-3 roll.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Drain Force",
+    "description": "A potent Dark Side ability, this power allows the Force-user to siphon the life energy and Force potential of another being.",
+    "category": "Alter Powers",
+    "alignment": "DS",
+    "baseSkill": "Will",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 3, "effect": "Drain 1d-1 EP from a target within 5 yards; you regain half.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 4, "effect": "Drain 1d EP and 1d FP from a target within 15 yards; you regain half.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 5, "effect": "Inflict 1d-2 fatigue damage to a target within 25 yards, healing HP equal to damage dealt.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 6, "effect": "Create a 5-yard radius field that deals 1d fatigue damage to all within; you heal HP equal to the total damage dealt.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Drain Life",
+    "description": "One of the most sinister Dark Side powers, Drain Life allows the user to violently rip a target's life force away to mend their own body.",
+    "category": "Alter Powers",
+    "alignment": "DS",
+    "baseSkill": "Will vs. HT (contested roll)",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 4, "effect": "(Siphon Stamina) By touch, inflict 1d-3 HP of injury that bypasses DR, and you heal for the exact amount lost.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 5, "effect": "(Siphon Life) Range extends to 10 yards. Inflicts 1d-1 HP of injury, healing you for the amount lost.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 7, "effect": "(Contagious Drain) Range increases to 25 yards. Inflicts 1d HP of injury, healing you for the amount lost.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 9, "effect": "(Area of Suffering) Range extends to 50 yards. Inflicts 2d-2 HP of injury, healing you for the amount lost.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Fear",
+    "description": "The user projects a wave of terror into the minds of their enemies, causing them to flee or become paralyzed with fear.",
+    "category": "Alter Powers",
+    "alignment": "DS",
+    "baseSkill": "Intimidation (Will/Average) or a contested Will roll.",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 3, "effect": "Target one being within 10 yards. They must make an immediate Fright Check.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 4, "effect": "Affect up to 3 targets within a 2-yard radius. They must make a Fright Check at -1.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 5, "effect": "Affect all targets in a 5-yard cone. They must make a Fright Check at -2.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 6, "effect": "Affect all targets in a 10-yard radius. They must make a Fright Check at -3. Those who critically fail are paralyzed with fear for 1d turns.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Choke",
+    "description": "A terrifying display of power where the user telekinetically constricts the throat of a target, cutting off their air supply.",
+    "category": "Alter Powers",
+    "alignment": "DS",
+    "baseSkill": "Telekinesis (IQ/Hard) vs target's HT.",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 3, "effect": "(Constriction) Target one being within 10 yards. On a successful contested roll, they begin to suffocate and take 1 point of fatigue damage per second.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 3, "effect": "Range increases to 20 yards. The target takes 2 points of fatigue damage per second and is at -2 to DX.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 4, "effect": "Range increases to 30 yards. The target takes 1d-2 crushing damage per second in addition to suffocation.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 4, "effect": "Range increases to 50 yards. The target takes 1d crushing damage per second and is completely immobilized.", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Heal",
+    "description": "The Force-user channels life-giving energy through the Force to accelerate natural healing.",
+    "category": "Enhance Powers",
+    "alignment": "LS",
+    "baseSkill": "Healing (IQ/Hard)",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 2, "effect": "(Mend Injury) Stabilize a dying character or remove 1 point of injury penalty.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 3, "effect": "(Restore Life) Restore 1 HP to a target. Can cure minor illnesses.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 4, "effect": "(Purge Poison/Disease) Restore 2 HP to a target. Can cure moderate illnesses or poisons.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 5, "effect": "(Area of Healing) Restore 3 HP to a target. Can perform 'Regenerative Healing.'", "requirements": "Master" }
+    ]
+  },
+  {
+    "name": "Force Revitalize",
+    "description": "A subtle but potent application of the Force, allowing the user to channel healing energies to mend fatigue and restore stamina.",
+    "category": "Enhance Powers",
+    "alignment": "LS",
+    "baseSkill": "Healing (IQ/Hard)",
+    "levels": [
+      { "level": 1, "cpCost": 10, "fpCost": 2, "effect": "By touch, restore 2 EP to a target.", "requirements": "Apprentice" },
+      { "level": 2, "cpCost": 20, "fpCost": 3, "effect": "Restore 4 EP to a target within 2 yards.", "requirements": "Adept" },
+      { "level": 3, "cpCost": 35, "fpCost": 4, "effect": "Restore 8 EP to a target within 5 yards, or affect up to two allies for 4 EP each.", "requirements": "Expert" },
+      { "level": 4, "cpCost": 55, "fpCost": 5, "effect": "Instantly restore all lost EP to a single target you touch, or restore 6 EP to a group of up to five allies.", "requirements": "Master" }
+    ]
+  }
+]
