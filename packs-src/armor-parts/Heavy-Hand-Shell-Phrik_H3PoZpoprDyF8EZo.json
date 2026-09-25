@@ -1,0 +1,42 @@
+{
+  "_id": "H3PoZpoprDyF8EZo",
+  "_key": "!items!H3PoZpoprDyF8EZo",
+  "name": "Heavy Hand Shell (Phrik)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 5900000,
+  "system": {
+    "row": {
+      "id": "5d7868c8-ced7-4a21-af78-adb5c095e444",
+      "name": "Heavy Hand Shell (Phrik)",
+      "category": "Armor Shell",
+      "cost": 28350,
+      "weight": 3.15,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-heavy-hands-phrik",
+      "materialId": "phrik",
+      "notes": "Nearly indestructible, highly lightsaber-resistant. Medium and Heavy tiers only -- it is not milled thin.",
+      "validSlots": [],
+      "drBonus": 13,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-heavy-hands-phrik"
+    }
+  }
+}

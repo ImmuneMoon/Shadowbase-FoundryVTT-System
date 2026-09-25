@@ -1,0 +1,42 @@
+{
+  "_id": "Ie0UJl9nctXIf9Ed",
+  "_key": "!items!Ie0UJl9nctXIf9Ed",
+  "name": "Blueprint: Lorrdian Gem",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 36200000,
+  "system": {
+    "row": {
+      "id": "db954b0c-5a9d-48de-a4fb-8888ffde8d2c",
+      "name": "Blueprint: Lorrdian Gem",
+      "cost": 708,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Lorrdian Gem (Generation 0, proven, encoded, catalog design). Required to build Lorrdian Gem; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Lorrdian Gem",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 5333.333333333334,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Lorrdian Gem"
+    }
+  }
+}

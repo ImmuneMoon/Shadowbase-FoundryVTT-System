@@ -1,0 +1,39 @@
+{
+  "_id": "pdZXrehrHvTwgEgx",
+  "_key": "!items!pdZXrehrHvTwgEgx",
+  "name": "Primary Optic (R-Series)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "oqIU8n2TNn1530V9",
+  "sort": 3300000,
+  "system": {
+    "row": {
+      "id": "e5357011-5f47-49cc-957c-404a97e2bd77",
+      "name": "Primary Optic (R-Series)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Sensor",
+      "cost": 132,
+      "weight": 1,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "optic-r-series",
+      "description": "Standard Vision"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "optic-r-series"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "_id": "4FLYyOMLvPOfa5mJ",
+  "_key": "!items!4FLYyOMLvPOfa5mJ",
+  "name": "Force Barrier",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "KBIMmcUBYi6ZY6I3",
+  "sort": 1200000,
+  "system": {
+    "row": {
+      "name": "Force Barrier",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 2,
+      "effect": "Create a personal barrier with DR 5 against one incoming attack.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Will",
+      "category": "Control Powers",
+      "alignment": "Grey",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Force Barrier",
+        "description": "The Force-user creates a protective shield of pure energy to deflect or absorb incoming attacks.",
+        "category": "Control Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 2,
+        "alignment": "Grey",
+        "baseSkill": "Will",
+        "characterTier": "Apprentice",
+        "effect": "Create a personal barrier with DR 5 against one incoming attack."
+      },
+      {
+        "name": "Force Barrier",
+        "description": "The Force-user creates a protective shield of pure energy to deflect or absorb incoming attacks.",
+        "category": "Control Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 3,
+        "alignment": "Grey",
+        "baseSkill": "Will",
+        "characterTier": "Adept",
+        "effect": "Project a stationary wall or a bubble around yourself and an ally with DR 10."
+      },
+      {
+        "name": "Force Barrier",
+        "description": "The Force-user creates a protective shield of pure energy to deflect or absorb incoming attacks.",
+        "category": "Control Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 4,
+        "alignment": "Grey",
+        "baseSkill": "Will",
+        "characterTier": "Expert",
+        "effect": "Create a defensive bubble up to 10 feet in radius with DR 15."
+      },
+      {
+        "name": "Force Barrier",
+        "description": "The Force-user creates a protective shield of pure energy to deflect or absorb incoming attacks.",
+        "category": "Control Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 5,
+        "alignment": "Grey",
+        "baseSkill": "Will",
+        "characterTier": "Master",
+        "effect": "Manifest a nearly impenetrable dome up to 15 feet in radius with DR 25."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Force Barrier"
+    }
+  }
+}

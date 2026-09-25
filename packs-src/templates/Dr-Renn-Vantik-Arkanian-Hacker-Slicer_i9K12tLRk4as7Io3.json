@@ -1,0 +1,1483 @@
+{
+  "_id": "i9K12tLRk4as7Io3",
+  "_key": "!actors!i9K12tLRk4as7Io3",
+  "name": "Dr. Renn Vantik (Arkanian Hacker/Slicer)",
+  "type": "character",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "jE1PQo0cu0pzNz0Y",
+  "sort": 500000,
+  "system": {
+    "legacy": {},
+    "playerName": "",
+    "species": "Arkanian",
+    "homeworld": "Arkania",
+    "characterPortrait": null,
+    "campaign": "Shadows of the Mandalorian Wars",
+    "pointTotal": 100,
+    "turnCounter": 0,
+    "facing": 0,
+    "incomingBearing": 0,
+    "threatEngaged": false,
+    "incomingArc": null,
+    "facingChangeUsed": false,
+    "posture": "standing",
+    "elevation": 0,
+    "parriesThisTurn": 0,
+    "height": "1.80 m",
+    "weight": "69 kg / 153 lb",
+    "sizeModifier": -0.04,
+    "age": 0,
+    "appearance": "",
+    "techLevel": "",
+    "isDroid": false,
+    "powerPoints": 100,
+    "lightSidePoints": 0,
+    "darkSidePoints": 0,
+    "trackDigital": false,
+    "trackPhysical": false,
+    "totalCredits": 7000,
+    "forceAlignment": -5,
+    "isStartingPointsMode": true,
+    "isConstructed": false,
+    "cpBaseline": 94,
+    "stBaseline": 10,
+    "dxBaseline": 10,
+    "iqBaseline": 10,
+    "htBaseline": 10,
+    "hitPointsBaseline": 0,
+    "endurancePointsBaseline": 0,
+    "forcePointsBaseline": 0,
+    "willBaseline": 0,
+    "perceptionBaseline": 0,
+    "frightCheckBaseline": 0,
+    "basicSpeedBaseline": 0,
+    "basicMoveBaseline": 0,
+    "visionBaseline": 0,
+    "hearingBaseline": 0,
+    "tasteAndSmellBaseline": 0,
+    "touchBaseline": 0,
+    "languagesBaseline": 0,
+    "culturalFamiliaritiesBaseline": 0,
+    "literacyBaseline": 0,
+    "languageEntries": [
+      {
+        "id": "renn-lang-huttese",
+        "tongue": "Huttese",
+        "tier": "accented",
+        "notes": "Language Talent applies (Ch18)."
+      },
+      {
+        "id": "renn-lang-arkanian",
+        "tongue": "Arkanian",
+        "tier": "native",
+        "notes": "Free to Arkanians (Ch3)."
+      },
+      {
+        "id": "renn-lang-basic",
+        "tongue": "Basic",
+        "tier": "native",
+        "notes": "Second native - via Bilingual (Ch4)."
+      }
+    ],
+    "republicRaised": false,
+    "frightCheck": null,
+    "basicSpeed": null,
+    "basicMove": null,
+    "selectedParrySkill": null,
+    "selectedBlockSkill": null,
+    "activeLightsaberForm": null,
+    "hitLocations": [
+      {
+        "name": "Head",
+        "type": "Head",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 2,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 3,
+        "installedHardwareIds": [],
+        "id": "bb80f262-ee53-478c-82cf-d69f8590ae79"
+      },
+      {
+        "name": "Face",
+        "type": "Face",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 5,
+        "installedHardwareIds": [],
+        "id": "e5372226-c0da-4fd3-bd5a-53d656b39538"
+      },
+      {
+        "name": "Upper Torso",
+        "type": "Vitals",
+        "side": "Center",
+        "relativeSM": -3,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 17,
+        "installedHardwareIds": [],
+        "id": "ec33c4b8-2678-495e-8c42-e29a712b55d7"
+      },
+      {
+        "name": "Torso",
+        "type": "Torso",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 10,
+        "installedHardwareIds": [],
+        "id": "38c5dbcf-1425-4e28-8994-64ad5a6d97e1"
+      },
+      {
+        "name": "Right Arm",
+        "type": "Arm",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 7,
+        "installedHardwareIds": [],
+        "id": "8065024c-b69b-4ebd-83b6-9dada77c0d55"
+      },
+      {
+        "name": "Right Hand",
+        "type": "Hand",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "33c9d9f4-f251-4e13-b711-299012901ce1"
+      },
+      {
+        "name": "Left Arm",
+        "type": "Arm",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 8,
+        "installedHardwareIds": [],
+        "id": "2a377eaf-f2f8-4d2e-8825-479aff4282e4"
+      },
+      {
+        "name": "Left Hand",
+        "type": "Hand",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "89e10570-030e-41d8-9b02-73884e205c66"
+      },
+      {
+        "name": "Right Leg",
+        "type": "Leg",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "3559f4a5-b574-4f22-a0b9-dbb69b068472"
+      },
+      {
+        "name": "Right Foot",
+        "type": "Foot",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "448884eb-b115-425b-ae65-f6e0b542fd32"
+      },
+      {
+        "name": "Left Leg",
+        "type": "Leg",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "d3db8233-e07a-4783-811f-a0f9872ea1f9"
+      },
+      {
+        "name": "Left Foot",
+        "type": "Foot",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "52334e7b-1f02-4df5-a2a3-3b037a31df88"
+      }
+    ],
+    "languages": "Huttese (Accented); Arkanian (Native); Basic (Native)",
+    "culturalFamiliarities": "Arkanian Dominion [0]",
+    "literacy": "Native Literacy [0]",
+    "description": "",
+    "background": "",
+    "notes": "",
+    "pointsAttributes": 0,
+    "pointsAdvantages": 0,
+    "pointsDisadvantages": 0,
+    "pointsOther": 0,
+    "cpTradedForCredits": 0,
+    "cpCreditsForm": "digital",
+    "currentHitPoints": 9,
+    "currentEndurancePoints": 11,
+    "currentForcePoints": 15,
+    "strength": 9,
+    "dexterity": 10,
+    "iq": 13,
+    "health": 11,
+    "hitPoints": null,
+    "will": null,
+    "perception": null,
+    "vision": null,
+    "hearing": null,
+    "tasteAndSmell": null,
+    "touch": null,
+    "endurancePoints": null,
+    "forcePoints": null,
+    "shipPosition": null,
+    "assignedStation": null,
+    "storageBoxes": [],
+    "droidBuild": {
+      "chassisId": null,
+      "powerCoreId": null,
+      "head": {
+        "componentId": null,
+        "processorId": null,
+        "memoryCoreId": null,
+        "sensorIds": [],
+        "externalModId": null
+      },
+      "arms": [],
+      "legs": [],
+      "chassisMods": {
+        "internalIds": [],
+        "externalIds": [],
+        "utilityIds": [],
+        "auxiliaryIds": [],
+        "motiveMountIds": [],
+        "reinforcementId": null,
+        "armorId": null,
+        "motivatorId": null,
+        "actuatorId": null,
+        "wiringId": null
+      }
+    },
+    "pinnedNotifications": [],
+    "useLiftingST": true,
+    "useStrikingST": true,
+    "useArmST": true
+  },
+  "prototypeToken": {
+    "name": "Dr. Renn Vantik (Arkanian Hacker/Slicer)",
+    "actorLink": true,
+    "displayName": 30,
+    "displayBars": 40,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "resources.hp"
+    },
+    "bar2": {
+      "attribute": "resources.ep"
+    }
+  },
+  "items": [
+    {
+      "_id": "VP8jn6lbTTp8Akgr",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.VP8jn6lbTTp8Akgr",
+      "name": "IQ +2 (Racial)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "IQ +2 (Racial)",
+          "points": 0,
+          "description": "Species-based mental acuity.",
+          "level": null,
+          "category": "Racial",
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 2,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          }
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "lYL7nXD5ovw3g06M",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.lYL7nXD5ovw3g06M",
+      "name": "DX +1 (Racial)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "DX +1 (Racial)",
+          "points": 0,
+          "description": "Species-based coordination.",
+          "level": null,
+          "category": "Racial",
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 1,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          }
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "g8cZGPlJ2edl6A2H",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.g8cZGPlJ2edl6A2H",
+      "name": "Mathematical Ability",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Mathematical Ability",
+          "points": 0,
+          "description": "Numbers and equations come naturally to you. You gain a +2 bonus to all Mathematics rolls, and to any skill roll where the GM judges rapid mental calculation to be a significant factor (such as Astrogation-style Navigation or targeting solutions).",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "jLeS9vdP6Q7WPCgb",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.jLeS9vdP6Q7WPCgb",
+      "name": "Charisma",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Charisma",
+          "points": 0,
+          "level": 1,
+          "description": "+1 to reactions.",
+          "category": "Social/Wealth",
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "FIgRDIemNU47n62R",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.FIgRDIemNU47n62R",
+      "name": "Gizmo",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Gizmo",
+          "points": 10,
+          "level": 2,
+          "description": "Two gizmos per session.",
+          "category": "Social/Wealth",
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "HkFlMuXAbmKcJ656",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.HkFlMuXAbmKcJ656",
+      "name": "Eidetic Memory",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 600000,
+      "system": {
+        "row": {
+          "name": "Eidetic Memory",
+          "points": 10,
+          "description": "You have perfect recall of everything you have ever seen or heard. Invaluable for remembering obscure schematics, tracking complex conspiracies, or recalling every detail of a past negotiation to exploit weaknesses.",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "3a3v9JxemZxlxCoy",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.3a3v9JxemZxlxCoy",
+      "name": "Language Talent",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 700000,
+      "system": {
+        "row": {
+          "name": "Language Talent",
+          "points": 10,
+          "description": "You have an ear for language. Every language you buy with points is spoken one fluency step higher than the level you paid for (Broken speaks as Accented, Accented as Fluent). Languages granted free - a native tongue, Bilingual, Polyglot - are unaffected. Facilitates espionage, trade, or communication with obscure factions across the diverse galaxy.",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "9jU8ewCXOiJpeIER",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.9jU8ewCXOiJpeIER",
+      "name": "Bilingual",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 800000,
+      "system": {
+        "row": {
+          "name": "Bilingual",
+          "points": 1,
+          "description": "You were raised speaking two languages. Add one additional Language at Native fluency, written on the sheet at [0] and noted (Bilingual). May be taken only at character creation.",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "fRwxx0r32p2AT9os",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.fRwxx0r32p2AT9os",
+      "name": "Overconfidence",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Overconfidence",
+          "points": 0,
+          "description": "The character believes themselves to be more capable or resilient than they truly are, leading them to take unnecessary risks. This hubris can be easily exploited by cunning opponents who set up situations designed to highlight your flaws.",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "d1C7G5fL2CNnRTUV",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.d1C7G5fL2CNnRTUV",
+      "name": "Curiosity",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Curiosity",
+          "points": 0,
+          "description": "The character has an uncontrollable urge to investigate mysteries or novelties, often leading them into dangerous situations that can be set up by adversaries. Severity varies by points (-5 to -15 points).",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "ivPMpF4uLPcYBZNT",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.ivPMpF4uLPcYBZNT",
+      "name": "Truthfulness",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Truthfulness",
+          "points": 0,
+          "description": "You find it difficult to lie or omit facts, even when it might be beneficial. This makes you transparent and potentially exploitable in negotiations or when dealing with deceitful adversaries.",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "aORxITJwKaAbHmmm",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.aORxITJwKaAbHmmm",
+      "name": "Distinctive Features (White Eyes)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Distinctive Features (White Eyes)",
+          "points": 0,
+          "description": "Solid white eyes that mark you out in a crowd.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "2qYq0SUnh0r1l9eL",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.2qYq0SUnh0r1l9eL",
+      "name": "Secret",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Secret",
+          "points": -10,
+          "description": "Illegal slicing activities.",
+          "level": null,
+          "category": "Social",
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "B1nxcL6gAZiW3pSN",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.B1nxcL6gAZiW3pSN",
+      "name": "Skinny",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 600000,
+      "system": {
+        "row": {
+          "name": "Skinny",
+          "points": -5,
+          "description": "You are frail and underweight, giving you a -1 on all rolls to resist death from failed HT rolls.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "sp30BfC0xGS54Imw",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.sp30BfC0xGS54Imw",
+      "name": "Computer Programming",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Computer Programming",
+          "relativeLevel": "IQ/H",
+          "level": "15",
+          "points": 4,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "QoKmfGVBPgdMAV9r",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.QoKmfGVBPgdMAV9r",
+      "name": "Electronics Repair (Computers)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Electronics Repair (Computers)",
+          "relativeLevel": "IQ/A",
+          "level": "15",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "d9A8qGis3OsY9kEX",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.d9A8qGis3OsY9kEX",
+      "name": "Cryptography",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Cryptography",
+          "relativeLevel": "IQ/H",
+          "level": "14",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "NDygzmsXlYllpv3O",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.NDygzmsXlYllpv3O",
+      "name": "Mathematics",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Mathematics",
+          "relativeLevel": "IQ/H",
+          "level": "15",
+          "points": 4,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "N7bNOd9H4lBROy6Y",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.N7bNOd9H4lBROy6Y",
+      "name": "Engineer (Hyperdrive)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Engineer (Hyperdrive)",
+          "relativeLevel": "IQ/H",
+          "level": "14",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "MUTLuhz6nlNaX76Y",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.MUTLuhz6nlNaX76Y",
+      "name": "Forgery",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 600000,
+      "system": {
+        "row": {
+          "name": "Forgery",
+          "relativeLevel": "IQ/H",
+          "level": "14",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "DNP7yiU5fzF7uEbs",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.DNP7yiU5fzF7uEbs",
+      "name": "Slicer Gear (Advanced)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "6e49b2c9-441c-44c5-b219-9fba838bb33d",
+          "name": "Slicer Gear (Advanced)",
+          "weight": 5,
+          "cost": 4710,
+          "quantity": 1,
+          "condition": "Fine",
+          "category": "Tools & Electronics"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "8K2sUJNdiiskuxhW",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.8K2sUJNdiiskuxhW",
+      "name": "Commlink (Handheld)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "id": "f90b09da-9cab-4416-9faf-e6ea04dfd001",
+          "name": "Commlink (Handheld)",
+          "weight": 1.4,
+          "cost": 1398,
+          "quantity": 1,
+          "condition": "Fine",
+          "category": "Communication & Data"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "CosgNy5hJ38fX0rw",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.CosgNy5hJ38fX0rw",
+      "name": "Aurodium Galactic Credit (200 cr)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "id": "b5f499bf-a5b6-4607-9cdf-17ba27f7f526",
+          "name": "Aurodium Galactic Credit (200 cr)",
+          "category": "Currencies",
+          "weight": 0.02,
+          "quantity": 1,
+          "cost": 200,
+          "denominationValue": 200,
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "qmx4JqyXQhUclZYy",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.qmx4JqyXQhUclZYy",
+      "name": "Aurodium Galactic Credit (100 cr)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "id": "dab2a588-da86-4a35-9e02-f3a33083cd4e",
+          "name": "Aurodium Galactic Credit (100 cr)",
+          "category": "Currencies",
+          "weight": 0.01,
+          "quantity": 1,
+          "cost": 100,
+          "denominationValue": 100,
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "OR0qXkZtZXpUv7kN",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.OR0qXkZtZXpUv7kN",
+      "name": "Aurodium Galactic Credit (50 cr)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "id": "5ad8d32b-c91a-4fd5-8457-74aa4947eb5e",
+          "name": "Aurodium Galactic Credit (50 cr)",
+          "category": "Currencies",
+          "weight": 0.005,
+          "quantity": 1,
+          "cost": 50,
+          "denominationValue": 50,
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "TsomhKBYAOCNuzp2",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.TsomhKBYAOCNuzp2",
+      "name": "Aurodium Galactic Credit (20 cr)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 600000,
+      "system": {
+        "row": {
+          "id": "532ecf6a-762f-4c75-bef9-21f35df1fc49",
+          "name": "Aurodium Galactic Credit (20 cr)",
+          "category": "Currencies",
+          "weight": 0.002,
+          "quantity": 1,
+          "cost": 20,
+          "denominationValue": 20,
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "SRmfhsWRoetXnN3A",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.SRmfhsWRoetXnN3A",
+      "name": "Aurodium Galactic Credit (10 cr)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 700000,
+      "system": {
+        "row": {
+          "id": "bde35861-44ba-44ab-a38e-9d7db9ce6182",
+          "name": "Aurodium Galactic Credit (10 cr)",
+          "category": "Currencies",
+          "weight": 0.001,
+          "quantity": 1,
+          "cost": 10,
+          "denominationValue": 10,
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "iDpJCJP6w3D5WA90",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.iDpJCJP6w3D5WA90",
+      "name": "Aurodium Galactic Credit (5 cr)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 800000,
+      "system": {
+        "row": {
+          "id": "fd28df07-022c-474a-bdb5-2d05b679bdba",
+          "name": "Aurodium Galactic Credit (5 cr)",
+          "category": "Currencies",
+          "weight": 0.0005,
+          "quantity": 1,
+          "cost": 5,
+          "denominationValue": 5,
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "YMKUZ2U4ELDTqIwV",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.YMKUZ2U4ELDTqIwV",
+      "name": "Aurodium Galactic Credit (2 cr)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 900000,
+      "system": {
+        "row": {
+          "id": "137b6d40-e379-40b3-8379-c8f6b8c67ea9",
+          "name": "Aurodium Galactic Credit (2 cr)",
+          "category": "Currencies",
+          "weight": 0.0002,
+          "quantity": 1,
+          "cost": 2,
+          "denominationValue": 2,
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "Uqhj8HSidAsfB1Yl",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.Uqhj8HSidAsfB1Yl",
+      "name": "Czerka Corporate Suit Top",
+      "type": "armor",
+      "img": "icons/svg/shield.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "e12f29cd-9d52-4699-93ed-374f44765c9e",
+          "name": "Czerka Corporate Suit Top",
+          "type": "Clothing",
+          "slot": "Torso",
+          "drHead": 0,
+          "drFace": 0,
+          "drTorso": 0,
+          "drLeftArm": 0,
+          "drRightArm": 0,
+          "drLeftLeg": 0,
+          "drRightLeg": 0,
+          "drLeftHand": 0,
+          "drRightHand": 0,
+          "drLeftFoot": 0,
+          "drRightFoot": 0,
+          "dxPenalty": null,
+          "movePenalty": null,
+          "weight": 1.5,
+          "cost": 173,
+          "notes": null,
+          "penalties": "",
+          "effects": "",
+          "quantity": 1,
+          "equipped": true,
+          "isActive": false,
+          "integratedSlots": 0,
+          "overlaySlots": 0,
+          "underlaySlots": 0,
+          "utilitySlots": 0,
+          "integratedModId": null,
+          "overlayModId": null,
+          "underlayModId": null,
+          "utilityModId": null,
+          "storageLocationId": null,
+          "finalCoveredLocations": [
+            "Torso",
+            "Upper Torso",
+            "Vitals",
+            "Left Arm",
+            "Right Arm"
+          ],
+          "coveredLocationIds": [
+            "ec33c4b8-2678-495e-8c42-e29a712b55d7",
+            "38c5dbcf-1425-4e28-8994-64ad5a6d97e1",
+            "8065024c-b69b-4ebd-83b6-9dada77c0d55",
+            "2a377eaf-f2f8-4d2e-8825-479aff4282e4"
+          ],
+          "wornLocationId": null,
+          "setId": "clothing-czerka-corporate-attire",
+          "drEntries": [
+            {
+              "locationId": "ec33c4b8-2678-495e-8c42-e29a712b55d7",
+              "dr": 0
+            },
+            {
+              "locationId": "38c5dbcf-1425-4e28-8994-64ad5a6d97e1",
+              "dr": 0
+            },
+            {
+              "locationId": "8065024c-b69b-4ebd-83b6-9dada77c0d55",
+              "dr": 0
+            },
+            {
+              "locationId": "2a377eaf-f2f8-4d2e-8825-479aff4282e4",
+              "dr": 0
+            }
+          ],
+          "isInstalled": false,
+          "installedInDroidId": null,
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "itemSizeModifier": 0,
+          "modifiedForAnatomy": false,
+          "condition": "Fine",
+          "finalDRValue": null,
+          "finalWeight": null,
+          "finalCost": null,
+          "finalMovePenalty": null,
+          "finalDXPenalty": null,
+          "notesAndEffects": null,
+          "baseArmorType": "Czerka Corporate Suit Top",
+          "baseDRValue": 0,
+          "baseDRNotes": "",
+          "baseWeight": 1.5,
+          "baseCost": 173,
+          "baseMovePenalty": null,
+          "baseDXPenalty": null,
+          "durability": 10,
+          "isConstructed": true,
+          "isCustomBuild": false,
+          "buildProvenance": null,
+          "pieceId": null,
+          "tier": null,
+          "materialId": null,
+          "sealed": null,
+          "sleeveless": null,
+          "faceCoverage": null,
+          "utilityId": null,
+          "frame": null,
+          "shellPart": null,
+          "backingPart": null,
+          "framePart": null,
+          "visorPart": null,
+          "trimPart": null,
+          "materials": [
+            {
+              "name": "Synth-Cloth",
+              "amount": 1.49
+            },
+            {
+              "name": "Aurodium",
+              "amount": 0.01
+            }
+          ],
+          "craftingCategory": "Clothing",
+          "craftingCP": null,
+          "isSeveredRemnant": null,
+          "severedFrom": null,
+          "loadedPowerCellId": null,
+          "loadedPowerCellData": null,
+          "currentCharges": null,
+          "maxCharges": null
+        },
+        "source": "armor"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "fkYNdlCA3dEB8eLr",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.fkYNdlCA3dEB8eLr",
+      "name": "Czerka Corporate Slacks",
+      "type": "armor",
+      "img": "icons/svg/shield.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "id": "f431f34d-85a7-499a-bffb-733fcd7a0dfe",
+          "name": "Czerka Corporate Slacks",
+          "type": "Clothing",
+          "slot": "Legs",
+          "drHead": 0,
+          "drFace": 0,
+          "drTorso": 0,
+          "drLeftArm": 0,
+          "drRightArm": 0,
+          "drLeftLeg": 0,
+          "drRightLeg": 0,
+          "drLeftHand": 0,
+          "drRightHand": 0,
+          "drLeftFoot": 0,
+          "drRightFoot": 0,
+          "dxPenalty": null,
+          "movePenalty": null,
+          "weight": 1.5,
+          "cost": 173,
+          "notes": null,
+          "penalties": "",
+          "effects": "",
+          "quantity": 1,
+          "equipped": true,
+          "isActive": false,
+          "integratedSlots": 0,
+          "overlaySlots": 0,
+          "underlaySlots": 0,
+          "utilitySlots": 0,
+          "integratedModId": null,
+          "overlayModId": null,
+          "underlayModId": null,
+          "utilityModId": null,
+          "storageLocationId": null,
+          "finalCoveredLocations": [
+            "Left Leg",
+            "Right Leg"
+          ],
+          "coveredLocationIds": [
+            "3559f4a5-b574-4f22-a0b9-dbb69b068472",
+            "d3db8233-e07a-4783-811f-a0f9872ea1f9"
+          ],
+          "wornLocationId": null,
+          "setId": "clothing-czerka-corporate-attire",
+          "drEntries": [
+            {
+              "locationId": "3559f4a5-b574-4f22-a0b9-dbb69b068472",
+              "dr": 0
+            },
+            {
+              "locationId": "d3db8233-e07a-4783-811f-a0f9872ea1f9",
+              "dr": 0
+            }
+          ],
+          "isInstalled": false,
+          "installedInDroidId": null,
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "itemSizeModifier": 0,
+          "modifiedForAnatomy": false,
+          "condition": "Fine",
+          "finalDRValue": null,
+          "finalWeight": null,
+          "finalCost": null,
+          "finalMovePenalty": null,
+          "finalDXPenalty": null,
+          "notesAndEffects": null,
+          "baseArmorType": "Czerka Corporate Slacks",
+          "baseDRValue": 0,
+          "baseDRNotes": "",
+          "baseWeight": 1.5,
+          "baseCost": 173,
+          "baseMovePenalty": null,
+          "baseDXPenalty": null,
+          "durability": 10,
+          "isConstructed": true,
+          "isCustomBuild": false,
+          "buildProvenance": null,
+          "pieceId": null,
+          "tier": null,
+          "materialId": null,
+          "sealed": null,
+          "sleeveless": null,
+          "faceCoverage": null,
+          "utilityId": null,
+          "frame": null,
+          "shellPart": null,
+          "backingPart": null,
+          "framePart": null,
+          "visorPart": null,
+          "trimPart": null,
+          "materials": [
+            {
+              "name": "Synth-Cloth",
+              "amount": 1.49
+            },
+            {
+              "name": "Aurodium",
+              "amount": 0.01
+            }
+          ],
+          "craftingCategory": "Clothing",
+          "craftingCP": null,
+          "isSeveredRemnant": null,
+          "severedFrom": null,
+          "loadedPowerCellId": null,
+          "loadedPowerCellData": null,
+          "currentCharges": null,
+          "maxCharges": null
+        },
+        "source": "armor"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "LM4VPoGN4P0Qy7L7",
+      "_key": "!actors.items!i9K12tLRk4as7Io3.LM4VPoGN4P0Qy7L7",
+      "name": "Czerka Corporate Loafers",
+      "type": "armor",
+      "img": "icons/svg/shield.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "id": "c1c31380-d9e1-4331-af5f-40f2d4073aa4",
+          "name": "Czerka Corporate Loafers",
+          "type": "Clothing",
+          "slot": "Feet",
+          "drHead": 0,
+          "drFace": 0,
+          "drTorso": 0,
+          "drLeftArm": 0,
+          "drRightArm": 0,
+          "drLeftLeg": 0,
+          "drRightLeg": 0,
+          "drLeftHand": 0,
+          "drRightHand": 0,
+          "drLeftFoot": 0,
+          "drRightFoot": 0,
+          "dxPenalty": null,
+          "movePenalty": null,
+          "weight": 0.6,
+          "cost": 159,
+          "notes": null,
+          "penalties": "",
+          "effects": "",
+          "quantity": 1,
+          "equipped": true,
+          "isActive": false,
+          "integratedSlots": 0,
+          "overlaySlots": 0,
+          "underlaySlots": 0,
+          "utilitySlots": 0,
+          "integratedModId": null,
+          "overlayModId": null,
+          "underlayModId": null,
+          "utilityModId": null,
+          "storageLocationId": null,
+          "finalCoveredLocations": [
+            "Left Foot",
+            "Right Foot"
+          ],
+          "coveredLocationIds": [
+            "448884eb-b115-425b-ae65-f6e0b542fd32",
+            "52334e7b-1f02-4df5-a2a3-3b037a31df88"
+          ],
+          "wornLocationId": null,
+          "setId": "clothing-czerka-corporate-attire",
+          "drEntries": [
+            {
+              "locationId": "448884eb-b115-425b-ae65-f6e0b542fd32",
+              "dr": 0
+            },
+            {
+              "locationId": "52334e7b-1f02-4df5-a2a3-3b037a31df88",
+              "dr": 0
+            }
+          ],
+          "isInstalled": false,
+          "installedInDroidId": null,
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "itemSizeModifier": 0,
+          "modifiedForAnatomy": false,
+          "condition": "Fine",
+          "finalDRValue": null,
+          "finalWeight": null,
+          "finalCost": null,
+          "finalMovePenalty": null,
+          "finalDXPenalty": null,
+          "notesAndEffects": null,
+          "baseArmorType": "Czerka Corporate Loafers",
+          "baseDRValue": 0,
+          "baseDRNotes": "",
+          "baseWeight": 0.6,
+          "baseCost": 159,
+          "baseMovePenalty": null,
+          "baseDXPenalty": null,
+          "durability": 10,
+          "isConstructed": true,
+          "isCustomBuild": false,
+          "buildProvenance": null,
+          "pieceId": null,
+          "tier": null,
+          "materialId": null,
+          "sealed": null,
+          "sleeveless": null,
+          "faceCoverage": null,
+          "utilityId": null,
+          "frame": null,
+          "shellPart": null,
+          "backingPart": null,
+          "framePart": null,
+          "visorPart": null,
+          "trimPart": null,
+          "materials": [
+            {
+              "name": "Synth-Cloth",
+              "amount": 0.59
+            },
+            {
+              "name": "Aurodium",
+              "amount": 0.01
+            }
+          ],
+          "craftingCategory": "Clothing",
+          "craftingCP": null,
+          "isSeveredRemnant": null,
+          "severedFrom": null,
+          "loadedPowerCellId": null,
+          "loadedPowerCellData": null,
+          "currentCharges": null,
+          "maxCharges": null
+        },
+        "source": "armor"
+      },
+      "effects": [],
+      "flags": {}
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "templates",
+      "key": "rennVantik",
+      "template": {
+        "key": "rennVantik",
+        "category": "Example Player Characters",
+        "description": "An Arkanian slicer selling his talents to whoever pays best. Ready-to-play character.",
+        "migrated": true,
+        "notices": []
+      }
+    }
+  }
+}

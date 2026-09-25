@@ -1,0 +1,10 @@
+{{!-- shadowbase.item.tiles - a row of stat tiles (BlasterFinalStats.tsx:466-490 "Type / Damage / Acc / Range ..."
+     columns; the sb-stat-tile recipe). Context: tiles (base.mjs statTile list). --}}
+<div class="sb-stat-grid sb-item__tiles">
+  {{#each tiles}}
+  <div class="sb-stat-tile {{#if this.tone}}sb-stat-tile--{{this.tone}}{{/if}} {{#if this.empty}}sb-stat-tile--empty{{/if}}" {{#if this.hint}}title="{{this.hint}}"{{/if}}>
+    <span class="sb-stat-tile__label">{{this.label}}</span>
+    <span class="sb-stat-tile__value {{#if this.mono}}sb-mono{{/if}}">{{this.value}}</span>
+  </div>
+  {{/each}}
+</div>

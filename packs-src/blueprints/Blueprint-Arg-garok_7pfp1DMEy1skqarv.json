@@ -1,0 +1,42 @@
+{
+  "_id": "7pfp1DMEy1skqarv",
+  "_key": "!items!7pfp1DMEy1skqarv",
+  "name": "Blueprint: Arg'garok",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 40500000,
+  "system": {
+    "row": {
+      "id": "ce25fc13-c9d8-4e5a-a825-119e99c11d9a",
+      "name": "Blueprint: Arg'garok",
+      "cost": 223,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Arg'garok (Generation 0, proven, encoded, catalog design). Required to build Arg'garok; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Arg'garok",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 490,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Arg'garok"
+    }
+  }
+}

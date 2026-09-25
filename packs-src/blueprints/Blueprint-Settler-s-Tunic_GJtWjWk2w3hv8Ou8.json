@@ -1,0 +1,42 @@
+{
+  "_id": "GJtWjWk2w3hv8Ou8",
+  "_key": "!items!GJtWjWk2w3hv8Ou8",
+  "name": "Blueprint: Settler's Tunic",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 18600000,
+  "system": {
+    "row": {
+      "id": "a445d47b-851b-4acd-980b-3edbf6f171e1",
+      "name": "Blueprint: Settler's Tunic",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Settler's Tunic (Generation 0, proven, encoded, catalog design). Required to build Settler's Tunic; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Settler's Tunic",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 9,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Settler's Tunic"
+    }
+  }
+}

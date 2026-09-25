@@ -1,0 +1,33 @@
+{
+  "_id": "y9RFhYh35JILzWxX",
+  "_key": "!items!y9RFhYh35JILzWxX",
+  "name": "Mathematical Ability",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 11400000,
+  "system": {
+    "row": {
+      "name": "Mathematical Ability",
+      "points": 10,
+      "description": "Numbers and equations come naturally to you. You gain a +2 bonus to all Mathematics rolls, and to any skill roll where the GM judges rapid mental calculation to be a significant factor (such as Astrogation-style Navigation or targeting solutions).",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Mathematical Ability"
+    }
+  }
+}

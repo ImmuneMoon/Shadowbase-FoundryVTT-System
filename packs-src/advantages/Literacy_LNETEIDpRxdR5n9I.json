@@ -1,0 +1,33 @@
+{
+  "_id": "LNETEIDpRxdR5n9I",
+  "_key": "!items!LNETEIDpRxdR5n9I",
+  "name": "Literacy",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "3vDRi4uDBtDelTd8",
+  "sort": 10900000,
+  "system": {
+    "row": {
+      "name": "Literacy",
+      "points": 10,
+      "description": "You can read and write in your native language. A basic necessity for understanding galactic politics, decrypting intelligence, or forging documents.",
+      "category": "Social/Wealth",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Literacy"
+    }
+  }
+}

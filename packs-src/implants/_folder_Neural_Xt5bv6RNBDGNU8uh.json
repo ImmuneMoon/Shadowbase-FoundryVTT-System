@@ -1,0 +1,19 @@
+{
+  "_id": "Xt5bv6RNBDGNU8uh",
+  "_key": "!folders!Xt5bv6RNBDGNU8uh",
+  "name": "Neural",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 0,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "implants",
+      "path": [
+        "Neural"
+      ]
+    }
+  }
+}

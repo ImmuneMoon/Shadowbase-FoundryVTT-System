@@ -1,0 +1,19 @@
+{
+  "_id": "szVBOEB2J4Vd94NU",
+  "_key": "!folders!szVBOEB2J4Vd94NU",
+  "name": "Transport",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 500000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "starships",
+      "path": [
+        "Transport"
+      ]
+    }
+  }
+}

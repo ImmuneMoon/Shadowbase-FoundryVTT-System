@@ -1,0 +1,24 @@
+{{!-- templates/items/lightsaber-internals.hbs - lightsaber-item.tsx internals (:1640-1680 InternalSelector x7): the
+     power cell, lens, emitter matrix, kyber and power crystals (the second blade's on a staff), the tally and the blade
+     damage the design produces (lightsaberDamage Model B). Context: internals (lightsaber.mjs), editable, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--internals {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Zap'}}"></i> {{localize "SHADOWBASE.Item.Saber.Internals"}}</h4>
+    <div class="sb-slot-grid">
+      {{#each internals.slots}}
+        {{> "shadowbase.item.fitted" this editable=@root.editable prefix="internal"}}
+      {{/each}}
+    </div>
+  </div>
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Item.Saber.InternalsTally"}}</h4>
+    <div class="sb-stat-grid sb-item__tiles">
+      <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Item.Saber.Damage"}}</span><span class="sb-stat-tile__value sb-mono">{{internals.damageText}}</span></div>
+      {{#if internals.isStaff}}<div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Item.Saber.DamageTwo"}}</span><span class="sb-stat-tile__value sb-mono">{{internals.damageTextTwo}}</span></div>{{/if}}
+      <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Item.Header.Weight"}}</span><span class="sb-stat-tile__value sb-mono">{{internals.tally.weight}}</span></div>
+      <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Item.Saber.Value"}}</span><span class="sb-stat-tile__value sb-mono">{{internals.tally.value}}</span></div>
+    </div>
+    {{#if internals.tally.effects.length}}<ul class="sb-item__notes-list">{{#each internals.tally.effects}}<li>{{this}}</li>{{/each}}</ul>{{/if}}
+    {{#if internals.tally.chosenNotOwned.length}}<p class="sb-text-amber sb-text-xs">{{localize "SHADOWBASE.Item.Slot.ChosenNotOwnedList"}} {{#each internals.tally.chosenNotOwned}}<span class="sb-tag">{{this}}</span>{{/each}}</p>{{/if}}
+  </div>
+</section>

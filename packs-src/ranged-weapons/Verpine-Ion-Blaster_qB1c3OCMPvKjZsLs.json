@@ -1,0 +1,211 @@
+{
+  "_id": "qB1c3OCMPvKjZsLs",
+  "_key": "!items!qB1c3OCMPvKjZsLs",
+  "name": "Verpine Ion Blaster",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "pmcK4V56g8solhpu",
+  "sort": 4700000,
+  "system": {
+    "row": {
+      "id": "10953ab0-cce4-499b-a95e-718aaa1401fa",
+      "customName": "Verpine Ion Blaster",
+      "baseType": "Verpine Ion Blaster",
+      "baseSkill": "Guns (Blaster Pistol)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 3.2,
+      "finalWeight": 3.2,
+      "baseCost": 319,
+      "finalCost": 1914,
+      "currentCharges": 50,
+      "maxCharges": 50,
+      "loadedAmmunitionId": "fb2ec724-1be2-471e-a5c0-3890e7f20d33",
+      "loadedAmmunitionData": {
+        "id": "fb2ec724-1be2-471e-a5c0-3890e7f20d33",
+        "name": "Standard Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "pistol-grip",
+        "inventoryId": "481f2d68-fefa-4055-8562-d7b0ed17c9d6",
+        "materialId": "plasteel"
+      },
+      "receiverPart": {
+        "partId": "ion-chamber",
+        "inventoryId": "89c5c3b5-16ae-440a-9969-2ca1161e0f56",
+        "materialId": "plasteel"
+      },
+      "barrelPart": {
+        "partId": "std-emitter",
+        "inventoryId": "11db28b4-d87a-40e5-b968-5761c47ec515",
+        "materialId": "plasteel"
+      },
+      "targetingPart": {
+        "partId": "advanced-targeting",
+        "inventoryId": "f552d9f5-3af9-48eb-b1ba-ce6da1e69132"
+      },
+      "powerUnitPart": {
+        "partId": "standard-pwr-pack",
+        "inventoryId": "17eea1ca-db38-4c07-8d1b-178d9cef229b"
+      },
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "10953ab0-cce4-499b-a95e-718aaa1401fa",
+        "customName": "Verpine Ion Blaster",
+        "baseType": "Verpine Ion Blaster",
+        "baseSkill": "Guns (Blaster Pistol)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 3.2,
+        "finalWeight": 3.2,
+        "baseCost": 319,
+        "finalCost": 1914,
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "loadedAmmunitionId": "fb2ec724-1be2-471e-a5c0-3890e7f20d33",
+        "loadedAmmunitionData": {
+          "id": "fb2ec724-1be2-471e-a5c0-3890e7f20d33",
+          "name": "Standard Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 50,
+          "maxCharges": 50,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "pistol-grip",
+          "inventoryId": "481f2d68-fefa-4055-8562-d7b0ed17c9d6",
+          "materialId": "plasteel"
+        },
+        "receiverPart": {
+          "partId": "ion-chamber",
+          "inventoryId": "89c5c3b5-16ae-440a-9969-2ca1161e0f56",
+          "materialId": "plasteel"
+        },
+        "barrelPart": {
+          "partId": "std-emitter",
+          "inventoryId": "11db28b4-d87a-40e5-b968-5761c47ec515",
+          "materialId": "plasteel"
+        },
+        "targetingPart": {
+          "partId": "advanced-targeting",
+          "inventoryId": "f552d9f5-3af9-48eb-b1ba-ce6da1e69132"
+        },
+        "powerUnitPart": {
+          "partId": "standard-pwr-pack",
+          "inventoryId": "17eea1ca-db38-4c07-8d1b-178d9cef229b"
+        },
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "481f2d68-fefa-4055-8562-d7b0ed17c9d6",
+          "name": "Pistol Grip",
+          "partId": "pistol-grip",
+          "category": "Ranged Grip",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "10953ab0-cce4-499b-a95e-718aaa1401fa",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard 1-handed grip."
+        },
+        {
+          "id": "89c5c3b5-16ae-440a-9969-2ca1161e0f56",
+          "name": "Ion Chamber",
+          "partId": "ion-chamber",
+          "category": "Ranged Receiver",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "10953ab0-cce4-499b-a95e-718aaa1401fa",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard Ion."
+        },
+        {
+          "id": "11db28b4-d87a-40e5-b968-5761c47ec515",
+          "name": "Standard Emitter",
+          "partId": "std-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "10953ab0-cce4-499b-a95e-718aaa1401fa",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "f552d9f5-3af9-48eb-b1ba-ce6da1e69132",
+          "name": "Advanced Targeting Module",
+          "partId": "advanced-targeting",
+          "category": "Ranged Targeting",
+          "cost": 70,
+          "weight": 0.9,
+          "isInstalled": true,
+          "installedInBlasterId": "10953ab0-cce4-499b-a95e-718aaa1401fa",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Military-grade tracking algorithms."
+        },
+        {
+          "id": "17eea1ca-db38-4c07-8d1b-178d9cef229b",
+          "name": "Standard Power Pack",
+          "partId": "standard-pwr-pack",
+          "category": "Power Unit",
+          "cost": 105,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "10953ab0-cce4-499b-a95e-718aaa1401fa",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Verpine Ion Blaster"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "q3cssom4QDyKmLy0",
+  "_key": "!items!q3cssom4QDyKmLy0",
+  "name": "Blueprint: Mephite",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 36500000,
+  "system": {
+    "row": {
+      "id": "4c796c5d-bd0f-4752-9bd2-c442fa1c4a8b",
+      "name": "Blueprint: Mephite",
+      "cost": 241,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Mephite (Generation 0, proven, encoded, catalog design). Required to build Mephite; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Mephite",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 666.6666666666667,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Mephite"
+    }
+  }
+}

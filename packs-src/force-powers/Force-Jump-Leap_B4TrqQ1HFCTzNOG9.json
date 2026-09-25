@@ -1,0 +1,87 @@
+{
+  "_id": "B4TrqQ1HFCTzNOG9",
+  "_key": "!items!B4TrqQ1HFCTzNOG9",
+  "name": "Force Jump/Leap",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "KBIMmcUBYi6ZY6I3",
+  "sort": 1800000,
+  "system": {
+    "row": {
+      "name": "Force Jump/Leap",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 1,
+      "effect": "Double your effective Jumping skill distance.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Agility (DX/Hard)",
+      "category": "Control Powers",
+      "alignment": "Grey",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Force Jump/Leap",
+        "description": "The Force-user enhances their physical jump or leap through an application of the Force.",
+        "category": "Control Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 1,
+        "alignment": "Grey",
+        "baseSkill": "Agility (DX/Hard)",
+        "characterTier": "Apprentice",
+        "effect": "Double your effective Jumping skill distance."
+      },
+      {
+        "name": "Force Jump/Leap",
+        "description": "The Force-user enhances their physical jump or leap through an application of the Force.",
+        "category": "Control Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 1,
+        "alignment": "Grey",
+        "baseSkill": "Agility (DX/Hard)",
+        "characterTier": "Adept",
+        "effect": "Triple your effective Jumping skill distance."
+      },
+      {
+        "name": "Force Jump/Leap",
+        "description": "The Force-user enhances their physical jump or leap through an application of the Force.",
+        "category": "Control Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 2,
+        "alignment": "Grey",
+        "baseSkill": "Agility (DX/Hard)",
+        "characterTier": "Expert",
+        "effect": "Quadruple your effective Jumping skill distance. Can perform a “Force-assisted pounce” attack: a Move and Attack (Chapter 7) made at the end of a Force-assisted jump, at your full skill instead of that maneuver's usual cap of 9, because the Force carries the approach rather than your legs. Everything else about Move and Attack still applies, including that you cannot parry that turn, and the damage is the weapon's own (the maneuver's -4 to hit still applies; only the skill cap of 9 is removed)."
+      },
+      {
+        "name": "Force Jump/Leap",
+        "description": "The Force-user enhances their physical jump or leap through an application of the Force.",
+        "category": "Control Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 3,
+        "alignment": "Grey",
+        "baseSkill": "Agility (DX/Hard)",
+        "characterTier": "Master",
+        "effect": "Multiply your effective Jumping skill distance by five. Can use for \"Controlled Descent\" to negate falling damage."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Force Jump/Leap"
+    }
+  }
+}

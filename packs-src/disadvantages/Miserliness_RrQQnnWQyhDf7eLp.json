@@ -1,0 +1,34 @@
+{
+  "_id": "RrQQnnWQyhDf7eLp",
+  "_key": "!items!RrQQnnWQyhDf7eLp",
+  "name": "Miserliness",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 11900000,
+  "system": {
+    "row": {
+      "name": "Miserliness",
+      "points": -10,
+      "level": null,
+      "description": "You are extremely reluctant to spend money, even when necessary. This penny-pinching can lead to dangerous situations due to lack of necessary gear or reluctance to pay for essential services.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Miserliness|Mental"
+    }
+  }
+}

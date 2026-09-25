@@ -1,0 +1,42 @@
+{
+  "_id": "Mh8kIgEvkHC46vWL",
+  "_key": "!items!Mh8kIgEvkHC46vWL",
+  "name": "Blueprint: Ionized Dart",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DvRG95q4QWZQnNFm",
+  "sort": 800000,
+  "system": {
+    "row": {
+      "id": "6ab0ef56-612b-452e-b120-7ca9434d0417",
+      "name": "Blueprint: Ionized Dart",
+      "cost": 252,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Ionized Dart (Generation 0, proven, encoded, catalog design). Required to build Ionized Dart; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Ionized Dart",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 775.3888888888889,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Ammunition|Ionized Dart"
+    }
+  }
+}

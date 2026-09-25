@@ -1,0 +1,83 @@
+{
+  "_id": "GXmVBlpkRnOOF2C0",
+  "_key": "!items!GXmVBlpkRnOOF2C0",
+  "name": "Flurry",
+  "type": "combatTechnique",
+  "img": "icons/svg/combat.svg",
+  "folder": "GUku6MvGgTxPy7sx",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "name": "Flurry",
+      "category": "Melee",
+      "level": 1,
+      "cpCost": 10,
+      "epCost": 1,
+      "effect": "Two attacks against the same target. Both attacks are at -4 to skill. No active defenses possible.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Any Melee Weapon skill",
+      "skillPenalty": 4,
+      "baselinePoints": 0
+    },
+    "source": "combatTechniques",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Flurry",
+        "category": "Melee",
+        "level": 1,
+        "cpCost": 10,
+        "epCost": 1,
+        "effect": "Two attacks against the same target. Both attacks are at -4 to skill. No active defenses possible.",
+        "characterTier": "Apprentice",
+        "baseSkill": "Any Melee Weapon skill",
+        "skillPenalty": 4
+      },
+      {
+        "name": "Flurry",
+        "category": "Melee",
+        "level": 2,
+        "cpCost": 20,
+        "epCost": 2,
+        "effect": "Two attacks against the same target. Both attacks are at -2 to skill. No active defenses possible.",
+        "characterTier": "Adept",
+        "baseSkill": "Any Melee Weapon skill",
+        "skillPenalty": 2
+      },
+      {
+        "name": "Flurry",
+        "category": "Melee",
+        "level": 3,
+        "cpCost": 35,
+        "epCost": 3,
+        "effect": "Three attacks (may split targets). All attacks are at -3 to skill. No active defenses possible.",
+        "characterTier": "Expert",
+        "baseSkill": "Any Melee Weapon skill",
+        "skillPenalty": 3
+      },
+      {
+        "name": "Flurry",
+        "category": "Melee",
+        "level": 4,
+        "cpCost": 55,
+        "epCost": 4,
+        "effect": "Three attacks (may split targets). All attacks are at -1 to skill. No active defenses possible.",
+        "characterTier": "Master",
+        "baseSkill": "Any Melee Weapon skill",
+        "skillPenalty": 1
+      }
+    ],
+    "catalog": "combat-techniques"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "combat-techniques",
+      "key": "Melee|Flurry"
+    }
+  }
+}

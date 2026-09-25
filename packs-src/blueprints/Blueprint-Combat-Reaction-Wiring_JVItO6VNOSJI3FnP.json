@@ -1,0 +1,42 @@
+{
+  "_id": "JVItO6VNOSJI3FnP",
+  "_key": "!items!JVItO6VNOSJI3FnP",
+  "name": "Blueprint: Combat-Reaction Wiring",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "oLzYgjxVRMzfJEAH",
+  "sort": 29900000,
+  "system": {
+    "row": {
+      "id": "0a737f49-d0b7-495c-8b1c-5809f5c39120",
+      "name": "Blueprint: Combat-Reaction Wiring",
+      "cost": 445,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Combat-Reaction Wiring (Generation 0, proven, encoded, catalog design). Required to build Combat-Reaction Wiring; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Combat-Reaction Wiring",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 2706,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Wiring|Combat-Reaction Wiring"
+    }
+  }
+}

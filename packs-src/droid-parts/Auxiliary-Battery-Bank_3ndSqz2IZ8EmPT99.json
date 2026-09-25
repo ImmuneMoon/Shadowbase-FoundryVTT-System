@@ -1,0 +1,39 @@
+{
+  "_id": "3ndSqz2IZ8EmPT99",
+  "_key": "!items!3ndSqz2IZ8EmPT99",
+  "name": "Auxiliary Battery Bank",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 8500000,
+  "system": {
+    "row": {
+      "id": "55a767f1-ca82-47ce-acdc-df09dd5979db",
+      "name": "Auxiliary Battery Bank",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 3760,
+      "weight": 10,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "pp-bank",
+      "description": "+50 PP reserve"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "pp-bank"
+    }
+  }
+}

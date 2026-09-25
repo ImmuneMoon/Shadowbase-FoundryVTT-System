@@ -1,0 +1,41 @@
+{
+  "_id": "o6fdlsN5APWv10R5",
+  "_key": "!items!o6fdlsN5APWv10R5",
+  "name": "Magenta Kyber",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "orWVaxdlAjqEWg6h",
+  "sort": 5300000,
+  "system": {
+    "row": {
+      "id": "01a484e1-e2ba-49a7-bff7-6e364fa73f25",
+      "name": "Magenta Kyber",
+      "rarity": "Rare",
+      "cost": 25000,
+      "weight": 0.2,
+      "baseDamageDice": 5,
+      "baseDamageAdds": 0,
+      "effect": "5d base energy. x1.5 to Force Points. Natural.",
+      "category": "Lightsaber Primary Crystal",
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "5d base energy. x1.5 to Force Points. Natural."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:magenta-kyber"
+    }
+  }
+}

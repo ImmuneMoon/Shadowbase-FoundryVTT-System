@@ -1,0 +1,36 @@
+{
+  "_id": "OJcBGPIxiJ3870H5",
+  "_key": "!items!OJcBGPIxiJ3870H5",
+  "name": "Additional Weapon Mount",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "uR0UoLTcsbSiD5ki",
+  "sort": 1200000,
+  "system": {
+    "row": {
+      "id": "fe31edbd-dcdb-47ba-b745-2d96fa7244fa",
+      "name": "Additional Weapon Mount",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Starship Modification",
+      "cost": 0,
+      "weight": 0,
+      "quantity": 1,
+      "description": "Offensive modification. Adds an additional weapon hardpoint to the starship. Select a weapon in the new slot. Cost: 15% of the hull cost."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "starship-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "starship-mods",
+      "key": "Additional Weapon Mount"
+    }
+  }
+}

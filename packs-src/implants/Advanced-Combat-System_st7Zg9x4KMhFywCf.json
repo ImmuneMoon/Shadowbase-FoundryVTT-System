@@ -1,0 +1,42 @@
+{
+  "_id": "st7Zg9x4KMhFywCf",
+  "_key": "!items!st7Zg9x4KMhFywCf",
+  "name": "Advanced Combat System",
+  "type": "implant",
+  "img": "icons/svg/regen.svg",
+  "folder": "Xt5bv6RNBDGNU8uh",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "id": "7b7a643b-c4c0-4700-a280-27f07475a56b",
+      "name": "Advanced Combat System",
+      "cost": 12780,
+      "finalCp": 35,
+      "effect": "Grants Combat Reflexes and +1 Basic Speed.",
+      "category": "Neural",
+      "pathways": [
+        "Reflex",
+        "Speed"
+      ],
+      "slotType": "Neural",
+      "installed": false,
+      "weight": 0.2,
+      "notes": "Trait Package: 35 CP of Advantages (Combat Reflexes); Mandatory Flaws offset. Occupies Reflex/Speed pathway. Materials: Silicon: 0.2 lbs (10 cr)."
+    },
+    "source": "implants",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "implants"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "implants",
+      "key": "Neural|Advanced Combat System"
+    }
+  }
+}

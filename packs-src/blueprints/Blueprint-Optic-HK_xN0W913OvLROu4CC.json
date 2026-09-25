@@ -1,0 +1,42 @@
+{
+  "_id": "xN0W913OvLROu4CC",
+  "_key": "!items!xN0W913OvLROu4CC",
+  "name": "Blueprint: Optic (HK)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "idvhLPGyw0BIk332",
+  "sort": 28100000,
+  "system": {
+    "row": {
+      "id": "c23bb7a7-c4a1-4f23-9043-66c492709ee0",
+      "name": "Blueprint: Optic (HK)",
+      "cost": 244,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Optic (HK) (Generation 0, proven, encoded, catalog design). Required to build Optic (HK); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Optic (HK)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 699,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Sensor|Optic (HK)"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "rMevcmURLhUQw8OI",
+  "_key": "!items!rMevcmURLhUQw8OI",
+  "name": "Blueprint: Nerve Amplifier",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ZMyORA2AHo4Qm477",
+  "sort": 11000000,
+  "system": {
+    "row": {
+      "id": "e0cb02e2-f678-4378-b701-2504b3da73ee",
+      "name": "Blueprint: Nerve Amplifier",
+      "cost": 891,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Nerve Amplifier (Generation 0, proven, encoded, catalog design). Required to build Nerve Amplifier; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Nerve Amplifier",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 7165,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Belt|Nerve Amplifier"
+    }
+  }
+}

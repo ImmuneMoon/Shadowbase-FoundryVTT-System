@@ -1,0 +1,37 @@
+{
+  "_id": "r0JBKvVHKAwIjckQ",
+  "_key": "!items!r0JBKvVHKAwIjckQ",
+  "name": "Magnetic Grip (Cybernetic)",
+  "type": "cyberneticUpgrade",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "cpSb5QRphyGd768K",
+  "sort": 400000,
+  "system": {
+    "row": {
+      "id": "6dce2af9-c87f-4819-a2d6-96f3612f1a7e",
+      "name": "Magnetic Grip (Cybernetic)",
+      "cost": 768,
+      "weight": 0.8,
+      "effect": "Electro-magnets built into the palm and fingers, or the soles of the feet. Hand magnets grant a +3 bonus to resist being disarmed of metal weapons. Foot/Hand magnets allow the user to climb metallic surfaces at half speed, brace against a metal surface to avoid being pulled, blown, or knocked off it (such as during explosive decompression or zero-g combat), and use a firm grip on a metal surface as an improvised anchor point for climbing gear-free ascents.",
+      "requiresType": null,
+      "requiresExtent": "Any",
+      "equipped": false,
+      "quantity": 1
+    },
+    "source": "cyberneticUpgrades",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-upgrades"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-upgrades",
+      "key": "Upgrades|Magnetic Grip (Cybernetic)"
+    }
+  }
+}

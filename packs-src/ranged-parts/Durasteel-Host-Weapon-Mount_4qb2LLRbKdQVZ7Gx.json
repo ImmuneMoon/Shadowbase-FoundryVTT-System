@@ -1,0 +1,46 @@
+{
+  "_id": "4qb2LLRbKdQVZ7Gx",
+  "_key": "!items!4qb2LLRbKdQVZ7Gx",
+  "name": "Durasteel Host Weapon Mount",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "6BrK3rjtho5KeSLo",
+  "sort": 1200000,
+  "system": {
+    "row": {
+      "id": "fd2a1d85-a2ce-4cc8-99a9-718ae8be1c2f",
+      "name": "Durasteel Host Weapon Mount",
+      "category": "Ranged Grip",
+      "cost": 12,
+      "weight": 0.245,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "host-mount",
+      "materialId": "durasteel",
+      "notes": "Affixes to standard rifles.",
+      "effect": "Affixes to standard rifles.",
+      "energyResBonus": 0,
+      "volume": 0.0005,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "host-mount"
+    }
+  }
+}

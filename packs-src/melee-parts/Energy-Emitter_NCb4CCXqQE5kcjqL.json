@@ -1,0 +1,46 @@
+{
+  "_id": "NCb4CCXqQE5kcjqL",
+  "_key": "!items!NCb4CCXqQE5kcjqL",
+  "name": "Energy Emitter",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "5PEjVjBPZfD3PSGN",
+  "sort": 1800000,
+  "system": {
+    "row": {
+      "id": "6f11532d-4590-42e5-a89c-5fdbda026a78",
+      "name": "Energy Emitter",
+      "category": "Melee Power Unit",
+      "cost": 300,
+      "weight": 1,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "energy-emitter",
+      "materialId": null,
+      "notes": "Adds +1d+2 burn, or cold. Pick only one when installed.",
+      "effect": "Adds +1d+2 burn, or cold. Pick only one when installed.",
+      "energyResBonus": 0,
+      "volume": null,
+      "density": null,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "part:energy-emitter"
+    }
+  }
+}

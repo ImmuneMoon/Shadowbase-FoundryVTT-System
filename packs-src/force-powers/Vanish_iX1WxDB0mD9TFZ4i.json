@@ -1,0 +1,87 @@
+{
+  "_id": "iX1WxDB0mD9TFZ4i",
+  "_key": "!items!iX1WxDB0mD9TFZ4i",
+  "name": "Vanish",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "PlGZu46M1spj53xV",
+  "sort": 4800000,
+  "system": {
+    "row": {
+      "name": "Vanish",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 5,
+      "effect": "Become imperceptible to all nearby beings for 5 min.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Influence (Will/Hard) vs target's Perception",
+      "category": "Alter Powers",
+      "alignment": "LS",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Vanish",
+        "description": "The user manipulates light & sound waves to become virtually invisible, and/ or unworthy of notice to others.",
+        "category": "Alter Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 5,
+        "alignment": "LS",
+        "baseSkill": "Influence (Will/Hard) vs target's Perception",
+        "characterTier": "Apprentice",
+        "effect": "Become imperceptible to all nearby beings for 5 min."
+      },
+      {
+        "name": "Vanish",
+        "description": "The user manipulates light & sound waves to become virtually invisible, and/ or unworthy of notice to others.",
+        "category": "Alter Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 8,
+        "alignment": "LS",
+        "baseSkill": "Influence (Will/Hard) vs target's Perception",
+        "characterTier": "Adept",
+        "effect": "Become imperceptible to all nearby beings for 15 min."
+      },
+      {
+        "name": "Vanish",
+        "description": "The user manipulates light & sound waves to become virtually invisible, and/ or unworthy of notice to others.",
+        "category": "Alter Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 12,
+        "alignment": "LS",
+        "baseSkill": "Influence (Will/Hard) vs target's Perception",
+        "characterTier": "Expert",
+        "effect": "Become imperceptible to all nearby beings for 30 min."
+      },
+      {
+        "name": "Vanish",
+        "description": "The user manipulates light & sound waves to become virtually invisible, and/ or unworthy of notice to others.",
+        "category": "Alter Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 20,
+        "alignment": "LS",
+        "baseSkill": "Influence (Will/Hard) vs target's Perception",
+        "characterTier": "Master",
+        "effect": "Become imperceptible to all nearby beings for 1 hour."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Vanish"
+    }
+  }
+}

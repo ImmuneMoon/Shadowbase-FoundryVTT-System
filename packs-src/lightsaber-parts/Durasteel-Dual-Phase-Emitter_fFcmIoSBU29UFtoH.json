@@ -1,0 +1,42 @@
+{
+  "_id": "fFcmIoSBU29UFtoH",
+  "_key": "!items!fFcmIoSBU29UFtoH",
+  "name": "Durasteel Dual-Phase Emitter",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "HPvGI1yd8rkc4YJ9",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "name": "Durasteel Dual-Phase Emitter",
+      "category": "Emitter Part",
+      "effect": "Switch Reach (1 to 2) as Free Action.",
+      "weight": 0.49,
+      "cost": 13,
+      "id": "61ddf4e8-2040-4ce3-88e6-14d7759446d2",
+      "partId": "dual-phase-emitter",
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "materialId": "durasteel",
+      "wrapId": null,
+      "volume": 0.001,
+      "density": 490
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "hilt:dual-phase-emitter"
+    }
+  }
+}

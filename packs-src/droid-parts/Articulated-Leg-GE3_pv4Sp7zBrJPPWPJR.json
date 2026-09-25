@@ -1,0 +1,39 @@
+{
+  "_id": "pv4Sp7zBrJPPWPJR",
+  "_key": "!items!pv4Sp7zBrJPPWPJR",
+  "name": "Articulated Leg (GE3)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "tBEyddz1IdjHzb5K",
+  "sort": 5300000,
+  "system": {
+    "row": {
+      "id": "e78443b3-ec76-464f-b95e-80a28cdbb391",
+      "name": "Articulated Leg (GE3)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Motive Strut",
+      "cost": 2580,
+      "weight": 20,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "ge3-leg",
+      "description": "Standard Move, Lifting ST +2"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "ge3-leg"
+    }
+  }
+}

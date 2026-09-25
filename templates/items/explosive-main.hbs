@@ -1,0 +1,31 @@
+{{!-- templates/items/explosive-main.hbs - an explosive (customized-explosive-item.tsx:225-330): Blast Damage / Type /
+     Legality, the throw skill and its default attribute, the throw and damage rolls. Context: main (explosive.mjs),
+     editable, owned, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--explosive {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <div class="sb-stat-grid sb-item__tiles">
+      <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Item.Explosive.BlastDamage"}}</span><span class="sb-stat-tile__value sb-mono">{{#if main.damage}}{{main.damage}}{{else}}—{{/if}}</span></div>
+      <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Item.Explosive.Type"}}</span><span class="sb-stat-tile__value">{{#if main.type}}{{main.type}}{{else}}—{{/if}}</span></div>
+      <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Item.Explosive.Legality"}}</span><span class="sb-stat-tile__value sb-mono">{{#if main.legality}}{{main.legality}}{{else}}—{{/if}}</span></div>
+    </div>
+    <div class="sb-item-grid">
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Explosive.DamageEffect"}}</span><input type="text" class="sb-input" name="system.row.finalDamageEffect" value="{{main.damage}}" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Explosive.Skill"}}</span><input type="text" class="sb-input" name="system.row.baseSkill" value="{{main.skill}}" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Explosive.DefaultAttr"}}</span>
+        <select class="sb-select" name="system.row.preferredDefaultAttr" {{disabled (not editable)}}>{{#each main.attrOptions}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Explosive.LegalityClass"}}</span><input type="text" class="sb-input" name="system.row.finalLegalityClass" value="{{main.legality}}" {{disabled (not editable)}}></label>
+    </div>
+  </div>
+  <div class="sb-item-section sb-item-section--actions">
+    <span class="sb-text-xs">{{localize "SHADOWBASE.Item.Explosive.ThrowTarget"}}: <b class="sb-mono">{{#if main.target}}{{main.target}}{{else}}—{{/if}}</b>{{#if main.describe}} <span class="sb-text-muted">({{main.describe}})</span>{{/if}}</span>
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="roll-throw" {{disabled (not main.canThrow)}}><i class="{{sbIcon 'roll'}}"></i> {{localize "SHADOWBASE.Sheet.Weapon.Throw"}}</button>
+    <button type="button" class="sb-btn sb-btn-destructive sb-btn-sm" data-action="roll-explosive-damage" {{disabled (not main.canDamage)}}><i class="fa-solid fa-burst"></i> {{localize "SHADOWBASE.Sheet.Weapon.Damage"}}</button>
+  </div>
+  {{#if main.catalogNotes}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Sheet.Abilities.LibraryDossier"}}</h4>
+    <p class="sb-dossier">{{main.catalogNotes}}</p>
+  </div>
+  {{/if}}
+</section>

@@ -1,0 +1,46 @@
+{
+  "_id": "dCdhn81vAUeWnBRj",
+  "_key": "!items!dCdhn81vAUeWnBRj",
+  "name": "Speeder Bike (e.g., Aratech 74-Z)",
+  "type": "vehicle",
+  "img": "icons/svg/direction.svg",
+  "folder": "ihuSXoinyPE3l7QQ",
+  "sort": 400000,
+  "system": {
+    "row": {
+      "name": "Speeder Bike (e.g., Aratech 74-Z)",
+      "type": "Personal Repulsorlift Transport",
+      "category": "Atmospheric",
+      "handling": "+2",
+      "speed": "100 mph",
+      "accelDecel": "5/10",
+      "hp": 10,
+      "dr": 2,
+      "crew": "1",
+      "passengers": "1",
+      "cargo": "5 lbs",
+      "cost": 5000,
+      "weapons": "Light blaster cannon (optional)",
+      "weaponSkill": "Gunner (Vehicle)",
+      "hyperdrive": "N/A",
+      "notes": "Fast, agile, open-air vehicle for one or two riders. Common for patrols or scouting.",
+      "id": "60b6c5da-7cd9-4d92-ab23-3d3f4385123a",
+      "quantity": 1
+    },
+    "source": "vehicles",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "vehicles"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "vehicles",
+      "key": "Speeder Bike (e.g., Aratech 74-Z)"
+    }
+  }
+}

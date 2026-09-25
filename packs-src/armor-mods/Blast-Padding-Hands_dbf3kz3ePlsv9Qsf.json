@@ -1,0 +1,41 @@
+{
+  "_id": "dbf3kz3ePlsv9Qsf",
+  "_key": "!items!dbf3kz3ePlsv9Qsf",
+  "name": "Blast Padding (Hands)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "g3ttGbCetYWw12Jx",
+  "sort": 2700000,
+  "system": {
+    "row": {
+      "id": "8d5a082a-3084-415b-89f7-f7fe1ab92b58",
+      "name": "Blast Padding (Hands)",
+      "category": "Underlay Mod",
+      "cost": 40,
+      "weight": 0.5,
+      "notes": "+2 DR vs. explosive damage to that location. Imposes DX -1 while worn.",
+      "equipped": false,
+      "quantity": 1,
+      "validSlots": [
+        "Hands",
+        "Droid Arm"
+      ],
+      "drBonus": 2
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "key": "Blast Padding (Hands)"
+    }
+  }
+}

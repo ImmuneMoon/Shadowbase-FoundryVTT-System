@@ -1,0 +1,211 @@
+{
+  "_id": "9ctH9RHmt3BnKwTd",
+  "_key": "!items!9ctH9RHmt3BnKwTd",
+  "name": "Light Repeating Blaster",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "56y9TuuExWcEnaAe",
+  "sort": 3000000,
+  "system": {
+    "row": {
+      "id": "19ecf790-fc27-4c7f-b299-1de85c1ef09e",
+      "customName": "Light Repeating Blaster",
+      "baseType": "Light Repeating Blaster",
+      "baseSkill": "Guns (Blaster Heavy Weapons)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 18.7,
+      "finalWeight": 18.7,
+      "baseCost": 1356,
+      "finalCost": 8136,
+      "currentCharges": 200,
+      "maxCharges": 200,
+      "loadedAmmunitionId": "e5aa61eb-29e0-493d-90ff-7d352a52d173",
+      "loadedAmmunitionData": {
+        "id": "e5aa61eb-29e0-493d-90ff-7d352a52d173",
+        "name": "Heavy Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 200,
+        "maxCharges": 200,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "A high-capacity pack for military-grade repeaters and cannons. A gas top-up (60 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "heavy-mount",
+        "inventoryId": "79fe5053-9a96-4305-a88a-69294c5f0f05",
+        "materialId": "durasteel"
+      },
+      "receiverPart": {
+        "partId": "repeater-receiver",
+        "inventoryId": "e5be6c22-153d-47db-80bb-f6c83ee04884",
+        "materialId": "durasteel"
+      },
+      "barrelPart": {
+        "partId": "long-emitter",
+        "inventoryId": "a7570425-657b-499f-b083-c9f57e0c6e95",
+        "materialId": "durasteel"
+      },
+      "targetingPart": {
+        "partId": "artillery-targeting",
+        "inventoryId": "a13e7934-49ec-4293-84c5-3d937b3c93d0"
+      },
+      "powerUnitPart": {
+        "partId": "heavy-pwr-pack",
+        "inventoryId": "a0684ea0-0ed4-4a26-afcb-86da391a52e9"
+      },
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "19ecf790-fc27-4c7f-b299-1de85c1ef09e",
+        "customName": "Light Repeating Blaster",
+        "baseType": "Light Repeating Blaster",
+        "baseSkill": "Guns (Blaster Heavy Weapons)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 18.7,
+        "finalWeight": 18.7,
+        "baseCost": 1356,
+        "finalCost": 8136,
+        "currentCharges": 200,
+        "maxCharges": 200,
+        "loadedAmmunitionId": "e5aa61eb-29e0-493d-90ff-7d352a52d173",
+        "loadedAmmunitionData": {
+          "id": "e5aa61eb-29e0-493d-90ff-7d352a52d173",
+          "name": "Heavy Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 200,
+          "maxCharges": 200,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "A high-capacity pack for military-grade repeaters and cannons. A gas top-up (60 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "heavy-mount",
+          "inventoryId": "79fe5053-9a96-4305-a88a-69294c5f0f05",
+          "materialId": "durasteel"
+        },
+        "receiverPart": {
+          "partId": "repeater-receiver",
+          "inventoryId": "e5be6c22-153d-47db-80bb-f6c83ee04884",
+          "materialId": "durasteel"
+        },
+        "barrelPart": {
+          "partId": "long-emitter",
+          "inventoryId": "a7570425-657b-499f-b083-c9f57e0c6e95",
+          "materialId": "durasteel"
+        },
+        "targetingPart": {
+          "partId": "artillery-targeting",
+          "inventoryId": "a13e7934-49ec-4293-84c5-3d937b3c93d0"
+        },
+        "powerUnitPart": {
+          "partId": "heavy-pwr-pack",
+          "inventoryId": "a0684ea0-0ed4-4a26-afcb-86da391a52e9"
+        },
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "79fe5053-9a96-4305-a88a-69294c5f0f05",
+          "name": "Heavy Mount",
+          "partId": "heavy-mount",
+          "category": "Ranged Grip",
+          "materialId": "durasteel",
+          "cost": 490,
+          "weight": 9.8,
+          "isInstalled": true,
+          "installedInBlasterId": "19ecf790-fc27-4c7f-b299-1de85c1ef09e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Requires tripod/bipod."
+        },
+        {
+          "id": "e5be6c22-153d-47db-80bb-f6c83ee04884",
+          "name": "Repeater Receiver",
+          "partId": "repeater-receiver",
+          "category": "Ranged Receiver",
+          "materialId": "durasteel",
+          "cost": 98,
+          "weight": 1.96,
+          "isInstalled": true,
+          "installedInBlasterId": "19ecf790-fc27-4c7f-b299-1de85c1ef09e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Automatic mechanisms. Also supports Heavy Power Pack."
+        },
+        {
+          "id": "a7570425-657b-499f-b083-c9f57e0c6e95",
+          "name": "Long Emitter",
+          "partId": "long-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "durasteel",
+          "cost": 98,
+          "weight": 1.96,
+          "isInstalled": true,
+          "installedInBlasterId": "19ecf790-fc27-4c7f-b299-1de85c1ef09e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "a13e7934-49ec-4293-84c5-3d937b3c93d0",
+          "name": "Artillery Targeting Module",
+          "partId": "artillery-targeting",
+          "category": "Ranged Targeting",
+          "cost": 250,
+          "weight": 3,
+          "isInstalled": true,
+          "installedInBlasterId": "19ecf790-fc27-4c7f-b299-1de85c1ef09e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Heavy vehicle-grade targeting arrays."
+        },
+        {
+          "id": "a0684ea0-0ed4-4a26-afcb-86da391a52e9",
+          "name": "Heavy Power Pack",
+          "partId": "heavy-pwr-pack",
+          "category": "Power Unit",
+          "cost": 420,
+          "weight": 2,
+          "isInstalled": true,
+          "installedInBlasterId": "19ecf790-fc27-4c7f-b299-1de85c1ef09e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Light Repeating Blaster"
+    }
+  }
+}

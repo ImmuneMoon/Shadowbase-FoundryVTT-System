@@ -1,0 +1,39 @@
+{
+  "_id": "IcxL4QLGIpAtPSIX",
+  "_key": "!items!IcxL4QLGIpAtPSIX",
+  "name": "Tread (3C, IT, T1, T3-Series)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "HHtVhUGlED7Z8T7J",
+  "sort": 6400000,
+  "system": {
+    "row": {
+      "id": "ca2c2ccc-1aef-4058-a8a1-5a04a1bc2930",
+      "name": "Tread (3C, IT, T1, T3-Series)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Motive Mount",
+      "cost": 2912,
+      "weight": 15,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "t3-tread",
+      "description": "Enhanced Move 1 (Ground), Lifting ST +4, Dodge -1"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "t3-tread"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "_id": "pe0PNrht6cTymE8P",
+  "_key": "!items!pe0PNrht6cTymE8P",
+  "name": "Dwomutsiqsa (Summon Demon)",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "joTOdeYSoLzidovy",
+  "sort": 800000,
+  "system": {
+    "row": {
+      "name": "Dwomutsiqsa (Summon Demon)",
+      "level": 1,
+      "cpCost": 30,
+      "fpCost": 15,
+      "effect": "Intangible smoke entity. Stays for 1 min. Strikes with terror. Maintenance: 3 FP/min. Incantation: 10 sec.",
+      "characterTier": "Expert",
+      "baseSkill": "Sith Sorcery (IQ/Hard)",
+      "category": "Sith Sorcery/Alchemy",
+      "alignment": "DS",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Dwomutsiqsa (Summon Demon)",
+        "description": "Summons a horrifying Smoke Demon manifested from dark side energy.",
+        "category": "Sith Sorcery/Alchemy",
+        "level": 1,
+        "cpCost": 30,
+        "fpCost": 15,
+        "alignment": "DS",
+        "baseSkill": "Sith Sorcery (IQ/Hard)",
+        "characterTier": "Expert",
+        "effect": "Intangible smoke entity. Stays for 1 min. Strikes with terror. Maintenance: 3 FP/min. Incantation: 10 sec."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Dwomutsiqsa (Summon Demon)"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "1yFOxlHlTlaFkuH7",
+  "_key": "!items!1yFOxlHlTlaFkuH7",
+  "name": "Mandalorian Combat Aptitude",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "3vDRi4uDBtDelTd8",
+  "sort": 11200000,
+  "system": {
+    "row": {
+      "name": "Mandalorian Combat Aptitude",
+      "points": 20,
+      "description": "Through rigorous training and a warrior culture that emphasizes practical combat effectiveness, Mandalorians (and those who adopt their way) develop exceptional combat prowess. This reflects their dedication to martial skill and relentless pursuit of victory. Benefits: +1 to DX (representing enhanced combat coordination). +1 to two specific combat skills (e.g., Guns (Blaster Rifle), Armoury (Heavy Weapons), Brawling, Melee Weapon (Axe), Piloting (Starfighter), Tactics, or other combat-oriented skills appropriate to the Mandalorian way). This bonus applies after buying skill levels. Composed (5 points) (representing their disciplined warrior's mindset). High Pain Threshold (10 points) (representing their resilience and ability to fight through injury). In a gray war, this aptitude means a Mandalorian is a highly effective, often brutal, combatant, prioritizing victory and survival above all else, regardless of the cost to non-combatants or the enemy.",
+      "category": "Social/Wealth",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Mandalorian Combat Aptitude"
+    }
+  }
+}

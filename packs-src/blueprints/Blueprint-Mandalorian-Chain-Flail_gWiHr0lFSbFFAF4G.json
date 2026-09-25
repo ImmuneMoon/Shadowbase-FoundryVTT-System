@@ -1,0 +1,42 @@
+{
+  "_id": "gWiHr0lFSbFFAF4G",
+  "_key": "!items!gWiHr0lFSbFFAF4G",
+  "name": "Blueprint: Mandalorian Chain-Flail",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 42100000,
+  "system": {
+    "row": {
+      "id": "4453d584-632c-4c44-a23c-8a68e0c79dac",
+      "name": "Blueprint: Mandalorian Chain-Flail",
+      "cost": 494,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Mandalorian Chain-Flail (Generation 0, proven, encoded, catalog design). Required to build Mandalorian Chain-Flail; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Mandalorian Chain-Flail",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3196,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Mandalorian Chain-Flail"
+    }
+  }
+}

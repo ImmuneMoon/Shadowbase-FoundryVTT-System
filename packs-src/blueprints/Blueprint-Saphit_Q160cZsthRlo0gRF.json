@@ -1,0 +1,42 @@
+{
+  "_id": "Q160cZsthRlo0gRF",
+  "_key": "!items!Q160cZsthRlo0gRF",
+  "name": "Blueprint: Saphit",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 37900000,
+  "system": {
+    "row": {
+      "id": "65841050-8dac-4be3-b7f6-60ac47ad45d7",
+      "name": "Blueprint: Saphit",
+      "cost": 3508,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Saphit (Generation 0, proven, encoded, catalog design). Required to build Saphit; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Saphit",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 33333.33333333333,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Saphit"
+    }
+  }
+}

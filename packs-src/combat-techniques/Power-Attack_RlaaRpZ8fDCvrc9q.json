@@ -1,0 +1,87 @@
+{
+  "_id": "RlaaRpZ8fDCvrc9q",
+  "_key": "!items!RlaaRpZ8fDCvrc9q",
+  "name": "Power Attack",
+  "type": "combatTechnique",
+  "img": "icons/svg/combat.svg",
+  "folder": "GUku6MvGgTxPy7sx",
+  "sort": 100000,
+  "system": {
+    "row": {
+      "name": "Power Attack",
+      "category": "Melee",
+      "level": 1,
+      "cpCost": 10,
+      "epCost": 1,
+      "effect": "Single attack at -1 to skill; +1 damage. Counts as All-Out Attack (Strong); no active defenses possible.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Any Melee Weapon skill",
+      "damageBonus": "+1",
+      "skillPenalty": 1,
+      "baselinePoints": 0
+    },
+    "source": "combatTechniques",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Power Attack",
+        "category": "Melee",
+        "level": 1,
+        "cpCost": 10,
+        "epCost": 1,
+        "effect": "Single attack at -1 to skill; +1 damage. Counts as All-Out Attack (Strong); no active defenses possible.",
+        "characterTier": "Apprentice",
+        "baseSkill": "Any Melee Weapon skill",
+        "damageBonus": "+1",
+        "skillPenalty": 1
+      },
+      {
+        "name": "Power Attack",
+        "category": "Melee",
+        "level": 2,
+        "cpCost": 20,
+        "epCost": 2,
+        "effect": "Single attack at no penalty; +2 damage. Counts as All-Out Attack (Strong); no active defenses possible.",
+        "characterTier": "Adept",
+        "baseSkill": "Any Melee Weapon skill",
+        "damageBonus": "+2"
+      },
+      {
+        "name": "Power Attack",
+        "category": "Melee",
+        "level": 3,
+        "cpCost": 35,
+        "epCost": 3,
+        "effect": "Single attack at +1 to skill; +1d-1 damage. Counts as All-Out Attack (Strong); no active defenses possible.",
+        "characterTier": "Expert",
+        "baseSkill": "Any Melee Weapon skill",
+        "damageBonus": "+1d-1",
+        "skillBonus": 1
+      },
+      {
+        "name": "Power Attack",
+        "category": "Melee",
+        "level": 4,
+        "cpCost": 55,
+        "epCost": 4,
+        "effect": "Single attack at +2 to skill; +1d+1 damage. Counts as All-Out Attack (Strong); no active defenses possible.",
+        "characterTier": "Master",
+        "baseSkill": "Any Melee Weapon skill",
+        "damageBonus": "+1d+1",
+        "skillBonus": 2
+      }
+    ],
+    "catalog": "combat-techniques"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "combat-techniques",
+      "key": "Melee|Power Attack"
+    }
+  }
+}

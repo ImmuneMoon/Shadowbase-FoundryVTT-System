@@ -1,0 +1,42 @@
+{
+  "_id": "BKWo3IoieD7sgT0X",
+  "_key": "!items!BKWo3IoieD7sgT0X",
+  "name": "Phrik",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "h5zpkZemdaiAEI5A",
+  "sort": 3200000,
+  "system": {
+    "row": {
+      "name": "Phrik",
+      "rarity": "Ultra Rare",
+      "cost": 4500,
+      "density": 450,
+      "category": "Raw Materials",
+      "subCategory": "Precious",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A nearly indestructible metallic compound, highly lightsaber-resistant.",
+      "id": "1b771d83-669a-42d5-a2cb-f090adaa008b",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "material:Phrik"
+    }
+  }
+}

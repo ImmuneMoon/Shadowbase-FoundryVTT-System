@@ -1,0 +1,41 @@
+{
+  "_id": "tc3OfLlfTZDzAcvw",
+  "_key": "!items!tc3OfLlfTZDzAcvw",
+  "name": "Cortosis Weave (Torso)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "8GrlQsd0h5olZ7DZ",
+  "sort": 1100000,
+  "system": {
+    "row": {
+      "id": "cedb6b60-694d-4b8c-a18b-7e9a881ac2c0",
+      "name": "Cortosis Weave (Torso)",
+      "category": "Overlay Mod",
+      "cost": 11250,
+      "weight": 0.75,
+      "notes": "+3 to Torso DR  vs energy (burn/ cr) damage. Roll 3d6, if not crit fail, disrupts Lightsaber for 2d-2 sec (min 2 sec) on contact.",
+      "equipped": false,
+      "quantity": 1,
+      "validSlots": [
+        "Torso",
+        "Droid Torso"
+      ],
+      "drBonus": 3
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "key": "Cortosis Weave (Torso)"
+    }
+  }
+}

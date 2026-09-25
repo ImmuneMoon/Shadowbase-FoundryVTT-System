@@ -1,0 +1,34 @@
+{
+  "_id": "CnM0keqQNsILia1S",
+  "_key": "!items!CnM0keqQNsILia1S",
+  "name": "Weakness",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "iBhK8LHSekCOv5gO",
+  "sort": 16300000,
+  "system": {
+    "row": {
+      "name": "Weakness",
+      "points": -5,
+      "level": null,
+      "description": "You take damage from a common substance or condition (e.g., sunlight, a specific mineral). The point value depends on the rarity of the substance and the damage taken. The Arkanian racial template includes a form of this. (Varies).",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Weakness|Physical"
+    }
+  }
+}

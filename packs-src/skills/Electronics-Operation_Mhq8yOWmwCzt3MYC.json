@@ -1,0 +1,34 @@
+{
+  "_id": "Mhq8yOWmwCzt3MYC",
+  "_key": "!items!Mhq8yOWmwCzt3MYC",
+  "name": "Electronics Operation",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "Dql9Lb6aKuSPlhaq",
+  "sort": 4300000,
+  "system": {
+    "row": {
+      "name": "Electronics Operation",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Average",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Electronics Operation"
+    }
+  }
+}

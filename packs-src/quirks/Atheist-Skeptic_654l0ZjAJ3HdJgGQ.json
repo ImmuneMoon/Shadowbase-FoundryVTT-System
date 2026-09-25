@@ -1,0 +1,32 @@
+{
+  "_id": "654l0ZjAJ3HdJgGQ",
+  "_key": "!items!654l0ZjAJ3HdJgGQ",
+  "name": "Atheist/Skeptic",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 300000,
+  "system": {
+    "row": {
+      "name": "Atheist/Skeptic",
+      "points": -1,
+      "description": "In a galaxy where the Force is a tangible reality, you are deeply skeptical of its power, dismissing it as superstition, Jedi mind tricks, or misunderstood technology.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Atheist/Skeptic"
+    }
+  }
+}

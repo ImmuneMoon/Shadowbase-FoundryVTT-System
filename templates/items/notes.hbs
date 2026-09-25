@@ -1,0 +1,15 @@
+{{!-- templates/items/notes.hbs - the Notes tab of every item: the family's editable notes (a plain textarea, as the
+     website binds it) and the derived effect text beside it, read-only (Systems Notes / Inherent Protections &
+     Tactical Effects / Modification Notes & Tactical Effects). Context: notes (base.mjs _notesContext), tab. --}}
+<section class="tab sb-item-tab sb-item-tab--notes {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  {{#if notes.hasEffect}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{notes.effectLabel}}</h4>
+    {{#if notes.effect}}<p class="sb-dossier sb-pre">{{notes.effect}}</p>{{else}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Notes.NoEffect"}}</p>{{/if}}
+  </div>
+  {{/if}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Item.Notes.Title"}}</h4>
+    <textarea class="sb-textarea" name="{{notes.field}}" rows="8" placeholder="{{localize "SHADOWBASE.Item.Notes.Placeholder"}}" {{disabled (not editable)}}>{{notes.value}}</textarea>
+  </div>
+</section>

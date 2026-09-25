@@ -1,0 +1,20 @@
+{
+  "_id": "Cwowcy4l2Q3n79PK",
+  "_key": "!folders!Cwowcy4l2Q3n79PK",
+  "name": "Standard Pistols",
+  "type": "Item",
+  "folder": "QMAUBR9U5YAyIYhg",
+  "sorting": "a",
+  "sort": 5300000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "path": [
+        "Ranged Weapons",
+        "Standard Pistols"
+      ]
+    }
+  }
+}

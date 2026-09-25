@@ -1,0 +1,42 @@
+{
+  "_id": "pPtRhRJJYoat1GRA",
+  "_key": "!items!pPtRhRJJYoat1GRA",
+  "name": "Detonite Compound",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "BnJXPGKEnbEN19j3",
+  "sort": 4500000,
+  "system": {
+    "row": {
+      "name": "Detonite Compound",
+      "rarity": "Uncommon",
+      "cost": 125,
+      "density": 100,
+      "category": "Raw Materials",
+      "subCategory": "Explosive",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Highly stable explosive putty requiring an electronic detonator to ignite.",
+      "id": "c3e1c548-da67-49fd-8f43-32c8f7593047",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Detonite Compound"
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{{!-- templates/apps/crafting.hbs - the Crafting Protocol (crafting-dialog.tsx:1239-1657) with the app's own picker in
+     front of it (a Blueprint-catalog design to forge, an owned item to deconstruct / salvage). The run: duration,
+     phase progress, the Construction Markup panel, the current phase (its notes, the target badge, the route panel,
+     the Blueprint / Original Design / firmware controls, workspace and extra time), the log, the finished / aborted
+     panels, Abort / Roll / Finalize. Fields bind `craft.*`. Context: CraftingApp#_prepareContext (`picker`, `run`). --}}
+<section class="sb-app__body sb-craft" data-app="crafting">
+{{#if hasJob}}
+{{#with run}}
+  <header class="sb-craft__header">
+    <h3 class="sb-craft__title"><i class="{{#if (eq mode 'disassemble')}}fa-solid fa-scissors{{else}}fa-solid fa-hammer{{/if}}"></i> {{title}}</h3>
+    <p class="sb-craft__description">{{description}}</p>
+    <p class="sb-text-10 sb-text-muted">{{itemName}} · {{category}}</p>
+  </header>
+  {{#if estimatedTime}}<span class="sb-craft__duration"><i class="fa-regular fa-clock"></i> {{localize "SHADOWBASE.Apps.Crafting.EstimatedDuration"}}: {{estimatedTime}}</span>{{/if}}
+
+  <div class="sb-craft__progress">
+    <div class="sb-hrow sb-hrow--between sb-caps sb-text-10 sb-text-muted"><span>{{localize "SHADOWBASE.Apps.Crafting.PhaseOf" current=phase.current total=phase.total}}</span><span>{{phase.pct}}%</span></div>
+    <div class="sb-progress"><div class="sb-progress__bar" style="width: {{phase.pct}}%"></div></div>
+    <ol class="sb-craft__stages">{{#each stages}}<li class="{{#if done}}is-done{{/if}}{{#if active}} is-active{{/if}}"><span>{{name}}</span><span class="sb-text-10 sb-text-muted">{{skill}}</span></li>{{/each}}</ol>
+  </div>
+
+  {{#if markup}}
+  <div class="sb-craft__markup">
+    <div class="sb-hrow sb-hrow--between"><span class="sb-caps sb-text-10 sb-craft__markup-title">{{localize "SHADOWBASE.Apps.Crafting.ConstructionMarkup"}}</span><span class="sb-text-mono sb-craft__markup-total">×{{markup.total}} {{localize "SHADOWBASE.Apps.Crafting.OnMaterials"}}</span></div>
+    {{#each markup.steps}}<div class="sb-hrow sb-hrow--between sb-text-10"><span class="sb-text-muted">{{stage}} <span class="sb-craft__dim">· {{skill}}</span></span><span class="sb-text-mono">{{difficulty}} → ×{{multiplier}}</span></div>{{/each}}
+    <p class="sb-text-10 sb-text-muted sb-craft__markup-note">{{localize "SHADOWBASE.Apps.Crafting.MarkupNote"}}{{#if markup.chapterRated}} {{localize "SHADOWBASE.Apps.Crafting.MarkupCh13"}}{{/if}}</p>
+  </div>
+  {{/if}}
+
+  {{#if active}}
+  {{#with stage}}
+  <div class="sb-craft__stage">
+    <p class="sb-caps sb-text-10 sb-craft__stage-name">{{name}}</p>
+    <p class="sb-craft__stage-desc">{{description}}</p>
+    {{#if failureNote}}<p class="sb-text-10 sb-text-muted"><span class="sb-caps">{{localize "SHADOWBASE.Apps.Crafting.OnFailure"}} · </span>{{failureNote}}</p>{{/if}}
+    {{#if criticalFailureNote}}<p class="sb-text-10 sb-craft__crit"><span class="sb-caps">{{localize "SHADOWBASE.Apps.Crafting.OnCriticalFailure"}} · </span>{{criticalFailureNote}}</p>{{/if}}
+    <div class="sb-hrow sb-hrow--tight">
+      <span class="sb-badge sb-badge-outline sb-caps sb-text-10{{#if cannotAttempt}} is-refused{{/if}}">{{targetLabel}}</span>
+      {{#if netText}}<span class="sb-badge sb-badge-outline sb-caps sb-text-10 {{#if netPositive}}sb-badge--pos{{else}}sb-badge--neg{{/if}}">{{netText}}</span>{{/if}}
+    </div>
+  </div>
+  {{/with}}
+  {{#if route}}<div class="sb-craft__route"><span class="sb-caps sb-text-10">{{route.label}}</span><p class="sb-text-10 sb-text-muted">{{route.summary}}</p></div>{{/if}}
+  {{#if blueprintWrite}}
+  <div class="sb-craft__control">
+    <span class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Crafting.Blueprint"}}</span>
+    {{#if blueprintWrite.available}}<label class="sb-check-row"><input type="checkbox" name="craft.writeBlueprint" {{#if blueprintWrite.checked}}checked{{/if}} {{disabled blueprintWrite.locked}}> <span>{{localize "SHADOWBASE.Apps.Crafting.WriteBlueprint"}}</span></label>{{else}}<p class="sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Crafting.WriteBlueprintUnavailable"}}</p>{{/if}}
+  </div>
+  {{/if}}
+  {{#if designPhase}}
+  <div class="sb-craft__control">
+    <span class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Crafting.OriginalDesign"}}</span>
+    {{#if designPhase.available}}<label class="sb-check-row"><input type="checkbox" name="craft.designOriginal" {{#if designPhase.checked}}checked{{/if}} {{disabled designPhase.locked}}> <span>{{localize "SHADOWBASE.Apps.Crafting.DesignOriginal"}}</span></label>{{else}}<p class="sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Crafting.DesignUnavailable"}}</p>{{/if}}
+  </div>
+  {{/if}}
+  {{#if blueprint}}
+  <div class="sb-craft__control">
+    <label class="sb-caps sb-text-10 sb-text-muted" for="craft-blueprint">{{localize "SHADOWBASE.Apps.Crafting.BuildFrom"}}{{#if blueprint.required}} {{localize "SHADOWBASE.Apps.Crafting.Required"}}{{/if}}</label>
+    {{#if blueprint.hasCards}}<select class="sb-select" id="craft-blueprint" name="craft.buildBlueprintId" {{disabled blueprint.locked}}>{{#each blueprint.options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>{{else}}{{#unless blueprint.designOriginal}}<p class="sb-text-10 sb-craft__crit">{{localize "SHADOWBASE.Apps.Crafting.NoCardCovers" name=blueprint.designName}}</p>{{/unless}}{{/if}}
+    {{#if blueprint.bonusLine}}<p class="sb-text-10 sb-text-muted">{{blueprint.bonusLine}}</p>{{/if}}
+  </div>
+  {{/if}}
+  {{#if firmware}}
+  <div class="sb-craft__control">
+    <label class="sb-caps sb-text-10 sb-text-muted" for="craft-firmware">{{localize "SHADOWBASE.Apps.Crafting.FirmwareCard"}}</label>
+    {{#if firmware.hasCards}}<select class="sb-select" id="craft-firmware" name="craft.firmwareCardId" {{disabled firmware.locked}}>{{#each firmware.options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>{{#if firmware.penaltyLine}}<p class="sb-text-10 sb-text-muted">{{firmware.penaltyLine}}</p>{{/if}}{{else}}<p class="sb-text-10 sb-craft__crit">{{localize "SHADOWBASE.Apps.Crafting.NoFirmwareCards"}}</p>{{/if}}
+  </div>
+  {{/if}}
+  <div class="sb-craft__control">
+    <label class="sb-caps sb-text-10 sb-text-muted" for="craft-workspace">{{localize "SHADOWBASE.Apps.Crafting.Workspace"}}</label>
+    <select class="sb-select" id="craft-workspace" name="craft.workspaceMod">{{#each workspace.options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+    {{#if workspace.forced}}<p class="sb-text-10 sb-craft__amber">{{localize "SHADOWBASE.Apps.Crafting.WorkspaceForced" applied=workspace.applied chosen=workspace.chosen}}</p>{{/if}}
+  </div>
+  <div class="sb-craft__control">
+    <label class="sb-caps sb-text-10 sb-text-muted" for="craft-extra-time">{{localize "SHADOWBASE.Apps.Crafting.ExtraTime"}}</label>
+    <select class="sb-select" id="craft-extra-time" name="craft.extraTimeIdx">{{#each extraTime.options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+    {{#if extraTime.noBonus}}<p class="sb-text-10 sb-craft__amber">{{localize "SHADOWBASE.Apps.Crafting.ExtraTimeNoBonus"}}</p>{{/if}}
+  </div>
+  {{/if}}
+
+  {{#if hasLogs}}<div class="sb-craft__log">{{#each logs}}<div class="sb-craft__log-line is-{{tone}}">{{text}}</div>{{/each}}</div>{{/if}}
+
+  {{#if finished}}
+  <div class="sb-craft__done is-{{finished.tone}}">
+    <i class="{{#if (eq finished.tone 'clean')}}fa-solid fa-circle-check{{else}}fa-solid fa-triangle-exclamation{{/if}}"></i>
+    <div><p class="sb-caps sb-craft__done-title">{{finished.title}}</p><p class="sb-text-10 sb-text-muted">{{finished.text}}</p></div>
+  </div>
+  {{/if}}
+  {{#if failed}}
+  <div class="sb-craft__done is-failed">
+    <i class="fa-solid fa-circle-xmark"></i>
+    <div><p class="sb-caps sb-craft__done-title">{{localize "SHADOWBASE.Apps.Crafting.Aborted"}}</p><p class="sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Crafting.AbortedText"}}</p>{{#each materialsLost}}<p class="sb-text-10 sb-craft__crit">− {{amount}} {{name}}</p>{{/each}}</div>
+  </div>
+  {{/if}}
+
+  <footer class="sb-hrow sb-hrow--between sb-craft__footer">
+    <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm sb-caps" data-action="abort" {{disabled failed}}>{{localize "SHADOWBASE.Apps.Crafting.Abort"}}</button>
+    {{#if showFinalize}}
+      <button type="button" class="sb-btn sb-btn-sm sb-caps {{#if failed}}sb-btn-destructive{{else}}sb-btn-default is-green{{/if}}" data-action="finalize">{{finalizeLabel}}</button>
+    {{else}}
+      <button type="button" class="sb-btn sb-btn-default sb-btn-sm sb-caps" data-action="roll-stage" {{disabled (not canRoll)}} title="{{gateTitle}}">{{#if stage}}{{stage.rollLabel}}{{else}}{{localize "SHADOWBASE.Apps.Crafting.Roll"}}{{/if}}</button>
+    {{/if}}
+  </footer>
+{{/with}}
+{{else}}
+{{#with picker}}
+  <p class="sb-muted-p">{{localize "SHADOWBASE.Apps.Crafting.PickerHint"}}</p>
+  <div class="sb-craft__pick">
+    <h4 class="sb-craft__pick-title"><i class="fa-solid fa-hammer"></i> {{localize "SHADOWBASE.Apps.Crafting.ForgeDesign"}}</h4>
+    <div class="sb-grid-2">
+      <div class="sb-field" data-sheet-row><label class="sb-field__label" for="craft-section">{{localize "SHADOWBASE.Apps.Crafting.Section"}}</label><select class="sb-select" id="craft-section" name="craft.pick.section">{{#each sections}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></div>
+      <div class="sb-field" data-sheet-row><label class="sb-field__label" for="craft-design">{{localize "SHADOWBASE.Apps.Crafting.Design"}}</label><select class="sb-select" id="craft-design" name="craft.pick.designName"><option value="" {{#unless design}}selected{{/unless}}>—</option>{{#each designs}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></div>
+    </div>
+    {{#if design}}
+    <div class="sb-craft__design">
+      <p><b>{{design.name}}</b> <span class="sb-text-10 sb-text-muted">{{design.family}} · {{design.marketCost}} cr {{localize "SHADOWBASE.Apps.Crafting.Market"}} · {{localize "SHADOWBASE.Apps.Crafting.BlueprintCost" cost=design.blueprintCost}}</span></p>
+      {{#if design.direct}}
+        <p class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Crafting.Materials"}}</p>
+        <div class="sb-hrow sb-hrow--tight">{{#each design.need}}<span class="sb-badge sb-badge-outline {{#if short}}sb-badge--neg{{/if}}">{{amount}} {{name}}</span>{{/each}}</div>
+        {{#if design.missing}}<p class="sb-text-10 sb-craft__crit">{{localize "SHADOWBASE.Apps.Crafting.MaterialsShort"}}</p>{{/if}}
+      {{else}}
+        <p class="sb-text-10 sb-craft__amber">{{localize "SHADOWBASE.Apps.Crafting.DesignerRoute" name=design.name where=design.where}}</p>
+      {{/if}}
+    </div>
+    {{/if}}
+    <div class="sb-hrow sb-hrow--between">
+      <label class="sb-hrow sb-hrow--tight sb-text-10"><span class="sb-caps sb-text-muted">{{localize "SHADOWBASE.Apps.Common.Quantity"}}</span><input type="number" class="sb-input sb-craft__qty" name="craft.pick.quantity" data-dtype="Number" min="1" step="1" value="{{quantity}}"></label>
+      <button type="button" class="sb-btn sb-btn-default sb-btn-sm" data-action="start-design" {{disabled (or (not design) (not ../editable))}}><i class="fa-solid fa-hammer"></i> {{localize "SHADOWBASE.Apps.Crafting.StartForge"}}</button>
+    </div>
+  </div>
+  <div class="sb-craft__pick">
+    <h4 class="sb-craft__pick-title"><i class="fa-solid fa-scissors"></i> {{localize "SHADOWBASE.Apps.Crafting.TearDown"}}</h4>
+    {{#if hasTeardown}}
+    <div class="sb-grid-2">
+      <div class="sb-field" data-sheet-row><label class="sb-field__label" for="craft-item">{{localize "SHADOWBASE.Apps.Crafting.OwnedItem"}}</label><select class="sb-select" id="craft-item" name="craft.pick.itemId"><option value="">—</option>{{#each teardown}}<option value="{{id}}" {{#if selected}}selected{{/if}}>{{name}} ({{category}})</option>{{/each}}</select></div>
+      <div class="sb-field" data-sheet-row><label class="sb-field__label" for="craft-mode">{{localize "SHADOWBASE.Apps.Crafting.ModeLabel"}}</label><select class="sb-select" id="craft-mode" name="craft.pick.mode">{{#each modes}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></div>
+    </div>
+    <div class="sb-hrow sb-hrow--end"><button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="start-teardown" {{disabled (not ../editable)}}><i class="fa-solid fa-scissors"></i> {{localize "SHADOWBASE.Apps.Crafting.StartTeardown"}}</button></div>
+    {{else}}<p class="sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Crafting.NothingToTearDown"}}</p>{{/if}}
+  </div>
+{{/with}}
+{{/if}}
+</section>

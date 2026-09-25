@@ -1,0 +1,34 @@
+{
+  "_id": "pEzOdQbXbx8PFg43",
+  "_key": "!items!pEzOdQbXbx8PFg43",
+  "name": "Laser Trip Mine",
+  "type": "explosive",
+  "img": "icons/svg/explosion.svg",
+  "folder": "koMvUxhn5oSa1YB4",
+  "sort": 800000,
+  "system": {
+    "row": {
+      "baseExplosiveName": "Laser Trip Mine",
+      "quantity": 1,
+      "finalWeight": 1.5,
+      "finalCost": 696,
+      "preferredDefaultAttr": "DX",
+      "id": "190f30c3-be0b-4242-946d-c7be13a8a608"
+    },
+    "source": "customExplosives",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "explosives"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "explosives",
+      "key": "Laser Trip Mine"
+    }
+  }
+}

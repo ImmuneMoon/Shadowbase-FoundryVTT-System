@@ -1,0 +1,173 @@
+{
+  "_id": "McfgiwONUvwFnAQ1",
+  "_key": "!items!McfgiwONUvwFnAQ1",
+  "name": "Vibro-knife",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "Y9buf6UlPf0mdP6U",
+  "sort": 3200000,
+  "system": {
+    "row": {
+      "id": "6389c9e9-aa74-4e17-bbc5-ffbc45637eec",
+      "customName": "Vibro-knife",
+      "baseType": "Vibro-knife",
+      "baseSkill": "Knife",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": 20,
+      "maxCharges": 20,
+      "condition": "Fine",
+      "baseReach": "C, 1",
+      "baseWeight": 3.66,
+      "finalWeight": 3.66,
+      "baseCost": 610,
+      "finalCost": 3660,
+      "gripParts": [
+        {
+          "inventoryId": "0b014e49-ef89-442b-ba13-77f502e9ae15",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "ebe42412-06f8-49f8-b293-7e5d612716c5",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "utilityParts": [
+        {
+          "inventoryId": "dfdb7d38-ae0a-46bd-a686-f273a1bf70ac",
+          "materialId": null,
+          "quantity": 1
+        },
+        {
+          "inventoryId": "1cb19ada-9802-4d59-a89a-053574accd94",
+          "materialId": null,
+          "quantity": 1
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "6389c9e9-aa74-4e17-bbc5-ffbc45637eec",
+        "customName": "Vibro-knife",
+        "baseType": "Vibro-knife",
+        "baseSkill": "Knife",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": 20,
+        "maxCharges": 20,
+        "condition": "Fine",
+        "baseReach": "C, 1",
+        "baseWeight": 3.66,
+        "finalWeight": 3.66,
+        "baseCost": 610,
+        "finalCost": 3660,
+        "gripParts": [
+          {
+            "inventoryId": "0b014e49-ef89-442b-ba13-77f502e9ae15",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "ebe42412-06f8-49f8-b293-7e5d612716c5",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "utilityParts": [
+          {
+            "inventoryId": "dfdb7d38-ae0a-46bd-a686-f273a1bf70ac",
+            "materialId": null,
+            "quantity": 1
+          },
+          {
+            "inventoryId": "1cb19ada-9802-4d59-a89a-053574accd94",
+            "materialId": null,
+            "quantity": 1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "0b014e49-ef89-442b-ba13-77f502e9ae15",
+          "name": "Short Hilt",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 26,
+          "weight": 0.49,
+          "isInstalled": true,
+          "installedInMeleeId": "6389c9e9-aa74-4e17-bbc5-ffbc45637eec",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Knife/Smallsword. 1-handed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "ebe42412-06f8-49f8-b293-7e5d612716c5",
+          "name": "Light Blade",
+          "category": "Melee Head",
+          "materialId": "durasteel",
+          "cost": 74,
+          "weight": 1.47,
+          "isInstalled": true,
+          "installedInMeleeId": "6389c9e9-aa74-4e17-bbc5-ffbc45637eec",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Balanced.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "dfdb7d38-ae0a-46bd-a686-f273a1bf70ac",
+          "name": "Vibration Generator",
+          "category": "Melee Power Unit",
+          "cost": 300,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInMeleeId": "6389c9e9-aa74-4e17-bbc5-ffbc45637eec",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Adds +1d cut/imp. Grants Armor Divisor (3). Needs a successful Computer Programming skill check to function if constructed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "1cb19ada-9802-4d59-a89a-053574accd94",
+          "name": "Power Cell",
+          "category": "Melee Power Unit",
+          "cost": 210,
+          "weight": 0.7,
+          "isInstalled": true,
+          "installedInMeleeId": "6389c9e9-aa74-4e17-bbc5-ffbc45637eec",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Provides baseline power for attached emitters/generators.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Vibro-knife"
+    }
+  }
+}

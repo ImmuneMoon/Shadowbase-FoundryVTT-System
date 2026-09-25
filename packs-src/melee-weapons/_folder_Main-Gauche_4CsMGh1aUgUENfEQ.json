@@ -1,0 +1,19 @@
+{
+  "_id": "4CsMGh1aUgUENfEQ",
+  "_key": "!folders!4CsMGh1aUgUENfEQ",
+  "name": "Main-Gauche",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 800000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "path": [
+        "Main-Gauche"
+      ]
+    }
+  }
+}

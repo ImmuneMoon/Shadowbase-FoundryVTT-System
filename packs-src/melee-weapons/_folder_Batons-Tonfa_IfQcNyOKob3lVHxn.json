@@ -1,0 +1,19 @@
+{
+  "_id": "IfQcNyOKob3lVHxn",
+  "_key": "!folders!IfQcNyOKob3lVHxn",
+  "name": "Batons/Tonfa",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 200000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "path": [
+        "Batons/Tonfa"
+      ]
+    }
+  }
+}

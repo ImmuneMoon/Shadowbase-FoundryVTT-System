@@ -1,0 +1,39 @@
+{
+  "_id": "Exv7IDsSlC8n26F7",
+  "_key": "!items!Exv7IDsSlC8n26F7",
+  "name": "Bipedal Chassis (GE3)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "bppESUx5QjA1oXLP",
+  "sort": 100000,
+  "system": {
+    "row": {
+      "id": "55bb2ff4-591d-428b-b1c5-daea0d0fbf0b",
+      "name": "Bipedal Chassis (GE3)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Chassis",
+      "cost": 3052,
+      "weight": 30,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "ge3-bipedal",
+      "description": "Base ST 10, HP 10; Torso 0.58 m"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "ge3-bipedal"
+    }
+  }
+}

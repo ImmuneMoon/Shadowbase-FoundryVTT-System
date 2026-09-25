@@ -1,0 +1,45 @@
+{
+  "_id": "vrDZPbqet7r9Pe0u",
+  "_key": "!items!vrDZPbqet7r9Pe0u",
+  "name": "Athakam \"Nimble-5\"",
+  "type": "cyberneticLimb",
+  "img": "icons/svg/bones.svg",
+  "folder": "Ion0lHQozspiLAyd",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "id": "89740dd0-e7f1-441b-89ea-4788651e8740",
+      "name": "Athakam \"Nimble-5\"",
+      "location": "Right Hand",
+      "extent": "Partial",
+      "material": "Plasteel",
+      "cost": 950,
+      "weight": 2.43,
+      "dr": 2,
+      "currentDr": 2,
+      "effect": "Reliable tactile feedback.",
+      "upgrades": [],
+      "hasSynthskin": false,
+      "installed": false,
+      "storageLocationId": null,
+      "quantity": 1,
+      "baselinePoints": 0,
+      "itemSizeModifier": 0
+    },
+    "source": "cybernetics",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-limbs"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-limbs",
+      "key": "Hand|Athakam \"Nimble-5\""
+    }
+  }
+}

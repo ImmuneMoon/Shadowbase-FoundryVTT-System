@@ -1,0 +1,47 @@
+{
+  "_id": "Q99g85sUSg4HnZGM",
+  "_key": "!items!Q99g85sUSg4HnZGM",
+  "name": "Beam Splitter",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "8V76cT7Mk3a6jBdw",
+  "sort": 2400000,
+  "system": {
+    "row": {
+      "name": "Beam Splitter",
+      "category": "Barrel/Emitter",
+      "cost": 502,
+      "weight": 2,
+      "notes": "Changes RoF to 2, allowing attacks on two targets at -4 skill and double CPS.",
+      "rofOverride": 2,
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 1.5
+        },
+        {
+          "name": "Clari-crystalline",
+          "amount": 0.5
+        }
+      ],
+      "id": "4ef5718a-0393-4031-82a4-2e6addaa4ebb",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Beam Splitter"
+    }
+  }
+}

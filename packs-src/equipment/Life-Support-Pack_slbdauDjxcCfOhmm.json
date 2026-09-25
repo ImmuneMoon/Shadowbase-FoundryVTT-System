@@ -1,0 +1,55 @@
+{
+  "_id": "slbdauDjxcCfOhmm",
+  "_key": "!items!slbdauDjxcCfOhmm",
+  "name": "Life Support Pack",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "cD5uXOgH1wysZpP7",
+  "sort": 8500000,
+  "system": {
+    "row": {
+      "name": "Life Support Pack",
+      "cost": 1200,
+      "skill": "First Aid, Physician, or Surgery",
+      "description": "Contains a large dose of Kolto, and easily graft-able Synth-Flesh. Grants +2 to First Aid/Physician. Restores 2d Hit Points on a successful skill roll, or 1d HP on a failure, up to max HP. A critical failure inflicts 1d-2 HP of damage. Contains 1 use.",
+      "category": "Medical & Pharmaceuticals",
+      "subCategory": "Healing Supplies",
+      "weight": 6,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Kolto",
+          "amount": 3
+        },
+        {
+          "name": "Synth-Flesh",
+          "amount": 2.5
+        },
+        {
+          "name": "Duraplast",
+          "amount": 0.5
+        }
+      ],
+      "id": "74e4db26-915a-4095-b960-40b2f842a9d2",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Life Support Pack"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "_id": "PMDROATjvKBmPmJn",
+  "_key": "!items!PMDROATjvKBmPmJn",
+  "name": "Pistol Round (Standard)",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "62SxWxECrgqvwXoo",
+  "sort": 700000,
+  "system": {
+    "row": {
+      "name": "Pistol Round (Standard)",
+      "craftingCategory": "Ammunition",
+      "projectileClass": "standard",
+      "caliber": "Pistol",
+      "type": "Rounds",
+      "containerType": "Rounds",
+      "maxCharges": 1,
+      "cost": 6,
+      "weight": 0.05,
+      "formula": "2d+1",
+      "damageTypeOverride": "pi+",
+      "notes": "Standard slug.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.01
+        },
+        {
+          "name": "Bronzium",
+          "amount": 0.02
+        },
+        {
+          "name": "Gunpowder",
+          "amount": 0.02
+        }
+      ],
+      "id": "9ef6bf86-fd2d-40a9-835f-dbfc1d0fa2e0",
+      "quantity": 1,
+      "currentCharges": 1,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 6,
+      "baseWeight": 0.05,
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Pistol Round (Standard)"
+    }
+  }
+}

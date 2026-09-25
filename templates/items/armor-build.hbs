@@ -1,0 +1,53 @@
+{{!-- templates/items/armor-build.hbs - armor-item-card.tsx Hardware Assembly (:881-1060) with ArmorAssembly.tsx (the
+     five Ch13 component slots), ArmorModifications.tsx (the Frame's mod slots) and the plan. Context: build (armor.mjs),
+     editable, owned, canToggleLibrary, libraryAccess, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--build {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  {{> "shadowbase.item.provenance" provenance=build.provenance editable=editable owned=owned canToggleLibrary=canToggleLibrary libraryAccess=libraryAccess crafting=crafting title=(localize "SHADOWBASE.Item.Armor.HardwareAssembly")}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Combine'}}"></i> {{localize "SHADOWBASE.Item.Armor.AnatomicalShell"}}</h4>
+    {{#if build.canChoosePiece}}
+    <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Armor.Piece"}}</span>
+      <select class="sb-select" name="piece" {{disabled (not editable)}}>{{#each build.pieces}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+    </label>
+    {{/if}}
+    {{#if build.piece}}<p class="sb-text-xs"><span class="sb-caps sb-text-accent">{{localize "SHADOWBASE.Item.Armor.Piece"}}</span> {{build.piece.name}} · {{build.piece.tier}} · {{build.piece.frame}} · DR {{build.piece.dr}} · {{localize "SHADOWBASE.Item.Armor.ModSlotsN" n=build.piece.modSlots}}{{#if build.piece.sealed}} · {{localize "SHADOWBASE.Sheet.Inventory.Sealed"}}{{/if}}</p>{{/if}}
+    <div class="sb-slot-grid">
+      {{#each build.partSlots}}
+      <div class="sb-armor-slot">
+        {{> "shadowbase.item.slot" this editable=@root.editable prefix="armorSlot" materialPrefix="" wrapPrefix="" qtyPrefix=""}}
+        {{#if this.part}}<p class="sb-text-muted sb-text-xs sb-mono">{{#if this.part.dr}}DR {{this.part.dr}} · {{/if}}{{this.part.weight}} lb · {{this.part.cost}} cr</p>{{#if this.part.notes}}<p class="sb-slot__effect">{{this.part.notes}}</p>{{/if}}{{/if}}
+      </div>
+      {{/each}}
+    </div>
+    <p class="sb-text-xs">
+      <span class="sb-caps sb-text-accent">{{localize "SHADOWBASE.Item.Armor.BuildState"}}</span>
+      {{#if build.buildState.location}}{{build.buildState.location}}{{/if}}{{#if build.buildState.tier}} · {{build.buildState.tier}}{{/if}}{{#if build.buildState.material}} · {{build.buildState.material}}{{/if}}{{#if build.buildState.frame}} · {{build.buildState.frame}} {{localize "SHADOWBASE.Item.Armor.Frame"}}{{/if}}{{#if build.buildState.sealed}} · {{localize "SHADOWBASE.Sheet.Inventory.Sealed"}}{{/if}}
+      · <span class="sb-mono">{{build.buildState.partsWeight}} lb · {{build.buildState.partsSpend}} cr</span>
+    </p>
+    {{#if build.buildState.missing.length}}<p class="sb-text-amber sb-text-xs">{{localize "SHADOWBASE.Item.Armor.Missing"}}: {{#each build.buildState.missing}}<span class="sb-tag">{{this}}</span>{{/each}}</p>{{/if}}
+    {{#if build.buildState.derived}}<p class="sb-text-xs"><span class="sb-caps sb-text-accent">{{localize "SHADOWBASE.Item.Armor.DerivedPiece"}}</span> <span class="sb-mono">DR {{build.buildState.derived.dr}} · {{build.buildState.derived.weight}} lb · {{build.buildState.derived.cost}} cr · {{localize "SHADOWBASE.Item.Armor.ModSlotsN" n=build.buildState.derived.modSlots}}</span></p>{{/if}}
+    {{#each build.buildState.warnings}}<p class="sb-notice sb-notice--warn">{{this}}</p>{{/each}}
+  </div>
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Settings2'}}"></i> {{localize "SHADOWBASE.Item.Armor.ModsTitle"}}</h4>
+    <p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Armor.ModSlotsLine" n=build.modSlots.total}}{{#if build.modSlots.frame}} · {{build.modSlots.frame}} {{localize "SHADOWBASE.Item.Armor.Frame"}}{{/if}}{{#if build.modSlots.fromPiece}} ({{localize "SHADOWBASE.Item.Armor.FromFrame"}}){{/if}}{{#unless build.modSlots.hostsPowered}} · <span class="sb-text-amber">{{localize "SHADOWBASE.Item.Armor.NoWiredBacking"}}</span>{{/unless}}</p>
+    {{#if build.mods.length}}
+    <div class="sb-slot-grid">
+      {{#each build.mods}}
+      <div class="sb-slot sb-slot--fitted">
+        <label class="sb-slot__label" for="armorMod-{{this.field}}">{{this.label}}</label>
+        <select class="sb-select sb-slot__select" id="armorMod-{{this.field}}" name="armorMod.{{this.field}}" {{disabled (not @root.editable)}}>
+          <option value="" {{#if this.isNone}}selected{{/if}}>{{localize "SHADOWBASE.Item.Slot.None"}}</option>
+          {{#each this.select.groups}}<optgroup label="{{this.label}}">{{#each this.options}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</optgroup>{{/each}}
+        </select>
+        <p class="sb-slot__caption">{{#if this.fitted}}<span class="sb-text-green">{{localize "SHADOWBASE.Item.Slot.Owned" name=this.fitted.name}}</span>{{#if this.fitted.drBonus}}<span class="sb-text-muted"> · +{{this.fitted.drBonus}} DR</span>{{/if}}{{else if this.emptyReason}}<span class="sb-text-muted">{{this.emptyReason}}</span>{{/if}}</p>
+        {{#if this.fitted}}{{#if this.fitted.effect}}<p class="sb-slot__effect"><span class="sb-caps sb-text-accent">{{localize "SHADOWBASE.Item.Slot.Effect"}}</span> {{this.fitted.effect}}</p>{{/if}}{{/if}}
+      </div>
+      {{/each}}
+    </div>
+    {{else}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Armor.NoModSlots"}}</p>{{/if}}
+  </div>
+  {{#if build.plan}}{{#if build.plan.show}}
+    {{> "shadowbase.item.plan" plan=build.plan phases=build.phases}}
+  {{/if}}{{/if}}
+</section>

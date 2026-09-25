@@ -1,0 +1,34 @@
+{
+  "_id": "CHqMORC75vrhiXNk",
+  "_key": "!items!CHqMORC75vrhiXNk",
+  "name": "Two-Handed Axe/Mace",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "Qk98hM4zoKa5Uio8",
+  "sort": 14700000,
+  "system": {
+    "row": {
+      "name": "Two-Handed Axe/Mace",
+      "level": "",
+      "points": null,
+      "relativeLevel": "DX/Average",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Two-Handed Axe/Mace"
+    }
+  }
+}

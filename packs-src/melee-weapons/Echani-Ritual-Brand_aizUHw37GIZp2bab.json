@@ -1,0 +1,138 @@
+{
+  "_id": "aizUHw37GIZp2bab",
+  "_key": "!items!aizUHw37GIZp2bab",
+  "name": "Echani Ritual Brand",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "qZVJoDG1XMA9W21U",
+  "sort": 900000,
+  "system": {
+    "row": {
+      "id": "d81b34d9-9597-476f-90c4-52c73d1a3d01",
+      "customName": "Echani Ritual Brand",
+      "baseType": "Echani Ritual Brand",
+      "baseSkill": "Two-Handed Sword",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": null,
+      "maxCharges": null,
+      "condition": "Fine",
+      "baseReach": "1, 2",
+      "baseWeight": 3.63,
+      "finalWeight": 3.63,
+      "baseCost": 3172,
+      "finalCost": 6344,
+      "gripParts": [
+        {
+          "inventoryId": "a538b587-07ed-4bb9-8492-e3ca2ac51fcd",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "1b59ad0a-b197-4d88-a103-512a47f12c4c",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "bladeHeadModId": "448b1d95-0450-4125-a437-61623bd0170f"
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "d81b34d9-9597-476f-90c4-52c73d1a3d01",
+        "customName": "Echani Ritual Brand",
+        "baseType": "Echani Ritual Brand",
+        "baseSkill": "Two-Handed Sword",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": null,
+        "maxCharges": null,
+        "condition": "Fine",
+        "baseReach": "1, 2",
+        "baseWeight": 3.63,
+        "finalWeight": 3.63,
+        "baseCost": 3172,
+        "finalCost": 6344,
+        "gripParts": [
+          {
+            "inventoryId": "a538b587-07ed-4bb9-8492-e3ca2ac51fcd",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "1b59ad0a-b197-4d88-a103-512a47f12c4c",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "bladeHeadModId": "448b1d95-0450-4125-a437-61623bd0170f"
+      },
+      "parts": [
+        {
+          "id": "a538b587-07ed-4bb9-8492-e3ca2ac51fcd",
+          "name": "Extended Hilt",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 98,
+          "weight": 1.96,
+          "isInstalled": true,
+          "installedInMeleeId": "d81b34d9-9597-476f-90c4-52c73d1a3d01",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Two-Handed Sword. 1 or 2 hands.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "1b59ad0a-b197-4d88-a103-512a47f12c4c",
+          "name": "Light Blade",
+          "category": "Melee Head",
+          "materialId": "durasteel",
+          "cost": 74,
+          "weight": 1.47,
+          "isInstalled": true,
+          "installedInMeleeId": "d81b34d9-9597-476f-90c4-52c73d1a3d01",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Balanced.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "448b1d95-0450-4125-a437-61623bd0170f",
+          "name": "Cortosis Weaved Blade",
+          "category": "bladeHeadMod",
+          "cost": 3000,
+          "weight": 0.2,
+          "isInstalled": true,
+          "installedInMeleeId": "d81b34d9-9597-476f-90c4-52c73d1a3d01",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Grants on strike/block vs lightsaber: roll 3d, if not crit fail, disrupts Lightsaber for 2d-2 sec, for a minimum of 2 sec. Blade is resistant to being destroyed by a lightsaber. +3 Dur to energy resistance. Requires Armstech (the weapon's specialty).",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Echani Ritual Brand"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "GH2FLOomS3m87vIX",
+  "_key": "!items!GH2FLOomS3m87vIX",
+  "name": "Sith Sorcery",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "TmHeseJfr7BHisdh",
+  "sort": 12600000,
+  "system": {
+    "row": {
+      "name": "Sith Sorcery",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Sith Sorcery"
+    }
+  }
+}

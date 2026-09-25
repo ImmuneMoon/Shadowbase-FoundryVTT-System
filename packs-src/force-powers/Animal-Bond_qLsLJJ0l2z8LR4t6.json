@@ -1,0 +1,87 @@
+{
+  "_id": "qLsLJJ0l2z8LR4t6",
+  "_key": "!items!qLsLJJ0l2z8LR4t6",
+  "name": "Animal Bond",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "lMudTveYN6LSWH7D",
+  "sort": 100000,
+  "system": {
+    "row": {
+      "name": "Animal Bond",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 2,
+      "effect": "Calm a single aggressive, non-sapient animal within 10 feet. It will not attack unless provoked further.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Animal Handling (IQ/Average) or Influence (Will/Hard)",
+      "category": "Sense Powers",
+      "alignment": "LS",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Animal Bond",
+        "description": "The Force-user connects with the minds and emotions of non-sapient creatures, radiating peace to pacify aggressive beasts or forming a temporary alliance to gain their cooperation.",
+        "category": "Sense Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 2,
+        "alignment": "LS",
+        "baseSkill": "Animal Handling (IQ/Average) or Influence (Will/Hard)",
+        "characterTier": "Apprentice",
+        "effect": "Calm a single aggressive, non-sapient animal within 10 feet. It will not attack unless provoked further."
+      },
+      {
+        "name": "Animal Bond",
+        "description": "The Force-user connects with the minds and emotions of non-sapient creatures, radiating peace to pacify aggressive beasts or forming a temporary alliance to gain their cooperation.",
+        "category": "Sense Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 3,
+        "alignment": "LS",
+        "baseSkill": "Animal Handling (IQ/Average) or Influence (Will/Hard)",
+        "characterTier": "Adept",
+        "effect": "Range extends to 30 feet. You can compel a calmed animal to perform a simple, non-suicidal task (e.g., fetch, guard, move away)."
+      },
+      {
+        "name": "Animal Bond",
+        "description": "The Force-user connects with the minds and emotions of non-sapient creatures, radiating peace to pacify aggressive beasts or forming a temporary alliance to gain their cooperation.",
+        "category": "Sense Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 4,
+        "alignment": "LS",
+        "baseSkill": "Animal Handling (IQ/Average) or Influence (Will/Hard)",
+        "characterTier": "Expert",
+        "effect": "Affect an entire pack or group of animals (up to 6) within 30 feet, or calm a single massive, highly aggressive beast (e.g., a rancor)."
+      },
+      {
+        "name": "Animal Bond",
+        "description": "The Force-user connects with the minds and emotions of non-sapient creatures, radiating peace to pacify aggressive beasts or forming a temporary alliance to gain their cooperation.",
+        "category": "Sense Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 5,
+        "alignment": "LS",
+        "baseSkill": "Animal Handling (IQ/Average) or Influence (Will/Hard)",
+        "characterTier": "Master",
+        "effect": "You can perceive through the senses of a bonded animal up to 1 mile away, and issue complex mental commands to multiple beasts."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Animal Bond"
+    }
+  }
+}

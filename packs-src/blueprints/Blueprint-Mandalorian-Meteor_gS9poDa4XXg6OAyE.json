@@ -1,0 +1,42 @@
+{
+  "_id": "gS9poDa4XXg6OAyE",
+  "_key": "!items!gS9poDa4XXg6OAyE",
+  "name": "Blueprint: Mandalorian Meteor",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 42200000,
+  "system": {
+    "row": {
+      "id": "67bfe8a6-afa8-4512-9bf2-8a1dd864c4bb",
+      "name": "Blueprint: Mandalorian Meteor",
+      "cost": 1694,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Mandalorian Meteor (Generation 0, proven, encoded, catalog design). Required to build Mandalorian Meteor; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Mandalorian Meteor",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 15196,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Mandalorian Meteor"
+    }
+  }
+}

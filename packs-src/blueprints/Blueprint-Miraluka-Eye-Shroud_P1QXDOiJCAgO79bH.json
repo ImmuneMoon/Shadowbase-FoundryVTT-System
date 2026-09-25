@@ -1,0 +1,42 @@
+{
+  "_id": "P1QXDOiJCAgO79bH",
+  "_key": "!items!P1QXDOiJCAgO79bH",
+  "name": "Blueprint: Miraluka Eye Shroud",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 16800000,
+  "system": {
+    "row": {
+      "id": "cd10daf5-85d6-47c6-8762-30d600a9b2ab",
+      "name": "Blueprint: Miraluka Eye Shroud",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Miraluka Eye Shroud (Generation 0, proven, encoded, catalog design). Required to build Miraluka Eye Shroud; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Miraluka Eye Shroud",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 6.666666666666666,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Miraluka Eye Shroud"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "c6Tbt78NeGTPGuLm",
+  "_key": "!items!c6Tbt78NeGTPGuLm",
+  "name": "Blueprint: Heavy Durasteel",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "eYFA8B8eHWq9CHS2",
+  "sort": 22400000,
+  "system": {
+    "row": {
+      "id": "307cab6e-738d-4718-ae0a-c93f64ef60b1",
+      "name": "Blueprint: Heavy Durasteel",
+      "cost": 1164,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Heavy Durasteel (Generation 0, proven, encoded, catalog design). Required to build Heavy Durasteel; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Heavy Durasteel",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 9900,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Armor (Forged)|Heavy Durasteel"
+    }
+  }
+}

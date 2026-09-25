@@ -1,0 +1,43 @@
+{
+  "_id": "JoJeHJjBNOTR6U1N",
+  "_key": "!items!JoJeHJjBNOTR6U1N",
+  "name": "Recoil Compensator",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "RVWiXn8XomUZ0ki2",
+  "sort": 600000,
+  "system": {
+    "row": {
+      "name": "Recoil Compensator",
+      "category": "Stock/Chassis",
+      "cost": 300,
+      "weight": 2,
+      "notes": "Improves the weapon's Recoil (Rcl) rating by 1 (minimum 1).",
+      "recoilMod": -1,
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 2
+        }
+      ],
+      "id": "614cbd57-ce27-4186-a7c0-adfdf118643a",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Recoil Compensator"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "IOYyUhPW5t502yUb",
+  "_key": "!items!IOYyUhPW5t502yUb",
+  "name": "Dependents",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "QdWbP3PunGyoJeht",
+  "sort": 16600000,
+  "system": {
+    "row": {
+      "name": "Dependents",
+      "points": -5,
+      "level": null,
+      "description": "You are responsible for the well-being of one or more NPCs (a child, a younger sibling, an old mentor). They frequently require your aid and can be used as leverage against you by your enemies. The point value depends on how much of a burden they are and how often they appear. (Varies).",
+      "category": "Social",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Dependents|Social"
+    }
+  }
+}

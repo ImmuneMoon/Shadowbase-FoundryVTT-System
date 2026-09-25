@@ -1,0 +1,331 @@
+{
+  "_id": "SQjNPFSBwLhhCFQ2",
+  "_key": "!journal!SQjNPFSBwLhhCFQ2",
+  "name": "Chapter 20: Gamemastering Advice",
+  "pages": [
+    {
+      "_id": "ptTRlybKVyXKOmqU",
+      "_key": "!journal.pages!SQjNPFSBwLhhCFQ2.ptTRlybKVyXKOmqU",
+      "name": "Overview",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Running a Shadows of The Mandalorian War campaign offers unique opportunities to explore complex themes within the rich Star Wars universe. As the Game Master (GM), your role is to weave together the mechanical framework of GURPS with the narrative depth of the Mandalorian Wars era. This chapter provides advice on setting the tone, managing key elements, and guiding your players through a morally ambiguous conflict.</p>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch20-gamemastering-advice",
+            "heading": null,
+            "overview": true,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "LXBbffI6v7G5TfAg",
+      "_key": "!journal.pages!SQjNPFSBwLhhCFQ2.LXBbffI6v7G5TfAg",
+      "name": "Setting the Tone: Gritty, Gray, and War-Torn",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The Mandalorian Wars are not the clear-cut good-vs-evil conflict of later eras. Emphasize:</p>\n<ul><li><strong>Moral Ambiguity:</strong> Both sides commit atrocities or make difficult choices. Republic military discipline might lead to cold, pragmatic decisions. Mandalorian honor can be savage. The Jedi Order itself is fractured and struggling. Encourage players to question their allegiances and the consequences of their actions.</li><li><strong>Weariness &amp; Sacrifice:</strong> The galaxy is tired of war. Civilians suffer. Resources are strained. Show the cost of conflict on a personal and galactic scale. Victories often come with a heavy price.</li><li><strong>Blurred Lines:</strong> Friendships and loyalties can shift. Characters might find themselves allied with former enemies or betrayed by supposed allies. Focus on personal stories amidst the grand conflict.</li><li><strong>Growing Mysticism &amp; Tragedy:</strong> The Force’s balance is shifting, and the Jedi are struggling. Ancient evils and emerging Sith influence are stirring. Hint at the larger, tragic destiny of the galaxy.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch20-gamemastering-advice",
+            "heading": "Setting the Tone: Gritty, Gray, and War-Torn",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "EH9S70SwP6FJPkXS",
+      "_key": "!journal.pages!SQjNPFSBwLhhCFQ2.EH9S70SwP6FJPkXS",
+      "name": "Key Factions and Their Agendas",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Utilize the major players of the era to create dynamic conflicts and moral dilemmas:</p>\n<ul><li><strong>Czerka Corporation:</strong> Play them as pragmatic, ruthless profiteers. They sell to both sides, exploit chaos, and pursue hidden objectives (like Force-reactive materials or ancient relics). They can be a source of missions, equipment, or dangerous rivals.</li><li><strong>Republic Military:</strong> Portray them as stretched thin, often bureaucratic, and increasingly skeptical of Jedi interference. Their soldiers are tired, but dedicated. They value order and victory, sometimes at any cost.</li><li><strong>Jedi Order:</strong> Present them as ideologically fractured. Some Jedi actively fight, others remain neutral or are bogged down in internal debates. This creates opportunities for rogue Jedi player characters or for players to encounter Jedi who challenge their preconceptions of the Order. Visions of a coming darkness weigh heavily on some Masters.</li><li><strong>Mandalorian Clans:</strong> United and formidable under Mandalore the Ultimate. Their tactics are brutal but effective. Emphasize their warrior code, the respect they command, and the terror they inspire. They are not merely villains; they are a distinct culture with their own motivations.</li><li><strong>Emerging Force Cults/Sith Seeds:</strong> These unnamed factions or nascent Sith influences are the subtle, underlying threat. They manipulate events, seek ancient Force relics, and aim to destabilize the galaxy further. Use them for mystery, conspiracy, and to introduce the true stakes of the conflict.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch20-gamemastering-advice",
+            "heading": "Key Factions and Their Agendas",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "IC0bnCkHN6YZmNU5",
+      "_key": "!journal.pages!SQjNPFSBwLhhCFQ2.IC0bnCkHN6YZmNU5",
+      "name": "Force & Morality in the Campaign",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The Force is central to Shadows of The Mandalorian War, and its moral alignment is fluid.</p>\n<ul><li><strong>The Gray Jedi / Neutral Force-Users:</strong> Encourage players to explore characters who do not strictly adhere to the Light or Dark Side. Their Force abilities are tools, and their morality is defined by their actions and intentions.</li><li><strong>Dark Side Corruption (Force Alignment):</strong></li><li><strong>Tracking:</strong> Rather than a separate point pool, use the Force Alignment scale directly (@UUID[Compendium.shadowbase.handbook.JournalEntry.cvf2pB6RpI78AvBt]{Chapter 8}). Award Dark Side (DS) points for actions that are selfish, cruel, vengeful, or involve abusing Force powers for personal gain or destruction (e.g., torturing a prisoner, using Force Lightning excessively, betraying an ally for power), shifting Alignment further negative. Award Light Side (LS) points for the inverse.</li><li><strong>Consequences:</strong> Mechanical effects accrue automatically as Alignment shifts — growing FP cost discounts for Dark powers (and penalties for Light ones), the Learning Gate locking out the opposite side's powers once officially aligned, and at Alignment -75 or deeper, access to Sith Sorcery and Sith Alchemy (@UUID[Compendium.shadowbase.handbook.JournalEntry.aHFgSZUXNODEwQd2]{Chapter 3}) unlocks. Layer narrative consequences on top as Alignment worsens: physical changes (sallow skin, “Sith eyes,” a raspy voice, emaciation), mandatory disadvantages (Bloodlust, Sadism, Megalomania, Callous, Paranoia), or attention from other Dark Side entities.</li><li><strong>Redemption/Descent:</strong> A character's path is never set in stone. Repeated Light Side actions can pull Alignment back toward 0 or beyond, but falling deeper into the Dark Side is a slippery slope — and once a character crosses ±25 into official alignment, the Learning Gate (@UUID[Compendium.shadowbase.handbook.JournalEntry.cvf2pB6RpI78AvBt]{Chapter 8}) means the other side's powers become closed to them going forward. Play that as a hardening of the character's worldview, not just a rules restriction.</li><li><strong>Light Side Balance:</strong> Actions that demonstrate selflessness, compassion, sacrifice for the greater good, or upholding justice (even at personal cost) can be rewarded. This might grant temporary FP boosts, unlock new Force powers, or grant narrative boons (e.g., finding unexpected allies, inspiration).</li><li><strong>Force-Sensitive NPC Reactions:</strong> Non-Force users might react with awe, fear, suspicion, or even hatred towards overt Force use, regardless of its intention. Show this spectrum of reactions to make Force powers feel impactful beyond mechanics.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch20-gamemastering-advice",
+            "heading": "Force & Morality in the Campaign",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "82nOLh1KR6xtGrbx",
+      "_key": "!journal.pages!SQjNPFSBwLhhCFQ2.82nOLh1KR6xtGrbx",
+      "name": "Managing Tiered Abilities",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The tiered system for Force Powers and Combat Maneuvers allows for clear progression.</p>\n<ul><li><strong>Progression:</strong> Ensure players earn higher tiers through narrative challenges, not just CP accumulation. A Master-tier Force power should represent a significant in-game achievement (e.g., finding an ancient holocron, training under a powerful but reclusive master, overcoming a major personal flaw).</li><li><strong>Balance:</strong> Be mindful of how different tiered abilities interact. A Master-tier Force-user should feel powerful, but not negate challenges from skilled non-Force users or overwhelming numbers. Conversely, a Master-tier combatant should be formidable even against lower-tier Force-users.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 500000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch20-gamemastering-advice",
+            "heading": "Managing Tiered Abilities",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "83jpG15Obgdl0PHW",
+      "_key": "!journal.pages!SQjNPFSBwLhhCFQ2.83jpG15Obgdl0PHW",
+      "name": "Designing Encounters & Challenges",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Vary your encounters to keep the campaign dynamic and reinforce the setting.</p>\n<ul><li><strong>Combat Encounters:</strong></li><li><strong>Ready-to-Use Adversaries:</strong> @UUID[Compendium.shadowbase.handbook.JournalEntry.WoKoilSuw4eubRUd]{Chapter 19} provides reusable NPC stat blocks across four power tiers -- Generic, Elite, Mini-Boss, and Boss -- covering Mandalorians, Republic soldiers, Dark Jedi, bounty hunters, droids, and more. Pull directly from these for the encounter types below rather than building stats from scratch.</li><li><strong>Republic vs. Mandalorians:</strong> Large-scale battles, skirmishes, sabotage missions.</li><li><strong>Force-User Duels:</strong> Focus on tactics, environment, and tiered abilities.</li><li><strong>Droid Threats:</strong> Combat droids, security droids, specialized droid units.</li><li><strong>Underworld Skirmishes:</strong> Gang warfare, bounty hunters, political assassins.</li><li><strong>Social Encounters:</strong> Diplomacy with wary neutrals, interrogation of prisoners, fast-talk with smugglers, negotiations for resources, inspiring weary troops, dealing with corrupt officials.</li><li><strong>Exploration/Investigation:</strong> Discovering ancient Force sites, exploring ruined worlds, investigating conspiracies, navigating abandoned starships.</li><li><strong>Vehicle/Starship Encounters:</strong> Dogfights in space, landspeeder chases through cities, starship boarding actions, planetary bombardments.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 600000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch20-gamemastering-advice",
+            "heading": "Designing Encounters & Challenges",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "4ldDPdK37OfOke9f",
+      "_key": "!journal.pages!SQjNPFSBwLhhCFQ2.4ldDPdK37OfOke9f",
+      "name": "Rewards & Progression",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<ul><li><strong>Character Points (CP):</strong> Award CP for overcoming challenges, achieving objectives, good roleplaying, and learning from mistakes. Consider bonus CP for actions that strongly align with the campaign’s themes (e.g., a difficult moral choice).</li><li><strong>Narrative Rewards:</strong> Grant access to new contacts, rare equipment, starship upgrades, hidden knowledge, or the opportunity to train under specific masters.</li><li><strong>Faction Standing:</strong> Track PC reputation with various factions (Republic, Mandalorians, Czerka, underworld, etc.), leading to new opportunities or dangers.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 700000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch20-gamemastering-advice",
+            "heading": "Rewards & Progression",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "i8U1fECwFemdbl4A",
+      "_key": "!journal.pages!SQjNPFSBwLhhCFQ2.i8U1fECwFemdbl4A",
+      "name": "Maintaining the Gritty Tone",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<ul><li><strong>Consequences of Failure:</strong> Let failures have impact. A lost battle means lost lives, not just a retry. A botched social encounter can lead to enemies.</li><li><strong>Resource Management:</strong> Make ammunition, credits, fuel, and medical supplies valuable. Force Points and Endurance Points should feel like a finite resource, especially in intense situations.</li><li><strong>Emotional &amp; Psychological Toll:</strong> Use Fright Checks, temporary disadvantages (e.g., Nightmares, Flashbacks), and roleplaying challenges to reflect the mental burden of war.</li><li><strong>Show, Don’t Tell:</strong> Describe the devastation of war, the weariness in NPCs’ eyes, the moral compromises people make.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 800000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch20-gamemastering-advice",
+            "heading": "Maintaining the Gritty Tone",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "35KqI9z3TvPlea6y",
+      "_key": "!journal.pages!SQjNPFSBwLhhCFQ2.35KqI9z3TvPlea6y",
+      "name": "Session Zero Advice",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Before starting the campaign, hold a “Session Zero” with your players:</p>\n<ul><li><strong>Discuss Tone:</strong> Confirm that players are on board with a grittier, morally gray Star Wars.</li><li><strong>Character Concepts:</strong> Guide players to create characters that fit the era and potential themes. Discuss Force-user morality early.</li><li><strong>Player Expectations:</strong> Address what kind of game everyone wants (e.g., combat-heavy, political, exploration).</li><li><strong>Sensitive Topics:</strong> Discuss any lines or topics that players wish to avoid at the table.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 900000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch20-gamemastering-advice",
+            "heading": "Session Zero Advice",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    }
+  ],
+  "categories": [],
+  "folder": null,
+  "sort": 2000000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "handbook",
+      "key": "ch20-gamemastering-advice",
+      "handbook": {
+        "chapterId": "ch20-gamemastering-advice",
+        "generatedAt": "2026-09-19T09:02:30.342Z",
+        "headings": 8,
+        "tables": 0
+      }
+    }
+  }
+}

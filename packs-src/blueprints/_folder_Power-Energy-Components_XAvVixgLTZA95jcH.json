@@ -1,0 +1,20 @@
+{
+  "_id": "XAvVixgLTZA95jcH",
+  "_key": "!folders!XAvVixgLTZA95jcH",
+  "name": "Power & Energy Components",
+  "type": "Item",
+  "folder": "Sh8yC8SuR7f77FkG",
+  "sorting": "a",
+  "sort": 4700000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "path": [
+        "General Equipment",
+        "Power & Energy Components"
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_id": "YJvhHSDqvMDkV2hA",
+  "_key": "!items!YJvhHSDqvMDkV2hA",
+  "name": "Durasteel Cycler Mechanical Action",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "aClHr8Ajc0gX0rPo",
+  "sort": 3400000,
+  "system": {
+    "row": {
+      "id": "5d1f884e-a31d-486f-a229-e3b4bbecf89a",
+      "name": "Durasteel Cycler Mechanical Action",
+      "category": "Ranged Receiver",
+      "cost": 124,
+      "weight": 2.45,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "cycler-mech-action",
+      "materialId": "durasteel",
+      "notes": "Cycler slugthrower mechanism.",
+      "effect": "Cycler slugthrower mechanism.",
+      "energyResBonus": 0,
+      "volume": 0.005,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "cycler-mech-action"
+    }
+  }
+}

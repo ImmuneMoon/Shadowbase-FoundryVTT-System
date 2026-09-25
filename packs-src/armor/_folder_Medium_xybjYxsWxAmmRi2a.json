@@ -1,0 +1,19 @@
+{
+  "_id": "xybjYxsWxAmmRi2a",
+  "_key": "!folders!xybjYxsWxAmmRi2a",
+  "name": "Medium",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "armor",
+      "path": [
+        "Medium"
+      ]
+    }
+  }
+}

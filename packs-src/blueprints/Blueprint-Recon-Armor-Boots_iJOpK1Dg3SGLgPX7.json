@@ -1,0 +1,42 @@
+{
+  "_id": "iJOpK1Dg3SGLgPX7",
+  "_key": "!items!iJOpK1Dg3SGLgPX7",
+  "name": "Blueprint: Recon Armor Boots",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 8000000,
+  "system": {
+    "row": {
+      "id": "5a6e8e19-a5ba-46cc-801a-c5627b5cb5e7",
+      "name": "Blueprint: Recon Armor Boots",
+      "cost": 184,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Recon Armor Boots (Generation 0, proven, encoded, catalog design). Required to build Recon Armor Boots; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Recon Armor Boots",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 100,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Recon Armor Boots"
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{{!-- templates/actor/dashboard.hbs - the persistent combat dashboard above the tabs, mirroring
+     shadow-base.com (Resource Pools, Combat State + Facing, Force Alignment sit above the tabs, always
+     visible). Moved out of the Info tab 2026-09-19. Uses the same context keys (pools, header, info.combat,
+     info.alignment, chips) the sheet prepares for every part. --}}
+<div class="sb-dashboard">
+    {{!-- I3 Resource Pools (basic-info-section.tsx:306-325, resource-trackers.tsx ResourcePoolsGrid) --}}
+    <details class="sb-section" data-section="resource-pools" open>
+      {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Info.ResourcePools") icon=(sbIcon "HeartPulse") chip="" chipTitle="" meta=""}}
+      <div class="sb-section__body" data-accordion-body>
+        <div class="sb-pools-head">
+          <span class="sb-text-xs sb-text-muted">{{#if header.pinPools}}{{localize "SHADOWBASE.Sheet.Pools.PinnedNote"}}{{else}}{{localize "SHADOWBASE.Sheet.Pools.BlankIsFull"}}{{/if}}</span>
+          <div class="sb-pools-head__actions">
+            <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-btn-sm" data-action="reset-all-pools" title="{{localize "SHADOWBASE.Sheet.Pools.ResetAll"}}" aria-label="{{localize "SHADOWBASE.Sheet.Pools.ResetAll"}}" {{#unless editable}}disabled{{/unless}}><i class="{{sbIcon 'reset'}}"></i></button>
+            <button type="button" class="sb-btn sb-btn-micro {{#if header.pinPools}}sb-btn-default{{else}}sb-btn-outline{{/if}}" data-action="pin-pools"><i class="{{#if header.pinPools}}{{sbIcon 'pinOff'}}{{else}}{{sbIcon 'pin'}}{{/if}}"></i> {{localize "SHADOWBASE.Sheet.Pools.PinPools"}}</button>
+          </div>
+        </div>
+        <div class="sb-grid-3">
+          {{#each pools}}{{> "shadowbase.pool" pool=this compact=false editable=@root.editable pinned=@root.header.pinPools}}{{/each}}
+        </div>
+      </div>
+    </details>
+
+    {{!-- I4 Combat State (resource-trackers.tsx:344-667) --}}
+    <details class="sb-section sb-combat-state" data-section="combat-state" open>
+      {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Info.CombatState") icon=(sbIcon "Timer") chip="combat-damage" chipTitle=(lookup chips "combat-damage") meta=""}}
+      <div class="sb-section__body" data-accordion-body>
+        <div class="sb-grid-3">
+          {{#> "shadowbase.field" id="turnCounter" label=(localize "SHADOWBASE.Sheet.Combat.TurnCounter") cls=""}}
+            <div class="sb-field__control sb-turn-controls">
+              <span class="sb-lead-icon sb-icon-accent"><i class="{{sbIcon 'turn'}}"></i></span>
+              <button type="button" class="sb-btn sb-btn-outline sb-btn-icon sb-btn-sm" data-action="adjust-turn" data-delta="-1" title="{{localize "SHADOWBASE.Sheet.Combat.TurnBack"}}" aria-label="{{localize "SHADOWBASE.Sheet.Combat.TurnBack"}}" {{#unless editable}}disabled{{/unless}}><i class="{{sbIcon 'minus'}}"></i></button>
+              {{> "shadowbase.qty" id="turnCounter" name="system.turnCounter" value=info.combat.turnCounter placeholder="0" min="" max="" step="1" dtype="Number" disabled=(not editable) cls="sb-qty--dense" label=(localize "SHADOWBASE.Sheet.Combat.TurnCounter")}}
+              <button type="button" class="sb-btn sb-btn-outline sb-btn-icon sb-btn-sm" data-action="adjust-turn" data-delta="1" title="{{localize "SHADOWBASE.Sheet.Combat.TurnForward"}}" aria-label="{{localize "SHADOWBASE.Sheet.Combat.TurnForward"}}" {{#unless editable}}disabled{{/unless}}><i class="{{sbIcon 'plus'}}"></i></button>
+              <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-btn-sm" data-action="reset-turn" title="{{localize "SHADOWBASE.Sheet.Combat.TurnReset"}}" aria-label="{{localize "SHADOWBASE.Sheet.Combat.TurnReset"}}" {{#unless editable}}disabled{{/unless}}><i class="{{sbIcon 'reset'}}"></i></button>
+            </div>
+            <button type="button" class="sb-btn sb-btn-outline sb-btn-xs sb-btn-dashed" data-action="sweep-turn" title="{{localize "SHADOWBASE.Sheet.Combat.SweepHint"}}" {{#unless editable}}disabled{{/unless}}><i class="{{sbIcon 'RefreshCw'}}"></i> {{localize "SHADOWBASE.Sheet.Combat.SweepNow"}}</button>
+          {{/shadowbase.field}}
+          {{#> "shadowbase.field" id="stunType" label=(localize "SHADOWBASE.Sheet.Combat.Stunned") cls=""}}
+            <div class="sb-field__control">
+              <span class="sb-lead-icon {{#if info.combat.stunned}}sb-icon-destructive{{else}}sb-icon-muted{{/if}}"><i class="{{sbIcon 'stun'}}"></i></span>
+              <select id="stunType" name="system.stunType" class="sb-select" {{#unless editable}}disabled{{/unless}}>
+                {{#each info.combat.stunOptions}}<option value="{{value}}" {{#if (eq value @root.info.combat.stunType)}}selected{{/if}}>{{label}}</option>{{/each}}
+              </select>
+            </div>
+            {{#if info.combat.stunned}}<p class="sb-stun-note">{{info.combat.stunNote}}</p>{{/if}}
+          {{/shadowbase.field}}
+          {{!-- Ch9 Change Posture (resource-trackers.tsx) --}}
+          {{#> "shadowbase.field" id="posture" label=(localize "SHADOWBASE.Sheet.Combat.Posture") cls=""}}
+            <div class="sb-field__control">
+              <span class="sb-lead-icon {{#if info.combat.posture.active}}sb-icon-accent{{else}}sb-icon-muted{{/if}}"><i class="{{sbIcon 'posture'}}"></i></span>
+              <select id="posture" name="system.posture" class="sb-select" {{#unless editable}}disabled{{/unless}}>
+                {{#each info.combat.posture.options}}<option value="{{value}}" {{#if (eq value @root.info.combat.posture.value)}}selected{{/if}}>{{label}}</option>{{/each}}
+              </select>
+            </div>
+            {{#if info.combat.posture.effectText}}<p class="sb-field-note{{#unless info.combat.posture.applied}} sb-text-muted{{/unless}}">{{info.combat.posture.effectText}}</p>{{/if}}
+            {{#if info.combat.posture.note}}<p class="sb-field-note sb-text-muted">{{info.combat.posture.note}}</p>{{/if}}
+          {{/shadowbase.field}}
+          {{!-- Ch9 elevation (hidden when the Track Elevation preference is off; value kept either way) --}}
+          {{#if info.combat.elevation.show}}
+          {{#> "shadowbase.field" id="elevation" label=(localize "SHADOWBASE.Sheet.Combat.Elevation") cls=""}}
+            {{> "shadowbase.qty" id="elevation" name="system.elevation" value=info.combat.elevation.value placeholder="0" min="" max="" step="1" dtype="Number" disabled=(not editable) cls="sb-qty--dense" label=(localize "SHADOWBASE.Sheet.Combat.Elevation")}}
+          {{/shadowbase.field}}
+          {{/if}}
+          {{#> "shadowbase.field" id="activeEffects" label=(localize "SHADOWBASE.Sheet.Combat.ActiveEffects") cls=""}}
+            <div class="sb-field__control">
+              <span class="sb-lead-icon {{#if info.combat.effectCount}}sb-icon-accent{{else}}sb-icon-muted{{/if}}"><i class="{{sbIcon 'effect'}}"></i></span>
+              <button type="button" id="activeEffects" class="sb-effects-btn {{#if info.combat.effectCount}}sb-effects-btn--on{{/if}}" data-action="open-effects" title="{{localize "SHADOWBASE.Sheet.Combat.OpenEffects"}}">
+                <span>{{info.combat.effectsText}}</span>
+                <span class="sb-effects-btn__right">{{#if info.combat.effectCount}}<span class="sb-pill">{{info.combat.effectCount}}</span>{{/if}}<i class="{{sbIcon 'chevronRight'}} sb-text-muted"></i></span>
+              </button>
+            </div>
+          {{/shadowbase.field}}
+        </div>
+
+        {{!-- Ch7 Facing, as its own full-width band (resource-trackers.tsx:469-667) --}}
+        <div class="sb-facing-band">
+          <div class="sb-field" data-sheet-row>
+            <span class="sb-field__label">{{info.combat.facing.label}}</span>
+            <div class="sb-facing-row">
+              {{> "shadowbase.facing-hex" hex=info.combat.facing.hex editable=editable}}
+              <div class="sb-facing-controls">
+                <div class="sb-facing__compass {{#if info.combat.facing.engaged}}sb-facing__compass--{{info.combat.facing.arcTone}}{{/if}}">
+                  <i class="{{sbIcon 'facing'}}"></i>
+                  <span class="sb-facing__caption">{{localize "SHADOWBASE.Sheet.Facing.YouFace" n=info.combat.facing.youFace}}{{#if info.combat.facing.engaged}} · {{localize "SHADOWBASE.Sheet.Facing.Threat" n=info.combat.facing.threat}}{{#if info.combat.facing.othersCount}} +{{info.combat.facing.othersCount}}{{/if}}{{/if}}</span>
+                </div>
+                <button type="button" class="sb-btn sb-btn-sm {{#if info.combat.facing.engaged}}sb-btn-secondary{{else}}sb-btn-outline{{/if}}" data-action="toggle-engaged" aria-pressed="{{#if info.combat.facing.engaged}}true{{else}}false{{/if}}" {{#unless editable}}disabled{{/unless}}>
+                  <i class="{{#if info.combat.facing.engaged}}{{sbIcon 'standDown'}}{{else}}{{sbIcon 'engage'}}{{/if}}"></i> {{#if info.combat.facing.engaged}}{{localize "SHADOWBASE.Sheet.Facing.StandDown"}}{{else}}{{localize "SHADOWBASE.Sheet.Facing.Engage"}}{{/if}}
+                </button>
+                <button type="button" class="sb-btn sb-btn-sm {{#if info.combat.facing.facingSpent}}sb-btn-ghost{{else}}sb-btn-outline{{/if}}" data-action="turn-to-face" {{#if info.combat.facing.turnDisabled}}disabled{{/if}} {{#unless editable}}disabled{{/unless}}>{{info.combat.facing.turnLabel}}</button>
+                <span class="sb-facing__free {{#if info.combat.facing.facingSpent}}sb-facing__free--spent{{/if}}">{{info.combat.facing.freeText}}</span>
+              </div>
+              <div class="sb-facing__explain">
+                {{#if info.combat.facing.engaged}}
+                  <p>{{info.combat.facing.describeArc}}</p>
+                  {{#if info.combat.facing.lostText}}<p class="{{#if info.combat.facing.flanked}}sb-text-destructive{{else}}sb-text-amber{{/if}}">{{info.combat.facing.lostText}}</p>{{/if}}
+                  {{#if info.combat.facing.flanked}}<p class="sb-text-destructive">{{localize "SHADOWBASE.Sheet.Facing.Flanked"}}</p>{{/if}}
+                  {{#unless info.combat.facing.canEngage}}<p class="sb-text-amber">{{localize "SHADOWBASE.Sheet.Facing.CannotAttack"}}</p>{{/unless}}
+                  {{#if info.combat.facing.othersCount}}
+                    <p class="sb-facing__others">{{localize "SHADOWBASE.Sheet.Facing.AlsoEngaged"}} {{#each info.combat.facing.othersList}}{{#if @index}}, {{/if}}<b class="{{tone}}">{{label}} ({{arc}})</b>{{/each}}. {{localize "SHADOWBASE.Sheet.Facing.ClickToDefend"}}</p>
+                  {{/if}}
+                {{else}}
+                  <p>{{localize "SHADOWBASE.Sheet.Facing.IdleExplain"}}</p>
+                {{/if}}
+                {{#if info.combat.facing.describeVision}}<p class="sb-text-primary">{{info.combat.facing.describeVision}}</p>{{/if}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    {{!-- I5 Force Alignment (basic-info-section.tsx:327-443) --}}
+    <details class="sb-section" data-section="force-alignment" open>
+      {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Info.ForceAlignment") icon=(sbIcon "Sun") chip="force-alignment-forms" chipTitle=(lookup chips "force-alignment-forms") meta=""}}
+      <div class="sb-section__body" data-accordion-body>
+        <div class="sb-alignment">
+          <div class="sb-alignment__track sb-slider">
+            <input type="range" class="sb-alignment-spectrum" min="-100" max="100" step="1" value="{{info.alignment.value}}" data-alignment-range aria-label="{{localize "SHADOWBASE.Sheet.Info.ForceAlignment"}}" {{#unless editable}}disabled{{/unless}}>
+            <span class="sb-alignment__zero"></span>
+          </div>
+          <div class="sb-alignment__ends">
+            <span class="sb-alignment__dark"><i class="{{sbIcon 'darkSide'}}"></i> {{localize "SHADOWBASE.Sheet.Align.DarkSide"}}</span>
+            <span class="sb-alignment__value">
+              <input type="number" name="system.forceAlignment" value="{{info.alignment.value}}" min="-100" max="100" step="1" data-dtype="Number" data-alignment-value aria-label="{{localize "SHADOWBASE.Sheet.Align.ValueAria"}}" {{#unless editable}}disabled{{/unless}}>
+            </span>
+            <span class="sb-alignment__light">{{localize "SHADOWBASE.Sheet.Align.LightSide"}} <i class="{{sbIcon 'lightSide'}}"></i></span>
+          </div>
+          {{#if info.alignment.tier}}
+            <div class="sb-stack-05">
+              <p class="sb-alignment__tier {{#if info.alignment.isDark}}sb-alignment__tier--dark{{else}}sb-alignment__tier--light{{/if}}">{{info.alignment.label}}</p>
+              <p class="sb-alignment__note"><b>{{localize "SHADOWBASE.Sheet.Align.SelfMastery"}}</b> {{localize "SHADOWBASE.Sheet.Align.SelfMasteryText" mod=info.alignment.selfControl}}</p>
+              <p class="sb-alignment__note"><b>{{localize "SHADOWBASE.Sheet.Align.Bearing"}}</b> {{localize "SHADOWBASE.Sheet.Align.BearingText" intimidation=info.alignment.intimidation trust=info.alignment.trust}}</p>
+            </div>
+          {{else}}
+            <p class="sb-alignment__note sb-alignment__note--italic">{{localize "SHADOWBASE.Sheet.Align.Unaligned" threshold=info.alignment.threshold}}</p>
+          {{/if}}
+          {{#if info.alignment.reaction.show}}
+            <div class="sb-stack-05">
+              <p class="sb-alignment__reaction">{{localize "SHADOWBASE.Sheet.Align.ReactionModifier" mod=info.alignment.reaction.faceToFace}}</p>
+              <p class="sb-alignment__tiny">{{localize "SHADOWBASE.Sheet.Align.ReactionWhat"}}</p>
+              {{#if info.alignment.reaction.hasSources}}<p class="sb-alignment__note"><span class="sb-text-muted">{{localize "SHADOWBASE.Sheet.Align.From"}} </span>{{info.alignment.reaction.sources}}</p>{{/if}}
+              {{#each info.alignment.reaction.spheres}}<p class="sb-alignment__note">{{localize "SHADOWBASE.Sheet.Align.Within"}} <b>{{name}}</b>: {{net}}</p>{{/each}}
+              {{#if info.alignment.reaction.perception}}<p class="sb-alignment__note">{{localize "SHADOWBASE.Sheet.Align.Perception" heard=info.alignment.reaction.heardOnly seen=info.alignment.reaction.seenOnly}}</p>{{/if}}
+              {{#if info.alignment.reaction.hasUnresolved}}<p class="sb-alignment__note sb-alignment__note--italic">{{localize "SHADOWBASE.Sheet.Align.NotCounted" list=info.alignment.reaction.unresolved}}</p>{{/if}}
+              <p class="sb-alignment__tiny sb-italic">{{localize "SHADOWBASE.Sheet.Align.NotApplied"}}</p>
+            </div>
+          {{/if}}
+        </div>
+      </div>
+    </details>
+</div>

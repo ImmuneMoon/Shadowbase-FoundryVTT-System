@@ -1,0 +1,42 @@
+{
+  "_id": "xo2UxzDDLGJChrOr",
+  "_key": "!items!xo2UxzDDLGJChrOr",
+  "name": "Jetpack Fuel",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "mTXYblXUqFOk3xNT",
+  "sort": 8300000,
+  "system": {
+    "row": {
+      "name": "Jetpack Fuel",
+      "rarity": "Common",
+      "cost": 217,
+      "density": 45,
+      "category": "Raw Materials",
+      "subCategory": "Chemical",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Highly volatile, compressed gas mixture optimized for personal flight systems. Can be dispensed to a Jetpack Fuel Tank directly, or into a Chemical Storage Vessel. Kinetic Breach (Pierced/Slashed): The highly pressurized gas violently vents. If the jetpack is currently being worn, the sudden, asymmetrical thrust throws the user out of control. The wearer must make an immediate DX-4 or Piloting (Flight Pack)-4 roll. On a failure, they are thrown 1d yards in a random direction and knocked prone, taking 1d crushing damage from the impact. The jetpack is rendered useless. Ignition / Energy Breach (Shot by Blaster): The volatile flight gas detonates. Damage: Deals 4d crushing explosive (cr ex) and 2d burning (burn) damage directly to the wearer. Area Effect: The explosion affects a 3-yard radius. Standard explosion fall-off rules apply for collateral damage.",
+      "id": "e5385060-1efc-4a4b-bbfe-517b28887756",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Jetpack Fuel"
+    }
+  }
+}

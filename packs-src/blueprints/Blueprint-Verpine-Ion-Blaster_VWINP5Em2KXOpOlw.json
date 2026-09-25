@@ -1,0 +1,42 @@
+{
+  "_id": "VWINP5Em2KXOpOlw",
+  "_key": "!items!VWINP5Em2KXOpOlw",
+  "name": "Blueprint: Verpine Ion Blaster",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "lJCUDV7zwgRAU1yY",
+  "sort": 45800000,
+  "system": {
+    "row": {
+      "id": "a797cc32-04b7-42ff-b88e-3488e8629e72",
+      "name": "Blueprint: Verpine Ion Blaster",
+      "cost": 334,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Verpine Ion Blaster (Generation 0, proven, encoded, catalog design). Required to build Verpine Ion Blaster; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Verpine Ion Blaster",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1595,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Specialized Pistols|Verpine Ion Blaster"
+    }
+  }
+}

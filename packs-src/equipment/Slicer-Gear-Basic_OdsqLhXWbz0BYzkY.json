@@ -1,0 +1,55 @@
+{
+  "_id": "OdsqLhXWbz0BYzkY",
+  "_key": "!items!OdsqLhXWbz0BYzkY",
+  "name": "Slicer Gear (Basic)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "cK2OmLlfEjsr72q3",
+  "sort": 10800000,
+  "system": {
+    "row": {
+      "name": "Slicer Gear (Basic)",
+      "cost": 1800,
+      "skill": "Slicing or Electronics Operation (Security)",
+      "description": "A customized datapad with illicit interface cables. Counts as 'Good' quality gear, granting a +1 equipment bonus to Slicing and Electronics Operation (Security) rolls. Attempting to bypass electronic security takes 1d minutes. Critical Failure: Triggers a system lockout or active alarm, and may wipe the datapad. Attempting to slice without any gear inflicts a -5 penalty. Power Cell lasts 24 hours of continuous use.",
+      "category": "Tools & Electronics",
+      "subCategory": "Non-Consumable Tools",
+      "weight": 3,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Silicon",
+          "amount": 1.3
+        },
+        {
+          "name": "Durasteel",
+          "amount": 1
+        },
+        {
+          "name": "Power Cell",
+          "amount": 0.7
+        }
+      ],
+      "id": "151e8154-07a2-48a7-b5e1-b3e72dc8874e",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Slicer Gear (Basic)"
+    }
+  }
+}

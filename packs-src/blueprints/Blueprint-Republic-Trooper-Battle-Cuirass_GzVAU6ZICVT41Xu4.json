@@ -1,0 +1,42 @@
+{
+  "_id": "GzVAU6ZICVT41Xu4",
+  "_key": "!items!GzVAU6ZICVT41Xu4",
+  "name": "Blueprint: Republic Trooper Battle Cuirass",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 8500000,
+  "system": {
+    "row": {
+      "id": "5eb08a63-75c6-494e-bdc5-8715b28296ff",
+      "name": "Blueprint: Republic Trooper Battle Cuirass",
+      "cost": 281,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Republic Trooper Battle Cuirass (Generation 0, proven, encoded, catalog design). Required to build Republic Trooper Battle Cuirass; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Republic Trooper Battle Cuirass",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1066,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Republic Trooper Battle Cuirass"
+    }
+  }
+}

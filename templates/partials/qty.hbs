@@ -1,0 +1,13 @@
+{{!-- shadowbase.qty - the website's QuantityInput (src/components/ui/quantity-input.tsx): a number field with the
+     step arrows in their own column beside the digits (never over them). Params, all required:
+       id, name, value, placeholder, min, max, step (strings; '' when unused), dtype ('Number' or ''),
+       disabled (bool), cls (wrapper modifier: '' | 'sb-qty--dense' | 'sb-qty--short'), label (aria-label text). --}}
+<div class="sb-qty {{cls}}">
+  <input type="number" id="{{id}}" name="{{name}}" value="{{value}}" placeholder="{{placeholder}}" step="{{#if step}}{{step}}{{else}}1{{/if}}"
+    {{#unless (sbIsNull min)}}min="{{min}}"{{/unless}} {{#unless (sbIsNull max)}}max="{{max}}"{{/unless}}
+    {{#if dtype}}data-dtype="{{dtype}}"{{/if}} {{#if disabled}}disabled{{/if}} aria-label="{{label}}">
+  <div class="sb-qty__arrows">
+    <button type="button" class="sb-qty__arrow" tabindex="-1" data-action="step-number" data-dir="1" aria-label="{{localize "SHADOWBASE.Sheet.Qty.Increase"}}" {{#if disabled}}disabled{{/if}}><i class="{{sbIcon 'chevronUp'}}"></i></button>
+    <button type="button" class="sb-qty__arrow" tabindex="-1" data-action="step-number" data-dir="-1" aria-label="{{localize "SHADOWBASE.Sheet.Qty.Decrease"}}" {{#if disabled}}disabled{{/if}}><i class="{{sbIcon 'chevronDown'}}"></i></button>
+  </div>
+</div>

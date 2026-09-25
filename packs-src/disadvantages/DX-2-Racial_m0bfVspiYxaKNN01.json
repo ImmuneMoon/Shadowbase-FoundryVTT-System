@@ -1,0 +1,34 @@
+{
+  "_id": "m0bfVspiYxaKNN01",
+  "_key": "!items!m0bfVspiYxaKNN01",
+  "name": "DX -2 (Racial)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "XWDBqE5xIGYEuyLo",
+  "sort": 1300000,
+  "system": {
+    "row": {
+      "name": "DX -2 (Racial)",
+      "points": 0,
+      "level": null,
+      "description": "Species-based coordination.",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "DX -2 (Racial)|Racial"
+    }
+  }
+}

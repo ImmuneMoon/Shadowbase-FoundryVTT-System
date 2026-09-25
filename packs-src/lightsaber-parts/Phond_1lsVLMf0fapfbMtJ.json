@@ -1,0 +1,45 @@
+{
+  "_id": "1lsVLMf0fapfbMtJ",
+  "_key": "!items!1lsVLMf0fapfbMtJ",
+  "name": "Phond",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "CHP7xje9NHnZhKqb",
+  "sort": 8200000,
+  "system": {
+    "row": {
+      "id": "19c3a8cb-8a84-40b1-a420-d596fa20e415",
+      "name": "Phond",
+      "cost": 2000,
+      "weight": 0.2,
+      "damageDice": 1,
+      "effect": "+1d damage.",
+      "category": "Lightsaber Power Crystal",
+      "materials": [
+        {
+          "name": "Phrik",
+          "amount": 0.2
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "+1d damage."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:phond-pwr"
+    }
+  }
+}

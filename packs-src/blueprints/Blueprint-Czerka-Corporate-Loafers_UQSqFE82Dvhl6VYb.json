@@ -1,0 +1,42 @@
+{
+  "_id": "UQSqFE82Dvhl6VYb",
+  "_key": "!items!UQSqFE82Dvhl6VYb",
+  "name": "Blueprint: Czerka Corporate Loafers",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 15300000,
+  "system": {
+    "row": {
+      "id": "13650fe8-9086-4415-843c-d7474c92dd9d",
+      "name": "Blueprint: Czerka Corporate Loafers",
+      "cost": 180,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Czerka Corporate Loafers (Generation 0, proven, encoded, catalog design). Required to build Czerka Corporate Loafers; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Czerka Corporate Loafers",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 53,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Czerka Corporate Loafers"
+    }
+  }
+}

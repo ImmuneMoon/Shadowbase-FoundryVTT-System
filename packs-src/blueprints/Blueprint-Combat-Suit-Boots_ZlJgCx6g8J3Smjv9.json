@@ -1,0 +1,42 @@
+{
+  "_id": "ZlJgCx6g8J3Smjv9",
+  "_key": "!items!ZlJgCx6g8J3Smjv9",
+  "name": "Blueprint: Combat Suit Boots",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 5700000,
+  "system": {
+    "row": {
+      "id": "69800638-a309-4076-a908-6a38aa7825a2",
+      "name": "Blueprint: Combat Suit Boots",
+      "cost": 192,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Combat Suit Boots (Generation 0, proven, encoded, catalog design). Required to build Combat Suit Boots; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Combat Suit Boots",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 179,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Combat Suit Boots"
+    }
+  }
+}

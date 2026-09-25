@@ -1,0 +1,34 @@
+{
+  "_id": "taMrcfJdaJLLe4in",
+  "_key": "!items!taMrcfJdaJLLe4in",
+  "name": "Code of Honor (Strict Neutrality)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 9100000,
+  "system": {
+    "row": {
+      "name": "Code of Honor (Strict Neutrality)",
+      "points": -10,
+      "level": null,
+      "description": "Non-aligned. You rigidly refuse to take sides in conflicts, which can isolate you or force inaction during critical moments.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Code of Honor (Strict Neutrality)|Mental"
+    }
+  }
+}

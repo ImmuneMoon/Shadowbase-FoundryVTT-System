@@ -1,0 +1,19 @@
+{
+  "_id": "Sh8yC8SuR7f77FkG",
+  "_key": "!folders!Sh8yC8SuR7f77FkG",
+  "name": "General Equipment",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 900000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "path": [
+        "General Equipment"
+      ]
+    }
+  }
+}

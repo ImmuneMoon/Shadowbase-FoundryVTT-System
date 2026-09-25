@@ -1,0 +1,42 @@
+{
+  "_id": "sg4eCR81JUYSEDlR",
+  "_key": "!items!sg4eCR81JUYSEDlR",
+  "name": "Cortosis",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "kfQydMv29Z6e9EC4",
+  "sort": 3900000,
+  "system": {
+    "row": {
+      "name": "Cortosis",
+      "rarity": "Ultra Rare",
+      "cost": 7500,
+      "density": 300,
+      "category": "Raw Materials",
+      "subCategory": "Precious",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A rare, valuable metal that has the unique ability to absorb and resist energy, allowing it to directly short out lightsabers or block blaster fire.",
+      "id": "22692489-3072-4ae6-a5e8-34f04c5a0a9d",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Cortosis"
+    }
+  }
+}

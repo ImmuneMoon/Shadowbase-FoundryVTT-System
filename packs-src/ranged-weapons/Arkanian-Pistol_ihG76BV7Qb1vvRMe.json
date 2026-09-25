@@ -1,0 +1,211 @@
+{
+  "_id": "ihG76BV7Qb1vvRMe",
+  "_key": "!items!ihG76BV7Qb1vvRMe",
+  "name": "Arkanian Pistol",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "GZba6tawSH3GFse4",
+  "sort": 300000,
+  "system": {
+    "row": {
+      "id": "45005b5a-ac2c-42af-914a-64da1d6a63d3",
+      "customName": "Arkanian Pistol",
+      "baseType": "Arkanian Pistol",
+      "baseSkill": "Guns (Blaster Pistol)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 2.7,
+      "finalWeight": 2.7,
+      "baseCost": 363,
+      "finalCost": 2178,
+      "currentCharges": 50,
+      "maxCharges": 50,
+      "loadedAmmunitionId": "82ccb927-f3d8-4a7d-8005-8c6ce13294e8",
+      "loadedAmmunitionData": {
+        "id": "82ccb927-f3d8-4a7d-8005-8c6ce13294e8",
+        "name": "Standard Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "pistol-grip",
+        "inventoryId": "1572f81c-73fd-4b06-a2ed-0275514ffeee",
+        "materialId": "duraplast"
+      },
+      "receiverPart": {
+        "partId": "precision-receiver",
+        "inventoryId": "63a3797b-22a8-4b1b-9e41-2fe854ff1ad6",
+        "materialId": "duraplast"
+      },
+      "barrelPart": {
+        "partId": "long-emitter",
+        "inventoryId": "5f524842-e683-42ce-a84d-b2ca924f99eb",
+        "materialId": "duraplast"
+      },
+      "targetingPart": {
+        "partId": "precision-targeting",
+        "inventoryId": "bd920a28-3be3-4438-b4e2-42bccb007097"
+      },
+      "powerUnitPart": {
+        "partId": "standard-pwr-pack",
+        "inventoryId": "34448e89-6328-4cde-a8d9-f09a32f43fa4"
+      },
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "45005b5a-ac2c-42af-914a-64da1d6a63d3",
+        "customName": "Arkanian Pistol",
+        "baseType": "Arkanian Pistol",
+        "baseSkill": "Guns (Blaster Pistol)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 2.7,
+        "finalWeight": 2.7,
+        "baseCost": 363,
+        "finalCost": 2178,
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "loadedAmmunitionId": "82ccb927-f3d8-4a7d-8005-8c6ce13294e8",
+        "loadedAmmunitionData": {
+          "id": "82ccb927-f3d8-4a7d-8005-8c6ce13294e8",
+          "name": "Standard Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 50,
+          "maxCharges": 50,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "pistol-grip",
+          "inventoryId": "1572f81c-73fd-4b06-a2ed-0275514ffeee",
+          "materialId": "duraplast"
+        },
+        "receiverPart": {
+          "partId": "precision-receiver",
+          "inventoryId": "63a3797b-22a8-4b1b-9e41-2fe854ff1ad6",
+          "materialId": "duraplast"
+        },
+        "barrelPart": {
+          "partId": "long-emitter",
+          "inventoryId": "5f524842-e683-42ce-a84d-b2ca924f99eb",
+          "materialId": "duraplast"
+        },
+        "targetingPart": {
+          "partId": "precision-targeting",
+          "inventoryId": "bd920a28-3be3-4438-b4e2-42bccb007097"
+        },
+        "powerUnitPart": {
+          "partId": "standard-pwr-pack",
+          "inventoryId": "34448e89-6328-4cde-a8d9-f09a32f43fa4"
+        },
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "1572f81c-73fd-4b06-a2ed-0275514ffeee",
+          "name": "Pistol Grip",
+          "partId": "pistol-grip",
+          "category": "Ranged Grip",
+          "materialId": "duraplast",
+          "cost": 38,
+          "weight": 0.19,
+          "isInstalled": true,
+          "installedInBlasterId": "45005b5a-ac2c-42af-914a-64da1d6a63d3",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard 1-handed grip."
+        },
+        {
+          "id": "63a3797b-22a8-4b1b-9e41-2fe854ff1ad6",
+          "name": "Precision Receiver",
+          "partId": "precision-receiver",
+          "category": "Ranged Receiver",
+          "materialId": "duraplast",
+          "cost": 28,
+          "weight": 0.143,
+          "isInstalled": true,
+          "installedInBlasterId": "45005b5a-ac2c-42af-914a-64da1d6a63d3",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Highly calibrated action."
+        },
+        {
+          "id": "5f524842-e683-42ce-a84d-b2ca924f99eb",
+          "name": "Long Emitter",
+          "partId": "long-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "duraplast",
+          "cost": 76,
+          "weight": 0.38,
+          "isInstalled": true,
+          "installedInBlasterId": "45005b5a-ac2c-42af-914a-64da1d6a63d3",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "bd920a28-3be3-4438-b4e2-42bccb007097",
+          "name": "Precision Targeting Module",
+          "partId": "precision-targeting",
+          "category": "Ranged Targeting",
+          "cost": 116,
+          "weight": 1.5,
+          "isInstalled": true,
+          "installedInBlasterId": "45005b5a-ac2c-42af-914a-64da1d6a63d3",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Sniper and specialized assassin optics."
+        },
+        {
+          "id": "34448e89-6328-4cde-a8d9-f09a32f43fa4",
+          "name": "Standard Power Pack",
+          "partId": "standard-pwr-pack",
+          "category": "Power Unit",
+          "cost": 105,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "45005b5a-ac2c-42af-914a-64da1d6a63d3",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Arkanian Pistol"
+    }
+  }
+}

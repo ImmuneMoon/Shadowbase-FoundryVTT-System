@@ -1,0 +1,46 @@
+{
+  "_id": "wyBMyoA5PlYMUBtq",
+  "_key": "!items!wyBMyoA5PlYMUBtq",
+  "name": "Durasteel Grenade Launch Tube",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "fqyMKj3bXsbnJOuN",
+  "sort": 4900000,
+  "system": {
+    "row": {
+      "id": "cc599fc8-7325-4ddd-9f47-7c3f4f7465c2",
+      "name": "Durasteel Grenade Launch Tube",
+      "category": "Ranged Barrel",
+      "cost": 124,
+      "weight": 2.45,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "grenade-tube",
+      "materialId": "durasteel",
+      "notes": "",
+      "effect": "",
+      "energyResBonus": 0,
+      "volume": 0.005,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "grenade-tube"
+    }
+  }
+}

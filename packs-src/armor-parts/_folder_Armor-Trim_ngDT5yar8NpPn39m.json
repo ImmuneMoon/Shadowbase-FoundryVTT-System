@@ -1,0 +1,19 @@
+{
+  "_id": "ngDT5yar8NpPn39m",
+  "_key": "!folders!ngDT5yar8NpPn39m",
+  "name": "Armor Trim",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 400000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "path": [
+        "Armor Trim"
+      ]
+    }
+  }
+}

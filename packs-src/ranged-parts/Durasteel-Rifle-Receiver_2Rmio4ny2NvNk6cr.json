@@ -1,0 +1,46 @@
+{
+  "_id": "2Rmio4ny2NvNk6cr",
+  "_key": "!items!2Rmio4ny2NvNk6cr",
+  "name": "Durasteel Rifle Receiver",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "aClHr8Ajc0gX0rPo",
+  "sort": 2200000,
+  "system": {
+    "row": {
+      "id": "3e7f5582-d80f-452b-95d9-49048bc2bb4b",
+      "name": "Durasteel Rifle Receiver",
+      "category": "Ranged Receiver",
+      "cost": 124,
+      "weight": 2.45,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "rifle-receiver",
+      "materialId": "durasteel",
+      "notes": "Infantry-grade cycling.",
+      "effect": "Infantry-grade cycling.",
+      "energyResBonus": 0,
+      "volume": 0.005,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "rifle-receiver"
+    }
+  }
+}

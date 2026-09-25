@@ -1,0 +1,51 @@
+{
+  "_id": "3YO5D3xz2BjHSN2i",
+  "_key": "!items!3YO5D3xz2BjHSN2i",
+  "name": "Imbue Sith Talisman",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "joTOdeYSoLzidovy",
+  "sort": 3300000,
+  "system": {
+    "row": {
+      "name": "Imbue Sith Talisman",
+      "level": 1,
+      "cpCost": 60,
+      "fpCost": 50,
+      "effect": "Item gains +10 DR, +20 HP, and +1 to +3 to a specific Force skill. Creation time: 1d days. Permanent cost: 1 max FP.",
+      "characterTier": "Master",
+      "baseSkill": "Sith Alchemy (IQ/Hard)",
+      "category": "Sith Sorcery/Alchemy",
+      "alignment": "DS",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Imbue Sith Talisman",
+        "description": "Permanently infuses an object with dark side energy. Creating such an artifact permanently drains 1 point of maximum FP from the caster.",
+        "category": "Sith Sorcery/Alchemy",
+        "level": 1,
+        "cpCost": 60,
+        "fpCost": 50,
+        "alignment": "DS",
+        "baseSkill": "Sith Alchemy (IQ/Hard)",
+        "characterTier": "Master",
+        "effect": "Item gains +10 DR, +20 HP, and +1 to +3 to a specific Force skill. Creation time: 1d days. Permanent cost: 1 max FP."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Imbue Sith Talisman"
+    }
+  }
+}

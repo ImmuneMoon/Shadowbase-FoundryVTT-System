@@ -1,0 +1,42 @@
+{
+  "_id": "LHq8u9BQihyVBWEq",
+  "_key": "!items!LHq8u9BQihyVBWEq",
+  "name": "Blueprint: Droid Memory Core",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JF5Ffca1GjopsdXr",
+  "sort": 27300000,
+  "system": {
+    "row": {
+      "id": "fe5b7d90-d679-405b-9e75-73bcb115ec11",
+      "name": "Blueprint: Droid Memory Core",
+      "cost": 210,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Droid Memory Core (Generation 0, proven, encoded, catalog design). Required to build Droid Memory Core; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Droid Memory Core",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 357.5,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Processor|Droid Memory Core"
+    }
+  }
+}

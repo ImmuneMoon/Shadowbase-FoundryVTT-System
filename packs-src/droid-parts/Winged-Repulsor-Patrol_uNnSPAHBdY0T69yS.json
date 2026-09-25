@@ -1,0 +1,39 @@
+{
+  "_id": "uNnSPAHBdY0T69yS",
+  "_key": "!items!uNnSPAHBdY0T69yS",
+  "name": "Winged Repulsor (Patrol)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "HHtVhUGlED7Z8T7J",
+  "sort": 6500000,
+  "system": {
+    "row": {
+      "id": "ba50c5ef-b2fd-4ce7-8e3f-c31c67d38f1e",
+      "name": "Winged Repulsor (Patrol)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Motive Mount",
+      "cost": 3940,
+      "weight": 20,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "wing-repulsor",
+      "description": "Flight (Low Ceiling), Lifting ST +1"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "wing-repulsor"
+    }
+  }
+}

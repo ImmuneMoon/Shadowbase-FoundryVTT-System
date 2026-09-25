@@ -1,0 +1,105 @@
+{{!-- templates/apps/body-loadout.hbs - Load-Out by Location (body-loadout-panel.tsx:376-707): the Deflector Field strip,
+     the belt energy shields, one row per hit location (worn chips, held chips with their limb pins, the wear / ready
+     pickers, the derived-DR line), the worn-on-the-body group, the unplaced warnings, the set bonuses. Pickers are
+     selects bound `loadout.wear.<locationId>` / `loadout.ready.<locationId>` (a change acts at once); pins are
+     checkboxes `loadout.pin.<weaponId>.<locationId>`. Context: BodyLoadout#_prepareContext (`loadout`). --}}
+<section class="sb-app__body sb-loadout" data-app="body-loadout">
+{{#if engineOk}}
+{{#with loadout}}
+  <div class="sb-hrow sb-hrow--between sb-loadout__head">
+    <p class="sb-muted-p">{{localize "SHADOWBASE.Apps.Loadout.Hint"}}</p>
+    <span class="sb-text-10 sb-text-mono sb-text-muted">{{localize "SHADOWBASE.Apps.Loadout.Meta" readied=readiedCount free=freeHands hands=handCount}}</span>
+  </div>
+
+  {{#if deflector}}
+  <div class="sb-loadout__deflector">
+    <div class="sb-hrow sb-hrow--between">
+      <span class="sb-hrow sb-hrow--tight">
+        <i class="fa-solid fa-bolt {{#if deflector.active}}is-on{{/if}}"></i>
+        <span class="sb-loadout__deflector-title">{{localize "SHADOWBASE.Apps.Loadout.DeflectorField"}}</span>
+        <span class="sb-badge sb-badge-outline sb-loadout__blue">DR {{deflector.current}}/{{deflector.max}} {{localize "SHADOWBASE.Apps.Loadout.VsEnergy"}}</span>
+        {{#if deflector.conditionBad}}<span class="sb-badge sb-badge-destructive sb-caps sb-text-10">{{localize "SHADOWBASE.Apps.Loadout.EmitterLabel"}} {{deflector.condition}}</span>{{/if}}
+      </span>
+      <button type="button" class="sb-btn sb-btn-sm {{#if deflector.switched}}sb-btn-default is-blue{{else}}sb-btn-outline sb-loadout__blue{{/if}}" data-action="toggle-shield" {{disabled (not editable)}}><i class="fa-solid fa-bolt"></i> {{#if deflector.switched}}{{localize "SHADOWBASE.Apps.Loadout.Active"}}{{else}}{{localize "SHADOWBASE.Apps.Loadout.Ignite"}}{{/if}}</button>
+    </div>
+    <p class="sb-muted-p">{{localize "SHADOWBASE.Apps.Loadout.DeflectorNote" max=deflector.max drain=deflector.drain}}{{#if deflector.hasPp}} {{localize "SHADOWBASE.Apps.Loadout.MinutesLeft" minutes=deflector.minutesLeft}}{{/if}}</p>
+    {{#if deflector.collapsedLine}}<p class="sb-loadout__collapsed">{{deflector.collapsedLine}}</p>{{/if}}
+    <div class="sb-hrow sb-loadout__deflector-controls">
+      <label class="sb-loadout__wear"><span class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Loadout.FieldWear"}}</span><input type="number" class="sb-input" name="loadout.shieldCurrentDr" data-dtype="Number" min="0" max="{{deflector.max}}" step="1" value="{{deflector.wear}}" {{disabled (not editable)}}></label>
+      <div><span class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Loadout.EmitterLabel"}}</span>
+        <div class="sb-hrow sb-hrow--tight">{{#each deflector.conditions}}<button type="button" class="sb-btn sb-btn-xs {{#if active}}{{#if bad}}sb-btn-destructive{{else}}sb-btn-default{{/if}}{{else}}sb-btn-outline{{/if}}" data-action="set-emitter" data-condition="{{value}}" {{disabled (not ../editable)}}>{{label}}</button>{{/each}}</div>
+      </div>
+      {{#if deflector.switched}}{{#if deflector.hasPp}}<button type="button" class="sb-btn sb-btn-outline sb-btn-xs sb-loadout__amber" data-action="tick-shield" title="{{localize 'SHADOWBASE.Apps.Loadout.TickTitle' drain=deflector.drain}}" {{disabled (not editable)}}>{{localize "SHADOWBASE.Apps.Loadout.Tick" drain=deflector.drain}}</button>{{/if}}{{/if}}
+    </div>
+  </div>
+  {{/if}}
+
+  {{#if hasShields}}
+  <div class="sb-loadout__shields">
+    <span class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Loadout.EnergyShields"}}</span>
+    {{#each shields}}
+    <div class="sb-hrow sb-hrow--between sb-loadout__shield">
+      <span class="sb-hrow sb-hrow--tight"><i class="fa-solid fa-shield-halved"></i> <span>{{name}}</span>{{#if dr}}<span class="sb-badge sb-badge-outline sb-loadout__blue">DR {{dr}} {{localize "SHADOWBASE.Apps.Loadout.VsEnergy"}}</span>{{/if}}{{#if isActive}}<span class="sb-badge sb-badge-outline sb-badge--pos">{{localize "SHADOWBASE.Apps.Loadout.Active"}}</span>{{/if}}</span>
+      <button type="button" class="sb-btn sb-btn-xs {{#if isActive}}sb-btn-default is-blue{{else}}sb-btn-outline{{/if}}" data-action="toggle-energy-shield" data-item-id="{{itemId}}" {{disabled (not ../editable)}}><i class="fa-solid fa-bolt"></i> {{#if isActive}}{{localize "SHADOWBASE.Apps.Loadout.Deactivate"}}{{else}}{{localize "SHADOWBASE.Apps.Loadout.Activate"}}{{/if}}</button>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+
+  {{#unless hasRows}}<p class="sb-loadout__empty">{{localize "SHADOWBASE.Apps.Loadout.NoAnatomy"}}</p>{{/unless}}
+  {{#each rows}}
+  <div class="sb-loadout__row{{#if overloaded}} is-overloaded{{/if}}" data-location-id="{{id}}">
+    <div class="sb-loadout__loc">
+      <span class="sb-loadout__loc-name">{{name}}</span>
+      {{#if dr}}<span class="sb-badge sb-badge-outline sb-loadout__dr">DR {{dr}}</span>{{/if}}
+    </div>
+    <div class="sb-loadout__cell">
+      {{#if worn.length}}
+      <div class="sb-hrow sb-hrow--tight">
+        {{#each worn}}<button type="button" class="sb-loadout__chip sb-loadout__chip--armor" data-action="unwear" data-item-id="{{id}}" title="{{localize 'SHADOWBASE.Apps.Loadout.TakeOff' name=name}}" {{disabled (not ../../editable)}}><i class="fa-solid fa-shirt"></i> <span>{{name}}</span>{{#if fit}}<span class="sb-badge sb-badge-destructive sb-loadout__fit">{{fitLabel}}</span>{{/if}}</button>{{/each}}
+      </div>
+      {{/if}}
+      {{#if held.length}}
+      <div class="sb-hrow sb-hrow--tight">
+        {{#each held}}
+        <details class="sb-loadout__chip sb-loadout__chip--weapon">
+          <summary><i class="fa-solid fa-hand-fist"></i> <span>{{name}}</span>{{#if twoHanded}}<span class="sb-badge sb-badge-outline sb-loadout__tag">2H</span>{{/if}}{{#if worn}}<span class="sb-badge sb-badge-outline sb-loadout__tag">{{localize "SHADOWBASE.Apps.Loadout.WornTag"}}</span>{{/if}}{{#if pinned}}<i class="fa-solid fa-thumbtack sb-loadout__pin"></i>{{/if}}{{#if others}}<span class="sb-loadout__others" title="{{othersTitle}}">+{{others}}</span>{{/if}}</summary>
+          <div class="sb-loadout__menu">
+            <p class="sb-caps sb-text-10 sb-text-muted">{{heading}}</p>
+            {{#each limbs}}<label class="sb-check-row sb-check-row--tiny"><input type="checkbox" name="{{field}}" {{#if checked}}checked{{/if}} {{disabled (not ../../../editable)}}> {{name}}</label>{{/each}}
+            {{#if noLimbs}}<p class="sb-muted-p">{{localize "SHADOWBASE.Apps.Loadout.NoLimb"}}</p>{{/if}}
+            <button type="button" class="sb-btn sb-btn-ghost sb-btn-xs" data-action="clear-pin" data-item-id="{{id}}" {{disabled (or (not pinned) (not ../../editable))}}><i class="fa-solid fa-hand"></i> {{localize "SHADOWBASE.Apps.Loadout.LetSheetChoose"}}</button>
+            <button type="button" class="sb-btn sb-btn-ghost sb-btn-xs is-destructive" data-action="unready" data-item-id="{{id}}" {{disabled (not ../../editable)}}><i class="fa-solid fa-shield"></i> {{localize "SHADOWBASE.Apps.Loadout.Unready"}}</button>
+          </div>
+        </details>
+        {{/each}}
+      </div>
+      {{/if}}
+      {{#if wear}}<select class="sb-select sb-loadout__picker" name="{{wear.field}}" {{disabled (not ../editable)}}><option value="" selected>+ {{wear.label}}</option>{{#each wear.options}}<option value="{{value}}">{{label}}</option>{{/each}}</select>{{/if}}
+      {{#if ready}}<select class="sb-select sb-loadout__picker" name="{{ready.field}}" {{disabled (or ready.disabled (not ../editable))}}><option value="" selected>+ {{ready.label}}</option>{{#each ready.options}}<option value="{{value}}">{{label}}</option>{{/each}}</select>{{/if}}
+      {{#if protectedBy}}<p class="sb-text-10 sb-text-muted">{{protectedBy}}</p>{{/if}}
+      {{#if empty}}<span class="sb-text-10 sb-text-muted sb-loadout__bare">{{localize "SHADOWBASE.Apps.Loadout.Bare"}}</span>{{/if}}
+      {{#if overloaded}}<p class="sb-loadout__warn"><i class="fa-solid fa-triangle-exclamation"></i> {{localize "SHADOWBASE.Apps.Loadout.Overloaded"}}</p>{{/if}}
+    </div>
+  </div>
+  {{/each}}
+
+  {{#if hasUnlocated}}
+  <div class="sb-loadout__group">
+    <p class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Loadout.WornOnBody"}}</p>
+    <div class="sb-hrow sb-hrow--tight">{{#each unlocated}}<button type="button" class="sb-loadout__chip sb-loadout__chip--armor" data-action="unwear" data-item-id="{{id}}" title="{{localize 'SHADOWBASE.Apps.Loadout.TakeOff' name=name}}" {{disabled (not ../editable)}}><i class="fa-solid fa-shirt"></i> <span>{{name}}</span>{{#if fit}}<span class="sb-badge sb-badge-destructive sb-loadout__fit">{{fitLabel}}</span>{{/if}}</button>{{/each}}</div>
+    <p class="sb-muted-p">{{localize "SHADOWBASE.Apps.Loadout.BeltsNote"}}</p>
+  </div>
+  {{/if}}
+  {{#each unplaced}}<p class="sb-loadout__warn"><i class="fa-solid fa-triangle-exclamation"></i> {{localize "SHADOWBASE.Apps.Loadout.Unplaced" name=name limb=limb}}{{#if twoHanded}} {{localize "SHADOWBASE.Apps.Loadout.NeedsTwo"}}{{/if}}</p>{{/each}}
+  {{#if hasBonuses}}
+  <div class="sb-loadout__group">
+    <p class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Loadout.SetBonuses"}}</p>
+    {{#each bonuses}}<p class="sb-loadout__bonus"><i class="fa-solid fa-wand-magic-sparkles"></i> <b>{{setName}}</b> ({{reason}}): {{description}}</p>{{/each}}
+  </div>
+  {{/if}}
+{{/with}}
+{{else}}
+  <p class="sb-notice sb-notice--warn"><i class="fa-solid fa-triangle-exclamation"></i> {{localize "SHADOWBASE.Apps.Common.EngineError" error=engineError}}</p>
+{{/if}}
+</section>

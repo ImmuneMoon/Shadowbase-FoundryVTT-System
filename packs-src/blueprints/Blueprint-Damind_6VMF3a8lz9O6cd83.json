@@ -1,0 +1,42 @@
+{
+  "_id": "6VMF3a8lz9O6cd83",
+  "_key": "!items!6VMF3a8lz9O6cd83",
+  "name": "Blueprint: Damind",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 34800000,
+  "system": {
+    "row": {
+      "id": "96ee05b7-486a-459b-927e-94bd09270542",
+      "name": "Blueprint: Damind",
+      "cost": 374,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Damind (Generation 0, proven, encoded, catalog design). Required to build Damind; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Damind",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 2000,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Damind"
+    }
+  }
+}

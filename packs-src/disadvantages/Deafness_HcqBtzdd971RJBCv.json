@@ -1,0 +1,34 @@
+{
+  "_id": "HcqBtzdd971RJBCv",
+  "_key": "!items!HcqBtzdd971RJBCv",
+  "name": "Deafness",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "iBhK8LHSekCOv5gO",
+  "sort": 14000000,
+  "system": {
+    "row": {
+      "name": "Deafness",
+      "points": -20,
+      "level": null,
+      "description": "You cannot hear and automatically fail any Hearing-based Perception rolls.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Deafness|Physical"
+    }
+  }
+}

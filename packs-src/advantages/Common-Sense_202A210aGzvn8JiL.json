@@ -1,0 +1,33 @@
+{
+  "_id": "202A210aGzvn8JiL",
+  "_key": "!items!202A210aGzvn8JiL",
+  "name": "Common Sense",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 2600000,
+  "system": {
+    "row": {
+      "name": "Common Sense",
+      "points": 10,
+      "description": "Inherent wisdom. The GM will warn you if you are about to do something foolish or dangerous. Helps you avoid unnecessary risks, allowing for more calculated and effective strategic decisions in morally complex situations.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Common Sense"
+    }
+  }
+}

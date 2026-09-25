@@ -1,0 +1,42 @@
+{
+  "_id": "UnywkNqAk4XOTT0M",
+  "_key": "!items!UnywkNqAk4XOTT0M",
+  "name": "Blueprint: Datapad",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "muygUURylK1A9j1R",
+  "sort": 19800000,
+  "system": {
+    "row": {
+      "id": "9637f727-b604-4249-9866-587e3b6b7a17",
+      "name": "Blueprint: Datapad",
+      "cost": 297,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Datapad (Generation 0, proven, encoded, catalog design). Required to build Datapad; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Datapad",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1225,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Communication & Data|Datapad"
+    }
+  }
+}

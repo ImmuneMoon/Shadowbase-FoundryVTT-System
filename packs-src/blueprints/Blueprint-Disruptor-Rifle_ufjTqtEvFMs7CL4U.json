@@ -1,0 +1,42 @@
+{
+  "_id": "ufjTqtEvFMs7CL4U",
+  "_key": "!items!ufjTqtEvFMs7CL4U",
+  "name": "Blueprint: Disruptor Rifle",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Wn54IYbNSxjtPGwZ",
+  "sort": 46300000,
+  "system": {
+    "row": {
+      "id": "0dba5c8e-58a6-403d-bef6-27c1aa83f6d3",
+      "name": "Blueprint: Disruptor Rifle",
+      "cost": 508,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Disruptor Rifle (Generation 0, proven, encoded, catalog design). Required to build Disruptor Rifle; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Disruptor Rifle",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3340,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Specialized Rifles|Disruptor Rifle"
+    }
+  }
+}

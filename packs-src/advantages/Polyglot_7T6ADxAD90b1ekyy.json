@@ -1,0 +1,33 @@
+{
+  "_id": "7T6ADxAD90b1ekyy",
+  "_key": "!items!7T6ADxAD90b1ekyy",
+  "name": "Polyglot",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 13000000,
+  "system": {
+    "row": {
+      "name": "Polyglot",
+      "points": 3,
+      "description": "You grew up in a crossroads of cultures. Add up to three additional childhood languages at Accented fluency, each written at [0] and noted (Polyglot). May be taken only at character creation.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Polyglot"
+    }
+  }
+}

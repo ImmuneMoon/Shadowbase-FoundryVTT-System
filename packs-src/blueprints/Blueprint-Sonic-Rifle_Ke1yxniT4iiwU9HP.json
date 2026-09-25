@@ -1,0 +1,42 @@
+{
+  "_id": "Ke1yxniT4iiwU9HP",
+  "_key": "!items!Ke1yxniT4iiwU9HP",
+  "name": "Blueprint: Sonic Rifle",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Wn54IYbNSxjtPGwZ",
+  "sort": 46400000,
+  "system": {
+    "row": {
+      "id": "ac68c16d-710b-41c6-ba53-4fb6723361a3",
+      "name": "Blueprint: Sonic Rifle",
+      "cost": 506,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Sonic Rifle (Generation 0, proven, encoded, catalog design). Required to build Sonic Rifle; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Sonic Rifle",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3320,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Specialized Rifles|Sonic Rifle"
+    }
+  }
+}

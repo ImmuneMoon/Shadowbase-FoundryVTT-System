@@ -1,0 +1,173 @@
+{
+  "_id": "Jq4ESNIVJ6rmGbju",
+  "_key": "!items!Jq4ESNIVJ6rmGbju",
+  "name": "Stun Baton",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "IfQcNyOKob3lVHxn",
+  "sort": 2800000,
+  "system": {
+    "row": {
+      "id": "1bba660f-7e53-4a58-8d21-d25def7ccba8",
+      "customName": "Stun Baton",
+      "baseType": "Stun Baton",
+      "baseSkill": "Baton",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": 100,
+      "maxCharges": 100,
+      "condition": "Fine",
+      "baseReach": "1",
+      "baseWeight": 3.66,
+      "finalWeight": 3.66,
+      "baseCost": 580,
+      "finalCost": 3480,
+      "gripParts": [
+        {
+          "inventoryId": "2199ce85-ad96-4a6f-be81-39eb84a47592",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "afc5e23d-2763-4b60-83c8-011ac9db53ba",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "utilityParts": [
+        {
+          "inventoryId": "a86c3e5f-8415-4284-816d-fea280c8bc9f",
+          "materialId": null,
+          "quantity": 1
+        },
+        {
+          "inventoryId": "617f9fdc-1c55-49a6-a9ee-c785d7757560",
+          "materialId": null,
+          "quantity": 1
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "1bba660f-7e53-4a58-8d21-d25def7ccba8",
+        "customName": "Stun Baton",
+        "baseType": "Stun Baton",
+        "baseSkill": "Baton",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "condition": "Fine",
+        "baseReach": "1",
+        "baseWeight": 3.66,
+        "finalWeight": 3.66,
+        "baseCost": 580,
+        "finalCost": 3480,
+        "gripParts": [
+          {
+            "inventoryId": "2199ce85-ad96-4a6f-be81-39eb84a47592",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "afc5e23d-2763-4b60-83c8-011ac9db53ba",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "utilityParts": [
+          {
+            "inventoryId": "a86c3e5f-8415-4284-816d-fea280c8bc9f",
+            "materialId": null,
+            "quantity": 1
+          },
+          {
+            "inventoryId": "617f9fdc-1c55-49a6-a9ee-c785d7757560",
+            "materialId": null,
+            "quantity": 1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "2199ce85-ad96-4a6f-be81-39eb84a47592",
+          "name": "Standard Hilt",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInMeleeId": "1bba660f-7e53-4a58-8d21-d25def7ccba8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Broadsword/Shortsword/Saber. 1-handed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "afc5e23d-2763-4b60-83c8-011ac9db53ba",
+          "name": "Weighted End",
+          "category": "Melee Head",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInMeleeId": "1bba660f-7e53-4a58-8d21-d25def7ccba8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Balanced.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "a86c3e5f-8415-4284-816d-fea280c8bc9f",
+          "name": "Stun Modulator",
+          "category": "Melee Power Unit",
+          "cost": 270,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInMeleeId": "1bba660f-7e53-4a58-8d21-d25def7ccba8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Converts lethal damage to endurance (fatigue) damage.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "617f9fdc-1c55-49a6-a9ee-c785d7757560",
+          "name": "Power Cell",
+          "category": "Melee Power Unit",
+          "cost": 210,
+          "weight": 0.7,
+          "isInstalled": true,
+          "installedInMeleeId": "1bba660f-7e53-4a58-8d21-d25def7ccba8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Provides baseline power for attached emitters/generators.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Stun Baton"
+    }
+  }
+}

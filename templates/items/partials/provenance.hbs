@@ -1,0 +1,27 @@
+{{!-- shadowbase.item.provenance - the Weapon Assembly / Hardware Assembly strip (customized-blaster-item.tsx:504-550,
+     armor-item-card.tsx:881-935): FINALIZED / DESIGN PENDING, the provenance (Placed under Direct Library Access, or
+     Built from owned rows), Confirm Construction / Swap Components. Context: provenance (builders.provenanceView) plus
+     editable, owned, canToggleLibrary, libraryAccess, title (localized), crafting (base.mjs _craftingContext: the
+     Forge / Deconstruct / Salvage entries when the CraftingApp is registered). --}}
+<div class="sb-provenance {{#if provenance.locked}}sb-provenance--locked{{/if}}">
+  <div class="sb-provenance__state">
+    <span class="sb-provenance__title">{{title}}</span>
+    <span class="sb-caps sb-text-muted">{{provenance.state}}</span>
+    {{#if provenance.provenanceLabel}}<span class="sb-badge sb-badge-outline">{{provenance.provenanceLabel}}</span>{{/if}}
+  </div>
+  <div class="sb-provenance__actions">
+    {{#if provenance.locked}}
+      <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="release-build" {{disabled (not editable)}}>{{localize "SHADOWBASE.Item.Build.SwapComponents"}}</button>
+    {{else}}
+      <button type="button" class="sb-btn sb-btn-accent sb-btn-sm" data-action="confirm-build" {{disabled (not editable)}}><i class="fa-solid fa-hammer"></i> {{localize "SHADOWBASE.Item.Build.Confirm"}}</button>
+    {{/if}}
+    {{#each crafting.modes}}<button type="button" class="sb-btn sb-btn-outline sb-btn-sm {{#if this.destructive}}sb-text-red{{/if}}" data-action="open-crafting" data-mode="{{this.mode}}" {{disabled (not @root.editable)}}><i class="fa-solid fa-hammer"></i> {{this.label}}</button>{{/each}}
+    {{#if canToggleLibrary}}
+      <label class="sb-provenance__library" title="{{localize "SHADOWBASE.Item.Library.Hint"}}">
+        <span class="sb-caps">{{localize "SHADOWBASE.Item.Library.Toggle"}}</span>
+        <button type="button" class="sb-btn sb-btn-sm {{#if libraryAccess}}sb-btn-accent{{else}}sb-btn-outline{{/if}}" data-action="toggle-library-access"><i class="{{sbIcon 'library'}}"></i> {{#if libraryAccess}}{{localize "SHADOWBASE.Item.Library.On"}}{{else}}{{localize "SHADOWBASE.Item.Library.Off"}}{{/if}}</button>
+      </label>
+    {{/if}}
+  </div>
+  {{#unless owned}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Build.UnownedNote"}}</p>{{/unless}}
+</div>

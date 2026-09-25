@@ -1,0 +1,39 @@
+{
+  "_id": "1br46GXKSqAuLFDA",
+  "_key": "!items!1br46GXKSqAuLFDA",
+  "name": "Bipedal Foot (HK)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "HHtVhUGlED7Z8T7J",
+  "sort": 5900000,
+  "system": {
+    "row": {
+      "id": "8524e41a-a145-4fca-927d-cc9f65a3752e",
+      "name": "Bipedal Foot (HK)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Motive Mount",
+      "cost": 1052,
+      "weight": 6,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "hk-foot",
+      "description": "Silence 1"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "hk-foot"
+    }
+  }
+}

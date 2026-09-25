@@ -1,0 +1,32 @@
+{
+  "_id": "Xk3HdvBohFNF5gMG",
+  "_key": "!items!Xk3HdvBohFNF5gMG",
+  "name": "Congenial",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 800000,
+  "system": {
+    "row": {
+      "name": "Congenial",
+      "points": -1,
+      "description": "You are naturally friendly and eager to please.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Congenial"
+    }
+  }
+}

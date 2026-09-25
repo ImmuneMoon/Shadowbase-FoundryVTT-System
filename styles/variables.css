@@ -1,0 +1,103 @@
+/* styles/variables.css - the website's design tokens (docs/STYLE-SPEC.md §1).
+ *
+ * Every token of ../ShadowBase Website/src/app/globals.css `:root` is declared
+ * here under `.shadowbase` and `.application.shadowbase` with the SAME name and
+ * the SAME HSL triplet (check:css-tokens reads the website file and pins each
+ * one; a value edited here alone fails the check). Dark is the only theme, as
+ * on the website.
+ *
+ * Scoped, never on :root: Foundry's own chrome must keep its theme; only what
+ * carries the .shadowbase class (the sheet, the HUD, the item sheets, the chat
+ * cards, the sub-apps) is themed.
+ *
+ * The --sb-* literals are the Tailwind palette colours the sheet uses beside
+ * the tokens (STYLE-SPEC §1.4); hex values are the Tailwind v3 defaults.
+ */
+
+.shadowbase,
+.application.shadowbase {
+  /* ---- globals.css :root, verbatim ---- */
+  --background: 0 0% 10%;
+  --foreground: 195 53% 79%;
+  --card: 0 0% 13%;
+  --card-foreground: 195 53% 79%;
+  --popover: 0 0% 13%;
+  --popover-foreground: 195 53% 79%;
+  --primary: 195 53% 79%;
+  --primary-foreground: 0 0% 7%;
+  --secondary: 0 0% 20%;
+  --secondary-foreground: 195 53% 79%;
+  --muted: 0 0% 22%;
+  --muted-foreground: 0 0% 55%;
+  --accent: 285 17% 64%;
+  --accent-foreground: 0 0% 7%;
+  --destructive: 0 60% 50%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 20%;
+  --input: 0 0% 16%;
+  --ring: 285 17% 64%;
+  --radius: 0.375rem;
+  --sidebar-background: 0 0% 12%;
+  --sidebar-foreground: 195 53% 79%;
+  --sidebar-primary: 195 53% 79%;
+  --sidebar-primary-foreground: 0 0% 7%;
+  --sidebar-accent: 285 17% 64%;
+  --sidebar-accent-foreground: 0 0% 7%;
+  --sidebar-border: 0 0% 20%;
+  --sidebar-ring: 285 17% 64%;
+
+  /* ---- fonts (tailwind.config.ts fontFamily; no webfont fetch, ARCHITECTURE §6.6) ---- */
+  --font-body: Inter, system-ui, sans-serif;
+  --font-headline: Inter, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* ---- Tailwind radii as the components use them ---- */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* ---- the angular tab cut (layout/navbar.tsx `--tab-cut-size: 1rem`) ---- */
+  --tab-cut-size: 1rem;
+
+  /* ---- literal palette (STYLE-SPEC §1.4) ---- */
+  --sb-amber-300: #fcd34d;
+  --sb-amber-400: #fbbf24;
+  --sb-amber-500: #f59e0b;
+  --sb-amber-600: #d97706;
+  --sb-green-400: #4ade80;
+  --sb-green-500: #22c55e;
+  --sb-green-600: #16a34a;
+  --sb-green-700: #15803d;
+  --sb-red-50: #fef2f2;
+  --sb-red-300: #fca5a5;
+  --sb-red-400: #f87171;
+  --sb-red-500: #ef4444;
+  --sb-red-600: #dc2626;
+  --sb-red-700: #b91c1c;
+  --sb-blue-200: #bfdbfe;
+  --sb-blue-300: #93c5fd;
+  --sb-blue-400: #60a5fa;
+  --sb-blue-500: #3b82f6;
+  --sb-blue-600: #2563eb;
+  --sb-blue-700: #1d4ed8;
+  --sb-emerald-400: #34d399;
+  --sb-emerald-500: #10b981;
+  --sb-sky-400: #38bdf8;
+  --sb-sky-500: #0ea5e9;
+  --sb-yellow-400: #facc15;
+  --sb-black: #000000;
+  --sb-white: #ffffff;
+  /* facing-hex.tsx arcTone: the Side arc; Rear is --destructive, Front is --accent */
+  --sb-arc-side: hsl(38 92% 50%);
+
+  /* ---- the alignment spectrum stops (globals.css .alignment-spectrum) ---- */
+  --sb-spectrum-dark-deep: hsl(0 84% 52%);
+  --sb-spectrum-dark: hsl(0 88% 68%);
+  --sb-spectrum-neutral: hsl(0 0% 46%);
+  --sb-spectrum-light: hsl(213 94% 74%);
+  --sb-spectrum-light-deep: hsl(217 91% 58%);
+
+  /* ---- sticky offsets the website measures at runtime (use-sticky-offset.ts); fixed here ---- */
+  --sheet-sticky-top: 0px;
+  --sheet-section-sticky-top: 2.75rem;
+}

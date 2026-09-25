@@ -1,0 +1,46 @@
+{
+  "_id": "5y1MHzjZHlVTC5w1",
+  "_key": "!items!5y1MHzjZHlVTC5w1",
+  "name": "Durasteel Thrusting Point - Oversized",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "tS9seYVcjKTzsj6l",
+  "sort": 800000,
+  "system": {
+    "row": {
+      "id": "3e7f81e1-7b20-4b51-a039-84a13afb0139",
+      "name": "Durasteel Thrusting Point - Oversized",
+      "category": "Melee Head",
+      "cost": 98,
+      "weight": 1.96,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "thrust-point-os",
+      "materialId": "durasteel",
+      "notes": "Unbalanced.",
+      "effect": "Unbalanced.",
+      "energyResBonus": 0,
+      "volume": 0.004,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "part:thrust-point-os"
+    }
+  }
+}

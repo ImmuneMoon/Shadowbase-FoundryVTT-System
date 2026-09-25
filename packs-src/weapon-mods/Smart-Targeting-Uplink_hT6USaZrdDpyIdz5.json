@@ -1,0 +1,42 @@
+{
+  "_id": "hT6USaZrdDpyIdz5",
+  "_key": "!items!hT6USaZrdDpyIdz5",
+  "name": "Smart-Targeting Uplink",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "GKn9d26fE26F91yY",
+  "sort": 3700000,
+  "system": {
+    "row": {
+      "name": "Smart-Targeting Uplink",
+      "category": "Launch Tube / Projector",
+      "cost": 450,
+      "weight": 0.5,
+      "notes": "+2 tracking skill for guided, +1 Acc for unguided.",
+      "materials": [
+        {
+          "name": "Silicon",
+          "amount": 0.5
+        }
+      ],
+      "id": "f8a673d7-49f3-459f-b5e7-2ed6e2e58007",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Smart-Targeting Uplink"
+    }
+  }
+}

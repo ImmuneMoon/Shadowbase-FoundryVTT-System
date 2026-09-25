@@ -1,0 +1,42 @@
+{
+  "_id": "H22rYHaJWHRDvs0O",
+  "_key": "!items!H22rYHaJWHRDvs0O",
+  "name": "Blueprint: Heavy Battle Gauntlets",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 7200000,
+  "system": {
+    "row": {
+      "id": "028fbd01-869c-4597-9c5b-d42fd83acc07",
+      "name": "Blueprint: Heavy Battle Gauntlets",
+      "cost": 198,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Heavy Battle Gauntlets (Generation 0, proven, encoded, catalog design). Required to build Heavy Battle Gauntlets; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Heavy Battle Gauntlets",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 239,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Heavy Battle Gauntlets"
+    }
+  }
+}

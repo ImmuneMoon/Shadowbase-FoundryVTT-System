@@ -1,0 +1,42 @@
+{
+  "_id": "NZgLT8yGh32abJRH",
+  "_key": "!items!NZgLT8yGh32abJRH",
+  "name": "Synth-Flesh",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "SWSgchplcyxAp6ww",
+  "sort": 11500000,
+  "system": {
+    "row": {
+      "name": "Synth-Flesh",
+      "rarity": "Common",
+      "cost": 20,
+      "density": 65,
+      "category": "Raw Materials",
+      "subCategory": "Medical",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Bio-compatible artificial skin used in medical patching and trauma kits.",
+      "id": "3e3d3444-bd34-440e-b6d3-ef52a7519951",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Synth-Flesh"
+    }
+  }
+}

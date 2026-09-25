@@ -1,0 +1,39 @@
+{
+  "_id": "OkA4nu4IDSI9VDY7",
+  "_key": "!items!OkA4nu4IDSI9VDY7",
+  "name": "Bipedal Foot (GE3)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "HHtVhUGlED7Z8T7J",
+  "sort": 5800000,
+  "system": {
+    "row": {
+      "id": "c7112e59-7185-4a8e-a275-ce2f525de3b2",
+      "name": "Bipedal Foot (GE3)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Motive Mount",
+      "cost": 552,
+      "weight": 5,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "std-foot",
+      "description": "None"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "std-foot"
+    }
+  }
+}

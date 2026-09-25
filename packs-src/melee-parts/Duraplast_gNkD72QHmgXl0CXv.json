@@ -1,0 +1,42 @@
+{
+  "_id": "gNkD72QHmgXl0CXv",
+  "_key": "!items!gNkD72QHmgXl0CXv",
+  "name": "Duraplast",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "VqX65UQVOs2JpxDL",
+  "sort": 3200000,
+  "system": {
+    "row": {
+      "name": "Duraplast",
+      "rarity": "Common",
+      "cost": 100,
+      "density": 95,
+      "category": "Raw Materials",
+      "subCategory": "Armor",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Advanced, lightweight ceramic/plastic hybrid used in armor.",
+      "id": "f8c616a4-b81d-4682-a400-2a1ae8e4d9de",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "material:Duraplast"
+    }
+  }
+}

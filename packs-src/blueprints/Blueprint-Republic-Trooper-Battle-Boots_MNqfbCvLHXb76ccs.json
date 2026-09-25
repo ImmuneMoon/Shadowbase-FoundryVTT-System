@@ -1,0 +1,42 @@
+{
+  "_id": "MNqfbCvLHXb76ccs",
+  "_key": "!items!MNqfbCvLHXb76ccs",
+  "name": "Blueprint: Republic Trooper Battle Boots",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 8400000,
+  "system": {
+    "row": {
+      "id": "336e68ca-307e-476c-93cd-8702401de703",
+      "name": "Blueprint: Republic Trooper Battle Boots",
+      "cost": 209,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Republic Trooper Battle Boots (Generation 0, proven, encoded, catalog design). Required to build Republic Trooper Battle Boots; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Republic Trooper Battle Boots",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 344,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Republic Trooper Battle Boots"
+    }
+  }
+}

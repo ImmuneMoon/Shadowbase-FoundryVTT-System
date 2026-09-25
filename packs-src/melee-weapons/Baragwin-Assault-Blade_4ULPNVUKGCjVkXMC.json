@@ -1,0 +1,173 @@
+{
+  "_id": "4ULPNVUKGCjVkXMC",
+  "_key": "!items!4ULPNVUKGCjVkXMC",
+  "name": "Baragwin Assault Blade",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "d4eK6lRChskXlqOO",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "id": "790b22c6-a9f3-45b3-bcc6-bf7734eff65f",
+      "customName": "Baragwin Assault Blade",
+      "baseType": "Baragwin Assault Blade",
+      "baseSkill": "Broadsword",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": 100,
+      "maxCharges": 100,
+      "condition": "Fine",
+      "baseReach": "1",
+      "baseWeight": 6.64,
+      "finalWeight": 6.64,
+      "baseCost": 2540,
+      "finalCost": 15240,
+      "gripParts": [
+        {
+          "inventoryId": "d8844352-3a5e-4724-944c-ddc35efa322a",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "2614d848-d1b8-40bb-9db8-c69016878a62",
+          "materialId": "mullinine",
+          "quantity": 1
+        }
+      ],
+      "utilityParts": [
+        {
+          "inventoryId": "68845786-4338-4875-90de-e0ec5cbf71ba",
+          "materialId": null,
+          "quantity": 1
+        },
+        {
+          "inventoryId": "43a7ff41-fd76-49c7-879e-dde276c34132",
+          "materialId": null,
+          "quantity": 1
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "790b22c6-a9f3-45b3-bcc6-bf7734eff65f",
+        "customName": "Baragwin Assault Blade",
+        "baseType": "Baragwin Assault Blade",
+        "baseSkill": "Broadsword",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "condition": "Fine",
+        "baseReach": "1",
+        "baseWeight": 6.64,
+        "finalWeight": 6.64,
+        "baseCost": 2540,
+        "finalCost": 15240,
+        "gripParts": [
+          {
+            "inventoryId": "d8844352-3a5e-4724-944c-ddc35efa322a",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "2614d848-d1b8-40bb-9db8-c69016878a62",
+            "materialId": "mullinine",
+            "quantity": 1
+          }
+        ],
+        "utilityParts": [
+          {
+            "inventoryId": "68845786-4338-4875-90de-e0ec5cbf71ba",
+            "materialId": null,
+            "quantity": 1
+          },
+          {
+            "inventoryId": "43a7ff41-fd76-49c7-879e-dde276c34132",
+            "materialId": null,
+            "quantity": 1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "d8844352-3a5e-4724-944c-ddc35efa322a",
+          "name": "Standard Hilt",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInMeleeId": "790b22c6-a9f3-45b3-bcc6-bf7734eff65f",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Broadsword/Shortsword/Saber. 1-handed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "2614d848-d1b8-40bb-9db8-c69016878a62",
+          "name": "Heavy Cleaver",
+          "category": "Melee Head",
+          "materialId": "mullinine",
+          "cost": 1980,
+          "weight": 3.96,
+          "isInstalled": true,
+          "installedInMeleeId": "790b22c6-a9f3-45b3-bcc6-bf7734eff65f",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Unbalanced.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "68845786-4338-4875-90de-e0ec5cbf71ba",
+          "name": "Sonic Emitter",
+          "category": "Melee Power Unit",
+          "cost": 300,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInMeleeId": "790b22c6-a9f3-45b3-bcc6-bf7734eff65f",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Adds +2d sonic.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "43a7ff41-fd76-49c7-879e-dde276c34132",
+          "name": "Power Cell",
+          "category": "Melee Power Unit",
+          "cost": 210,
+          "weight": 0.7,
+          "isInstalled": true,
+          "installedInMeleeId": "790b22c6-a9f3-45b3-bcc6-bf7734eff65f",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Provides baseline power for attached emitters/generators.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Baragwin Assault Blade"
+    }
+  }
+}

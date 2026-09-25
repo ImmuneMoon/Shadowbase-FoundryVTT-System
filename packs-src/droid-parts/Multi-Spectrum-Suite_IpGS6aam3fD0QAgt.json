@@ -1,0 +1,39 @@
+{
+  "_id": "IpGS6aam3fD0QAgt",
+  "_key": "!items!IpGS6aam3fD0QAgt",
+  "name": "Multi-Spectrum Suite",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 8900000,
+  "system": {
+    "row": {
+      "id": "542fe300-d3de-4d18-ba60-ad5bd5819f9c",
+      "name": "Multi-Spectrum Suite",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 1600,
+      "weight": 3,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "spec-suite",
+      "description": "Infravision, Night Vision [15]"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "spec-suite"
+    }
+  }
+}

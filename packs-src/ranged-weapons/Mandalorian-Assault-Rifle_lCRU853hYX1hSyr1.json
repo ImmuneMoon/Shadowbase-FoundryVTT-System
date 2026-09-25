@@ -1,0 +1,225 @@
+{
+  "_id": "lCRU853hYX1hSyr1",
+  "_key": "!items!lCRU853hYX1hSyr1",
+  "name": "Mandalorian Assault Rifle",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "E4h2Xn4pTV0QLLdh",
+  "sort": 3200000,
+  "system": {
+    "row": {
+      "id": "a873615a-6499-4cf1-92d1-9f04bed1b3c8",
+      "customName": "Mandalorian Assault Rifle",
+      "baseType": "Mandalorian Assault Rifle",
+      "baseSkill": "Guns (Blaster Rifle)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 14.6,
+      "finalWeight": 14.6,
+      "baseCost": 1062,
+      "finalCost": 6372,
+      "currentCharges": 100,
+      "maxCharges": 100,
+      "loadedAmmunitionId": "96e618fd-4b49-46a5-a171-90f6bd5cae80",
+      "loadedAmmunitionData": {
+        "id": "96e618fd-4b49-46a5-a171-90f6bd5cae80",
+        "name": "Rifle Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "A larger, more robust pack used for rifles and carbines. A gas top-up (30 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "assault-stock",
+        "inventoryId": "95e9a73d-b49b-440d-bd1f-863958cdfe15",
+        "materialId": "durasteel"
+      },
+      "receiverPart": {
+        "partId": "assault-receiver",
+        "inventoryId": "48838ba4-c8c6-4960-aec5-361fd28e0a73",
+        "materialId": "durasteel"
+      },
+      "barrelPart": {
+        "partId": "long-emitter",
+        "inventoryId": "780cac99-f5f1-4a8f-bb76-15f76575de09",
+        "materialId": "durasteel"
+      },
+      "targetingPart": {
+        "partId": "artillery-targeting",
+        "inventoryId": "317ecfc2-b447-42d4-8018-60e51629cc51"
+      },
+      "powerUnitPart": {
+        "partId": "rifle-pwr-pack",
+        "inventoryId": "0b96430e-c340-42e0-b120-dd10a4a34d9a"
+      },
+      "powerCellModId": "a0a98340-45f2-4321-9575-80968aca4abb",
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "a873615a-6499-4cf1-92d1-9f04bed1b3c8",
+        "customName": "Mandalorian Assault Rifle",
+        "baseType": "Mandalorian Assault Rifle",
+        "baseSkill": "Guns (Blaster Rifle)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 14.6,
+        "finalWeight": 14.6,
+        "baseCost": 1062,
+        "finalCost": 6372,
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "loadedAmmunitionId": "96e618fd-4b49-46a5-a171-90f6bd5cae80",
+        "loadedAmmunitionData": {
+          "id": "96e618fd-4b49-46a5-a171-90f6bd5cae80",
+          "name": "Rifle Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 100,
+          "maxCharges": 100,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "A larger, more robust pack used for rifles and carbines. A gas top-up (30 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "assault-stock",
+          "inventoryId": "95e9a73d-b49b-440d-bd1f-863958cdfe15",
+          "materialId": "durasteel"
+        },
+        "receiverPart": {
+          "partId": "assault-receiver",
+          "inventoryId": "48838ba4-c8c6-4960-aec5-361fd28e0a73",
+          "materialId": "durasteel"
+        },
+        "barrelPart": {
+          "partId": "long-emitter",
+          "inventoryId": "780cac99-f5f1-4a8f-bb76-15f76575de09",
+          "materialId": "durasteel"
+        },
+        "targetingPart": {
+          "partId": "artillery-targeting",
+          "inventoryId": "317ecfc2-b447-42d4-8018-60e51629cc51"
+        },
+        "powerUnitPart": {
+          "partId": "rifle-pwr-pack",
+          "inventoryId": "0b96430e-c340-42e0-b120-dd10a4a34d9a"
+        },
+        "powerCellModId": "a0a98340-45f2-4321-9575-80968aca4abb",
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "95e9a73d-b49b-440d-bd1f-863958cdfe15",
+          "name": "Assault Stock",
+          "partId": "assault-stock",
+          "category": "Ranged Grip",
+          "materialId": "durasteel",
+          "cost": 294,
+          "weight": 5.88,
+          "isInstalled": true,
+          "installedInBlasterId": "a873615a-6499-4cf1-92d1-9f04bed1b3c8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Heavy reinforced field stock."
+        },
+        {
+          "id": "48838ba4-c8c6-4960-aec5-361fd28e0a73",
+          "name": "Assault Receiver",
+          "partId": "assault-receiver",
+          "category": "Ranged Receiver",
+          "materialId": "durasteel",
+          "cost": 110,
+          "weight": 2.205,
+          "isInstalled": true,
+          "installedInBlasterId": "a873615a-6499-4cf1-92d1-9f04bed1b3c8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "High-yield assault cycling."
+        },
+        {
+          "id": "780cac99-f5f1-4a8f-bb76-15f76575de09",
+          "name": "Long Emitter",
+          "partId": "long-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "durasteel",
+          "cost": 98,
+          "weight": 1.96,
+          "isInstalled": true,
+          "installedInBlasterId": "a873615a-6499-4cf1-92d1-9f04bed1b3c8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "317ecfc2-b447-42d4-8018-60e51629cc51",
+          "name": "Artillery Targeting Module",
+          "partId": "artillery-targeting",
+          "category": "Ranged Targeting",
+          "cost": 250,
+          "weight": 3,
+          "isInstalled": true,
+          "installedInBlasterId": "a873615a-6499-4cf1-92d1-9f04bed1b3c8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Heavy vehicle-grade targeting arrays."
+        },
+        {
+          "id": "0b96430e-c340-42e0-b120-dd10a4a34d9a",
+          "name": "Rifle Power Pack",
+          "partId": "rifle-pwr-pack",
+          "category": "Power Unit",
+          "cost": 210,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInBlasterId": "a873615a-6499-4cf1-92d1-9f04bed1b3c8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "a0a98340-45f2-4321-9575-80968aca4abb",
+          "name": "Heavy Stagger-Pulse Modulator",
+          "category": "Power Cell",
+          "cost": 100,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "a873615a-6499-4cf1-92d1-9f04bed1b3c8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "On hit, target must make an HT-2 roll or be physically Stunned for 1d sec."
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Mandalorian Assault Rifle"
+    }
+  }
+}

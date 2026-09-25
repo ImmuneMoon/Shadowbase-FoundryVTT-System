@@ -1,0 +1,39 @@
+{
+  "_id": "7jxMtKskLqsxNxEK",
+  "_key": "!items!7jxMtKskLqsxNxEK",
+  "name": "Emergency Capacitor",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 8600000,
+  "system": {
+    "row": {
+      "id": "12ad7578-281a-4407-b0f0-f24e20ec4139",
+      "name": "Emergency Capacitor",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 780,
+      "weight": 2,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "pp-cap",
+      "description": "Restore 20 PP at 0 PP"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "pp-cap"
+    }
+  }
+}

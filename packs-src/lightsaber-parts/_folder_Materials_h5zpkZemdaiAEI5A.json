@@ -1,0 +1,19 @@
+{
+  "_id": "h5zpkZemdaiAEI5A",
+  "_key": "!folders!h5zpkZemdaiAEI5A",
+  "name": "Materials",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 700000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "path": [
+        "Materials"
+      ]
+    }
+  }
+}

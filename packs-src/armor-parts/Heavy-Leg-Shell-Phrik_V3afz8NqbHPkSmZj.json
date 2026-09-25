@@ -1,0 +1,42 @@
+{
+  "_id": "V3afz8NqbHPkSmZj",
+  "_key": "!items!V3afz8NqbHPkSmZj",
+  "name": "Heavy Leg Shell (Phrik)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 4400000,
+  "system": {
+    "row": {
+      "id": "bc98d1f9-02a3-4528-9fee-c21554201a1a",
+      "name": "Heavy Leg Shell (Phrik)",
+      "category": "Armor Shell",
+      "cost": 149850,
+      "weight": 16.65,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-heavy-legs-phrik",
+      "materialId": "phrik",
+      "notes": "Nearly indestructible, highly lightsaber-resistant. Medium and Heavy tiers only -- it is not milled thin.",
+      "validSlots": [],
+      "drBonus": 19,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-heavy-legs-phrik"
+    }
+  }
+}

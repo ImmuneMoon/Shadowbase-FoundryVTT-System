@@ -1,0 +1,9 @@
+{{!-- templates/chat/costs.hbs - pool costs applied (force-powers-section.tsx:238-243 "Deducted N FP and M EP").
+     Context: module/rolls.mjs applyForcePowerCosts / applyTechniqueCosts. --}}
+<div class="shadowbase sb-chat-card sb-chat-card--costs" data-actor-id="{{actorId}}">
+  <header class="sb-chat-card__header"><h3 class="sb-chat-card__title">{{title}}</h3></header>
+  <dl class="sb-chat-card__lines">
+    <dt>{{localize "SHADOWBASE.Roll.FP"}}</dt><dd>-{{costs.fp}}{{#if costs.fp}} <span class="sb-chat-card__muted">&rarr; {{after.fp}}</span>{{/if}}</dd>
+    <dt>{{localize "SHADOWBASE.Roll.EP"}}</dt><dd>-{{costs.ep}}{{#if costs.ep}} <span class="sb-chat-card__muted">&rarr; {{after.ep}}</span>{{/if}}</dd>
+  </dl>
+</div>

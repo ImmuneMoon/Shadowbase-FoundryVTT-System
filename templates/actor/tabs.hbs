@@ -1,0 +1,14 @@
+{{!-- templates/actor/tabs.hbs - the sheet's tab strip: the website's five tabs (character-form.tsx:578-582, Info /
+     Body / Abilities / Inventory / Vehicles with their lucide icons) drawn as the navbar's angular parallelogram
+     tab (layout/angular-tab.tsx; docs/STYLE-SPEC.md §2 "Angular tab", ARCHITECTURE §6.6). Each link is an AppV2
+     tab control (data-action="tab") so core's changeTab drives the group. Context: tabs = this._prepareTabs('primary'). --}}
+<div class="sb-sheet__tabs" data-application-part="tabs">
+  <nav class="sb-tabs tabs" data-group="primary" aria-label="{{localize "SHADOWBASE.Sheet.Tabs.Aria"}}">
+    {{#each tabs}}
+      <a class="sb-tab {{cssClass}}" data-action="tab" data-group="{{group}}" data-tab="{{id}}" role="tab" aria-selected="{{#if active}}true{{else}}false{{/if}}">
+        {{!-- _prepareTabs localizes `label` in v13; localize returns a localized string unchanged, so this is safe either way --}}
+        <i class="{{icon}}"></i><span>{{localize label}}</span>
+      </a>
+    {{/each}}
+  </nav>
+</div>

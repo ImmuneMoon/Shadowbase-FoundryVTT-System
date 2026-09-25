@@ -1,0 +1,42 @@
+{
+  "_id": "QnkjOAQnsCGGCKM3",
+  "_key": "!items!QnkjOAQnsCGGCKM3",
+  "name": "Blueprint: Ballistic Mesh Coif",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 4100000,
+  "system": {
+    "row": {
+      "id": "8db412d4-8ca8-4e62-b765-6fa29e719384",
+      "name": "Blueprint: Ballistic Mesh Coif",
+      "cost": 180,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Ballistic Mesh Coif (Generation 0, proven, encoded, catalog design). Required to build Ballistic Mesh Coif; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Ballistic Mesh Coif",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 51,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Ballistic Mesh Coif"
+    }
+  }
+}

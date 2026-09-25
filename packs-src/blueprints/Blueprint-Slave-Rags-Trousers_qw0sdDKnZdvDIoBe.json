@@ -1,0 +1,42 @@
+{
+  "_id": "qw0sdDKnZdvDIoBe",
+  "_key": "!items!qw0sdDKnZdvDIoBe",
+  "name": "Blueprint: Slave Rags (Trousers)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 18800000,
+  "system": {
+    "row": {
+      "id": "c80a1d87-9734-4de4-ab32-6ed220cb6f63",
+      "name": "Blueprint: Slave Rags (Trousers)",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Slave Rags (Trousers) (Generation 0, proven, encoded, catalog design). Required to build Slave Rags (Trousers); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Slave Rags (Trousers)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 0.33333333333333337,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Slave Rags (Trousers)"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "mr1UfDVLp1w0Nlvd",
+  "_key": "!items!mr1UfDVLp1w0Nlvd",
+  "name": "Blueprint: Structural Hardening",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "AHjJhn1NPsTEdkkS",
+  "sort": 27800000,
+  "system": {
+    "row": {
+      "id": "fd0666ed-1df5-48e0-909a-8a0294d9e022",
+      "name": "Blueprint: Structural Hardening",
+      "cost": 594,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Structural Hardening (Generation 0, proven, encoded, catalog design). Required to build Structural Hardening; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Structural Hardening",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 4200,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Reinforcement|Structural Hardening"
+    }
+  }
+}

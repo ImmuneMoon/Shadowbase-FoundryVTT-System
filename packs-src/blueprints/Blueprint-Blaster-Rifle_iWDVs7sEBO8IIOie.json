@@ -1,0 +1,42 @@
+{
+  "_id": "iWDVs7sEBO8IIOie",
+  "_key": "!items!iWDVs7sEBO8IIOie",
+  "name": "Blueprint: Blaster Rifle",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "561ndzf67gVgHZJr",
+  "sort": 12000000,
+  "system": {
+    "row": {
+      "id": "e8eefd2c-d810-40b1-bf7e-f44f79dadecf",
+      "name": "Blueprint: Blaster Rifle",
+      "cost": 565,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Blaster Rifle (Generation 0, proven, encoded, catalog design). Required to build Blaster Rifle; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Blaster Rifle",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3910,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Blaster Rifles & Carbines|Blaster Rifle"
+    }
+  }
+}

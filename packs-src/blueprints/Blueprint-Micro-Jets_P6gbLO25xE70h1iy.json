@@ -1,0 +1,42 @@
+{
+  "_id": "P6gbLO25xE70h1iy",
+  "_key": "!items!P6gbLO25xE70h1iy",
+  "name": "Blueprint: Micro Jets",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "YbNWJn9nl1OgfL9I",
+  "sort": 29300000,
+  "system": {
+    "row": {
+      "id": "313d55d7-ae70-465c-80ea-db92434bc420",
+      "name": "Blueprint: Micro Jets",
+      "cost": 309,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Micro Jets (Generation 0, proven, encoded, catalog design). Required to build Micro Jets; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Micro Jets",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1350,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Utility Mount|Micro Jets"
+    }
+  }
+}

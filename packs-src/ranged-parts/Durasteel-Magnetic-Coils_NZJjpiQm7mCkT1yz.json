@@ -1,0 +1,46 @@
+{
+  "_id": "NZJjpiQm7mCkT1yz",
+  "_key": "!items!NZJjpiQm7mCkT1yz",
+  "name": "Durasteel Magnetic Coils",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "fqyMKj3bXsbnJOuN",
+  "sort": 4700000,
+  "system": {
+    "row": {
+      "id": "5bb92004-d40a-477d-9f17-0a28e8343a33",
+      "name": "Durasteel Magnetic Coils",
+      "category": "Ranged Barrel",
+      "cost": 98,
+      "weight": 1.96,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "magnetic-coils",
+      "materialId": "durasteel",
+      "notes": "",
+      "effect": "",
+      "energyResBonus": 0,
+      "volume": 0.004,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "magnetic-coils"
+    }
+  }
+}

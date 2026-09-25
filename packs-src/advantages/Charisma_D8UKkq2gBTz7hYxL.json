@@ -1,0 +1,34 @@
+{
+  "_id": "D8UKkq2gBTz7hYxL",
+  "_key": "!items!D8UKkq2gBTz7hYxL",
+  "name": "Charisma",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "3vDRi4uDBtDelTd8",
+  "sort": 2000000,
+  "system": {
+    "row": {
+      "name": "Charisma",
+      "points": 5,
+      "description": "+1 to reactions.",
+      "category": "Social/Wealth",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Charisma"
+    }
+  }
+}

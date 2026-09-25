@@ -1,0 +1,32 @@
+{
+  "_id": "6R5xU8TMBlDKzBOv",
+  "_key": "!items!6R5xU8TMBlDKzBOv",
+  "name": "Shy",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 3600000,
+  "system": {
+    "row": {
+      "name": "Shy",
+      "points": -1,
+      "description": "You are uncomfortable in social situations, especially with strangers, and tend to speak only when spoken to.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Shy"
+    }
+  }
+}

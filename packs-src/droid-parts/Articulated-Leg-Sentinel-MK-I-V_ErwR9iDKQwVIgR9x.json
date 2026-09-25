@@ -1,0 +1,39 @@
+{
+  "_id": "ErwR9iDKQwVIgR9x",
+  "_key": "!items!ErwR9iDKQwVIgR9x",
+  "name": "Articulated Leg (Sentinel MK I-V)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "tBEyddz1IdjHzb5K",
+  "sort": 5500000,
+  "system": {
+    "row": {
+      "id": "9de9c803-031e-4aff-a6be-c723a7dce116",
+      "name": "Articulated Leg (Sentinel MK I-V)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Motive Strut",
+      "cost": 5280,
+      "weight": 35,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "sentinel-leg",
+      "description": "DR 5 (Legs), Lifting ST +2"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "sentinel-leg"
+    }
+  }
+}

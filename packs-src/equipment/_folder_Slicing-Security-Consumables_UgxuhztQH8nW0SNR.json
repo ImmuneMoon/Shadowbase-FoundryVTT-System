@@ -1,0 +1,20 @@
+{
+  "_id": "UgxuhztQH8nW0SNR",
+  "_key": "!folders!UgxuhztQH8nW0SNR",
+  "name": "Slicing & Security Consumables",
+  "type": "Item",
+  "folder": "1spz5XdjS7TmnbXD",
+  "sorting": "a",
+  "sort": 500000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "path": [
+        "Tools & Electronics",
+        "Slicing & Security Consumables"
+      ]
+    }
+  }
+}

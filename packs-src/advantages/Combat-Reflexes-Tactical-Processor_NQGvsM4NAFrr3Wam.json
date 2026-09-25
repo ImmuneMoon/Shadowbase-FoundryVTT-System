@@ -1,0 +1,33 @@
+{
+  "_id": "NQGvsM4NAFrr3Wam",
+  "_key": "!items!NQGvsM4NAFrr3Wam",
+  "name": "Combat Reflexes (Tactical Processor)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "b0AkEhPa45uoNffk",
+  "sort": 2500000,
+  "system": {
+    "row": {
+      "name": "Combat Reflexes (Tactical Processor)",
+      "points": 15,
+      "description": "A hardwired tactical reflex processor. Grants a +1 bonus to active defenses, +2 to Fright Checks, and a +6 bonus to recover from mental stun.",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Combat Reflexes (Tactical Processor)"
+    }
+  }
+}

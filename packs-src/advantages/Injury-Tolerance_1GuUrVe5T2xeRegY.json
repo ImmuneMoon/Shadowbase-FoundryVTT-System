@@ -1,0 +1,34 @@
+{
+  "_id": "1GuUrVe5T2xeRegY",
+  "_key": "!items!1GuUrVe5T2xeRegY",
+  "name": "Injury Tolerance",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "GS8kUCPWatq78XxI",
+  "sort": 8900000,
+  "system": {
+    "row": {
+      "name": "Injury Tolerance",
+      "points": 20,
+      "description": "Unliving",
+      "category": "Physical",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Injury Tolerance"
+    }
+  }
+}

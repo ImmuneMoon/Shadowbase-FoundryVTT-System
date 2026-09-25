@@ -1,0 +1,61 @@
+{{!-- templates/items/starship-main.hbs - customized-starship-item.tsx Final Analysis & Systems (:295-330) and the Damage
+     Control Matrix (starship-system-damage.tsx): the derived readouts, Total Construction Value, the nine tracked systems,
+     the armaments, the crew assignment. Context: main (starship.mjs), editable, owned, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--starship {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Rocket'}}"></i> {{localize "SHADOWBASE.Item.Starship.FinalAnalysis"}}</h4>
+    <p class="sb-text-xs"><i class="{{sbIcon 'CreditCard'}}"></i> {{localize "SHADOWBASE.Sheet.Vehicles.ConstructionValue" cost=main.constructionValue}}</p>
+    {{> "shadowbase.item.tiles" tiles=main.tiles}}
+    <p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Sheet.Vehicles.Crew"}} {{main.crew}} · {{localize "SHADOWBASE.Sheet.Vehicles.Passengers"}} {{main.passengers}} · {{localize "SHADOWBASE.Sheet.Vehicles.Cargo"}} {{main.cargo}}</p>
+    <div class="sb-item-grid">
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Starship.ShipPosition"}}</span>
+        <select class="sb-select" name="sel.shipPosition" {{disabled (not editable)}}>{{#each main.positions}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Starship.AssignedStation"}}</span>
+        <select class="sb-select" name="sel.assignedStation" {{disabled (not editable)}}>{{#each main.stations}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+    </div>
+  </div>
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Sheet.Vehicles.SystemsDamage"}}</h4>
+    {{#if main.hasSystems}}
+    <div class="sb-table-wrap">
+    <table class="sb-table sb-table--dense sb-ship-systems">
+      <thead><tr><th>{{localize "SHADOWBASE.Sheet.Vehicles.System"}}</th><th class="sb-num">DR</th><th class="sb-num">HP</th><th>{{localize "SHADOWBASE.Sheet.Vehicles.SystemStatus"}}</th><th>{{localize "SHADOWBASE.Sheet.Vehicles.Notes"}}</th></tr></thead>
+      <tbody>
+        {{#each main.systems}}
+        <tr class="sb-ship-system is-{{this.tone}}" data-system-id="{{this.id}}">
+          <td>{{this.name}}</td>
+          <td class="sb-num sb-mono">{{this.dr}}</td>
+          <td class="sb-num"><input type="number" class="sb-input sb-input--tiny" name="sys.{{this.id}}.hp" value="{{this.hp}}" data-dtype="Number" min="0" {{disabled (not @root.editable)}}> <span class="sb-text-muted sb-mono">/ {{this.maxHp}}</span></td>
+          <td><select class="sb-select sb-select--sm" name="sys.{{this.id}}.status" {{disabled (not @root.editable)}}>{{#each this.statusOptions}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select></td>
+          <td><input type="text" class="sb-input" name="sys.{{this.id}}.notes" value="{{this.notes}}" {{disabled (not @root.editable)}}></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    </div>
+    {{else}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Starship.NoSystems"}}</p>{{/if}}
+  </div>
+  {{#if main.armaments.length}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Sheet.Vehicles.Armaments"}}</h4>
+    <ul class="sb-armaments">
+      {{#each main.armaments}}
+      <li data-armament="{{this.name}}">
+        <span class="sb-armament__name">{{this.name}}</span>
+        <span class="sb-text-muted sb-mono">{{this.damage}}</span>
+        {{#if this.skill}}<span class="sb-text-muted">{{this.skill}}</span>{{/if}}
+        {{#if this.rollable}}<button type="button" class="sb-btn sb-btn-destructive sb-btn-xs" data-action="roll-armament" data-formula="{{this.damage}}" data-label="{{this.name}}"><i class="fa-solid fa-burst"></i> {{localize "SHADOWBASE.Sheet.Weapon.Damage"}}</button>{{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  {{/if}}
+  {{#if main.notes}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Item.Starship.ModNotes"}}</h4>
+    <p class="sb-dossier sb-pre">{{main.notes}}</p>
+  </div>
+  {{/if}}
+</section>

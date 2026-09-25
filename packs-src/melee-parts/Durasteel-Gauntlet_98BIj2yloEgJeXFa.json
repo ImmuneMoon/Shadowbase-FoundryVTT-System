@@ -1,0 +1,46 @@
+{
+  "_id": "98BIj2yloEgJeXFa",
+  "_key": "!items!98BIj2yloEgJeXFa",
+  "name": "Durasteel Gauntlet",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "ILYK3Ll3GTKanvNj",
+  "sort": 100000,
+  "system": {
+    "row": {
+      "id": "14049d81-7e71-42b9-a05d-42e4f0cf2be8",
+      "name": "Durasteel Gauntlet",
+      "category": "Melee Grip",
+      "cost": 50,
+      "weight": 0.98,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "gauntlet",
+      "materialId": "durasteel",
+      "notes": "Brawling/Karate. Leaves hand free. Parries as unarmed.",
+      "effect": "Brawling/Karate. Leaves hand free. Parries as unarmed.",
+      "energyResBonus": 0,
+      "volume": 0.002,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "part:gauntlet"
+    }
+  }
+}

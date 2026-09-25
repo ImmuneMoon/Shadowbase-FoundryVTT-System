@@ -1,0 +1,19 @@
+{
+  "_id": "tS9seYVcjKTzsj6l",
+  "_key": "!folders!tS9seYVcjKTzsj6l",
+  "name": "Melee Head",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "path": [
+        "Melee Head"
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "6AvzdOBgiswNw98Z",
+  "_key": "!items!6AvzdOBgiswNw98Z",
+  "name": "Medium Hand Shell (Beskar)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 5500000,
+  "system": {
+    "row": {
+      "id": "3f8aeff3-a72a-44eb-9751-107335aae663",
+      "name": "Medium Hand Shell (Beskar)",
+      "category": "Armor Shell",
+      "cost": 3750,
+      "weight": 1.25,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-medium-hands-beskar",
+      "materialId": "beskar",
+      "notes": "Mandalorian iron. +5 DR vs. energy damage. Medium and Heavy tiers only -- it is not milled thin.",
+      "validSlots": [],
+      "drBonus": 6,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-medium-hands-beskar"
+    }
+  }
+}

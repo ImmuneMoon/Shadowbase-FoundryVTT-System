@@ -1,0 +1,42 @@
+{
+  "_id": "G2KRLeuLPFwX8dfZ",
+  "_key": "!items!G2KRLeuLPFwX8dfZ",
+  "name": "Blueprint: Expanded Processor Housing",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "YbNWJn9nl1OgfL9I",
+  "sort": 29100000,
+  "system": {
+    "row": {
+      "id": "27db54a4-1498-4a13-8600-e0c97eac5d37",
+      "name": "Blueprint: Expanded Processor Housing",
+      "cost": 182,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Expanded Processor Housing (Generation 0, proven, encoded, catalog design). Required to build Expanded Processor Housing; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Expanded Processor Housing",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 75,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Utility Mount|Expanded Processor Housing"
+    }
+  }
+}

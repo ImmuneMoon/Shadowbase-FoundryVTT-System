@@ -1,0 +1,33 @@
+{
+  "_id": "YYNdQSMleUoDo8X1",
+  "_key": "!items!YYNdQSMleUoDo8X1",
+  "name": "Natural Dancer",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "RdM67Srk6HMq7Ns7",
+  "sort": 11800000,
+  "system": {
+    "row": {
+      "name": "Natural Dancer",
+      "points": 0,
+      "description": "Many Twi'leks have innate grace and flexibility. They gain a +1 bonus to Dancing (DX/Average) skill. Can be used for entertainment, distraction, or as a cover for more illicit activities.",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Natural Dancer"
+    }
+  }
+}

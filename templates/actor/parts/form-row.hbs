@@ -1,0 +1,48 @@
+{{!-- templates/actor/parts/form-row.hbs - one lightsaber Form row (lightsaber-forms-section.tsx 180-300: form select, Lvl select,
+     Points (Calculated), Activate; when active: Select Lightsaber, Attack / Damage / Dodge / Parry / Block). Context: a formRow. --}}
+<li class="sb-row sb-form-row{{#if isActive}} is-active{{/if}}" data-item-id="{{id}}">
+  <div class="sb-row__main">
+    {{#if isCustom}}
+    <input type="text" class="sb-input sb-row__name" name="items.{{id}}.row.name" value="{{rowName}}" placeholder="{{localize "SHADOWBASE.Sheet.Abilities.FormName"}}" {{disabled (not @root.editable)}}>
+    {{else}}
+    <select class="sb-select sb-row__name" name="items.{{id}}.row.name" {{disabled (not @root.editable)}}>
+      {{#each forms}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+    </select>
+    {{/if}}
+    <select class="sb-select sb-select--sm" name="items.{{id}}.row.level" data-dtype="Number" title="{{localize "SHADOWBASE.Sheet.Abilities.Level"}}" {{disabled (not @root.editable)}}>
+      {{#each levels}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+    </select>
+    {{#if tier}}<span class="sb-badge sb-badge-secondary">{{tier}}</span>{{/if}}
+    <output class="sb-input sb-input--calc sb-calc" title="{{localize "SHADOWBASE.Sheet.Abilities.PointsCalculated"}}">{{effective}}</output>
+    <button type="button" class="sb-btn sb-btn-sm {{#if isActive}}sb-btn-default is-active{{else}}sb-btn-outline{{/if}}" data-action="toggleActiveForm" data-item-id="{{id}}" {{disabled (not @root.editable)}}>
+      <i class="fa-solid {{#if isActive}}fa-circle-check{{else}}fa-circle-dot{{/if}}"></i> {{#if isActive}}{{localize "SHADOWBASE.Sheet.Abilities.FormActive"}}{{else}}{{localize "SHADOWBASE.Sheet.Abilities.FormActivate"}}{{/if}}
+    </button>
+    <span class="sb-row-tools">
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon" data-action="openItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.OpenSheet"}}"><i class="fa-solid fa-up-right-from-square"></i></button>
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-danger" data-action="deleteItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.Delete"}}" {{disabled (not @root.editable)}}><i class="fa-solid fa-xmark"></i></button>
+    </span>
+  </div>
+  {{#if isActive}}
+  <div class="sb-row__sub sb-row__roll">
+    <select class="sb-select sb-select--sm" name="system.activeFormWeaponId" title="{{localize "SHADOWBASE.Sheet.Abilities.SelectSaber"}}" {{disabled (not @root.editable)}}>
+      {{#each sabers}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+    </select>
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="rollFormAttack" {{disabled (not hasSaber)}}>{{localize "SHADOWBASE.Sheet.Abilities.FormAttack"}}{{#if attackTarget}} ({{attackTarget}}){{/if}}</button>
+    <button type="button" class="sb-btn sb-btn-destructive sb-btn-sm" data-action="rollFormDamage" {{disabled (not hasSaber)}} title="{{damage}}">{{localize "SHADOWBASE.Sheet.Abilities.FormDamage"}}</button>
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="rollFormDefense" data-kind="dodge">{{localize "SHADOWBASE.Roll.Dodge"}}{{#if dodgeTarget}} ({{dodgeTarget}}){{/if}}</button>
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="rollFormDefense" data-kind="parry" {{disabled (not hasSaber)}}>{{localize "SHADOWBASE.Sheet.Abilities.Parry"}}{{#if parryTarget}} ({{parryTarget}}){{/if}}</button>
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="rollFormDefense" data-kind="block" {{disabled (not hasSaber)}}>{{localize "SHADOWBASE.Sheet.Abilities.Block"}}{{#if blockTarget}} ({{blockTarget}}){{/if}}</button>
+    <span class="sb-tags">
+      {{#if bonuses.attack}}<span class="sb-badge sb-badge-outline sb-badge--effect sb-badge--pos">{{localize "SHADOWBASE.Sheet.Abilities.FormBonus" n=bonuses.attack what=(localize "SHADOWBASE.Sheet.Abilities.Attack")}}</span>{{/if}}
+      {{#if bonuses.parry}}<span class="sb-badge sb-badge-outline sb-badge--effect sb-badge--pos">{{localize "SHADOWBASE.Sheet.Abilities.FormBonus" n=bonuses.parry what=(localize "SHADOWBASE.Sheet.Abilities.Parry")}}</span>{{/if}}
+      {{#if bonuses.dodge}}<span class="sb-badge sb-badge-outline sb-badge--effect sb-badge--pos">{{localize "SHADOWBASE.Sheet.Abilities.FormBonus" n=bonuses.dodge what=(localize "SHADOWBASE.Roll.Dodge")}}</span>{{/if}}
+      {{#if bonuses.block}}<span class="sb-badge sb-badge-outline sb-badge--effect sb-badge--pos">{{localize "SHADOWBASE.Sheet.Abilities.FormBonus" n=bonuses.block what=(localize "SHADOWBASE.Sheet.Abilities.Block")}}</span>{{/if}}
+      {{#if bonuses.basicMove}}<span class="sb-badge sb-badge-outline sb-badge--effect sb-badge--pos">{{localize "SHADOWBASE.Sheet.Abilities.FormBonus" n=bonuses.basicMove what=(localize "SHADOWBASE.Sheet.Abilities.BasicMove")}}</span>{{/if}}
+    </span>
+  </div>
+  {{/if}}
+  <details class="sb-row__details">
+    <summary>{{localize "SHADOWBASE.Sheet.Abilities.Effect"}}</summary>
+    {{#if isCustom}}<textarea class="sb-textarea" name="items.{{id}}.row.effect" rows="2" {{disabled (not @root.editable)}}>{{effect}}</textarea>{{else}}<p class="sb-dossier">{{effect}}</p>{{/if}}
+  </details>
+</li>

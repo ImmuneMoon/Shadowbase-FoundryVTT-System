@@ -1,0 +1,34 @@
+{
+  "_id": "hBu2WrZi0hMme5H8",
+  "_key": "!items!hBu2WrZi0hMme5H8",
+  "name": "Truthfulness",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 13600000,
+  "system": {
+    "row": {
+      "name": "Truthfulness",
+      "points": -5,
+      "level": null,
+      "description": "You find it difficult to lie or omit facts, even when it might be beneficial. This makes you transparent and potentially exploitable in negotiations or when dealing with deceitful adversaries.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Truthfulness|Mental"
+    }
+  }
+}

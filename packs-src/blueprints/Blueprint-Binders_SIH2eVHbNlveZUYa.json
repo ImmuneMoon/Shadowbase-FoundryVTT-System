@@ -1,0 +1,42 @@
+{
+  "_id": "SIH2eVHbNlveZUYa",
+  "_key": "!items!SIH2eVHbNlveZUYa",
+  "name": "Blueprint: Binders",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "xtHjuvh0p0WoiA5W",
+  "sort": 44600000,
+  "system": {
+    "row": {
+      "id": "ab413251-d4be-48fc-9ce1-e9c7688944f8",
+      "name": "Blueprint: Binders",
+      "cost": 177,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Binders (Generation 0, proven, encoded, catalog design). Required to build Binders; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Binders",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 23.833333333333332,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Restraints & Security|Binders"
+    }
+  }
+}

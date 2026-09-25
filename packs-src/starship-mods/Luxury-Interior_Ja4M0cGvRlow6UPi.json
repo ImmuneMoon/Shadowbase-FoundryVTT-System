@@ -1,0 +1,36 @@
+{
+  "_id": "Ja4M0cGvRlow6UPi",
+  "_key": "!items!Ja4M0cGvRlow6UPi",
+  "name": "Luxury Interior",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DapjGzFEDYWwk37E",
+  "sort": 1600000,
+  "system": {
+    "row": {
+      "id": "e5969b38-19b5-4e7d-9b6c-cee9b9cd39fb",
+      "name": "Luxury Interior",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Starship Modification",
+      "cost": 0,
+      "weight": 0,
+      "quantity": 1,
+      "description": "Utility modification. +1 to Savoir-Faire, Diplomacy and Merchant rolls made aboard; a full rest aboard recovers EP as though under comfortable conditions. Cost: 10% of the hull cost."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "starship-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "starship-mods",
+      "key": "Luxury Interior"
+    }
+  }
+}

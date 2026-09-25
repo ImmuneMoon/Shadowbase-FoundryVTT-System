@@ -1,0 +1,36 @@
+{
+  "_id": "ayxXnslSCaamr8kS",
+  "_key": "!items!ayxXnslSCaamr8kS",
+  "name": "Engine Tuning",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "YTgdmbmaEwnsBSTa",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "id": "0b97516f-fc2a-4592-8ae7-8e3b3dd7dd3c",
+      "name": "Engine Tuning",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Starship Modification",
+      "cost": 0,
+      "weight": 0,
+      "quantity": 1,
+      "description": "Performance modification. +1 Sublight Speed. Cost: 15% of the hull cost."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "starship-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "starship-mods",
+      "key": "Engine Tuning"
+    }
+  }
+}

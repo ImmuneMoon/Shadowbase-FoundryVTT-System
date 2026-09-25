@@ -1,0 +1,42 @@
+{
+  "_id": "KLDplIfdKkBwbCPh",
+  "_key": "!items!KLDplIfdKkBwbCPh",
+  "name": "Plasteel",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "VqX65UQVOs2JpxDL",
+  "sort": 3000000,
+  "system": {
+    "row": {
+      "name": "Plasteel",
+      "rarity": "Common",
+      "cost": 40,
+      "density": 300,
+      "category": "Raw Materials",
+      "subCategory": "Metal",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A rigid, durable fusion of plastoid and steel.",
+      "id": "49ea4b3a-b115-4818-a09f-e96624209266",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "material:Plasteel"
+    }
+  }
+}

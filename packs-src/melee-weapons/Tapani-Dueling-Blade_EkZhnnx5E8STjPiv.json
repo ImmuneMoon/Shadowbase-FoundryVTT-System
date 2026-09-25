@@ -1,0 +1,123 @@
+{
+  "_id": "EkZhnnx5E8STjPiv",
+  "_key": "!items!EkZhnnx5E8STjPiv",
+  "name": "Tapani Dueling Blade",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "nbRV9VVXrN4o4HMj",
+  "sort": 2900000,
+  "system": {
+    "row": {
+      "id": "df2e4fa2-633a-4071-80ad-b6940bf5db50",
+      "customName": "Tapani Dueling Blade",
+      "baseType": "Tapani Dueling Blade",
+      "baseSkill": "Smallsword",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": null,
+      "maxCharges": null,
+      "condition": "Fine",
+      "baseReach": "C, 1",
+      "baseWeight": 0.98,
+      "finalWeight": 0.98,
+      "baseCost": 52,
+      "finalCost": 104,
+      "gripParts": [
+        {
+          "inventoryId": "172fcb5f-31cd-4b3d-aa3c-f68cf2c11e17",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "b6e6f66d-4f72-4f35-9560-efa0c64016b4",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "df2e4fa2-633a-4071-80ad-b6940bf5db50",
+        "customName": "Tapani Dueling Blade",
+        "baseType": "Tapani Dueling Blade",
+        "baseSkill": "Smallsword",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": null,
+        "maxCharges": null,
+        "condition": "Fine",
+        "baseReach": "C, 1",
+        "baseWeight": 0.98,
+        "finalWeight": 0.98,
+        "baseCost": 52,
+        "finalCost": 104,
+        "gripParts": [
+          {
+            "inventoryId": "172fcb5f-31cd-4b3d-aa3c-f68cf2c11e17",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "b6e6f66d-4f72-4f35-9560-efa0c64016b4",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "172fcb5f-31cd-4b3d-aa3c-f68cf2c11e17",
+          "name": "Short Hilt",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 26,
+          "weight": 0.49,
+          "isInstalled": true,
+          "installedInMeleeId": "df2e4fa2-633a-4071-80ad-b6940bf5db50",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Knife/Smallsword. 1-handed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "b6e6f66d-4f72-4f35-9560-efa0c64016b4",
+          "name": "Thrusting Point",
+          "category": "Melee Head",
+          "materialId": "durasteel",
+          "cost": 26,
+          "weight": 0.49,
+          "isInstalled": true,
+          "installedInMeleeId": "df2e4fa2-633a-4071-80ad-b6940bf5db50",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Balanced.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Tapani Dueling Blade"
+    }
+  }
+}

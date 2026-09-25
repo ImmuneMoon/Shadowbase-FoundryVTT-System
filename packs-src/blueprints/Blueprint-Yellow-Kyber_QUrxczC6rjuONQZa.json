@@ -1,0 +1,42 @@
+{
+  "_id": "QUrxczC6rjuONQZa",
+  "_key": "!items!QUrxczC6rjuONQZa",
+  "name": "Blueprint: Yellow Kyber",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 38800000,
+  "system": {
+    "row": {
+      "id": "be86ac0b-06cf-40fe-a84a-32d8bb762e72",
+      "name": "Blueprint: Yellow Kyber",
+      "cost": 574,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Yellow Kyber (Generation 0, proven, encoded, catalog design). Required to build Yellow Kyber; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Yellow Kyber",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 4000,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Yellow Kyber"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "wCGuWN6beOB8SceS",
+  "_key": "!items!wCGuWN6beOB8SceS",
+  "name": "Enhanced Time Sense",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 5800000,
+  "system": {
+    "row": {
+      "name": "Enhanced Time Sense",
+      "points": 45,
+      "description": "You perceive time at an accelerated rate, allowing you to move and react much faster than normal individuals. This can grant extra actions or significant defensive bonuses in combat. Crucial for outmaneuvering any opponent, regardless of their alignment, or performing complex tasks under extreme pressure. Prerequisite: Force Sensitive (if taken as a Force-related advantage, especially crucial for advanced Lightsaber Combat and parrying blaster pistols or rifles).",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Enhanced Time Sense"
+    }
+  }
+}

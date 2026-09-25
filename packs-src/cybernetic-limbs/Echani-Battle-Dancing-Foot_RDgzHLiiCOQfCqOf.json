@@ -1,0 +1,45 @@
+{
+  "_id": "RDgzHLiiCOQfCqOf",
+  "_key": "!items!RDgzHLiiCOQfCqOf",
+  "name": "Echani \"Battle-Dancing\" Foot",
+  "type": "cyberneticLimb",
+  "img": "icons/svg/bones.svg",
+  "folder": "XY3P8r89fv7qHBeH",
+  "sort": 1400000,
+  "system": {
+    "row": {
+      "id": "94a91982-fff3-44c4-8671-3020d1ac3ba3",
+      "name": "Echani \"Battle-Dancing\" Foot",
+      "location": "Right Foot",
+      "extent": "Partial",
+      "material": "Cortosis-Durasteel",
+      "cost": 8460,
+      "weight": 3.65,
+      "dr": 8,
+      "currentDr": 8,
+      "effect": "+3 to DR  vs energy (burn/ cr) damage. disrupts lightsabers.",
+      "upgrades": [],
+      "hasSynthskin": false,
+      "installed": false,
+      "storageLocationId": null,
+      "quantity": 1,
+      "baselinePoints": 0,
+      "itemSizeModifier": 0
+    },
+    "source": "cybernetics",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-limbs"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-limbs",
+      "key": "Foot|Echani \"Battle-Dancing\" Foot"
+    }
+  }
+}

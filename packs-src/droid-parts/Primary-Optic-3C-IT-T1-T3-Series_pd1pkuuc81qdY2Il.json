@@ -1,0 +1,39 @@
+{
+  "_id": "pd1pkuuc81qdY2Il",
+  "_key": "!items!pd1pkuuc81qdY2Il",
+  "name": "Primary Optic (3C, IT, T1, T3-Series)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "oqIU8n2TNn1530V9",
+  "sort": 3500000,
+  "system": {
+    "row": {
+      "id": "9f001f04-7a32-4eab-b58c-b5313ff6d552",
+      "name": "Primary Optic (3C, IT, T1, T3-Series)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Sensor",
+      "cost": 132,
+      "weight": 1,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "optic-t3-series",
+      "description": "Standard Vision"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "optic-t3-series"
+    }
+  }
+}

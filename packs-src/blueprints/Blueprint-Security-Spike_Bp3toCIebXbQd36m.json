@@ -1,0 +1,42 @@
+{
+  "_id": "Bp3toCIebXbQd36m",
+  "_key": "!items!Bp3toCIebXbQd36m",
+  "name": "Blueprint: Security Spike",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "g7UVHPh3r2MYv5Oo",
+  "sort": 48700000,
+  "system": {
+    "row": {
+      "id": "5f80b696-0e7b-419d-9987-b1afbe3874c5",
+      "name": "Blueprint: Security Spike",
+      "cost": 199,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Security Spike (Generation 0, proven, encoded, catalog design). Required to build Security Spike; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Security Spike",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 250,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Tools & Electronics|Security Spike"
+    }
+  }
+}

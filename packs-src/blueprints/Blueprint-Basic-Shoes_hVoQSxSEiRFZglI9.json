@@ -1,0 +1,42 @@
+{
+  "_id": "hVoQSxSEiRFZglI9",
+  "_key": "!items!hVoQSxSEiRFZglI9",
+  "name": "Blueprint: Basic Shoes",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 14500000,
+  "system": {
+    "row": {
+      "id": "8235fead-525f-4a8e-a6b8-3c3b554ad171",
+      "name": "Blueprint: Basic Shoes",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Basic Shoes (Generation 0, proven, encoded, catalog design). Required to build Basic Shoes; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Basic Shoes",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Basic Shoes"
+    }
+  }
+}

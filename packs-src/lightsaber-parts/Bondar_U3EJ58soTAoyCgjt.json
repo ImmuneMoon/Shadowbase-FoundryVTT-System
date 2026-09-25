@@ -1,0 +1,48 @@
+{
+  "_id": "U3EJ58soTAoyCgjt",
+  "_key": "!items!U3EJ58soTAoyCgjt",
+  "name": "Bondar",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "CHP7xje9NHnZhKqb",
+  "sort": 6200000,
+  "system": {
+    "row": {
+      "id": "ec76ee9b-6b00-48fa-b05a-8fd1462870ba",
+      "name": "Bondar",
+      "cost": 500,
+      "weight": 0.2,
+      "effect": "Target must make an HT+1 roll or be stunned.",
+      "category": "Lightsaber Power Crystal",
+      "materials": [
+        {
+          "name": "Plastoid",
+          "amount": 0.1
+        },
+        {
+          "name": "Silicon",
+          "amount": 0.1
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "Target must make an HT+1 roll or be stunned."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:bondar"
+    }
+  }
+}

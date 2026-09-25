@@ -1,0 +1,42 @@
+{
+  "_id": "Kl5EattlknDyehlg",
+  "_key": "!items!Kl5EattlknDyehlg",
+  "name": "Blueprint: Pistol Shot (Nonlethal)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DvRG95q4QWZQnNFm",
+  "sort": 2000000,
+  "system": {
+    "row": {
+      "id": "b0df08d6-e1c2-4c0e-9e96-b637c2f40583",
+      "name": "Blueprint: Pistol Shot (Nonlethal)",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Pistol Shot (Nonlethal) (Generation 0, proven, encoded, catalog design). Required to build Pistol Shot (Nonlethal); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Pistol Shot (Nonlethal)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3.7777777777777777,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Ammunition|Pistol Shot (Nonlethal)"
+    }
+  }
+}

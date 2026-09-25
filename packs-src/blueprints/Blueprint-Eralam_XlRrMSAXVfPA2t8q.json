@@ -1,0 +1,42 @@
+{
+  "_id": "XlRrMSAXVfPA2t8q",
+  "_key": "!items!XlRrMSAXVfPA2t8q",
+  "name": "Blueprint: Eralam",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 35100000,
+  "system": {
+    "row": {
+      "id": "57d3b26b-2829-4a30-a849-1ed212dbec34",
+      "name": "Blueprint: Eralam",
+      "cost": 774,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Eralam (Generation 0, proven, encoded, catalog design). Required to build Eralam; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Eralam",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 6000,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Eralam"
+    }
+  }
+}

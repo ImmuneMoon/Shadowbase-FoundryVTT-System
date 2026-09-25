@@ -1,0 +1,549 @@
+{
+  "_id": "9sWv9BA4vJ4wOVC1",
+  "_key": "!actors!9sWv9BA4vJ4wOVC1",
+  "name": "R-8009 Utility Droid",
+  "type": "character",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "vQod5iBtogydF5Dh",
+  "sort": 6300000,
+  "system": {
+    "legacy": {},
+    "playerName": "",
+    "species": "Droid (Utility)",
+    "homeworld": "Alderaan (Industrial Automaton)",
+    "characterPortrait": null,
+    "campaign": "Shadows of the Mandalorian Wars",
+    "pointTotal": 150,
+    "turnCounter": 0,
+    "facing": 0,
+    "incomingBearing": 0,
+    "threatEngaged": false,
+    "incomingArc": null,
+    "facingChangeUsed": false,
+    "posture": "standing",
+    "elevation": 0,
+    "parriesThisTurn": 0,
+    "height": "1.00 m",
+    "weight": "47 kg / 104 lb",
+    "sizeModifier": 0,
+    "age": 0,
+    "appearance": "",
+    "techLevel": "",
+    "isDroid": true,
+    "powerPoints": 100,
+    "lightSidePoints": 0,
+    "darkSidePoints": 0,
+    "trackDigital": false,
+    "trackPhysical": false,
+    "totalCredits": 7000,
+    "forceAlignment": 0,
+    "isStartingPointsMode": true,
+    "isConstructed": true,
+    "cpBaseline": 0,
+    "stBaseline": 10,
+    "dxBaseline": 10,
+    "iqBaseline": 10,
+    "htBaseline": 10,
+    "hitPointsBaseline": 0,
+    "endurancePointsBaseline": 0,
+    "forcePointsBaseline": 0,
+    "willBaseline": 0,
+    "perceptionBaseline": 0,
+    "frightCheckBaseline": 0,
+    "basicSpeedBaseline": 0,
+    "basicMoveBaseline": 0,
+    "visionBaseline": 0,
+    "hearingBaseline": 0,
+    "tasteAndSmellBaseline": 0,
+    "touchBaseline": 0,
+    "languagesBaseline": 0,
+    "culturalFamiliaritiesBaseline": 0,
+    "literacyBaseline": 0,
+    "languageEntries": [
+      {
+        "id": "2115b992-f0ca-4617-b44d-faa85abbb6ca",
+        "tongue": "Droidspeak",
+        "tier": "native",
+        "notes": "binary"
+      },
+      {
+        "id": "b11f60fa-6a7c-4c27-8acc-894ceffac7f6",
+        "tongue": "Basic",
+        "tier": "fluent",
+        "comprehensionOnly": true,
+        "granted": true
+      }
+    ],
+    "republicRaised": false,
+    "frightCheck": null,
+    "basicSpeed": null,
+    "basicMove": null,
+    "selectedParrySkill": null,
+    "selectedBlockSkill": null,
+    "activeLightsaberForm": null,
+    "hitLocations": [
+      {
+        "name": "Head",
+        "type": "Head",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 2,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 3,
+        "installedHardwareIds": [],
+        "id": "3bd00c61-8864-490b-86a3-faca8bf47561"
+      },
+      {
+        "name": "Face",
+        "type": "Face",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 5,
+        "installedHardwareIds": [],
+        "id": "01fc2684-dbe9-4324-a2db-3878409a0d16"
+      },
+      {
+        "name": "Upper Torso",
+        "type": "Vitals",
+        "side": "Center",
+        "relativeSM": -3,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 17,
+        "installedHardwareIds": [],
+        "id": "5bf6ed44-2ba6-4f17-b46d-2c35293774c8"
+      },
+      {
+        "name": "Torso",
+        "type": "Torso",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 10,
+        "installedHardwareIds": [],
+        "id": "cdf64e4f-cfce-45da-9abe-e170ca187a11"
+      },
+      {
+        "name": "Right Arm",
+        "type": "Arm",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 7,
+        "installedHardwareIds": [],
+        "id": "30cb94a7-f9dd-4262-9556-8e9dc4609124"
+      },
+      {
+        "name": "Right Hand",
+        "type": "Hand",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "14c97c53-18f0-416e-b20e-07ad0041a41a"
+      },
+      {
+        "name": "Left Arm",
+        "type": "Arm",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 8,
+        "installedHardwareIds": [],
+        "id": "291a6b2a-4b50-4200-b79a-aa0dc509f01b"
+      },
+      {
+        "name": "Left Hand",
+        "type": "Hand",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "5ea9481c-06d9-48f8-a231-211fa5521426"
+      },
+      {
+        "name": "Right Leg",
+        "type": "Leg",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "88c37710-85b7-4bd0-82a1-347dfb5bfd84"
+      },
+      {
+        "name": "Right Foot",
+        "type": "Foot",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "9d751999-b2a0-4fc0-9b1a-1eba62e7ee60"
+      },
+      {
+        "name": "Left Leg",
+        "type": "Leg",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "ad0af330-de7d-4976-90cc-c270075413aa"
+      },
+      {
+        "name": "Left Foot",
+        "type": "Foot",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "d1faa5b7-e27f-4ab3-85a3-89a293064782"
+      }
+    ],
+    "languages": "Droidspeak (Native); Basic (Fluent, Comprehension-only, granted)",
+    "culturalFamiliarities": "",
+    "literacy": "",
+    "description": "",
+    "background": "",
+    "notes": "",
+    "pointsAttributes": 0,
+    "pointsAdvantages": 0,
+    "pointsDisadvantages": 0,
+    "pointsOther": 0,
+    "cpTradedForCredits": 0,
+    "cpCreditsForm": "digital",
+    "currentHitPoints": 10,
+    "currentEndurancePoints": 0,
+    "currentForcePoints": 0,
+    "strength": null,
+    "dexterity": null,
+    "iq": null,
+    "health": null,
+    "hitPoints": null,
+    "will": null,
+    "perception": null,
+    "vision": null,
+    "hearing": null,
+    "tasteAndSmell": null,
+    "touch": null,
+    "endurancePoints": null,
+    "forcePoints": null,
+    "shipPosition": null,
+    "assignedStation": null,
+    "storageBoxes": [],
+    "droidBuild": {
+      "chassisId": "r-series-cyl",
+      "powerCoreId": "std-core",
+      "head": {
+        "componentId": "r-series-fixed",
+        "processorId": "cognitive",
+        "memoryCoreId": null,
+        "sensorIds": [
+          "optic-r-series"
+        ],
+        "externalModId": null
+      },
+      "arms": [],
+      "legs": [],
+      "chassisMods": {
+        "internalIds": [],
+        "externalIds": [],
+        "utilityIds": [
+          "tool-mount-std"
+        ],
+        "auxiliaryIds": [],
+        "motiveMountIds": [
+          "r-series-repulsor",
+          "r-series-repulsor",
+          "r-series-repulsor"
+        ],
+        "reinforcementId": null,
+        "armorId": "dr-plating-2",
+        "motivatorId": null,
+        "actuatorId": null,
+        "wiringId": null
+      }
+    },
+    "pinnedNotifications": [],
+    "useLiftingST": true,
+    "useStrikingST": true,
+    "useArmST": true
+  },
+  "prototypeToken": {
+    "name": "R-8009 Utility Droid",
+    "actorLink": true,
+    "displayName": 30,
+    "displayBars": 40,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "resources.hp"
+    },
+    "bar2": {
+      "attribute": "resources.ep"
+    }
+  },
+  "items": [
+    {
+      "_id": "g00YE3OCgxKOlvfH",
+      "_key": "!actors.items!9sWv9BA4vJ4wOVC1.g00YE3OCgxKOlvfH",
+      "name": "Machine",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Machine",
+          "points": 25,
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "ulWiDqDVYQkj4iRp",
+      "_key": "!actors.items!9sWv9BA4vJ4wOVC1.ulWiDqDVYQkj4iRp",
+      "name": "Injury Tolerance (Unliving)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Injury Tolerance (Unliving)",
+          "points": 20,
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "dkMYbkK6jmkrTFST",
+      "_key": "!actors.items!9sWv9BA4vJ4wOVC1.dkMYbkK6jmkrTFST",
+      "name": "Digital Mind",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Digital Mind",
+          "points": 5,
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "A0JiDXBrMONSqtUd",
+      "_key": "!actors.items!9sWv9BA4vJ4wOVC1.A0JiDXBrMONSqtUd",
+      "name": "Unhealing (Total)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Unhealing (Total)",
+          "points": -30,
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "PJv2ug2Ur35NSmJS",
+      "_key": "!actors.items!9sWv9BA4vJ4wOVC1.PJv2ug2Ur35NSmJS",
+      "name": "Electrical",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Electrical",
+          "points": -20,
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "qMCAv52ZrsmTkfQe",
+      "_key": "!actors.items!9sWv9BA4vJ4wOVC1.qMCAv52ZrsmTkfQe",
+      "name": "Social Stigma (Valuable Property)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Social Stigma (Valuable Property)",
+          "points": -10,
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "XQ9iDG9BrYP9uzyj",
+      "_key": "!actors.items!9sWv9BA4vJ4wOVC1.XQ9iDG9BrYP9uzyj",
+      "name": "Computer Operation",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Computer Operation",
+          "relativeLevel": "IQ/E",
+          "level": "11",
+          "points": 1,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "QCzLdgBXnNjglfOh",
+      "_key": "!actors.items!9sWv9BA4vJ4wOVC1.QCzLdgBXnNjglfOh",
+      "name": "Electronics Repair (Computers)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Electronics Repair (Computers)",
+          "relativeLevel": "IQ/A",
+          "level": "10",
+          "points": 1,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "gDGTZI4FD5iwbZOU",
+      "_key": "!actors.items!9sWv9BA4vJ4wOVC1.gDGTZI4FD5iwbZOU",
+      "name": "Mechanic (Starship)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Mechanic (Starship)",
+          "relativeLevel": "IQ/A",
+          "level": "10",
+          "points": 1,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "VHSzURggYzpzTozd",
+      "_key": "!actors.items!9sWv9BA4vJ4wOVC1.VHSzURggYzpzTozd",
+      "name": "Credit Chip",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "3f36a671-d0be-4a3f-9430-a26a24c0a137",
+          "name": "Credit Chip",
+          "category": "Currencies",
+          "weight": 0.28,
+          "quantity": 1,
+          "storedValue": 7000,
+          "cost": 0,
+          "description": "Standardized storage for carrying digital Galactic Credits. Reading requires a datapad or terminal.",
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "templates",
+      "key": "r8009Utility",
+      "template": {
+        "key": "r8009Utility",
+        "category": "Droids",
+        "description": "Compact maintenance and repair unit. (Cost: -40 CP)",
+        "migrated": true,
+        "notices": [
+          "language-entries"
+        ]
+      }
+    }
+  }
+}

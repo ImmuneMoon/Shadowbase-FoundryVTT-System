@@ -1,0 +1,34 @@
+{
+  "_id": "4Rbqdm6flOVq4ZQN",
+  "_key": "!items!4Rbqdm6flOVq4ZQN",
+  "name": "Social Stigma (Scavenger)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "QdWbP3PunGyoJeht",
+  "sort": 18600000,
+  "system": {
+    "row": {
+      "name": "Social Stigma (Scavenger)",
+      "points": -10,
+      "level": null,
+      "description": "Viewed with suspicion and often assumed to be a thief or drifter.",
+      "category": "Social",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Social Stigma (Scavenger)|Social"
+    }
+  }
+}

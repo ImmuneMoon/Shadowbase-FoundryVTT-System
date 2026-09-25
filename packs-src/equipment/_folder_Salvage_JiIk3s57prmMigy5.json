@@ -1,0 +1,20 @@
+{
+  "_id": "JiIk3s57prmMigy5",
+  "_key": "!folders!JiIk3s57prmMigy5",
+  "name": "Salvage",
+  "type": "Item",
+  "folder": "3XecnUQT2Vf6eRWf",
+  "sorting": "a",
+  "sort": 2800000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "path": [
+        "Raw Materials",
+        "Salvage"
+      ]
+    }
+  }
+}

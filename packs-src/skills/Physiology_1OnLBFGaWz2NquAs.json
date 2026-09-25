@@ -1,0 +1,34 @@
+{
+  "_id": "1OnLBFGaWz2NquAs",
+  "_key": "!items!1OnLBFGaWz2NquAs",
+  "name": "Physiology",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "gAzYSLPjIJTF25Cz",
+  "sort": 10300000,
+  "system": {
+    "row": {
+      "name": "Physiology",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Physiology"
+    }
+  }
+}

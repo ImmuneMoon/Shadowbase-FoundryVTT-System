@@ -1,0 +1,42 @@
+{
+  "_id": "RBle5fgXYAfPkbOl",
+  "_key": "!items!RBle5fgXYAfPkbOl",
+  "name": "Blueprint: Obsidia",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 36700000,
+  "system": {
+    "row": {
+      "id": "64dede7e-12f4-4ec7-9e04-4e2c5435fb19",
+      "name": "Blueprint: Obsidia",
+      "cost": 1841,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Obsidia (Generation 0, proven, encoded, catalog design). Required to build Obsidia; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Obsidia",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 16666.666666666664,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Obsidia"
+    }
+  }
+}

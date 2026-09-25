@@ -1,0 +1,46 @@
+{
+  "_id": "jT9qKarIgCTFktRS",
+  "_key": "!items!jT9qKarIgCTFktRS",
+  "name": "Durasteel Magnum Receiver",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "aClHr8Ajc0gX0rPo",
+  "sort": 1700000,
+  "system": {
+    "row": {
+      "id": "23c5d524-13eb-4f68-9ea3-8760dfe99a8f",
+      "name": "Durasteel Magnum Receiver",
+      "category": "Ranged Receiver",
+      "cost": 62,
+      "weight": 1.225,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "magnum-receiver",
+      "materialId": "durasteel",
+      "notes": "Heavy handgun mechanism.",
+      "effect": "Heavy handgun mechanism.",
+      "energyResBonus": 0,
+      "volume": 0.0025,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "magnum-receiver"
+    }
+  }
+}

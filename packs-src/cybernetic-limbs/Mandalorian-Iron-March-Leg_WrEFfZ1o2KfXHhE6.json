@@ -1,0 +1,45 @@
+{
+  "_id": "WrEFfZ1o2KfXHhE6",
+  "_key": "!items!WrEFfZ1o2KfXHhE6",
+  "name": "Mandalorian \"Iron-March\" Leg",
+  "type": "cyberneticLimb",
+  "img": "icons/svg/bones.svg",
+  "folder": "Z7Iw1uVwNEQNgRlc",
+  "sort": 2000000,
+  "system": {
+    "row": {
+      "id": "1eca944f-7636-49a1-b6a5-c2ed946c6de2",
+      "name": "Mandalorian \"Iron-March\" Leg",
+      "location": "Right Leg",
+      "extent": "Full",
+      "material": "Beskar",
+      "cost": 86320,
+      "weight": 8.35,
+      "dr": 15,
+      "currentDr": 15,
+      "effect": "+5 to DR  vs energy (burn/ cr) damage. extreme durability.",
+      "upgrades": [],
+      "hasSynthskin": false,
+      "installed": false,
+      "storageLocationId": null,
+      "quantity": 1,
+      "baselinePoints": 0,
+      "itemSizeModifier": 0
+    },
+    "source": "cybernetics",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-limbs"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-limbs",
+      "key": "Leg|Mandalorian \"Iron-March\" Leg"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "R0WwZSHJxfpax3yc",
+  "_key": "!items!R0WwZSHJxfpax3yc",
+  "name": "Blueprint: Stealth Suit (Upper)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 9500000,
+  "system": {
+    "row": {
+      "id": "47f3f928-1d73-42c6-9736-8b69693914a2",
+      "name": "Blueprint: Stealth Suit (Upper)",
+      "cost": 244,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Stealth Suit (Upper) (Generation 0, proven, encoded, catalog design). Required to build Stealth Suit (Upper); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Stealth Suit (Upper)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 694,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Stealth Suit (Upper)"
+    }
+  }
+}

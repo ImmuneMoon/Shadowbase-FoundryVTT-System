@@ -1,0 +1,225 @@
+{
+  "_id": "P4VbhP5Q8ikwmGHc",
+  "_key": "!items!P4VbhP5Q8ikwmGHc",
+  "name": "Bothan Droid Disruptor",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "kvW0wIZQTzAxW6LY",
+  "sort": 1200000,
+  "system": {
+    "row": {
+      "id": "20384fcc-a998-4e91-b8c2-3f464faf48fd",
+      "customName": "Bothan Droid Disruptor",
+      "baseType": "Bothan Droid Disruptor",
+      "baseSkill": "Guns (Blaster Rifle)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 7.1,
+      "finalWeight": 7.1,
+      "baseCost": 764,
+      "finalCost": 4584,
+      "currentCharges": 100,
+      "maxCharges": 100,
+      "loadedAmmunitionId": "7ee26544-5827-401a-8f7d-08234ec77f2f",
+      "loadedAmmunitionData": {
+        "id": "7ee26544-5827-401a-8f7d-08234ec77f2f",
+        "name": "Rifle Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "A larger, more robust pack used for rifles and carbines. A gas top-up (30 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "carbine-stock",
+        "inventoryId": "ce2c8e44-b296-4046-9797-1e5f0df4c4d9",
+        "materialId": "plasteel"
+      },
+      "receiverPart": {
+        "partId": "ion-chamber",
+        "inventoryId": "1f4a90e8-b647-4c2a-bcc1-862f2ec6d3ee",
+        "materialId": "plasteel"
+      },
+      "barrelPart": {
+        "partId": "long-emitter",
+        "inventoryId": "ef81fb78-5469-4968-acd6-039b66d4dc37",
+        "materialId": "plasteel"
+      },
+      "targetingPart": {
+        "partId": "precision-targeting",
+        "inventoryId": "2e74d634-ea83-4af1-a3a5-3cb8f1c33fee"
+      },
+      "powerUnitPart": {
+        "partId": "rifle-pwr-pack",
+        "inventoryId": "1f81d3f0-d868-4981-b777-c2cdfa8fbda2"
+      },
+      "powerCellModId": "36fca2b2-3ad7-4b3a-b679-e7aa1c708c05",
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "20384fcc-a998-4e91-b8c2-3f464faf48fd",
+        "customName": "Bothan Droid Disruptor",
+        "baseType": "Bothan Droid Disruptor",
+        "baseSkill": "Guns (Blaster Rifle)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 7.1,
+        "finalWeight": 7.1,
+        "baseCost": 764,
+        "finalCost": 4584,
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "loadedAmmunitionId": "7ee26544-5827-401a-8f7d-08234ec77f2f",
+        "loadedAmmunitionData": {
+          "id": "7ee26544-5827-401a-8f7d-08234ec77f2f",
+          "name": "Rifle Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 100,
+          "maxCharges": 100,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "A larger, more robust pack used for rifles and carbines. A gas top-up (30 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "carbine-stock",
+          "inventoryId": "ce2c8e44-b296-4046-9797-1e5f0df4c4d9",
+          "materialId": "plasteel"
+        },
+        "receiverPart": {
+          "partId": "ion-chamber",
+          "inventoryId": "1f4a90e8-b647-4c2a-bcc1-862f2ec6d3ee",
+          "materialId": "plasteel"
+        },
+        "barrelPart": {
+          "partId": "long-emitter",
+          "inventoryId": "ef81fb78-5469-4968-acd6-039b66d4dc37",
+          "materialId": "plasteel"
+        },
+        "targetingPart": {
+          "partId": "precision-targeting",
+          "inventoryId": "2e74d634-ea83-4af1-a3a5-3cb8f1c33fee"
+        },
+        "powerUnitPart": {
+          "partId": "rifle-pwr-pack",
+          "inventoryId": "1f81d3f0-d868-4981-b777-c2cdfa8fbda2"
+        },
+        "powerCellModId": "36fca2b2-3ad7-4b3a-b679-e7aa1c708c05",
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "ce2c8e44-b296-4046-9797-1e5f0df4c4d9",
+          "name": "Carbine Stock",
+          "partId": "carbine-stock",
+          "category": "Ranged Grip",
+          "materialId": "plasteel",
+          "cost": 144,
+          "weight": 1.8,
+          "isInstalled": true,
+          "installedInBlasterId": "20384fcc-a998-4e91-b8c2-3f464faf48fd",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Compact shoulder brace."
+        },
+        {
+          "id": "1f4a90e8-b647-4c2a-bcc1-862f2ec6d3ee",
+          "name": "Ion Chamber",
+          "partId": "ion-chamber",
+          "category": "Ranged Receiver",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "20384fcc-a998-4e91-b8c2-3f464faf48fd",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard Ion."
+        },
+        {
+          "id": "ef81fb78-5469-4968-acd6-039b66d4dc37",
+          "name": "Long Emitter",
+          "partId": "long-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "plasteel",
+          "cost": 96,
+          "weight": 1.2,
+          "isInstalled": true,
+          "installedInBlasterId": "20384fcc-a998-4e91-b8c2-3f464faf48fd",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "2e74d634-ea83-4af1-a3a5-3cb8f1c33fee",
+          "name": "Precision Targeting Module",
+          "partId": "precision-targeting",
+          "category": "Ranged Targeting",
+          "cost": 116,
+          "weight": 1.5,
+          "isInstalled": true,
+          "installedInBlasterId": "20384fcc-a998-4e91-b8c2-3f464faf48fd",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Sniper and specialized assassin optics."
+        },
+        {
+          "id": "1f81d3f0-d868-4981-b777-c2cdfa8fbda2",
+          "name": "Rifle Power Pack",
+          "partId": "rifle-pwr-pack",
+          "category": "Power Unit",
+          "cost": 210,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInBlasterId": "20384fcc-a998-4e91-b8c2-3f464faf48fd",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "36fca2b2-3ad7-4b3a-b679-e7aa1c708c05",
+          "name": "Droid-Bane Ion Cycler",
+          "category": "Power Cell",
+          "cost": 150,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInBlasterId": "20384fcc-a998-4e91-b8c2-3f464faf48fd",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Deals massive secondary damage exclusively to cybernetics and droids."
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Bothan Droid Disruptor"
+    }
+  }
+}

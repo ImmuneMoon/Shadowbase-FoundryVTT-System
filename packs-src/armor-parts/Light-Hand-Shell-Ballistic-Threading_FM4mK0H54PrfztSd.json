@@ -1,0 +1,42 @@
+{
+  "_id": "FM4mK0H54PrfztSd",
+  "_key": "!items!FM4mK0H54PrfztSd",
+  "name": "Light Hand Shell (Ballistic Threading)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 4800000,
+  "system": {
+    "row": {
+      "id": "5c90045b-b90e-4f0f-bb8e-3e20b3bb788a",
+      "name": "Light Hand Shell (Ballistic Threading)",
+      "category": "Armor Shell",
+      "cost": 4,
+      "weight": 0.15,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-light-hands-ballistic-threading",
+      "materialId": "ballistic-threading",
+      "notes": "Soft, concealable ballistic weave. Light tier only.",
+      "validSlots": [],
+      "drBonus": 1,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-light-hands-ballistic-threading"
+    }
+  }
+}

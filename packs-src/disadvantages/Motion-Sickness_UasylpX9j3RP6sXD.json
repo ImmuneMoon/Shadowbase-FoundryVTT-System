@@ -1,0 +1,34 @@
+{
+  "_id": "UasylpX9j3RP6sXD",
+  "_key": "!items!UasylpX9j3RP6sXD",
+  "name": "Motion Sickness",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "iBhK8LHSekCOv5gO",
+  "sort": 15400000,
+  "system": {
+    "row": {
+      "name": "Motion Sickness",
+      "points": -10,
+      "level": null,
+      "description": "You are miserable when in a moving vehicle. You may never learn any vehicle-operation skill. You must roll vs. HT as soon as you are aboard a moving vehicle. On a failure, you vomit and are at -5 on all DX, IQ, and skill rolls for the rest of the journey. On a success, you are merely miserably queasy and at -2 on DX, IQ, and skill rolls. Roll daily on long journeys.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Motion Sickness|Physical"
+    }
+  }
+}

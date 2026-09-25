@@ -1,0 +1,34 @@
+{
+  "_id": "FwYkGeLLcO8oG1KX",
+  "_key": "!items!FwYkGeLLcO8oG1KX",
+  "name": "Animal Handling",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "gAzYSLPjIJTF25Cz",
+  "sort": 500000,
+  "system": {
+    "row": {
+      "name": "Animal Handling",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Average",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Animal Handling"
+    }
+  }
+}

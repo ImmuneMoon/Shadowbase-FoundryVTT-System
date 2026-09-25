@@ -1,0 +1,42 @@
+{
+  "_id": "rooZc6dh6RiiMnXb",
+  "_key": "!items!rooZc6dh6RiiMnXb",
+  "name": "Blueprint: Sand People Robes",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 18100000,
+  "system": {
+    "row": {
+      "id": "7bf51925-13d1-475e-85d0-b1c65d95eeb6",
+      "name": "Blueprint: Sand People Robes",
+      "cost": 176,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Sand People Robes (Generation 0, proven, encoded, catalog design). Required to build Sand People Robes; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Sand People Robes",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 15.666666666666668,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Sand People Robes"
+    }
+  }
+}

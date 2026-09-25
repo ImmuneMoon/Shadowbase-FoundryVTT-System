@@ -1,0 +1,18 @@
+{{!-- templates/actor/parts/equipment-row.hbs - one General Equipment / Blueprint / Material row (equipment-section.tsx EquipmentItemCard,
+     character-inventory.tsx 331-373: name, currency badge, x qty, storage menu; qty / weight / cost / condition inside). Context: an equipmentRow. --}}
+<li class="sb-row sb-equipment-row{{#if isBlueprint}} is-blueprint{{/if}}" data-item-id="{{id}}">
+  <div class="sb-row__main">
+    <img class="sb-row__icon" src="{{img}}" alt="">
+    <input type="text" class="sb-input sb-row__name" name="items.{{id}}.row.name" value="{{rowName}}" placeholder="{{localize "SHADOWBASE.Sheet.Inventory.ItemName"}}" {{disabled (not @root.editable)}}>
+    {{#if currencyText}}<span class="sb-badge {{#if currencyDigital}}sb-badge--credits-digital{{else}}sb-badge--credits-physical{{/if}}">{{currencyText}}</span>{{/if}}
+    {{#if isBlueprint}}<span class="sb-badge sb-badge-secondary" title="{{blueprintOf}}">{{localize "SHADOWBASE.Sheet.Inventory.Blueprint"}}</span>{{/if}}
+    {{#if isFirmwareCard}}<span class="sb-badge sb-badge-secondary">{{localize "SHADOWBASE.Sheet.Inventory.Firmware"}}</span>{{/if}}
+    <label class="sb-inline"><span class="sb-muted">×</span><input type="number" class="sb-input sb-input--tiny" name="items.{{id}}.row.quantity" value="{{quantity}}" data-dtype="Number" min="0" title="{{localize "SHADOWBASE.Sheet.Inventory.Quantity"}}" {{disabled (not @root.editable)}}></label>
+    <label class="sb-inline" title="{{localize "SHADOWBASE.Sheet.Inventory.WeightEach"}}"><input type="number" class="sb-input sb-input--sm" name="items.{{id}}.row.weight" value="{{weight}}" data-dtype="Number" step="0.01" min="0" {{disabled (not @root.editable)}}><span class="sb-muted">lb</span></label>
+    <label class="sb-inline" title="{{localize "SHADOWBASE.Sheet.Inventory.CostEach"}}"><input type="number" class="sb-input sb-input--sm" name="items.{{id}}.row.cost" value="{{cost}}" data-dtype="Number" min="0" {{disabled (not @root.editable)}}><span class="sb-muted">cr</span></label>
+    <span class="sb-badge {{#if condition.fine}}sb-badge-outline{{else}}sb-badge-destructive{{/if}}">{{condition.text}}</span>
+    <label class="sb-inline sb-check" title="{{localize "SHADOWBASE.Sheet.Inventory.WeightlessHint"}}"><input type="checkbox" name="items.{{id}}.row.weightless" {{checked weightless}} {{disabled (not @root.editable)}}><span>{{localize "SHADOWBASE.Sheet.Inventory.Weightless"}}</span></label>
+    {{> "systems/shadowbase/templates/actor/parts/row-tools.hbs" id=id storage=storage kind=kind editable=@root.editable}}
+  </div>
+  {{#if description}}<p class="sb-muted sb-row__sub">{{description}}</p>{{/if}}
+</li>

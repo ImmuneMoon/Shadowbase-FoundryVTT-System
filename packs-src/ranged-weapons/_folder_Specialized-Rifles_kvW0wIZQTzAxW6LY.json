@@ -1,0 +1,19 @@
+{
+  "_id": "kvW0wIZQTzAxW6LY",
+  "_key": "!folders!kvW0wIZQTzAxW6LY",
+  "name": "Specialized Rifles",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 0,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "path": [
+        "Specialized Rifles"
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "FLWgnU9xnpfcGQVK",
+  "_key": "!items!FLWgnU9xnpfcGQVK",
+  "name": "Distinctive Features (Skin Patterns)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "iBhK8LHSekCOv5gO",
+  "sort": 15000000,
+  "system": {
+    "row": {
+      "name": "Distinctive Features (Skin Patterns)",
+      "points": -1,
+      "level": null,
+      "description": "Bold colors and patterns that make hiding difficult.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Distinctive Features (Skin Patterns)|Physical"
+    }
+  }
+}

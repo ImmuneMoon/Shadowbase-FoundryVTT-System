@@ -1,0 +1,34 @@
+{
+  "_id": "yBvLsy8BXnjH3452",
+  "_key": "!items!yBvLsy8BXnjH3452",
+  "name": "Impulsiveness",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 10800000,
+  "system": {
+    "row": {
+      "name": "Impulsiveness",
+      "points": -10,
+      "level": null,
+      "description": "You act on sudden urges without considering consequences, often leading to trouble. This rashness can be anticipated and triggered by enemies.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Impulsiveness|Mental"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "y5TIFwpKQAkxBDMK",
+  "_key": "!items!y5TIFwpKQAkxBDMK",
+  "name": "Unusual Appearance (Horns)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "XWDBqE5xIGYEuyLo",
+  "sort": 4000000,
+  "system": {
+    "row": {
+      "name": "Unusual Appearance (Horns)",
+      "points": -1,
+      "level": null,
+      "description": "While not necessarily a severe social penalty, Zabrak horns make them instantly recognizable and can sometimes elicit fear or apprehension from species unfamiliar with them. This can sometimes lead to social discomfort or being singled out.",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Unusual Appearance (Horns)|Racial"
+    }
+  }
+}

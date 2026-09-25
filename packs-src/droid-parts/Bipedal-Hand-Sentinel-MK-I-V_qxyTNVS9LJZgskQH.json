@@ -1,0 +1,39 @@
+{
+  "_id": "qxyTNVS9LJZgskQH",
+  "_key": "!items!qxyTNVS9LJZgskQH",
+  "name": "Bipedal Hand (Sentinel MK I-V)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "6aMcjhuriK5wkg8t",
+  "sort": 5100000,
+  "system": {
+    "row": {
+      "id": "a986ff31-e81f-496d-bd07-addb9e52a780",
+      "name": "Bipedal Hand (Sentinel MK I-V)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Manipulator",
+      "cost": 460,
+      "weight": 2.5,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "sentinel-hand",
+      "description": "None"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "sentinel-hand"
+    }
+  }
+}

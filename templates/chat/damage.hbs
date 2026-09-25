@@ -1,0 +1,16 @@
+{{!-- templates/chat/damage.hbs - a damage roll (use-dice-roller.ts rollDamage: Formula / Total / Rolls), the
+     website formula beside the Foundry one, riders as flavor, the minimum-1 clamp noted. Context: module/rolls.mjs rollDamage. --}}
+<div class="shadowbase sb-chat-card sb-chat-card--damage" data-actor-id="{{actorId}}"{{#if itemId}} data-item-id="{{itemId}}"{{/if}}>
+  <header class="sb-chat-card__header">
+    <h3 class="sb-chat-card__title">{{title}}</h3>
+    {{#if damageType}}<span class="sb-badge sb-badge-destructive sb-chat-card__badge">{{damageType}}</span>{{/if}}
+  </header>
+  <dl class="sb-chat-card__lines">
+    <dt>{{localize "SHADOWBASE.Roll.Formula"}}</dt><dd>{{websiteFormula}}{{#if modifierText}} <span class="sb-chat-card__muted">({{modifierText}})</span>{{/if}} <span class="sb-chat-card__muted">&rarr; {{formula}}</span></dd>
+    <dt>{{localize "SHADOWBASE.Roll.Total"}}</dt><dd><strong class="sb-chat-card__total">{{total}}</strong>{{#if clamped}} <span class="sb-chat-card__muted">{{localize "SHADOWBASE.Roll.MinimumApplied" raw=rawTotal}}</span>{{/if}}</dd>
+    <dt>{{localize "SHADOWBASE.Roll.Rolls"}}</dt><dd><span class="sb-chat-card__dice">[{{diceText}}]</span></dd>
+    {{#if flavor}}<dt>{{localize "SHADOWBASE.Roll.Riders"}}</dt><dd>{{flavor}}</dd>{{/if}}
+    {{#if armorDivisor}}<dt>{{localize "SHADOWBASE.Roll.ArmorDivisor"}}</dt><dd>({{armorDivisor}})</dd>{{/if}}
+  </dl>
+  <p class="sb-chat-card__muted sb-chat-card__hint">{{localize "SHADOWBASE.Roll.ApplyHint"}}</p>
+</div>

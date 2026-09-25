@@ -1,0 +1,20 @@
+{
+  "_id": "BfpmoyLxdxsbBggo",
+  "_key": "!folders!BfpmoyLxdxsbBggo",
+  "name": "Metal",
+  "type": "Item",
+  "folder": "3XecnUQT2Vf6eRWf",
+  "sorting": "a",
+  "sort": 1500000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "path": [
+        "Raw Materials",
+        "Metal"
+      ]
+    }
+  }
+}

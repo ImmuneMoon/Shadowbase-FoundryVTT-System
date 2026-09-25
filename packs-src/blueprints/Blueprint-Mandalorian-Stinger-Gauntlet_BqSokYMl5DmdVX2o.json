@@ -1,0 +1,42 @@
+{
+  "_id": "BqSokYMl5DmdVX2o",
+  "_key": "!items!BqSokYMl5DmdVX2o",
+  "name": "Blueprint: Mandalorian \"Stinger\" Gauntlet",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "oUXwxliXgRguKKvI",
+  "sort": 31100000,
+  "system": {
+    "row": {
+      "id": "698c92da-5e83-4825-ac0f-a868fdc3ce1b",
+      "name": "Blueprint: Mandalorian \"Stinger\" Gauntlet",
+      "cost": 2648,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Mandalorian \"Stinger\" Gauntlet (Generation 0, proven, encoded, catalog design). Required to build Mandalorian \"Stinger\" Gauntlet; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Mandalorian \"Stinger\" Gauntlet",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 24736,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Gauntlet Weapons|Mandalorian \"Stinger\" Gauntlet"
+    }
+  }
+}

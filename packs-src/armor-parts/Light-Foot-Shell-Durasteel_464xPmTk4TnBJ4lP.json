@@ -1,0 +1,42 @@
+{
+  "_id": "464xPmTk4TnBJ4lP",
+  "_key": "!items!464xPmTk4TnBJ4lP",
+  "name": "Light Foot Shell (Durasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 6400000,
+  "system": {
+    "row": {
+      "id": "f1963d19-4ade-426f-8b58-ed7e0d979b6d",
+      "name": "Light Foot Shell (Durasteel)",
+      "category": "Armor Shell",
+      "cost": 62,
+      "weight": 1.23,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-light-feet-durasteel",
+      "materialId": "durasteel",
+      "notes": "Standard building alloy. Baseline stats.",
+      "validSlots": [],
+      "drBonus": 2,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-light-feet-durasteel"
+    }
+  }
+}

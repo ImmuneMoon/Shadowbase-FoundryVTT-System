@@ -1,0 +1,42 @@
+{
+  "_id": "awOX9BYYeq7bRb3d",
+  "_key": "!items!awOX9BYYeq7bRb3d",
+  "name": "Blueprint: Optic (GE3)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "idvhLPGyw0BIk332",
+  "sort": 28000000,
+  "system": {
+    "row": {
+      "id": "0e4ad8b1-21e5-4cf2-b776-94389a637db5",
+      "name": "Blueprint: Optic (GE3)",
+      "cost": 184,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Optic (GE3) (Generation 0, proven, encoded, catalog design). Required to build Optic (GE3); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Optic (GE3)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 99,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Sensor|Optic (GE3)"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "iz8nMC8YArzD3i3x",
+  "_key": "!items!iz8nMC8YArzD3i3x",
+  "name": "Cybernetic Ear (Frequency)",
+  "type": "implant",
+  "img": "icons/svg/regen.svg",
+  "folder": "STmujteizjG6Ekf7",
+  "sort": 2100000,
+  "system": {
+    "row": {
+      "id": "de7d85e3-a0cc-45b9-9e02-53174d250a16",
+      "name": "Cybernetic Ear (Frequency)",
+      "cost": 3690,
+      "finalCp": 10,
+      "effect": "Ultrahearing & Subsonic Hearing",
+      "category": "Sensory",
+      "pathways": [],
+      "slotType": "Ear",
+      "installed": false,
+      "weight": 0.1,
+      "notes": "Trait Package: 10 CP of Advantages (Ultrahearing, Subsonic Hearing); Mandatory Flaws offset. Materials: Plastoid: 0.03 lbs (2 cr), Silicon: 0.03 lbs (2 cr), Synth-Flesh: 0.04 lbs (1 cr)."
+    },
+    "source": "implants",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "implants"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "implants",
+      "key": "Sensory|Cybernetic Ear (Frequency)"
+    }
+  }
+}

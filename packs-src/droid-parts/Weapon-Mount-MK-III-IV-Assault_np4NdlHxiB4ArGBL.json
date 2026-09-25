@@ -1,0 +1,39 @@
+{
+  "_id": "np4NdlHxiB4ArGBL",
+  "_key": "!items!np4NdlHxiB4ArGBL",
+  "name": "Weapon Mount (MK III-IV Assault)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "fJ2dj0YWvmbw3cIJ",
+  "sort": 4600000,
+  "system": {
+    "row": {
+      "id": "22e1668c-eb53-40ae-a57a-84c9faa97ea5",
+      "name": "Weapon Mount (MK III-IV Assault)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Arm",
+      "cost": 3060,
+      "weight": 20,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "mount-mk3-assault",
+      "description": "Payload 2 (Heavy Weapon), Striking ST +2"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "mount-mk3-assault"
+    }
+  }
+}

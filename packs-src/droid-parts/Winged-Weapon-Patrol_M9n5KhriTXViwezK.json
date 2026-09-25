@@ -1,0 +1,39 @@
+{
+  "_id": "M9n5KhriTXViwezK",
+  "_key": "!items!M9n5KhriTXViwezK",
+  "name": "Winged Weapon (Patrol)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "fJ2dj0YWvmbw3cIJ",
+  "sort": 4700000,
+  "system": {
+    "row": {
+      "id": "fde0601d-83a4-4315-9566-95078058f08c",
+      "name": "Winged Weapon (Patrol)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Arm",
+      "cost": 1380,
+      "weight": 8,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "patrol-wing",
+      "description": "Payload 1 (Weapon), Striking ST +1"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "patrol-wing"
+    }
+  }
+}

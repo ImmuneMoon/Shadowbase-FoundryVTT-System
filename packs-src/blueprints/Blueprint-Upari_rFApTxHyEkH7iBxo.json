@@ -1,0 +1,42 @@
+{
+  "_id": "rFApTxHyEkH7iBxo",
+  "_key": "!items!rFApTxHyEkH7iBxo",
+  "name": "Blueprint: Upari",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 38500000,
+  "system": {
+    "row": {
+      "id": "7a25752f-c03d-4638-8ee0-4d774f001857",
+      "name": "Blueprint: Upari",
+      "cost": 641,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Upari (Generation 0, proven, encoded, catalog design). Required to build Upari; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Upari",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 4666.666666666666,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Upari"
+    }
+  }
+}

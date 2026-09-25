@@ -1,0 +1,42 @@
+{
+  "_id": "Gd6efD2OfwuDMdpC",
+  "_key": "!items!Gd6efD2OfwuDMdpC",
+  "name": "Blueprint: Shock Baton",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 42900000,
+  "system": {
+    "row": {
+      "id": "4bb4083d-f592-485a-84e1-883fc4507d60",
+      "name": "Blueprint: Shock Baton",
+      "cost": 323,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Shock Baton (Generation 0, proven, encoded, catalog design). Required to build Shock Baton; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Shock Baton",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1490,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Shock Baton"
+    }
+  }
+}

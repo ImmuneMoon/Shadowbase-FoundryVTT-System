@@ -1,0 +1,34 @@
+{
+  "_id": "OldGhGATuwkf26Ty",
+  "_key": "!items!OldGhGATuwkf26Ty",
+  "name": "Blind (Non-Conventional)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "XWDBqE5xIGYEuyLo",
+  "sort": 3700000,
+  "system": {
+    "row": {
+      "name": "Blind (Non-Conventional)",
+      "points": 0,
+      "level": null,
+      "description": "While Miraluka do not possess physical eyes and perceive the world through the Force, they are still considered \"blind\" in the conventional sense. This means they cannot see by means of light. They rely entirely on their Force Sight for perception. In areas where the Force is significantly diminished or nullified (e.g., a ysalimiri void), a Miraluka would be truly blind and severely impaired, relying on other senses or technological aids. This is typically a 0-point racial disadvantage because their Force Sight largely compensates for it, but the vulnerability remains.",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Blind (Non-Conventional)|Racial"
+    }
+  }
+}

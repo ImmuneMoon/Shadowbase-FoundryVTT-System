@@ -1,0 +1,32 @@
+{
+  "_id": "SUi1KadTWv5fftTr",
+  "_key": "!items!SUi1KadTWv5fftTr",
+  "name": "Obsessive about trading/tech",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 2800000,
+  "system": {
+    "row": {
+      "name": "Obsessive about trading/tech",
+      "points": -1,
+      "description": "You have an intense, almost unhealthy focus on acquiring, modifying, or discussing technology and trade deals.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Obsessive about trading/tech"
+    }
+  }
+}

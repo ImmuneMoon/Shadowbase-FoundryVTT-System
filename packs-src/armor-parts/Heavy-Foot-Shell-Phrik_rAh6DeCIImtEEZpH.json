@@ -1,0 +1,42 @@
+{
+  "_id": "rAh6DeCIImtEEZpH",
+  "_key": "!items!rAh6DeCIImtEEZpH",
+  "name": "Heavy Foot Shell (Phrik)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 7400000,
+  "system": {
+    "row": {
+      "id": "5157cb07-b462-4d4d-b62b-e8faaac6f1c9",
+      "name": "Heavy Foot Shell (Phrik)",
+      "category": "Armor Shell",
+      "cost": 56700,
+      "weight": 6.3,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-heavy-feet-phrik",
+      "materialId": "phrik",
+      "notes": "Nearly indestructible, highly lightsaber-resistant. Medium and Heavy tiers only -- it is not milled thin.",
+      "validSlots": [],
+      "drBonus": 9,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-heavy-feet-phrik"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "TBcfxnqni8JHvpRb",
+  "_key": "!items!TBcfxnqni8JHvpRb",
+  "name": "Old Republic Patriot",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "J2wGZ0rpXlZB2j6l",
+  "sort": 3000000,
+  "system": {
+    "row": {
+      "name": "Old Republic Patriot",
+      "points": -1,
+      "description": "You are a staunch believer in the ideals of the Republic, even as its bureaucracy and military struggles are laid bare by the war. You may salute Republic soldiers or speak fondly of Coruscant.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Old Republic Patriot"
+    }
+  }
+}

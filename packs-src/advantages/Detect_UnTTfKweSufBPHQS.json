@@ -1,0 +1,33 @@
+{
+  "_id": "UnTTfKweSufBPHQS",
+  "_key": "!items!UnTTfKweSufBPHQS",
+  "name": "Detect",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 3700000,
+  "system": {
+    "row": {
+      "name": "Detect",
+      "points": 5,
+      "description": "Allows you to detect a specific substance or condition, even when it is shielded from the five human senses. Cost range: 5 points (Basic).",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Detect"
+    }
+  }
+}

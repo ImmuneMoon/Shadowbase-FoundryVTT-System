@@ -1,0 +1,51 @@
+{
+  "_id": "kkVIervNiMtU110j",
+  "_key": "!items!kkVIervNiMtU110j",
+  "name": "Tool Kit (Basic)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "cK2OmLlfEjsr72q3",
+  "sort": 12300000,
+  "system": {
+    "row": {
+      "name": "Tool Kit (Basic)",
+      "cost": 150,
+      "skill": "Mechanic or Armoury",
+      "description": "Assorted tools for basic repairs. Removes the -5 penalty for improvised tools when repairing standard mechanics. Using tools typically requires 10d minutes per repair attempt.",
+      "category": "Tools & Electronics",
+      "subCategory": "Non-Consumable Tools",
+      "weight": 6,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Scrap Metal",
+          "amount": 5
+        },
+        {
+          "name": "Durasteel",
+          "amount": 1
+        }
+      ],
+      "id": "1b31780e-4f15-48b1-9d7f-6ec9f70b6fe0",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Tool Kit (Basic)"
+    }
+  }
+}

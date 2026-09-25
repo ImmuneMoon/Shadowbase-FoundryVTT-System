@@ -1,0 +1,34 @@
+{
+  "_id": "m4AeR3BIosvtNf8r",
+  "_key": "!items!m4AeR3BIosvtNf8r",
+  "name": "Odious Personal Habit (Refers to self in third person)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 12300000,
+  "system": {
+    "row": {
+      "name": "Odious Personal Habit (Refers to self in third person)",
+      "points": -5,
+      "level": null,
+      "description": "Cultural naming rite or personal quirk that annoys others in standard conversation.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Odious Personal Habit (Refers to self in third person)|Mental"
+    }
+  }
+}

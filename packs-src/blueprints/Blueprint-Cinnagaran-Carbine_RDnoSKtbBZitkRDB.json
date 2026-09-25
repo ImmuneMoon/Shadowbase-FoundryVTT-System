@@ -1,0 +1,42 @@
+{
+  "_id": "RDnoSKtbBZitkRDB",
+  "_key": "!items!RDnoSKtbBZitkRDB",
+  "name": "Blueprint: Cinnagaran Carbine",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "561ndzf67gVgHZJr",
+  "sort": 12100000,
+  "system": {
+    "row": {
+      "id": "6498bc2d-d1d5-4f00-a048-06b130a93da8",
+      "name": "Blueprint: Cinnagaran Carbine",
+      "cost": 594,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Cinnagaran Carbine (Generation 0, proven, encoded, catalog design). Required to build Cinnagaran Carbine; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Cinnagaran Carbine",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 4200,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Blaster Rifles & Carbines|Cinnagaran Carbine"
+    }
+  }
+}

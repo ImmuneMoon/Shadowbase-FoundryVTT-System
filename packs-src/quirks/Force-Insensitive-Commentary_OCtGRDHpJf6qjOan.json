@@ -1,0 +1,32 @@
+{
+  "_id": "OCtGRDHpJf6qjOan",
+  "_key": "!items!OCtGRDHpJf6qjOan",
+  "name": "Force-Insensitive Commentary",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "J2wGZ0rpXlZB2j6l",
+  "sort": 1800000,
+  "system": {
+    "row": {
+      "name": "Force-Insensitive Commentary",
+      "points": -1,
+      "description": "You frequently make light of the Force, referring to Jedi abilities as \"hokey religions\" or \"fancy laser sword tricks,\" not out of malice, but out of a genuine lack of understanding.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Force-Insensitive Commentary"
+    }
+  }
+}

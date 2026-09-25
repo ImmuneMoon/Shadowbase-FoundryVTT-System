@@ -1,0 +1,42 @@
+{
+  "_id": "xtKSEgVZTC8CednD",
+  "_key": "!items!xtKSEgVZTC8CednD",
+  "name": "Blueprint: Repulsor (R-Series)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "7uRPK85jklrZpkru",
+  "sort": 25700000,
+  "system": {
+    "row": {
+      "id": "18f97533-b36e-40da-a069-15e3835cc373",
+      "name": "Blueprint: Repulsor (R-Series)",
+      "cost": 413,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Repulsor (R-Series) (Generation 0, proven, encoded, catalog design). Required to build Repulsor (R-Series); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Repulsor (R-Series)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 2385,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Locomotion|Repulsor (R-Series)"
+    }
+  }
+}

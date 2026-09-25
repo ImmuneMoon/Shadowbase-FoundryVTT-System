@@ -1,0 +1,192 @@
+{
+  "_id": "DcUFhfF1D6GeJasm",
+  "_key": "!items!DcUFhfF1D6GeJasm",
+  "name": "Czerka \"Purge\" Flamer",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "AMxdOvmXSToEAULF",
+  "sort": 1900000,
+  "system": {
+    "row": {
+      "id": "9543949c-76ad-46a3-bd1c-7b5e00f8639e",
+      "customName": "Czerka \"Purge\" Flamer",
+      "baseType": "Czerka \"Purge\" Flamer",
+      "baseSkill": "Liquid Projector",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 18.8,
+      "finalWeight": 18.8,
+      "baseCost": 1418,
+      "finalCost": 12762,
+      "currentCharges": 10,
+      "maxCharges": 10,
+      "loadedAmmunitionId": "948ed1cb-dace-4748-8c87-9d6b793c48cd",
+      "loadedAmmunitionData": {
+        "id": "948ed1cb-dace-4748-8c87-9d6b793c48cd",
+        "name": "Flamer Fuel Tank (Large)",
+        "type": "Fuel Canister",
+        "containerType": "Flamer",
+        "currentCharges": 10,
+        "maxCharges": 10,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "Refill: 300 CR. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "harness-tank",
+        "inventoryId": "f6e2e239-f7d5-4b12-af74-7f9df587cbfe",
+        "materialId": "plasteel"
+      },
+      "receiverPart": {
+        "partId": "heavy-pressure-valve",
+        "inventoryId": "30c8c5e6-9d3e-4a96-bc7e-7b4e8348dd7d",
+        "materialId": "durasteel"
+      },
+      "barrelPart": {
+        "partId": "igniter-nozzle",
+        "inventoryId": "0d9edead-abc0-41d1-b1e4-51a1221ed502",
+        "materialId": "durasteel"
+      },
+      "targetingPart": {
+        "partId": "advanced-targeting",
+        "inventoryId": "bf5de7a9-bd5f-4034-a03f-ef872004be7b"
+      },
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "9543949c-76ad-46a3-bd1c-7b5e00f8639e",
+        "customName": "Czerka \"Purge\" Flamer",
+        "baseType": "Czerka \"Purge\" Flamer",
+        "baseSkill": "Liquid Projector",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 18.8,
+        "finalWeight": 18.8,
+        "baseCost": 1418,
+        "finalCost": 12762,
+        "currentCharges": 10,
+        "maxCharges": 10,
+        "loadedAmmunitionId": "948ed1cb-dace-4748-8c87-9d6b793c48cd",
+        "loadedAmmunitionData": {
+          "id": "948ed1cb-dace-4748-8c87-9d6b793c48cd",
+          "name": "Flamer Fuel Tank (Large)",
+          "type": "Fuel Canister",
+          "containerType": "Flamer",
+          "currentCharges": 10,
+          "maxCharges": 10,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "Refill: 300 CR. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "harness-tank",
+          "inventoryId": "f6e2e239-f7d5-4b12-af74-7f9df587cbfe",
+          "materialId": "plasteel"
+        },
+        "receiverPart": {
+          "partId": "heavy-pressure-valve",
+          "inventoryId": "30c8c5e6-9d3e-4a96-bc7e-7b4e8348dd7d",
+          "materialId": "durasteel"
+        },
+        "barrelPart": {
+          "partId": "igniter-nozzle",
+          "inventoryId": "0d9edead-abc0-41d1-b1e4-51a1221ed502",
+          "materialId": "durasteel"
+        },
+        "targetingPart": {
+          "partId": "advanced-targeting",
+          "inventoryId": "bf5de7a9-bd5f-4034-a03f-ef872004be7b"
+        },
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "f6e2e239-f7d5-4b12-af74-7f9df587cbfe",
+          "name": "Harness Tank",
+          "partId": "harness-tank",
+          "category": "Ranged Grip",
+          "materialId": "plasteel",
+          "cost": 1200,
+          "weight": 15,
+          "isInstalled": true,
+          "installedInBlasterId": "9543949c-76ad-46a3-bd1c-7b5e00f8639e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Heavy backpack mounting system."
+        },
+        {
+          "id": "30c8c5e6-9d3e-4a96-bc7e-7b4e8348dd7d",
+          "name": "Heavy Pressure Valve",
+          "partId": "heavy-pressure-valve",
+          "category": "Ranged Receiver",
+          "materialId": "durasteel",
+          "cost": 98,
+          "weight": 1.96,
+          "isInstalled": true,
+          "installedInBlasterId": "9543949c-76ad-46a3-bd1c-7b5e00f8639e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Heavy liquid projection."
+        },
+        {
+          "id": "0d9edead-abc0-41d1-b1e4-51a1221ed502",
+          "name": "Igniter Nozzle",
+          "partId": "igniter-nozzle",
+          "category": "Ranged Barrel",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInBlasterId": "9543949c-76ad-46a3-bd1c-7b5e00f8639e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "bf5de7a9-bd5f-4034-a03f-ef872004be7b",
+          "name": "Advanced Targeting Module",
+          "partId": "advanced-targeting",
+          "category": "Ranged Targeting",
+          "cost": 70,
+          "weight": 0.9,
+          "isInstalled": true,
+          "installedInBlasterId": "9543949c-76ad-46a3-bd1c-7b5e00f8639e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Military-grade tracking algorithms."
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Czerka \"Purge\" Flamer"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_id": "lq3x4TbBehziBkKL",
+  "_key": "!items!lq3x4TbBehziBkKL",
+  "name": "Durasteel Carbine Stock",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "6BrK3rjtho5KeSLo",
+  "sort": 600000,
+  "system": {
+    "row": {
+      "id": "670ea947-1884-4fed-825b-b1ecb310bb52",
+      "name": "Durasteel Carbine Stock",
+      "category": "Ranged Grip",
+      "cost": 148,
+      "weight": 2.94,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "carbine-stock",
+      "materialId": "durasteel",
+      "notes": "Compact shoulder brace.",
+      "effect": "Compact shoulder brace.",
+      "energyResBonus": 0,
+      "volume": 0.006,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "carbine-stock"
+    }
+  }
+}

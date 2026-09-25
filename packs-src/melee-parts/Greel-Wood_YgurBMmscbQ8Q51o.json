@@ -1,0 +1,42 @@
+{
+  "_id": "YgurBMmscbQ8Q51o",
+  "_key": "!items!YgurBMmscbQ8Q51o",
+  "name": "Greel Wood",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "VqX65UQVOs2JpxDL",
+  "sort": 2700000,
+  "system": {
+    "row": {
+      "name": "Greel Wood",
+      "rarity": "Uncommon",
+      "cost": 75,
+      "density": 45,
+      "category": "Raw Materials",
+      "subCategory": "Wood",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A luxury timber prized for high-end furniture and yacht interiors.",
+      "id": "f2fc82c5-b878-4ec3-b131-f49b5814463d",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "material:Greel Wood"
+    }
+  }
+}

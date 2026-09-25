@@ -1,0 +1,19 @@
+{
+  "_id": "TiOOqKn7ToUjh3we",
+  "_key": "!folders!TiOOqKn7ToUjh3we",
+  "name": "Wraps",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 600000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "path": [
+        "Wraps"
+      ]
+    }
+  }
+}

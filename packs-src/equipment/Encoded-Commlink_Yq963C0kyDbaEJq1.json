@@ -1,0 +1,59 @@
+{
+  "_id": "Yq963C0kyDbaEJq1",
+  "_key": "!items!Yq963C0kyDbaEJq1",
+  "name": "Encoded Commlink",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "QVe7sZmgjcPk3HO6",
+  "sort": 5700000,
+  "system": {
+    "row": {
+      "name": "Encoded Commlink",
+      "cost": 2460,
+      "skill": "Electronics Operation (Comms) or Cryptography",
+      "description": "Military-grade encryption. Materials: Data-Crystal: 0.4 lbs, Silicon: 0.4 lbs, Duraplast: 0.8 lbs, Power Cell: 0.7 lbs.",
+      "category": "Communication & Data",
+      "weight": 2.3,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Data-Crystal",
+          "amount": 0.4
+        },
+        {
+          "name": "Silicon",
+          "amount": 0.4
+        },
+        {
+          "name": "Duraplast",
+          "amount": 0.8
+        },
+        {
+          "name": "Power Cell",
+          "amount": 0.7
+        }
+      ],
+      "requiresSoftware": true,
+      "id": "980a9f9b-1533-4487-83ec-888e90c6a0e7",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Encoded Commlink"
+    }
+  }
+}

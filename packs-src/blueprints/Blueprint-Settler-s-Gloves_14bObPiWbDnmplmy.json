@@ -1,0 +1,42 @@
+{
+  "_id": "14bObPiWbDnmplmy",
+  "_key": "!items!14bObPiWbDnmplmy",
+  "name": "Blueprint: Settler's Gloves",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 18400000,
+  "system": {
+    "row": {
+      "id": "0e471cc2-4cf9-4647-b7b8-5f051bc11372",
+      "name": "Blueprint: Settler's Gloves",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Settler's Gloves (Generation 0, proven, encoded, catalog design). Required to build Settler's Gloves; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Settler's Gloves",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 4,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Settler's Gloves"
+    }
+  }
+}

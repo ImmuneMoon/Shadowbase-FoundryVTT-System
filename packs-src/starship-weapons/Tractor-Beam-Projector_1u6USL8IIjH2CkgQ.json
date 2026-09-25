@@ -1,0 +1,36 @@
+{
+  "_id": "1u6USL8IIjH2CkgQ",
+  "_key": "!items!1u6USL8IIjH2CkgQ",
+  "name": "Tractor Beam Projector",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": null,
+  "sort": 900000,
+  "system": {
+    "row": {
+      "id": "dca73c60-945e-4530-867c-be4cd056920a",
+      "name": "Tractor Beam Projector",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Starship Weapon",
+      "cost": 20000,
+      "weight": 0,
+      "quantity": 1,
+      "description": "Special. Used to capture or immobilize other ships. Requires a contested Piloting roll."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "starship-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "starship-weapons",
+      "key": "Tractor Beam Projector"
+    }
+  }
+}

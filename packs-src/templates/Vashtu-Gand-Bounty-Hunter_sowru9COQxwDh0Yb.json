@@ -1,0 +1,2190 @@
+{
+  "_id": "sowru9COQxwDh0Yb",
+  "_key": "!actors!sowru9COQxwDh0Yb",
+  "name": "Vashtu (Gand Bounty Hunter)",
+  "type": "character",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "jE1PQo0cu0pzNz0Y",
+  "sort": 700000,
+  "system": {
+    "legacy": {},
+    "playerName": "",
+    "species": "Gand",
+    "homeworld": "Gand",
+    "characterPortrait": null,
+    "campaign": "Shadows of the Mandalorian Wars",
+    "pointTotal": 120,
+    "turnCounter": 0,
+    "facing": 0,
+    "incomingBearing": 0,
+    "threatEngaged": false,
+    "incomingArc": null,
+    "facingChangeUsed": false,
+    "posture": "standing",
+    "elevation": 0,
+    "parriesThisTurn": 0,
+    "height": "1.50 m",
+    "weight": "42 kg / 93 lb",
+    "sizeModifier": -0.52,
+    "age": 0,
+    "appearance": "",
+    "techLevel": "",
+    "isDroid": false,
+    "powerPoints": 100,
+    "lightSidePoints": 0,
+    "darkSidePoints": 0,
+    "trackDigital": false,
+    "trackPhysical": false,
+    "totalCredits": 7000,
+    "forceAlignment": -15,
+    "isStartingPointsMode": true,
+    "isConstructed": false,
+    "cpBaseline": 113,
+    "stBaseline": 10,
+    "dxBaseline": 10,
+    "iqBaseline": 10,
+    "htBaseline": 10,
+    "hitPointsBaseline": 0,
+    "endurancePointsBaseline": 0,
+    "forcePointsBaseline": 0,
+    "willBaseline": 0,
+    "perceptionBaseline": 0,
+    "frightCheckBaseline": 0,
+    "basicSpeedBaseline": 0,
+    "basicMoveBaseline": 0,
+    "visionBaseline": 0,
+    "hearingBaseline": 0,
+    "tasteAndSmellBaseline": 0,
+    "touchBaseline": 0,
+    "languagesBaseline": 0,
+    "culturalFamiliaritiesBaseline": 0,
+    "literacyBaseline": 0,
+    "languageEntries": [
+      {
+        "id": "vashtu-lang-gand",
+        "tongue": "Gand",
+        "tier": "native",
+        "notes": "Free to Gand (Ch3)."
+      },
+      {
+        "id": "vashtu-lang-basic",
+        "tongue": "Basic",
+        "tier": "accented",
+        "notes": "Spoken in the third-person, pronoun-free style of a bonded Gand findsman (Ch18)."
+      }
+    ],
+    "republicRaised": false,
+    "frightCheck": null,
+    "basicSpeed": null,
+    "basicMove": null,
+    "selectedParrySkill": null,
+    "selectedBlockSkill": null,
+    "activeLightsaberForm": null,
+    "hitLocations": [
+      {
+        "name": "Head",
+        "type": "Head",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 2,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 3,
+        "installedHardwareIds": [],
+        "id": "94ce393b-2763-4612-aca1-5ba0aadddbd5"
+      },
+      {
+        "name": "Face",
+        "type": "Face",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 5,
+        "installedHardwareIds": [],
+        "id": "5e138e80-604c-4a86-ac51-b2459f91448f"
+      },
+      {
+        "name": "Upper Torso",
+        "type": "Vitals",
+        "side": "Center",
+        "relativeSM": -3,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 17,
+        "installedHardwareIds": [],
+        "id": "b4ed9227-b7bd-4d73-8cf9-24b7c98d54a6"
+      },
+      {
+        "name": "Torso",
+        "type": "Torso",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 10,
+        "installedHardwareIds": [],
+        "id": "f01de703-3d53-4ae5-a50a-de567be7e1b1"
+      },
+      {
+        "name": "Right Arm",
+        "type": "Arm",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 7,
+        "installedHardwareIds": [],
+        "id": "bc8f1e98-8b9d-4154-90c4-7e7e2ac31742"
+      },
+      {
+        "name": "Right Hand",
+        "type": "Hand",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "e56bda11-e9dd-4929-bc8b-b347b9b26117"
+      },
+      {
+        "name": "Left Arm",
+        "type": "Arm",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 8,
+        "installedHardwareIds": [],
+        "id": "c82b19cf-776a-420a-8e06-66a18136b744"
+      },
+      {
+        "name": "Left Hand",
+        "type": "Hand",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "9016aef3-2d4c-4157-8139-2a33c3a90c1c"
+      },
+      {
+        "name": "Right Leg",
+        "type": "Leg",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "b8c9815a-ea39-4c4c-a002-e6e69211e5ae"
+      },
+      {
+        "name": "Right Foot",
+        "type": "Foot",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "b6337cb3-ce44-4c3d-851f-7c8a83adf824"
+      },
+      {
+        "name": "Left Leg",
+        "type": "Leg",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "b58a3964-79ef-4437-941c-7856797789da"
+      },
+      {
+        "name": "Left Foot",
+        "type": "Foot",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "ba4d665d-3b55-44f8-97e7-35c282d37c43"
+      }
+    ],
+    "languages": "Gand (Native); Basic (Accented)",
+    "culturalFamiliarities": "Gand Findsman Tradition [0]",
+    "literacy": "Native Literacy [0]",
+    "description": "",
+    "background": "",
+    "notes": "",
+    "pointsAttributes": 0,
+    "pointsAdvantages": 0,
+    "pointsDisadvantages": 0,
+    "pointsOther": 0,
+    "cpTradedForCredits": 0,
+    "cpCreditsForm": "digital",
+    "currentHitPoints": 11,
+    "currentEndurancePoints": 12,
+    "currentForcePoints": 11,
+    "strength": 11,
+    "dexterity": 13,
+    "iq": 11,
+    "health": 11,
+    "hitPoints": null,
+    "will": null,
+    "perception": null,
+    "vision": null,
+    "hearing": null,
+    "tasteAndSmell": null,
+    "touch": null,
+    "endurancePoints": null,
+    "forcePoints": null,
+    "shipPosition": null,
+    "assignedStation": null,
+    "storageBoxes": [],
+    "droidBuild": {
+      "chassisId": null,
+      "powerCoreId": null,
+      "head": {
+        "componentId": null,
+        "processorId": null,
+        "memoryCoreId": null,
+        "sensorIds": [],
+        "externalModId": null
+      },
+      "arms": [],
+      "legs": [],
+      "chassisMods": {
+        "internalIds": [],
+        "externalIds": [],
+        "utilityIds": [],
+        "auxiliaryIds": [],
+        "motiveMountIds": [],
+        "reinforcementId": null,
+        "armorId": null,
+        "motivatorId": null,
+        "actuatorId": null,
+        "wiringId": null
+      }
+    },
+    "pinnedNotifications": [],
+    "useLiftingST": true,
+    "useStrikingST": true,
+    "useArmST": true
+  },
+  "prototypeToken": {
+    "name": "Vashtu (Gand Bounty Hunter)",
+    "actorLink": true,
+    "displayName": 30,
+    "displayBars": 40,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "resources.hp"
+    },
+    "bar2": {
+      "attribute": "resources.ep"
+    }
+  },
+  "items": [
+    {
+      "_id": "RKLvqaCT7MSbwCGf",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.RKLvqaCT7MSbwCGf",
+      "name": "HT +1 (Racial)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "HT +1 (Racial)",
+          "points": 0,
+          "description": "Species-based stamina.",
+          "level": null,
+          "category": "Racial",
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 1,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          }
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "wRy8OlnHkqiztKFa",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.wRy8OlnHkqiztKFa",
+      "name": "Perception +1 (Racial)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Perception +1 (Racial)",
+          "points": 0,
+          "description": "Species-based sensory awareness.",
+          "level": null,
+          "category": "Racial",
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 1,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "e5JiXvkHdXJayCL6",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.e5JiXvkHdXJayCL6",
+      "name": "Damage Resistance (DR)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Damage Resistance (DR)",
+          "points": 0,
+          "level": 2,
+          "description": "DR 2 (Exoskeleton).",
+          "category": "Cybernetic",
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "VhR71Zy30Equ8kVo",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.VhR71Zy30Equ8kVo",
+      "name": "Less Sleep",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Less Sleep",
+          "points": 0,
+          "level": 2,
+          "description": "Two hours less sleep per day.",
+          "category": "Physical",
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "WFjVvlx52rbIscou",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.WFjVvlx52rbIscou",
+      "name": "Infravision",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Infravision",
+          "points": 0,
+          "description": "See heat signatures. Natural biological thermal sight.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "cvwF04UlfYPeJZk0",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.cvwF04UlfYPeJZk0",
+      "name": "Combat Reflexes",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 600000,
+      "system": {
+        "row": {
+          "name": "Combat Reflexes",
+          "points": 15,
+          "description": "You react quickly to threats and keep your composure under pressure. Grants a +1 bonus to active defenses, +2 to Fright Checks, and a +6 bonus to the IQ roll to recover from mental stun (Chapter 9). Those two bonuses are the whole of what steadiness buys: it makes freezing less likely and shorter, and does not make you immune to either. Turn order is unaffected; it is set by Basic Speed and is never rolled for (Chapter 7). Prerequisite: Force Sensitive (if taken as a Force-related advantage, representing a Force-user's enhanced combat intuition).",
+          "level": null,
+          "category": "Mental",
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 1,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 2,
+            "parry": 1,
+            "block": 1,
+            "stunRecovery": 6,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "wk09YSON3PZ9LZp6",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.wk09YSON3PZ9LZp6",
+      "name": "Dependency (Ammonia)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Dependency (Ammonia)",
+          "points": 0,
+          "description": "Ammonia atmosphere; breather mask required off-world.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "44gYlQsFGsEUbefW",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.44gYlQsFGsEUbefW",
+      "name": "Odious Personal Habit (Refers to self in third person)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Odious Personal Habit (Refers to self in third person)",
+          "points": 0,
+          "description": "Refers to self in third person until earning a name.",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "F5s9fZaxtonVQOZc",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.F5s9fZaxtonVQOZc",
+      "name": "Greed",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Greed",
+          "points": -15,
+          "description": "You have an excessive desire for wealth or possessions, often leading you to act selfishly or unethically. This makes you easily bribed or lured into dangerous schemes with promises of riches.",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "OrOxoEVNfRdnHcRV",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.OrOxoEVNfRdnHcRV",
+      "name": "Enemy",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Enemy",
+          "points": -10,
+          "description": "Rival Hunter.",
+          "level": null,
+          "category": "Social",
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "NDtZk3J9i5G5IN41",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.NDtZk3J9i5G5IN41",
+      "name": "Follows a strict personal code",
+      "type": "quirk",
+      "img": "icons/svg/aura.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Follows a strict personal code",
+          "description": "No true name until the hunt is won.",
+          "baselinePoints": 0,
+          "points": -1
+        },
+        "source": "quirks"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "m7QfnItsStHJtNzX",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.m7QfnItsStHJtNzX",
+      "name": "Guns (Blaster Pistol)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Guns (Blaster Pistol)",
+          "relativeLevel": "DX/E",
+          "level": "14",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "CTuizpIgovLkAaEa",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.CTuizpIgovLkAaEa",
+      "name": "Investigation",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Investigation",
+          "relativeLevel": "IQ/A",
+          "level": "12",
+          "points": 3,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "ElPCj8VrKLIsTmnf",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.ElPCj8VrKLIsTmnf",
+      "name": "Streetwise",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Streetwise",
+          "relativeLevel": "IQ/A",
+          "level": "11",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "ARYA30aC4on6lBnU",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.ARYA30aC4on6lBnU",
+      "name": "Tracking",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Tracking",
+          "relativeLevel": "Per/H",
+          "level": "11",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "gJBeuW9YwVEqizGQ",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.gJBeuW9YwVEqizGQ",
+      "name": "Stealth",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Stealth",
+          "relativeLevel": "DX/A",
+          "level": "13",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "W6UCllvCMgHlHP2O",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.W6UCllvCMgHlHP2O",
+      "name": "Shadowing",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 600000,
+      "system": {
+        "row": {
+          "name": "Shadowing",
+          "relativeLevel": "IQ/A",
+          "level": "11",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "4S1vIZ5q7P3pux7t",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.4S1vIZ5q7P3pux7t",
+      "name": "Intimidation",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 700000,
+      "system": {
+        "row": {
+          "name": "Intimidation",
+          "relativeLevel": "Will/A",
+          "level": "11",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "FJysW6F2LtCgWmM7",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.FJysW6F2LtCgWmM7",
+      "name": "Fast-Draw (Pistol)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 800000,
+      "system": {
+        "row": {
+          "name": "Fast-Draw (Pistol)",
+          "relativeLevel": "DX/E",
+          "level": "13",
+          "points": 1,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "lWQboJFPEwAyrAwz",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.lWQboJFPEwAyrAwz",
+      "name": "Interrogation",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 900000,
+      "system": {
+        "row": {
+          "name": "Interrogation",
+          "relativeLevel": "IQ/A",
+          "level": "11",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "vHXpcw6Yd2EY298R",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.vHXpcw6Yd2EY298R",
+      "name": "Holdout",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 1000000,
+      "system": {
+        "row": {
+          "name": "Holdout",
+          "relativeLevel": "IQ/A",
+          "level": "11",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "5x11BNwkDK0sdinV",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.5x11BNwkDK0sdinV",
+      "name": "Disguise",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 1100000,
+      "system": {
+        "row": {
+          "name": "Disguise",
+          "relativeLevel": "IQ/A",
+          "level": "11",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "lZeKnfDsl2euKeA8",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.lZeKnfDsl2euKeA8",
+      "name": "Binders",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "5834064e-0f38-419e-af69-ec0726f5c074",
+          "name": "Binders",
+          "weight": 0.5,
+          "cost": 26,
+          "quantity": 1,
+          "condition": "Fine",
+          "category": "Restraints & Security"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "PCSr4tqJkMmT7Hbb",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.PCSr4tqJkMmT7Hbb",
+      "name": "Breath Mask (with Filter)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "id": "31c2e5bd-323b-4f23-8e15-3515386e6edc",
+          "name": "Breath Mask (with Filter)",
+          "weight": 1,
+          "cost": 284,
+          "quantity": 1,
+          "condition": "Fine",
+          "category": "Survival Gear",
+          "description": "Breath Mask with Filter - required off-world (Dependency: Ammonia)."
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "v5j5gWSs70TyaLO5",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.v5j5gWSs70TyaLO5",
+      "name": "Motion Sensor",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "id": "8691d4b1-ced0-46c4-978c-6ff32e083a89",
+          "name": "Motion Sensor",
+          "weight": 2.2,
+          "cost": 1800,
+          "quantity": 1,
+          "condition": "Fine",
+          "category": "Restraints & Security"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "x7orMQWS3uVp1fPv",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.x7orMQWS3uVp1fPv",
+      "name": "Commlink (Handheld)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "id": "c3f28711-7718-4547-ba1e-b17e6453c162",
+          "name": "Commlink (Handheld)",
+          "weight": 1.4,
+          "cost": 1398,
+          "quantity": 1,
+          "condition": "Fine",
+          "category": "Communication & Data"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "KEnfiehI4fpaioI5",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.KEnfiehI4fpaioI5",
+      "name": "Aurodium Galactic Credit (1,000 cr)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "id": "949ce020-e4ce-4c92-8eb2-19d1a406f9a0",
+          "name": "Aurodium Galactic Credit (1,000 cr)",
+          "category": "Currencies",
+          "weight": 0.1,
+          "quantity": 1,
+          "cost": 1000,
+          "denominationValue": 1000,
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "7y1LD6qEL2N2Mbk8",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.7y1LD6qEL2N2Mbk8",
+      "name": "Aurodium Galactic Credit (50 cr)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 600000,
+      "system": {
+        "row": {
+          "id": "3f314cfe-be01-4259-883b-63e2dee02b0f",
+          "name": "Aurodium Galactic Credit (50 cr)",
+          "category": "Currencies",
+          "weight": 0.005,
+          "quantity": 1,
+          "cost": 50,
+          "denominationValue": 50,
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "RLgfNxdH6Z3H2XzB",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.RLgfNxdH6Z3H2XzB",
+      "name": "Aurodium Galactic Credit (10 cr)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 700000,
+      "system": {
+        "row": {
+          "id": "f18d97d6-9366-41dd-86bb-b6cf0c89d53c",
+          "name": "Aurodium Galactic Credit (10 cr)",
+          "category": "Currencies",
+          "weight": 0.001,
+          "quantity": 1,
+          "cost": 10,
+          "denominationValue": 10,
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "BX5FDC1vpqFk9RkF",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.BX5FDC1vpqFk9RkF",
+      "name": "Aurodium Galactic Credit (5 cr)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 800000,
+      "system": {
+        "row": {
+          "id": "80a0acc3-ca13-48a9-b68d-13be857d233f",
+          "name": "Aurodium Galactic Credit (5 cr)",
+          "category": "Currencies",
+          "weight": 0.0005,
+          "quantity": 1,
+          "cost": 5,
+          "denominationValue": 5,
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "EPzcAU1cmTI1c1qu",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.EPzcAU1cmTI1c1qu",
+      "name": "Aurodium Galactic Credit (2 cr)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 900000,
+      "system": {
+        "row": {
+          "id": "3a38cd0c-d961-4142-9255-b1a69730a604",
+          "name": "Aurodium Galactic Credit (2 cr)",
+          "category": "Currencies",
+          "weight": 0.0002,
+          "quantity": 1,
+          "cost": 2,
+          "denominationValue": 2,
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "1x6Y06U4OGs2cdbv",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.1x6Y06U4OGs2cdbv",
+      "name": "Aurodium Galactic Credit (1 cr)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 1000000,
+      "system": {
+        "row": {
+          "id": "706f25b5-71d4-41d0-95d9-2de352106550",
+          "name": "Aurodium Galactic Credit (1 cr)",
+          "category": "Currencies",
+          "weight": 0.0001,
+          "quantity": 1,
+          "cost": 1,
+          "denominationValue": 1,
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "WUa0IYRTVL7W21vR",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.WUa0IYRTVL7W21vR",
+      "name": "Urbanite's Shirt",
+      "type": "armor",
+      "img": "icons/svg/shield.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "9ea7eea0-1347-453f-89f7-7d993d01a5fe",
+          "name": "Urbanite's Shirt",
+          "type": "Clothing",
+          "slot": "Torso",
+          "drHead": 0,
+          "drFace": 0,
+          "drTorso": 0,
+          "drLeftArm": 0,
+          "drRightArm": 0,
+          "drLeftLeg": 0,
+          "drRightLeg": 0,
+          "drLeftHand": 0,
+          "drRightHand": 0,
+          "drLeftFoot": 0,
+          "drRightFoot": 0,
+          "dxPenalty": null,
+          "movePenalty": null,
+          "weight": 0.7,
+          "cost": 32,
+          "notes": null,
+          "penalties": "",
+          "effects": "",
+          "quantity": 1,
+          "equipped": true,
+          "isActive": false,
+          "integratedSlots": 0,
+          "overlaySlots": 0,
+          "underlaySlots": 0,
+          "utilitySlots": 0,
+          "integratedModId": null,
+          "overlayModId": null,
+          "underlayModId": null,
+          "utilityModId": null,
+          "storageLocationId": null,
+          "finalCoveredLocations": [
+            "Torso",
+            "Upper Torso",
+            "Vitals",
+            "Left Arm",
+            "Right Arm"
+          ],
+          "coveredLocationIds": [
+            "b4ed9227-b7bd-4d73-8cf9-24b7c98d54a6",
+            "f01de703-3d53-4ae5-a50a-de567be7e1b1",
+            "bc8f1e98-8b9d-4154-90c4-7e7e2ac31742",
+            "c82b19cf-776a-420a-8e06-66a18136b744"
+          ],
+          "wornLocationId": null,
+          "setId": "clothing-urbanites-attire",
+          "drEntries": [
+            {
+              "locationId": "b4ed9227-b7bd-4d73-8cf9-24b7c98d54a6",
+              "dr": 0
+            },
+            {
+              "locationId": "f01de703-3d53-4ae5-a50a-de567be7e1b1",
+              "dr": 0
+            },
+            {
+              "locationId": "bc8f1e98-8b9d-4154-90c4-7e7e2ac31742",
+              "dr": 0
+            },
+            {
+              "locationId": "c82b19cf-776a-420a-8e06-66a18136b744",
+              "dr": 0
+            }
+          ],
+          "isInstalled": false,
+          "installedInDroidId": null,
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "itemSizeModifier": -0.52,
+          "modifiedForAnatomy": false,
+          "condition": "Fine",
+          "finalDRValue": null,
+          "finalWeight": null,
+          "finalCost": null,
+          "finalMovePenalty": null,
+          "finalDXPenalty": null,
+          "notesAndEffects": null,
+          "baseArmorType": "Urbanite's Shirt",
+          "baseDRValue": 0,
+          "baseDRNotes": "",
+          "baseWeight": 0.7,
+          "baseCost": 32,
+          "baseMovePenalty": null,
+          "baseDXPenalty": null,
+          "durability": 10,
+          "isConstructed": true,
+          "isCustomBuild": false,
+          "buildProvenance": null,
+          "pieceId": null,
+          "tier": null,
+          "materialId": null,
+          "sealed": null,
+          "sleeveless": null,
+          "faceCoverage": null,
+          "utilityId": null,
+          "frame": null,
+          "shellPart": null,
+          "backingPart": null,
+          "framePart": null,
+          "visorPart": null,
+          "trimPart": null,
+          "materials": [
+            {
+              "name": "Synthmesh",
+              "amount": 0.7
+            }
+          ],
+          "craftingCategory": "Clothing",
+          "craftingCP": null,
+          "isSeveredRemnant": null,
+          "severedFrom": null,
+          "loadedPowerCellId": null,
+          "loadedPowerCellData": null,
+          "currentCharges": null,
+          "maxCharges": null
+        },
+        "source": "armor"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "sPH8eMPRNyPQOQuY",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.sPH8eMPRNyPQOQuY",
+      "name": "Urbanite's Pants",
+      "type": "armor",
+      "img": "icons/svg/shield.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "id": "a2e9a1cc-98aa-4df9-bf34-8186cd5edca2",
+          "name": "Urbanite's Pants",
+          "type": "Clothing",
+          "slot": "Legs",
+          "drHead": 0,
+          "drFace": 0,
+          "drTorso": 0,
+          "drLeftArm": 0,
+          "drRightArm": 0,
+          "drLeftLeg": 0,
+          "drRightLeg": 0,
+          "drLeftHand": 0,
+          "drRightHand": 0,
+          "drLeftFoot": 0,
+          "drRightFoot": 0,
+          "dxPenalty": null,
+          "movePenalty": null,
+          "weight": 0.7,
+          "cost": 32,
+          "notes": null,
+          "penalties": "",
+          "effects": "",
+          "quantity": 1,
+          "equipped": true,
+          "isActive": false,
+          "integratedSlots": 0,
+          "overlaySlots": 0,
+          "underlaySlots": 0,
+          "utilitySlots": 0,
+          "integratedModId": null,
+          "overlayModId": null,
+          "underlayModId": null,
+          "utilityModId": null,
+          "storageLocationId": null,
+          "finalCoveredLocations": [
+            "Left Leg",
+            "Right Leg"
+          ],
+          "coveredLocationIds": [
+            "b8c9815a-ea39-4c4c-a002-e6e69211e5ae",
+            "b58a3964-79ef-4437-941c-7856797789da"
+          ],
+          "wornLocationId": null,
+          "setId": "clothing-urbanites-attire",
+          "drEntries": [
+            {
+              "locationId": "b8c9815a-ea39-4c4c-a002-e6e69211e5ae",
+              "dr": 0
+            },
+            {
+              "locationId": "b58a3964-79ef-4437-941c-7856797789da",
+              "dr": 0
+            }
+          ],
+          "isInstalled": false,
+          "installedInDroidId": null,
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "itemSizeModifier": -0.52,
+          "modifiedForAnatomy": false,
+          "condition": "Fine",
+          "finalDRValue": null,
+          "finalWeight": null,
+          "finalCost": null,
+          "finalMovePenalty": null,
+          "finalDXPenalty": null,
+          "notesAndEffects": null,
+          "baseArmorType": "Urbanite's Pants",
+          "baseDRValue": 0,
+          "baseDRNotes": "",
+          "baseWeight": 0.7,
+          "baseCost": 32,
+          "baseMovePenalty": null,
+          "baseDXPenalty": null,
+          "durability": 10,
+          "isConstructed": true,
+          "isCustomBuild": false,
+          "buildProvenance": null,
+          "pieceId": null,
+          "tier": null,
+          "materialId": null,
+          "sealed": null,
+          "sleeveless": null,
+          "faceCoverage": null,
+          "utilityId": null,
+          "frame": null,
+          "shellPart": null,
+          "backingPart": null,
+          "framePart": null,
+          "visorPart": null,
+          "trimPart": null,
+          "materials": [
+            {
+              "name": "Synthmesh",
+              "amount": 0.7
+            }
+          ],
+          "craftingCategory": "Clothing",
+          "craftingCP": null,
+          "isSeveredRemnant": null,
+          "severedFrom": null,
+          "loadedPowerCellId": null,
+          "loadedPowerCellData": null,
+          "currentCharges": null,
+          "maxCharges": null
+        },
+        "source": "armor"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "8cXJpRmM3SK1Z0aQ",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.8cXJpRmM3SK1Z0aQ",
+      "name": "Urbanite's Gloves",
+      "type": "armor",
+      "img": "icons/svg/shield.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "id": "5039b08f-ffd8-48a2-af52-133ed951fc84",
+          "name": "Urbanite's Gloves",
+          "type": "Clothing",
+          "slot": "Hands",
+          "drHead": 0,
+          "drFace": 0,
+          "drTorso": 0,
+          "drLeftArm": 0,
+          "drRightArm": 0,
+          "drLeftLeg": 0,
+          "drRightLeg": 0,
+          "drLeftHand": 0,
+          "drRightHand": 0,
+          "drLeftFoot": 0,
+          "drRightFoot": 0,
+          "dxPenalty": null,
+          "movePenalty": null,
+          "weight": 0.5,
+          "cost": 15,
+          "notes": null,
+          "penalties": "",
+          "effects": "",
+          "quantity": 1,
+          "equipped": true,
+          "isActive": false,
+          "integratedSlots": 0,
+          "overlaySlots": 0,
+          "underlaySlots": 0,
+          "utilitySlots": 0,
+          "integratedModId": null,
+          "overlayModId": null,
+          "underlayModId": null,
+          "utilityModId": null,
+          "storageLocationId": null,
+          "finalCoveredLocations": [
+            "Left Hand",
+            "Right Hand"
+          ],
+          "coveredLocationIds": [
+            "e56bda11-e9dd-4929-bc8b-b347b9b26117",
+            "9016aef3-2d4c-4157-8139-2a33c3a90c1c"
+          ],
+          "wornLocationId": null,
+          "setId": "clothing-urbanites-attire",
+          "drEntries": [
+            {
+              "locationId": "e56bda11-e9dd-4929-bc8b-b347b9b26117",
+              "dr": 0
+            },
+            {
+              "locationId": "9016aef3-2d4c-4157-8139-2a33c3a90c1c",
+              "dr": 0
+            }
+          ],
+          "isInstalled": false,
+          "installedInDroidId": null,
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "itemSizeModifier": -0.52,
+          "modifiedForAnatomy": false,
+          "condition": "Fine",
+          "finalDRValue": null,
+          "finalWeight": null,
+          "finalCost": null,
+          "finalMovePenalty": null,
+          "finalDXPenalty": null,
+          "notesAndEffects": null,
+          "baseArmorType": "Urbanite's Gloves",
+          "baseDRValue": 0,
+          "baseDRNotes": "",
+          "baseWeight": 0.5,
+          "baseCost": 15,
+          "baseMovePenalty": null,
+          "baseDXPenalty": null,
+          "durability": 10,
+          "isConstructed": true,
+          "isCustomBuild": false,
+          "buildProvenance": null,
+          "pieceId": null,
+          "tier": null,
+          "materialId": null,
+          "sealed": null,
+          "sleeveless": null,
+          "faceCoverage": null,
+          "utilityId": null,
+          "frame": null,
+          "shellPart": null,
+          "backingPart": null,
+          "framePart": null,
+          "visorPart": null,
+          "trimPart": null,
+          "materials": [
+            {
+              "name": "Synth-Leather",
+              "amount": 0.5
+            }
+          ],
+          "craftingCategory": "Clothing",
+          "craftingCP": null,
+          "isSeveredRemnant": null,
+          "severedFrom": null,
+          "loadedPowerCellId": null,
+          "loadedPowerCellData": null,
+          "currentCharges": null,
+          "maxCharges": null
+        },
+        "source": "armor"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "UOgkalFUvFXbauL5",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.UOgkalFUvFXbauL5",
+      "name": "Urbanite's Boots",
+      "type": "armor",
+      "img": "icons/svg/shield.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "id": "ab001f60-7719-48db-8640-5441c7b6ae3f",
+          "name": "Urbanite's Boots",
+          "type": "Clothing",
+          "slot": "Feet",
+          "drHead": 0,
+          "drFace": 0,
+          "drTorso": 0,
+          "drLeftArm": 0,
+          "drRightArm": 0,
+          "drLeftLeg": 0,
+          "drRightLeg": 0,
+          "drLeftHand": 0,
+          "drRightHand": 0,
+          "drLeftFoot": 0,
+          "drRightFoot": 0,
+          "dxPenalty": null,
+          "movePenalty": null,
+          "weight": 1,
+          "cost": 30,
+          "notes": null,
+          "penalties": "",
+          "effects": "",
+          "quantity": 1,
+          "equipped": true,
+          "isActive": false,
+          "integratedSlots": 0,
+          "overlaySlots": 0,
+          "underlaySlots": 0,
+          "utilitySlots": 0,
+          "integratedModId": null,
+          "overlayModId": null,
+          "underlayModId": null,
+          "utilityModId": null,
+          "storageLocationId": null,
+          "finalCoveredLocations": [
+            "Left Foot",
+            "Right Foot"
+          ],
+          "coveredLocationIds": [
+            "b6337cb3-ce44-4c3d-851f-7c8a83adf824",
+            "ba4d665d-3b55-44f8-97e7-35c282d37c43"
+          ],
+          "wornLocationId": null,
+          "setId": "clothing-urbanites-attire",
+          "drEntries": [
+            {
+              "locationId": "b6337cb3-ce44-4c3d-851f-7c8a83adf824",
+              "dr": 0
+            },
+            {
+              "locationId": "ba4d665d-3b55-44f8-97e7-35c282d37c43",
+              "dr": 0
+            }
+          ],
+          "isInstalled": false,
+          "installedInDroidId": null,
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "itemSizeModifier": -0.52,
+          "modifiedForAnatomy": false,
+          "condition": "Fine",
+          "finalDRValue": null,
+          "finalWeight": null,
+          "finalCost": null,
+          "finalMovePenalty": null,
+          "finalDXPenalty": null,
+          "notesAndEffects": null,
+          "baseArmorType": "Urbanite's Boots",
+          "baseDRValue": 0,
+          "baseDRNotes": "",
+          "baseWeight": 1,
+          "baseCost": 30,
+          "baseMovePenalty": null,
+          "baseDXPenalty": null,
+          "durability": 10,
+          "isConstructed": true,
+          "isCustomBuild": false,
+          "buildProvenance": null,
+          "pieceId": null,
+          "tier": null,
+          "materialId": null,
+          "sealed": null,
+          "sleeveless": null,
+          "faceCoverage": null,
+          "utilityId": null,
+          "frame": null,
+          "shellPart": null,
+          "backingPart": null,
+          "framePart": null,
+          "visorPart": null,
+          "trimPart": null,
+          "materials": [
+            {
+              "name": "Synth-Leather",
+              "amount": 1
+            }
+          ],
+          "craftingCategory": "Clothing",
+          "craftingCP": null,
+          "isSeveredRemnant": null,
+          "severedFrom": null,
+          "loadedPowerCellId": null,
+          "loadedPowerCellData": null,
+          "currentCharges": null,
+          "maxCharges": null
+        },
+        "source": "armor"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "eryrJgOqRwz0DZ02",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.eryrJgOqRwz0DZ02",
+      "name": "Hold-Out Blaster",
+      "type": "blaster",
+      "img": "icons/svg/target.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "18a6e0ac-3a08-4143-9c71-a83dba2a63c3",
+          "customName": "Hold-Out Blaster",
+          "baseType": "Hold-Out Blaster",
+          "baseSkill": "Guns (Blaster Pistol)",
+          "isConstructed": true,
+          "equipped": true,
+          "quantity": 1,
+          "baseWeight": 1.4,
+          "finalWeight": 1.4,
+          "baseCost": 177,
+          "finalCost": 1062,
+          "currentCharges": 50,
+          "maxCharges": 50,
+          "loadedAmmunitionId": "ec0664c1-a7b6-455c-b33e-5fead4a12b71",
+          "loadedAmmunitionData": {
+            "id": "ec0664c1-a7b6-455c-b33e-5fead4a12b71",
+            "name": "Standard Power Pack",
+            "type": "Power Packs",
+            "currentCharges": 50,
+            "maxCharges": 50,
+            "cost": 0,
+            "weight": 0,
+            "baseCost": 0,
+            "baseWeight": 0,
+            "quantity": 1,
+            "contents": [],
+            "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+          },
+          "gripPart": {
+            "partId": "hold-out-grip",
+            "inventoryId": "cb68a87b-75a1-413e-9a93-36320ad4751f",
+            "materialId": "plastoid"
+          },
+          "receiverPart": {
+            "partId": "light-receiver",
+            "inventoryId": "95173e7c-ba1c-4224-8f4c-980b114ee928",
+            "materialId": "plastoid"
+          },
+          "barrelPart": {
+            "partId": "snub-emitter",
+            "inventoryId": "bb505717-5e5b-47e9-b67d-bb95854618d8",
+            "materialId": "plastoid"
+          },
+          "targetingPart": {
+            "partId": "basic-targeting",
+            "inventoryId": "e5941d95-d34f-4afd-b757-93572b4a2916"
+          },
+          "powerUnitPart": {
+            "partId": "standard-pwr-pack",
+            "inventoryId": "231a74fa-22bf-4218-a931-88b9ede81b46"
+          },
+          "housingModId": "390520c0-bbfd-496d-9454-80b494e2728d",
+          "condition": "Fine",
+          "malfunction": 17,
+          "durability": null
+        },
+        "source": "customBlasters"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "V5dzNF0J1Vwfur9E",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.V5dzNF0J1Vwfur9E",
+      "name": "Hold-Out Blaster",
+      "type": "blaster",
+      "img": "icons/svg/target.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "id": "56621950-7e07-4589-8f63-e49f9d5f7b30",
+          "customName": "Hold-Out Blaster",
+          "baseType": "Hold-Out Blaster",
+          "baseSkill": "Guns (Blaster Pistol)",
+          "isConstructed": true,
+          "equipped": false,
+          "quantity": 1,
+          "baseWeight": 1.4,
+          "finalWeight": 1.4,
+          "baseCost": 177,
+          "finalCost": 1062,
+          "currentCharges": 50,
+          "maxCharges": 50,
+          "loadedAmmunitionId": "2b8f2903-5b2f-4afd-82cc-74e08e5cdc16",
+          "loadedAmmunitionData": {
+            "id": "2b8f2903-5b2f-4afd-82cc-74e08e5cdc16",
+            "name": "Standard Power Pack",
+            "type": "Power Packs",
+            "currentCharges": 50,
+            "maxCharges": 50,
+            "cost": 0,
+            "weight": 0,
+            "baseCost": 0,
+            "baseWeight": 0,
+            "quantity": 1,
+            "contents": [],
+            "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+          },
+          "gripPart": {
+            "partId": "hold-out-grip",
+            "inventoryId": "17969348-00c4-4b98-b72f-dcb43f714a12",
+            "materialId": "plastoid"
+          },
+          "receiverPart": {
+            "partId": "light-receiver",
+            "inventoryId": "d68dadf0-c362-4946-9fc8-bd587e645ef4",
+            "materialId": "plastoid"
+          },
+          "barrelPart": {
+            "partId": "snub-emitter",
+            "inventoryId": "0dcef858-8bcd-444c-9bcf-9150dd387c34",
+            "materialId": "plastoid"
+          },
+          "targetingPart": {
+            "partId": "basic-targeting",
+            "inventoryId": "3120c4d9-da23-4f7f-aab6-eb298caa9eb6"
+          },
+          "powerUnitPart": {
+            "partId": "standard-pwr-pack",
+            "inventoryId": "64f3443a-0485-4c9b-833c-792feff55d6e"
+          },
+          "housingModId": "a510dc88-9fcf-42b8-ab94-6b54df3dc56f",
+          "condition": "Fine",
+          "malfunction": 17,
+          "durability": null
+        },
+        "source": "customBlasters"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "mXX6rMPi4tECN91p",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.mXX6rMPi4tECN91p",
+      "name": "Standard Power Pack",
+      "type": "ammunition",
+      "img": "icons/svg/circle.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "8d8af692-58b5-47eb-8a5d-1a30905feaf6",
+          "name": "Standard Power Pack",
+          "type": "Power Packs",
+          "maxCharges": 50,
+          "currentCharges": 50,
+          "cost": 105,
+          "weight": 0.5,
+          "baseCost": 90,
+          "baseWeight": 0.4,
+          "quantity": 2,
+          "contents": [],
+          "notes": "Spare packs for his Hold-Out Blasters - purchased, deducted (Ch18)."
+        },
+        "source": "ammunition"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "fFLTJgWujRnDaQ1j",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.fFLTJgWujRnDaQ1j",
+      "name": "Hold-Out Grip",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "cb68a87b-75a1-413e-9a93-36320ad4751f",
+          "name": "Hold-Out Grip",
+          "partId": "hold-out-grip",
+          "category": "Ranged Grip",
+          "materialId": "plastoid",
+          "cost": 6,
+          "weight": 0.08,
+          "isInstalled": true,
+          "installedInBlasterId": "18a6e0ac-3a08-4143-9c71-a83dba2a63c3",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Concealable, palm-sized."
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "xrqa90oQTY2ANiUx",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.xrqa90oQTY2ANiUx",
+      "name": "Light Receiver",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "id": "95173e7c-ba1c-4224-8f4c-980b114ee928",
+          "name": "Light Receiver",
+          "partId": "light-receiver",
+          "category": "Ranged Receiver",
+          "materialId": "plastoid",
+          "cost": 6,
+          "weight": 0.08,
+          "isInstalled": true,
+          "installedInBlasterId": "18a6e0ac-3a08-4143-9c71-a83dba2a63c3",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Hold-out mechanisms."
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "tLTV5wt8GO1M30hd",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.tLTV5wt8GO1M30hd",
+      "name": "Snub Emitter",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "id": "bb505717-5e5b-47e9-b67d-bb95854618d8",
+          "name": "Snub Emitter",
+          "partId": "snub-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "plastoid",
+          "cost": 6,
+          "weight": 0.08,
+          "isInstalled": true,
+          "installedInBlasterId": "18a6e0ac-3a08-4143-9c71-a83dba2a63c3",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "kqMdb7Xa6MpyQBdj",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.kqMdb7Xa6MpyQBdj",
+      "name": "Basic Targeting Module",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "id": "e5941d95-d34f-4afd-b757-93572b4a2916",
+          "name": "Basic Targeting Module",
+          "partId": "basic-targeting",
+          "category": "Ranged Targeting",
+          "cost": 40,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "18a6e0ac-3a08-4143-9c71-a83dba2a63c3",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard civilian uplink."
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "hGxW5fibefuZQwJp",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.hGxW5fibefuZQwJp",
+      "name": "Standard Power Pack",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "id": "231a74fa-22bf-4218-a931-88b9ede81b46",
+          "name": "Standard Power Pack",
+          "partId": "standard-pwr-pack",
+          "category": "Power Unit",
+          "cost": 105,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "18a6e0ac-3a08-4143-9c71-a83dba2a63c3",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "29XSWs1BK00jlHLF",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.29XSWs1BK00jlHLF",
+      "name": "Contoured Casing",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 600000,
+      "system": {
+        "row": {
+          "id": "390520c0-bbfd-496d-9454-80b494e2728d",
+          "name": "Contoured Casing",
+          "category": "Housing/Concealment",
+          "cost": 14,
+          "weight": 0.2,
+          "isInstalled": true,
+          "installedInBlasterId": "18a6e0ac-3a08-4143-9c71-a83dba2a63c3",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Rounded edges and flush triggers to avoid snagging. +2 Holdout."
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "aw8Ou8ZGzFrAfcAV",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.aw8Ou8ZGzFrAfcAV",
+      "name": "Hold-Out Grip",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 700000,
+      "system": {
+        "row": {
+          "id": "17969348-00c4-4b98-b72f-dcb43f714a12",
+          "name": "Hold-Out Grip",
+          "partId": "hold-out-grip",
+          "category": "Ranged Grip",
+          "materialId": "plastoid",
+          "cost": 6,
+          "weight": 0.08,
+          "isInstalled": true,
+          "installedInBlasterId": "56621950-7e07-4589-8f63-e49f9d5f7b30",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Concealable, palm-sized."
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "TEpRHC0WqKwjED8a",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.TEpRHC0WqKwjED8a",
+      "name": "Light Receiver",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 800000,
+      "system": {
+        "row": {
+          "id": "d68dadf0-c362-4946-9fc8-bd587e645ef4",
+          "name": "Light Receiver",
+          "partId": "light-receiver",
+          "category": "Ranged Receiver",
+          "materialId": "plastoid",
+          "cost": 6,
+          "weight": 0.08,
+          "isInstalled": true,
+          "installedInBlasterId": "56621950-7e07-4589-8f63-e49f9d5f7b30",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Hold-out mechanisms."
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "Xr7ReOda1IGvbI9z",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.Xr7ReOda1IGvbI9z",
+      "name": "Snub Emitter",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 900000,
+      "system": {
+        "row": {
+          "id": "0dcef858-8bcd-444c-9bcf-9150dd387c34",
+          "name": "Snub Emitter",
+          "partId": "snub-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "plastoid",
+          "cost": 6,
+          "weight": 0.08,
+          "isInstalled": true,
+          "installedInBlasterId": "56621950-7e07-4589-8f63-e49f9d5f7b30",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "PpwTIho3ItPLf0U1",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.PpwTIho3ItPLf0U1",
+      "name": "Basic Targeting Module",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 1000000,
+      "system": {
+        "row": {
+          "id": "3120c4d9-da23-4f7f-aab6-eb298caa9eb6",
+          "name": "Basic Targeting Module",
+          "partId": "basic-targeting",
+          "category": "Ranged Targeting",
+          "cost": 40,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "56621950-7e07-4589-8f63-e49f9d5f7b30",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard civilian uplink."
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "fYEVw3XavnUCcoqx",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.fYEVw3XavnUCcoqx",
+      "name": "Standard Power Pack",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 1100000,
+      "system": {
+        "row": {
+          "id": "64f3443a-0485-4c9b-833c-792feff55d6e",
+          "name": "Standard Power Pack",
+          "partId": "standard-pwr-pack",
+          "category": "Power Unit",
+          "cost": 105,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "56621950-7e07-4589-8f63-e49f9d5f7b30",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "c9xH2nDvufZhLzUK",
+      "_key": "!actors.items!sowru9COQxwDh0Yb.c9xH2nDvufZhLzUK",
+      "name": "Contoured Casing",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 1200000,
+      "system": {
+        "row": {
+          "id": "a510dc88-9fcf-42b8-ab94-6b54df3dc56f",
+          "name": "Contoured Casing",
+          "category": "Housing/Concealment",
+          "cost": 14,
+          "weight": 0.2,
+          "isInstalled": true,
+          "installedInBlasterId": "56621950-7e07-4589-8f63-e49f9d5f7b30",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Rounded edges and flush triggers to avoid snagging. +2 Holdout."
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "templates",
+      "key": "vashtu",
+      "template": {
+        "key": "vashtu",
+        "category": "Example Player Characters",
+        "description": "A Gand Findsman hunting the galaxy's hardest marks to earn a true name. Ready-to-play character.",
+        "migrated": true,
+        "notices": []
+      }
+    }
+  }
+}

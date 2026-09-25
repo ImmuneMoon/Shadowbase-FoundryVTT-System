@@ -1,0 +1,42 @@
+{
+  "_id": "pyu7WWWLIHajaUw7",
+  "_key": "!items!pyu7WWWLIHajaUw7",
+  "name": "Blueprint: Merr-Sonn MM-s1 Mortar",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "HMnrLKsLi3nzjz6j",
+  "sort": 31600000,
+  "system": {
+    "row": {
+      "id": "e7cac1d8-3544-406e-ba39-6d7ac0ab7793",
+      "name": "Blueprint: Merr-Sonn MM-s1 Mortar",
+      "cost": 939,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Merr-Sonn MM-s1 Mortar (Generation 0, proven, encoded, catalog design). Required to build Merr-Sonn MM-s1 Mortar; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Merr-Sonn MM-s1 Mortar",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 7648,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Grenade Launchers|Merr-Sonn MM-s1 Mortar"
+    }
+  }
+}

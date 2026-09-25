@@ -1,0 +1,19 @@
+{
+  "_id": "PlGZu46M1spj53xV",
+  "_key": "!folders!PlGZu46M1spj53xV",
+  "name": "Alter Powers",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 400000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "path": [
+        "Alter Powers"
+      ]
+    }
+  }
+}

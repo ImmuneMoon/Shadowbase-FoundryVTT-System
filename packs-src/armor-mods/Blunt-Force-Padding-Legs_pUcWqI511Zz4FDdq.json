@@ -1,0 +1,41 @@
+{
+  "_id": "pUcWqI511Zz4FDdq",
+  "_key": "!items!pUcWqI511Zz4FDdq",
+  "name": "Blunt Force Padding (Legs)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "g3ttGbCetYWw12Jx",
+  "sort": 1300000,
+  "system": {
+    "row": {
+      "id": "1b2d1f41-f77c-4c03-a0b9-6dbfd6178a2a",
+      "name": "Blunt Force Padding (Legs)",
+      "category": "Underlay Mod",
+      "cost": 1000,
+      "weight": 1,
+      "notes": "+5 to Legs DR vs blunt damage",
+      "equipped": false,
+      "quantity": 1,
+      "validSlots": [
+        "Legs",
+        "Droid Leg"
+      ],
+      "drBonus": 5
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "key": "Blunt Force Padding (Legs)"
+    }
+  }
+}

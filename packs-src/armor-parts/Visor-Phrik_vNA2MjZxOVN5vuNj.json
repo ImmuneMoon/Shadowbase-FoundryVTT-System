@@ -1,0 +1,42 @@
+{
+  "_id": "vNA2MjZxOVN5vuNj",
+  "_key": "!items!vNA2MjZxOVN5vuNj",
+  "name": "Visor (Phrik)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "pemnqyPR360SzyYE",
+  "sort": 9400000,
+  "system": {
+    "row": {
+      "id": "ed689d08-3a0d-4406-b9ac-da1ddcf0eadd",
+      "name": "Visor (Phrik)",
+      "category": "Armor Visor",
+      "cost": 14175,
+      "weight": 1.58,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "visor-phrik",
+      "materialId": "phrik",
+      "notes": "Sealed Head Plates only. Face DR equals Head DR and the Piece carries a 1hr Vacuum seal.",
+      "validSlots": [],
+      "drBonus": null,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "visor-phrik"
+    }
+  }
+}

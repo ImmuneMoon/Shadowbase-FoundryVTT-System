@@ -1,0 +1,29 @@
+{{!-- templates/actor/parts/trait-row.hbs - one advantage / disadvantage / quirk row (advantages-section.tsx 125-222:
+     name, Lvl select for a levelled trait else Pts, Points (Calculated), Library Dossier, notes). Context: a traitRow. --}}
+<li class="sb-row sb-trait-row" data-item-id="{{id}}">
+  <div class="sb-row__main">
+    <input type="text" class="sb-input sb-row__name" name="items.{{id}}.row.name" value="{{rowName}}" placeholder="{{localize "SHADOWBASE.Sheet.Abilities.TraitName"}}" {{disabled (not @root.editable)}}>
+    {{#if hasLevels}}
+    <select class="sb-select sb-select--sm" name="items.{{id}}.row.level" data-dtype="Number" title="{{localize "SHADOWBASE.Sheet.Abilities.Level"}}" {{disabled (not @root.editable)}}>
+      {{#each levels}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+    </select>
+    {{else}}
+    <input type="number" class="sb-input sb-input--tiny" name="items.{{id}}.row.points" value="{{points}}" data-dtype="Number" title="{{localize "SHADOWBASE.Sheet.Abilities.Points"}}" {{disabled (not @root.editable)}}>
+    {{/if}}
+    <output class="sb-input sb-input--calc sb-calc" title="{{localize "SHADOWBASE.Sheet.Abilities.PointsCalculated"}}">{{#if budgetGrant}}0 {{localize "SHADOWBASE.Sheet.Abilities.GrantsBudget" n=budgetGrant}}{{else}}{{effective}}{{/if}}</output>
+    {{#if granted}}<span class="sb-badge sb-badge-secondary" title="{{localize "SHADOWBASE.Sheet.Abilities.BaselineHint"}}">{{localize "SHADOWBASE.Sheet.Abilities.Baseline" n=baselinePoints}}</span>{{/if}}
+    {{#if fromSpecies}}<span class="sb-badge sb-badge-outline">{{fromSpecies}}</span>{{/if}}
+    {{#if category}}<span class="sb-muted">{{category}}</span>{{/if}}
+    {{#each modifiers}}<span class="sb-badge sb-badge-outline sb-badge--effect {{#if this.positive}}sb-badge--pos{{else}}sb-badge--neg{{/if}}">{{this.text}}</span>{{/each}}
+    <span class="sb-row-tools">
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon" data-action="openItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.OpenSheet"}}"><i class="fa-solid fa-up-right-from-square"></i></button>
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-danger" data-action="deleteItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.Delete"}}" {{disabled (not @root.editable)}}><i class="fa-solid fa-xmark"></i></button>
+    </span>
+  </div>
+  <details class="sb-row__details">
+    <summary>{{localize "SHADOWBASE.Sheet.Abilities.Description"}}{{#if inLibrary}} · {{localize "SHADOWBASE.Sheet.Abilities.LibraryDossier"}}{{/if}}</summary>
+    {{#if libraryDescription}}<p class="sb-dossier">{{libraryDescription}}</p>{{/if}}
+    {{#if specifier}}<p class="sb-muted">{{specifier}}</p>{{/if}}
+    <textarea class="sb-textarea" name="items.{{id}}.row.description" rows="2" placeholder="{{localize "SHADOWBASE.Sheet.Abilities.NotesPlaceholder"}}" {{disabled (not @root.editable)}}>{{description}}</textarea>
+  </details>
+</li>

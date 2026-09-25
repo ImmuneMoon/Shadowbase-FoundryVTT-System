@@ -1,0 +1,42 @@
+{
+  "_id": "71w7HeL5PWvrt7uT",
+  "_key": "!items!71w7HeL5PWvrt7uT",
+  "name": "Blueprint: Bipedal Hand (Sentinel MK I-V)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "6LwEPFQhc8M6lMfR",
+  "sort": 20700000,
+  "system": {
+    "row": {
+      "id": "7f426a29-6639-43a2-9100-a12268af7f1b",
+      "name": "Blueprint: Bipedal Hand (Sentinel MK I-V)",
+      "cost": 209,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Bipedal Hand (Sentinel MK I-V) (Generation 0, proven, encoded, catalog design). Required to build Bipedal Hand (Sentinel MK I-V); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Bipedal Hand (Sentinel MK I-V)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 345,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Actuator|Bipedal Hand (Sentinel MK I-V)"
+    }
+  }
+}

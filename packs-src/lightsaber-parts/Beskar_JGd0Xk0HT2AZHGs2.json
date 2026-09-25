@@ -1,0 +1,42 @@
+{
+  "_id": "JGd0Xk0HT2AZHGs2",
+  "_key": "!items!JGd0Xk0HT2AZHGs2",
+  "name": "Beskar",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "h5zpkZemdaiAEI5A",
+  "sort": 2500000,
+  "system": {
+    "row": {
+      "name": "Beskar",
+      "rarity": "Ultra Rare",
+      "cost": 1500,
+      "density": 500,
+      "category": "Raw Materials",
+      "subCategory": "Armor",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Mandalorian iron; highly lightsaber-resistant and extremely heavy.",
+      "id": "eaabb794-c184-4ec1-9c8f-0e66645b8150",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "material:Beskar"
+    }
+  }
+}

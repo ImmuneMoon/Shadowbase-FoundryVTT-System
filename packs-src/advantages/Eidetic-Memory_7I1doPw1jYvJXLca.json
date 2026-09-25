@@ -1,0 +1,33 @@
+{
+  "_id": "7I1doPw1jYvJXLca",
+  "_key": "!items!7I1doPw1jYvJXLca",
+  "name": "Eidetic Memory",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 4900000,
+  "system": {
+    "row": {
+      "name": "Eidetic Memory",
+      "points": 10,
+      "description": "You have perfect recall of everything you have ever seen or heard. Invaluable for remembering obscure schematics, tracking complex conspiracies, or recalling every detail of a past negotiation to exploit weaknesses.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Eidetic Memory"
+    }
+  }
+}

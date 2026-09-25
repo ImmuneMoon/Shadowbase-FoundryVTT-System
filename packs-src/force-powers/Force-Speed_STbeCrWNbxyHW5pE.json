@@ -1,0 +1,87 @@
+{
+  "_id": "STbeCrWNbxyHW5pE",
+  "_key": "!items!STbeCrWNbxyHW5pE",
+  "name": "Force Speed",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "KBIMmcUBYi6ZY6I3",
+  "sort": 2800000,
+  "system": {
+    "row": {
+      "name": "Force Speed",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 2,
+      "effect": "Gain +2 to Basic Move and +0.5 Basic Speed for 1d turns.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Agility (DX/Hard)",
+      "category": "Control Powers",
+      "alignment": "Grey",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Force Speed",
+        "description": "The Force-user accelerates their body and mind, allowing them to move and react with incredible swiftness.",
+        "category": "Control Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 2,
+        "alignment": "Grey",
+        "baseSkill": "Agility (DX/Hard)",
+        "characterTier": "Apprentice",
+        "effect": "Gain +2 to Basic Move and +0.5 Basic Speed for 1d turns."
+      },
+      {
+        "name": "Force Speed",
+        "description": "The Force-user accelerates their body and mind, allowing them to move and react with incredible swiftness.",
+        "category": "Control Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 3,
+        "alignment": "Grey",
+        "baseSkill": "Agility (DX/Hard)",
+        "characterTier": "Adept",
+        "effect": "Gain +4 to Basic Move and +1.0 Basic Speed for 1d+1 turns. Gain +1 to Active Defenses."
+      },
+      {
+        "name": "Force Speed",
+        "description": "The Force-user accelerates their body and mind, allowing them to move and react with incredible swiftness.",
+        "category": "Control Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 4,
+        "alignment": "Grey",
+        "baseSkill": "Agility (DX/Hard)",
+        "characterTier": "Expert",
+        "effect": "Gain +6 to Basic Move and +1.5 Basic Speed for 1d+2 turns. Gain +2 to Active Defenses and one extra attack per turn."
+      },
+      {
+        "name": "Force Speed",
+        "description": "The Force-user accelerates their body and mind, allowing them to move and react with incredible swiftness.",
+        "category": "Control Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 5,
+        "alignment": "Grey",
+        "baseSkill": "Agility (DX/Hard)",
+        "characterTier": "Master",
+        "effect": "Gain +8 to Basic Move and +2.0 Basic Speed for 1d+3 turns. Gain +3 to Active Defenses and two extra attacks per turn at a -1 penalty."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Force Speed"
+    }
+  }
+}

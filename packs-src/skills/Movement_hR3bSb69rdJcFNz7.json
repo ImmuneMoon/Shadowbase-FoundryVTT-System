@@ -1,0 +1,34 @@
+{
+  "_id": "hR3bSb69rdJcFNz7",
+  "_key": "!items!hR3bSb69rdJcFNz7",
+  "name": "Movement",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "TmHeseJfr7BHisdh",
+  "sort": 9400000,
+  "system": {
+    "row": {
+      "name": "Movement",
+      "level": "",
+      "points": null,
+      "relativeLevel": "HT/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Movement"
+    }
+  }
+}

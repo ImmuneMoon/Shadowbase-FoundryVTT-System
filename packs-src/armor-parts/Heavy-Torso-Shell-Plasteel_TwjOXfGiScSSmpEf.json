@@ -1,0 +1,42 @@
+{
+  "_id": "TwjOXfGiScSSmpEf",
+  "_key": "!items!TwjOXfGiScSSmpEf",
+  "name": "Heavy Torso Shell (Plasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 2700000,
+  "system": {
+    "row": {
+      "id": "d223d5b9-3bc3-4959-8656-6710db7709cc",
+      "name": "Heavy Torso Shell (Plasteel)",
+      "category": "Armor Shell",
+      "cost": 1200,
+      "weight": 15,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-heavy-torso-plasteel",
+      "materialId": "plasteel",
+      "notes": "Rigid, durable fusion of plastoid and steel.",
+      "validSlots": [],
+      "drBonus": 20,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-heavy-torso-plasteel"
+    }
+  }
+}

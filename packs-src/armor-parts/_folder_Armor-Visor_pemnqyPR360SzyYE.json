@@ -1,0 +1,19 @@
+{
+  "_id": "pemnqyPR360SzyYE",
+  "_key": "!folders!pemnqyPR360SzyYE",
+  "name": "Armor Visor",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 300000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "path": [
+        "Armor Visor"
+      ]
+    }
+  }
+}

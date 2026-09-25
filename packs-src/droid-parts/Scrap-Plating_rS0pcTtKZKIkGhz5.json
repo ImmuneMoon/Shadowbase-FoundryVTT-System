@@ -1,0 +1,39 @@
+{
+  "_id": "rS0pcTtKZKIkGhz5",
+  "_key": "!items!rS0pcTtKZKIkGhz5",
+  "name": "Scrap Plating",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 7400000,
+  "system": {
+    "row": {
+      "id": "e0eb67bc-061e-420e-8688-de15d3092333",
+      "name": "Scrap Plating",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 400,
+      "weight": 10,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "dr-plating-1",
+      "description": "DR 1"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "dr-plating-1"
+    }
+  }
+}

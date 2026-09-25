@@ -1,0 +1,20 @@
+{
+  "_id": "LOICTREiDyUb97qC",
+  "_key": "!folders!LOICTREiDyUb97qC",
+  "name": "Coupler Part",
+  "type": "Item",
+  "folder": "eAJTxXeHhOwNQB5R",
+  "sorting": "a",
+  "sort": 500000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "path": [
+        "Hilt Components",
+        "Coupler Part"
+      ]
+    }
+  }
+}

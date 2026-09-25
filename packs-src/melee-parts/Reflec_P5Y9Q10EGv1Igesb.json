@@ -1,0 +1,42 @@
+{
+  "_id": "P5Y9Q10EGv1Igesb",
+  "_key": "!items!P5Y9Q10EGv1Igesb",
+  "name": "Reflec",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "VqX65UQVOs2JpxDL",
+  "sort": 3900000,
+  "system": {
+    "row": {
+      "name": "Reflec",
+      "rarity": "Rare",
+      "cost": 2000,
+      "density": 90,
+      "category": "Raw Materials",
+      "subCategory": "Electronics",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A sophisticated electromagnetic-absorptive polymer. It registers as a \"cold\" spot to electronic sensors, radar, and thermographics.",
+      "id": "570df4bc-96ba-49ea-ac87-91a8c033a808",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "material:Reflec"
+    }
+  }
+}

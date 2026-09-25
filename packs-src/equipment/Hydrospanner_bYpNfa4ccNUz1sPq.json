@@ -1,0 +1,55 @@
+{
+  "_id": "bYpNfa4ccNUz1sPq",
+  "_key": "!items!bYpNfa4ccNUz1sPq",
+  "name": "Hydrospanner",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "cK2OmLlfEjsr72q3",
+  "sort": 7500000,
+  "system": {
+    "row": {
+      "name": "Hydrospanner",
+      "cost": 1548,
+      "skill": "Mechanic",
+      "description": "The quintessential repair tool. Grants +1 to Mechanic rolls for starships and repulsorlift vehicles. Can be used as an improvised melee weapon (Sw-1 Cr, uses Axe/Mace skill at -2). Power Cell lasts 2 hours of continuous use.",
+      "category": "Tools & Electronics",
+      "subCategory": "Non-Consumable Tools",
+      "weight": 2,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Silicon",
+          "amount": 0.6
+        },
+        {
+          "name": "Durasteel",
+          "amount": 0.7
+        },
+        {
+          "name": "Power Cell",
+          "amount": 0.7
+        }
+      ],
+      "id": "312e2f2d-6ecd-48f3-8ce5-f02d48cc25bf",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Hydrospanner"
+    }
+  }
+}

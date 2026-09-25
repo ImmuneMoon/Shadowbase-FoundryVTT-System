@@ -1,0 +1,61 @@
+{{!-- templates/actor/parts/starship-card.hbs - one starship (customized-starship-item.tsx 295-330: Total Construction Value, Handling /
+     Sublight Speed / Total HP / Standard DR / Hyperdrive; starship-system-damage.tsx: System / DR / HP / Status / Notes; armaments).
+     Context: a starshipCard. --}}
+<li class="sb-card sb-vessel-card sb-starship-card" data-item-id="{{id}}">
+  <header class="sb-card__head">
+    <img class="sb-row__icon" src="{{img}}" alt="">
+    <input type="text" class="sb-input sb-row__name" name="items.{{id}}.row.customName" value="{{rowName}}" {{disabled (not @root.editable)}}>
+    <span class="sb-muted">{{chassis}}</span>
+    <span class="sb-badge sb-badge-secondary sb-mono">{{localize "SHADOWBASE.Sheet.Vehicles.ConstructionValue" cost=readouts.cost}}</span>
+    <span class="sb-row-tools">
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon" data-action="openItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.OpenSheet"}}"><i class="fa-solid fa-up-right-from-square"></i></button>
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon" data-action="exportItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.Inventory.ExportItem"}}"><i class="fa-solid fa-download"></i></button>
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-danger" data-action="deleteItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.Delete"}}" {{disabled (not @root.editable)}}><i class="fa-solid fa-xmark"></i></button>
+    </span>
+  </header>
+  {{#if derivedError}}<p class="sb-notice sb-notice--error">{{derivedError}}</p>{{/if}}
+  <div class="sb-stat-grid sb-stat-grid--5">
+    <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Sheet.Vehicles.Handling"}}</span><span class="sb-stat-tile__value">{{readouts.handling}}</span></div>
+    <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Sheet.Vehicles.SublightSpeed"}}</span><span class="sb-stat-tile__value">{{readouts.speed}}</span></div>
+    <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Sheet.Vehicles.TotalHp"}}</span><span class="sb-stat-tile__value">{{readouts.hp}}</span></div>
+    <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Sheet.Vehicles.StandardDr"}}</span><span class="sb-stat-tile__value">{{readouts.dr}}</span></div>
+    <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Sheet.Vehicles.Hyperdrive"}}</span><span class="sb-stat-tile__value">{{readouts.hyperdrive}}</span></div>
+  </div>
+  <p class="sb-muted sb-row__sub">{{localize "SHADOWBASE.Sheet.Vehicles.Crew"}} {{readouts.crew}} · {{localize "SHADOWBASE.Sheet.Vehicles.Passengers"}} {{readouts.passengers}} · {{localize "SHADOWBASE.Sheet.Vehicles.Cargo"}} {{readouts.cargo}}</p>
+  {{#if readouts.notes}}<p class="sb-dossier sb-pre">{{readouts.notes}}</p>{{/if}}
+
+  <h5 class="sb-subhead">{{localize "SHADOWBASE.Sheet.Vehicles.SystemsDamage"}}</h5>
+  <div class="sb-table-wrap">
+  <table class="sb-table sb-ship-systems">
+    <thead><tr><th>{{localize "SHADOWBASE.Sheet.Vehicles.System"}}</th><th class="sb-num">DR</th><th class="sb-num">HP</th><th>{{localize "SHADOWBASE.Sheet.Vehicles.SystemStatus"}}</th><th>{{localize "SHADOWBASE.Sheet.Vehicles.Notes"}}</th></tr></thead>
+    <tbody>
+      {{#each systems}}
+      <tr class="sb-ship-system is-{{this.tone}}" data-system-id="{{this.id}}">
+        <td>{{this.name}}</td>
+        <td class="sb-num sb-mono">{{this.dr}}</td>
+        <td class="sb-num"><input type="number" class="sb-input sb-input--tiny" name="starshipSystems.{{../id}}.{{this.id}}.hp" value="{{this.hp}}" data-dtype="Number" min="0" {{disabled (not @root.editable)}}> <span class="sb-muted sb-mono">/ {{this.maxHp}}</span></td>
+        <td><select class="sb-select sb-select--sm" name="starshipSystems.{{../id}}.{{this.id}}.status" {{disabled (not @root.editable)}}>{{#each this.statusOptions}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select></td>
+        <td><input type="text" class="sb-input" name="starshipSystems.{{../id}}.{{this.id}}.notes" value="{{this.notes}}" {{disabled (not @root.editable)}}></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  </div>
+
+  {{#if armaments.length}}
+  <h5 class="sb-subhead">{{localize "SHADOWBASE.Sheet.Vehicles.Armaments"}}</h5>
+  <ul class="sb-armaments">
+    {{#each armaments}}
+    <li data-armament="{{this.name}}">
+      <span class="sb-armament__name">{{this.name}}</span>
+      <span class="sb-muted sb-mono">{{this.damage}}</span>
+      {{#if this.skill}}<span class="sb-muted">{{this.skill}}</span>{{/if}}
+      {{#if this.rollable}}<button type="button" class="sb-btn sb-btn-destructive sb-btn-sm" data-action="rollArmamentDamage" data-formula="{{this.damage}}" data-label="{{this.name}}"><i class="fa-solid fa-burst"></i> {{localize "SHADOWBASE.Sheet.Weapon.Damage"}}</button>{{/if}}
+    </li>
+    {{/each}}
+  </ul>
+  {{/if}}
+  <details class="sb-row__details"><summary>{{localize "SHADOWBASE.Sheet.Vehicles.CustomNotes"}}</summary>
+    <textarea class="sb-textarea" name="items.{{id}}.row.customNotes" rows="2" {{disabled (not @root.editable)}}>{{customNotes}}</textarea>
+  </details>
+</li>

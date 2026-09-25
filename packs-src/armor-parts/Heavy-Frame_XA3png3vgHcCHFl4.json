@@ -1,0 +1,42 @@
+{
+  "_id": "XA3png3vgHcCHFl4",
+  "_key": "!items!XA3png3vgHcCHFl4",
+  "name": "Heavy Frame",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "yXDilaSMuXLkPwTX",
+  "sort": 8800000,
+  "system": {
+    "row": {
+      "id": "e8d07557-6315-447c-a332-4bb40a29a54f",
+      "name": "Heavy Frame",
+      "category": "Armor Frame",
+      "cost": 62,
+      "weight": 0.88,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "frame-heavy",
+      "materialId": null,
+      "notes": "4 Mod Slots. Milled from Plastoid. Default on Heavy tier.",
+      "validSlots": [],
+      "drBonus": null,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "frame-heavy"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "DHJeVKeh0jxQp8eK",
+  "_key": "!items!DHJeVKeh0jxQp8eK",
+  "name": "Immunity Implant",
+  "type": "implant",
+  "img": "icons/svg/regen.svg",
+  "folder": "Xt5bv6RNBDGNU8uh",
+  "sort": 900000,
+  "system": {
+    "row": {
+      "id": "ef057f8d-f3a2-4d70-9a65-3a70478df9d5",
+      "name": "Immunity Implant",
+      "cost": 3690,
+      "finalCp": 10,
+      "effect": "Grants +8 to HT rolls to resist Poison & Disease.",
+      "category": "Neural",
+      "pathways": [
+        "Immune"
+      ],
+      "slotType": "Neural",
+      "installed": false,
+      "weight": 0.1,
+      "notes": "Trait Package: 10 CP of Advantages; Mandatory Flaws offset. Occupies Immune pathway. Materials: Silicon: 0.1 lbs (5 cr)."
+    },
+    "source": "implants",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "implants"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "implants",
+      "key": "Neural|Immunity Implant"
+    }
+  }
+}

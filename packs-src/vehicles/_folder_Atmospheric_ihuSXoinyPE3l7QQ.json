@@ -1,0 +1,19 @@
+{
+  "_id": "ihuSXoinyPE3l7QQ",
+  "_key": "!folders!ihuSXoinyPE3l7QQ",
+  "name": "Atmospheric",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "vehicles",
+      "path": [
+        "Atmospheric"
+      ]
+    }
+  }
+}

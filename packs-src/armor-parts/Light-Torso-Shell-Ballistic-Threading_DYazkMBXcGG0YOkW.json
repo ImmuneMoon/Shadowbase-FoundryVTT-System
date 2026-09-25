@@ -1,0 +1,42 @@
+{
+  "_id": "DYazkMBXcGG0YOkW",
+  "_key": "!items!DYazkMBXcGG0YOkW",
+  "name": "Light Torso Shell (Ballistic Threading)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 1800000,
+  "system": {
+    "row": {
+      "id": "4a07ba99-42a0-4967-a48c-d7186e300aed",
+      "name": "Light Torso Shell (Ballistic Threading)",
+      "category": "Armor Shell",
+      "cost": 17,
+      "weight": 0.85,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-light-torso-ballistic-threading",
+      "materialId": "ballistic-threading",
+      "notes": "Soft, concealable ballistic weave. Light tier only.",
+      "validSlots": [],
+      "drBonus": 3,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-light-torso-ballistic-threading"
+    }
+  }
+}

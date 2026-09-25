@@ -1,0 +1,19 @@
+{
+  "_id": "QMAUBR9U5YAyIYhg",
+  "_key": "!folders!QMAUBR9U5YAyIYhg",
+  "name": "Ranged Weapons",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 500000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "path": [
+        "Ranged Weapons"
+      ]
+    }
+  }
+}

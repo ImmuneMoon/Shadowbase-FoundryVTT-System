@@ -1,0 +1,123 @@
+{
+  "_id": "kixeeN2Evl9yB6p6",
+  "_key": "!items!kixeeN2Evl9yB6p6",
+  "name": "Arg'garok",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "si7rkta8nyJWyQok",
+  "sort": 100000,
+  "system": {
+    "row": {
+      "id": "1622441b-28cf-4c6d-8b0e-69750e3051a1",
+      "customName": "Arg'garok",
+      "baseType": "Arg'garok",
+      "baseSkill": "Two-Handed Axe/Mace",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": null,
+      "maxCharges": null,
+      "condition": "Fine",
+      "baseReach": "1, 2",
+      "baseWeight": 9.8,
+      "finalWeight": 9.8,
+      "baseCost": 490,
+      "finalCost": 980,
+      "gripParts": [
+        {
+          "inventoryId": "ea813424-434a-4e2d-b5dc-a79e27d1b16f",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "1a00e963-7eb4-4b3d-a46a-00b27bbd13fd",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "1622441b-28cf-4c6d-8b0e-69750e3051a1",
+        "customName": "Arg'garok",
+        "baseType": "Arg'garok",
+        "baseSkill": "Two-Handed Axe/Mace",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": null,
+        "maxCharges": null,
+        "condition": "Fine",
+        "baseReach": "1, 2",
+        "baseWeight": 9.8,
+        "finalWeight": 9.8,
+        "baseCost": 490,
+        "finalCost": 980,
+        "gripParts": [
+          {
+            "inventoryId": "ea813424-434a-4e2d-b5dc-a79e27d1b16f",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "1a00e963-7eb4-4b3d-a46a-00b27bbd13fd",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "ea813424-434a-4e2d-b5dc-a79e27d1b16f",
+          "name": "Extended Hilt",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 98,
+          "weight": 1.96,
+          "isInstalled": true,
+          "installedInMeleeId": "1622441b-28cf-4c6d-8b0e-69750e3051a1",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Two-Handed Sword. 1 or 2 hands.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "1a00e963-7eb4-4b3d-a46a-00b27bbd13fd",
+          "name": "Heavy Cleaver - Oversized",
+          "category": "Melee Head",
+          "materialId": "durasteel",
+          "cost": 392,
+          "weight": 7.84,
+          "isInstalled": true,
+          "installedInMeleeId": "1622441b-28cf-4c6d-8b0e-69750e3051a1",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Unbalanced.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Arg'garok"
+    }
+  }
+}

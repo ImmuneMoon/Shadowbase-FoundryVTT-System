@@ -1,0 +1,19 @@
+{
+  "_id": "byZCHCsA3CuhJWeS",
+  "_key": "!folders!byZCHCsA3CuhJWeS",
+  "name": "Hands",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 300000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-pieces",
+      "path": [
+        "Hands"
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "_id": "iydXhK7vzK8Es6nM",
+  "_key": "!items!iydXhK7vzK8Es6nM",
+  "name": "Standard Diatium Cell",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "SjjeLxAEjZ4g5Y21",
+  "sort": 3700000,
+  "system": {
+    "row": {
+      "id": "d287332e-a972-479c-817a-7acbf4485111",
+      "name": "Standard Diatium Cell",
+      "cost": 135,
+      "weight": 0.5,
+      "hits": 3000,
+      "effect": "Standard 3,000 \"hits\" baseline.",
+      "category": "Lightsaber Power Cell",
+      "materials": [
+        {
+          "name": "Diatium",
+          "amount": 0.4
+        },
+        {
+          "name": "Silicon",
+          "amount": 0.1
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "Standard 3,000 \"hits\" baseline."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:std-cell"
+    }
+  }
+}

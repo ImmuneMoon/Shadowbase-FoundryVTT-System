@@ -1,0 +1,42 @@
+{
+  "_id": "cb7Ktlrhn8z0rbIW",
+  "_key": "!items!cb7Ktlrhn8z0rbIW",
+  "name": "Blueprint: Micro-Rocket (Plasma)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "a37dkIaxvg9p084m",
+  "sort": 30400000,
+  "system": {
+    "row": {
+      "id": "1bf25ee2-8074-40a1-9c65-ff3a27c97569",
+      "name": "Blueprint: Micro-Rocket (Plasma)",
+      "cost": 247,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Micro-Rocket (Plasma) (Generation 0, proven, encoded, catalog design). Required to build Micro-Rocket (Plasma); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Micro-Rocket (Plasma)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 729.1111111111111,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Explosives|Micro-Rocket (Plasma)"
+    }
+  }
+}

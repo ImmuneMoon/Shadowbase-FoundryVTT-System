@@ -1,0 +1,34 @@
+{
+  "_id": "CaL7E8Vze3oOy1K5",
+  "_key": "!items!CaL7E8Vze3oOy1K5",
+  "name": "Innate Attack (Melee/Blades)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "b0AkEhPa45uoNffk",
+  "sort": 9000000,
+  "system": {
+    "row": {
+      "name": "Innate Attack (Melee/Blades)",
+      "points": 2,
+      "description": "Tier 1 Melee",
+      "category": "Cybernetic",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Innate Attack (Melee/Blades)"
+    }
+  }
+}

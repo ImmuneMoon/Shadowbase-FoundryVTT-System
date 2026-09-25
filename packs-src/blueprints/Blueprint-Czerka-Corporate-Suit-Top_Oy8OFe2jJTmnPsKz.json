@@ -1,0 +1,42 @@
+{
+  "_id": "Oy8OFe2jJTmnPsKz",
+  "_key": "!items!Oy8OFe2jJTmnPsKz",
+  "name": "Blueprint: Czerka Corporate Suit Top",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 15500000,
+  "system": {
+    "row": {
+      "id": "609d521a-f8e0-4ce0-882f-d63e0f96da16",
+      "name": "Blueprint: Czerka Corporate Suit Top",
+      "cost": 180,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Czerka Corporate Suit Top (Generation 0, proven, encoded, catalog design). Required to build Czerka Corporate Suit Top; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Czerka Corporate Suit Top",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 57.66666666666667,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Czerka Corporate Suit Top"
+    }
+  }
+}

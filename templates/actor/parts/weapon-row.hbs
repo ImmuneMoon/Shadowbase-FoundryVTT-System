@@ -1,0 +1,33 @@
+{{!-- templates/actor/parts/weapon-row.hbs - one weapon summary row (the card headers of customized-blaster-item.tsx 430-480,
+     customized-melee-weapon-item.tsx 1020-1080, lightsaber-item.tsx, customized-explosive-item.tsx 200-220; the attack / damage
+     buttons are the HUD's readied-weapon matrix through module/rolls.mjs). Context: a weaponRow. --}}
+<li class="sb-row sb-weapon-row sb-weapon-row--{{kind}}{{#if readied}} is-readied{{/if}}{{#if isUnready}} is-unready{{/if}}" data-item-id="{{id}}">
+  <div class="sb-row__main">
+    <img class="sb-row__icon" src="{{img}}" alt="">
+    <span class="sb-row__name sb-row__name--static" title="{{baseType}}">{{rowName}}</span>
+    {{#if (gt quantity 1)}}<span class="sb-badge sb-badge-secondary sb-badge--count">×{{quantity}}</span>{{/if}}
+    {{#each chips}}<span class="sb-tag sb-tag--stat"><small>{{this.label}}</small> {{this.value}}</span>{{/each}}
+    {{#if twoHanded}}<span class="sb-badge sb-badge-outline">2H</span>{{/if}}
+    {{#if ammo}}<span class="sb-badge sb-badge-outline sb-mono" title="{{ammo.loadedName}}{{#if ammo.gasGrade}} ({{ammo.gasGrade}}){{/if}}"><i class="fa-solid fa-battery-half"></i> {{ammo.current}}{{#if ammo.max}}/{{ammo.max}}{{/if}}</span>{{/if}}
+    {{#if malfunction}}<span class="sb-badge sb-badge-outline sb-mono" title="{{localize "SHADOWBASE.Sheet.Weapon.MalfHint"}}">Malf {{malfunction}}</span>{{/if}}
+    <span class="sb-badge {{#if condition.fine}}sb-badge-outline{{else}}sb-badge-destructive{{/if}}">{{condition.text}}{{#if durabilityText}} <small class="sb-mono">{{durabilityText}}</small>{{/if}}</span>
+    {{#if flawed}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Sheet.Weapon.Flawed"}}</span>{{/if}}
+    {{#unless isConstructed}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Sheet.Weapon.Unbuilt"}}</span>{{/unless}}
+    {{#if isUnready}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Status.Unready"}}</span>
+      <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="readyWeapon" data-item-id="{{id}}" {{disabled (not @root.editable)}}>{{localize "SHADOWBASE.Sheet.Weapon.Ready"}}</button>{{/if}}
+    <span class="sb-muted sb-mono">{{weight}} lb · {{cost}} cr</span>
+    <span class="sb-row__spacer"></span>
+    {{#if (eq kind "explosive")}}
+    <label class="sb-inline"><span class="sb-muted">×</span><input type="number" class="sb-input sb-input--tiny" name="items.{{id}}.row.quantity" value="{{quantity}}" data-dtype="Number" min="0" {{disabled (not @root.editable)}}></label>
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="rollThrow" data-item-id="{{id}}" {{disabled (not canAttack)}} title="{{attackSkill}}"><i class="fa-solid fa-dice"></i> {{localize "SHADOWBASE.Sheet.Weapon.Throw"}}{{#if attackTarget}} ({{attackTarget}}){{/if}}</button>
+    <button type="button" class="sb-btn sb-btn-destructive sb-btn-sm" data-action="rollExplosiveDamage" data-item-id="{{id}}" {{disabled (not canDamage)}} title="{{damage}}"><i class="fa-solid fa-burst"></i> {{localize "SHADOWBASE.Sheet.Weapon.Damage"}}</button>
+    {{else}}
+    <button type="button" class="sb-btn sb-btn-sm {{#if readied}}sb-btn-default{{else}}sb-btn-outline{{/if}}" data-action="toggleReadied" data-item-id="{{id}}" {{disabled (not @root.editable)}}><i class="fa-solid fa-hand"></i> {{#if readied}}{{localize "SHADOWBASE.Sheet.Weapon.Readied"}}{{else}}{{localize "SHADOWBASE.Sheet.Weapon.ReadyIt"}}{{/if}}</button>
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="rollAttack" data-item-id="{{id}}" {{disabled (not canAttack)}} title="{{#if blocked}}{{blocked}}{{else}}{{attackSkill}} · {{attackNote}}{{/if}}"><i class="fa-solid fa-dice"></i> {{localize "SHADOWBASE.Sheet.Weapon.Attack"}}{{#if attackTarget}} ({{attackTarget}}){{/if}}</button>
+    <button type="button" class="sb-btn sb-btn-destructive sb-btn-sm" data-action="rollDamage" data-item-id="{{id}}" {{disabled (not canDamage)}} title="{{#if canDamage}}{{damage}}{{else}}{{localize "SHADOWBASE.Sheet.Weapon.NoHitsBanked"}}{{/if}}"><i class="fa-solid fa-burst"></i> {{localize "SHADOWBASE.Sheet.Weapon.Damage"}}{{#if pendingHits}} <span class="sb-badge sb-badge-secondary sb-mono">{{pendingHits}}</span>{{/if}}</button>
+    {{/if}}
+    {{> "systems/shadowbase/templates/actor/parts/row-tools.hbs" id=id storage=storage kind=transferKind editable=@root.editable}}
+  </div>
+  {{#if derivedError}}<p class="sb-notice sb-notice--error">{{derivedError}}</p>{{/if}}
+  {{#if notes}}<details class="sb-row__details"><summary>{{localize "SHADOWBASE.Sheet.Weapon.Notes"}}</summary><p class="sb-dossier sb-pre">{{notes}}</p></details>{{/if}}
+</li>

@@ -1,0 +1,41 @@
+{{!-- templates/items/blaster-main.hbs - BlasterFinalStats.tsx (Tactical Stats :432-500, Skill Check :509-540, the
+     durability track :553-580) and BlasterAmmunition.tsx (Ammunition & Power Systems :396-450). Context: main
+     (blaster.mjs), editable, owned, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--blaster {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Target'}}"></i> {{localize "SHADOWBASE.Item.Weapon.TacticalStats"}}</h4>
+    {{> "shadowbase.item.tiles" tiles=main.tiles}}
+    <div class="sb-hrow sb-hrow--tight sb-item__badges">
+      {{#if main.gasGrade}}<span class="sb-badge sb-badge-outline" style="border-color: {{main.gasGrade.color}}" title="{{main.gasGrade.effect}}">{{localize "SHADOWBASE.Item.Blaster.GasGrade"}}: {{main.gasGrade.label}}</span>{{/if}}
+      {{#if main.twoHanded}}<span class="sb-badge sb-badge-outline">2H</span>{{/if}}
+      {{#if main.handling}}<span class="sb-text-muted sb-text-xs">{{main.handling}}</span>{{/if}}
+      <label class="sb-check-row sb-check-row--tiny" title="{{localize "SHADOWBASE.Item.Blaster.StunHint"}}"><input type="checkbox" name="system.row.stunMode" {{checked main.stunMode}} {{disabled (not editable)}}> {{localize "SHADOWBASE.Item.Blaster.Stun"}}</label>
+      {{#if main.totalUpgradesCost}}<span class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Blaster.UpgradesCost" cost=main.totalUpgradesCost}}</span>{{/if}}
+    </div>
+    {{> "shadowbase.item.condition" main.condition editable=editable owned=owned blade="" label=(localize "SHADOWBASE.Item.Condition.Title")}}
+  </div>
+  <div class="sb-item-section sb-item-section--actions">
+    <span class="sb-text-xs">{{localize "SHADOWBASE.Item.Weapon.SkillCheck"}}: <b>{{main.skill.name}}</b> <b class="sb-mono">{{#if main.skill.target}}{{main.skill.target}}{{else}}—{{/if}}</b>{{#if main.skill.bonus}} <span class="sb-text-muted">({{main.skill.base}} {{main.skill.bonus}})</span>{{/if}}{{#if main.skill.note}} <span class="sb-text-muted">· {{main.skill.note}}</span>{{/if}}</span>
+    {{#if main.skill.blocked}}<span class="sb-badge sb-badge-destructive">{{main.skill.blocked}}</span>{{/if}}
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="roll-attack" {{disabled (not main.canAttack)}}><i class="{{sbIcon 'roll'}}"></i> {{localize "SHADOWBASE.Sheet.Weapon.Attack"}}</button>
+    <button type="button" class="sb-btn sb-btn-destructive sb-btn-sm" data-action="roll-damage" {{disabled (not main.canDamage)}} title="{{main.damage}}"><i class="fa-solid fa-burst"></i> {{localize "SHADOWBASE.Sheet.Weapon.Damage"}}{{#if main.pendingHits}} <span class="sb-badge sb-badge-secondary sb-mono">{{main.pendingHits}}</span>{{/if}}</button>
+    {{#if main.isVolley}}<span class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Sheet.Weapon.Volley"}}</span>{{/if}}
+  </div>
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="fa-solid fa-battery-half"></i> {{localize "SHADOWBASE.Item.Blaster.Ammunition"}}</h4>
+    <div class="sb-item-grid">
+      <label class="sb-field sb-span-2"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Blaster.Loaded" needed=main.ammo.needed}}</span>
+        <select class="sb-select" name="ammo.loaded" {{disabled (not owned)}} {{disabled (not editable)}}>{{#each main.ammo.options}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      <div class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Blaster.Charges"}}</span><output class="sb-input sb-input--calc sb-mono">{{main.ammo.current}} / {{main.ammo.max}}</output></div>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Blaster.CurrentCharges"}}</span><input type="number" class="sb-input" name="system.row.currentCharges" value="{{main.ammo.current}}" data-dtype="Number" min="0" {{disabled (not editable)}}></label>
+    </div>
+    <p class="sb-text-muted sb-text-xs">
+      {{#if main.ammo.loadedName}}{{localize "SHADOWBASE.Item.Blaster.LoadedLine" name=main.ammo.loadedName type=main.ammo.loadedType}}{{#if main.ammo.fromEquipment}} ({{localize "SHADOWBASE.Item.Blaster.EquipmentSource"}}){{/if}}{{else}}{{localize "SHADOWBASE.Item.Blaster.Unloaded"}}{{/if}}
+      · {{localize "SHADOWBASE.Item.Blaster.ChargesPerShot" n=main.ammo.chargesPerShot}}
+      {{#if main.ammo.contents}} · {{localize "SHADOWBASE.Sheet.Inventory.Rounds" n=main.ammo.contents}}{{/if}}
+      {{#if main.ammo.firedRounds}} · {{localize "SHADOWBASE.Item.Blaster.FiredRounds" n=main.ammo.firedRounds}}{{/if}}
+    </p>
+    {{#unless owned}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Blaster.AmmoNeedsOwner"}}</p>{{/unless}}
+  </div>
+</section>

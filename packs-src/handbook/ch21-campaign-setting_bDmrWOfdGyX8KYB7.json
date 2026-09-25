@@ -1,0 +1,195 @@
+{
+  "_id": "bDmrWOfdGyX8KYB7",
+  "_key": "!journal!bDmrWOfdGyX8KYB7",
+  "name": "Chapter 21: Campaign Setting & Lore (Module 1)",
+  "pages": [
+    {
+      "_id": "pboKp2LS30j3dBq9",
+      "_key": "!journal.pages!bDmrWOfdGyX8KYB7.pboKp2LS30j3dBq9",
+      "name": "Overview",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>This chapter sets the stage for your adventures in Shadows of The Mandalorian War, providing a detailed overview of the campaign’s era, tone, key factions, and an introductory module to kickstart your story. The galaxy is a vast and dangerous place, and understanding its currents is crucial for survival and success.</p>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch21-campaign-setting",
+            "heading": null,
+            "overview": true,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "cx7yjovaEUFleHIo",
+      "_key": "!journal.pages!bDmrWOfdGyX8KYB7.cx7yjovaEUFleHIo",
+      "name": "Campaign Setting: Shadows of the Mandalorian War",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>This system is designed for a <strong>gritty, morally complex campaign</strong> set during the tumultuous <strong>Mandalorian Wars era (3964–3960 BBY, with campaign hooks running into the Jedi Civil War from 3959)</strong>, directly leading up to the seminal events of the Knights of the Old Republic video game.</p>\n<ul><li><strong>Tone:</strong> The overriding tone of the campaign is one of <strong>gritty, gray-morality, and war-driven struggle</strong>, infused with a growing sense of <strong>Force-based mysticism and tragedy</strong>. The galaxy is weary, its resources strained, and the traditional lines between good and evil are increasingly blurred by desperation and pragmatism. Heroes are not always virtuous, and villains may have compelling motives.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch21-campaign-setting",
+            "heading": "Campaign Setting: Shadows of the Mandalorian War",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "6NNMbeEJi8Bp4cx6",
+      "_key": "!journal.pages!bDmrWOfdGyX8KYB7.6NNMbeEJi8Bp4cx6",
+      "name": "Timeline Guide: The Path to the Sith Empire",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>This campaign defaults to 3964 BBY, in the tense early days before full-scale war with the Mandalorians erupts. The timeline below traces the galaxy's history from this starting point through the century that follows, including the true origin and reformation of the Sith as an organized threat. GMs planning modules across this span, and players wondering when options like the Sith Equipped advantage or the Sith Lord/Assassin/Marauder/Trooper archetypes become available, should treat this as the authoritative reference.</p>\n<ul><li><strong>3976 BBY:</strong> Mandalore the Ultimate begins a new campaign of Mandalorian conquest, following the Great Sith War a generation earlier.</li><li><strong>3965 BBY:</strong> Mandalorian raids on the Outer Rim escalate into open skirmishes with Republic forces -- the opening moves of what is not yet a declared war.</li><li><strong>3964 BBY (Default Campaign Start):</strong> The False War -- a year of scattered border skirmishes rather than open war. Revan is already a respected Jedi Knight publicly arguing for Jedi intervention, gathering the followers who will become the Revanchist movement, but the Jedi Council still refuses to sanction it. Tension is high; the real catastrophe hasn't hit yet.</li><li><strong>3963 BBY:</strong> The False War ends. The Mandalorians break through Republic lines and besiege Taris, then invade through three corridors simultaneously (the Onslaught).</li><li><strong>3962 BBY:</strong> Revan and Malak formally defy the Jedi Council and lead the Revanchists into the war; Revan is named Supreme Commander of Republic forces.</li><li><strong>3960 BBY -- Battle of Malachor V:</strong> Revan lures Mandalore the Ultimate into a final confrontation and kills him in single combat. Jedi General Meetra Surik gives the order to activate the Mass Shadow Generator (built by Zabrak engineer Bao-Dur), crushing the gravity of the entire system -- Mandalorian and Republic fleets alike. The Mandalorian Wars end. Investigating Mandalore's dying words afterward, Revan and Malak first learn of Sith influence behind the war, the thread that leads them into the Unknown Regions and their corruption.</li><li><strong>3959 BBY -- Revan's Sith:</strong> Revan and Malak return from the Unknown Regions as Sith Lords with a fleet, seize Korriban, and invade the Republic. The Jedi Civil War begins.</li><li><strong>3957 BBY -- Malak's Betrayal:</strong> The Republic sets a trap at Ord Mantell, using Bastila Shan's battle meditation to blunt the Sith fleet. Malak, unwilling to risk his own ships to save his master, lets Revan's flagship be boarded and Revan struck down. Rather than execute him, the Jedi Council has his memory wiped and quietly rebuilds him as an unwitting agent of the Republic. Malak declares himself sole Dark Lord of the Sith.</li><li><strong>3956 BBY -- Malak's Sith Defeated:</strong> Serving aboard the Endar Spire with fragments of his old memories resurfacing, the amnesiac Revan is drawn across the galaxy chasing clues to the Star Forge's location. Piecing his identity back together, Revan confronts Malak above Lehon, defeats him in single combat, and destroys the Star Forge, ending the Jedi Civil War.</li><li><strong>3954 BBY:</strong> The remnants of Malak's Sith consolidate into the Sith Triumvirate under Darth Traya, Darth Nihilus, and Darth Sion, beginning the First Jedi Purge. In the same year, Revan -- now a Jedi Master with more of his memories returned -- leaves known space with the Mandalorian Canderous Ordo, hunting the true Sith Empire he and Malak first encountered.</li><li><strong>3951 BBY:</strong> The Sith Triumvirate is defeated by the Jedi Exile, Meetra Surik, ending the First Jedi Purge. Surik then sets out to find the long-absent Revan, eventually locating him imprisoned on Dromund Kaas, capital of a true Sith Empire believed destroyed a thousand years before.</li><li><strong>c. 3950 BBY:</strong> Surik allies with Lord Scourge, a Sith Lord secretly disillusioned with the Emperor, to free Revan and strike at the Emperor directly. In the climactic battle, Scourge betrays them, killing Surik and allowing the Emperor to seal Revan in stasis within the Maelstrom Prison. Surik's spirit does not pass on -- it remains bound to Revan, sustaining him through the centuries of captivity to come.</li><li><strong>3681 BBY:</strong> The true Sith Empire returns to known space in force. The Great Galactic War begins.</li><li><strong>3653 BBY:</strong> The Sacking of Coruscant. The Treaty of Coruscant is signed, ending the Great Galactic War and beginning the Cold War.</li><li><strong>3641 BBY:</strong> Jedi Master Oteg leads a mission that frees Revan from the Maelstrom Prison after roughly 300 years of captivity.</li><li><strong>Sith Availability by Era:</strong> True Sith training -- the Sith Equipped advantage, and the Sith Lord/Sith Assassin/Sith Marauder/Sith Trooper archetypes -- requires access to an organized Sith tradition, which does not exist in known space before 3959 BBY. Before this date, Dark Side Force users are Dark Jedi: individually fallen, self-taught, or corrupted by an artifact or cult, not initiates of a true Sith Order. Sith Sorcery and Sith Alchemy remain available at any era, representing knowledge scavenged from ruins and artifacts rather than a living tradition.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch21-campaign-setting",
+            "heading": "Timeline Guide: The Path to the Sith Empire",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "LjR4bpEQCln2V8tV",
+      "_key": "!journal.pages!bDmrWOfdGyX8KYB7.LjR4bpEQCln2V8tV",
+      "name": "Key Factions",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The galaxy during the Mandalorian Wars is dominated by several powerful factions, each with its own agenda and impact on the conflict:</p>\n<ul><li><strong>Czerka Corporation:</strong> These are the <strong>neutral profiteers</strong> of the war. They operate with a singular focus on profit, using the chaos of the conflict as cover for their hidden goals. Czerka often deals with both the Republic and the Mandalorians, supplying arms, resources, and even intelligence, making them a dangerous and unpredictable force. Their loyalties are purely economic.</li><li><strong>Republic Military:</strong> The backbone of galactic defense, the Republic Military is <strong>stretched thin</strong> by the relentless Mandalorian advance. Their forces are weary, and their command is increasingly <strong>skeptical of Jedi interference</strong> and the dubious corporate dealings that plague the war effort. They represent a struggling force, often forced into difficult compromises.</li><li><strong>Jedi Order:</strong> The guardians of peace and justice are <strong>ideologically fractured</strong>. Some Jedi actively defy the Council’s non-interventionist stance, going rogue to fight the Mandalorians directly. Others remain neutral, or are bogged down in internal debates, leading to significant internal conflict within the Order. Many Jedi Masters struggle with <strong>visions of a coming darkness</strong>, a sense of dread beyond the current war.</li><li><strong>Mandalorian Clans:</strong> United under the charismatic and ruthless leadership of <strong>Mandalore the Ultimate</strong>, the Mandalorian Clans are on the offensive. They are systematically raiding and testing Republic resolve, pushing deeper into Republic space with their distinctive warrior culture and advanced tactics. Their methods are <strong>brutal but effective</strong>, embodying a philosophy of strength and conquest.</li><li><strong>Emerging Force Cults/Sith Seeds:</strong> These are unnamed factions or nascent <strong>Sith influence</strong> subtly manipulating events behind the scenes. They operate around <strong>ancient Force relics</strong> and critical galactic events, working quietly towards the future Jedi Civil War. No organized Sith Order exists yet (see the Timeline Guide, above) -- these are Dark Jedi and self-taught cultists, master manipulators preying on the chaos and despair of the current conflict to further their own dark agendas.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch21-campaign-setting",
+            "heading": "Key Factions",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "Xa9dlKrPBJZ773Qh",
+      "_key": "!journal.pages!bDmrWOfdGyX8KYB7.Xa9dlKrPBJZ773Qh",
+      "name": "Module 1: “The Broken Front”",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>This introductory module places player characters directly into the heart of the Mandalorian Wars, highlighting the themes of moral collapse and corporate exploitation.</p>\n<ul><li><strong>Year:</strong> 3964 BBY (the early days of the conflict).</li><li><strong>Theme:</strong> The beginning of the <strong>moral collapse</strong> of the galaxy. This module will showcase war fatigue, ideological fractures within established powers, and the cynical exploitation of chaos by powerful corporations like Czerka.</li><li><strong>Setting:</strong> An <strong>Outer Rim system near the front lines</strong>, heavily contested by Mandalorian raiders. The environment is likely to be a scarred, resource-depleted world, or a remote outpost struggling for survival amidst constant threat.</li><li><strong>Main Plot:</strong> The player characters are brought together under a <strong>Czerka contract</strong>. Their initial objective is to <strong>secure a vital relay station</strong> that has gone dark and <strong>investigate a lost shipment</strong> in the contested system. The job, initially presented as a straightforward mercenary task, quickly reveals deeper complexities. The shipment contains not just valuable goods, but <strong>Force-reactive materials and ancient relics</strong>, hinting at <strong>deeper conspiracies</strong> tied to the emerging Force cults and the subtle machinations that predate the overt conflict. The players will be forced to make difficult choices, dealing with Republic weariness, Mandalorian brutality, and Czerka’s amoral objectives.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 500000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch21-campaign-setting",
+            "heading": "Module 1: “The Broken Front”",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    }
+  ],
+  "categories": [],
+  "folder": null,
+  "sort": 2100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "handbook",
+      "key": "ch21-campaign-setting",
+      "handbook": {
+        "chapterId": "ch21-campaign-setting",
+        "generatedAt": "2026-09-19T09:02:30.342Z",
+        "headings": 4,
+        "tables": 0
+      }
+    }
+  }
+}

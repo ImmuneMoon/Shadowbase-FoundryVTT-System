@@ -1,0 +1,58 @@
+{
+  "_id": "hUtUYuPmuuCird7J",
+  "_key": "!items!hUtUYuPmuuCird7J",
+  "name": "Incendiary Dart",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "Q5SU8xBIJ2uiJh6y",
+  "sort": 2600000,
+  "system": {
+    "row": {
+      "name": "Incendiary Dart",
+      "craftingCategory": "Ammunition",
+      "projectileClass": "special",
+      "type": "Dart Magazine",
+      "maxCharges": 1,
+      "cost": 808,
+      "weight": 0.25,
+      "formula": "1d",
+      "notes": "HT-2 or 1d burn for 10s.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.15
+        },
+        {
+          "name": "Baradium",
+          "amount": 0.1
+        }
+      ],
+      "id": "fdf511d6-3928-4930-a8fa-58d93da3dcb8",
+      "quantity": 1,
+      "currentCharges": 1,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 808,
+      "baseWeight": 0.25,
+      "containerType": "None",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Incendiary Dart"
+    }
+  }
+}

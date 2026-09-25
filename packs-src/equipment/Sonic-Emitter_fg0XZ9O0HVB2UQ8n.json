@@ -1,0 +1,55 @@
+{
+  "_id": "fg0XZ9O0HVB2UQ8n",
+  "_key": "!items!fg0XZ9O0HVB2UQ8n",
+  "name": "Sonic Emitter",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "7rGdcjDF69anM1Pj",
+  "sort": 10900000,
+  "system": {
+    "row": {
+      "name": "Sonic Emitter",
+      "cost": 150,
+      "skill": "Electronics Operation or Electronics Repair",
+      "description": "An electronic component that produces an intense sonic frequency. Needs Computer Programming to function if constructed.",
+      "category": "Utility & Miscellaneous",
+      "weight": 1,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Silicon",
+          "amount": 0.4
+        },
+        {
+          "name": "Durasteel",
+          "amount": 0.4
+        },
+        {
+          "name": "Diatium",
+          "amount": 0.2
+        }
+      ],
+      "requiresSoftware": true,
+      "id": "fb9d2b91-2eaf-4153-b3d8-5eacd7653f5b",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Sonic Emitter"
+    }
+  }
+}

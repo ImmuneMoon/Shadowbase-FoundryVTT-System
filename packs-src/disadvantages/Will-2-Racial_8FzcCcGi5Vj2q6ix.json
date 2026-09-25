@@ -1,0 +1,34 @@
+{
+  "_id": "8FzcCcGi5Vj2q6ix",
+  "_key": "!items!8FzcCcGi5Vj2q6ix",
+  "name": "Will -2 (Racial)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "XWDBqE5xIGYEuyLo",
+  "sort": 3300000,
+  "system": {
+    "row": {
+      "name": "Will -2 (Racial)",
+      "points": 0,
+      "level": null,
+      "description": "Species-based resolve.",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Will -2 (Racial)|Racial"
+    }
+  }
+}

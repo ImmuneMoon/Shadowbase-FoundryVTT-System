@@ -1,0 +1,39 @@
+{
+  "_id": "LESqAIot2NziB9Wp",
+  "_key": "!items!LESqAIot2NziB9Wp",
+  "name": "Medium Durasteel",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 7600000,
+  "system": {
+    "row": {
+      "id": "6092b9f1-5313-4d01-a5c7-0d4e2f767613",
+      "name": "Medium Durasteel",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 8000,
+      "weight": 60,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "dr-plating-3",
+      "description": "DR 5"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "dr-plating-3"
+    }
+  }
+}

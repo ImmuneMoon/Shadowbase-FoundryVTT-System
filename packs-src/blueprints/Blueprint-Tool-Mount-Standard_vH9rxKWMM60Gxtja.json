@@ -1,0 +1,42 @@
+{
+  "_id": "vH9rxKWMM60Gxtja",
+  "_key": "!items!vH9rxKWMM60Gxtja",
+  "name": "Blueprint: Tool Mount (Standard)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "YbNWJn9nl1OgfL9I",
+  "sort": 29500000,
+  "system": {
+    "row": {
+      "id": "a9c26bb0-53c3-4e11-9324-8bdb7f93e997",
+      "name": "Blueprint: Tool Mount (Standard)",
+      "cost": 238,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Tool Mount (Standard) (Generation 0, proven, encoded, catalog design). Required to build Tool Mount (Standard); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Tool Mount (Standard)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 639,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Utility Mount|Tool Mount (Standard)"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "mBmOmakMSu053Qgm",
+  "_key": "!items!mBmOmakMSu053Qgm",
+  "name": "Reputation -1 (Untrustworthy)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "QdWbP3PunGyoJeht",
+  "sort": 17000000,
+  "system": {
+    "row": {
+      "name": "Reputation -1 (Untrustworthy)",
+      "points": -5,
+      "level": null,
+      "description": "Viewed with suspicion. You are generally assumed to be deceitful or acting in bad faith.",
+      "category": "Social",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Reputation -1 (Untrustworthy)|Social"
+    }
+  }
+}

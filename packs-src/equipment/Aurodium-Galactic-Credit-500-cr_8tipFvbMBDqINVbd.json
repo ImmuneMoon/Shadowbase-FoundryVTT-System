@@ -1,0 +1,46 @@
+{
+  "_id": "8tipFvbMBDqINVbd",
+  "_key": "!items!8tipFvbMBDqINVbd",
+  "name": "Aurodium Galactic Credit (500 cr)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "UWMQTjEpUjPcDZHa",
+  "sort": 2200000,
+  "system": {
+    "row": {
+      "name": "Aurodium Galactic Credit (500 cr)",
+      "cost": 500,
+      "description": "A physical credit, stamped in an official denomination by the Republic Central Bank. Often in a thin square, rectangular bar, or larger, ingot sized bars at higher denominations. Unofficial manufacture is highly illegal, and strictly enforced when possible.",
+      "category": "Currencies",
+      "weight": 0.05,
+      "quantity": 1,
+      "denominationValue": 500,
+      "materials": [
+        {
+          "name": "Aurodium",
+          "amount": 0.05
+        }
+      ],
+      "id": "5b518577-6b11-4cb4-bc3c-a30d5f53392f",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Aurodium Galactic Credit (500 cr)"
+    }
+  }
+}

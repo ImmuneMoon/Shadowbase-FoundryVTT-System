@@ -1,0 +1,25 @@
+{{!-- templates/items/blaster-mods.hbs - BlasterModifications.tsx Modifications & Slots: the weapon class's Ch11 mod
+     slots (weaponModData.rangedModSlotsFor), each a fitted good, and the tally. Context: mods (blaster.mjs), editable, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--mods {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Settings2'}}"></i> {{localize "SHADOWBASE.Item.Blaster.ModsTitle"}}</h4>
+    <p class="sb-text-muted sb-text-xs">{{#if mods.weaponClass}}{{localize "SHADOWBASE.Item.Blaster.ModClass" class=mods.weaponClass n=mods.count}}{{else}}{{localize "SHADOWBASE.Item.Blaster.NoModClass"}}{{/if}}</p>
+    <div class="sb-slot-grid">
+      {{#each mods.slots}}
+        {{> "shadowbase.item.fitted" this editable=@root.editable prefix="mod"}}
+      {{/each}}
+    </div>
+  </div>
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Item.Blaster.ModTally"}}</h4>
+    <div class="sb-stat-grid sb-item__tiles">
+      <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Item.Header.Weight"}}</span><span class="sb-stat-tile__value sb-mono">{{mods.tally.weight}}</span></div>
+      <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Item.Saber.Value"}}</span><span class="sb-stat-tile__value sb-mono">{{mods.tally.value}}</span></div>
+      <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Item.Blaster.Damage"}}</span><span class="sb-stat-tile__value sb-mono">{{sbSigned mods.tally.damageBonus}}</span></div>
+      <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Item.Blaster.Acc"}}</span><span class="sb-stat-tile__value sb-mono">{{sbSigned mods.tally.accuracyBonus}}</span></div>
+      <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Item.Blaster.EnergyRes"}}</span><span class="sb-stat-tile__value sb-mono">{{sbSigned mods.tally.energyResBonus}}</span></div>
+    </div>
+    {{#if mods.tally.notes.length}}<ul class="sb-item__notes-list">{{#each mods.tally.notes}}<li>{{this}}</li>{{/each}}</ul>{{/if}}
+    {{#if mods.tally.chosenNotOwned.length}}<p class="sb-text-amber sb-text-xs">{{localize "SHADOWBASE.Item.Slot.ChosenNotOwnedList"}} {{#each mods.tally.chosenNotOwned}}<span class="sb-tag">{{this}}</span>{{/each}}</p>{{/if}}
+  </div>
+</section>

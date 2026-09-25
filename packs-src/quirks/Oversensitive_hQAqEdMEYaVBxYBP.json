@@ -1,0 +1,32 @@
+{
+  "_id": "hQAqEdMEYaVBxYBP",
+  "_key": "!items!hQAqEdMEYaVBxYBP",
+  "name": "Oversensitive",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 3100000,
+  "system": {
+    "row": {
+      "name": "Oversensitive",
+      "points": -1,
+      "description": "You are easily insulted or emotionally wounded by perceived slights.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Oversensitive"
+    }
+  }
+}

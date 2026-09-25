@@ -1,0 +1,42 @@
+{
+  "_id": "UfhhGMlEoJta2led",
+  "_key": "!items!UfhhGMlEoJta2led",
+  "name": "Blueprint: Jumpsuit (Lower)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 16500000,
+  "system": {
+    "row": {
+      "id": "d219d015-042e-4982-bc89-944ae9325cf6",
+      "name": "Blueprint: Jumpsuit (Lower)",
+      "cost": 176,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Jumpsuit (Lower) (Generation 0, proven, encoded, catalog design). Required to build Jumpsuit (Lower); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Jumpsuit (Lower)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 11.333333333333332,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Jumpsuit (Lower)"
+    }
+  }
+}

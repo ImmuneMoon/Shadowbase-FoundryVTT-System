@@ -1,0 +1,42 @@
+{
+  "_id": "yJnCSAC0gEB1W2bT",
+  "_key": "!items!yJnCSAC0gEB1W2bT",
+  "name": "Durasteel Weighted Pommel",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "JewRbDqNijhteDDW",
+  "sort": 2000000,
+  "system": {
+    "row": {
+      "name": "Durasteel Weighted Pommel",
+      "category": "Pommel Part",
+      "effect": "Rear-weighted. Deceptive Attack penalty -1.",
+      "weight": 0.735,
+      "cost": 19,
+      "id": "f13ab793-7e65-4dd4-a51d-9454a4695224",
+      "partId": "weighted-pommel",
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "materialId": "durasteel",
+      "wrapId": null,
+      "volume": 0.0015,
+      "density": 490
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "hilt:weighted-pommel"
+    }
+  }
+}

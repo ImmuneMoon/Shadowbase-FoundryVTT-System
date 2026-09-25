@@ -1,0 +1,46 @@
+{
+  "_id": "FewbbCOZEqJw2H2d",
+  "_key": "!items!FewbbCOZEqJw2H2d",
+  "name": "Breath Mask Filter",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Oh3x5u0Hy1HpzLID",
+  "sort": 2800000,
+  "system": {
+    "row": {
+      "name": "Breath Mask Filter",
+      "craftingCategory": "Survival & Utility Hardware",
+      "cost": 30,
+      "description": "Filters for environmental helmets/suits. Materials: Filtration Mesh: 0.25 lbs.",
+      "category": "Survival Gear",
+      "weight": 0.25,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Filtration Mesh",
+          "amount": 0.25
+        }
+      ],
+      "id": "702ebded-6d45-49fe-92ce-efbbfa4368d8",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Breath Mask Filter"
+    }
+  }
+}

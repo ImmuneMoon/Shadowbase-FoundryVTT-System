@@ -1,0 +1,34 @@
+{
+  "_id": "uWehxD6O2PhRROzw",
+  "_key": "!items!uWehxD6O2PhRROzw",
+  "name": "Infravision (Cybernetic)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "b0AkEhPa45uoNffk",
+  "sort": 8800000,
+  "system": {
+    "row": {
+      "name": "Infravision (Cybernetic)",
+      "points": 0,
+      "description": "Replacing normal vision",
+      "category": "Cybernetic",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Infravision (Cybernetic)"
+    }
+  }
+}

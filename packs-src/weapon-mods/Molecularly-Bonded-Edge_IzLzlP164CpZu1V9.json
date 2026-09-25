@@ -1,0 +1,42 @@
+{
+  "_id": "IzLzlP164CpZu1V9",
+  "_key": "!items!IzLzlP164CpZu1V9",
+  "name": "Molecularly-Bonded Edge",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "j5yjPE6V6TAyz6NR",
+  "sort": 4800000,
+  "system": {
+    "row": {
+      "name": "Molecularly-Bonded Edge",
+      "category": "bladeHeadMod",
+      "cost": 1200,
+      "weight": 0.25,
+      "notes": "Grants the weapon Armor Divisor (2). Does not stack with a Vibro-Generator.",
+      "materials": [
+        {
+          "name": "Mullinine",
+          "amount": 0.25
+        }
+      ],
+      "id": "a21f40d2-ecce-4967-a4b2-0a0c27475a8f",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Molecularly-Bonded Edge"
+    }
+  }
+}

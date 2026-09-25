@@ -1,0 +1,39 @@
+{
+  "_id": "3VTHYoCKyIJe9zOF",
+  "_key": "!items!3VTHYoCKyIJe9zOF",
+  "name": "Heavy-Duty Power Cell",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "eikPTuqcJ0Ng3zJf",
+  "sort": 3800000,
+  "system": {
+    "row": {
+      "id": "1dd86931-2951-4056-91f1-2bf28fa3727f",
+      "name": "Heavy-Duty Power Cell",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Power Core",
+      "cost": 2300,
+      "weight": 5,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "hd-cell",
+      "description": "Base capacity to 150 PP."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "hd-cell"
+    }
+  }
+}

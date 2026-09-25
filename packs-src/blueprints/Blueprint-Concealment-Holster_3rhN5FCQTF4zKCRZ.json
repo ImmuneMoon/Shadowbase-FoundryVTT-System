@@ -1,0 +1,42 @@
+{
+  "_id": "3rhN5FCQTF4zKCRZ",
+  "_key": "!items!3rhN5FCQTF4zKCRZ",
+  "name": "Blueprint: Concealment Holster",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "rp93cLA7jGuZj51F",
+  "sort": 13000000,
+  "system": {
+    "row": {
+      "id": "162dc832-0eb6-4d8d-808c-b25e223a1baa",
+      "name": "Blueprint: Concealment Holster",
+      "cost": 177,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Concealment Holster (Generation 0, proven, encoded, catalog design). Required to build Concealment Holster; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Concealment Holster",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 23,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Carry Frame|Concealment Holster"
+    }
+  }
+}

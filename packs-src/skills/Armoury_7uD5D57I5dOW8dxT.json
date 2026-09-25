@@ -1,0 +1,34 @@
+{
+  "_id": "7uD5D57I5dOW8dxT",
+  "_key": "!items!7uD5D57I5dOW8dxT",
+  "name": "Armoury",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "Dql9Lb6aKuSPlhaq",
+  "sort": 1000000,
+  "system": {
+    "row": {
+      "name": "Armoury",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Average",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Armoury"
+    }
+  }
+}

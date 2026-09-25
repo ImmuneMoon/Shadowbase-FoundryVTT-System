@@ -1,0 +1,46 @@
+{
+  "_id": "Dlh7aUa2x41i3Ugj",
+  "_key": "!items!Dlh7aUa2x41i3Ugj",
+  "name": "Stun Modulator",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "5PEjVjBPZfD3PSGN",
+  "sort": 2100000,
+  "system": {
+    "row": {
+      "id": "91152587-29a9-4bcf-a5bf-4e9b5525f0da",
+      "name": "Stun Modulator",
+      "category": "Melee Power Unit",
+      "cost": 270,
+      "weight": 1,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "stun-modulator",
+      "materialId": null,
+      "notes": "Converts lethal damage to endurance (fatigue) damage.",
+      "effect": "Converts lethal damage to endurance (fatigue) damage.",
+      "energyResBonus": 0,
+      "volume": null,
+      "density": null,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "part:stun-modulator"
+    }
+  }
+}

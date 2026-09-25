@@ -1,0 +1,42 @@
+{
+  "_id": "xelUEtZbYzPUxEGE",
+  "_key": "!items!xelUEtZbYzPUxEGE",
+  "name": "Blueprint: Recon Armor Gauntlets",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 8100000,
+  "system": {
+    "row": {
+      "id": "934007fe-e66a-4e4b-98c5-a3c13f896622",
+      "name": "Blueprint: Recon Armor Gauntlets",
+      "cost": 182,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Recon Armor Gauntlets (Generation 0, proven, encoded, catalog design). Required to build Recon Armor Gauntlets; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Recon Armor Gauntlets",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 76,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Recon Armor Gauntlets"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "3XecnUQT2Vf6eRWf",
+  "_key": "!folders!3XecnUQT2Vf6eRWf",
+  "name": "Raw Materials",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 200000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "path": [
+        "Raw Materials"
+      ]
+    }
+  }
+}

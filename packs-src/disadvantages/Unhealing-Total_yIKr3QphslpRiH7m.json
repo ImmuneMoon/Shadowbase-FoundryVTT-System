@@ -1,0 +1,34 @@
+{
+  "_id": "yIKr3QphslpRiH7m",
+  "_key": "!items!yIKr3QphslpRiH7m",
+  "name": "Unhealing (Total)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "N9OA5FojtdIRbIeU",
+  "sort": 6500000,
+  "system": {
+    "row": {
+      "name": "Unhealing (Total)",
+      "points": -30,
+      "level": null,
+      "description": "Applies specifically to the hit points and DR of fully cybernetic/prosthetic systems. They do not recover naturally over time; they must be physically repaired with tools and spare parts.",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Unhealing (Total)|Cybernetic"
+    }
+  }
+}

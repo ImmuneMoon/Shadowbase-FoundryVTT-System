@@ -1,0 +1,60 @@
+{
+  "_id": "8fCoAJUJ4sreur7w",
+  "_key": "!items!8fCoAJUJ4sreur7w",
+  "name": "Advanced Computer Spike",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "UgxuhztQH8nW0SNR",
+  "sort": 500000,
+  "system": {
+    "row": {
+      "name": "Advanced Computer Spike",
+      "cost": 870,
+      "skill": "Slicing",
+      "description": "Resembles a datacard at first glance, but larger on one end. Contains highly illegal, military-grade slicer algorithms. Grants a +4 equipment bonus to a single hacking attempt. Consumed upon use. Needs Computer Programming to function if constructed.",
+      "category": "Tools & Electronics",
+      "subCategory": "Slicing & Security Consumables",
+      "weight": 2.4,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Data-Crystal",
+          "amount": 0.2
+        },
+        {
+          "name": "Silicon",
+          "amount": 1
+        },
+        {
+          "name": "Durasteel",
+          "amount": 1
+        },
+        {
+          "name": "Diatium",
+          "amount": 0.2
+        }
+      ],
+      "requiresSoftware": true,
+      "id": "85ef9367-2da6-4a05-afcd-a247d9fb59da",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Advanced Computer Spike"
+    }
+  }
+}

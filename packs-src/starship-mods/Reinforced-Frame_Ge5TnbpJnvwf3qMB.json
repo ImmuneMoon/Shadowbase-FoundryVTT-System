@@ -1,0 +1,36 @@
+{
+  "_id": "Ge5TnbpJnvwf3qMB",
+  "_key": "!items!Ge5TnbpJnvwf3qMB",
+  "name": "Reinforced Frame",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "2cE16pJiC7zNUXvN",
+  "sort": 1100000,
+  "system": {
+    "row": {
+      "id": "505ad7c5-7fdc-4560-954a-861b02cb3739",
+      "name": "Reinforced Frame",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Starship Modification",
+      "cost": 0,
+      "weight": 0,
+      "quantity": 1,
+      "description": "Defensive modification. +15% HP. Cost: 20% of the hull cost."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "starship-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "starship-mods",
+      "key": "Reinforced Frame"
+    }
+  }
+}

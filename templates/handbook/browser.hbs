@@ -1,0 +1,72 @@
+{{!-- templates/handbook/browser.hbs - the rulebook browser (handbook-browser.tsx + handbook-chapter-reader.tsx):
+     the search box, the "Search inside chapters" button, the full-text hits with their table badges, the
+     chapter list with matching headings, and the chapter reader (the heading tree is pre-rendered HTML
+     from HandbookBrowser#renderGroups). Context: module/apps/handbook-browser.mjs HandbookBrowser#prepareContext
+     (the HUD hands it as a partial context; the standalone HandbookBrowserApp spreads it at the root). --}}
+<div class="sb-hb">
+  {{#if loadingIndex}}
+  <p class="sb-hb__loading"><i class="fa-solid fa-spinner fa-spin"></i> {{localize "SHADOWBASE.Handbook.LoadingIndex"}}</p>
+  {{else}}
+  {{#if indexError}}<p class="sb-hb__error"><i class="fa-solid fa-triangle-exclamation"></i> {{indexError}}</p>{{/if}}
+  {{#if isChapter}}
+  <div class="sb-hb__chapter-bar">
+    <button type="button" class="sb-btn sb-btn-ghost sb-btn-xs sb-hb__back" data-action="hb-back"><i class="fa-solid fa-arrow-left"></i> {{localize "SHADOWBASE.Handbook.AllChapters"}}</button>
+    <span class="sb-hb__chapter-title" title="{{chapter.title}}">{{chapter.title}}</span>
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="hb-open-journal" data-chapter-id="{{chapter.id}}" data-heading="{{chapter.focusHeading}}" title="{{localize 'SHADOWBASE.Handbook.OpenJournalTitle'}}"><i class="fa-solid fa-book"></i> {{localize "SHADOWBASE.Handbook.OpenJournal"}}</button>
+  </div>
+  {{#if chapter.loading}}
+  <p class="sb-hb__loading"><i class="fa-solid fa-spinner fa-spin"></i> {{localize "SHADOWBASE.Handbook.LoadingChapter"}}</p>
+  {{else}}
+  {{#if chapter.failed}}
+  <p class="sb-hb__error">{{localize "SHADOWBASE.Handbook.ChapterFailed"}}</p>
+  {{else}}
+  {{#if chapter.noMatch}}
+  <p class="sb-hb__empty">{{localize "SHADOWBASE.Handbook.NoHeadings" query=chapter.filter}}</p>
+  {{else}}
+  {{#if chapter.hasOpen}}
+  <div class="sb-hb__toolbar"><button type="button" class="sb-btn sb-btn-ghost sb-btn-xs" data-action="hb-collapse-all"><i class="fa-solid fa-compress"></i> {{chapter.collapseLabel}}</button></div>
+  {{/if}}
+  <div class="sb-hb__reader">{{{chapter.html}}}</div>
+  {{/if}}
+  {{/if}}
+  {{/if}}
+  {{else}}
+  <div class="sb-hb__search">
+    <i class="fa-solid fa-magnifying-glass sb-hb__search-icon"></i>
+    <input type="search" class="sb-input sb-hb__search-input" name="hud.handbook.query" data-hb-search value="{{query}}" placeholder="{{searchPlaceholder}}" autocomplete="off">
+    <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-btn-xs sb-hb__search-btn" data-action="hb-search" title="{{localize 'SHADOWBASE.Handbook.SearchInside'}}"><i class="fa-solid fa-file-magnifying-glass"></i></button>
+  </div>
+  {{#if canDeepSearch}}
+  <button type="button" class="sb-btn sb-btn-outline sb-btn-sm sb-hb__deep" data-action="hb-search" {{#if searching}}disabled{{/if}}>
+    {{#if searching}}<i class="fa-solid fa-spinner fa-spin"></i> {{progressLine}}{{else}}<i class="fa-solid fa-file-magnifying-glass"></i> {{localize "SHADOWBASE.Handbook.SearchInside"}}{{/if}}
+  </button>
+  {{/if}}
+  {{#if hasHits}}
+  <div class="sb-hb__hits">
+    <div class="sb-hb__hits-bar">
+      <span class="sb-hb__hits-count">{{hitsCountLine}}</span>
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-xs" data-action="hb-clear-hits">{{localize "SHADOWBASE.Handbook.Clear"}}</button>
+    </div>
+    <ul class="sb-hb__list">
+      {{#each hits}}
+      <li><button type="button" class="sb-hb__hit" data-action="hb-open-hit" data-chapter-id="{{this.chapterId}}" data-heading="{{this.heading}}">
+        <span class="sb-hb__hit-heading">{{this.heading}}{{#if this.isTable}} <span class="sb-badge sb-badge-outline sb-hb__hit-kind" data-hit-kind="table">{{localize "SHADOWBASE.Handbook.TableBadge"}}</span>{{/if}}</span>
+        <span class="sb-hb__hit-snippet">{{this.snippet}}</span>
+        <span class="sb-hb__hit-chapter">{{this.chapterTitle}}</span>
+      </button></li>
+      {{/each}}
+    </ul>
+  </div>
+  {{/if}}
+  {{#if noMatch}}<p class="sb-hb__empty">{{noMatchLine}}</p>{{/if}}
+  <ul class="sb-hb__list{{#if hasHits}} is-dimmed{{/if}}">
+    {{#each results}}
+    <li><button type="button" class="sb-hb__chapter" data-action="hb-open-chapter" data-chapter-id="{{this.id}}">
+      <span class="sb-hb__chapter-row"><i class="fa-solid fa-book-open"></i> <span class="sb-hb__chapter-name">{{this.title}}</span></span>
+      {{#if this.hasHits}}<span class="sb-hb__chapter-hits">{{this.hitsLine}}</span>{{/if}}
+    </button></li>
+    {{/each}}
+  </ul>
+  {{/if}}
+  {{/if}}
+</div>

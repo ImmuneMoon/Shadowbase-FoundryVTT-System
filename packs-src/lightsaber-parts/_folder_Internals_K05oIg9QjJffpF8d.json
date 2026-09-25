@@ -1,0 +1,19 @@
+{
+  "_id": "K05oIg9QjJffpF8d",
+  "_key": "!folders!K05oIg9QjJffpF8d",
+  "name": "Internals",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 800000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "path": [
+        "Internals"
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "QjkZgMttGXfLSrlG",
+  "_key": "!folders!QjkZgMttGXfLSrlG",
+  "name": "Bowcasters",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 700000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "path": [
+        "Bowcasters"
+      ]
+    }
+  }
+}

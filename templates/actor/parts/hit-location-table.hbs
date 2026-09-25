@@ -1,0 +1,50 @@
+{{!-- templates/actor/parts/hit-location-table.hbs - hit-location-section.tsx 224-277 (Location / DR / Status) plus the
+     innate DR input, installed hardware and the armour covering each location (body-loadout-panel.tsx). Context: { locations, editable }. --}}
+<div class="sb-table-wrap">
+<table class="sb-table sb-hit-locations">
+  <thead>
+    <tr>
+      <th>{{localize "SHADOWBASE.Sheet.Body.Location"}}</th>
+      <th class="sb-num" title="{{localize "SHADOWBASE.Sheet.Body.DrHint"}}">{{localize "SHADOWBASE.Sheet.Body.DR"}}</th>
+      <th class="sb-num">{{localize "SHADOWBASE.Sheet.Body.InnateDR"}}</th>
+      <th>{{localize "SHADOWBASE.Sheet.Body.Status"}}</th>
+      <th>{{localize "SHADOWBASE.Sheet.Body.Armor"}}</th>
+      <th>{{localize "SHADOWBASE.Sheet.Body.Held"}}</th>
+      <th>{{localize "SHADOWBASE.Sheet.Body.Hardware"}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each locations}}
+    <tr class="sb-hit-location{{#if this.isAmputated}} is-amputated{{/if}}{{#if this.isCrippled}} is-crippled{{/if}}" data-location-id="{{this.id}}">
+      <td>
+        <span class="sb-hit-location__name">{{this.name}}</span>
+        {{#if this.targetPenalty}}<span class="sb-muted sb-mono"> ({{this.targetPenalty}})</span>{{/if}}
+        {{#if this.isProsthetic}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Sheet.Body.Prosthetic"}}</span>{{/if}}
+      </td>
+      <td class="sb-num sb-mono">{{this.drText}}</td>
+      <td class="sb-num">
+        {{#if this.innateEditable}}
+        <input type="number" class="sb-input sb-input--tiny" name="hitLocations.{{this.id}}.innateDR" value="{{this.innateDR}}" data-dtype="Number" min="0" {{disabled (not ../editable)}}>
+        {{else}}<span class="sb-mono">{{this.innateDR}}</span>{{/if}}
+      </td>
+      <td>
+        <span class="sb-badge {{#if this.healthy}}sb-badge-outline{{else}}sb-badge-destructive{{/if}}">{{this.status}}</span>
+        {{#if this.isAmputated}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Sheet.Body.Amputated"}}</span>{{/if}}
+        {{#if this.degradation}}<span class="sb-muted sb-mono">-{{this.degradation}}</span>{{/if}}
+      </td>
+      <td class="sb-cell-list">
+        {{#each this.worn}}<span class="sb-tag">{{this.name}}</span>{{/each}}
+        {{#each this.protectedBy}}<span class="sb-tag sb-tag--muted" title="{{localize "SHADOWBASE.Sheet.Body.ProtectedByHint"}}">{{this.name}} ({{this.dr}})</span>{{/each}}
+      </td>
+      <td class="sb-cell-list">
+        {{#each this.held}}<span class="sb-tag{{#if this.pinned}} sb-tag--pinned{{/if}}">{{this.name}}{{#if this.twoHanded}} <small>2H</small>{{/if}}{{#if this.worn}} <small>{{localize "SHADOWBASE.Sheet.Body.Worn"}}</small>{{/if}}</span>{{/each}}
+      </td>
+      <td class="sb-cell-list">
+        {{#each this.hardware}}<span class="sb-tag sb-tag--accent">{{this.name}}</span>{{/each}}
+      </td>
+    </tr>
+    {{/each}}
+    {{#unless locations.length}}<tr><td colspan="7" class="sb-empty">{{localize "SHADOWBASE.Sheet.Body.NoAnatomy"}}</td></tr>{{/unless}}
+  </tbody>
+</table>
+</div>

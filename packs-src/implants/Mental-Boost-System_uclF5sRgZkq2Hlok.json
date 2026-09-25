@@ -1,0 +1,42 @@
+{
+  "_id": "uclF5sRgZkq2Hlok",
+  "_key": "!items!uclF5sRgZkq2Hlok",
+  "name": "Mental Boost System",
+  "type": "implant",
+  "img": "icons/svg/regen.svg",
+  "folder": "Xt5bv6RNBDGNU8uh",
+  "sort": 1000000,
+  "system": {
+    "row": {
+      "id": "fcbfc262-ea29-49d0-8f06-205f413d3dc2",
+      "name": "Mental Boost System",
+      "cost": 9180,
+      "finalCp": 25,
+      "effect": "Grants +1 IQ and +1 Will.",
+      "category": "Neural",
+      "pathways": [
+        "IQ",
+        "Will"
+      ],
+      "slotType": "Neural",
+      "installed": false,
+      "weight": 0.2,
+      "notes": "Trait Package: 25 CP of Advantages; Mandatory Flaws offset. Occupies both IQ and Will pathways. Materials: Silicon: 0.2 lbs (10 cr)."
+    },
+    "source": "implants",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "implants"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "implants",
+      "key": "Neural|Mental Boost System"
+    }
+  }
+}

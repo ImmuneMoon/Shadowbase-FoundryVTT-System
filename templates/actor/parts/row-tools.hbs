@@ -1,0 +1,10 @@
+{{!-- templates/actor/parts/row-tools.hbs - the tail of every inventory row: storage select (send-to-storage-menu.tsx),
+     open sheet, export (item-transfer-buttons.tsx ExportItemButton), delete. Context: { id, storage[], kind, editable }. --}}
+<span class="sb-row-tools">
+  <select class="sb-select sb-select--tiny" name="items.{{id}}.row.storageLocationId" title="{{localize "SHADOWBASE.Sheet.Inventory.SendToStorage"}}" {{disabled (not editable)}}>
+    {{#each storage}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+  </select>
+  <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon" data-action="openItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.OpenSheet"}}"><i class="fa-solid fa-up-right-from-square"></i></button>
+  {{#if kind}}<button type="button" class="sb-btn sb-btn-ghost sb-btn-icon" data-action="exportItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.Inventory.ExportItem"}}"><i class="fa-solid fa-download"></i></button>{{/if}}
+  <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-danger" data-action="deleteItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.Delete"}}" {{disabled (not editable)}}><i class="fa-solid fa-xmark"></i></button>
+</span>

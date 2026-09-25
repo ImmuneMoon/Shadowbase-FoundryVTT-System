@@ -1,0 +1,39 @@
+{
+  "_id": "b9XeaADEbRxNgkNn",
+  "_key": "!items!b9XeaADEbRxNgkNn",
+  "name": "Weapon Mount (Standard)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 9600000,
+  "system": {
+    "row": {
+      "id": "5c9f3d82-2576-4e9e-a833-8da8b267eec0",
+      "name": "Weapon Mount (Standard)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 732,
+      "weight": 6,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "wpn-mount-std",
+      "description": "Payload 1 (Light)"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "wpn-mount-std"
+    }
+  }
+}

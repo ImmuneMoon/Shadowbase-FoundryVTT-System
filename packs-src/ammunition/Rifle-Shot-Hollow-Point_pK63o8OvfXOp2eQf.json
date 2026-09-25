@@ -1,0 +1,64 @@
+{
+  "_id": "pK63o8OvfXOp2eQf",
+  "_key": "!items!pK63o8OvfXOp2eQf",
+  "name": "Rifle Shot (Hollow Point)",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "62SxWxECrgqvwXoo",
+  "sort": 4100000,
+  "system": {
+    "row": {
+      "name": "Rifle Shot (Hollow Point)",
+      "craftingCategory": "Ammunition",
+      "component": "shot",
+      "projectileClass": "special",
+      "payloadRolls": [
+        {
+          "skill": "Machinist (Guns)",
+          "description": "Carving the hollow point."
+        }
+      ],
+      "type": "Rounds",
+      "containerType": "None",
+      "maxCharges": 0,
+      "cost": 4,
+      "weight": 0.058,
+      "notes": "The projectile and propellant of a Rifle Round (Hollow Point), without its Casing. Load it into a Rifle Casing to Handload.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.018
+        },
+        {
+          "name": "Gunpowder",
+          "amount": 0.04
+        }
+      ],
+      "id": "8b3fa1d5-78b8-46ba-a1a9-ece0d9d40e5c",
+      "quantity": 1,
+      "currentCharges": 0,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 4,
+      "baseWeight": 0.058,
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Rifle Shot (Hollow Point)"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "Kxd7Jl1Yz54rOT64",
+  "_key": "!items!Kxd7Jl1Yz54rOT64",
+  "name": "Filtration Mesh",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Egxnv0BP7FCZLuEZ",
+  "sort": 6200000,
+  "system": {
+    "row": {
+      "name": "Filtration Mesh",
+      "rarity": "Common",
+      "cost": 60,
+      "density": 30,
+      "category": "Raw Materials",
+      "subCategory": "Utility",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Micro-porous material designed to catch environmental toxins and impurities.",
+      "id": "ae9bc167-670c-4dc0-aeb7-ebfc3b29394d",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Filtration Mesh"
+    }
+  }
+}

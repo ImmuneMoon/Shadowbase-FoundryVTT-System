@@ -1,0 +1,19 @@
+{
+  "_id": "qrQnM70omC8gfDQ5",
+  "_key": "!folders!qrQnM70omC8gfDQ5",
+  "name": "Missile",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 300000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "path": [
+        "Missile"
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "DWkRMy0dIck5ynQL",
+  "_key": "!items!DWkRMy0dIck5ynQL",
+  "name": "Blueprint: Stealth Suit Headcover",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 9800000,
+  "system": {
+    "row": {
+      "id": "b628b203-3942-4e18-b656-542dc1e7c4a0",
+      "name": "Blueprint: Stealth Suit Headcover",
+      "cost": 200,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Stealth Suit Headcover (Generation 0, proven, encoded, catalog design). Required to build Stealth Suit Headcover; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Stealth Suit Headcover",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 251,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Stealth Suit Headcover"
+    }
+  }
+}

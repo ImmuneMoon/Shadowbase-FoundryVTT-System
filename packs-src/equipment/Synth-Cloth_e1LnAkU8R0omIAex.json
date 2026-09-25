@@ -1,0 +1,42 @@
+{
+  "_id": "e1LnAkU8R0omIAex",
+  "_key": "!items!e1LnAkU8R0omIAex",
+  "name": "Synth-Cloth",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "b9NTRG23teMlPT2K",
+  "sort": 11400000,
+  "system": {
+    "row": {
+      "name": "Synth-Cloth",
+      "rarity": "Very Common",
+      "cost": 10,
+      "density": 30,
+      "category": "Raw Materials",
+      "subCategory": "Clothing",
+      "weight": 1,
+      "quantity": 1,
+      "description": "The standard manufactured textile for everyday clothing.",
+      "id": "d2baa5ee-38d5-46d5-b45e-0b730a66516e",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Synth-Cloth"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "_id": "sXMRz92OhnhhPkYp",
+  "_key": "!items!sXMRz92OhnhhPkYp",
+  "name": "Environmental Insulation (Torso)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "g3ttGbCetYWw12Jx",
+  "sort": 2900000,
+  "system": {
+    "row": {
+      "id": "c1b419ec-33c2-413b-b0ab-340d46119306",
+      "name": "Environmental Insulation (Torso)",
+      "category": "Underlay Mod",
+      "cost": 50,
+      "weight": 0.5,
+      "notes": "+2 HT vs. extreme heat/cold.",
+      "equipped": false,
+      "quantity": 1,
+      "validSlots": [
+        "Torso",
+        "Droid Torso"
+      ]
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "key": "Environmental Insulation (Torso)"
+    }
+  }
+}

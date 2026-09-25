@@ -1,0 +1,46 @@
+{
+  "_id": "Qs4RuTzPRMTBF84F",
+  "_key": "!items!Qs4RuTzPRMTBF84F",
+  "name": "Heavy Stagger-Pulse Modulator",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "HItJMz9evrOuwm0U",
+  "sort": 1500000,
+  "system": {
+    "row": {
+      "name": "Heavy Stagger-Pulse Modulator",
+      "category": "Power Cell",
+      "cost": 100,
+      "weight": 0.6,
+      "notes": "On hit, target must make an HT-2 roll or be physically Stunned for 1d sec.",
+      "materials": [
+        {
+          "name": "Diatium",
+          "amount": 0.4
+        },
+        {
+          "name": "Silicon",
+          "amount": 0.2
+        }
+      ],
+      "id": "4b4cf2cf-edd4-45eb-9619-5fcee6872265",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Heavy Stagger-Pulse Modulator"
+    }
+  }
+}

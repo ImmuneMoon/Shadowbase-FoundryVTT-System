@@ -1,0 +1,19 @@
+{
+  "_id": "uR0UoLTcsbSiD5ki",
+  "_key": "!folders!uR0UoLTcsbSiD5ki",
+  "name": "Offensive",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 200000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "starship-mods",
+      "path": [
+        "Offensive"
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "w6hFGtDw8DPXYOY5",
+  "_key": "!items!w6hFGtDw8DPXYOY5",
+  "name": "Animal Empathy",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 1400000,
+  "system": {
+    "row": {
+      "name": "Animal Empathy",
+      "points": 5,
+      "description": "You have a natural rapport with non-sentient creatures. A lone hermit living in the wilds of Dantooine might use this to coexist with the local fauna, or a beast-tamer might have this advantage.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Animal Empathy"
+    }
+  }
+}

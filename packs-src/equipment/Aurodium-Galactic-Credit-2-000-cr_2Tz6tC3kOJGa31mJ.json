@@ -1,0 +1,46 @@
+{
+  "_id": "2Tz6tC3kOJGa31mJ",
+  "_key": "!items!2Tz6tC3kOJGa31mJ",
+  "name": "Aurodium Galactic Credit (2,000 cr)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "UWMQTjEpUjPcDZHa",
+  "sort": 1600000,
+  "system": {
+    "row": {
+      "name": "Aurodium Galactic Credit (2,000 cr)",
+      "cost": 2000,
+      "description": "A physical credit, stamped in an official denomination by the Republic Central Bank. Often in a thin square, rectangular bar, or larger, ingot sized bars at higher denominations. Unofficial manufacture is highly illegal, and strictly enforced when possible.",
+      "category": "Currencies",
+      "weight": 0.2,
+      "quantity": 1,
+      "denominationValue": 2000,
+      "materials": [
+        {
+          "name": "Aurodium",
+          "amount": 0.2
+        }
+      ],
+      "id": "bf764f7c-f591-4ce5-b6af-09a9ee342536",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Aurodium Galactic Credit (2,000 cr)"
+    }
+  }
+}

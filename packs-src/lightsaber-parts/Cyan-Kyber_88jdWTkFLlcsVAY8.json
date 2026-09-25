@@ -1,0 +1,41 @@
+{
+  "_id": "88jdWTkFLlcsVAY8",
+  "_key": "!items!88jdWTkFLlcsVAY8",
+  "name": "Cyan Kyber",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "orWVaxdlAjqEWg6h",
+  "sort": 5000000,
+  "system": {
+    "row": {
+      "id": "78940c7b-7d46-4e8d-a7f4-f23c633553d7",
+      "name": "Cyan Kyber",
+      "rarity": "Uncommon",
+      "cost": 8000,
+      "weight": 0.2,
+      "baseDamageDice": 5,
+      "baseDamageAdds": 0,
+      "effect": "5d base energy. x1.25 to Force Points. Natural.",
+      "category": "Lightsaber Primary Crystal",
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "5d base energy. x1.25 to Force Points. Natural."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:cyan-kyber"
+    }
+  }
+}

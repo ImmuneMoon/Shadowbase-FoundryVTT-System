@@ -1,0 +1,42 @@
+{
+  "_id": "jQKOaOM8n1DwZ0kM",
+  "_key": "!items!jQKOaOM8n1DwZ0kM",
+  "name": "Durasteel Trapped Switch",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "9ECWDaoCgwDpUCaw",
+  "sort": 1400000,
+  "system": {
+    "row": {
+      "name": "Durasteel Trapped Switch",
+      "category": "Switch Part",
+      "effect": "Biometric trap: 1d burn or 1d imp if unauthorized.",
+      "weight": 0.245,
+      "cost": 7,
+      "id": "0ea62a95-9c9c-4c0f-9988-62b9930f6471",
+      "partId": "trapped-switch",
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "materialId": "durasteel",
+      "wrapId": null,
+      "volume": 0.0005,
+      "density": 490
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "hilt:trapped-switch"
+    }
+  }
+}

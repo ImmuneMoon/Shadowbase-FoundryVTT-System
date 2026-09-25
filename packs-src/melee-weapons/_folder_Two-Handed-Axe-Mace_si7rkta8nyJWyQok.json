@@ -1,0 +1,19 @@
+{
+  "_id": "si7rkta8nyJWyQok",
+  "_key": "!folders!si7rkta8nyJWyQok",
+  "name": "Two-Handed Axe/Mace",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 0,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "path": [
+        "Two-Handed Axe/Mace"
+      ]
+    }
+  }
+}

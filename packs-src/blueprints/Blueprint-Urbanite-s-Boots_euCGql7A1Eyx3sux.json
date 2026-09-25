@@ -1,0 +1,42 @@
+{
+  "_id": "euCGql7A1Eyx3sux",
+  "_key": "!items!euCGql7A1Eyx3sux",
+  "name": "Blueprint: Urbanite's Boots",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 19200000,
+  "system": {
+    "row": {
+      "id": "c61ea8a2-934f-48c3-992b-4f93490ca553",
+      "name": "Blueprint: Urbanite's Boots",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Urbanite's Boots (Generation 0, proven, encoded, catalog design). Required to build Urbanite's Boots; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Urbanite's Boots",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 10,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Urbanite's Boots"
+    }
+  }
+}

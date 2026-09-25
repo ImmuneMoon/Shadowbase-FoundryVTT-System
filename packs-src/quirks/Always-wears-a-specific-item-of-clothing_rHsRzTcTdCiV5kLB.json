@@ -1,0 +1,32 @@
+{
+  "_id": "rHsRzTcTdCiV5kLB",
+  "_key": "!items!rHsRzTcTdCiV5kLB",
+  "name": "Always wears a specific item of clothing",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "name": "Always wears a specific item of clothing",
+      "points": -1,
+      "description": "You have a signature piece of apparel—a battered helmet, a lucky charm on a necklace, a specific style of worn leather gloves—that you are never seen without.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Always wears a specific item of clothing"
+    }
+  }
+}

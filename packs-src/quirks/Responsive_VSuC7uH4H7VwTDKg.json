@@ -1,0 +1,32 @@
+{
+  "_id": "VSuC7uH4H7VwTDKg",
+  "_key": "!items!VSuC7uH4H7VwTDKg",
+  "name": "Responsive",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 3400000,
+  "system": {
+    "row": {
+      "name": "Responsive",
+      "points": -1,
+      "description": "You are a 'go-getter' who is always the first to volunteer or act on a new idea.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Responsive"
+    }
+  }
+}

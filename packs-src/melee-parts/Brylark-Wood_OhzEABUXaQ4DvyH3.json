@@ -1,0 +1,42 @@
+{
+  "_id": "OhzEABUXaQ4DvyH3",
+  "_key": "!items!OhzEABUXaQ4DvyH3",
+  "name": "Brylark Wood",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "VqX65UQVOs2JpxDL",
+  "sort": 2400000,
+  "system": {
+    "row": {
+      "name": "Brylark Wood",
+      "rarity": "Rare",
+      "cost": 150,
+      "density": 470,
+      "category": "Raw Materials",
+      "subCategory": "Wood",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Exceptionally dense wood; structurally as strong as metal. Can be used as a melee weapon or lightsaber hilt without suffering the normal breakage penalties of wooden weapons.",
+      "id": "d4ccabc1-b49d-4497-bb15-e54642fe6954",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "material:Brylark Wood"
+    }
+  }
+}

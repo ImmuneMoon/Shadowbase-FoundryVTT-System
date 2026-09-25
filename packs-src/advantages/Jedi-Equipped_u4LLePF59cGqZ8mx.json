@@ -1,0 +1,34 @@
+{
+  "_id": "u4LLePF59cGqZ8mx",
+  "_key": "!items!u4LLePF59cGqZ8mx",
+  "name": "Jedi Equipped",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "3vDRi4uDBtDelTd8",
+  "sort": 10000000,
+  "system": {
+    "row": {
+      "name": "Jedi Equipped",
+      "points": 10,
+      "description": "70% off the Galactic Standard price.",
+      "category": "Social/Wealth",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Jedi Equipped"
+    }
+  }
+}

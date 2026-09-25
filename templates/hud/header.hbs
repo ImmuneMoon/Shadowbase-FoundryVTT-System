@@ -1,0 +1,44 @@
+{{!-- templates/hud/header.hbs - the HUD's masthead (roller-window.tsx SheetHeader + the Combat State
+     strip the website keeps on the sheet: the Global Turn Counter with +/- and Sweep now, the stun
+     state with its recovery roll, the facing arc). Context: module/apps/hud.mjs #headerContext.
+     Recipes: sb-btn / sb-badge from styles/components.css (U05); sb-hud__* from styles/hud.css. --}}
+<header class="sb-hud__header">
+  <div class="sb-hud__identity">
+    {{#if actor.img}}<img class="sb-hud__portrait" src="{{actor.img}}" alt="">{{/if}}
+    <div class="sb-hud__identity-text">
+      <h2 class="sb-hud__name"><i class="fa-solid fa-wave-square"></i> {{actor.name}}</h2>
+      <p class="sb-hud__subtitle">{{localize "SHADOWBASE.Hud.Subtitle"}}</p>
+    </div>
+    <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-btn-sm" data-action="open-sheet" title="{{localize 'SHADOWBASE.Hud.OpenSheet'}}"><i class="fa-solid fa-user"></i></button>
+  </div>
+  {{#if engineOk}}
+  <div class="sb-hud__pools">
+    {{#each header.pools}}
+    <span class="sb-hud__chip sb-hud__chip--{{this.key}}" title="{{this.label}}"><span class="sb-hud__chip-label">{{this.label}}</span> <strong>{{this.value}}</strong><span class="sb-hud__chip-max">/{{this.max}}</span></span>
+    {{/each}}
+    <span class="sb-hud__chip" title="{{localize 'SHADOWBASE.Hud.BasicSpeedTitle'}}"><span class="sb-hud__chip-label">{{localize "SHADOWBASE.Hud.BS"}}</span> <strong>{{header.basicSpeed}}</strong></span>
+    <span class="sb-hud__chip" title="{{localize 'SHADOWBASE.Roll.Dodge'}}"><span class="sb-hud__chip-label">{{localize "SHADOWBASE.Hud.DodgeShort"}}</span> <strong>{{header.dodge}}</strong></span>
+  </div>
+  <div class="sb-hud__state">
+    <div class="sb-hud__turn" title="{{localize 'SHADOWBASE.Hud.TurnCounterTitle'}}">
+      <span class="sb-hud__turn-label"><i class="fa-solid fa-stopwatch"></i> {{localize "SHADOWBASE.Hud.Turn"}}</span>
+      <button type="button" class="sb-btn sb-btn-outline sb-btn-icon sb-btn-xs" data-action="turn-advance" data-delta="-1" title="{{localize 'SHADOWBASE.Hud.TurnBack'}}"><i class="fa-solid fa-minus"></i></button>
+      <strong class="sb-hud__turn-value">{{header.turnCounter}}</strong>
+      <button type="button" class="sb-btn sb-btn-outline sb-btn-icon sb-btn-xs" data-action="turn-advance" data-delta="1" title="{{localize 'SHADOWBASE.Hud.TurnForward'}}"><i class="fa-solid fa-plus"></i></button>
+      <button type="button" class="sb-btn sb-btn-secondary sb-btn-xs" data-action="sweep-now" title="{{localize 'SHADOWBASE.Hud.SweepNowTitle'}}"><i class="fa-solid fa-broom"></i> {{localize "SHADOWBASE.Hud.SweepNow"}}</button>
+    </div>
+    <div class="sb-hud__arc">
+      <span class="sb-badge sb-badge-outline sb-hud__tiny" title="{{localize 'SHADOWBASE.Hud.ArcTitle'}}"><i class="fa-solid fa-compass"></i> {{header.arc}}</span>
+      {{#if header.flanked}}<span class="sb-badge sb-badge-destructive sb-hud__tiny">{{localize "SHADOWBASE.Status.Flanked"}}</span>{{/if}}
+    </div>
+  </div>
+  {{#if header.stunned}}
+  <div class="sb-hud__stun">
+    <span class="sb-hud__stun-text"><i class="fa-solid fa-dizzy"></i> {{header.stunLine}}</span>
+    <button type="button" class="sb-btn sb-btn-xs" data-action="roll-stun-recovery"><i class="fa-solid fa-dice"></i> {{localize "SHADOWBASE.Hud.RollRecovery" attribute=header.stunAttribute}}</button>
+  </div>
+  {{/if}}
+  {{else}}
+  <p class="sb-hud__error"><i class="fa-solid fa-triangle-exclamation"></i> {{localize "SHADOWBASE.Hud.EngineUnavailable"}}{{#if engineError}} <span class="sb-hud__error-detail">{{engineError}}</span>{{/if}}</p>
+  {{/if}}
+</header>

@@ -1,0 +1,42 @@
+{
+  "_id": "gGV73XevaWn68xzg",
+  "_key": "!items!gGV73XevaWn68xzg",
+  "name": "Blueprint: Arkanian Pistol",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Cwowcy4l2Q3n79PK",
+  "sort": 46700000,
+  "system": {
+    "row": {
+      "id": "850f6da3-abc7-4403-88ae-fecb72d2afcd",
+      "name": "Blueprint: Arkanian Pistol",
+      "cost": 356,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Arkanian Pistol (Generation 0, proven, encoded, catalog design). Required to build Arkanian Pistol; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Arkanian Pistol",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1815,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Standard Pistols|Arkanian Pistol"
+    }
+  }
+}

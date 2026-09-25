@@ -1,0 +1,42 @@
+{
+  "_id": "JzmMGRLx4CBvhQqI",
+  "_key": "!items!JzmMGRLx4CBvhQqI",
+  "name": "Blueprint: Mandalorian Rocket Launching Gauntlet",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "oUXwxliXgRguKKvI",
+  "sort": 31200000,
+  "system": {
+    "row": {
+      "id": "85fe5311-517b-4ff6-a2a8-12145add72c6",
+      "name": "Blueprint: Mandalorian Rocket Launching Gauntlet",
+      "cost": 317,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Mandalorian Rocket Launching Gauntlet (Generation 0, proven, encoded, catalog design). Required to build Mandalorian Rocket Launching Gauntlet; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Mandalorian Rocket Launching Gauntlet",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1424,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Gauntlet Weapons|Mandalorian Rocket Launching Gauntlet"
+    }
+  }
+}

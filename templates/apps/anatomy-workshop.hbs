@@ -1,0 +1,90 @@
+{{!-- templates/apps/anatomy-workshop.hbs - the Anatomy Workshop (anatomy-workshop.tsx:193-600): one card per hit
+     location with name / class / side / organic, the placement note, the Implants & Cybernetics box (linked units,
+     the link picker, the innate DR or the grafted limb's DR), Amputate / Discard. Inputs bind `anatomy.<index>.<key>`;
+     the app writes the WHOLE hitLocations array. Context: AnatomyWorkshop#_prepareContext (`anatomy`). --}}
+<section class="sb-app__body sb-anatomy" data-app="anatomy-workshop">
+{{#with anatomy}}
+  <div class="sb-hrow sb-hrow--between sb-anatomy__head">
+    <p class="sb-muted-p">{{localize "SHADOWBASE.Apps.Anatomy.Hint"}}</p>
+    {{#if isDroid}}
+      {{#if inSync}}<span class="sb-badge sb-badge-outline sb-badge--pos">{{localize "SHADOWBASE.Apps.Droid.AnatomyInSync"}}</span>{{else}}<button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="sync-droid-anatomy" {{disabled (not editable)}}><i class="fa-solid fa-arrows-rotate"></i> {{localize "SHADOWBASE.Apps.Droid.SyncAnatomy"}}</button>{{/if}}
+    {{else}}
+      <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="reset-bio-plan" {{disabled (not editable)}}>{{localize "SHADOWBASE.Apps.Anatomy.ResetBioPlan"}}</button>
+    {{/if}}
+  </div>
+
+  {{#each locations}}
+  <details class="sb-card sb-anatomy__loc{{#if isAmputated}}{{#unless isProsthetic}} is-amputated{{/unless}}{{/if}}{{#if isProsthetic}} is-prosthetic{{/if}}{{#if hasHardware}} has-hardware{{/if}}" data-location-id="{{id}}">
+    <summary class="sb-anatomy__loc-head">
+      <span class="sb-anatomy__loc-title">
+        <span class="sb-anatomy__loc-name">{{name}}</span>
+        {{#if isProsthetic}}<span class="sb-badge sb-badge-outline sb-anatomy__tag">{{localize "SHADOWBASE.Apps.Anatomy.Cybernetic"}}</span>{{/if}}
+        <span class="sb-caps sb-text-10 sb-text-muted">{{type}}</span>
+      </span>
+      <span class="sb-anatomy__loc-meta">
+        {{#if isAmputated}}{{#unless isProsthetic}}<span class="sb-badge sb-badge-destructive sb-anatomy__tag">{{localize "SHADOWBASE.Apps.Anatomy.Amputated"}}</span>{{/unless}}{{/if}}
+        <i class="{{#if isOrganic}}fa-solid fa-heart sb-anatomy__organic{{else}}fa-solid fa-bolt sb-anatomy__inorganic{{/if}}"></i>
+        <i class="sb-section__chevron fa-solid fa-chevron-down"></i>
+      </span>
+    </summary>
+    <div class="sb-card__content sb-anatomy__loc-body">
+      <div class="sb-anatomy__fields">
+        <div class="sb-field sb-anatomy__field--wide" data-sheet-row><label class="sb-field__label" for="anatomy-{{index}}-name">{{localize "SHADOWBASE.Apps.Anatomy.Designation"}}</label><input type="text" class="sb-input" id="anatomy-{{index}}-name" name="anatomy.{{index}}.name" value="{{rawName}}" {{disabled (or locked (not ../editable))}}></div>
+        <div class="sb-field" data-sheet-row><label class="sb-field__label" for="anatomy-{{index}}-type">{{localize "SHADOWBASE.Apps.Anatomy.SystemClass"}}</label><select class="sb-select" id="anatomy-{{index}}-type" name="anatomy.{{index}}.type" {{disabled (or locked (not ../editable))}}>{{#each typeOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></div>
+        <div class="sb-field" data-sheet-row><label class="sb-field__label" for="anatomy-{{index}}-side">{{localize "SHADOWBASE.Apps.Anatomy.BodySide"}}</label><select class="sb-select" id="anatomy-{{index}}-side" name="anatomy.{{index}}.side" {{disabled (or locked (not ../editable))}}>{{#each sideOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></div>
+        <div class="sb-field" data-sheet-row><label class="sb-field__label" for="anatomy-{{index}}-status">{{localize "SHADOWBASE.Apps.Anatomy.StatusLabel"}}</label><select class="sb-select" id="anatomy-{{index}}-status" name="anatomy.{{index}}.status" {{disabled (not ../editable)}}>{{#each statusOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></div>
+        <div class="sb-field" data-sheet-row><label class="sb-field__label" for="anatomy-{{index}}-degradation">{{localize "SHADOWBASE.Apps.Anatomy.Degradation"}}</label><input type="number" class="sb-input" id="anatomy-{{index}}-degradation" name="anatomy.{{index}}.currentDegradation" data-dtype="Number" min="0" step="1" value="{{degradation}}" {{disabled (not ../editable)}}></div>
+        {{#if showOrganicSwitch}}
+        <div class="sb-field sb-anatomy__switch" data-sheet-row><span class="sb-field__label">{{localize "SHADOWBASE.Apps.Anatomy.Organic"}}</span>{{> "shadowbase.switch" id=(sbConcat "anatomy-" index "-organic") name=(sbConcat "anatomy." index ".isOrganic") checked=isOrganic disabled=(not ../editable) label=(localize "SHADOWBASE.Apps.Anatomy.Organic") cls=""}}</div>
+        {{/if}}
+      </div>
+      {{#if showPlacementNote}}
+      <div class="sb-field" data-sheet-row><label class="sb-field__label" for="anatomy-{{index}}-note">{{localize "SHADOWBASE.Apps.Anatomy.PlacementNotes"}}</label><textarea class="sb-textarea" id="anatomy-{{index}}-note" name="anatomy.{{index}}.locationNote" rows="2" placeholder="{{placementPlaceholder}}" {{disabled (not ../editable)}}>{{locationNote}}</textarea></div>
+      {{/if}}
+
+      <div class="sb-anatomy__hardware{{#if hasHardware}} has-links{{/if}}{{#if isProsthetic}} is-prosthetic{{/if}}">
+        <div class="sb-hrow sb-hrow--between">
+          <span class="sb-hrow sb-hrow--tight">
+            <span class="sb-caps sb-text-10 sb-anatomy__hw-title">{{localize "SHADOWBASE.Apps.Anatomy.ImplantsCybernetics"}}</span>
+            {{#if badges.utility}}<span class="sb-badge sb-badge-outline sb-anatomy__tag{{#if badges.utility.over}} is-over{{/if}}">Util: {{badges.utility.used}}/{{badges.utility.max}}</span>{{/if}}
+            {{#if badges.face}}<span class="sb-badge sb-badge-outline sb-anatomy__tag{{#if badges.face.eyesOver}} is-over{{/if}}">{{localize "SHADOWBASE.Apps.Anatomy.Eyes"}}: {{badges.face.eyes}}/2</span><span class="sb-badge sb-badge-outline sb-anatomy__tag{{#if badges.face.earsOver}} is-over{{/if}}">{{localize "SHADOWBASE.Apps.Anatomy.Ears"}}: {{badges.face.ears}}/2</span>{{/if}}
+          </span>
+          <span class="sb-badge sb-badge-outline sb-anatomy__tag sb-anatomy__tag--faint">{{integrationLabel}}</span>
+        </div>
+        {{#each hardware}}
+        <div class="sb-anatomy__unit">
+          <span class="sb-anatomy__unit-name"><i class="{{#if isLimb}}fa-solid fa-hand{{else}}fa-solid fa-brain{{/if}}"></i> {{name}}</span>
+          <span class="sb-text-10 sb-text-muted">{{detail}}</span>
+          {{#if cp}}<span class="sb-badge sb-badge-outline sb-anatomy__tag">{{cp}} CP</span>{{/if}}
+          <button type="button" class="sb-btn sb-btn-ghost sb-btn-xs is-destructive" data-action="unlink-hardware" data-index="{{../index}}" data-hardware-id="{{id}}" {{disabled (not ../../editable)}}><i class="fa-solid fa-plug-circle-xmark"></i> {{localize "SHADOWBASE.Apps.Anatomy.Detach"}}</button>
+        </div>
+        {{/each}}
+        <select class="sb-select sb-anatomy__link" name="anatomy.{{index}}.link" {{disabled (or (not canLink) (not ../editable))}}>
+          <option value="" selected>{{linkLabel}}</option>
+          {{#each linkable}}<option value="{{value}}">{{label}}</option>{{/each}}
+        </select>
+        {{#if limbDr}}
+        <div class="sb-anatomy__limb-dr">
+          <div>
+            <span class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Anatomy.InnateDrFrom" name=limbDr.name}}</span>
+            <span class="sb-text-10 sb-text-muted sb-anatomy__limb-note">{{#if limbDr.material}}{{limbDr.material}} {{localize "SHADOWBASE.Apps.Anatomy.Chassis"}}{{/if}}{{#if limbDr.extent}} · {{limbDr.extent}} {{localize "SHADOWBASE.Apps.Anatomy.LimbWord"}}{{/if}}. {{localize "SHADOWBASE.Apps.Anatomy.LimbDrNote"}}</span>
+          </div>
+          <span class="sb-anatomy__limb-figure is-{{limbDr.tone}}">{{limbDr.current}}<span class="sb-text-muted"> / {{limbDr.max}}</span></span>
+        </div>
+        {{/if}}
+        {{#if showInnateInput}}
+        <div class="sb-field sb-anatomy__innate" data-sheet-row><label class="sb-field__label" for="anatomy-{{index}}-dr">{{localize "SHADOWBASE.Apps.Anatomy.InnateDr"}}</label><input type="number" class="sb-input sb-anatomy__dr-input" id="anatomy-{{index}}-dr" name="anatomy.{{index}}.innateDR" data-dtype="Number" min="0" step="1" value="{{innateDR}}" {{disabled (not ../editable)}}><span class="sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Anatomy.InnateDrHint"}}</span></div>
+        {{/if}}
+      </div>
+
+      <div class="sb-hrow sb-hrow--end sb-anatomy__row-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="amputate" data-index="{{index}}" data-amputate="{{#if isAmputated}}false{{else}}true{{/if}}" {{disabled (not ../editable)}}><i class="fa-solid fa-scissors"></i> {{amputateLabel}}</button>
+        {{#unless ../isDroid}}<button type="button" class="sb-btn sb-btn-ghost sb-btn-xs is-destructive" data-action="discard-location" data-index="{{index}}" {{disabled (not ../editable)}}><i class="fa-solid fa-trash-can"></i> {{localize "SHADOWBASE.Apps.Anatomy.Discard"}}</button>{{/unless}}
+      </div>
+    </div>
+  </details>
+  {{/each}}
+
+  {{#unless isDroid}}<button type="button" class="sb-btn sb-btn-outline sb-btn-dashed sb-anatomy__add" data-action="add-location" {{disabled (not editable)}}><i class="fa-solid fa-circle-plus"></i> {{localize "SHADOWBASE.Apps.Anatomy.AddBodyPart"}}</button>{{/unless}}
+{{/with}}
+</section>

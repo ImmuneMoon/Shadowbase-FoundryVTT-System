@@ -1,0 +1,42 @@
+{
+  "_id": "tPpMpNxOiLFnXdhY",
+  "_key": "!items!tPpMpNxOiLFnXdhY",
+  "name": "Blueprint: Carrying Pack",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "rp93cLA7jGuZj51F",
+  "sort": 12900000,
+  "system": {
+    "row": {
+      "id": "99ceecc5-e925-4a16-a644-e78d45ad7186",
+      "name": "Blueprint: Carrying Pack",
+      "cost": 180,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Carrying Pack (Generation 0, proven, encoded, catalog design). Required to build Carrying Pack; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Carrying Pack",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 55,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Carry Frame|Carrying Pack"
+    }
+  }
+}

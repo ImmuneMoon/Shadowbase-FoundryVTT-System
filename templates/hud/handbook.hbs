@@ -1,0 +1,6 @@
+{{!-- templates/hud/handbook.hbs - the Handbook tab: the browser partial (templates/handbook/browser.hbs,
+     shared with the standalone HandbookBrowserApp) over the HUD's own HandbookBrowser state.
+     Context: module/apps/hud.mjs (context.handbook = HandbookBrowser#prepareContext()). --}}
+<section class="tab sb-hud__tab sb-hud__tab--handbook {{tab.cssClass}}" data-tab="handbook" data-group="primary">
+  {{> "systems/shadowbase/templates/handbook/browser.hbs" handbook}}
+</section>

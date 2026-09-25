@@ -1,0 +1,43 @@
+{{!-- templates/items/skill-main.hbs - a skill (skills-section.tsx:218-262): Relative Level, Level (a STRING) with the
+     roll, Points (Calculated), the gear bonuses, the library notes. Context: main (skill.mjs), editable, owned, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--skill {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <div class="sb-item-grid">
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Abilities.RelativeLevel"}}</span>
+        <input type="text" class="sb-input" name="system.row.relativeLevel" value="{{main.relativeLevel}}" placeholder="{{#if main.libraryRelativeLevel}}{{main.libraryRelativeLevel}}{{else}}{{localize "SHADOWBASE.Sheet.Abilities.RelativeLevelPlaceholder"}}{{/if}}" {{disabled (not editable)}}>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Abilities.Level"}}</span>
+        <span class="sb-hrow sb-hrow--tight">
+          {{!-- The level is a STRING on the website's row (the engine parseInts it): no data-dtype. --}}
+          <input type="text" class="sb-input sb-input--sm" name="system.row.level" value="{{main.level}}" placeholder="12" {{disabled (not editable)}}>
+          <button type="button" class="sb-btn sb-btn-outline sb-btn-icon sb-roll" data-action="roll-skill" {{disabled (not owned)}} title="{{localize "SHADOWBASE.Sheet.Abilities.RollSkill" target=main.target}}"><i class="{{sbIcon 'roll'}}"></i></button>
+        </span>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Skill.Points"}}</span>
+        <input type="number" class="sb-input" name="system.row.points" value="{{main.points}}" data-dtype="Number" step="1" {{disabled (not editable)}}>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Trait.BaselinePoints"}}</span>
+        <input type="number" class="sb-input" name="system.row.baselinePoints" value="{{main.baselinePoints}}" data-dtype="Number" step="1" {{disabled (not editable)}}>
+      </label>
+      <div class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Abilities.PointsCalculated"}}</span>
+        <output class="sb-input sb-input--calc">{{#if main.hasStats}}{{main.effective}}{{else}}—{{/if}}</output>
+      </div>
+      <div class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Skill.Target"}}</span>
+        <output class="sb-input sb-input--calc">{{#if main.target}}{{main.target}}{{else}}—{{/if}}{{#if main.describe}} <small class="sb-text-muted">({{main.describe}})</small>{{/if}}</output>
+      </div>
+    </div>
+    <div class="sb-hrow sb-hrow--tight sb-item__badges">
+      {{#if main.specialty}}<span class="sb-badge sb-badge-outline" title="{{localize "SHADOWBASE.Sheet.Abilities.Specialty"}}">{{main.base}} · {{main.specialty}}</span>{{/if}}
+      {{#if main.gearFlat}}<span class="sb-badge sb-badge-outline sb-badge--effect sb-badge--pos" title="{{localize "SHADOWBASE.Sheet.Abilities.GearBonuses"}}">{{localize "SHADOWBASE.Sheet.Abilities.GearFlat" n=main.gearFlatText}}</span>{{/if}}
+      {{#if main.inLibrary}}<span class="sb-badge sb-badge-outline sb-badge-accent">{{localize "SHADOWBASE.Item.Trait.InLibrary"}}</span>{{else}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Item.Trait.Custom"}}</span>{{/if}}
+    </div>
+    {{#if main.gearSituational.length}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Sheet.Abilities.GearSituational"}}: {{#each main.gearSituational}}<span class="sb-tag">{{this}}</span>{{/each}}</p>{{/if}}
+    {{#if main.bareSpecialtyWarning}}<p class="sb-notice sb-notice--warn">{{main.bareSpecialtyWarning}}</p>{{/if}}
+  </div>
+  {{#if main.libraryNotes}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Sheet.Abilities.LibraryDossier"}}</h4>
+    <p class="sb-dossier">{{main.libraryNotes}}</p>
+  </div>
+  {{/if}}
+</section>

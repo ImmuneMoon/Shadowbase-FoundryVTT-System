@@ -1,0 +1,42 @@
+{
+  "_id": "jNQTzruQcqqEGQR5",
+  "_key": "!items!jNQTzruQcqqEGQR5",
+  "name": "Fibercord",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "VqX65UQVOs2JpxDL",
+  "sort": 2600000,
+  "system": {
+    "row": {
+      "name": "Fibercord",
+      "rarity": "Very Common",
+      "cost": 4,
+      "density": 70,
+      "category": "Raw Materials",
+      "subCategory": "Utility",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Extremely basic, high-tensile artificial fibers used extensively in load-bearing ropes and standard cargo tie-downs.",
+      "id": "f199b9df-0522-49dc-b6c7-6e08ee28ab22",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "material:Fibercord"
+    }
+  }
+}

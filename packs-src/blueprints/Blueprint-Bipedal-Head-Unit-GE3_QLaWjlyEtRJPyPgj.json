@@ -1,0 +1,42 @@
+{
+  "_id": "QLaWjlyEtRJPyPgj",
+  "_key": "!items!QLaWjlyEtRJPyPgj",
+  "name": "Blueprint: Bipedal Head Unit (GE3)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "UStUF7LfeXhiWi8K",
+  "sort": 23700000,
+  "system": {
+    "row": {
+      "id": "517368dd-62d8-41fe-ba61-18968bccb62f",
+      "name": "Blueprint: Bipedal Head Unit (GE3)",
+      "cost": 257,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Bipedal Head Unit (GE3) (Generation 0, proven, encoded, catalog design). Required to build Bipedal Head Unit (GE3); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Bipedal Head Unit (GE3)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 825,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Head|Bipedal Head Unit (GE3)"
+    }
+  }
+}

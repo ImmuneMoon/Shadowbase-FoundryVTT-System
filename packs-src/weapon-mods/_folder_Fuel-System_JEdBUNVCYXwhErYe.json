@@ -1,0 +1,19 @@
+{
+  "_id": "JEdBUNVCYXwhErYe",
+  "_key": "!folders!JEdBUNVCYXwhErYe",
+  "name": "Fuel System",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 900000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "path": [
+        "Fuel System"
+      ]
+    }
+  }
+}

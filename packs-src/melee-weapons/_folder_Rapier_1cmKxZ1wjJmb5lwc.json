@@ -1,0 +1,19 @@
+{
+  "_id": "1cmKxZ1wjJmb5lwc",
+  "_key": "!folders!1cmKxZ1wjJmb5lwc",
+  "name": "Rapier",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 600000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "path": [
+        "Rapier"
+      ]
+    }
+  }
+}

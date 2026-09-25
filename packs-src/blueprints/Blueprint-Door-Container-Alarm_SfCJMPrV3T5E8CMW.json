@@ -1,0 +1,42 @@
+{
+  "_id": "SfCJMPrV3T5E8CMW",
+  "_key": "!items!SfCJMPrV3T5E8CMW",
+  "name": "Blueprint: Door/Container Alarm",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "xtHjuvh0p0WoiA5W",
+  "sort": 44700000,
+  "system": {
+    "row": {
+      "id": "e76abd06-13fd-4838-b919-5ab0692c9f91",
+      "name": "Blueprint: Door/Container Alarm",
+      "cost": 304,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Door/Container Alarm (Generation 0, proven, encoded, catalog design). Required to build Door/Container Alarm; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Door/Container Alarm",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1292.5,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Restraints & Security|Door/Container Alarm"
+    }
+  }
+}

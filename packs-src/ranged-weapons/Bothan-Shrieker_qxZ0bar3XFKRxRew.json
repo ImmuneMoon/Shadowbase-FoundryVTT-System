@@ -1,0 +1,211 @@
+{
+  "_id": "qxZ0bar3XFKRxRew",
+  "_key": "!items!qxZ0bar3XFKRxRew",
+  "name": "Bothan Shrieker",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "pmcK4V56g8solhpu",
+  "sort": 1500000,
+  "system": {
+    "row": {
+      "id": "de9c8fcb-5450-455a-8f7b-8a4679656ca8",
+      "customName": "Bothan Shrieker",
+      "baseType": "Bothan Shrieker",
+      "baseSkill": "Guns (Blaster Pistol)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 3.2,
+      "finalWeight": 3.2,
+      "baseCost": 319,
+      "finalCost": 1914,
+      "currentCharges": 50,
+      "maxCharges": 50,
+      "loadedAmmunitionId": "61cc9f9f-825c-4e6a-90b5-b99ecf0e67d9",
+      "loadedAmmunitionData": {
+        "id": "61cc9f9f-825c-4e6a-90b5-b99ecf0e67d9",
+        "name": "Standard Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "pistol-grip",
+        "inventoryId": "86411e89-5912-4a6e-a132-829be9d44aa7",
+        "materialId": "plasteel"
+      },
+      "receiverPart": {
+        "partId": "sonic-chamber",
+        "inventoryId": "762a61ce-b214-4336-9f7d-7f6a305adcd3",
+        "materialId": "plasteel"
+      },
+      "barrelPart": {
+        "partId": "std-emitter",
+        "inventoryId": "7c6162bf-dd1b-4f78-af5c-fc94f89a4794",
+        "materialId": "plasteel"
+      },
+      "targetingPart": {
+        "partId": "advanced-targeting",
+        "inventoryId": "fc0258c6-5a55-4a90-bf75-37e81bd1085a"
+      },
+      "powerUnitPart": {
+        "partId": "standard-pwr-pack",
+        "inventoryId": "3607f9c8-6534-45a6-9ae5-d530f9e78344"
+      },
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "de9c8fcb-5450-455a-8f7b-8a4679656ca8",
+        "customName": "Bothan Shrieker",
+        "baseType": "Bothan Shrieker",
+        "baseSkill": "Guns (Blaster Pistol)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 3.2,
+        "finalWeight": 3.2,
+        "baseCost": 319,
+        "finalCost": 1914,
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "loadedAmmunitionId": "61cc9f9f-825c-4e6a-90b5-b99ecf0e67d9",
+        "loadedAmmunitionData": {
+          "id": "61cc9f9f-825c-4e6a-90b5-b99ecf0e67d9",
+          "name": "Standard Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 50,
+          "maxCharges": 50,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "pistol-grip",
+          "inventoryId": "86411e89-5912-4a6e-a132-829be9d44aa7",
+          "materialId": "plasteel"
+        },
+        "receiverPart": {
+          "partId": "sonic-chamber",
+          "inventoryId": "762a61ce-b214-4336-9f7d-7f6a305adcd3",
+          "materialId": "plasteel"
+        },
+        "barrelPart": {
+          "partId": "std-emitter",
+          "inventoryId": "7c6162bf-dd1b-4f78-af5c-fc94f89a4794",
+          "materialId": "plasteel"
+        },
+        "targetingPart": {
+          "partId": "advanced-targeting",
+          "inventoryId": "fc0258c6-5a55-4a90-bf75-37e81bd1085a"
+        },
+        "powerUnitPart": {
+          "partId": "standard-pwr-pack",
+          "inventoryId": "3607f9c8-6534-45a6-9ae5-d530f9e78344"
+        },
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "86411e89-5912-4a6e-a132-829be9d44aa7",
+          "name": "Pistol Grip",
+          "partId": "pistol-grip",
+          "category": "Ranged Grip",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "de9c8fcb-5450-455a-8f7b-8a4679656ca8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard 1-handed grip."
+        },
+        {
+          "id": "762a61ce-b214-4336-9f7d-7f6a305adcd3",
+          "name": "Sonic Chamber",
+          "partId": "sonic-chamber",
+          "category": "Ranged Receiver",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "de9c8fcb-5450-455a-8f7b-8a4679656ca8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard Sonic."
+        },
+        {
+          "id": "7c6162bf-dd1b-4f78-af5c-fc94f89a4794",
+          "name": "Standard Emitter",
+          "partId": "std-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "de9c8fcb-5450-455a-8f7b-8a4679656ca8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "fc0258c6-5a55-4a90-bf75-37e81bd1085a",
+          "name": "Advanced Targeting Module",
+          "partId": "advanced-targeting",
+          "category": "Ranged Targeting",
+          "cost": 70,
+          "weight": 0.9,
+          "isInstalled": true,
+          "installedInBlasterId": "de9c8fcb-5450-455a-8f7b-8a4679656ca8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Military-grade tracking algorithms."
+        },
+        {
+          "id": "3607f9c8-6534-45a6-9ae5-d530f9e78344",
+          "name": "Standard Power Pack",
+          "partId": "standard-pwr-pack",
+          "category": "Power Unit",
+          "cost": 105,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "de9c8fcb-5450-455a-8f7b-8a4679656ca8",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Bothan Shrieker"
+    }
+  }
+}

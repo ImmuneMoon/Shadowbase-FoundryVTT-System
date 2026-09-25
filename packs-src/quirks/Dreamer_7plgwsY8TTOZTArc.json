@@ -1,0 +1,32 @@
+{
+  "_id": "7plgwsY8TTOZTArc",
+  "_key": "!items!7plgwsY8TTOZTArc",
+  "name": "Dreamer",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 1400000,
+  "system": {
+    "row": {
+      "name": "Dreamer",
+      "points": -1,
+      "description": "Your head is often in the clouds, contemplating philosophies, grand plans, or far-off places, sometimes at the expense of paying attention to the here-and-now.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Dreamer"
+    }
+  }
+}

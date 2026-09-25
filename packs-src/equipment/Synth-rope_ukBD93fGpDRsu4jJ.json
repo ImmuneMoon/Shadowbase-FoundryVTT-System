@@ -1,0 +1,47 @@
+{
+  "_id": "ukBD93fGpDRsu4jJ",
+  "_key": "!items!ukBD93fGpDRsu4jJ",
+  "name": "Synth-rope",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "7rGdcjDF69anM1Pj",
+  "sort": 11800000,
+  "system": {
+    "row": {
+      "name": "Synth-rope",
+      "craftingCategory": "Cordage",
+      "cost": 30,
+      "skill": "Knot-Tying or Climbing",
+      "description": "50 Yards of lightweight, durable rope. Can support up to 600 lbs before snapping.",
+      "category": "Utility & Miscellaneous",
+      "weight": 5,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Fibercord",
+          "amount": 5
+        }
+      ],
+      "id": "ccee6b70-965b-430b-b193-df727374028a",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Synth-rope"
+    }
+  }
+}

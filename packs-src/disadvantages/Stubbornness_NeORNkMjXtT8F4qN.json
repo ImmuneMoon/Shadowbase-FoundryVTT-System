@@ -1,0 +1,34 @@
+{
+  "_id": "NeORNkMjXtT8F4qN",
+  "_key": "!items!NeORNkMjXtT8F4qN",
+  "name": "Stubbornness",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 13400000,
+  "system": {
+    "row": {
+      "name": "Stubbornness",
+      "points": -5,
+      "level": null,
+      "description": "The character is unusually resistant to changing their mind or admitting they are wrong, even in the face of overwhelming evidence. This can lead to missed opportunities or continued pursuit of flawed plans despite clear warning signs.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Stubbornness|Mental"
+    }
+  }
+}

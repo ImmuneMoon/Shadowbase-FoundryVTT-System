@@ -1,0 +1,42 @@
+{
+  "_id": "20dhhHiObzXcAJDk",
+  "_key": "!items!20dhhHiObzXcAJDk",
+  "name": "Durasteel Standard Switch",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "9ECWDaoCgwDpUCaw",
+  "sort": 1300000,
+  "system": {
+    "row": {
+      "name": "Durasteel Standard Switch",
+      "category": "Switch Part",
+      "effect": "Standard toggle activation.",
+      "weight": 0.098,
+      "cost": 3,
+      "id": "c716d406-0992-4c02-8a25-dfa21296cdf9",
+      "partId": "std-switch",
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "materialId": "durasteel",
+      "wrapId": null,
+      "volume": 0.0002,
+      "density": 490
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "hilt:std-switch"
+    }
+  }
+}

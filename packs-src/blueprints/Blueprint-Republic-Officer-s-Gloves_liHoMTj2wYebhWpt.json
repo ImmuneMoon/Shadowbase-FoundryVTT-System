@@ -1,0 +1,42 @@
+{
+  "_id": "liHoMTj2wYebhWpt",
+  "_key": "!items!liHoMTj2wYebhWpt",
+  "name": "Blueprint: Republic Officer's Gloves",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 17100000,
+  "system": {
+    "row": {
+      "id": "5af6a745-ce81-491c-9642-66fbec514173",
+      "name": "Blueprint: Republic Officer's Gloves",
+      "cost": 200,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Republic Officer's Gloves (Generation 0, proven, encoded, catalog design). Required to build Republic Officer's Gloves; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Republic Officer's Gloves",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 251.33333333333331,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Republic Officer's Gloves"
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{{!-- templates/hud/actions.hbs - the Actions tab (roller-window.tsx TabsContent "actions"): Custom Roll,
+     Unarmed Combat, Readied Weapons, Core & Defenses, Skills, Abilities & Forms, Ship Systems, each a
+     <details class="sb-section"> accordion (styles/components.css anatomy: summary > title + chevron; body)
+     in the website's order. Every button is data-action -> a static handler on TacticalHud that calls
+     module/rolls.mjs / module/combat.mjs; every figure comes from #actionsContext (rolls.attackTargetFor,
+     defenseTargetFor, skillTargetFor ...). The root is a submitOnChange form: every button is type=button. --}}
+<section class="tab sb-hud__tab sb-hud__tab--actions {{tab.cssClass}}" data-tab="actions" data-group="primary">
+{{#if engineOk}}
+{{#with actions}}
+  {{#if stunned}}
+  <p class="sb-hud__notice sb-hud__notice--warn"><i class="fa-solid fa-dizzy"></i> {{localize "SHADOWBASE.Hud.StunnedNotice"}}</p>
+  {{/if}}
+
+  <details class="sb-section">
+    <summary class="sb-section__summary"><span class="sb-section__title">{{localize "SHADOWBASE.Hud.CustomRoll"}}</span><i class="sb-section__chevron fa-solid fa-chevron-down"></i></summary>
+    <div class="sb-section__body sb-hud-custom">
+      <div class="sb-hud__grid sb-hud__grid--2">
+        <label class="sb-hud__field"><span>{{localize "SHADOWBASE.Hud.Dice"}}</span><input type="number" class="sb-input" name="hud.custom.dice" data-dtype="Number" min="1" step="1" value="{{custom.dice}}"></label>
+        <label class="sb-hud__field"><span>{{localize "SHADOWBASE.Hud.Sides"}}</span><select class="sb-input sb-select" name="hud.custom.sides" data-dtype="Number">{{#each custom.sides}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select></label>
+      </div>
+      <label class="sb-hud__field"><span>{{localize "SHADOWBASE.Hud.Modifier"}}</span><input type="number" class="sb-input" name="hud.custom.modifier" data-dtype="Number" step="1" value="{{custom.modifier}}"></label>
+      <button type="button" class="sb-btn sb-btn-sm sb-hud__block" data-action="roll-custom-dice"><i class="fa-solid fa-dice"></i> {{localize "SHADOWBASE.Hud.RollCustomDice"}} ({{custom.formula}})</button>
+      <div class="sb-hud-custom__target">
+        <label class="sb-hud__field sb-hud__field--grow"><span>{{localize "SHADOWBASE.Hud.Label"}}</span><input type="text" class="sb-input" name="hud.custom.label" value="{{custom.label}}" placeholder="{{localize 'SHADOWBASE.Roll.Custom'}}"></label>
+        <label class="sb-hud__field sb-hud__field--narrow"><span>{{localize "SHADOWBASE.Roll.Target"}}</span><input type="number" class="sb-input" name="hud.custom.target" data-dtype="Number" step="1" value="{{custom.target}}"></label>
+        <label class="sb-hud__field sb-hud__field--narrow"><span>{{localize "SHADOWBASE.Hud.Mod"}}</span><input type="number" class="sb-input" name="hud.custom.targetModifier" data-dtype="Number" step="1" value="{{custom.targetModifier}}"></label>
+      </div>
+      <button type="button" class="sb-btn sb-btn-outline sb-btn-sm sb-hud__block" data-action="roll-custom-target"><i class="fa-solid fa-bullseye"></i> {{localize "SHADOWBASE.Hud.RollVsTarget"}}</button>
+    </div>
+  </details>
+
+  <details class="sb-section" open>
+    <summary class="sb-section__summary"><span class="sb-section__title">{{localize "SHADOWBASE.Hud.UnarmedCombat"}}</span><i class="sb-section__chevron fa-solid fa-chevron-down"></i></summary>
+    <div class="sb-section__body">
+      <div class="sb-hud-strikes">
+        {{#each strikes}}
+        <div class="sb-hud-strike">
+          <div class="sb-hud-strike__head"><span class="sb-hud-strike__label">{{this.label}}</span><span class="sb-hud__muted">{{this.skillName}} · {{localize "SHADOWBASE.Hud.Dmg"}}: {{this.damage}}</span></div>
+          <div class="sb-hud__btn-row">
+            <span class="sb-hud__badge-wrap">
+              <button type="button" class="sb-btn sb-btn-outline sb-btn-xs sb-hud__grow{{#if (eq this.type 'default')}} is-default{{/if}}{{#if (eq this.type 'fallback')}} is-fallback{{/if}}" data-action="roll-unarmed" data-which="{{this.which}}" {{#if (not this.canAttack)}}disabled{{/if}} title="{{this.note}}">{{localize "SHADOWBASE.Hud.Attack"}} ({{this.target}})</button>
+              {{#if this.badge}}<span class="sb-badge sb-badge-outline sb-hud__corner is-{{this.type}}" title="{{this.note}}">{{this.badge}}</span>{{/if}}
+            </span>
+            <button type="button" class="sb-btn sb-btn-destructive sb-btn-xs sb-hud__grow" data-action="roll-unarmed-damage" data-which="{{this.which}}" {{#if (not this.pendingHits)}}disabled{{/if}}>{{localize "SHADOWBASE.Hud.Damage"}}</button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </details>
+
+  <details class="sb-section" open>
+    <summary class="sb-section__summary"><span class="sb-section__title">{{localize "SHADOWBASE.Hud.ReadiedWeapons"}}</span><i class="sb-section__chevron fa-solid fa-chevron-down"></i></summary>
+    <div class="sb-section__body">
+      {{#each weapons}}
+      <div class="sb-hud-weapon{{#if this.isOffHand}} is-offhand{{/if}}{{#if this.unready}} is-unready{{/if}}" data-item-id="{{this.id}}">
+        <div class="sb-hud-weapon__head">
+          <div class="sb-hud-weapon__names"><span class="sb-hud-weapon__name">{{this.name}}</span><span class="sb-hud-weapon__type">{{this.baseType}}</span></div>
+          <div class="sb-hud-weapon__badges">
+            <span class="sb-badge sb-hud__tiny{{#if this.isOffHand}} sb-badge-outline{{/if}}">{{#if this.isOffHand}}{{localize "SHADOWBASE.Hud.Offhand"}}{{else}}{{localize "SHADOWBASE.Hud.Main"}}{{/if}}</span>
+            <span class="sb-badge sb-badge-outline sb-hud__tiny is-amber" title="{{localize 'SHADOWBASE.Hud.MalfTitle'}}">{{localize "SHADOWBASE.Roll.MalfLine" malf=this.malf}}</span>
+            {{#if this.ammo}}<span class="sb-badge sb-badge-outline sb-hud__tiny{{#if this.ammo.empty}} is-empty{{/if}}" title="{{localize 'SHADOWBASE.Hud.AmmoTitle'}}"><i class="fa-solid fa-battery-half"></i> {{this.ammo.text}}</span>{{/if}}
+            {{#if this.unready}}<button type="button" class="sb-btn sb-btn-outline sb-btn-xs is-destructive" data-action="ready-weapon" data-item-id="{{this.id}}" title="{{localize 'SHADOWBASE.Hud.ReadyTitle'}}">{{localize "SHADOWBASE.Hud.UnreadyReady"}}</button>{{/if}}
+            {{#if this.canUnready}}<button type="button" class="sb-btn sb-btn-ghost sb-btn-xs" data-action="unready-weapon" data-item-id="{{this.id}}" title="{{localize 'SHADOWBASE.Hud.MarkUnreadyTitle'}}">{{localize "SHADOWBASE.Hud.MarkUnready"}}</button>{{/if}}
+          </div>
+        </div>
+        {{#if this.handling.length}}
+        <p class="sb-hud-weapon__handling"><span class="sb-hud-weapon__handling-label">{{localize "SHADOWBASE.Hud.Handling"}} · </span>{{#each this.handling}}{{#if @index}} · {{/if}}<span{{#if this.active}} class="is-active"{{/if}}>{{this.text}}</span>{{/each}}</p>
+        {{/if}}
+        <div class="sb-hud__btn-row">
+          <span class="sb-hud__badge-wrap">
+            <button type="button" class="sb-btn sb-btn-outline sb-btn-xs sb-hud__grow{{#if (eq this.skillType 'default')}} is-default{{/if}}{{#if (eq this.skillType 'fallback')}} is-fallback{{/if}}" data-action="roll-attack" data-item-id="{{this.id}}" {{#if (not this.canAttack)}}disabled{{/if}} title="{{#if this.blocked}}{{this.blocked}}{{else}}{{this.skillName}} · {{this.skillNote}}{{#if this.hitBonusText}} · {{localize 'SHADOWBASE.Roll.ToHit'}} {{this.hitBonusText}}{{/if}}{{/if}}">{{this.attackLabel}} ({{this.target}})</button>
+            {{#if this.skillBadge}}<span class="sb-badge sb-badge-outline sb-hud__corner is-{{this.skillType}}" title="{{this.skillNote}}">{{this.skillBadge}}</span>{{/if}}
+          </span>
+          <button type="button" class="sb-btn sb-btn-destructive sb-btn-xs sb-hud__grow" data-action="roll-weapon-damage" data-item-id="{{this.id}}" {{#if (not this.canDamage)}}disabled{{/if}} title="{{this.damageFormula}}">{{localize "SHADOWBASE.Hud.Damage"}}{{#if this.pendingHits}} <span class="sb-hud__count">×{{this.pendingHits}}</span>{{/if}}</button>
+        </div>
+        {{#if this.blocked}}<p class="sb-hud-weapon__gate">{{this.blocked}}</p>{{/if}}
+        <div class="sb-hud-weapon__defense">
+          <span class="sb-hud-weapon__defense-label">{{localize "SHADOWBASE.Hud.DefensiveMatrix"}}</span>
+          <button type="button" class="sb-btn sb-btn-secondary sb-btn-xs" data-action="roll-parry" data-item-id="{{this.id}}" {{#if (not this.parry.available)}}disabled{{/if}} title="{{#if this.parry.available}}{{this.parry.label}}{{else}}{{this.parry.reason}}{{/if}}">{{localize "SHADOWBASE.Hud.Parry"}} ({{#if this.parry.available}}{{this.parry.target}}{{else}}{{localize "SHADOWBASE.Hud.NA"}}{{/if}})</button>
+          <button type="button" class="sb-btn sb-btn-secondary sb-btn-xs" data-action="roll-block" data-item-id="{{this.id}}" {{#if (not this.block.available)}}disabled{{/if}} title="{{#if this.block.available}}{{this.block.label}}{{else}}{{this.block.reason}}{{/if}}">{{localize "SHADOWBASE.Hud.Block"}} ({{#if this.block.available}}{{this.block.target}}{{else}}{{localize "SHADOWBASE.Hud.NA"}}{{/if}})</button>
+          <span class="sb-badge sb-badge-outline sb-hud__tiny" title="{{localize 'SHADOWBASE.Hud.ArcTitle'}}"><i class="fa-solid fa-compass"></i> {{../arc}}</span>
+          {{#if ../stunned}}<span class="sb-badge sb-badge-destructive sb-hud__tiny" title="{{localize 'SHADOWBASE.Hud.StunPenaltyTitle'}}">{{localize "SHADOWBASE.Hud.StunPenalty" penalty=../stunPenalty}}</span>{{/if}}
+        </div>
+      </div>
+      {{/each}}
+      {{#if (not hasWeapons)}}<p class="sb-hud__empty">{{localize "SHADOWBASE.Hud.NoWeapons"}}</p>{{/if}}
+    </div>
+  </details>
+
+  <details class="sb-section" open>
+    <summary class="sb-section__summary"><span class="sb-section__title">{{localize "SHADOWBASE.Hud.CoreDefenses"}}</span><i class="sb-section__chevron fa-solid fa-chevron-down"></i></summary>
+    <div class="sb-section__body">
+      <div class="sb-hud__panel">
+        <div class="sb-hud__row" data-turn-order title="{{localize 'SHADOWBASE.Hud.TurnOrderTitle'}}">
+          <span class="sb-hud__row-label"><i class="fa-solid fa-stopwatch"></i> {{localize "SHADOWBASE.Hud.TurnOrder"}}</span>
+          <span class="sb-hud__row-value"><span class="sb-hud__muted">{{localize "SHADOWBASE.Hud.BasicSpeed"}}</span> <strong class="sb-hud__mono" data-basic-speed>{{turnOrder.basicSpeed}}</strong> <span class="sb-hud__muted">· {{localize "SHADOWBASE.Hud.TieBreak" dx=turnOrder.dx}}</span></span>
+        </div>
+        <div class="sb-hud__row">
+          <span class="sb-hud__row-label{{#if (not dodge.available)}} is-muted{{/if}}"><i class="fa-solid fa-person-running"></i> {{localize "SHADOWBASE.Hud.BaseDodge"}} ({{#if dodge.available}}{{dodge.target}}{{else}}{{localize "SHADOWBASE.Hud.NA"}}{{/if}})</span>
+          <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="roll-dodge" {{#if (not dodge.available)}}disabled{{/if}} title="{{dodge.reason}}">{{localize "SHADOWBASE.Hud.Roll"}}</button>
+        </div>
+        <div class="sb-hud__row">
+          <span class="sb-hud__row-label{{#if (not unarmedParry.available)}} is-muted{{/if}}"><i class="fa-solid fa-hand-fist"></i> {{localize "SHADOWBASE.Hud.UnarmedParry"}} ({{#if unarmedParry.available}}{{unarmedParry.target}}{{else}}{{localize "SHADOWBASE.Hud.NA"}}{{/if}})</span>
+          <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="roll-parry" {{#if (not unarmedParry.available)}}disabled{{/if}} title="{{#if unarmedParry.available}}{{unarmedParry.label}}{{else}}{{unarmedParry.reason}}{{/if}}">{{localize "SHADOWBASE.Hud.Roll"}}</button>
+        </div>
+        {{#if unarmedParry.caveat}}<p class="sb-hud__hint">{{unarmedParry.caveat}}</p>{{/if}}
+        {{#if hasEconomy}}
+        <div class="sb-hud-economy">
+          <span class="sb-hud-economy__title">{{localize "SHADOWBASE.Combat.EconomyTitle"}}</span>
+          {{#each economy}}<p class="sb-hud-economy__flag"><strong>{{this.label}}:</strong> {{this.detail}}</p>{{/each}}
+          <button type="button" class="sb-btn sb-btn-ghost sb-btn-xs" data-action="post-economy" title="{{localize 'SHADOWBASE.Hud.PostEconomyTitle'}}"><i class="fa-solid fa-comment"></i> {{localize "SHADOWBASE.Hud.PostEconomy"}}</button>
+        </div>
+        {{/if}}
+        <details class="sb-hud__sub">
+          <summary class="sb-hud__sub-trigger">{{localize "SHADOWBASE.Hud.ManeuverEconomy"}}</summary>
+          <div class="sb-hud__sub-body">{{#each maneuverNotes}}<p class="sb-hud__rule"><strong>{{this.name}}:</strong> {{this.rule}}</p>{{/each}}</div>
+        </details>
+      </div>
+      <div class="sb-hud__grid sb-hud__grid--2 sb-hud-attributes">
+        {{#each attributes}}
+        <div class="sb-hud__row sb-hud__row--tile"><span class="sb-hud__row-label">{{this.label}} ({{this.target}})</span><button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="roll-attribute" data-key="{{this.key}}" {{#if (not this.target)}}disabled{{/if}}>{{localize "SHADOWBASE.Hud.Roll"}}</button></div>
+        {{/each}}
+        {{#each characteristics}}
+        <div class="sb-hud__row sb-hud__row--tile"><span class="sb-hud__row-label">{{this.label}}{{#if (not this.immune)}} ({{this.target}}){{/if}}</span>{{#if this.immune}}<span class="sb-badge sb-badge-outline sb-hud__tiny is-green">{{localize "SHADOWBASE.Hud.Immune"}}</span>{{else}}<button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="roll-characteristic" data-key="{{this.key}}" {{#if (not this.target)}}disabled{{/if}}>{{localize "SHADOWBASE.Hud.Roll"}}</button>{{/if}}</div>
+        {{/each}}
+      </div>
+    </div>
+  </details>
+
+  <details class="sb-section">
+    <summary class="sb-section__summary"><span class="sb-section__title">{{localize "SHADOWBASE.Hud.Skills"}}</span><i class="sb-section__chevron fa-solid fa-chevron-down"></i></summary>
+    <div class="sb-section__body sb-hud-skills">
+      {{#each skills}}
+      <div class="sb-hud__row sb-hud__row--tile">
+        <span class="sb-hud__row-label sb-hud__row-label--truncate" title="{{this.note}}">{{this.name}} ({{#if this.target}}{{this.target}}{{else}}—{{/if}}) <span class="sb-badge sb-badge-outline sb-hud__tiny{{#if this.trained}} is-trained{{else}} is-default{{/if}}">{{this.badge}}</span></span>
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="roll-skill" data-skill="{{this.name}}" {{#if (not this.target)}}disabled{{/if}}>{{localize "SHADOWBASE.Hud.Roll"}}</button>
+      </div>
+      {{/each}}
+      {{#if (not hasSkills)}}<p class="sb-hud__empty">{{localize "SHADOWBASE.Hud.NoSkills"}}</p>{{/if}}
+    </div>
+  </details>
+
+  <details class="sb-section">
+    <summary class="sb-section__summary"><span class="sb-section__title">{{localize "SHADOWBASE.Hud.AbilitiesForms"}}</span><i class="sb-section__chevron fa-solid fa-chevron-down"></i></summary>
+    <div class="sb-section__body sb-hud-abilities">
+      {{#if hasPowers}}
+      <h4 class="sb-hud__subhead">{{localize "SHADOWBASE.Hud.ForcePowers"}}</h4>
+      {{#each powers}}
+      <div class="sb-hud__row sb-hud__row--tile" title="{{localize 'SHADOWBASE.Hud.BaseSkill'}}: {{this.baseSkill}}">
+        <span class="sb-hud__row-label sb-hud__row-label--truncate">{{this.name}} ({{localize "SHADOWBASE.Hud.Lvl"}} {{this.level}}) <span class="sb-hud__muted">({{this.fp}} {{localize "SHADOWBASE.Roll.FP"}}{{#if this.ep}}, {{this.ep}} {{localize "SHADOWBASE.Roll.EP"}}{{/if}})</span></span>
+        <span class="sb-hud__btn-row sb-hud__btn-row--tight">
+          <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="roll-power" data-item-id="{{this.id}}" {{#if (not this.target)}}disabled{{/if}}>{{localize "SHADOWBASE.Hud.Roll"}}</button>
+          <button type="button" class="sb-btn sb-btn-ghost sb-btn-xs sb-btn-icon" data-action="apply-power-costs" data-item-id="{{this.id}}" title="{{localize 'SHADOWBASE.Roll.ApplyCosts'}}"><i class="fa-solid fa-minus-circle"></i></button>
+        </span>
+      </div>
+      {{/each}}
+      {{/if}}
+      {{#if hasTechniques}}
+      <h4 class="sb-hud__subhead">{{localize "SHADOWBASE.Hud.Techniques"}}</h4>
+      {{#each techniques}}
+      <div class="sb-hud-technique">
+        <div class="sb-hud__row">
+          <span class="sb-hud__row-label sb-hud__row-label--truncate" title="{{this.effect}}">{{this.name}} ({{localize "SHADOWBASE.Hud.Lvl"}} {{this.level}}) <span class="sb-hud__muted">{{this.category}}{{#if this.hasCosts}} · {{this.fp}} {{localize "SHADOWBASE.Roll.FP"}} / {{this.ep}} {{localize "SHADOWBASE.Roll.EP"}}{{/if}}</span></span>
+          <span class="sb-hud__btn-row sb-hud__btn-row--tight">
+            <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="roll-technique" data-item-id="{{this.id}}" {{#if (not this.target)}}disabled{{/if}} title="{{#if this.needsWeapon}}{{localize 'SHADOWBASE.Hud.SelectWeapon'}}{{else}}{{this.skillName}}{{/if}}">{{localize "SHADOWBASE.Hud.Roll"}}{{#if this.target}} ({{this.target}}){{/if}}</button>
+            {{#if this.hasCosts}}<button type="button" class="sb-btn sb-btn-ghost sb-btn-xs sb-btn-icon" data-action="apply-technique-costs" data-item-id="{{this.id}}" title="{{localize 'SHADOWBASE.Roll.ApplyCosts'}}"><i class="fa-solid fa-minus-circle"></i></button>{{/if}}
+            {{#if this.selectedWeaponId}}<button type="button" class="sb-btn sb-btn-destructive sb-btn-xs" data-action="roll-technique-damage" data-item-id="{{this.id}}" title="{{this.damageBonus}}">{{localize "SHADOWBASE.Hud.Damage"}}</button>{{/if}}
+          </span>
+        </div>
+        {{#if this.hasWeaponOptions}}
+        <label class="sb-hud__field sb-hud__field--inline"><span>{{localize "SHADOWBASE.Hud.WeaponFor"}}</span><select class="sb-input sb-select" name="items.{{this.id}}.row.selectedWeaponId"><option value="">{{localize "SHADOWBASE.Hud.None"}}</option>{{#each this.weapons}}<option value="{{this.id}}" {{#if this.selected}}selected{{/if}}>{{this.name}}</option>{{/each}}</select></label>
+        {{/if}}
+      </div>
+      {{/each}}
+      {{/if}}
+      {{#if hasForms}}
+      <h4 class="sb-hud__subhead">{{localize "SHADOWBASE.Hud.LightsaberForms"}}</h4>
+      {{#each forms}}
+      <div class="sb-hud__row sb-hud__row--tile{{#if this.active}} is-active{{/if}}">
+        <span class="sb-hud__row-label">{{this.name}} <span class="sb-hud__muted">({{localize "SHADOWBASE.Hud.Lvl"}} {{this.level}})</span></span>
+        <button type="button" class="sb-btn {{#if (not this.active)}}sb-btn-secondary {{/if}}sb-btn-xs" data-action="toggle-form" data-form="{{this.name}}">{{#if this.active}}{{localize "SHADOWBASE.Hud.FormActive"}}{{else}}{{localize "SHADOWBASE.Hud.Activate"}}{{/if}}</button>
+      </div>
+      {{/each}}
+      {{#if activeForm}}
+      <div class="sb-hud-form">
+        <p class="sb-hud-form__effect"><strong>{{activeForm.name}}</strong> · {{localize "SHADOWBASE.Hud.FormEffect" attack=activeForm.effect.attack parry=activeForm.effect.parry dodge=activeForm.effect.dodge block=activeForm.effect.block}}</p>
+        {{#if activeForm.saberReadied}}
+        <label class="sb-hud__field sb-hud__field--inline"><span>{{localize "SHADOWBASE.Hud.FormWeapon"}}</span><select class="sb-input sb-select" name="system.activeFormWeaponId"><option value="">{{localize "SHADOWBASE.Hud.None"}}</option>{{#each activeForm.weapons}}<option value="{{this.id}}" {{#if this.selected}}selected{{/if}}>{{this.name}}</option>{{/each}}</select></label>
+        <div class="sb-hud__btn-row">
+          <button type="button" class="sb-btn sb-btn-outline sb-btn-xs sb-hud__grow" data-action="roll-form-attack" {{#if (not activeForm.weaponId)}}disabled{{/if}}>{{localize "SHADOWBASE.Hud.Attack"}} ({{activeForm.attackTarget}})</button>
+          <button type="button" class="sb-btn sb-btn-secondary sb-btn-xs" data-action="roll-form-defense" data-kind="dodge" {{#if (not activeForm.dodge.available)}}disabled{{/if}}>{{localize "SHADOWBASE.Hud.Dodge"}} ({{activeForm.dodge.target}})</button>
+          <button type="button" class="sb-btn sb-btn-secondary sb-btn-xs" data-action="roll-form-defense" data-kind="parry" {{#if (not activeForm.parry.available)}}disabled{{/if}}>{{localize "SHADOWBASE.Hud.Parry"}} ({{activeForm.parry.target}})</button>
+          <button type="button" class="sb-btn sb-btn-secondary sb-btn-xs" data-action="roll-form-defense" data-kind="block" {{#if (not activeForm.block.available)}}disabled{{/if}}>{{localize "SHADOWBASE.Hud.Block"}} ({{activeForm.block.target}})</button>
+        </div>
+        {{else}}
+        <p class="sb-hud__hint">{{localize "SHADOWBASE.Hud.FormNeedsSaber"}}</p>
+        {{/if}}
+      </div>
+      {{/if}}
+      {{/if}}
+      {{#if (not (or hasPowers hasTechniques hasForms))}}<p class="sb-hud__empty">{{localize "SHADOWBASE.Hud.NoAbilities"}}</p>{{/if}}
+    </div>
+  </details>
+
+  <details class="sb-section">
+    <summary class="sb-section__summary"><span class="sb-section__title">{{localize "SHADOWBASE.Hud.ShipSystems"}}</span><i class="sb-section__chevron fa-solid fa-chevron-down"></i></summary>
+    <div class="sb-section__body sb-hud-ship">
+      <label class="sb-hud__field sb-hud__field--inline"><span>{{localize "SHADOWBASE.Hud.Station"}}</span><select class="sb-input sb-select" name="system.assignedStation"><option value="">{{localize "SHADOWBASE.Hud.NoStation"}}</option>{{#each ship.stations}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.value}}</option>{{/each}}</select></label>
+      {{#if ship.station}}
+      {{#if ship.isTurret}}
+      <label class="sb-hud__field sb-hud__field--inline"><span>{{localize "SHADOWBASE.Hud.SelectedWeapon"}}</span><select class="sb-input sb-select" name="hud.ship.weaponName"><option value="">{{localize "SHADOWBASE.Hud.WeaponPlaceholder"}}</option>{{#each ship.weapons}}<option value="{{this.name}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select></label>
+      {{/if}}
+      {{#each ship.actions}}
+      <div class="sb-hud__row sb-hud__row--tile">
+        <span class="sb-hud__row-label{{#if (not this.isDamage)}}{{#if (not this.target)}} is-muted{{/if}}{{/if}}" title="{{this.skills}}">{{this.label}}{{#if this.modifier}} ({{this.modifier}}){{/if}}</span>
+        {{#if this.isDamage}}
+        <button type="button" class="sb-btn sb-btn-destructive sb-btn-xs" data-action="roll-crew-action" data-crew-action="{{this.label}}" {{#if (not ../ship.weaponName)}}disabled{{/if}}>{{localize "SHADOWBASE.Roll.RollDamage"}}</button>
+        {{else}}
+        {{#if this.target}}
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="roll-crew-action" data-crew-action="{{this.label}}" title="{{this.skillName}}">{{localize "SHADOWBASE.Hud.Roll"}} ({{this.target}})</button>
+        {{else}}
+        <span class="sb-hud__muted sb-hud__nodefault" title="{{this.skills}}">{{localize "SHADOWBASE.Hud.NoDefault"}}</span>
+        {{/if}}
+        {{/if}}
+      </div>
+      {{/each}}
+      {{else}}
+      <p class="sb-hud__empty">{{localize "SHADOWBASE.Hud.NoStationAssigned"}}</p>
+      {{/if}}
+    </div>
+  </details>
+{{/with}}
+{{else}}
+  <p class="sb-hud__error">{{localize "SHADOWBASE.Hud.EngineUnavailable"}}</p>
+{{/if}}
+</section>

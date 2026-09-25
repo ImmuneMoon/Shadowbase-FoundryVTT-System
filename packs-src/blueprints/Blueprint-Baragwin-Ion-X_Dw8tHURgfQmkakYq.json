@@ -1,0 +1,42 @@
+{
+  "_id": "Dw8tHURgfQmkakYq",
+  "_key": "!items!Dw8tHURgfQmkakYq",
+  "name": "Blueprint: Baragwin Ion-X",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Wn54IYbNSxjtPGwZ",
+  "sort": 46100000,
+  "system": {
+    "row": {
+      "id": "64e7b171-2eba-46f7-8a2b-1de276f7c271",
+      "name": "Blueprint: Baragwin Ion-X",
+      "cost": 643,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Baragwin Ion-X (Generation 0, proven, encoded, catalog design). Required to build Baragwin Ion-X; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Baragwin Ion-X",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 4690,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Specialized Rifles|Baragwin Ion-X"
+    }
+  }
+}

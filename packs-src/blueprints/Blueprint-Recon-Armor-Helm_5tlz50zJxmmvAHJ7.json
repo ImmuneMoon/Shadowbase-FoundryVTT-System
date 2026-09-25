@@ -1,0 +1,42 @@
+{
+  "_id": "5tlz50zJxmmvAHJ7",
+  "_key": "!items!5tlz50zJxmmvAHJ7",
+  "name": "Blueprint: Recon Armor Helm",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 8300000,
+  "system": {
+    "row": {
+      "id": "eead5873-cab8-4e7d-82c9-ad2e9008bd19",
+      "name": "Blueprint: Recon Armor Helm",
+      "cost": 188,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Recon Armor Helm (Generation 0, proven, encoded, catalog design). Required to build Recon Armor Helm; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Recon Armor Helm",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 131,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Recon Armor Helm"
+    }
+  }
+}

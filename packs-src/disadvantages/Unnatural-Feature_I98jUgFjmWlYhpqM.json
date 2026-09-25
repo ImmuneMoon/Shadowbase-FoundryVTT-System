@@ -1,0 +1,34 @@
+{
+  "_id": "I98jUgFjmWlYhpqM",
+  "_key": "!items!I98jUgFjmWlYhpqM",
+  "name": "Unnatural Feature",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "N9OA5FojtdIRbIeU",
+  "sort": 7000000,
+  "system": {
+    "row": {
+      "name": "Unnatural Feature",
+      "points": -1,
+      "level": null,
+      "description": "Glowing optics, loud hydraulic joints, or chrome plating. Imposes an equivalent penalty to Disguise and attempts to blend into a crowd. Range: -1 point/level, max -5 points.",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Unnatural Feature|Cybernetic"
+    }
+  }
+}

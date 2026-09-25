@@ -1,0 +1,42 @@
+{
+  "_id": "8A7KFCjyQPVY57af",
+  "_key": "!items!8A7KFCjyQPVY57af",
+  "name": "Light Hand Shell (Flex-Armor)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 4600000,
+  "system": {
+    "row": {
+      "id": "f98c549d-1cad-4ca2-aa42-608f5abc09a2",
+      "name": "Light Hand Shell (Flex-Armor)",
+      "category": "Armor Shell",
+      "cost": 15,
+      "weight": 0.14,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-light-hands-flex-armor",
+      "materialId": "flex-armor",
+      "notes": "Pliable, woven material. Never imposes a Basic Move penalty. Light tier only.",
+      "validSlots": [],
+      "drBonus": 1,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-light-hands-flex-armor"
+    }
+  }
+}

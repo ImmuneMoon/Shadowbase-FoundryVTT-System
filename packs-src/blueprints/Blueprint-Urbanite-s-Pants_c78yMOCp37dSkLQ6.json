@@ -1,0 +1,42 @@
+{
+  "_id": "c78yMOCp37dSkLQ6",
+  "_key": "!items!c78yMOCp37dSkLQ6",
+  "name": "Blueprint: Urbanite's Pants",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 19400000,
+  "system": {
+    "row": {
+      "id": "c2fd14e2-a55e-4a12-b163-79d36eaddd72",
+      "name": "Blueprint: Urbanite's Pants",
+      "cost": 176,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Urbanite's Pants (Generation 0, proven, encoded, catalog design). Required to build Urbanite's Pants; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Urbanite's Pants",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 10.666666666666668,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Urbanite's Pants"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "O0sNyxSxOII3YtFH",
+  "_key": "!items!O0sNyxSxOII3YtFH",
+  "name": "Contoured Casing",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "FEhz1ocO0WGO0Vfx",
+  "sort": 4000000,
+  "system": {
+    "row": {
+      "name": "Contoured Casing",
+      "category": "Housing/Concealment",
+      "cost": 14,
+      "weight": 0.2,
+      "notes": "Rounded edges and flush triggers to avoid snagging. +2 Holdout.",
+      "materials": [
+        {
+          "name": "Plastoid",
+          "amount": 0.2
+        }
+      ],
+      "id": "83cdc872-9478-4cd7-903f-d4f450cac7eb",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Contoured Casing"
+    }
+  }
+}

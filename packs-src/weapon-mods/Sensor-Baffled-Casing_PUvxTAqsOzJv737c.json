@@ -1,0 +1,46 @@
+{
+  "_id": "PUvxTAqsOzJv737c",
+  "_key": "!items!PUvxTAqsOzJv737c",
+  "name": "Sensor-Baffled Casing",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "FEhz1ocO0WGO0Vfx",
+  "sort": 4200000,
+  "system": {
+    "row": {
+      "name": "Sensor-Baffled Casing",
+      "category": "Housing/Concealment",
+      "cost": 1660,
+      "weight": 0.5,
+      "notes": "Imposes a -4 penalty to Electronics Operation (Sensors) scans.",
+      "materials": [
+        {
+          "name": "Reflec",
+          "amount": 0.2
+        },
+        {
+          "name": "Duraplast",
+          "amount": 0.3
+        }
+      ],
+      "id": "7f428e26-7cc5-4b95-9d9a-4981a7c51732",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Sensor-Baffled Casing"
+    }
+  }
+}

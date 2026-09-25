@@ -1,0 +1,42 @@
+{
+  "_id": "SVQWsRTNbNYDBPAD",
+  "_key": "!items!SVQWsRTNbNYDBPAD",
+  "name": "Blueprint: Rifle Shot (Incendiary)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DvRG95q4QWZQnNFm",
+  "sort": 3100000,
+  "system": {
+    "row": {
+      "id": "d9e6d60b-25db-46ea-967f-21118dfc62dd",
+      "name": "Blueprint: Rifle Shot (Incendiary)",
+      "cost": 177,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Rifle Shot (Incendiary) (Generation 0, proven, encoded, catalog design). Required to build Rifle Shot (Incendiary); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Rifle Shot (Incendiary)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 22.666666666666668,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Ammunition|Rifle Shot (Incendiary)"
+    }
+  }
+}

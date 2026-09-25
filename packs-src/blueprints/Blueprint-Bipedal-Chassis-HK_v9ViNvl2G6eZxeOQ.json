@@ -1,0 +1,42 @@
+{
+  "_id": "v9ViNvl2G6eZxeOQ",
+  "_key": "!items!v9ViNvl2G6eZxeOQ",
+  "name": "Blueprint: Bipedal Chassis (HK)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Lfv4W7rcXgY71wjN",
+  "sort": 22700000,
+  "system": {
+    "row": {
+      "id": "3f5b68cb-29da-46d8-88b6-1127b4df7a77",
+      "name": "Blueprint: Bipedal Chassis (HK)",
+      "cost": 932,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Bipedal Chassis (HK) (Generation 0, proven, encoded, catalog design). Required to build Bipedal Chassis (HK); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Bipedal Chassis (HK)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 7575,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Chassis|Bipedal Chassis (HK)"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "_id": "uPkAPRuaehZGh8jb",
+  "_key": "!items!uPkAPRuaehZGh8jb",
+  "name": "Micro-Rocket (Concussion)",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "qrQnM70omC8gfDQ5",
+  "sort": 1800000,
+  "system": {
+    "row": {
+      "name": "Micro-Rocket (Concussion)",
+      "craftingCategory": "Explosives",
+      "type": "Missile",
+      "maxCharges": 1,
+      "cost": 420,
+      "weight": 0.5,
+      "formula": "1d+2",
+      "notes": "Damage: 1d+2 crushing explosion. Formatted strictly for Gauntlet Launchers.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.3
+        },
+        {
+          "name": "Solid Propellant",
+          "amount": 0.2
+        }
+      ],
+      "id": "2904a51f-4805-4ac7-9bf9-3ae7baaa9e87",
+      "quantity": 1,
+      "currentCharges": 1,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 420,
+      "baseWeight": 0.5,
+      "containerType": "None",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Micro-Rocket (Concussion)"
+    }
+  }
+}

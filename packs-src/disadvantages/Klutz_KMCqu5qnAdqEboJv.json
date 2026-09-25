@@ -1,0 +1,34 @@
+{
+  "_id": "KMCqu5qnAdqEboJv",
+  "_key": "!items!KMCqu5qnAdqEboJv",
+  "name": "Klutz",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 11100000,
+  "system": {
+    "row": {
+      "name": "Klutz",
+      "points": -5,
+      "level": null,
+      "description": "You are naturally clumsy and prone to dropping things or tripping at the worst possible moments. On a critical failure involving a DX roll, you trip or fumble.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Klutz|Mental"
+    }
+  }
+}

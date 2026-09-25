@@ -1,0 +1,33 @@
+{
+  "_id": "QPkBluCJK9lXLNLS",
+  "_key": "!items!QPkBluCJK9lXLNLS",
+  "name": "Force Sensitive (Racial Trait)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "RdM67Srk6HMq7Ns7",
+  "sort": 6900000,
+  "system": {
+    "row": {
+      "name": "Force Sensitive (Racial Trait)",
+      "points": 0,
+      "description": "Some species are naturally attuned to the Force.",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Force Sensitive (Racial Trait)"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "_id": "MG7CzOOyblrEgWAW",
+  "_key": "!items!MG7CzOOyblrEgWAW",
+  "name": "Holo-projector/ recorder",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "QVe7sZmgjcPk3HO6",
+  "sort": 7400000,
+  "system": {
+    "row": {
+      "name": "Holo-projector/ recorder",
+      "cost": 1992,
+      "skill": "Electronics Operation (Media) or Computer Operation",
+      "description": "Record/project holograms. Materials: Plasteel: 2.25 lbs, Silicon: 0.5 lbs, Clari-crystalline: 0.25 lbs, Power Cell: 0.7 lbs.",
+      "category": "Communication & Data",
+      "weight": 3.7,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Plasteel",
+          "amount": 2.25
+        },
+        {
+          "name": "Silicon",
+          "amount": 0.5
+        },
+        {
+          "name": "Clari-crystalline",
+          "amount": 0.25
+        },
+        {
+          "name": "Power Cell",
+          "amount": 0.7
+        }
+      ],
+      "requiresSoftware": true,
+      "id": "f1cbe51f-3955-4bb5-adf2-6c4125b06013",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Holo-projector/ recorder"
+    }
+  }
+}

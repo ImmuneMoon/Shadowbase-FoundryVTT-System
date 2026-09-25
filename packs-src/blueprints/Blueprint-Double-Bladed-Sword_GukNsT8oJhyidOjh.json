@@ -1,0 +1,42 @@
+{
+  "_id": "GukNsT8oJhyidOjh",
+  "_key": "!items!GukNsT8oJhyidOjh",
+  "name": "Blueprint: Double-Bladed Sword",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 41200000,
+  "system": {
+    "row": {
+      "id": "d439f292-3505-4ac9-8dc4-8978c41420bb",
+      "name": "Blueprint: Double-Bladed Sword",
+      "cost": 192,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Double-Bladed Sword (Generation 0, proven, encoded, catalog design). Required to build Double-Bladed Sword; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Double-Bladed Sword",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 172,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Double-Bladed Sword"
+    }
+  }
+}

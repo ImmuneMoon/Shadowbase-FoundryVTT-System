@@ -1,0 +1,61 @@
+{
+  "_id": "lDdU370gv4edMC2y",
+  "_key": "!items!lDdU370gv4edMC2y",
+  "name": "Detonite Charge",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "7rGdcjDF69anM1Pj",
+  "sort": 4400000,
+  "system": {
+    "row": {
+      "name": "Detonite Charge",
+      "craftingCategory": "Chemical Charges",
+      "cost": 1215,
+      "skill": "Demolitions",
+      "description": "A small, highly stable explosive. Inflicts 6d cr ex damage with a blast radius of 10 yards. Setting the charge takes 1 minute and a Demolitions roll to place optimally. Needs Computer Programming to function if constructed.",
+      "category": "Utility & Miscellaneous",
+      "weight": 1.4,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Detonite Compound",
+          "amount": 0.8
+        },
+        {
+          "name": "Silicon",
+          "amount": 0.2
+        },
+        {
+          "name": "Durasteel",
+          "amount": 0.2
+        },
+        {
+          "name": "Diatium",
+          "amount": 0.2
+        }
+      ],
+      "requiresSoftware": true,
+      "damage": "6d cr ex",
+      "id": "88eba8a8-a779-4c18-a6ae-1281490586e4",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Detonite Charge"
+    }
+  }
+}

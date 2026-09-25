@@ -1,0 +1,12 @@
+{{!-- templates/items/tabs.hbs - the item sheet's tab strip (the card's nested accordions - Structural Matrix,
+     Modifications & Slots, Tactical Stats - as AppV2 tabs; the angular tab recipe of docs/STYLE-SPEC.md §2).
+     Context: tabs = this._prepareTabs('primary'). --}}
+<div class="sb-item__tabs" data-application-part="tabs">
+  <nav class="sb-tabs tabs" data-group="primary" aria-label="{{localize "SHADOWBASE.Item.Tab.Aria"}}">
+    {{#each tabs}}
+      <a class="sb-tab {{cssClass}}" data-action="tab" data-group="{{group}}" data-tab="{{id}}" role="tab" aria-selected="{{#if active}}true{{else}}false{{/if}}">
+        <i class="{{icon}}"></i><span>{{localize label}}</span>
+      </a>
+    {{/each}}
+  </nav>
+</div>

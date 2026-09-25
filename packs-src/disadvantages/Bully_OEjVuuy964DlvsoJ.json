@@ -1,0 +1,34 @@
+{
+  "_id": "OEjVuuy964DlvsoJ",
+  "_key": "!items!OEjVuuy964DlvsoJ",
+  "name": "Bully",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 8600000,
+  "system": {
+    "row": {
+      "name": "Bully",
+      "points": -10,
+      "level": null,
+      "description": "You enjoy dominating others, especially those weaker than you, through intimidation or minor acts of aggression.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Bully|Mental"
+    }
+  }
+}

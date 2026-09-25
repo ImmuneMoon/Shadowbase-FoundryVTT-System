@@ -1,0 +1,42 @@
+{
+  "_id": "pU9gozxUl8BVs99V",
+  "_key": "!items!pU9gozxUl8BVs99V",
+  "name": "Blueprint: Hyper-Adrenal Strength",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "57dSrgDssXtG4x1L",
+  "sort": 40000000,
+  "system": {
+    "row": {
+      "id": "7aaeae62-27b3-4fa6-b2a0-0d8d290a9a18",
+      "name": "Blueprint: Hyper-Adrenal Strength",
+      "cost": 216,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Hyper-Adrenal Strength (Generation 0, proven, encoded, catalog design). Required to build Hyper-Adrenal Strength; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Hyper-Adrenal Strength",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 420,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Medical & Pharmaceuticals|Hyper-Adrenal Strength"
+    }
+  }
+}

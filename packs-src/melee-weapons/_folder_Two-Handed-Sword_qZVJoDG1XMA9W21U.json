@@ -1,0 +1,19 @@
+{
+  "_id": "qZVJoDG1XMA9W21U",
+  "_key": "!folders!qZVJoDG1XMA9W21U",
+  "name": "Two-Handed Sword",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 700000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "path": [
+        "Two-Handed Sword"
+      ]
+    }
+  }
+}

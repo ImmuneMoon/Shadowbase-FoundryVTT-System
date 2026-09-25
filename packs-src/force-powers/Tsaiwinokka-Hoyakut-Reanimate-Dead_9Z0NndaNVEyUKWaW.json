@@ -1,0 +1,51 @@
+{
+  "_id": "9Z0NndaNVEyUKWaW",
+  "_key": "!items!9Z0NndaNVEyUKWaW",
+  "name": "Tsaiwinokka Hoyakut (Reanimate Dead)",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "joTOdeYSoLzidovy",
+  "sort": 4700000,
+  "system": {
+    "row": {
+      "name": "Tsaiwinokka Hoyakut (Reanimate Dead)",
+      "level": 1,
+      "cpCost": 25,
+      "fpCost": 10,
+      "effect": "Reanimates one corpse as a mindless thrall. Thralls keep ST/DX/HT but lack IQ/Skills. Incantation: 5 sec.",
+      "characterTier": "Expert",
+      "baseSkill": "Sith Alchemy (IQ/Hard)",
+      "category": "Sith Sorcery/Alchemy",
+      "alignment": "DS",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Tsaiwinokka Hoyakut (Reanimate Dead)",
+        "description": "Infuses fresh corpses with dark side energy, reanimating them as aggressive Sith Undead thralls.",
+        "category": "Sith Sorcery/Alchemy",
+        "level": 1,
+        "cpCost": 25,
+        "fpCost": 10,
+        "alignment": "DS",
+        "baseSkill": "Sith Alchemy (IQ/Hard)",
+        "characterTier": "Expert",
+        "effect": "Reanimates one corpse as a mindless thrall. Thralls keep ST/DX/HT but lack IQ/Skills. Incantation: 5 sec."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Tsaiwinokka Hoyakut (Reanimate Dead)"
+    }
+  }
+}

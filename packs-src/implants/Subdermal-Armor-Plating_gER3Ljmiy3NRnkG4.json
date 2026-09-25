@@ -1,0 +1,39 @@
+{
+  "_id": "gER3Ljmiy3NRnkG4",
+  "_key": "!items!gER3Ljmiy3NRnkG4",
+  "name": "Subdermal Armor Plating",
+  "type": "implant",
+  "img": "icons/svg/regen.svg",
+  "folder": "STmujteizjG6Ekf7",
+  "sort": 2300000,
+  "system": {
+    "row": {
+      "id": "e6d50f0e-1841-4d45-b410-0fa9a29c8f30",
+      "name": "Subdermal Armor Plating",
+      "cost": 1520,
+      "finalCp": 10,
+      "effect": "DR 2 (Flexible)",
+      "category": "Sensory",
+      "pathways": [],
+      "slotType": "Utility",
+      "installed": false,
+      "weight": 5,
+      "notes": "Trait Package: 10 CP of Advantages; Mandatory Flaws offset. Materials: Duraplast: 3.5 lbs (350 cr), Synth-Flesh: 1.5 lbs (30 cr)."
+    },
+    "source": "implants",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "implants"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "implants",
+      "key": "Sensory|Subdermal Armor Plating"
+    }
+  }
+}

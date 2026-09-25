@@ -1,0 +1,42 @@
+{
+  "_id": "AU0UNPgA2u1FbsWu",
+  "_key": "!items!AU0UNPgA2u1FbsWu",
+  "name": "Medium Hand Shell (Durasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 5200000,
+  "system": {
+    "row": {
+      "id": "68c7316e-edf1-495e-8cf1-913c2194c504",
+      "name": "Medium Hand Shell (Durasteel)",
+      "category": "Armor Shell",
+      "cost": 62,
+      "weight": 1.23,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-medium-hands-durasteel",
+      "materialId": "durasteel",
+      "notes": "Standard building alloy. Baseline stats.",
+      "validSlots": [],
+      "drBonus": 3,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-medium-hands-durasteel"
+    }
+  }
+}

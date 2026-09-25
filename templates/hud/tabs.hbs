@@ -1,0 +1,8 @@
+{{!-- templates/hud/tabs.hbs - the Actions / Status / Handbook strip (roller-window.tsx TabsList).
+     The built-in `tab` action of ApplicationV2 switches the group; `tab.cssClass` is 'active' on
+     the current one. Context: TacticalHud._prepareTabs('primary'). --}}
+<nav class="sb-tabs sb-hud__tabs tabs" data-group="primary">
+  {{#each tabs}}
+  <a class="sb-tab {{this.cssClass}}" data-action="tab" data-group="{{this.group}}" data-tab="{{this.id}}"><i class="{{this.icon}}"></i> <span>{{localize this.label}}</span></a>
+  {{/each}}
+</nav>

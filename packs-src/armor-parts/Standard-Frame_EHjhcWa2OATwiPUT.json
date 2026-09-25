@@ -1,0 +1,42 @@
+{
+  "_id": "EHjhcWa2OATwiPUT",
+  "_key": "!items!EHjhcWa2OATwiPUT",
+  "name": "Standard Frame",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "yXDilaSMuXLkPwTX",
+  "sort": 8700000,
+  "system": {
+    "row": {
+      "id": "f094f131-5ceb-4e58-a724-d5f8b4f04e34",
+      "name": "Standard Frame",
+      "category": "Armor Frame",
+      "cost": 42,
+      "weight": 0.6,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "frame-standard",
+      "materialId": null,
+      "notes": "2 Mod Slots. Milled from Plastoid. Default on Medium tier.",
+      "validSlots": [],
+      "drBonus": null,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "frame-standard"
+    }
+  }
+}

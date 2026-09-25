@@ -1,0 +1,19 @@
+{
+  "_id": "d4eK6lRChskXlqOO",
+  "_key": "!folders!d4eK6lRChskXlqOO",
+  "name": "Broadsword",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "path": [
+        "Broadsword"
+      ]
+    }
+  }
+}

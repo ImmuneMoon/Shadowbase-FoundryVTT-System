@@ -1,0 +1,46 @@
+{
+  "_id": "qYkXktS6q1R9nIrh",
+  "_key": "!items!qYkXktS6q1R9nIrh",
+  "name": "Heavy Hauler (e.g., Cargo Skiff)",
+  "type": "vehicle",
+  "img": "icons/svg/direction.svg",
+  "folder": "ihuSXoinyPE3l7QQ",
+  "sort": 600000,
+  "system": {
+    "row": {
+      "name": "Heavy Hauler (e.g., Cargo Skiff)",
+      "type": "Utility Repulsorlift Vehicle",
+      "category": "Atmospheric",
+      "handling": "0",
+      "speed": "40 mph",
+      "accelDecel": "2/4",
+      "hp": 50,
+      "dr": 5,
+      "crew": "1+",
+      "passengers": "4",
+      "cargo": "20 tons",
+      "cost": 15000,
+      "weapons": "None",
+      "weaponSkill": "N/A",
+      "hyperdrive": "N/A",
+      "notes": "Slow, rugged, designed to move large amounts of cargo over rough terrain.",
+      "id": "ff5ba6d5-8ca2-4696-98ab-ab8339e76d90",
+      "quantity": 1
+    },
+    "source": "vehicles",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "vehicles"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "vehicles",
+      "key": "Heavy Hauler (e.g., Cargo Skiff)"
+    }
+  }
+}

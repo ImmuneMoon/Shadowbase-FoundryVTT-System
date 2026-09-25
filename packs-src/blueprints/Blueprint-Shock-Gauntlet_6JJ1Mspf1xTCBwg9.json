@@ -1,0 +1,42 @@
+{
+  "_id": "6JJ1Mspf1xTCBwg9",
+  "_key": "!items!6JJ1Mspf1xTCBwg9",
+  "name": "Blueprint: Shock Gauntlet",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 43000000,
+  "system": {
+    "row": {
+      "id": "9edc7bf7-4ecb-450a-bdd7-e582d8e913ff",
+      "name": "Blueprint: Shock Gauntlet",
+      "cost": 323,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Shock Gauntlet (Generation 0, proven, encoded, catalog design). Required to build Shock Gauntlet; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Shock Gauntlet",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1490,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Shock Gauntlet"
+    }
+  }
+}

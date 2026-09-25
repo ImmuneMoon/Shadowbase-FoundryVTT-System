@@ -1,0 +1,34 @@
+{
+  "_id": "RSSdJQGvgNns7Hgu",
+  "_key": "!items!RSSdJQGvgNns7Hgu",
+  "name": "Dependency (Comforts)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "KbQ0mAMpcz5zmcEs",
+  "sort": 5600000,
+  "system": {
+    "row": {
+      "name": "Dependency (Comforts)",
+      "points": -5,
+      "level": null,
+      "description": "You may be accustomed to a high standard of living and suffer penalties (e.g., reduced EP, irritability) when deprived of comforts like fine food, private transport, or luxurious accommodations. This need for comfort can be exploited to control your movements or decisions. Range: -5 to -10 points.",
+      "category": "Cultural / Background",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Dependency (Comforts)|Cultural / Background"
+    }
+  }
+}

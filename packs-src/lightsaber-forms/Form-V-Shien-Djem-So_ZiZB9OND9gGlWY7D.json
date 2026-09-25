@@ -1,0 +1,113 @@
+{
+  "_id": "ZiZB9OND9gGlWY7D",
+  "_key": "!items!ZiZB9OND9gGlWY7D",
+  "name": "Form V: Shien / Djem So",
+  "type": "lightsaberForm",
+  "img": "icons/svg/sword.svg",
+  "folder": null,
+  "sort": 500000,
+  "system": {
+    "row": {
+      "name": "Form V: Shien / Djem So",
+      "level": 1,
+      "baselinePoints": 0
+    },
+    "source": "lightsaberForms",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "level": 1,
+        "cpCost": 10,
+        "effect": "Your melee attacks with a lightsaber inflict +1 damage. When parrying a blaster bolt, you may make an immediate counter-attack with the deflected bolt at a -5 skill penalty (uses a regular attack action).",
+        "characterTier": "Apprentice",
+        "applies": {},
+        "conditional": [
+          {
+            "target": "damage",
+            "value": 1,
+            "when": "on melee attacks with a lightsaber"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "cpCost": 20,
+        "effect": "Your melee attacks with a lightsaber inflict +2 damage. When parrying a blaster bolt, you may make an immediate counter-attack with the deflected bolt at a -3 skill penalty. If you successfully parry a melee attack, your next counter-attack against that opponent this turn gains a +1 skill bonus.",
+        "characterTier": "Adept",
+        "applies": {},
+        "conditional": [
+          {
+            "target": "damage",
+            "value": 2,
+            "when": "on melee attacks with a lightsaber"
+          },
+          {
+            "target": "attack",
+            "value": 1,
+            "when": "on your next counter-attack against that opponent, after a successful melee Parry"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "cpCost": 35,
+        "effect": "Your melee attacks with a lightsaber inflict +3 damage. When parrying a blaster bolt, you may make an immediate counter-attack with the deflected bolt at -1 skill penalty. If you successfully parry a melee attack, your next counter-attack against that opponent this turn gains a +2 skill bonus. You gain a +1 bonus to your Feint skill rolls.",
+        "characterTier": "Expert",
+        "applies": {},
+        "conditional": [
+          {
+            "target": "damage",
+            "value": 3,
+            "when": "on melee attacks with a lightsaber"
+          },
+          {
+            "target": "attack",
+            "value": 2,
+            "when": "on your next counter-attack against that opponent, after a successful melee Parry"
+          },
+          {
+            "target": "feint",
+            "value": 1,
+            "when": "on Feint skill rolls"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "cpCost": 55,
+        "effect": "Your melee attacks with a lightsaber inflict +4 damage. When parrying a blaster bolt, you may make an immediate counter-attack with the deflected bolt at no skill penalty. If you successfully parry a melee attack, your next counter-attack against that opponent this turn gains a +3 skill bonus. You gain a +2 bonus to your Feint skill rolls, and your melee attacks can ignore 1 point of the target's DR on a successful hit by 3 or more.",
+        "characterTier": "Master",
+        "applies": {},
+        "conditional": [
+          {
+            "target": "damage",
+            "value": 4,
+            "when": "on melee attacks with a lightsaber"
+          },
+          {
+            "target": "attack",
+            "value": 3,
+            "when": "on your next counter-attack against that opponent, after a successful melee Parry"
+          },
+          {
+            "target": "feint",
+            "value": 2,
+            "when": "on Feint skill rolls"
+          }
+        ]
+      }
+    ],
+    "catalog": "lightsaber-forms"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-forms",
+      "key": "Form V: Shien / Djem So"
+    }
+  }
+}

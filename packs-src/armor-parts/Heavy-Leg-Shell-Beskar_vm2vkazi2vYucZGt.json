@@ -1,0 +1,42 @@
+{
+  "_id": "vm2vkazi2vYucZGt",
+  "_key": "!items!vm2vkazi2vYucZGt",
+  "name": "Heavy Leg Shell (Beskar)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 4500000,
+  "system": {
+    "row": {
+      "id": "0fc6710e-459f-4103-9219-6e32c664e6f5",
+      "name": "Heavy Leg Shell (Beskar)",
+      "category": "Armor Shell",
+      "cost": 55500,
+      "weight": 18.5,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-heavy-legs-beskar",
+      "materialId": "beskar",
+      "notes": "Mandalorian iron. +5 DR vs. energy damage. Medium and Heavy tiers only -- it is not milled thin.",
+      "validSlots": [],
+      "drBonus": 20,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-heavy-legs-beskar"
+    }
+  }
+}

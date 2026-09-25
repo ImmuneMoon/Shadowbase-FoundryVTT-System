@@ -1,0 +1,42 @@
+{
+  "_id": "rko85pfN9tRwS2Ck",
+  "_key": "!items!rko85pfN9tRwS2Ck",
+  "name": "Blueprint: Holo-projector/ recorder",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "muygUURylK1A9j1R",
+  "sort": 20000000,
+  "system": {
+    "row": {
+      "id": "b2784213-ca4f-4e72-b365-595fbd42d78b",
+      "name": "Blueprint: Holo-projector/ recorder",
+      "cost": 340,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Holo-projector/ recorder (Generation 0, proven, encoded, catalog design). Required to build Holo-projector/ recorder; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Holo-projector/ recorder",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1660,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Communication & Data|Holo-projector/ recorder"
+    }
+  }
+}

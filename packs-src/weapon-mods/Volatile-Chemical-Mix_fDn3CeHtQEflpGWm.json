@@ -1,0 +1,42 @@
+{
+  "_id": "fDn3CeHtQEflpGWm",
+  "_key": "!items!fDn3CeHtQEflpGWm",
+  "name": "Volatile Chemical Mix",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "JEdBUNVCYXwhErYe",
+  "sort": 3800000,
+  "system": {
+    "row": {
+      "name": "Volatile Chemical Mix",
+      "category": "Fuel System",
+      "cost": 404,
+      "weight": 0.1,
+      "notes": "Adds +1 damage per die rolled. Crit fail damages user.",
+      "materials": [
+        {
+          "name": "Chemical Reactants",
+          "amount": 0.1
+        }
+      ],
+      "id": "fff1532c-0248-4f7b-ac92-7755f99f2e9e",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Volatile Chemical Mix"
+    }
+  }
+}

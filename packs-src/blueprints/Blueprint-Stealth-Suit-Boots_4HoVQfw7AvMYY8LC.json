@@ -1,0 +1,42 @@
+{
+  "_id": "4HoVQfw7AvMYY8LC",
+  "_key": "!items!4HoVQfw7AvMYY8LC",
+  "name": "Blueprint: Stealth Suit Boots",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 9600000,
+  "system": {
+    "row": {
+      "id": "b97d4b89-b3e0-4bb4-bf45-c1b892b35bad",
+      "name": "Blueprint: Stealth Suit Boots",
+      "cost": 199,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Stealth Suit Boots (Generation 0, proven, encoded, catalog design). Required to build Stealth Suit Boots; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Stealth Suit Boots",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 243,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Stealth Suit Boots"
+    }
+  }
+}

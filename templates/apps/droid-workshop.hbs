@@ -1,0 +1,135 @@
+{{!-- templates/apps/droid-workshop.hbs - the Droid Character Workshop (droid-workshop.tsx:575-1017): the construction
+     status strip, the build summary, Phase 1 (shell + core power), Phase 2 (head / sensors / mounts / limbs), Phase 3
+     (core integration), the derived anatomy. Every select binds `droid.<build path>` and the app writes the WHOLE
+     droidBuild (ARCHITECTURE §6.5). Context: DroidWorkshop#_prepareContext (`workshop`). The root is a submitOnChange
+     form: every button is type="button". --}}
+<section class="sb-app__body sb-droid" data-app="droid-workshop">
+{{#if engineOk}}
+{{#with workshop}}
+  <div class="sb-droid__status">
+    <div class="sb-droid__status-row">
+      <div class="sb-droid__status-left">
+        <i class="{{#if isConstructed}}fa-solid fa-lock sb-droid__lock--on{{else}}fa-solid fa-lock-open sb-droid__lock--off{{/if}}"></i>
+        <div>
+          <p class="sb-droid__status-title">{{localize "SHADOWBASE.Apps.Droid.ConstructionStatus"}}</p>
+          <p class="sb-caps sb-text-10 sb-text-muted">{{statusLine}}</p>
+        </div>
+      </div>
+      <div class="sb-hrow">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm sb-caps" data-action="buy-parts" {{disabled (not editable)}}><i class="fa-solid fa-book"></i> {{localize "SHADOWBASE.Apps.Droid.BuyParts"}}</button>
+        <button type="button" class="sb-btn {{#if isConstructed}}sb-btn-outline{{else}}sb-btn-default is-green{{/if}} sb-btn-sm sb-caps" data-action="toggle-construction" {{disabled (not editable)}}>{{lockLabel}}</button>
+      </div>
+    </div>
+    <p class="sb-muted-p sb-droid__status-note">{{localize "SHADOWBASE.Apps.Droid.ConstructionNote"}}</p>
+  </div>
+
+  <div class="sb-droid__summary">
+    <div class="sb-droid__summary-row">
+      {{#each summary}}<div class="sb-droid__summary-cell"><span class="sb-caps sb-text-10 sb-text-muted">{{label}}</span><span class="sb-droid__summary-value{{#if empty}} is-empty{{/if}}">{{text}}</span></div>{{/each}}
+      <div class="sb-droid__summary-cell"><span class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Droid.HardwareCp"}}</span><span class="sb-droid__summary-value">{{hardware.cp}} CP</span></div>
+      <div class="sb-droid__summary-cell"><span class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Droid.HardwareWeight"}}</span><span class="sb-droid__summary-value">{{hardware.weight}} lb</span></div>
+      <div class="sb-droid__summary-cell"><span class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Droid.PowerPoints"}}</span><span class="sb-droid__summary-value">{{hardware.pp}}{{#if hardware.ppMax}} / {{hardware.ppMax}}{{/if}}</span></div>
+    </div>
+    {{#if hasSlots}}
+    <div class="sb-hrow sb-hrow--tight sb-droid__slots">
+      {{#each slots}}<span class="sb-badge sb-badge-outline sb-droid__slot sb-droid__slot--{{tone}}">{{label}} {{used}}/{{total}}</span>{{/each}}
+    </div>
+    {{/if}}
+    {{#if nextStep}}<p class="sb-droid__next"><i class="fa-solid fa-wrench"></i> <b class="sb-caps">{{localize "SHADOWBASE.Apps.Droid.NextLabel"}}</b> {{nextStep}}</p>{{/if}}
+    {{#if warpedCount}}<p class="sb-droid__warn"><i class="fa-solid fa-triangle-exclamation"></i> {{localize "SHADOWBASE.Apps.Droid.WarpedCount" count=warpedCount}}</p>{{/if}}
+    {{#if pending}}<p class="sb-droid__warn"><i class="fa-solid fa-hammer"></i> {{localize "SHADOWBASE.Apps.Droid.PendingWork" name=pending.name}}</p>{{/if}}
+  </div>
+
+  {{#if plating}}
+  <div class="sb-droid__plating">
+    <span class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Droid.PlatingDr"}}</span>
+    <span class="sb-droid__plating-figure">{{plating.frame}} + {{plating.plating}}<span class="sb-text-muted"> / {{plating.platingMax}}</span></span>
+    <label class="sb-droid__plating-input"><span class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Droid.PlatingWear"}}</span><input type="number" class="sb-input" name="droid.chassisMods.armorCurrentDr" data-dtype="Number" min="0" step="1" value="{{plating.current}}" placeholder="{{plating.platingMax}}" {{disabled (not editable)}}></label>
+  </div>
+  {{/if}}
+
+  <section class="sb-droid__phase"><h4 class="sb-droid__phase-title"><i class="fa-solid fa-box"></i> {{localize "SHADOWBASE.Apps.Droid.Phase1"}}</h4><div class="sb-droid__phase-body">
+    <div class="sb-grid-2">
+      {{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" phase1.chassis editable=../editable}}
+      {{#if phase1.powerCore}}{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" phase1.powerCore editable=../editable}}{{/if}}
+    </div>
+  </div></section>
+
+  {{#if phase2}}
+  <section class="sb-droid__phase"><h4 class="sb-droid__phase-title"><i class="fa-solid fa-wave-square"></i> {{localize "SHADOWBASE.Apps.Droid.Phase2"}}</h4><div class="sb-droid__phase-body">
+    <div class="sb-grid-2 sb-droid__columns">
+      <div class="sb-droid__column">
+        <div class="sb-droid__box">
+          <p class="sb-droid__box-title"><i class="fa-solid fa-eye"></i> {{localize "SHADOWBASE.Apps.Droid.HeadSensory"}}</p>
+          {{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" phase2.head editable=../editable}}
+          {{#if phase2.showHeadChain}}
+          <div class="sb-droid__chain">
+            {{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" phase2.processor editable=../editable}}
+            {{#if phase2.hasProcessor}}
+              {{#if phase2.coProcessor}}{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" phase2.coProcessor editable=../editable}}{{/if}}
+              {{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" phase2.memory editable=../editable}}
+              <div class="sb-droid__bays">
+                <p class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Droid.SensorBays"}}</p>
+                {{#each phase2.sensors}}{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" this editable=../../editable}}{{/each}}
+              </div>
+            {{/if}}
+          </div>
+          {{/if}}
+        </div>
+        {{#if phase2.hasMounts}}
+        <div class="sb-droid__box">
+          <p class="sb-droid__box-title"><i class="fa-solid fa-wrench"></i> {{localize "SHADOWBASE.Apps.Droid.IntegratedUtilities"}}</p>
+          {{#each phase2.internal}}{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" this editable=../../editable}}{{/each}}
+          {{#each phase2.external}}{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" this editable=../../editable}}{{/each}}
+          {{#each phase2.utility}}{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" this editable=../../editable}}{{/each}}
+        </div>
+        {{/if}}
+        {{#if phase2.hasMotive}}
+        <div class="sb-droid__box">
+          <p class="sb-droid__box-title"><i class="fa-solid fa-anchor"></i> {{localize "SHADOWBASE.Apps.Droid.Locomotion"}}</p>
+          {{#each phase2.motive}}{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" this editable=../../editable}}{{/each}}
+        </div>
+        {{/if}}
+      </div>
+      <div class="sb-droid__column">
+        <p class="sb-droid__box-title"><i class="fa-solid fa-crosshairs"></i> {{localize "SHADOWBASE.Apps.Droid.ArmatureUnits"}}</p>
+        {{#each phase2.arms}}{{> "systems/shadowbase/templates/apps/parts/droid-limb.hbs" this editable=../../editable}}{{/each}}
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-dashed sb-btn-sm sb-droid__add" data-action="add-arm" {{disabled (not ../editable)}}><i class="fa-solid fa-plus"></i> {{localize "SHADOWBASE.Apps.Droid.AddArm"}}</button>
+        <p class="sb-droid__box-title"><i class="fa-solid fa-anchor"></i> {{localize "SHADOWBASE.Apps.Droid.LocomotiveStruts"}}</p>
+        {{#each phase2.legs}}{{> "systems/shadowbase/templates/apps/parts/droid-limb.hbs" this editable=../../editable}}{{/each}}
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-dashed sb-btn-sm sb-droid__add" data-action="add-leg" {{disabled (not ../editable)}}><i class="fa-solid fa-plus"></i> {{localize "SHADOWBASE.Apps.Droid.AddLeg"}}</button>
+      </div>
+    </div>
+  </div></section>
+  {{/if}}
+
+  {{#if phase3}}
+  <section class="sb-droid__phase"><h4 class="sb-droid__phase-title"><i class="fa-solid fa-sliders"></i> {{localize "SHADOWBASE.Apps.Droid.Phase3"}}</h4><div class="sb-droid__phase-body">
+    <div class="sb-grid-2">
+      <div class="sb-droid__box">{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" phase3.actuator editable=../editable}}</div>
+      <div class="sb-droid__box">{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" phase3.wiring editable=../editable}}</div>
+      <div class="sb-droid__box">{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" phase3.reinforcement editable=../editable}}</div>
+      <div class="sb-droid__box">{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" phase3.armor editable=../editable}}</div>
+      <div class="sb-droid__box">{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" phase3.motivator editable=../editable}}</div>
+      <div class="sb-droid__box"><p class="sb-droid__box-title"><i class="fa-solid fa-bolt"></i> {{localize "SHADOWBASE.Apps.Droid.AuxiliaryEnergy"}}</p>{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" phase3.backupPower editable=../editable}}</div>
+    </div>
+  </div></section>
+  {{/if}}
+
+  <section class="sb-droid__phase"><h4 class="sb-droid__phase-title"><i class="fa-solid fa-diagram-project"></i> {{localize "SHADOWBASE.Apps.Droid.DerivedAnatomy"}}</h4><div class="sb-droid__phase-body">
+    <div class="sb-hrow sb-hrow--between">
+      <p class="sb-muted-p">{{localize "SHADOWBASE.Apps.Droid.AnatomyHint" count=anatomy.count stored=anatomy.storedCount}}</p>
+      {{#if anatomy.inSync}}<span class="sb-badge sb-badge-outline sb-badge--pos">{{localize "SHADOWBASE.Apps.Droid.AnatomyInSync"}}</span>{{else}}<button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="sync-anatomy" {{disabled (not editable)}}><i class="fa-solid fa-arrows-rotate"></i> {{localize "SHADOWBASE.Apps.Droid.SyncAnatomy"}}</button>{{/if}}
+    </div>
+    <div class="sb-table-wrap"><table class="sb-table sb-table--dense">
+      <thead><tr><th>{{localize "SHADOWBASE.Apps.Anatomy.Location"}}</th><th>{{localize "SHADOWBASE.Apps.Anatomy.Type"}}</th><th>{{localize "SHADOWBASE.Apps.Anatomy.SideLabel"}}</th><th>{{localize "SHADOWBASE.Apps.Anatomy.StatusLabel"}}</th><th>DR</th><th>{{localize "SHADOWBASE.Apps.Anatomy.Penalty"}}</th></tr></thead>
+      <tbody>
+      {{#each anatomy.rows}}<tr class="{{#if amputated}}is-amputated{{/if}}"><td>{{name}}</td><td>{{type}}</td><td>{{side}}</td><td>{{status}}</td><td class="sb-text-mono">{{innateDR}}{{#if degradation}} (−{{degradation}}){{/if}}</td><td class="sb-text-mono">{{penalty}}</td></tr>{{/each}}
+      </tbody>
+    </table></div>
+  </div></section>
+{{/with}}
+{{else}}
+  <p class="sb-notice sb-notice--warn"><i class="fa-solid fa-triangle-exclamation"></i> {{localize "SHADOWBASE.Apps.Common.EngineError" error=engineError}}</p>
+{{/if}}
+</section>

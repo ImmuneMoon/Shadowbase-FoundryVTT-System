@@ -1,0 +1,87 @@
+{
+  "_id": "KxOT9WmGplT3S1hx",
+  "_key": "!items!KxOT9WmGplT3S1hx",
+  "name": "Telekinetic Weapon Mastery",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "KBIMmcUBYi6ZY6I3",
+  "sort": 4600000,
+  "system": {
+    "row": {
+      "name": "Telekinetic Weapon Mastery",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 2,
+      "effect": "Control 1 weapon telekinetically; it attacks using your Telekinesis skill in place of its normal skill.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Telekinesis (Will/Hard)",
+      "category": "Control Powers",
+      "alignment": "Grey",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Telekinetic Weapon Mastery",
+        "description": "The Force-user forgoes physical grip entirely, animating and wielding one or more weapons purely through the Force. Attacks with a telekinetically-wielded weapon use the character's Telekinesis skill in place of the weapon's normal DX-based skill (e.g. Lightsaber Combat) for both to-hit and parry rolls. The user's own body has no physical grip on the weapon and gains no bonus to its own physical Parry; a Master-tier user can extend a telekinetic parry to their own body.",
+        "category": "Control Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 2,
+        "alignment": "Grey",
+        "baseSkill": "Telekinesis (Will/Hard)",
+        "characterTier": "Apprentice",
+        "effect": "Control 1 weapon telekinetically; it attacks using your Telekinesis skill in place of its normal skill."
+      },
+      {
+        "name": "Telekinetic Weapon Mastery",
+        "description": "The Force-user forgoes physical grip entirely, animating and wielding one or more weapons purely through the Force. Attacks with a telekinetically-wielded weapon use the character's Telekinesis skill in place of the weapon's normal DX-based skill (e.g. Lightsaber Combat) for both to-hit and parry rolls. The user's own body has no physical grip on the weapon and gains no bonus to its own physical Parry; a Master-tier user can extend a telekinetic parry to their own body.",
+        "category": "Control Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 3,
+        "alignment": "Grey",
+        "baseSkill": "Telekinesis (Will/Hard)",
+        "characterTier": "Adept",
+        "effect": "Control up to 2 weapons; each attacks independently on your turn using Telekinesis."
+      },
+      {
+        "name": "Telekinetic Weapon Mastery",
+        "description": "The Force-user forgoes physical grip entirely, animating and wielding one or more weapons purely through the Force. Attacks with a telekinetically-wielded weapon use the character's Telekinesis skill in place of the weapon's normal DX-based skill (e.g. Lightsaber Combat) for both to-hit and parry rolls. The user's own body has no physical grip on the weapon and gains no bonus to its own physical Parry; a Master-tier user can extend a telekinetic parry to their own body.",
+        "category": "Control Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 4,
+        "alignment": "Grey",
+        "baseSkill": "Telekinesis (Will/Hard)",
+        "characterTier": "Expert",
+        "effect": "Control up to 3 weapons; each attacks independently on your turn using Telekinesis."
+      },
+      {
+        "name": "Telekinetic Weapon Mastery",
+        "description": "The Force-user forgoes physical grip entirely, animating and wielding one or more weapons purely through the Force. Attacks with a telekinetically-wielded weapon use the character's Telekinesis skill in place of the weapon's normal DX-based skill (e.g. Lightsaber Combat) for both to-hit and parry rolls. The user's own body has no physical grip on the weapon and gains no bonus to its own physical Parry; a Master-tier user can extend a telekinetic parry to their own body.",
+        "category": "Control Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 5,
+        "alignment": "Grey",
+        "baseSkill": "Telekinesis (Will/Hard)",
+        "characterTier": "Master",
+        "effect": "Control up to 4 weapons, each attacking independently; may also extend a telekinetic Parry to your own body using Telekinesis."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Telekinetic Weapon Mastery"
+    }
+  }
+}

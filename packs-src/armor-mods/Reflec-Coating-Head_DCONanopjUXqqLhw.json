@@ -1,0 +1,40 @@
+{
+  "_id": "DCONanopjUXqqLhw",
+  "_key": "!items!DCONanopjUXqqLhw",
+  "name": "Reflec Coating (Head)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "8GrlQsd0h5olZ7DZ",
+  "sort": 700000,
+  "system": {
+    "row": {
+      "id": "e1cc1e2f-a170-4c3d-9a0d-220365788693",
+      "name": "Reflec Coating (Head)",
+      "category": "Overlay Mod",
+      "cost": 400,
+      "weight": 0.1,
+      "notes": "Grants a +1 equipment bonus to Stealth rolls specifically against electronic scanning systems. Registers as a 'cold' or empty spot to scanners.",
+      "equipped": false,
+      "quantity": 1,
+      "validSlots": [
+        "Head",
+        "Droid Head"
+      ]
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "key": "Reflec Coating (Head)"
+    }
+  }
+}

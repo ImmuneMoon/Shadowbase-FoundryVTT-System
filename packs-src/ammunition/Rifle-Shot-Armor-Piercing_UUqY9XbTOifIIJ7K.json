@@ -1,0 +1,68 @@
+{
+  "_id": "UUqY9XbTOifIIJ7K",
+  "_key": "!items!UUqY9XbTOifIIJ7K",
+  "name": "Rifle Shot (Armor-Piercing)",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "62SxWxECrgqvwXoo",
+  "sort": 4200000,
+  "system": {
+    "row": {
+      "name": "Rifle Shot (Armor-Piercing)",
+      "craftingCategory": "Ammunition",
+      "component": "shot",
+      "projectileClass": "special",
+      "payloadRolls": [
+        {
+          "skill": "Machinist (Guns)",
+          "description": "Machining the hardened core."
+        },
+        {
+          "skill": "Smith (Guns)",
+          "description": "Forging and hardening the core."
+        }
+      ],
+      "type": "Rounds",
+      "containerType": "None",
+      "maxCharges": 0,
+      "cost": 4,
+      "weight": 0.08,
+      "notes": "The projectile and propellant of a Rifle Round (Armor-Piercing), without its Casing. Load it into a Rifle Casing to Handload.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.04
+        },
+        {
+          "name": "Gunpowder",
+          "amount": 0.04
+        }
+      ],
+      "id": "1caf2aad-9c8a-49a3-8f9c-263c175e9906",
+      "quantity": 1,
+      "currentCharges": 0,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 4,
+      "baseWeight": 0.08,
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Rifle Shot (Armor-Piercing)"
+    }
+  }
+}

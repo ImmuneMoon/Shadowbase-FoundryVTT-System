@@ -1,0 +1,46 @@
+{
+  "_id": "NRDBxEjETxUrACsn",
+  "_key": "!items!NRDBxEjETxUrACsn",
+  "name": "Durasteel Flame Nozzle",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "fqyMKj3bXsbnJOuN",
+  "sort": 5400000,
+  "system": {
+    "row": {
+      "id": "6a8f756f-3ee8-478c-87ff-2c54cf624bf3",
+      "name": "Durasteel Flame Nozzle",
+      "category": "Ranged Barrel",
+      "cost": 26,
+      "weight": 0.49,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "flame-nozzle",
+      "materialId": "durasteel",
+      "notes": "",
+      "effect": "",
+      "energyResBonus": 0,
+      "volume": 0.001,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "flame-nozzle"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "xzzCPNi1FMEyyPNI",
+  "_key": "!items!xzzCPNi1FMEyyPNI",
+  "name": "Blueprint: Upgraded Motor Relays",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "oLzYgjxVRMzfJEAH",
+  "sort": 30000000,
+  "system": {
+    "row": {
+      "id": "97c26c96-0da6-419e-8364-8601336e477a",
+      "name": "Blueprint: Upgraded Motor Relays",
+      "cost": 332,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Upgraded Motor Relays (Generation 0, proven, encoded, catalog design). Required to build Upgraded Motor Relays; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Upgraded Motor Relays",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1575,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Wiring|Upgraded Motor Relays"
+    }
+  }
+}

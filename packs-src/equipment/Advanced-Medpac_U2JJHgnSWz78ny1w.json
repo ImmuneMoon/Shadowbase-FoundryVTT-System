@@ -1,0 +1,55 @@
+{
+  "_id": "U2JJHgnSWz78ny1w",
+  "_key": "!items!U2JJHgnSWz78ny1w",
+  "name": "Advanced Medpac",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "cD5uXOgH1wysZpP7",
+  "sort": 600000,
+  "system": {
+    "row": {
+      "name": "Advanced Medpac",
+      "cost": 432,
+      "skill": "First Aid, or Physician",
+      "description": "Contains a strong dose of Kolto, and easily graft-able Synth-Flesh. Grants +2 to First Aid/Physician. Restores 2d Hit Points on a successful skill roll, or 1d HP on a failure, up to max HP. A critical failure inflicts 1d-2 HP of damage. Contains 1 use.",
+      "category": "Medical & Pharmaceuticals",
+      "subCategory": "Healing Supplies",
+      "weight": 2,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Kolto",
+          "amount": 1
+        },
+        {
+          "name": "Synth-Flesh",
+          "amount": 0.7
+        },
+        {
+          "name": "Duraplast",
+          "amount": 0.3
+        }
+      ],
+      "id": "23a96998-222a-4e67-9db7-c60d1f0d7f80",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Advanced Medpac"
+    }
+  }
+}

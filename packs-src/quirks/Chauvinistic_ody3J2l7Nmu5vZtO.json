@@ -1,0 +1,32 @@
+{
+  "_id": "ody3J2l7Nmu5vZtO",
+  "_key": "!items!ody3J2l7Nmu5vZtO",
+  "name": "Chauvinistic",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 600000,
+  "system": {
+    "row": {
+      "name": "Chauvinistic",
+      "points": -1,
+      "description": "You believe your species, homeworld, or culture is inherently superior to all others.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Chauvinistic"
+    }
+  }
+}

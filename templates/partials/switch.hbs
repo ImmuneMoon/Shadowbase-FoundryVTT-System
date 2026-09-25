@@ -1,0 +1,6 @@
+{{!-- shadowbase.switch - the website's Switch (src/components/ui/switch.tsx) over a real checkbox.
+     Params: id, name, checked (bool), disabled (bool), label (aria-label text), cls ('' | 'sb-switch--sm'). --}}
+<span class="sb-switch {{cls}}">
+  <input type="checkbox" id="{{id}}" name="{{name}}" {{#if checked}}checked{{/if}} {{#if disabled}}disabled{{/if}} aria-label="{{label}}">
+  <span class="sb-switch__thumb"></span>
+</span>

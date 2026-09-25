@@ -1,0 +1,46 @@
+{
+  "_id": "sxvPXfQkC0cl6t6t",
+  "_key": "!items!sxvPXfQkC0cl6t6t",
+  "name": "Durasteel Heavy Mount",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "6BrK3rjtho5KeSLo",
+  "sort": 900000,
+  "system": {
+    "row": {
+      "id": "01eb3bcc-0c94-4a2c-8675-d3c18404f900",
+      "name": "Durasteel Heavy Mount",
+      "category": "Ranged Grip",
+      "cost": 490,
+      "weight": 9.8,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "heavy-mount",
+      "materialId": "durasteel",
+      "notes": "Requires tripod/bipod.",
+      "effect": "Requires tripod/bipod.",
+      "energyResBonus": 0,
+      "volume": 0.02,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "heavy-mount"
+    }
+  }
+}

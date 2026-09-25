@@ -1,0 +1,42 @@
+{
+  "_id": "Cz9HxaB9w74gDaH9",
+  "_key": "!items!Cz9HxaB9w74gDaH9",
+  "name": "Blueprint: Blast Gloves",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 5200000,
+  "system": {
+    "row": {
+      "id": "ff6554a6-4473-4213-acff-4fc8f1bdfd5c",
+      "name": "Blueprint: Blast Gloves",
+      "cost": 188,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Blast Gloves (Generation 0, proven, encoded, catalog design). Required to build Blast Gloves; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Blast Gloves",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 131,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Blast Gloves"
+    }
+  }
+}

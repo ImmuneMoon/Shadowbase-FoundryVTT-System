@@ -1,0 +1,34 @@
+{
+  "_id": "TmG2x72f8K0XtyUj",
+  "_key": "!items!TmG2x72f8K0XtyUj",
+  "name": "Professional Skill",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "gAzYSLPjIJTF25Cz",
+  "sort": 10900000,
+  "system": {
+    "row": {
+      "name": "Professional Skill",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Average",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Professional Skill"
+    }
+  }
+}

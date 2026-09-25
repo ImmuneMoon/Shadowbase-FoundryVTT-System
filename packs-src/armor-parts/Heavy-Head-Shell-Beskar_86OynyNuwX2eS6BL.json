@@ -1,0 +1,42 @@
+{
+  "_id": "86OynyNuwX2eS6BL",
+  "_key": "!items!86OynyNuwX2eS6BL",
+  "name": "Heavy Head Shell (Beskar)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 1500000,
+  "system": {
+    "row": {
+      "id": "3f92bdd9-02e1-4eba-876f-2dfcc8d957ee",
+      "name": "Heavy Head Shell (Beskar)",
+      "category": "Armor Shell",
+      "cost": 16500,
+      "weight": 5.5,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-heavy-head-beskar",
+      "materialId": "beskar",
+      "notes": "Mandalorian iron. +5 DR vs. energy damage. Medium and Heavy tiers only -- it is not milled thin.",
+      "validSlots": [],
+      "drBonus": 16,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-heavy-head-beskar"
+    }
+  }
+}

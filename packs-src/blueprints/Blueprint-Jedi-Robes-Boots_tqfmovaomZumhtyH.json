@@ -1,0 +1,42 @@
+{
+  "_id": "tqfmovaomZumhtyH",
+  "_key": "!items!tqfmovaomZumhtyH",
+  "name": "Blueprint: Jedi Robes (Boots)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 16200000,
+  "system": {
+    "row": {
+      "id": "57b9ca8f-948e-4b89-95e0-5ebffe7bb87b",
+      "name": "Blueprint: Jedi Robes (Boots)",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Jedi Robes (Boots) (Generation 0, proven, encoded, catalog design). Required to build Jedi Robes (Boots); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Jedi Robes (Boots)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 7.666666666666666,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Jedi Robes (Boots)"
+    }
+  }
+}

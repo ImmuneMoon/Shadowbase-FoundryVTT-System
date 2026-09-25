@@ -1,0 +1,42 @@
+{
+  "_id": "KxAS2d2RQussX2FH",
+  "_key": "!items!KxAS2d2RQussX2FH",
+  "name": "Blueprint: Environmental Suit (Torso)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 6300000,
+  "system": {
+    "row": {
+      "id": "bc31657c-2603-4f56-8bdb-df433ea134e4",
+      "name": "Blueprint: Environmental Suit (Torso)",
+      "cost": 193,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Environmental Suit (Torso) (Generation 0, proven, encoded, catalog design). Required to build Environmental Suit (Torso); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Environmental Suit (Torso)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 182,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Environmental Suit (Torso)"
+    }
+  }
+}

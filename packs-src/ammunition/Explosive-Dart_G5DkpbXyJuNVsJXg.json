@@ -1,0 +1,58 @@
+{
+  "_id": "G5DkpbXyJuNVsJXg",
+  "_key": "!items!G5DkpbXyJuNVsJXg",
+  "name": "Explosive Dart",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "Q5SU8xBIJ2uiJh6y",
+  "sort": 2500000,
+  "system": {
+    "row": {
+      "name": "Explosive Dart",
+      "craftingCategory": "Ammunition",
+      "projectileClass": "special",
+      "type": "Dart Magazine",
+      "maxCharges": 1,
+      "cost": 446,
+      "weight": 0.3,
+      "formula": "2d",
+      "notes": "Area effect surrounding damage.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.15
+        },
+        {
+          "name": "Detonite Compound",
+          "amount": 0.15
+        }
+      ],
+      "id": "6e757873-8d4a-4d64-965a-2eec9a883610",
+      "quantity": 1,
+      "currentCharges": 1,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 446,
+      "baseWeight": 0.3,
+      "containerType": "None",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Explosive Dart"
+    }
+  }
+}

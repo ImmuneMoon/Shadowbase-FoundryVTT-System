@@ -1,0 +1,42 @@
+{
+  "_id": "PaSTGC8h8jXw6WJb",
+  "_key": "!items!PaSTGC8h8jXw6WJb",
+  "name": "Blueprint: Kontarite",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 35900000,
+  "system": {
+    "row": {
+      "id": "7af02c35-e7e9-4a60-ac9e-7d29c58d6aa8",
+      "name": "Blueprint: Kontarite",
+      "cost": 1508,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Kontarite (Generation 0, proven, encoded, catalog design). Required to build Kontarite; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Kontarite",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 13333.333333333332,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Kontarite"
+    }
+  }
+}

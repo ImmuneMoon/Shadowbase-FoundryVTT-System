@@ -1,0 +1,42 @@
+{
+  "_id": "qgFheAWUgeuwgXXx",
+  "_key": "!items!qgFheAWUgeuwgXXx",
+  "name": "Blueprint: Synox Dart",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DvRG95q4QWZQnNFm",
+  "sort": 3800000,
+  "system": {
+    "row": {
+      "id": "ac10cf46-a22d-4649-bc5a-f0f9d8744a90",
+      "name": "Blueprint: Synox Dart",
+      "cost": 353,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Synox Dart (Generation 0, proven, encoded, catalog design). Required to build Synox Dart; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Synox Dart",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1783.111111111111,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Ammunition|Synox Dart"
+    }
+  }
+}

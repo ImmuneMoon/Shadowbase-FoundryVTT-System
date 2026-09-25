@@ -1,0 +1,34 @@
+{
+  "_id": "8DtiuoHCFshw8Y05",
+  "_key": "!items!8DtiuoHCFshw8Y05",
+  "name": "Vow",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "QdWbP3PunGyoJeht",
+  "sort": 19000000,
+  "system": {
+    "row": {
+      "name": "Vow",
+      "points": -5,
+      "level": null,
+      "description": "The character is bound by a solemn promise. This vow can be leveraged by enemies to coerce or control you, or it can simply restrict your options in critical situations. Examples: Never use a Blaster (-5 to -15 points). (Varies).",
+      "category": "Social",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Vow|Social"
+    }
+  }
+}

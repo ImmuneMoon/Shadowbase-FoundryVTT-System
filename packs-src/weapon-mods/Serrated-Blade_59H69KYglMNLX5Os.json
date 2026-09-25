@@ -1,0 +1,42 @@
+{
+  "_id": "59H69KYglMNLX5Os",
+  "_key": "!items!59H69KYglMNLX5Os",
+  "name": "Serrated Blade",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "j5yjPE6V6TAyz6NR",
+  "sort": 4700000,
+  "system": {
+    "row": {
+      "name": "Serrated Blade",
+      "category": "bladeHeadMod",
+      "cost": 200,
+      "weight": -0.15,
+      "notes": "Changes cutting damage to pi+ and can cause a bleeding wound (1 HP/min).",
+      "materials": [
+        {
+          "name": "Mullinine",
+          "amount": 0.1
+        }
+      ],
+      "id": "419a4444-c1e2-478b-b83e-756affb432fe",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Serrated Blade"
+    }
+  }
+}

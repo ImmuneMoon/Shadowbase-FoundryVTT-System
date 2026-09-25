@@ -1,0 +1,20 @@
+{
+  "_id": "g7UVHPh3r2MYv5Oo",
+  "_key": "!folders!g7UVHPh3r2MYv5Oo",
+  "name": "Tools & Electronics",
+  "type": "Item",
+  "folder": "Sh8yC8SuR7f77FkG",
+  "sorting": "a",
+  "sort": 5500000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "path": [
+        "General Equipment",
+        "Tools & Electronics"
+      ]
+    }
+  }
+}

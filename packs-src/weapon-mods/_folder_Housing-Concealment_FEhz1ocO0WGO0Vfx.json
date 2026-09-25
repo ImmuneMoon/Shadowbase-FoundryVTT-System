@@ -1,0 +1,19 @@
+{
+  "_id": "FEhz1ocO0WGO0Vfx",
+  "_key": "!folders!FEhz1ocO0WGO0Vfx",
+  "name": "Housing/Concealment",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 1000000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "path": [
+        "Housing/Concealment"
+      ]
+    }
+  }
+}

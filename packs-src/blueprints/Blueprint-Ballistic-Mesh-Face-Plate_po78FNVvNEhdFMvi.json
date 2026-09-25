@@ -1,0 +1,42 @@
+{
+  "_id": "po78FNVvNEhdFMvi",
+  "_key": "!items!po78FNVvNEhdFMvi",
+  "name": "Blueprint: Ballistic Mesh Face Plate",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 4200000,
+  "system": {
+    "row": {
+      "id": "0f5868dd-69bb-4374-b047-17a8a9fc0b1d",
+      "name": "Blueprint: Ballistic Mesh Face Plate",
+      "cost": 177,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Ballistic Mesh Face Plate (Generation 0, proven, encoded, catalog design). Required to build Ballistic Mesh Face Plate; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Ballistic Mesh Face Plate",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 29,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Ballistic Mesh Face Plate"
+    }
+  }
+}

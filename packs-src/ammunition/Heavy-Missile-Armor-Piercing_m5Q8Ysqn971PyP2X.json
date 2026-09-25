@@ -1,0 +1,57 @@
+{
+  "_id": "m5Q8Ysqn971PyP2X",
+  "_key": "!items!m5Q8Ysqn971PyP2X",
+  "name": "Heavy Missile (Armor-Piercing)",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "qrQnM70omC8gfDQ5",
+  "sort": 2100000,
+  "system": {
+    "row": {
+      "name": "Heavy Missile (Armor-Piercing)",
+      "craftingCategory": "Explosives",
+      "type": "Missile",
+      "maxCharges": 1,
+      "cost": 1660,
+      "weight": 7,
+      "formula": "5d",
+      "notes": "Armor Divisor (2). Features an advanced shaped charge that grants an Armor Divisor of (2). Engineered specifically to crack reinforced blast doors and punch through the hulls of light-medium armored vehicles.",
+      "materials": [
+        {
+          "name": "Hardened Core",
+          "amount": 4
+        },
+        {
+          "name": "Heavy Propellant",
+          "amount": 3
+        }
+      ],
+      "id": "7c199b57-93b5-4c27-b577-1738599b3e3f",
+      "quantity": 1,
+      "currentCharges": 1,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 1660,
+      "baseWeight": 7,
+      "containerType": "None",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Heavy Missile (Armor-Piercing)"
+    }
+  }
+}

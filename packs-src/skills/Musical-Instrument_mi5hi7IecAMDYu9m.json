@@ -1,0 +1,34 @@
+{
+  "_id": "mi5hi7IecAMDYu9m",
+  "_key": "!items!mi5hi7IecAMDYu9m",
+  "name": "Musical Instrument",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "WshyFJKrPydzbiCs",
+  "sort": 9500000,
+  "system": {
+    "row": {
+      "name": "Musical Instrument",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Easy",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Musical Instrument"
+    }
+  }
+}

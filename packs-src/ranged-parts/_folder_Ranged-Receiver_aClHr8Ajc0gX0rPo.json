@@ -1,0 +1,19 @@
+{
+  "_id": "aClHr8Ajc0gX0rPo",
+  "_key": "!folders!aClHr8Ajc0gX0rPo",
+  "name": "Ranged Receiver",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "path": [
+        "Ranged Receiver"
+      ]
+    }
+  }
+}

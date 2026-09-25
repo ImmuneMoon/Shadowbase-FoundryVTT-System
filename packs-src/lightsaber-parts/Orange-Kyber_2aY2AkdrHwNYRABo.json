@@ -1,0 +1,41 @@
+{
+  "_id": "2aY2AkdrHwNYRABo",
+  "_key": "!items!2aY2AkdrHwNYRABo",
+  "name": "Orange Kyber",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "orWVaxdlAjqEWg6h",
+  "sort": 5400000,
+  "system": {
+    "row": {
+      "id": "6b8d5089-2742-4f32-b5de-603ded97860b",
+      "name": "Orange Kyber",
+      "rarity": "Uncommon",
+      "cost": 8000,
+      "weight": 0.2,
+      "baseDamageDice": 5,
+      "baseDamageAdds": 0,
+      "effect": "5d base energy. x1.25 to Force Points. Natural.",
+      "category": "Lightsaber Primary Crystal",
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "5d base energy. x1.25 to Force Points. Natural."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:orange-kyber"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "_id": "JNkRuEE7JImOKwjH",
+  "_key": "!items!JNkRuEE7JImOKwjH",
+  "name": "Green (Synthetic) Kyber",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "orWVaxdlAjqEWg6h",
+  "sort": 5200000,
+  "system": {
+    "row": {
+      "id": "05183da4-654c-4ac9-99e0-4285395f9c0e",
+      "name": "Green (Synthetic) Kyber",
+      "rarity": "Uncommon",
+      "cost": 8000,
+      "weight": 0.2,
+      "baseDamageDice": 5,
+      "baseDamageAdds": 3,
+      "effect": "5d+3 base energy. Crafted via Light Side meditation and geological compressor (24-96 hours).",
+      "category": "Lightsaber Primary Crystal",
+      "isSynthetic": true,
+      "materials": [
+        {
+          "name": "Carbon Substrate",
+          "amount": 0.2
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "5d+3 base energy. Crafted via Light Side meditation and geological compressor (24-96 hours)."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:green-synth-kyber"
+    }
+  }
+}

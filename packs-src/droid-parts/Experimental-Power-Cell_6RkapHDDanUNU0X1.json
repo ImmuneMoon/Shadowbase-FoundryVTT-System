@@ -1,0 +1,39 @@
+{
+  "_id": "6RkapHDDanUNU0X1",
+  "_key": "!items!6RkapHDDanUNU0X1",
+  "name": "Experimental Power Cell",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "eikPTuqcJ0Ng3zJf",
+  "sort": 4000000,
+  "system": {
+    "row": {
+      "id": "04886161-e2f0-4725-acba-bedb10b44819",
+      "name": "Experimental Power Cell",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Power Core",
+      "cost": 7800,
+      "weight": 15,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "iso-5-core",
+      "description": "Base capacity to 500 PP."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "iso-5-core"
+    }
+  }
+}

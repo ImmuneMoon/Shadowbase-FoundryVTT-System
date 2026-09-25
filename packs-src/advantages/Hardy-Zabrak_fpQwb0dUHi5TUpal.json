@@ -1,0 +1,33 @@
+{
+  "_id": "fpQwb0dUHi5TUpal",
+  "_key": "!items!fpQwb0dUHi5TUpal",
+  "name": "Hardy (Zabrak)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "RdM67Srk6HMq7Ns7",
+  "sort": 7500000,
+  "system": {
+    "row": {
+      "name": "Hardy (Zabrak)",
+      "points": 0,
+      "description": "Zabraks are known for their resilience and spirit. They gain +1 to HT. Allows them to endure more punishment, whether on the battlefield or in a harsh environment.",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Hardy (Zabrak)"
+    }
+  }
+}

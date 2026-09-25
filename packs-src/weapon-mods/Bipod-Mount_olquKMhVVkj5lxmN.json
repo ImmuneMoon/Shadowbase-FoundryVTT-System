@@ -1,0 +1,43 @@
+{
+  "_id": "olquKMhVVkj5lxmN",
+  "_key": "!items!olquKMhVVkj5lxmN",
+  "name": "Bipod Mount",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "RVWiXn8XomUZ0ki2",
+  "sort": 700000,
+  "system": {
+    "row": {
+      "name": "Bipod Mount",
+      "category": "Stock/Chassis",
+      "cost": 300,
+      "weight": 2,
+      "notes": "Provides +2 Accuracy for shots Aimed for at least 2 seconds while prone or braced.",
+      "accuracyBonus": 2,
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 2
+        }
+      ],
+      "id": "e9cb94e1-19e6-44d1-9cf7-b07012f5ec82",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Bipod Mount"
+    }
+  }
+}

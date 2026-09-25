@@ -1,0 +1,42 @@
+{
+  "_id": "FEGs4LhHQ32vvwwj",
+  "_key": "!items!FEGs4LhHQ32vvwwj",
+  "name": "Blueprint: Silver Kyber",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 38100000,
+  "system": {
+    "row": {
+      "id": "3b81359d-3b37-417d-9e91-a72a99158b4a",
+      "name": "Blueprint: Silver Kyber",
+      "cost": 3508,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Silver Kyber (Generation 0, proven, encoded, catalog design). Required to build Silver Kyber; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Silver Kyber",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 33333.33333333333,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Silver Kyber"
+    }
+  }
+}

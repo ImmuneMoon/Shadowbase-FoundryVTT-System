@@ -1,0 +1,56 @@
+{{!-- templates/items/trait-main.hbs - an advantage / disadvantage / quirk (advantages-section.tsx:125-222): the level
+     ladder or the points, Points (Calculated), the library dossier, the specifier prompt, the modifier bag as badges.
+     Context: main (trait.mjs), row, editable, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--trait {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <div class="sb-item-grid">
+      {{#if main.hasLevels}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Trait.Level"}}</span>
+        <select class="sb-select" name="level" {{disabled (not editable)}}>
+          {{#each main.levels}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+        </select>
+      </label>
+      {{else}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Trait.Points"}}</span>
+        <input type="number" class="sb-input" name="system.row.points" value="{{main.points}}" data-dtype="Number" step="1" {{disabled (not editable)}}>
+      </label>
+      {{/if}}
+      <label class="sb-field" title="{{localize "SHADOWBASE.Sheet.Abilities.BaselineHint"}}"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Trait.BaselinePoints"}}</span>
+        <input type="number" class="sb-input" name="system.row.baselinePoints" value="{{main.baselinePoints}}" data-dtype="Number" step="1" {{disabled (not editable)}}>
+      </label>
+      <div class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Abilities.PointsCalculated"}}</span>
+        <output class="sb-input sb-input--calc">{{#if main.budgetGrant}}0 {{localize "SHADOWBASE.Sheet.Abilities.GrantsBudget" n=main.budgetGrant}}{{else}}{{main.effective}}{{/if}}</output>
+      </div>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Trait.Category"}}</span>
+        <input type="text" class="sb-input" name="system.row.category" value="{{main.category}}" {{disabled (not editable)}}>
+      </label>
+    </div>
+    <div class="sb-hrow sb-hrow--tight sb-item__badges">
+      {{#if main.granted}}<span class="sb-badge sb-badge-secondary">{{localize "SHADOWBASE.Sheet.Abilities.Baseline" n=main.baselinePoints}}</span>{{/if}}
+      {{#if main.fromSpecies}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Item.Trait.FromSpecies"}}</span>{{/if}}
+      {{#if main.fromDroidBaseline}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Item.Trait.FromDroidBaseline"}}</span>{{/if}}
+      {{#if main.fromMissingExtremity}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Item.Trait.FromMissingExtremity"}}</span>{{/if}}
+      {{#if main.fromCyberneticHardware}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Item.Trait.FromCyberneticHardware"}}</span>{{/if}}
+      {{#if main.inLibrary}}<span class="sb-badge sb-badge-outline sb-badge-accent">{{localize "SHADOWBASE.Item.Trait.InLibrary"}}</span>{{else}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Item.Trait.Custom"}}</span>{{/if}}
+      {{#if main.quirkOverLimit}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Item.Trait.QuirkLimit" n=main.quirkCount max=main.quirkLimit}}</span>{{/if}}
+    </div>
+  </div>
+  {{#if main.specifierPrompt}}
+  <div class="sb-item-section sb-item-section--callout">
+    <p class="sb-text-xs">{{main.specifierPrompt}}</p>
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="apply-specifier" {{disabled (not editable)}}><i class="{{sbIcon 'edit'}}"></i> {{localize "SHADOWBASE.Item.Trait.Specify"}}</button>
+  </div>
+  {{/if}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Item.Trait.Modifiers"}}</h4>
+    {{#if main.modifiers.length}}{{> "shadowbase.badges" badges=main.modifiers}}{{else}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Trait.NoModifiers"}}</p>{{/if}}
+    {{#if main.hasBag}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Trait.StoredBagNote"}}</p>{{/if}}
+  </div>
+  {{#if main.libraryDescription}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Sheet.Abilities.LibraryDossier"}}</h4>
+    <p class="sb-dossier">{{main.libraryDescription}}</p>
+  </div>
+  {{/if}}
+  {{#if main.specialNote}}<p class="sb-notice sb-notice--warn">{{main.specialNote}}</p>{{/if}}
+</section>

@@ -1,0 +1,34 @@
+{
+  "_id": "VNMaKo5wiVlqAPYU",
+  "_key": "!items!VNMaKo5wiVlqAPYU",
+  "name": "Criminology",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "gAzYSLPjIJTF25Cz",
+  "sort": 3200000,
+  "system": {
+    "row": {
+      "name": "Criminology",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Criminology"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_id": "lE74Z7HbYJEdglgg",
+  "_key": "!items!lE74Z7HbYJEdglgg",
+  "name": "Durasteel Heavy Bludgeon",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "tS9seYVcjKTzsj6l",
+  "sort": 1200000,
+  "system": {
+    "row": {
+      "id": "3a95da1b-0974-47a4-9dce-1969b76d0987",
+      "name": "Durasteel Heavy Bludgeon",
+      "category": "Melee Head",
+      "cost": 246,
+      "weight": 4.9,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "heavy-bludgeon",
+      "materialId": "durasteel",
+      "notes": "Unbalanced.",
+      "effect": "Unbalanced.",
+      "energyResBonus": 0,
+      "volume": 0.01,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "part:heavy-bludgeon"
+    }
+  }
+}

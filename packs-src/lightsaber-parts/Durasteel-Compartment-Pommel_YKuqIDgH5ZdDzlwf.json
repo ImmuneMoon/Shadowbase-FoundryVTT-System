@@ -1,0 +1,42 @@
+{
+  "_id": "YKuqIDgH5ZdDzlwf",
+  "_key": "!items!YKuqIDgH5ZdDzlwf",
+  "name": "Durasteel Compartment Pommel",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "JewRbDqNijhteDDW",
+  "sort": 1500000,
+  "system": {
+    "row": {
+      "name": "Durasteel Compartment Pommel",
+      "category": "Pommel Part",
+      "effect": "Holds one tiny item; -4 to Search.",
+      "weight": 0.245,
+      "cost": 7,
+      "id": "b645b6f3-cdf6-474c-b16e-ebb446d1cb13",
+      "partId": "hidden-pommel",
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "materialId": "durasteel",
+      "wrapId": null,
+      "volume": 0.0005,
+      "density": 490
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "hilt:hidden-pommel"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{{!-- templates/hud/status.hbs - the Status tab (roller-window.tsx TabsContent "status"): Resource Pools
+     (resource-trackers.tsx ResourcePoolsGrid compact; inputs bound to the actor's own current-pool
+     fields, blank = full), the Active Effects hub (StatusEffectsHub), the Dodge / Move / Encumbrance /
+     Running Jump tiles (sb-stat-tile, styles/components.css), and the Anatomical DR table with the
+     Tactical Damage Processor inline (hit-location-section.tsx compact table + its dialog as a form).
+     Context: #statusContext. The root is a submitOnChange form: every button is type=button. --}}
+<section class="tab sb-hud__tab sb-hud__tab--status {{tab.cssClass}}" data-tab="status" data-group="primary">
+{{#if engineOk}}
+{{#with status}}
+  <details class="sb-section sb-hud-pools-section" open>
+    <summary class="sb-section__summary"><span class="sb-section__title sb-hud-pools__title"><i class="fa-solid fa-heart-pulse"></i> {{localize "SHADOWBASE.Hud.ResourcePools"}}</span><span class="sb-section__after"><button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-btn-xs" data-action="reset-all-pools" title="{{localize 'SHADOWBASE.Hud.ResetAllPools'}}"><i class="fa-solid fa-rotate-left"></i></button></span><i class="sb-section__chevron fa-solid fa-chevron-down"></i></summary>
+    <div class="sb-section__body">
+      <div class="sb-hud-pools{{#if isDroid}} sb-hud-pools--droid{{/if}}">
+        {{#each pools}}
+        <div class="sb-hud-pool sb-hud-pool--{{this.key}} {{this.tone}}">
+          <button type="button" class="sb-hud-pool__reset" data-action="reset-pool" data-pool="{{this.key}}" title="{{localize 'SHADOWBASE.Hud.ResetPool' pool=this.label}}"><i class="{{this.icon}}"></i></button>
+          <label class="sb-hud-pool__label" for="{{../../partId}}-pool-{{this.key}}">{{this.label}}</label>
+          <input type="number" class="sb-input sb-hud-pool__input" id="{{../../partId}}-pool-{{this.key}}" name="{{this.field}}" data-dtype="Number" step="1" value="{{this.value}}" placeholder="{{this.max}}" aria-label="{{localize 'SHADOWBASE.Hud.CurrentPool' pool=this.label}}">
+          <span class="sb-hud-pool__max">/ {{this.max}}</span>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </details>
+
+  <div class="sb-hud-effects">
+    <div class="sb-hud-effects__head">
+      <h4 class="sb-hud-effects__title"><i class="fa-solid fa-heart-pulse"></i> {{localize "SHADOWBASE.Hud.ActiveEffects"}}</h4>
+      <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="add-effect"><i class="fa-solid fa-circle-plus"></i> {{localize "SHADOWBASE.Hud.AddCustom"}}</button>
+    </div>
+    {{#each effects}}
+    <div class="sb-hud-effect sb-hud-effect--{{this.type}}{{#if this.isGear}} is-gear{{/if}}" data-effect-id="{{this.id}}">
+      <div class="sb-hud-effect__head">
+        <span class="sb-hud-effect__name">{{this.name}}</span>
+        <div class="sb-hud-effect__meta">
+          <span class="sb-badge sb-badge-outline sb-hud__tiny sb-hud-effect__source">{{this.source}}</span>
+          {{#if this.duration}}<span class="sb-hud-effect__duration"><i class="fa-solid fa-hourglass-half"></i> {{this.duration}}</span>{{/if}}
+        </div>
+      </div>
+      {{#if this.description}}<p class="sb-hud-effect__description">{{this.description}}</p>{{/if}}
+      <div class="sb-hud-effect__badges">
+        {{#each this.badges}}<span class="sb-badge sb-badge-outline sb-hud__channel {{#if this.positive}}sb-badge--pos{{else}}sb-badge--neg{{/if}}">{{this.text}}</span>{{/each}}
+        {{#if this.canRecoverEp}}<button type="button" class="sb-btn sb-btn-outline sb-btn-xs is-green sb-hud-effect__recover" data-action="recover-ep" data-effect-id="{{this.id}}" title="{{localize 'SHADOWBASE.Hud.RecoverEpTitle'}}"><i class="fa-solid fa-battery-half"></i> {{localize "SHADOWBASE.Hud.RecoverEp"}}</button>{{/if}}
+      </div>
+      {{#if this.hasPhase}}
+      <div class="sb-hud-effect__phase">
+        <span class="sb-hud-effect__phase-line">{{this.phaseLine}} — {{localize "SHADOWBASE.Hud.NextPhase"}}: <strong>{{this.nextPhase}}</strong></span>
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-xs is-accent" data-action="advance-phase" data-effect-id="{{this.id}}"><i class="fa-solid fa-arrow-right"></i> {{localize "SHADOWBASE.Hud.Advance"}}</button>
+      </div>
+      {{/if}}
+      {{#if this.canDismiss}}<button type="button" class="sb-hud-effect__dismiss" data-action="dismiss-effect" data-effect-id="{{this.id}}" title="{{localize 'SHADOWBASE.Hud.DismissEffect'}}"><i class="fa-solid fa-xmark"></i></button>{{/if}}
+    </div>
+    {{/each}}
+    {{#if (not hasEffects)}}<p class="sb-hud__empty sb-hud__empty--dashed">{{localize "SHADOWBASE.Hud.NoEffects"}}</p>{{/if}}
+  </div>
+
+  <div class="sb-hud-tiles">
+    <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Roll.Dodge"}}</span><span class="sb-stat-tile__value{{#if (not tiles.dodgeAvailable)}} sb-stat-tile__value--na{{/if}}">{{tiles.dodge}}</span></div>
+    <div class="sb-stat-tile"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Hud.Move"}}</span><span class="sb-stat-tile__value">{{tiles.move}}</span></div>
+    <div class="sb-stat-tile sb-stat-tile--wide"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Hud.Encumbrance"}}</span><span class="sb-stat-tile__value">{{tiles.encumbrance}}</span></div>
+    <div class="sb-stat-tile sb-stat-tile--wide"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Hud.RunningJump"}}</span><span class="sb-stat-tile__value">{{tiles.runningJump}} {{localize "SHADOWBASE.Hud.Yards"}}</span></div>
+  </div>
+
+  <div class="sb-hud-anatomy">
+    <h4 class="sb-hud-effects__title"><i class="fa-solid fa-shield-halved"></i> {{anatomyTitle}}</h4>
+    <div class="sb-table-wrap sb-hud-anatomy__wrap">
+      <table class="sb-table sb-table--dense sb-hud-anatomy__table">
+        <thead><tr><th>{{localize "SHADOWBASE.Hud.Location"}}</th><th class="is-center">{{localize "SHADOWBASE.Hud.Tgt"}}</th><th class="is-center">{{localize "SHADOWBASE.Hud.DR"}}</th><th class="is-right">{{localize "SHADOWBASE.Hud.Status"}}</th></tr></thead>
+        <tbody>
+          {{#each locations}}
+          <tr class="sb-hud-anatomy__row{{#if this.selected}} is-selected{{/if}}" data-action="select-location" data-location-id="{{this.id}}" title="{{localize 'SHADOWBASE.Hud.OpenProcessor' location=this.name}}">
+            <td class="sb-hud-anatomy__name"><i class="fa-solid {{#if this.isOrganic}}fa-droplet is-organic{{else}}fa-bolt is-synthetic{{/if}}"></i> {{this.name}}</td>
+            <td class="is-center sb-hud__mono">{{this.target}}</td>
+            <td class="is-center{{#if this.drPositive}} is-green{{else}} is-muted{{/if}}">{{this.dr}}</td>
+            <td class="is-right"><span class="sb-badge sb-hud__tiny {{#if this.healthy}}sb-badge-outline{{else}}sb-badge-destructive{{/if}}">{{this.status}}</span></td>
+          </tr>
+          {{/each}}
+          {{#if (not hasLocations)}}<tr><td colspan="4" class="sb-hud__empty">{{localize "SHADOWBASE.Hud.NoAnatomy"}}</td></tr>{{/if}}
+        </tbody>
+      </table>
+    </div>
+    {{#if processor}}
+    <div class="sb-hud-processor">
+      <h5 class="sb-hud-processor__title"><i class="fa-solid fa-crosshairs"></i> {{localize "SHADOWBASE.Hud.ProcessorTitle" location=processor.name}}</h5>
+      <p class="sb-hud__hint">{{localize "SHADOWBASE.Hud.ProcessorHint"}}</p>
+      <div class="sb-hud-processor__readout">
+        <div class="sb-hud-processor__stat"><span class="sb-hud-processor__stat-label">{{localize "SHADOWBASE.Hud.DefenseDR"}}</span><span class="sb-hud-processor__stat-value is-green">{{processor.dr}}</span></div>
+        <div class="sb-hud-processor__stat"><span class="sb-hud-processor__stat-label">{{localize "SHADOWBASE.Hud.Structure"}}</span><span class="sb-hud-processor__stat-value sb-hud-processor__stat-value--small">{{processor.structure}}</span></div>
+      </div>
+      <div class="sb-hud__grid sb-hud__grid--2">
+        <label class="sb-hud__field"><span>{{localize "SHADOWBASE.Hud.IncomingDamage"}}</span><input type="number" class="sb-input sb-hud-processor__amount" name="hud.damage.amount" data-dtype="Number" min="0" step="1" value="{{processor.amount}}"></label>
+        <label class="sb-hud__field"><span>{{localize "SHADOWBASE.Hud.DamageType"}}</span><select class="sb-input sb-select sb-hud-processor__type" name="hud.damage.damageType">{{#each processor.types}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select></label>
+      </div>
+      <div class="sb-hud-processor__flags">
+        <label class="sb-hud__check"><input type="checkbox" name="hud.damage.isLightsaber" {{#if processor.isLightsaber}}checked{{/if}}> <i class="fa-solid fa-fire is-amber"></i> {{localize "SHADOWBASE.Hud.Cauterized"}}</label>
+        <label class="sb-hud__check"><input type="checkbox" name="hud.damage.isExplosive" {{#if processor.isExplosive}}checked{{/if}}> <i class="fa-solid fa-bomb is-red"></i> {{localize "SHADOWBASE.Hud.Explosive"}}</label>
+        <label class="sb-hud__field sb-hud__field--inline sb-hud__field--divisor"><span>{{localize "SHADOWBASE.Hud.ArmorDivisor"}}</span><input type="number" class="sb-input" name="hud.damage.armorDivisor" data-dtype="Number" min="1" step="1" value="{{processor.armorDivisor}}" placeholder="—"></label>
+      </div>
+      {{#each processor.notes}}<p class="sb-hud-processor__note"><i class="fa-solid fa-circle-info"></i> {{this}}</p>{{/each}}
+      <div class="sb-hud-processor__injury">
+        <span class="sb-hud-processor__injury-label">{{localize "SHADOWBASE.Hud.FinalInjury"}}</span>
+        <span class="sb-hud-processor__injury-value">{{processor.finalInjury}} <span class="sb-hud-processor__injury-pool">{{processor.pool}}</span></span>
+      </div>
+      {{#if processor.isMajorWound}}<p class="sb-hud-processor__warn">{{localize "SHADOWBASE.Hud.MajorWoundPreview"}}</p>{{/if}}
+      {{#if processor.isSevering}}<p class="sb-hud-processor__warn">{{localize "SHADOWBASE.Hud.SeveringPreview"}}</p>{{else}}{{#if processor.isCrippling}}<p class="sb-hud-processor__warn">{{localize "SHADOWBASE.Hud.CripplingPreview"}}</p>{{/if}}{{/if}}
+      <div class="sb-hud__btn-row">
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="abort-damage">{{localize "SHADOWBASE.Hud.Abort"}}</button>
+        <button type="button" class="sb-btn sb-btn-destructive sb-btn-sm sb-hud__grow sb-hud-processor__apply" data-action="apply-damage" {{#if (not processor.amount)}}disabled{{/if}}><i class="fa-solid fa-burst"></i> {{localize "SHADOWBASE.Hud.ApplyWounds"}}</button>
+      </div>
+    </div>
+    {{/if}}
+    {{#if ledger}}
+    <div class="sb-hud-ledger">
+      <p class="sb-hud-ledger__title">{{ledger.title}}</p>
+      <ul class="sb-hud-ledger__lines">{{#each ledger.lines}}<li>{{this}}</li>{{/each}}</ul>
+      {{#if ledger.prompts.length}}<ul class="sb-hud-ledger__prompts">{{#each ledger.prompts}}<li><i class="fa-solid fa-dice"></i> {{this}}</li>{{/each}}</ul>{{/if}}
+    </div>
+    {{/if}}
+  </div>
+{{/with}}
+{{else}}
+  <p class="sb-hud__error">{{localize "SHADOWBASE.Hud.EngineUnavailable"}}</p>
+{{/if}}
+</section>

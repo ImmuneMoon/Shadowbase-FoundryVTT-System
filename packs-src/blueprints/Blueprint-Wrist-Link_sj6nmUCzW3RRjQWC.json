@@ -1,0 +1,42 @@
+{
+  "_id": "sj6nmUCzW3RRjQWC",
+  "_key": "!items!sj6nmUCzW3RRjQWC",
+  "name": "Blueprint: Wrist-Link",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "muygUURylK1A9j1R",
+  "sort": 20200000,
+  "system": {
+    "row": {
+      "id": "d577148a-e42b-4931-9985-4aab062cbf7c",
+      "name": "Blueprint: Wrist-Link",
+      "cost": 317,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Wrist-Link (Generation 0, proven, encoded, catalog design). Required to build Wrist-Link; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Wrist-Link",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1425,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Communication & Data|Wrist-Link"
+    }
+  }
+}

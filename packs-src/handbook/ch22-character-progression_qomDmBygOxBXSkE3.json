@@ -1,0 +1,263 @@
+{
+  "_id": "qomDmBygOxBXSkE3",
+  "_key": "!journal!qomDmBygOxBXSkE3",
+  "name": "Chapter 22: Character Progression & Improvement",
+  "pages": [
+    {
+      "_id": "3guSjXMslXLUmhNb",
+      "_key": "!journal.pages!qomDmBygOxBXSkE3.3guSjXMslXLUmhNb",
+      "name": "Overview",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Character progression is a fundamental aspect of any roleplaying game, allowing your heroes to grow in power, skill, and experience as they navigate the challenges of the Mandalorian Wars. In Shadows of The Mandalorian War, characters advance by earning and spending Character Points (CP), reflecting their learning and personal development.</p>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch22-character-progression",
+            "heading": null,
+            "overview": true,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "TAvQjpPmmqqKTMeX",
+      "_key": "!journal.pages!qomDmBygOxBXSkE3.TAvQjpPmmqqKTMeX",
+      "name": "Earning Character Points",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The Game Master (GM) awards Character Points (CP) at the end of each game session or after significant plot arcs. Typical awards include:</p>\n<ul><li><strong>2-3 CP per session:</strong> For basic participation and progress.</li><li><strong>1-5+ CP for achieving goals:</strong> For completing major mission objectives, defeating significant enemies, uncovering important lore, or making difficult moral choices.</li><li><strong>Bonus CP:</strong> For exceptional roleplaying, brilliant tactical decisions, overcoming major personal challenges, or making sacrifices for the greater good (or a compelling evil).</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch22-character-progression",
+            "heading": "Earning Character Points",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "CzNBgiiwAy1e1lWG",
+      "_key": "!journal.pages!qomDmBygOxBXSkE3.CzNBgiiwAy1e1lWG",
+      "name": "Spending Character Points",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Character Points are spent to improve a character’s abilities. All improvements require GM approval.</p>\n<ul><li><strong>Raising Attributes:</strong> Increasing your core attributes (ST, DX, IQ, HT) is generally the most expensive way to spend CP, but provides broad benefits.</li><li><strong>Raising Secondary Characteristics:</strong> Improving HP, EP, Basic Speed, or Basic Move.</li><li><strong>Improving Force Points:</strong> Increasing your maximum Force Points, allowing for greater capacity to use Force powers.</li><li><strong>Learning or Improving Skills:</strong> Investing in new skills or increasing proficiency in existing ones.</li><li><strong>Acquiring Advantages:</strong> Gaining new advantages that fit your character’s development. Some advantages may require specific narrative events to unlock (e.g., Force Training).</li><li><strong>Reducing/Removing Disadvantages:</strong> With GM approval, characters can spend CP to reduce the severity of or even remove disadvantages, often after significant character arcs or personal growth.</li><li><strong>Learning New Force Powers:</strong> Acquiring new Force powers or increasing tiers in existing ones (refer to @UUID[Compendium.shadowbase.handbook.JournalEntry.cvf2pB6RpI78AvBt]{Chapter 8}).</li><li><strong>Learning New Combat Maneuvers/Lightsaber Forms:</strong> Unlocking new combat techniques or mastering higher tiers (refer to @UUID[Compendium.shadowbase.handbook.JournalEntry.BUSu7dFLs9IzOvPY]{Chapter 9}).</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch22-character-progression",
+            "heading": "Spending Character Points",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "rADops9NWYPL9pvS",
+      "_key": "!journal.pages!qomDmBygOxBXSkE3.rADops9NWYPL9pvS",
+      "name": "Cost to Improve Attributes",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The cost to raise an attribute depends on which attribute it is, not on how high it already is.</p>\n<div class=\"sb-handbook-table\" data-table-id=\"ch22-character-progression_table_0\"><table><caption>Cost to Improve Attributes</caption><thead><tr><th>Attribute</th><th>CP Cost per Level</th></tr></thead><tbody><tr><td>ST</td><td>10 CP</td></tr><tr><td>DX</td><td>20 CP</td></tr><tr><td>IQ</td><td>20 CP</td></tr><tr><td>HT</td><td>10 CP</td></tr></tbody></table></div>\n<p>This table is reiterated from @UUID[Compendium.shadowbase.handbook.JournalEntry.fZowiGenjFSpf9el]{Chapter 2} for convenience; where the two differ, @UUID[Compendium.shadowbase.handbook.JournalEntry.fZowiGenjFSpf9el]{Chapter 2} governs. The cost is flat per level -- raising DX from 14 to 15 costs the same 20 CP as raising it from 10 to 11.</p>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch22-character-progression",
+            "heading": "Cost to Improve Attributes",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "spZDCXQPMpji1sKS",
+      "_key": "!journal.pages!qomDmBygOxBXSkE3.spZDCXQPMpji1sKS",
+      "name": "Cost to Improve Secondary Characteristics",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>These characteristics have fixed costs per level.</p>\n<div class=\"sb-handbook-table\" data-table-id=\"ch22-character-progression_table_1\"><table><caption>Cost to Improve Secondary Characteristics</caption><thead><tr><th>Secondary Characteristic</th><th>CP Cost per Level</th></tr></thead><tbody><tr><td>Hit Points (HP)</td><td>1 CP</td></tr><tr><td>Endurance Points (EP)</td><td>1 CP</td></tr><tr><td>Basic Speed</td><td>20 CP</td></tr><tr><td>Basic Move</td><td>5 CP</td></tr><tr><td>Force Points (FP)</td><td>3 CP</td></tr></tbody></table></div>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 500000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch22-character-progression",
+            "heading": "Cost to Improve Secondary Characteristics",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "RqQtb0Qb1DvBTpuB",
+      "_key": "!journal.pages!qomDmBygOxBXSkE3.RqQtb0Qb1DvBTpuB",
+      "name": "Cost to Learn or Improve Skills",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The cost to learn or improve a skill depends on its difficulty and on the level you want relative to its controlling attribute. This table is reiterated from @UUID[Compendium.shadowbase.handbook.JournalEntry.aHFgSZUXNODEwQd2]{Chapter 3} for convenience; where the two differ, @UUID[Compendium.shadowbase.handbook.JournalEntry.aHFgSZUXNODEwQd2]{Chapter 3} governs.</p>\n<div class=\"sb-handbook-table\" data-table-id=\"ch22-character-progression_table_2\"><table><caption>Cost to Learn or Improve Skills</caption><thead><tr><th>Skill Difficulty</th><th>Total CP Invested, by Level Relative to Attribute</th></tr></thead><tbody><tr><td>Easy</td><td>Attribute +0 = 1; +1 = 2; +2 = 3; +3 = 4; each further +1 = +3</td></tr><tr><td>Average</td><td>Attribute -1 = 1; +0 = 2; +1 = 3; +2 = 4; +3 = 6; each further +1 = +3</td></tr><tr><td>Hard</td><td>Attribute -2 = 1; -1 = 2; +0 = 4; +1 = 6; +2 = 8; +3 = 10; each further +1 = +3</td></tr><tr><td>Very Hard</td><td>Attribute -3 = 1; -2 = 2; -1 = 4; +0 = 6; +1 = 8; +2 = 10; +3 = 12; each further +1 = +3</td></tr></tbody></table></div>\n<p><strong>Reading the Table:</strong> A skill is bought at a level, not level by level. The number shown is the total CP invested to hold the skill at that level; to improve a skill you already have, pay the difference between the two totals.</p>\n<p><strong>Minimum Levels:</strong> The cheapest level listed for each difficulty is the lowest a skill can be taken at and always costs 1 CP -- Attribute +0 for Easy, Attribute -1 for Average, Attribute -2 for Hard, Attribute -3 for Very Hard -- and there is no level between that and the untrained default.</p>\n<p>Example: a character with DX 12 holding Stealth (DX/Average) at 11 (DX-1, 1 CP invested) raises it to 12 (DX+0, 2 CP total) by spending 1 more CP, and on to 15 (DX+3, 6 CP total) for 4 CP more.</p>\n<p><strong>High Levels:</strong> Past Attribute +3, each further level costs 3 CP at every difficulty. Above Attribute +3 the ladder stops climbing steeply and rises by a flat 3 CP a level in every difficulty. That is the row this chapter needs most: improving a skill a character already holds well is the ordinary business of progression, and it is the one part of the table a reader reaches with points already spent.</p>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 600000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch22-character-progression",
+            "heading": "Cost to Learn or Improve Skills",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "jMMzEIPbjD0Qlv9o",
+      "_key": "!journal.pages!qomDmBygOxBXSkE3.jMMzEIPbjD0Qlv9o",
+      "name": "Force Point Advancement",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Force Points (FP) represent a Force-user’s connection to and mastery over the Force. While characters begin with an initial FP pool, they can increase their maximum FP over time through dedicated training, meditation, or by unlocking greater potential.</p>\n<ul><li><strong>Spending Character Points (CP) to Increase FP:</strong> Characters can spend CP to permanently increase their maximum FP pool. The cost is a flat rate per Force Point.</li></ul>\n<div class=\"sb-handbook-table\" data-table-id=\"ch22-character-progression_table_3\"><table><caption>Force Point Advancement</caption><thead><tr><th>Increase in Max FP</th><th>CP Cost</th></tr></thead><tbody><tr><td>+1 FP</td><td>3 CP</td></tr></tbody></table></div>\n<ul><li><strong>Force Training Advantage:</strong> Some levels of the Force Training advantage (<strong>@UUID[Compendium.shadowbase.handbook.JournalEntry.2I6Edey1uD2bgyES]{Chapter 4}</strong>) might grant a permanent increase to maximum FP, as a bonus to the other benefits of that advantage (GM’s discretion).</li><li><strong>Force Potential and Limits:</strong> A character’s starting FP is equal to their <strong>Will score</strong>, as noted in @UUID[Compendium.shadowbase.handbook.JournalEntry.cvf2pB6RpI78AvBt]{Chapter 8}. This value is the baseline for their maximum FP unless modified by advantages or direct CP expenditure. In rare cases, a character might be able to temporarily exceed their normal maximum FP through extreme effort, a powerful Force nexus, or a temporary advantage. This should be a dramatic, story-driven event, and the GM should carefully consider the consequences (e.g., backlash, Dark Side temptation).</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 700000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch22-character-progression",
+            "heading": "Force Point Advancement",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    }
+  ],
+  "categories": [],
+  "folder": null,
+  "sort": 2200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "handbook",
+      "key": "ch22-character-progression",
+      "handbook": {
+        "chapterId": "ch22-character-progression",
+        "generatedAt": "2026-09-19T09:02:30.342Z",
+        "headings": 6,
+        "tables": 4
+      }
+    }
+  }
+}

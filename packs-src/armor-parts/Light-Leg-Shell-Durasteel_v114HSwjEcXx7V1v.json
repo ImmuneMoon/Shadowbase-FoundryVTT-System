@@ -1,0 +1,42 @@
+{
+  "_id": "v114HSwjEcXx7V1v",
+  "_key": "!items!v114HSwjEcXx7V1v",
+  "name": "Light Leg Shell (Durasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 3400000,
+  "system": {
+    "row": {
+      "id": "3adce148-6fa4-42df-86c8-7a822edfbd25",
+      "name": "Light Leg Shell (Durasteel)",
+      "category": "Armor Shell",
+      "cost": 201,
+      "weight": 4.02,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-light-legs-durasteel",
+      "materialId": "durasteel",
+      "notes": "Standard building alloy. Baseline stats.",
+      "validSlots": [],
+      "drBonus": 4,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-light-legs-durasteel"
+    }
+  }
+}

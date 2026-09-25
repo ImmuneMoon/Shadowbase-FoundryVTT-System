@@ -1,0 +1,87 @@
+{
+  "_id": "mGddL6fyhDVjo8iA",
+  "_key": "!items!mGddL6fyhDVjo8iA",
+  "name": "Psychometry",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "lMudTveYN6LSWH7D",
+  "sort": 3900000,
+  "system": {
+    "row": {
+      "name": "Psychometry",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 2,
+      "effect": "By touching an object with a strong, recent history, you gain vague sensory hints of its past for 1 minute.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Sense (Per/Average)",
+      "category": "Sense Powers",
+      "alignment": "Grey",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Psychometry",
+        "description": "The Force-user can perceive echoes of the past by touching an object or entering a location where strong emotions or significant events have occurred.",
+        "category": "Sense Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 2,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Apprentice",
+        "effect": "By touching an object with a strong, recent history, you gain vague sensory hints of its past for 1 minute."
+      },
+      {
+        "name": "Psychometry",
+        "description": "The Force-user can perceive echoes of the past by touching an object or entering a location where strong emotions or significant events have occurred.",
+        "category": "Sense Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 3,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Adept",
+        "effect": "Gain clearer impressions and specific details from objects with a significant history for up to 5 minutes."
+      },
+      {
+        "name": "Psychometry",
+        "description": "The Force-user can perceive echoes of the past by touching an object or entering a location where strong emotions or significant events have occurred.",
+        "category": "Sense Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 4,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Expert",
+        "effect": "Project your senses into past events you perceive, experiencing them as if present for up to 10 minutes."
+      },
+      {
+        "name": "Psychometry",
+        "description": "The Force-user can perceive echoes of the past by touching an object or entering a location where strong emotions or significant events have occurred.",
+        "category": "Sense Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 5,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Master",
+        "effect": "Witness any event related to a person or location by concentrating on them, even without direct physical contact, for up to 30 minutes."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Psychometry"
+    }
+  }
+}

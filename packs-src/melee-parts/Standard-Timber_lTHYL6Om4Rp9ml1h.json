@@ -1,0 +1,42 @@
+{
+  "_id": "lTHYL6Om4Rp9ml1h",
+  "_key": "!items!lTHYL6Om4Rp9ml1h",
+  "name": "Standard Timber",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "VqX65UQVOs2JpxDL",
+  "sort": 3500000,
+  "system": {
+    "row": {
+      "name": "Standard Timber",
+      "rarity": "Very Common",
+      "cost": 5,
+      "density": 40,
+      "category": "Raw Materials",
+      "subCategory": "Wood",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Generic, low-grade wood used for basic crates and fires.",
+      "id": "294dcfcd-32dc-445c-b477-725a923bdb63",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "material:Standard Timber"
+    }
+  }
+}

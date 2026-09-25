@@ -1,0 +1,42 @@
+{
+  "_id": "gcpcDj2ZlYc3PnWr",
+  "_key": "!items!gcpcDj2ZlYc3PnWr",
+  "name": "Blueprint: Echani Ritual Brand",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 41300000,
+  "system": {
+    "row": {
+      "id": "f64b8dce-b4ef-48e8-bac4-8401c4fd3764",
+      "name": "Blueprint: Echani Ritual Brand",
+      "cost": 192,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Echani Ritual Brand (Generation 0, proven, encoded, catalog design). Required to build Echani Ritual Brand; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Echani Ritual Brand",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 172,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Echani Ritual Brand"
+    }
+  }
+}

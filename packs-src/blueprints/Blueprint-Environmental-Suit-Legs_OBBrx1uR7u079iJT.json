@@ -1,0 +1,42 @@
+{
+  "_id": "OBBrx1uR7u079iJT",
+  "_key": "!items!OBBrx1uR7u079iJT",
+  "name": "Blueprint: Environmental Suit (Legs)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 6200000,
+  "system": {
+    "row": {
+      "id": "9a2ac95c-fda5-4ce3-b6c4-ba6ee69f07b1",
+      "name": "Blueprint: Environmental Suit (Legs)",
+      "cost": 191,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Environmental Suit (Legs) (Generation 0, proven, encoded, catalog design). Required to build Environmental Suit (Legs); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Environmental Suit (Legs)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 167,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Environmental Suit (Legs)"
+    }
+  }
+}

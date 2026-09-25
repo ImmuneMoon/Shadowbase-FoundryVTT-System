@@ -1,0 +1,42 @@
+{
+  "_id": "90HGmg0jApmckgaw",
+  "_key": "!items!90HGmg0jApmckgaw",
+  "name": "Synth-Cloth Lining",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "ngDT5yar8NpPn39m",
+  "sort": 9700000,
+  "system": {
+    "row": {
+      "id": "698f6e5f-24e9-4a6c-97bd-19f4c97e995d",
+      "name": "Synth-Cloth Lining",
+      "category": "Armor Trim",
+      "cost": 2,
+      "weight": 0.06,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "trim-synth-cloth",
+      "materialId": "synth-cloth",
+      "notes": "Optional. Adds no DR - but it has a real weight and cost like everything else in the chapter.",
+      "validSlots": [],
+      "drBonus": null,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "trim-synth-cloth"
+    }
+  }
+}

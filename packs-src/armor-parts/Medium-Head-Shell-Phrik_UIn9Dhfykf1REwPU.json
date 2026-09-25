@@ -1,0 +1,42 @@
+{
+  "_id": "UIn9Dhfykf1REwPU",
+  "_key": "!items!UIn9Dhfykf1REwPU",
+  "name": "Medium Head Shell (Phrik)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 900000,
+  "system": {
+    "row": {
+      "id": "a9c379c3-c55d-4f6a-9c08-5d2ebbb629f9",
+      "name": "Medium Head Shell (Phrik)",
+      "category": "Armor Shell",
+      "cost": 24705,
+      "weight": 2.75,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-medium-head-phrik",
+      "materialId": "phrik",
+      "notes": "Nearly indestructible, highly lightsaber-resistant. Medium and Heavy tiers only -- it is not milled thin.",
+      "validSlots": [],
+      "drBonus": 9,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-medium-head-phrik"
+    }
+  }
+}

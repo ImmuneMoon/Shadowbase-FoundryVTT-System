@@ -1,0 +1,34 @@
+{
+  "_id": "JDZTWtgkGki6J6XC",
+  "_key": "!items!JDZTWtgkGki6J6XC",
+  "name": "Cowardice",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 9500000,
+  "system": {
+    "row": {
+      "name": "Cowardice",
+      "points": -10,
+      "level": null,
+      "description": "You are terrified of physical danger. You must make a self-control roll to face any significant threat and will always seek to escape rather than fight.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Cowardice|Mental"
+    }
+  }
+}

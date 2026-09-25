@@ -1,0 +1,19 @@
+{
+  "_id": "ULHj9CJGOcQtuGSW",
+  "_key": "!folders!ULHj9CJGOcQtuGSW",
+  "name": "Payload / Feed Mechanism",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 800000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "path": [
+        "Payload / Feed Mechanism"
+      ]
+    }
+  }
+}

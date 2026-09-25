@@ -1,0 +1,34 @@
+{
+  "_id": "KqBGncNGyLKxvyN3",
+  "_key": "!items!KqBGncNGyLKxvyN3",
+  "name": "Poison Mine",
+  "type": "explosive",
+  "img": "icons/svg/explosion.svg",
+  "folder": "koMvUxhn5oSa1YB4",
+  "sort": 1200000,
+  "system": {
+    "row": {
+      "baseExplosiveName": "Poison Mine",
+      "quantity": 1,
+      "finalWeight": 3,
+      "finalCost": 1766,
+      "preferredDefaultAttr": "DX",
+      "id": "cabc6223-3d30-4bf2-af8b-c23d3b36da2c"
+    },
+    "source": "customExplosives",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "explosives"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "explosives",
+      "key": "Poison Mine"
+    }
+  }
+}

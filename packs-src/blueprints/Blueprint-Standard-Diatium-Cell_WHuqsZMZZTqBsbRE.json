@@ -1,0 +1,42 @@
+{
+  "_id": "WHuqsZMZZTqBsbRE",
+  "_key": "!items!WHuqsZMZZTqBsbRE",
+  "name": "Blueprint: Standard Diatium Cell",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "KDepxQG1NOlrKZaZ",
+  "sort": 33800000,
+  "system": {
+    "row": {
+      "id": "97738c0f-d22d-4672-ab2d-5044da1bb906",
+      "name": "Blueprint: Standard Diatium Cell",
+      "cost": 183,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Standard Diatium Cell (Generation 0, proven, encoded, catalog design). Required to build Standard Diatium Cell; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Standard Diatium Cell",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 90,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Internal|Standard Diatium Cell"
+    }
+  }
+}

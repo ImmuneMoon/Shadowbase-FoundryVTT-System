@@ -1,0 +1,42 @@
+{
+  "_id": "c1QYrQAdAwWoKqb9",
+  "_key": "!items!c1QYrQAdAwWoKqb9",
+  "name": "Blueprint: Rifle Power Pack",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DvRG95q4QWZQnNFm",
+  "sort": 2300000,
+  "system": {
+    "row": {
+      "id": "6c820b76-4c4b-4254-954d-cb8585c6fcf7",
+      "name": "Blueprint: Rifle Power Pack",
+      "cost": 194,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Rifle Power Pack (Generation 0, proven, encoded, catalog design). Required to build Rifle Power Pack; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Rifle Power Pack",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 198.33333333333334,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Ammunition|Rifle Power Pack"
+    }
+  }
+}

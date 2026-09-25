@@ -1,0 +1,55 @@
+{
+  "_id": "mNUK4N46Xw6WSZz3",
+  "_key": "!items!mNUK4N46Xw6WSZz3",
+  "name": "Shock Emitter",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "7rGdcjDF69anM1Pj",
+  "sort": 10400000,
+  "system": {
+    "row": {
+      "name": "Shock Emitter",
+      "cost": 120,
+      "skill": "Electronics Operation or Electronics Repair",
+      "description": "An electronic component that produces an electrical shock. Needs Computer Programming to function if constructed.",
+      "category": "Utility & Miscellaneous",
+      "weight": 1,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Silicon",
+          "amount": 0.4
+        },
+        {
+          "name": "Durasteel",
+          "amount": 0.4
+        },
+        {
+          "name": "Diatium",
+          "amount": 0.2
+        }
+      ],
+      "requiresSoftware": true,
+      "id": "b7b58b04-7eb4-40b7-81e1-3ea0b1022e5a",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Shock Emitter"
+    }
+  }
+}

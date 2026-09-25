@@ -1,0 +1,19 @@
+{
+  "_id": "ic06auazNKJrut2o",
+  "_key": "!folders!ic06auazNKJrut2o",
+  "name": "Heavy Pistols",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "path": [
+        "Heavy Pistols"
+      ]
+    }
+  }
+}

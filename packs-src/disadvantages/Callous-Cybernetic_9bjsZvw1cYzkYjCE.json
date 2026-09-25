@@ -1,0 +1,34 @@
+{
+  "_id": "9bjsZvw1cYzkYjCE",
+  "_key": "!items!9bjsZvw1cYzkYjCE",
+  "name": "Callous (Cybernetic)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "N9OA5FojtdIRbIeU",
+  "sort": 7800000,
+  "system": {
+    "row": {
+      "name": "Callous (Cybernetic)",
+      "points": -5,
+      "level": null,
+      "description": "You have lost touch with your humanity. Imposes a -2 penalty to Teaching, Leadership, and Diplomacy.",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Callous (Cybernetic)|Cybernetic"
+    }
+  }
+}

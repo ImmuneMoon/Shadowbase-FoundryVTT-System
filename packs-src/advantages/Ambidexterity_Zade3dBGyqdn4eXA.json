@@ -1,0 +1,33 @@
+{
+  "_id": "Zade3dBGyqdn4eXA",
+  "_key": "!items!Zade3dBGyqdn4eXA",
+  "name": "Ambidexterity",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 1100000,
+  "system": {
+    "row": {
+      "name": "Ambidexterity",
+      "points": 5,
+      "description": "You are equally skilled with both hands (or equivalent appendages), suffering no off-hand penalty. Allows for versatile combat, dual-wielding, or multi-tasking under duress, enhancing efficiency regardless of the task's moral alignment.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Ambidexterity"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "fPj5kiKonf0hnbB4",
+  "_key": "!items!fPj5kiKonf0hnbB4",
+  "name": "Visor (Beskar)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "pemnqyPR360SzyYE",
+  "sort": 9500000,
+  "system": {
+    "row": {
+      "id": "ed9f3038-c235-4d46-9e62-dc5864233d3f",
+      "name": "Visor (Beskar)",
+      "category": "Armor Visor",
+      "cost": 5250,
+      "weight": 1.75,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "visor-beskar",
+      "materialId": "beskar",
+      "notes": "Sealed Head Plates only. Face DR equals Head DR and the Piece carries a 1hr Vacuum seal.",
+      "validSlots": [],
+      "drBonus": null,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "visor-beskar"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{{!-- shadowbase.pool - one resource tracker (src/components/character-sheet/components/resource-trackers.tsx
+     ResourceTracker): icon, the current pool (blank = full, placeholder = the max), "/ max", reset.
+     Params: pool ({ key, field, title, short, icon, display, placeholder, max, tone }), compact (bool), editable (bool), pinned (bool). --}}
+<div class="sb-pool sb-pool--{{pool.key}} {{#if compact}}sb-pool--compact{{/if}}" data-sheet-row>
+  {{#unless compact}}<label class="sb-field__label" for="pool-{{pool.key}}">{{pool.title}}</label>{{/unless}}
+  <div class="sb-pool__control">
+    {{#if compact}}
+      <button type="button" class="sb-pool__icon {{#if pool.tone}}sb-pool__icon--{{pool.tone}}{{/if}}" data-action="reset-pool" data-field="{{pool.field}}" title="{{localize "SHADOWBASE.Sheet.Pools.Reset" label=pool.title}}" aria-label="{{localize "SHADOWBASE.Sheet.Pools.Reset" label=pool.title}}"><i class="{{pool.icon}}"></i></button>
+    {{else}}
+      <span class="sb-pool__icon {{#if pool.tone}}sb-pool__icon--{{pool.tone}}{{/if}}"><i class="{{pool.icon}}"></i></span>
+    {{/if}}
+    {{#if pinned}}
+      <span class="sb-input sb-input--calc">{{#if (sbIsNull pool.display)}}{{pool.max}}{{else}}{{pool.display}}{{/if}}</span>
+    {{else}}
+      {{> "shadowbase.qty" id=(sbConcat "pool-" pool.key) name=(sbConcat "system." pool.field) value=pool.display placeholder=pool.placeholder min="" max="" step="1" dtype="Number" disabled=(not editable) cls=(sbOr (and compact "sb-qty--short") "sb-qty--dense") label=(localize "SHADOWBASE.Sheet.Pools.Current" label=pool.title)}}
+    {{/if}}
+    <span class="sb-pool__max">/ {{pool.max}}</span>
+    {{#unless compact}}{{#unless pinned}}
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-btn-sm" data-action="reset-pool" data-field="{{pool.field}}" title="{{localize "SHADOWBASE.Sheet.Pools.Reset" label=pool.title}}" aria-label="{{localize "SHADOWBASE.Sheet.Pools.Reset" label=pool.title}}" {{#unless editable}}disabled{{/unless}}><i class="{{sbIcon 'reset'}}"></i></button>
+    {{/unless}}{{/unless}}
+  </div>
+</div>

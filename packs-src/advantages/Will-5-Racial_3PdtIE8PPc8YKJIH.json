@@ -1,0 +1,33 @@
+{
+  "_id": "3PdtIE8PPc8YKJIH",
+  "_key": "!items!3PdtIE8PPc8YKJIH",
+  "name": "Will +5 (Racial)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "RdM67Srk6HMq7Ns7",
+  "sort": 18200000,
+  "system": {
+    "row": {
+      "name": "Will +5 (Racial)",
+      "points": 0,
+      "description": "Species-based resolve.",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Will +5 (Racial)"
+    }
+  }
+}

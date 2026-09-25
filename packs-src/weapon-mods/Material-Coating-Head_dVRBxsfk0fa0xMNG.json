@@ -1,0 +1,36 @@
+{
+  "_id": "dVRBxsfk0fa0xMNG",
+  "_key": "!items!dVRBxsfk0fa0xMNG",
+  "name": "Material Coating (Head)",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "j5yjPE6V6TAyz6NR",
+  "sort": 5100000,
+  "system": {
+    "row": {
+      "name": "Material Coating (Head)",
+      "category": "bladeHeadMod",
+      "cost": 0,
+      "weight": 0,
+      "notes": "Any material with \"Coating\" suitability. Cost = Weight x Cost Per lb; weight = +0.0002 x Density. Grants that material's own effect (e.g. Reflec registers as \"cold\" to sensors). Requires Armoury (Melee).",
+      "id": "0080df59-1501-43b4-a103-b7743a284a4e",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Material Coating (Head)"
+    }
+  }
+}

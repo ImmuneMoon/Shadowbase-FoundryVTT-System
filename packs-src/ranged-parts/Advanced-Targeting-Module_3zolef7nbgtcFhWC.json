@@ -1,0 +1,46 @@
+{
+  "_id": "3zolef7nbgtcFhWC",
+  "_key": "!items!3zolef7nbgtcFhWC",
+  "name": "Advanced Targeting Module",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "bs6fEOIOLSPvkEJ3",
+  "sort": 5800000,
+  "system": {
+    "row": {
+      "id": "2af89502-8c12-40ef-b46d-cbde763f290e",
+      "name": "Advanced Targeting Module",
+      "category": "Ranged Targeting",
+      "cost": 70,
+      "weight": 0.9,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "advanced-targeting",
+      "materialId": null,
+      "notes": "Military-grade tracking algorithms.",
+      "effect": "Military-grade tracking algorithms.",
+      "energyResBonus": 0,
+      "volume": null,
+      "density": null,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "advanced-targeting"
+    }
+  }
+}

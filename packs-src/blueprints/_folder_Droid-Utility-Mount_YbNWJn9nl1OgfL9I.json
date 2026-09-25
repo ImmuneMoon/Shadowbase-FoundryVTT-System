@@ -1,0 +1,20 @@
+{
+  "_id": "YbNWJn9nl1OgfL9I",
+  "_key": "!folders!YbNWJn9nl1OgfL9I",
+  "name": "Droid Utility Mount",
+  "type": "Item",
+  "folder": "AHUgnqohVTlbyS6h",
+  "sorting": "a",
+  "sort": 2800000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "path": [
+        "Droid Parts",
+        "Droid Utility Mount"
+      ]
+    }
+  }
+}

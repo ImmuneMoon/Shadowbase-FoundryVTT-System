@@ -1,0 +1,65 @@
+{
+  "_id": "hLGqwqTic97wIwO6",
+  "_key": "!items!hLGqwqTic97wIwO6",
+  "name": "Synox Dart",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "Q5SU8xBIJ2uiJh6y",
+  "sort": 3000000,
+  "system": {
+    "row": {
+      "name": "Synox Dart",
+      "craftingCategory": "Ammunition",
+      "projectileClass": "special",
+      "type": "Dart Magazine",
+      "maxCharges": 1,
+      "cost": 1888,
+      "weight": 0.2,
+      "formula": "1d",
+      "notes": "HT-5 or 6d tox Cyclic (1 sec).",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.15
+        },
+        {
+          "name": "Synox",
+          "amount": 0.05
+        }
+      ],
+      "payloadRolls": [
+        {
+          "skill": "Chemistry",
+          "or": "Poisons",
+          "description": "Synthesising the neurotoxin and securing it in the delivery system."
+        }
+      ],
+      "id": "e5027226-5c4c-49e4-be5d-c9851ee68232",
+      "quantity": 1,
+      "currentCharges": 1,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 1888,
+      "baseWeight": 0.2,
+      "containerType": "None",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Synox Dart"
+    }
+  }
+}

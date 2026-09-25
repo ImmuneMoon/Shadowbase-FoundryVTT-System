@@ -1,0 +1,42 @@
+{
+  "_id": "JtFsHFsWVn4qMb52",
+  "_key": "!items!JtFsHFsWVn4qMb52",
+  "name": "Blueprint: Security Spike Tunneler",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "g7UVHPh3r2MYv5Oo",
+  "sort": 48800000,
+  "system": {
+    "row": {
+      "id": "5da012db-133e-4ffa-b5fd-661e610b3e63",
+      "name": "Blueprint: Security Spike Tunneler",
+      "cost": 229,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Security Spike Tunneler (Generation 0, proven, encoded, catalog design). Required to build Security Spike Tunneler; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Security Spike Tunneler",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 550,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Tools & Electronics|Security Spike Tunneler"
+    }
+  }
+}

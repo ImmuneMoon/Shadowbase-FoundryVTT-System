@@ -1,0 +1,47 @@
+{
+  "_id": "QND0vAsnXYCkUHu1",
+  "_key": "!items!QND0vAsnXYCkUHu1",
+  "name": "Magnetic Accelerator Coils",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "GKn9d26fE26F91yY",
+  "sort": 3400000,
+  "system": {
+    "row": {
+      "name": "Magnetic Accelerator Coils",
+      "category": "Launch Tube / Projector",
+      "cost": 350,
+      "weight": 2,
+      "notes": "Mag-field launches grenades further. Range +25%.",
+      "rangeMult": 1.25,
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 1
+        },
+        {
+          "name": "Silicon",
+          "amount": 1
+        }
+      ],
+      "id": "d27ee721-45bd-4043-85eb-f73f30d69f78",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Magnetic Accelerator Coils"
+    }
+  }
+}

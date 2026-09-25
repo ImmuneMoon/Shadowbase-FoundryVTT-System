@@ -1,0 +1,42 @@
+{
+  "_id": "mlz9nuDGMx5v0ip2",
+  "_key": "!items!mlz9nuDGMx5v0ip2",
+  "name": "Blueprint: Prayer Beads",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 16900000,
+  "system": {
+    "row": {
+      "id": "87914f49-1482-4c55-a0b9-8c7da55188af",
+      "name": "Blueprint: Prayer Beads",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Prayer Beads (Generation 0, proven, encoded, catalog design). Required to build Prayer Beads; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Prayer Beads",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1.6666666666666665,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Prayer Beads"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "w5V2WDlMv3Mz9TOD",
+  "_key": "!items!w5V2WDlMv3Mz9TOD",
+  "name": "Quadrupedal (MK II Assault)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "bppESUx5QjA1oXLP",
+  "sort": 700000,
+  "system": {
+    "row": {
+      "id": "f388466d-43a4-4f80-ac16-5d39e393af8f",
+      "name": "Quadrupedal (MK II Assault)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Chassis",
+      "cost": 13600,
+      "weight": 75,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "mk2-quad",
+      "description": "Base ST 12, HP 12, DR 15; Torso 0.55 m, elongated (SM +1)"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "mk2-quad"
+    }
+  }
+}

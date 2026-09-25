@@ -1,0 +1,19 @@
+{
+  "_id": "jE1PQo0cu0pzNz0Y",
+  "_key": "!folders!jE1PQo0cu0pzNz0Y",
+  "name": "Example Player Characters",
+  "type": "Actor",
+  "folder": null,
+  "sorting": "a",
+  "sort": 0,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "templates",
+      "path": [
+        "Example Player Characters"
+      ]
+    }
+  }
+}

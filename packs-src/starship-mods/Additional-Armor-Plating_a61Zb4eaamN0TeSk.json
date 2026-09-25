@@ -1,0 +1,36 @@
+{
+  "_id": "a61Zb4eaamN0TeSk",
+  "_key": "!items!a61Zb4eaamN0TeSk",
+  "name": "Additional Armor Plating",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "2cE16pJiC7zNUXvN",
+  "sort": 600000,
+  "system": {
+    "row": {
+      "id": "7cfcd14a-2086-4cdc-9903-fa9baabb5b31",
+      "name": "Additional Armor Plating",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Starship Modification",
+      "cost": 0,
+      "weight": 0,
+      "quantity": 1,
+      "description": "Defensive modification. +2 DR. Cost: 8% of the hull cost."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "starship-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "starship-mods",
+      "key": "Additional Armor Plating"
+    }
+  }
+}

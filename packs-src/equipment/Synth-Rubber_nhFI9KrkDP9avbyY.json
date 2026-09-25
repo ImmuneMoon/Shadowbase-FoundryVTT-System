@@ -1,0 +1,42 @@
+{
+  "_id": "nhFI9KrkDP9avbyY",
+  "_key": "!items!nhFI9KrkDP9avbyY",
+  "name": "Synth-Rubber",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ZKzXkltXW1NJZPHZ",
+  "sort": 11900000,
+  "system": {
+    "row": {
+      "name": "Synth-Rubber",
+      "rarity": "Common",
+      "cost": 15,
+      "density": 60,
+      "category": "Raw Materials",
+      "subCategory": "Industrial",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A basic synthetic polymer valued for grip and flexibility.",
+      "id": "27ec54fc-b1d1-4992-b33c-34c657ea8a2f",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Synth-Rubber"
+    }
+  }
+}

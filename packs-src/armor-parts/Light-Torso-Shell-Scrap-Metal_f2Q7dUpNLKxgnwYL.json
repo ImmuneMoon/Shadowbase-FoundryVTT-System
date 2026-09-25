@@ -1,0 +1,42 @@
+{
+  "_id": "f2Q7dUpNLKxgnwYL",
+  "_key": "!items!f2Q7dUpNLKxgnwYL",
+  "name": "Light Torso Shell (Scrap Metal)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 1700000,
+  "system": {
+    "row": {
+      "id": "42cb1ce3-d0b9-447e-8743-1fba58c0196b",
+      "name": "Light Torso Shell (Scrap Metal)",
+      "category": "Armor Shell",
+      "cost": 60,
+      "weight": 3,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-light-torso-scrap-metal",
+      "materialId": "scrap-metal",
+      "notes": "Low quality, scavenged metals. Light and Medium tiers only -- scavenged stock will not hold at heavy gauge.",
+      "validSlots": [],
+      "drBonus": 3,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-light-torso-scrap-metal"
+    }
+  }
+}

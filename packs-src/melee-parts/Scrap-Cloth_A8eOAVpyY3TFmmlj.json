@@ -1,0 +1,42 @@
+{
+  "_id": "A8eOAVpyY3TFmmlj",
+  "_key": "!items!A8eOAVpyY3TFmmlj",
+  "name": "Scrap Cloth",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "VqX65UQVOs2JpxDL",
+  "sort": 3300000,
+  "system": {
+    "row": {
+      "name": "Scrap Cloth",
+      "rarity": "Very Common",
+      "cost": 1,
+      "density": 20,
+      "category": "Raw Materials",
+      "subCategory": "Salvage",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Basic, low-quality woven materials.",
+      "id": "bfe6fa97-a588-4046-b9ac-85df264a9a44",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "material:Scrap Cloth"
+    }
+  }
+}

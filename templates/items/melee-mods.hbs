@@ -1,0 +1,21 @@
+{{!-- templates/items/melee-mods.hbs - customized-melee-weapon-item.tsx Modifications (:1325-1345): the three Ch12
+     treatments (hilt / grip, blade / head, edge accent). Context: mods (melee.mjs), editable, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--mods {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Settings2'}}"></i> {{localize "SHADOWBASE.Item.Melee.ModsTitle"}}</h4>
+    <div class="sb-slot-grid">
+      {{#each mods.treatments}}
+      <div class="sb-slot sb-slot--fitted">
+        <label class="sb-slot__label" for="mod-{{this.field}}">{{this.label}}</label>
+        <select class="sb-select sb-slot__select" id="mod-{{this.field}}" name="mod.{{this.field}}" {{disabled (not @root.editable)}}>
+          <option value="" {{#if this.isNone}}selected{{/if}}>{{localize "SHADOWBASE.Item.Slot.None"}}</option>
+          {{#each this.select.groups}}<optgroup label="{{this.label}}">{{#each this.options}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</optgroup>{{/each}}
+        </select>
+        <p class="sb-slot__caption">{{#if this.fitted}}<span class="sb-text-green">{{localize "SHADOWBASE.Item.Slot.Owned" name=this.fitted.name}}</span>{{#if this.fitted.energyResBonus}}<span class="sb-text-muted"> · {{localize "SHADOWBASE.Item.Condition.EnergyRes" n=this.fitted.energyResBonus}}</span>{{/if}}{{else if this.emptyReason}}<span class="sb-text-muted">{{this.emptyReason}}</span>{{/if}}</p>
+        {{#if this.fitted}}{{#if this.fitted.effect}}<p class="sb-slot__effect"><span class="sb-caps sb-text-accent">{{localize "SHADOWBASE.Item.Slot.Effect"}}</span> {{this.fitted.effect}}</p>{{/if}}{{/if}}
+      </div>
+      {{/each}}
+    </div>
+    <p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Melee.ModsNote" n=mods.fittedCount}}</p>
+  </div>
+</section>

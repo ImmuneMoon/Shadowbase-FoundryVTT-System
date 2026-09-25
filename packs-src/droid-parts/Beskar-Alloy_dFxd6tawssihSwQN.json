@@ -1,0 +1,39 @@
+{
+  "_id": "dFxd6tawssihSwQN",
+  "_key": "!items!dFxd6tawssihSwQN",
+  "name": "Beskar Alloy",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 7900000,
+  "system": {
+    "row": {
+      "id": "d6849d82-52ce-4d58-b5cc-71ce759b3e73",
+      "name": "Beskar Alloy",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 47500,
+      "weight": 120,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "dr-plating-6",
+      "description": "DR 15 (Hardened), additional +3 DR to energy damage."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "dr-plating-6"
+    }
+  }
+}

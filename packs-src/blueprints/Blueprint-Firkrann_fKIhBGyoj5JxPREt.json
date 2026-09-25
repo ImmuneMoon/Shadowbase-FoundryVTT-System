@@ -1,0 +1,42 @@
+{
+  "_id": "fKIhBGyoj5JxPREt",
+  "_key": "!items!fKIhBGyoj5JxPREt",
+  "name": "Blueprint: Firkrann",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 35200000,
+  "system": {
+    "row": {
+      "id": "e3587399-86e4-43e6-8595-1169ab44745c",
+      "name": "Blueprint: Firkrann",
+      "cost": 374,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Firkrann (Generation 0, proven, encoded, catalog design). Required to build Firkrann; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Firkrann",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 2000,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Firkrann"
+    }
+  }
+}

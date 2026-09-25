@@ -1,0 +1,34 @@
+{
+  "_id": "ct9APq3Wneck3rEU",
+  "_key": "!items!ct9APq3Wneck3rEU",
+  "name": "Appearance",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "GS8kUCPWatq78XxI",
+  "sort": 1500000,
+  "system": {
+    "row": {
+      "name": "Appearance",
+      "points": 4,
+      "description": "Attractive (+1 to reactions).",
+      "category": "Physical",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Appearance"
+    }
+  }
+}

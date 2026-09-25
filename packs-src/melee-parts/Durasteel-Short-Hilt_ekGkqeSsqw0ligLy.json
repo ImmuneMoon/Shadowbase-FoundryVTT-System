@@ -1,0 +1,46 @@
+{
+  "_id": "ekGkqeSsqw0ligLy",
+  "_key": "!items!ekGkqeSsqw0ligLy",
+  "name": "Durasteel Short Hilt",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "ILYK3Ll3GTKanvNj",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "id": "5fa93798-c719-4922-9f2d-df8d8244ebc4",
+      "name": "Durasteel Short Hilt",
+      "category": "Melee Grip",
+      "cost": 26,
+      "weight": 0.49,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "short-hilt",
+      "materialId": "durasteel",
+      "notes": "Knife/Smallsword. 1-handed.",
+      "effect": "Knife/Smallsword. 1-handed.",
+      "energyResBonus": 0,
+      "volume": 0.001,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "part:short-hilt"
+    }
+  }
+}

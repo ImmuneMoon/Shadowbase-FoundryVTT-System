@@ -1,0 +1,45 @@
+{{!-- templates/items/starship-build.hbs - customized-starship-item.tsx Base Chassis and Modifications (:240-290), the
+     weapon mounts, the design-point fields. Context: build (starship.mjs), editable, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--build {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Item.Starship.BaseChassis"}}</h4>
+    <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Starship.Chassis"}}</span>
+      <select class="sb-select" name="system.row.baseChassis" {{disabled (not editable)}}>{{#each build.chassis}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+    </label>
+    <p class="sb-text-muted sb-text-xs sb-mono">{{localize "SHADOWBASE.Sheet.Vehicles.Handling"}} {{build.base.handling}} · {{localize "SHADOWBASE.Sheet.Vehicles.SublightSpeed"}} {{build.base.speed}} · {{localize "SHADOWBASE.Item.Starship.AccelDecel"}} {{build.base.accel}} · HP {{build.base.hp}} · DR {{build.base.dr}} · {{localize "SHADOWBASE.Sheet.Vehicles.Hyperdrive"}} {{build.base.hyperdrive}} · {{localize "SHADOWBASE.Item.Starship.Hull" cost=build.hullCost}}</p>
+    {{#if build.base.weapons}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Starship.BaseWeapons"}}: {{build.base.weapons}}{{#if build.base.weaponSkill}} ({{build.base.weaponSkill}}){{/if}}</p>{{/if}}
+    {{#if build.chassisNotes}}<p class="sb-dossier">{{build.chassisNotes}}</p>{{/if}}
+  </div>
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Settings2'}}"></i> {{localize "SHADOWBASE.Item.Starship.Modifications"}}</h4>
+    <p class="sb-text-muted sb-text-xs">{{build.modLimitNote}}</p>
+    <div class="sb-item-grid">
+      {{#each build.mods}}
+      <label class="sb-field"><span class="sb-field__label">{{this.label}}</span>
+        <select class="sb-select" name="system.row.{{this.field}}" {{disabled (not @root.editable)}}>{{#each this.options}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}} {{#if this.disabled}}disabled{{/if}}>{{this.label}}</option>{{/each}}</select>
+        {{#if this.effect}}<span class="sb-field__hint">{{this.effect}}</span>{{/if}}
+      </label>
+      {{#each this.mounts}}
+      <label class="sb-field"><span class="sb-field__label">{{this.label}}</span>
+        <select class="sb-select" name="system.row.{{this.field}}" {{disabled (not @root.editable)}}>{{#each this.options}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{/each}}
+      {{/each}}
+    </div>
+  </div>
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Item.Starship.DesignPoints"}}</h4>
+    <p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Starship.DesignPointsNote"}}</p>
+    <div class="sb-item-grid sb-item-grid--4">
+      {{#each build.dp}}
+      <label class="sb-field"><span class="sb-field__label">{{this.label}}</span><input type="number" class="sb-input" name="system.row.{{this.field}}" value="{{this.value}}" data-dtype="Number" {{disabled (not @root.editable)}}></label>
+      {{/each}}
+      {{#each build.dpMounts}}
+      <label class="sb-field"><span class="sb-field__label">{{this.label}}</span>
+        <select class="sb-select" name="system.row.{{this.field}}" {{disabled (not @root.editable)}}>{{#each this.options}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{/each}}
+    </div>
+    <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Starship.dpSystemQuirks"}}</span><textarea class="sb-textarea" name="system.row.dpSystemQuirks" rows="2" {{disabled (not editable)}}>{{build.dpSystemQuirks}}</textarea></label>
+  </div>
+</section>

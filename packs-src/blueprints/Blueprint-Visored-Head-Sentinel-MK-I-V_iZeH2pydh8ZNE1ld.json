@@ -1,0 +1,42 @@
+{
+  "_id": "iZeH2pydh8ZNE1ld",
+  "_key": "!items!iZeH2pydh8ZNE1ld",
+  "name": "Blueprint: Visored Head (Sentinel MK I-V)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "UStUF7LfeXhiWi8K",
+  "sort": 24400000,
+  "system": {
+    "row": {
+      "id": "c6175668-4974-4f90-b1ef-c3d040d8742c",
+      "name": "Blueprint: Visored Head (Sentinel MK I-V)",
+      "cost": 302,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Visored Head (Sentinel MK I-V) (Generation 0, proven, encoded, catalog design). Required to build Visored Head (Sentinel MK I-V); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Visored Head (Sentinel MK I-V)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1275,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Head|Visored Head (Sentinel MK I-V)"
+    }
+  }
+}

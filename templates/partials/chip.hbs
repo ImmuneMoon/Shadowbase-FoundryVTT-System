@@ -1,0 +1,7 @@
+{{!-- shadowbase.chip - the handbook chip (src/components/character-sheet/components/handbook-chip.tsx): a span with
+     role=button INSIDE the section trigger (a nested <button> is invalid HTML), stopping propagation so it does
+     not toggle the section. Params: entry (registry id), title (text). --}}
+<span class="sb-chip" role="button" tabindex="0" data-action="open-handbook" data-entry="{{entry}}"
+  title="{{localize "SHADOWBASE.Sheet.Chip.Open" title=title}}" aria-label="{{localize "SHADOWBASE.Sheet.Chip.Open" title=title}}">
+  <i class="{{sbIcon 'chip'}}"></i><span>{{title}}</span>
+</span>

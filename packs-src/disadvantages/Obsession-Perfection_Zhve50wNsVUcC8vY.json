@@ -1,0 +1,34 @@
+{
+  "_id": "Zhve50wNsVUcC8vY",
+  "_key": "!items!Zhve50wNsVUcC8vY",
+  "name": "Obsession (Perfection)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "XWDBqE5xIGYEuyLo",
+  "sort": 4200000,
+  "system": {
+    "row": {
+      "name": "Obsession (Perfection)",
+      "points": -5,
+      "level": null,
+      "description": "Some Echani develop an obsessive drive for martial perfection, constantly seeking to refine their skills and overcome any perceived flaw. This can make them overly critical of themselves and others, or lead to dangerous pursuits of challenging opponents, making them predictable to those who know their drive.",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Obsession (Perfection)|Racial"
+    }
+  }
+}

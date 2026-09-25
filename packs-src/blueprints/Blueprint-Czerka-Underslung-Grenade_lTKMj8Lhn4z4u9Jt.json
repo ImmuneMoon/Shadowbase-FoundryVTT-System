@@ -1,0 +1,42 @@
+{
+  "_id": "lTKMj8Lhn4z4u9Jt",
+  "_key": "!items!lTKMj8Lhn4z4u9Jt",
+  "name": "Blueprint: Czerka Underslung Grenade",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "HMnrLKsLi3nzjz6j",
+  "sort": 31400000,
+  "system": {
+    "row": {
+      "id": "07fdc666-d1da-43ad-bd45-29b16ea053c9",
+      "name": "Blueprint: Czerka Underslung Grenade",
+      "cost": 613,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Czerka Underslung Grenade (Generation 0, proven, encoded, catalog design). Required to build Czerka Underslung Grenade; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Czerka Underslung Grenade",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 4384,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Grenade Launchers|Czerka Underslung Grenade"
+    }
+  }
+}

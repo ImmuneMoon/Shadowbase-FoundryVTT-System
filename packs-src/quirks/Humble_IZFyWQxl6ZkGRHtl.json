@@ -1,0 +1,32 @@
+{
+  "_id": "IZFyWQxl6ZkGRHtl",
+  "_key": "!items!IZFyWQxl6ZkGRHtl",
+  "name": "Humble",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 2100000,
+  "system": {
+    "row": {
+      "name": "Humble",
+      "points": -1,
+      "description": "You consistently downplay your own achievements and importance.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Humble"
+    }
+  }
+}

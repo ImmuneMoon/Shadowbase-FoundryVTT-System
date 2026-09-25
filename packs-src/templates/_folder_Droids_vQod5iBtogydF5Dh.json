@@ -1,0 +1,19 @@
+{
+  "_id": "vQod5iBtogydF5Dh",
+  "_key": "!folders!vQod5iBtogydF5Dh",
+  "name": "Droids",
+  "type": "Actor",
+  "folder": null,
+  "sorting": "a",
+  "sort": 300000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "templates",
+      "path": [
+        "Droids"
+      ]
+    }
+  }
+}

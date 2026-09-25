@@ -1,0 +1,34 @@
+{
+  "_id": "lDXVGSHcb1fReAWG",
+  "_key": "!items!lDXVGSHcb1fReAWG",
+  "name": "Brewing",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "Dql9Lb6aKuSPlhaq",
+  "sort": 2100000,
+  "system": {
+    "row": {
+      "name": "Brewing",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Average",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Brewing"
+    }
+  }
+}

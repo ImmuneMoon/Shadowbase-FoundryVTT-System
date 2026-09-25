@@ -1,0 +1,33 @@
+{
+  "_id": "OUgsCGwknmqoRFaI",
+  "_key": "!items!OUgsCGwknmqoRFaI",
+  "name": "Fit",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "GS8kUCPWatq78XxI",
+  "sort": 6500000,
+  "system": {
+    "row": {
+      "name": "Fit",
+      "points": 5,
+      "description": "You are unusually robust and healthy, granting bonuses to Endurance Point (EP) recovery and resistance to illness. Ensures you can endure long campaigns, torture, or the rigors of galactic travel, serving any master or cause.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Fit"
+    }
+  }
+}

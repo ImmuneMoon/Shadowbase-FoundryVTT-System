@@ -1,0 +1,173 @@
+{
+  "_id": "ATOOnuGGde3tmSOk",
+  "_key": "!items!ATOOnuGGde3tmSOk",
+  "name": "CorSec Stun Tonfa",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "IfQcNyOKob3lVHxn",
+  "sort": 300000,
+  "system": {
+    "row": {
+      "id": "df2893dc-c701-42a1-80aa-53005a0ea2bb",
+      "customName": "CorSec Stun Tonfa",
+      "baseType": "CorSec Stun Tonfa",
+      "baseSkill": "Tonfa",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": 50,
+      "maxCharges": 50,
+      "condition": "Fine",
+      "baseReach": "C, 1",
+      "baseWeight": 3.17,
+      "finalWeight": 3.17,
+      "baseCost": 556,
+      "finalCost": 3336,
+      "gripParts": [
+        {
+          "inventoryId": "5513c0be-89ef-49a8-b7bb-ae9b561d0527",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "849475e4-d988-4bed-b5ca-701de3e67c30",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "utilityParts": [
+        {
+          "inventoryId": "97acfde3-fbbe-4cb2-940e-0c2368b6e471",
+          "materialId": null,
+          "quantity": 1
+        },
+        {
+          "inventoryId": "8bb00d6b-db1a-4ba6-9f1c-51f6f87cfc95",
+          "materialId": null,
+          "quantity": 1
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "df2893dc-c701-42a1-80aa-53005a0ea2bb",
+        "customName": "CorSec Stun Tonfa",
+        "baseType": "CorSec Stun Tonfa",
+        "baseSkill": "Tonfa",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "condition": "Fine",
+        "baseReach": "C, 1",
+        "baseWeight": 3.17,
+        "finalWeight": 3.17,
+        "baseCost": 556,
+        "finalCost": 3336,
+        "gripParts": [
+          {
+            "inventoryId": "5513c0be-89ef-49a8-b7bb-ae9b561d0527",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "849475e4-d988-4bed-b5ca-701de3e67c30",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "utilityParts": [
+          {
+            "inventoryId": "97acfde3-fbbe-4cb2-940e-0c2368b6e471",
+            "materialId": null,
+            "quantity": 1
+          },
+          {
+            "inventoryId": "8bb00d6b-db1a-4ba6-9f1c-51f6f87cfc95",
+            "materialId": null,
+            "quantity": 1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "5513c0be-89ef-49a8-b7bb-ae9b561d0527",
+          "name": "Short Hilt",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 26,
+          "weight": 0.49,
+          "isInstalled": true,
+          "installedInMeleeId": "df2893dc-c701-42a1-80aa-53005a0ea2bb",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Knife/Smallsword. 1-handed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "849475e4-d988-4bed-b5ca-701de3e67c30",
+          "name": "Weighted End",
+          "category": "Melee Head",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInMeleeId": "df2893dc-c701-42a1-80aa-53005a0ea2bb",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Balanced.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "97acfde3-fbbe-4cb2-940e-0c2368b6e471",
+          "name": "Stun Modulator",
+          "category": "Melee Power Unit",
+          "cost": 270,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInMeleeId": "df2893dc-c701-42a1-80aa-53005a0ea2bb",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Converts lethal damage to endurance (fatigue) damage.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "8bb00d6b-db1a-4ba6-9f1c-51f6f87cfc95",
+          "name": "Power Cell",
+          "category": "Melee Power Unit",
+          "cost": 210,
+          "weight": 0.7,
+          "isInstalled": true,
+          "installedInMeleeId": "df2893dc-c701-42a1-80aa-53005a0ea2bb",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Provides baseline power for attached emitters/generators.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "CorSec Stun Tonfa"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "4rnG61lsTklBPs4F",
+  "_key": "!items!4rnG61lsTklBPs4F",
+  "name": "Medium Foot Shell (Durasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 6700000,
+  "system": {
+    "row": {
+      "id": "f70ed7ee-436a-4737-b535-66347c3798fd",
+      "name": "Medium Foot Shell (Durasteel)",
+      "category": "Armor Shell",
+      "cost": 121,
+      "weight": 2.4,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-medium-feet-durasteel",
+      "materialId": "durasteel",
+      "notes": "Standard building alloy. Baseline stats.",
+      "validSlots": [],
+      "drBonus": 4,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-medium-feet-durasteel"
+    }
+  }
+}

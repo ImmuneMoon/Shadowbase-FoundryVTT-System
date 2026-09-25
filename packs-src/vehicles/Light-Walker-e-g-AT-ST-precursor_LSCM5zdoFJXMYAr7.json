@@ -1,0 +1,46 @@
+{
+  "_id": "LSCM5zdoFJXMYAr7",
+  "_key": "!items!LSCM5zdoFJXMYAr7",
+  "name": "Light Walker (e.g., AT-ST precursor)",
+  "type": "vehicle",
+  "img": "icons/svg/direction.svg",
+  "folder": "7Ys6ynx8eEtyCZx9",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "name": "Light Walker (e.g., AT-ST precursor)",
+      "type": "Military Ground Vehicle",
+      "category": "Terrestrial",
+      "handling": "-1",
+      "speed": "30 mph",
+      "accelDecel": "2/3",
+      "hp": 120,
+      "dr": 10,
+      "crew": "1-2",
+      "passengers": "0",
+      "cargo": "0",
+      "cost": 100000,
+      "weapons": "1x Heavy Blaster Cannon (7d burn)",
+      "weaponSkill": "Gunner (Vehicle)",
+      "hyperdrive": "N/A",
+      "notes": "Two-legged assault vehicle that offers a commanding view and significant firepower.",
+      "id": "4bbfa500-9541-42f8-b3bb-99ae54f8a62c",
+      "quantity": 1
+    },
+    "source": "vehicles",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "vehicles"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "vehicles",
+      "key": "Light Walker (e.g., AT-ST precursor)"
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{{!-- templates/actor/inventory.hbs - the Inventory tab in the website's order (docs/STYLE-SPEC.md §3.3 Inventory: N0 the wallet
+     card - Carry Weight + Credit Chip / Physical totals with the tracking toggles; N1 Encumbrance & Defenses; N3 General
+     Equipment; N4 Armor & Clothing (+ Suits & Sets, gear sets); N5 Weapons: Melee / Ranged / Explosives / Lightsabers;
+     N6 Ammo, Mods & Parts; N7 Implants & Cybernetics; N8 External Storage) plus the Raw Materials pane, the Crafting entry
+     and item transfer (per-row export, per-section import). N2 Hit Locations is on the Body tab per the unit brief.
+     Context: module/apps/actor-sheet-tabs.mjs inventoryContext(actor) merged over the sheet's part context (`tab`). --}}
+<section class="tab sb-tab-panel sb-tab-inventory sb-sections {{tab.cssClass}}" data-tab="inventory" data-group="primary">
+  {{#if engineError}}<p class="sb-notice sb-notice--error">{{localize "SHADOWBASE.Sheet.EngineError" error=engineError}}</p>{{/if}}
+
+  <div class="sb-card sb-wallet">
+    <div class="sb-wallet__weight">
+      <span class="sb-caps sb-text-muted"><i class="{{sbIcon 'Weight'}} sb-text-primary"></i> {{localize "SHADOWBASE.Sheet.Inventory.CarryWeight"}}</span>
+      <p><span>{{localize "SHADOWBASE.Sheet.Inventory.TotalWeightCarried"}}</span><strong class="sb-mono">{{wallet.totalWeight}} <small>lb</small></strong></p>
+      <p><span>{{localize "SHADOWBASE.Sheet.Inventory.TotalCarryCapacity"}}</span><strong class="sb-mono">{{wallet.capacity}} <small>lb</small></strong></p>
+      <p><span>{{localize "SHADOWBASE.Sheet.Inventory.RemainingCapacity"}}</span><strong class="sb-mono {{#if wallet.overloaded}}sb-text-red{{else}}sb-text-green{{/if}}">{{wallet.remaining}} <small>lb</small></strong></p>
+      <p><span>{{localize "SHADOWBASE.Sheet.Inventory.EncumbranceLevel"}}</span><strong>{{wallet.encumbranceLevel}}</strong></p>
+    </div>
+    <div class="sb-wallet__credits">
+      <div class="sb-wallet__line">
+        <span class="sb-caps {{#if wallet.trackDigital}}sb-text-blue{{else}}sb-text-muted{{/if}}">{{localize "SHADOWBASE.Sheet.Inventory.CreditChipTotal"}}</span>
+        <button type="button" class="sb-wallet__toggle {{#if wallet.trackDigital}}is-on is-digital{{/if}}" data-action="toggleTracking" data-form="digital" title="{{localize "SHADOWBASE.Sheet.Inventory.TrackDigitalHint"}}" {{disabled (not editable)}}><i class="{{sbIcon 'CreditCard'}}"></i></button>
+        <strong class="sb-wallet__figure sb-mono sb-text-blue">{{wallet.digital}}</strong>
+      </div>
+      <div class="sb-wallet__line">
+        <span class="sb-caps {{#if wallet.trackPhysical}}sb-text-amber{{else}}sb-text-muted{{/if}}">{{localize "SHADOWBASE.Sheet.Inventory.PhysicalCreditTotal"}}</span>
+        <button type="button" class="sb-wallet__toggle {{#if wallet.trackPhysical}}is-on is-physical{{/if}}" data-action="toggleTracking" data-form="physical" title="{{localize "SHADOWBASE.Sheet.Inventory.TrackPhysicalHint"}}" {{disabled (not editable)}}><i class="{{sbIcon 'Coins'}}"></i></button>
+        <strong class="sb-wallet__figure sb-mono sb-text-amber">{{wallet.physical}}</strong>
+      </div>
+      <p class="sb-muted-p">{{localize "SHADOWBASE.Sheet.Inventory.TotalCreditsLine" credits=wallet.totalCredits cost=wallet.totalCost}}</p>
+    </div>
+  </div>
+
+  <details class="sb-section" data-section="encumbrance" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.Encumbrance") icon=(sbIcon "HeartPulse") chip="combat-damage" chipTitle=(lookup chips "combat-damage") meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#if encumbrance.activeEffects.length}}
+      <p class="sb-hrow sb-hrow--tight"><span class="sb-caps sb-text-accent"><i class="{{sbIcon 'HeartPulse'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.ActiveEffects"}}</span>
+        {{#each encumbrance.activeEffects}}<span class="sb-badge sb-badge-outline sb-badge--effect {{#if this.debuff}}sb-badge--debuff{{/if}}">{{this.name}}{{#if this.duration}} ({{this.duration}}){{/if}}</span>{{/each}}
+      </p>
+      {{/if}}
+      <div class="sb-field-grid">
+        <label class="sb-field" data-sheet-row><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Inventory.BasicLift"}}</span><output class="sb-input sb-input--calc">{{encumbrance.basicLift}}</output></label>
+        <label class="sb-field" data-sheet-row><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Inventory.EncumbranceLevel"}}</span><output class="sb-input sb-input--calc">{{encumbrance.level}}</output></label>
+        <label class="sb-field" data-sheet-row><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Inventory.MoveDodge"}}</span><output class="sb-input sb-input--calc">{{encumbrance.move}} / {{encumbrance.dodge}}</output></label>
+        <label class="sb-check-row" data-sheet-row title="{{localize "SHADOWBASE.Sheet.Inventory.LiftingStHint"}}"><input type="checkbox" name="system.useLiftingST" {{checked encumbrance.useLiftingST}} {{disabled (not editable)}}><span>{{localize "SHADOWBASE.Sheet.Inventory.ApplyLiftingSt"}}</span></label>
+      </div>
+      <div class="sb-table-wrap">
+      <table class="sb-table sb-encumbrance-table">
+        <thead><tr><th>{{localize "SHADOWBASE.Sheet.Inventory.EncumbranceLevel"}}</th><th>{{localize "SHADOWBASE.Sheet.Inventory.MaxWeight"}}</th><th class="sb-num">{{localize "SHADOWBASE.Sheet.Channel.Move"}}</th><th class="sb-num">{{localize "SHADOWBASE.Roll.Dodge"}}</th></tr></thead>
+        <tbody>{{#each encumbrance.rows}}<tr class="{{#if this.current}}is-current{{/if}}"><td>{{this.label}}</td><td class="sb-mono">&le; {{this.weight}} lb</td><td class="sb-num sb-mono">{{this.move}}</td><td class="sb-num sb-mono">{{this.dodge}}</td></tr>{{/each}}</tbody>
+      </table>
+      </div>
+      {{#if encumbrance.jump}}<p class="sb-muted-p">{{localize "SHADOWBASE.Sheet.Inventory.Jump" running=encumbrance.jump.running standing=encumbrance.jump.standing vertical=encumbrance.jump.vertical}}</p>{{/if}}
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="equipment" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.GeneralEquipment") icon=(sbIcon "Package") chip="equipment-crafting" chipTitle=(lookup chips "equipment-crafting") meta=equipmentCount}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#each equipmentGroups}}
+      {{#if this.rows.length}}
+      <details class="sb-section sb-section--sub" data-section="equipment-category" open>
+        {{> "shadowbase.section" title=this.label icon="" chip="" chipTitle="" meta=this.rows.length}}
+        <div class="sb-section__body" data-accordion-body><ul class="sb-rows">{{#each this.rows}}{{> "systems/shadowbase/templates/actor/parts/equipment-row.hbs" this}}{{/each}}</ul></div>
+      </details>
+      {{/if}}
+      {{/each}}
+      {{#if blueprints.length}}
+      <details class="sb-section sb-section--sub" data-section="blueprints" open>
+        {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.Blueprints") icon="" chip="" chipTitle="" meta=blueprints.length}}
+        <div class="sb-section__body" data-accordion-body><ul class="sb-rows">{{#each blueprints}}{{> "systems/shadowbase/templates/actor/parts/equipment-row.hbs" this}}{{/each}}</ul></div>
+      </details>
+      {{/if}}
+      {{#if strays.length}}
+      <details class="sb-section sb-section--sub" data-section="other-gear" open>
+        {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.OtherGear") icon="" chip="" chipTitle="" meta=strays.length}}
+        <div class="sb-section__body" data-accordion-body><ul class="sb-rows">{{#each strays}}{{> "systems/shadowbase/templates/actor/parts/equipment-row.hbs" this}}{{/each}}</ul></div>
+      </details>
+      {{/if}}
+      {{#unless equipmentCount}}{{> "shadowbase.empty" icon=(sbIcon "Package") title=(localize "SHADOWBASE.Sheet.Inventory.NoEquipment") description=(localize "SHADOWBASE.Sheet.Inventory.NoEquipmentHint") action=(localize "SHADOWBASE.Sheet.AddFromLibrary")}}{{/unless}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.equipment}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button>
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.blueprints}}"><i class="{{sbIcon 'FileJson'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.BlueprintLibrary"}}</button>
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="addRow" data-source="equipment" {{disabled (not editable)}}><i class="{{sbIcon 'Plus'}}"></i> {{localize "SHADOWBASE.Sheet.AddCustom"}}</button>
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="generalEquipment" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.ImportItem"}}</button>
+      </div>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="armor-and-clothing" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.ArmorAndClothing") icon=(sbIcon "Shirt") chip="equipment-crafting" chipTitle=(lookup chips "equipment-crafting") meta=armorCount}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#if armor.length}}<ul class="sb-rows">{{#each armor}}{{> "systems/shadowbase/templates/actor/parts/armor-row.hbs" this}}{{/each}}</ul>
+      {{else}}{{> "shadowbase.empty" icon=(sbIcon "Shirt") title=(localize "SHADOWBASE.Sheet.Inventory.NoArmor") description=(localize "SHADOWBASE.Sheet.Inventory.NoArmorHint") action=(localize "SHADOWBASE.Sheet.AddFromLibrary")}}{{/if}}
+      {{#if sets.length}}
+      <h3 class="sb-subhead">{{localize "SHADOWBASE.Sheet.Inventory.GearSets"}}</h3>
+      <ul class="sb-gear-sets">
+        {{#each sets}}
+        <li class="sb-gear-set{{#if this.custom}} is-custom{{/if}}">
+          <span class="sb-gear-set__name"><i class="{{sbIcon 'Layers'}}"></i> {{this.name}}</span>
+          {{#if this.custom}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Sheet.Inventory.CustomSet"}}</span>{{else}}<span class="sb-badge sb-badge-outline">{{this.kind}}</span>{{#if this.complete}}<span class="sb-badge sb-badge-secondary">{{localize "SHADOWBASE.Sheet.Inventory.SetComplete"}}</span>{{/if}}{{/if}}
+          <span class="sb-muted">{{#each this.members}}{{this}}{{#unless @last}}; {{/unless}}{{/each}}</span>
+        </li>
+        {{/each}}
+      </ul>
+      {{/if}}
+      {{#if setBonuses.length}}<p class="sb-hrow sb-hrow--tight"><span class="sb-caps sb-text-muted">{{localize "SHADOWBASE.Sheet.Inventory.SetBonuses"}}</span>{{#each setBonuses}}<span class="sb-badge sb-badge-outline" title="{{this.text}}">{{this.name}}</span>{{/each}}</p>{{/if}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.armor}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button>
+        <button type="button" class="sb-btn sb-btn-secondary sb-btn-sm" data-action="openSuitsAndSets" {{disabled (not apps.suitsAndSets)}}><i class="{{sbIcon 'Layers'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.SuitsAndSets"}}</button>
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="armorItem" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.ImportItem"}}</button>
+      </div>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="weapons-parent" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.Weapons") icon=(sbIcon "Combine") chip="equipment-crafting" chipTitle=(lookup chips "equipment-crafting") meta=(localize "SHADOWBASE.Sheet.Inventory.Hands" used=hands.used available=hands.available)}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#if dualWielding}}{{#if dualWielding.active}}<p class="sb-hrow"><span class="sb-badge {{#if dualWielding.penalized}}sb-badge-destructive{{else}}sb-badge-outline{{/if}}"><i class="{{sbIcon 'Swords'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.DualWielding"}}</span></p>{{/if}}{{/if}}
+      <details class="sb-section sb-section--sub" data-section="melee-weapons" open>
+        {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.MeleeWeapons") icon="" chip="" chipTitle="" meta=weapons.melee.length}}
+        <div class="sb-section__body" data-accordion-body>
+          <ul class="sb-rows">{{#each weapons.melee}}{{> "systems/shadowbase/templates/actor/parts/weapon-row.hbs" this}}{{/each}}</ul>
+          <div class="sb-actions"><button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.meleeWeapons}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button><button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="customMeleeWeapon" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.ImportItem"}}</button></div>
+        </div>
+      </details>
+      <details class="sb-section sb-section--sub" data-section="ranged-weapons" open>
+        {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.RangedWeapons") icon="" chip="" chipTitle="" meta=weapons.blasters.length}}
+        <div class="sb-section__body" data-accordion-body>
+          <ul class="sb-rows">{{#each weapons.blasters}}{{> "systems/shadowbase/templates/actor/parts/weapon-row.hbs" this}}{{/each}}</ul>
+          <div class="sb-actions"><button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.rangedWeapons}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button><button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="customBlaster" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.ImportItem"}}</button></div>
+        </div>
+      </details>
+      <details class="sb-section sb-section--sub" data-section="explosives" open>
+        {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.Explosives") icon="" chip="" chipTitle="" meta=weapons.explosives.length}}
+        <div class="sb-section__body" data-accordion-body>
+          <ul class="sb-rows">{{#each weapons.explosives}}{{> "systems/shadowbase/templates/actor/parts/weapon-row.hbs" this}}{{/each}}</ul>
+          <div class="sb-actions"><button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.explosives}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button><button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="customExplosive" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.ImportItem"}}</button></div>
+        </div>
+      </details>
+      <details class="sb-section sb-section--sub" data-section="lightsabers" open>
+        {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.Lightsabers") icon="" chip="" chipTitle="" meta=weapons.lightsabers.length}}
+        <div class="sb-section__body" data-accordion-body>
+          <ul class="sb-rows">{{#each weapons.lightsabers}}{{> "systems/shadowbase/templates/actor/parts/weapon-row.hbs" this}}{{/each}}</ul>
+          <div class="sb-actions"><button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.lightsabers}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button><button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="lightsaber" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.ImportItem"}}</button></div>
+        </div>
+      </details>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="mods-and-ammo" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.AmmoModsParts") icon=(sbIcon "Wrench") chip="equipment-crafting" chipTitle=(lookup chips "equipment-crafting") meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      <details class="sb-section sb-section--sub" data-section="ammunition" open>
+        {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.Ammunition") icon="" chip="" chipTitle="" meta=ammunition.length}}
+        <div class="sb-section__body" data-accordion-body>
+          <ul class="sb-rows">{{#each ammunition}}{{> "systems/shadowbase/templates/actor/parts/part-row.hbs" this variant="ammo"}}{{/each}}</ul>
+          <div class="sb-actions"><button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.ammunition}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button><button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="ammunition" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.ImportItem"}}</button></div>
+        </div>
+      </details>
+      <details class="sb-section sb-section--sub" data-section="weapon-mods-parts" open>
+        {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.WeaponModsParts") icon="" chip="" chipTitle="" meta=weaponParts.length}}
+        <div class="sb-section__body" data-accordion-body>
+          <ul class="sb-rows">{{#each weaponParts}}{{> "systems/shadowbase/templates/actor/parts/part-row.hbs" this variant="part"}}{{/each}}</ul>
+          <div class="sb-actions"><button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.weaponMods}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button><button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="weaponModification" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.ImportItem"}}</button></div>
+        </div>
+      </details>
+      <details class="sb-section sb-section--sub" data-section="lightsaber-parts" open>
+        {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.SaberParts") icon="" chip="" chipTitle="" meta=saberParts.length}}
+        <div class="sb-section__body" data-accordion-body><ul class="sb-rows">{{#each saberParts}}{{> "systems/shadowbase/templates/actor/parts/part-row.hbs" this variant="part"}}{{/each}}</ul></div>
+      </details>
+      <details class="sb-section sb-section--sub" data-section="armor-mods-pieces" open>
+        {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.ArmorModsPieces") icon="" chip="" chipTitle="" meta=armorParts.length}}
+        <div class="sb-section__body" data-accordion-body>
+          <ul class="sb-rows">{{#each armorParts}}{{> "systems/shadowbase/templates/actor/parts/part-row.hbs" this variant="part"}}{{/each}}</ul>
+          <div class="sb-actions"><button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.armorPieces}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button><button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="armorModification" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.ImportItem"}}</button></div>
+        </div>
+      </details>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="implants-cybernetics" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.ImplantsCybernetics") icon=(sbIcon "BrainCircuit") chip="equipment-crafting" chipTitle=(lookup chips "equipment-crafting") meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      <details class="sb-section sb-section--sub" data-section="implants" open>
+        {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.Implants") icon="" chip="" chipTitle="" meta=implants.length}}
+        <div class="sb-section__body" data-accordion-body>
+          <ul class="sb-rows">{{#each implants}}{{> "systems/shadowbase/templates/actor/parts/implant-row.hbs" this}}{{/each}}</ul>
+          <div class="sb-actions"><button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.implants}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button><button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="neuralImplant" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.ImportItem"}}</button></div>
+        </div>
+      </details>
+      <details class="sb-section sb-section--sub" data-section="cybernetic-limbs" open>
+        {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.CyberneticLimbs") icon="" chip="" chipTitle="" meta=limbs.length}}
+        <div class="sb-section__body" data-accordion-body>
+          <ul class="sb-rows">{{#each limbs}}{{> "systems/shadowbase/templates/actor/parts/implant-row.hbs" this}}{{/each}}</ul>
+          <div class="sb-actions"><button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.cyberneticLimbs}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button><button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="cyberneticLimb" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.ImportItem"}}</button></div>
+        </div>
+      </details>
+      <details class="sb-section sb-section--sub" data-section="cybernetic-upgrades" open>
+        {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.CyberneticUpgrades") icon="" chip="" chipTitle="" meta=upgrades.length}}
+        <div class="sb-section__body" data-accordion-body>
+          <ul class="sb-rows">{{#each upgrades}}{{> "systems/shadowbase/templates/actor/parts/implant-row.hbs" this}}{{/each}}</ul>
+          <div class="sb-actions"><button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.cyberneticUpgrades}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button><button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="cyberneticUpgrade" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.ImportItem"}}</button></div>
+        </div>
+      </details>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="materials" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.Materials") icon=(sbIcon "Layers") chip="equipment-crafting" chipTitle=(lookup chips "equipment-crafting") meta=materials.length}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#if materials.length}}<ul class="sb-rows">{{#each materials}}{{> "systems/shadowbase/templates/actor/parts/equipment-row.hbs" this}}{{/each}}</ul>
+      {{else}}<p class="sb-muted-p">{{localize "SHADOWBASE.Sheet.Inventory.NoMaterials"}}</p>{{/if}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-secondary sb-btn-sm" data-action="openCrafting" {{disabled (not apps.crafting)}}><i class="{{sbIcon 'Hammer'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.Crafting"}}</button>
+        {{#unless apps.crafting}}<span class="sb-muted">{{localize "SHADOWBASE.Sheet.AppPending" app=(localize "SHADOWBASE.Sheet.App.CraftingApp")}}</span>{{/unless}}
+      </div>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="storage" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Inventory.StorageBoxes") icon=(sbIcon "Package") chip="" chipTitle="" meta=boxCount}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#if boxCount}}<ul class="sb-storage-boxes">{{#each boxes}}{{> "systems/shadowbase/templates/actor/parts/storage-box.hbs" this}}{{/each}}</ul>
+      {{else}}<p class="sb-muted-p">{{localize "SHADOWBASE.Sheet.Inventory.NoBoxes"}}</p>{{/if}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="addStorageBox" {{disabled (not editable)}}><i class="{{sbIcon 'Plus'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.NewBox"}}</button>
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Inventory.ImportAnyItem"}}</button>
+      </div>
+    </div>
+  </details>
+</section>

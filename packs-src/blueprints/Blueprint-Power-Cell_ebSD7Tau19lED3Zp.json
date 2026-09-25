@@ -1,0 +1,42 @@
+{
+  "_id": "ebSD7Tau19lED3Zp",
+  "_key": "!items!ebSD7Tau19lED3Zp",
+  "name": "Blueprint: Power Cell",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "XAvVixgLTZA95jcH",
+  "sort": 44300000,
+  "system": {
+    "row": {
+      "id": "ec1ebbe0-9269-4c4c-915b-f0eed0b403ec",
+      "name": "Blueprint: Power Cell",
+      "cost": 185,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Power Cell (Generation 0, proven, encoded, catalog design). Required to build Power Cell; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Power Cell",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 105,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Power & Energy Components|Power Cell"
+    }
+  }
+}

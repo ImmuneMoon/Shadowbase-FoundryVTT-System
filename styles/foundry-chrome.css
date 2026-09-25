@@ -1,0 +1,334 @@
+/* styles/foundry-chrome.css - Foundry's AppV2 chrome restyled INSIDE .shadowbase only
+ * (docs/ARCHITECTURE.md §6.6; docs/STYLE-SPEC.md §2 for the recipes the
+ * controls borrow). Nothing here is global: every selector starts at
+ * .application.shadowbase or .shadowbase, so Foundry's own windows, the
+ * sidebar and other systems' sheets keep their theme.
+ *
+ * Why the window frame is restyled at all: Foundry v13 ThemeV2 paints an
+ * ApplicationV2 window with its own dark/light palette and Signika; the
+ * website is a single dark theme in Inter on #1A1A1A with pale-blue text, and
+ * a sheet whose frame disagreed with its body read as two products.
+ */
+
+/* ---- window frame ---- */
+.application.shadowbase {
+  --color-text-primary: hsl(var(--foreground));
+  --color-text-secondary: hsl(var(--muted-foreground));
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+}
+.application.shadowbase .window-header {
+  background: hsl(var(--card));
+  color: hsl(var(--primary));
+  border-bottom: 1px solid hsl(var(--border));
+  /* NB: no font-family here. It cascades to the header-control BUTTONS, whose
+     Font Awesome glyphs (a `.fa-solid` class on the button, drawn via ::before)
+     then rendered in Inter as empty boxes. The headline font goes on the title
+     only; the icon buttons keep Foundry's Font Awesome font (below). */
+}
+.application.shadowbase .window-header .window-title {
+  font-family: var(--font-headline);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: hsl(var(--primary));
+}
+/* Foundry's window-header control icons (detach / copy-UUID / close / the ⋮ menu)
+   are Font Awesome glyphs. Pin the FA family so no ancestor font rule can turn them
+   into tofu; the family is a version stack (v14 loads "Font Awesome 7 Pro", v13
+   "Font Awesome 6 Free"), and the weight stays with the fa-solid/fa-regular class. */
+.application.shadowbase .window-header .header-control,
+.application.shadowbase .window-header .header-control::before,
+.application.shadowbase .controls-dropdown .header-control,
+.application.shadowbase .controls-dropdown .header-control::before {
+  font-family: "Font Awesome 7 Pro", "Font Awesome 7 Free", "Font Awesome 6 Pro", "Font Awesome 6 Free", "Font Awesome 5 Pro", "FontAwesome";
+}
+.application.shadowbase .window-header .header-control {
+  color: hsl(var(--foreground));
+  opacity: 0.7;
+  transition: opacity 0.15s, background-color 0.15s;
+  border-radius: var(--radius-sm);
+}
+.application.shadowbase .window-header .header-control:hover {
+  opacity: 1;
+  background: hsl(var(--accent) / 0.25);
+}
+.application.shadowbase .controls-dropdown {
+  background: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius-md);
+}
+.application.shadowbase .controls-dropdown .header-control button:hover {
+  background: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+.application.shadowbase .window-content {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  padding: 0;
+  overflow: hidden;
+}
+.application.shadowbase .window-resize-handle {
+  filter: invert(0.6);
+}
+
+/* ---- AppV2 tab navigation (the core `.tabs` nav; the sheet's own strip is sheet-tabs.css) ---- */
+.application.shadowbase nav.tabs {
+  border: 0;
+  gap: 0.25rem;
+}
+.application.shadowbase nav.tabs > a,
+.application.shadowbase nav.tabs > button {
+  color: hsl(var(--foreground));
+  border-radius: var(--radius-sm);
+}
+.application.shadowbase nav.tabs > a.active,
+.application.shadowbase nav.tabs > button.active {
+  color: hsl(var(--primary));
+  text-shadow: none;
+}
+
+/* ---- scrollbars (scroll-area.tsx: a 10px gutter with a border-coloured thumb) ---- */
+.shadowbase,
+.shadowbase * {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--border)) transparent;
+}
+.shadowbase ::-webkit-scrollbar {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+.shadowbase ::-webkit-scrollbar-track {
+  background: transparent;
+}
+.shadowbase ::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+/* ---- text inputs, selects, textareas (input.tsx / select.tsx / textarea.tsx) ---- */
+.shadowbase input[type="text"],
+.shadowbase input[type="number"],
+.shadowbase input[type="search"],
+.shadowbase input[type="password"],
+.shadowbase select,
+.shadowbase textarea {
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid hsl(var(--input));
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  padding: 0.5rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  box-shadow: none;
+  transition: border-color 0.15s;
+}
+.shadowbase textarea {
+  height: auto;
+  min-height: 80px;
+  resize: vertical;
+}
+.shadowbase input::placeholder,
+.shadowbase textarea::placeholder {
+  color: hsl(var(--muted-foreground));
+  opacity: 1;
+}
+.shadowbase input:focus-visible,
+.shadowbase select:focus-visible,
+.shadowbase textarea:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+  box-shadow: none;
+}
+.shadowbase input:disabled,
+.shadowbase select:disabled,
+.shadowbase textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.shadowbase input[readonly] {
+  background: hsl(var(--muted) / 0.5);
+  border-style: dashed;
+}
+/* globals.css: the browser's own spinner arrows are switched off everywhere; the stepper is .sb-qty */
+.shadowbase input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.shadowbase input[type="number"]::-webkit-outer-spin-button,
+.shadowbase input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.shadowbase select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2rem;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23add8e6' stroke-opacity='0.5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  cursor: pointer;
+}
+.shadowbase select option {
+  background: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+}
+
+/* ---- checkboxes (checkbox.tsx; Foundry v13 draws its checkbox as an FA glyph via ::before) ---- */
+.shadowbase input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  margin: 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid hsl(var(--primary));
+  background: transparent;
+  cursor: pointer;
+  display: inline-grid;
+  place-content: center;
+  vertical-align: middle;
+}
+.shadowbase input[type="checkbox"]::before,
+.shadowbase input[type="checkbox"]::after {
+  content: none;
+}
+.shadowbase input[type="checkbox"]:checked {
+  background: hsl(var(--primary));
+}
+.shadowbase input[type="checkbox"]:checked::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.3rem;
+  border-left: 2px solid hsl(var(--primary-foreground));
+  border-bottom: 2px solid hsl(var(--primary-foreground));
+  transform: translateY(-1px) rotate(-45deg);
+}
+.shadowbase input[type="checkbox"]:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+.shadowbase input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* ---- range (slider.tsx: an 8px rounded track, a 20px bordered thumb) ---- */
+.shadowbase input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1.25rem;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.shadowbase input[type="range"]::-webkit-slider-runnable-track {
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: hsl(var(--secondary));
+}
+.shadowbase input[type="range"]::-moz-range-track {
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: hsl(var(--secondary));
+}
+.shadowbase input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.375rem;
+  border-radius: 9999px;
+  border: 2px solid hsl(var(--primary));
+  background: hsl(var(--background));
+}
+.shadowbase input[type="range"]::-moz-range-thumb {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  border: 2px solid hsl(var(--primary));
+  background: hsl(var(--background));
+}
+.shadowbase input[type="range"]:focus-visible {
+  outline: none;
+}
+.shadowbase input[type="range"]:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* ---- buttons: Foundry's core button reset inside .shadowbase; the sb-btn recipe is components.css ---- */
+.shadowbase button {
+  font-family: var(--font-body);
+  color: inherit;
+}
+.shadowbase button:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+/* ---- headings and links (Foundry's h1-h4 carry Modesto/Signika borders by default) ---- */
+.shadowbase h1, .shadowbase h2, .shadowbase h3, .shadowbase h4 {
+  font-family: var(--font-headline);
+  border: 0;
+  margin: 0;
+  color: inherit;
+}
+.shadowbase a {
+  color: hsl(var(--primary));
+}
+.shadowbase hr {
+  border: 0;
+  height: 1px;
+  background: hsl(var(--border));
+}
+
+/* ---- Foundry's tooltip element restyled while a .shadowbase app is its source ---- */
+#tooltip.shadowbase,
+.shadowbase .sb-tooltip {
+  z-index: 50;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+/* ---- DialogV2 windows the system opens (roll prompt, confirmations) ---- */
+.application.shadowbase.dialog .window-content,
+.application.dialog .shadowbase {
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+.application.dialog .shadowbase .form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.application.shadowbase.dialog .form-footer button,
+.application.dialog .form-footer .sb-btn {
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+}

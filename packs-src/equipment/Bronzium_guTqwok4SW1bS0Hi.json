@@ -1,0 +1,42 @@
+{
+  "_id": "guTqwok4SW1bS0Hi",
+  "_key": "!items!guTqwok4SW1bS0Hi",
+  "name": "Bronzium",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "BfpmoyLxdxsbBggo",
+  "sort": 3000000,
+  "system": {
+    "row": {
+      "name": "Bronzium",
+      "rarity": "Common",
+      "cost": 15,
+      "density": 520,
+      "category": "Raw Materials",
+      "subCategory": "Metal",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Dense, cheap metal often used in droid plating and heavy statues.",
+      "id": "ee93c43d-b60b-4dd7-a1ab-57260bec5d2c",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Bronzium"
+    }
+  }
+}

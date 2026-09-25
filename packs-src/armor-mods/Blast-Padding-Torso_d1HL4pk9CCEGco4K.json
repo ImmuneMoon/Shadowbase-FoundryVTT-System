@@ -1,0 +1,41 @@
+{
+  "_id": "d1HL4pk9CCEGco4K",
+  "_key": "!items!d1HL4pk9CCEGco4K",
+  "name": "Blast Padding (Torso)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "g3ttGbCetYWw12Jx",
+  "sort": 2400000,
+  "system": {
+    "row": {
+      "id": "e3add716-d541-4460-af30-14c191917ed0",
+      "name": "Blast Padding (Torso)",
+      "category": "Underlay Mod",
+      "cost": 80,
+      "weight": 1,
+      "notes": "+2 DR vs. explosive damage to that location. Imposes DX -1 while worn.",
+      "equipped": false,
+      "quantity": 1,
+      "validSlots": [
+        "Torso",
+        "Droid Torso"
+      ],
+      "drBonus": 2
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "key": "Blast Padding (Torso)"
+    }
+  }
+}

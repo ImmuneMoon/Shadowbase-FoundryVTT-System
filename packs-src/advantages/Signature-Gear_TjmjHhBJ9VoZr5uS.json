@@ -1,0 +1,33 @@
+{
+  "_id": "TjmjHhBJ9VoZr5uS",
+  "_key": "!items!TjmjHhBJ9VoZr5uS",
+  "name": "Signature Gear",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "3vDRi4uDBtDelTd8",
+  "sort": 14800000,
+  "system": {
+    "row": {
+      "name": "Signature Gear",
+      "points": 1,
+      "description": "You own a specific piece of equipment that is particularly reliable or useful to you, and it's less likely to be lost or destroyed. Your trusty blaster, unique starship, or custom vibro-blade can be the key to success in a desperate situation, regardless of how you use it. Cost range: Varies (typically 1 point per level of value).",
+      "category": "Social/Wealth",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Signature Gear"
+    }
+  }
+}

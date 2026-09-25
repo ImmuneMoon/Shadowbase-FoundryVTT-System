@@ -1,0 +1,42 @@
+{
+  "_id": "y4MwtFClEJJGzySD",
+  "_key": "!items!y4MwtFClEJJGzySD",
+  "name": "Adrenal Synthetics",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "dPDuGSsNw7ZoBS6M",
+  "sort": 400000,
+  "system": {
+    "row": {
+      "name": "Adrenal Synthetics",
+      "rarity": "Uncommon",
+      "cost": 750,
+      "density": 60,
+      "category": "Raw Materials",
+      "subCategory": "Pharma",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A potent, fast-acting synthetic compound used to temporarily boost physical attributes.",
+      "id": "d8d1d6af-0b6d-4fb8-83b1-cacc09a3f44a",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Adrenal Synthetics"
+    }
+  }
+}

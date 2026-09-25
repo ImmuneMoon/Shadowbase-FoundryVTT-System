@@ -1,0 +1,42 @@
+{
+  "_id": "UrQ9UPbpXWziFrmz",
+  "_key": "!items!UrQ9UPbpXWziFrmz",
+  "name": "Blueprint: Technician's Visor",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "5sWB7AbQG1BGKlEY",
+  "sort": 30800000,
+  "system": {
+    "row": {
+      "id": "340d2b6e-c416-48e9-a8c9-3d7ef8677e49",
+      "name": "Blueprint: Technician's Visor",
+      "cost": 429,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Technician's Visor (Generation 0, proven, encoded, catalog design). Required to build Technician's Visor; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Technician's Visor",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 2550,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Face Gadget|Technician's Visor"
+    }
+  }
+}

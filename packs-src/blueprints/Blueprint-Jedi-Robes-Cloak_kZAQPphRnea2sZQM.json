@@ -1,0 +1,42 @@
+{
+  "_id": "kZAQPphRnea2sZQM",
+  "_key": "!items!kZAQPphRnea2sZQM",
+  "name": "Blueprint: Jedi Robes (Cloak)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 16300000,
+  "system": {
+    "row": {
+      "id": "b65cbd67-5f9d-4f17-b7d9-2ac847ea6fde",
+      "name": "Blueprint: Jedi Robes (Cloak)",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Jedi Robes (Cloak) (Generation 0, proven, encoded, catalog design). Required to build Jedi Robes (Cloak); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Jedi Robes (Cloak)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 5,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Jedi Robes (Cloak)"
+    }
+  }
+}

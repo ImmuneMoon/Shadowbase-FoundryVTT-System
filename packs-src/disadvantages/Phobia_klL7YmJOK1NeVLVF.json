@@ -1,0 +1,34 @@
+{
+  "_id": "klL7YmJOK1NeVLVF",
+  "_key": "!items!klL7YmJOK1NeVLVF",
+  "name": "Phobia",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 12800000,
+  "system": {
+    "row": {
+      "name": "Phobia",
+      "points": -5,
+      "level": null,
+      "description": "The character has an irrational and debilitating fear of a specific thing or situation. This phobia can be used by enemies to incapacitate or control you. Examples: Claustrophobia (-5 to -15 points); Xenophobia (-5 to -15 points).",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Phobia|Mental"
+    }
+  }
+}

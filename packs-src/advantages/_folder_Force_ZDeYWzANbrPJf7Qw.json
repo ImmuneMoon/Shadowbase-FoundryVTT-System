@@ -1,0 +1,19 @@
+{
+  "_id": "ZDeYWzANbrPJf7Qw",
+  "_key": "!folders!ZDeYWzANbrPJf7Qw",
+  "name": "Force",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 500000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "path": [
+        "Force"
+      ]
+    }
+  }
+}

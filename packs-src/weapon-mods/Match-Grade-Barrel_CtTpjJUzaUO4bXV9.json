@@ -1,0 +1,43 @@
+{
+  "_id": "CtTpjJUzaUO4bXV9",
+  "_key": "!items!CtTpjJUzaUO4bXV9",
+  "name": "Match-Grade Barrel",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "fruuaMC2BRbpKTj4",
+  "sort": 3000000,
+  "system": {
+    "row": {
+      "name": "Match-Grade Barrel",
+      "category": "Barrel/Muzzle",
+      "cost": 250,
+      "weight": 1,
+      "notes": "Precision machining increases the Accuracy (Acc) by +1.",
+      "accuracyBonus": 1,
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 1
+        }
+      ],
+      "id": "9b2ab626-df9e-4ea3-b9ab-417e150cc8cc",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Match-Grade Barrel"
+    }
+  }
+}

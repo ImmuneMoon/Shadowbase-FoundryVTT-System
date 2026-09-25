@@ -1,0 +1,39 @@
+{
+  "_id": "QNzqTdI2Ikfjvf1M",
+  "_key": "!items!QNzqTdI2Ikfjvf1M",
+  "name": "Light Lifting Servos",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 6600000,
+  "system": {
+    "row": {
+      "id": "8755cb3f-43dc-4a68-82d6-678107f7ad9a",
+      "name": "Light Lifting Servos",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 1340,
+      "weight": 10,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "st-servos-1",
+      "description": "+1 Lifting ST"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "st-servos-1"
+    }
+  }
+}

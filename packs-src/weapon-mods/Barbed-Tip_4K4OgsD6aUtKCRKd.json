@@ -1,0 +1,42 @@
+{
+  "_id": "4K4OgsD6aUtKCRKd",
+  "_key": "!items!4K4OgsD6aUtKCRKd",
+  "name": "Barbed Tip",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "j5yjPE6V6TAyz6NR",
+  "sort": 5300000,
+  "system": {
+    "row": {
+      "name": "Barbed Tip",
+      "category": "bladeHeadMod",
+      "cost": 150,
+      "weight": 0.5,
+      "notes": "An impaled weapon with this mod requires a ST-4 roll to remove quickly (1 second).",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.5
+        }
+      ],
+      "id": "7ad8e9fb-a642-4f14-b555-88bd707ed54c",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Barbed Tip"
+    }
+  }
+}

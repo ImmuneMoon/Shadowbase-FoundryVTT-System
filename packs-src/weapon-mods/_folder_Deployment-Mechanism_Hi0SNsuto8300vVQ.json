@@ -1,0 +1,19 @@
+{
+  "_id": "Hi0SNsuto8300vVQ",
+  "_key": "!folders!Hi0SNsuto8300vVQ",
+  "name": "Deployment Mechanism",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 1100000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "path": [
+        "Deployment Mechanism"
+      ]
+    }
+  }
+}

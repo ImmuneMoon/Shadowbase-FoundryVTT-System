@@ -1,0 +1,173 @@
+{
+  "_id": "ckbiLmny3maXZyfa",
+  "_key": "!items!ckbiLmny3maXZyfa",
+  "name": "Vibrosword",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "d4eK6lRChskXlqOO",
+  "sort": 3400000,
+  "system": {
+    "row": {
+      "id": "5cd67e9b-2276-42e5-bdfa-5072ab8bdceb",
+      "customName": "Vibrosword",
+      "baseType": "Vibrosword",
+      "baseSkill": "Broadsword",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": 100,
+      "maxCharges": 100,
+      "condition": "Fine",
+      "baseReach": "1",
+      "baseWeight": 4.15,
+      "finalWeight": 4.15,
+      "baseCost": 634,
+      "finalCost": 3804,
+      "gripParts": [
+        {
+          "inventoryId": "24f91037-9897-46a5-80a9-bb794f002093",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "d5dda9e5-8949-4279-8ca9-bee36878b02b",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "utilityParts": [
+        {
+          "inventoryId": "f6e1cc68-aae9-4e6a-82d6-f8cd0f3c520d",
+          "materialId": null,
+          "quantity": 1
+        },
+        {
+          "inventoryId": "39047cc3-da43-44ce-b49b-a2a5d039e8c4",
+          "materialId": null,
+          "quantity": 1
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "5cd67e9b-2276-42e5-bdfa-5072ab8bdceb",
+        "customName": "Vibrosword",
+        "baseType": "Vibrosword",
+        "baseSkill": "Broadsword",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "condition": "Fine",
+        "baseReach": "1",
+        "baseWeight": 4.15,
+        "finalWeight": 4.15,
+        "baseCost": 634,
+        "finalCost": 3804,
+        "gripParts": [
+          {
+            "inventoryId": "24f91037-9897-46a5-80a9-bb794f002093",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "d5dda9e5-8949-4279-8ca9-bee36878b02b",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "utilityParts": [
+          {
+            "inventoryId": "f6e1cc68-aae9-4e6a-82d6-f8cd0f3c520d",
+            "materialId": null,
+            "quantity": 1
+          },
+          {
+            "inventoryId": "39047cc3-da43-44ce-b49b-a2a5d039e8c4",
+            "materialId": null,
+            "quantity": 1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "24f91037-9897-46a5-80a9-bb794f002093",
+          "name": "Standard Hilt",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInMeleeId": "5cd67e9b-2276-42e5-bdfa-5072ab8bdceb",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Broadsword/Shortsword/Saber. 1-handed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "d5dda9e5-8949-4279-8ca9-bee36878b02b",
+          "name": "Light Blade",
+          "category": "Melee Head",
+          "materialId": "durasteel",
+          "cost": 74,
+          "weight": 1.47,
+          "isInstalled": true,
+          "installedInMeleeId": "5cd67e9b-2276-42e5-bdfa-5072ab8bdceb",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Balanced.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "f6e1cc68-aae9-4e6a-82d6-f8cd0f3c520d",
+          "name": "Vibration Generator",
+          "category": "Melee Power Unit",
+          "cost": 300,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInMeleeId": "5cd67e9b-2276-42e5-bdfa-5072ab8bdceb",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Adds +1d cut/imp. Grants Armor Divisor (3). Needs a successful Computer Programming skill check to function if constructed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "39047cc3-da43-44ce-b49b-a2a5d039e8c4",
+          "name": "Power Cell",
+          "category": "Melee Power Unit",
+          "cost": 210,
+          "weight": 0.7,
+          "isInstalled": true,
+          "installedInMeleeId": "5cd67e9b-2276-42e5-bdfa-5072ab8bdceb",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Provides baseline power for attached emitters/generators.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Vibrosword"
+    }
+  }
+}

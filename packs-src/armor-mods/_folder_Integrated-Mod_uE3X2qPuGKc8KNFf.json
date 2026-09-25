@@ -1,0 +1,19 @@
+{
+  "_id": "uE3X2qPuGKc8KNFf",
+  "_key": "!folders!uE3X2qPuGKc8KNFf",
+  "name": "Integrated Mod",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 0,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "path": [
+        "Integrated Mod"
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "khreqxZNffpkWQEh",
+  "_key": "!folders!khreqxZNffpkWQEh",
+  "name": "Power Unit",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 400000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "path": [
+        "Power Unit"
+      ]
+    }
+  }
+}

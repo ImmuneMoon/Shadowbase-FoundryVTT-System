@@ -1,0 +1,42 @@
+{
+  "_id": "Q8T3H2Oy9A5yNkya",
+  "_key": "!items!Q8T3H2Oy9A5yNkya",
+  "name": "Blueprint: Vibroblade",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 43700000,
+  "system": {
+    "row": {
+      "id": "341d680a-086d-4740-b5a2-534af72df479",
+      "name": "Blueprint: Vibroblade",
+      "cost": 374,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Vibroblade (Generation 0, proven, encoded, catalog design). Required to build Vibroblade; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Vibroblade",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 2000,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Vibroblade"
+    }
+  }
+}

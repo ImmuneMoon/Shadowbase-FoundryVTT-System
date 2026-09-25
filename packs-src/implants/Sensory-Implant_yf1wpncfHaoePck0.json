@@ -1,0 +1,42 @@
+{
+  "_id": "yf1wpncfHaoePck0",
+  "_key": "!items!yf1wpncfHaoePck0",
+  "name": "Sensory Implant",
+  "type": "implant",
+  "img": "icons/svg/regen.svg",
+  "folder": "Xt5bv6RNBDGNU8uh",
+  "sort": 1500000,
+  "system": {
+    "row": {
+      "id": "5e48be7e-07a2-469f-9ab6-f6012e0fd509",
+      "name": "Sensory Implant",
+      "cost": 4410,
+      "finalCp": 12,
+      "effect": "Grants +2 Perception and Acute Vision 1.",
+      "category": "Neural",
+      "pathways": [
+        "Perception",
+        "Vision"
+      ],
+      "slotType": "Neural",
+      "installed": false,
+      "weight": 0.1,
+      "notes": "Trait Package: 12 CP of Advantages (Acute Vision); Mandatory Flaws offset. Occupies Perception/Vision pathways. Materials: Silicon: 0.1 lbs (5 cr)."
+    },
+    "source": "implants",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "implants"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "implants",
+      "key": "Neural|Sensory Implant"
+    }
+  }
+}

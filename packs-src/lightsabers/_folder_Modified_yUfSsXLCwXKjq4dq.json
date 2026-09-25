@@ -1,0 +1,19 @@
+{
+  "_id": "yUfSsXLCwXKjq4dq",
+  "_key": "!folders!yUfSsXLCwXKjq4dq",
+  "name": "Modified",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 300000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsabers",
+      "path": [
+        "Modified"
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "Oh3x5u0Hy1HpzLID",
+  "_key": "!folders!Oh3x5u0Hy1HpzLID",
+  "name": "Survival Gear",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 1300000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "path": [
+        "Survival Gear"
+      ]
+    }
+  }
+}

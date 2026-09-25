@@ -1,0 +1,44 @@
+{
+  "_id": "Ell1DIU73hGBU2dE",
+  "_key": "!items!Ell1DIU73hGBU2dE",
+  "name": "Relacite",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "CHP7xje9NHnZhKqb",
+  "sort": 8500000,
+  "system": {
+    "row": {
+      "id": "454b99f5-4181-4dbe-8ef9-e4f535e69cbd",
+      "name": "Relacite",
+      "cost": 12000,
+      "weight": 0.2,
+      "effect": "+2 to all Force powers.",
+      "category": "Lightsaber Power Crystal",
+      "materials": [
+        {
+          "name": "Aurodium",
+          "amount": 0.2
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "+2 to all Force powers."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:relacite"
+    }
+  }
+}

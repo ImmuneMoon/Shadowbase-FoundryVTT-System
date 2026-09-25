@@ -1,0 +1,57 @@
+{
+  "_id": "7mdwP73wIFVyG7TI",
+  "_key": "!items!7mdwP73wIFVyG7TI",
+  "name": "Micro-Rocket (Plasma)",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "qrQnM70omC8gfDQ5",
+  "sort": 1900000,
+  "system": {
+    "row": {
+      "name": "Micro-Rocket (Plasma)",
+      "craftingCategory": "Explosives",
+      "type": "Missile",
+      "maxCharges": 1,
+      "cost": 772,
+      "weight": 0.5,
+      "formula": "3d",
+      "notes": "Damage: 3d burning explosion. Miniature gauntlet payload designed to melt localized armor plates, providing tactical anti-cyborg utility for mobile skirmishers.",
+      "materials": [
+        {
+          "name": "Duraplast",
+          "amount": 0.2
+        },
+        {
+          "name": "Propellant Mix",
+          "amount": 0.3
+        }
+      ],
+      "id": "e33dcecb-1b5f-4c73-a63d-03b6cfe41bb0",
+      "quantity": 1,
+      "currentCharges": 1,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 772,
+      "baseWeight": 0.5,
+      "containerType": "None",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Micro-Rocket (Plasma)"
+    }
+  }
+}

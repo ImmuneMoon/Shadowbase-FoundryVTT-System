@@ -1,0 +1,39 @@
+{
+  "_id": "eGuWL2Rq0Mk7zZXY",
+  "_key": "!items!eGuWL2Rq0Mk7zZXY",
+  "name": "Primary Optic (S6-Series)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "oqIU8n2TNn1530V9",
+  "sort": 3400000,
+  "system": {
+    "row": {
+      "id": "f21b57e0-9b03-42d0-b153-cd85d26c2d23",
+      "name": "Primary Optic (S6-Series)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Sensor",
+      "cost": 532,
+      "weight": 1,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "optic-s6-series",
+      "description": "Telescopic Vision 1"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "optic-s6-series"
+    }
+  }
+}

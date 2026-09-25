@@ -1,0 +1,24 @@
+{{!-- templates/actor/parts/storage-box.hbs - one storage box (storage/storage-box-section.tsx: rename, purge, stored rows with
+     x qty / weight / category and Pick Up). Context: a box { id, name, description, rows, count, totalWeight }. --}}
+<li class="sb-storage-box" data-box-id="{{id}}">
+  <div class="sb-storage-box__head">
+    <i class="fa-solid fa-box-archive"></i>
+    <input type="text" class="sb-input sb-row__name" name="storageBoxes.{{id}}.name" value="{{name}}" placeholder="{{localize "SHADOWBASE.Sheet.Inventory.BoxName"}}" {{disabled (not @root.editable)}}>
+    <span class="sb-badge sb-badge-secondary sb-mono">{{count}} · {{totalWeight}} lb</span>
+    <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-danger" data-action="deleteStorageBox" data-box-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.Inventory.PurgeBoxTitle"}}" {{disabled (not @root.editable)}}><i class="fa-solid fa-trash"></i></button>
+  </div>
+  <ul class="sb-storage-box__rows">
+    {{#each rows}}
+    <li class="sb-stored-row" data-item-id="{{this.id}}">
+      <span class="sb-stored-row__name">{{this.rowName}}</span>
+      {{#if (gt this.quantity 1)}}<span class="sb-badge sb-badge-outline sb-mono">×{{this.quantity}}</span>{{/if}}
+      <span class="sb-muted sb-mono">{{this.weight}} lb</span>
+      <span class="sb-muted">{{this.sourceLabel}}</span>
+      <span class="sb-row__spacer"></span>
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm sb-accent" data-action="pickUpItem" data-item-id="{{this.id}}" {{disabled (not @root.editable)}}><i class="fa-solid fa-circle-arrow-up"></i> {{localize "SHADOWBASE.Sheet.Inventory.PickUp"}}</button>
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-danger" data-action="deleteItem" data-item-id="{{this.id}}" title="{{localize "SHADOWBASE.Sheet.Delete"}}" {{disabled (not @root.editable)}}><i class="fa-solid fa-xmark"></i></button>
+    </li>
+    {{/each}}
+    {{#unless rows.length}}<li class="sb-empty sb-empty--inline">{{localize "SHADOWBASE.Sheet.Inventory.BoxEmpty"}}</li>{{/unless}}
+  </ul>
+</li>

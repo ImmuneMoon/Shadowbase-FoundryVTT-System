@@ -1,0 +1,34 @@
+{
+  "_id": "6VTP4OC6d2GT8QgV",
+  "_key": "!items!6VTP4OC6d2GT8QgV",
+  "name": "Gambler",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "gJ04IFKOKVTXdKLa",
+  "sort": 5900000,
+  "system": {
+    "row": {
+      "name": "Gambler",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Average",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Gambler"
+    }
+  }
+}

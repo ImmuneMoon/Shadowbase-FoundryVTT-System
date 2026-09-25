@@ -1,0 +1,42 @@
+{
+  "_id": "5vmhcsDwQ7Dvkwrm",
+  "_key": "!items!5vmhcsDwQ7Dvkwrm",
+  "name": "Blueprint: Czerka \"Purge\" Flamer",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MCSSnmRYlA0D9ZvW",
+  "sort": 31000000,
+  "system": {
+    "row": {
+      "id": "5a6222a3-7b53-4091-b50e-d88f4d4d0986",
+      "name": "Blueprint: Czerka \"Purge\" Flamer",
+      "cost": 1309,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Czerka \"Purge\" Flamer (Generation 0, proven, encoded, catalog design). Required to build Czerka \"Purge\" Flamer; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Czerka \"Purge\" Flamer",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 11344,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Flamethrowers|Czerka \"Purge\" Flamer"
+    }
+  }
+}

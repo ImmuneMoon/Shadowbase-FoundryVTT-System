@@ -1,0 +1,34 @@
+{
+  "_id": "XgINYB3MtEaeLqYh",
+  "_key": "!items!XgINYB3MtEaeLqYh",
+  "name": "Poison Grenade",
+  "type": "explosive",
+  "img": "icons/svg/explosion.svg",
+  "folder": "AStJ6TwJg1TlZvs5",
+  "sort": 1100000,
+  "system": {
+    "row": {
+      "baseExplosiveName": "Poison Grenade",
+      "quantity": 1,
+      "finalWeight": 1,
+      "finalCost": 1836,
+      "preferredDefaultAttr": "DX",
+      "id": "79454dbd-adee-45df-8e91-99c84c754d07"
+    },
+    "source": "customExplosives",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "explosives"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "explosives",
+      "key": "Poison Grenade"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "_id": "eYFA8B8eHWq9CHS2",
+  "_key": "!folders!eYFA8B8eHWq9CHS2",
+  "name": "Droid Armor (Forged)",
+  "type": "Item",
+  "folder": "AHUgnqohVTlbyS6h",
+  "sorting": "a",
+  "sort": 1800000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "path": [
+        "Droid Parts",
+        "Droid Armor (Forged)"
+      ]
+    }
+  }
+}

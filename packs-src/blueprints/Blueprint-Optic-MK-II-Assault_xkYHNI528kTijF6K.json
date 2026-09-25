@@ -1,0 +1,42 @@
+{
+  "_id": "xkYHNI528kTijF6K",
+  "_key": "!items!xkYHNI528kTijF6K",
+  "name": "Blueprint: Optic (MK II Assault)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "idvhLPGyw0BIk332",
+  "sort": 28300000,
+  "system": {
+    "row": {
+      "id": "1bc3b2ea-0603-422a-835d-7ffa1b7ed770",
+      "name": "Blueprint: Optic (MK II Assault)",
+      "cost": 287,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Optic (MK II Assault) (Generation 0, proven, encoded, catalog design). Required to build Optic (MK II Assault); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Optic (MK II Assault)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1128,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Sensor|Optic (MK II Assault)"
+    }
+  }
+}

@@ -1,0 +1,1623 @@
+{
+  "type": "character",
+  "name": "Hshif",
+  "portrait": null,
+  "player": "",
+  "species": "Selkath",
+  "homeworld": "Manaan",
+  "campaign": "Shadows of the Mandalorian Wars",
+  "investment": {
+    "isStartingPointsMode": true,
+    "useLiftingST": true,
+    "useStrikingST": true,
+    "useArmST": true,
+    "cpBaseline": 0,
+    "stBaseline": 10,
+    "dxBaseline": 10,
+    "iqBaseline": 10,
+    "htBaseline": 10,
+    "hitPointsBaseline": 0,
+    "endurancePointsBaseline": 0,
+    "forcePointsBaseline": 0,
+    "willBaseline": 0,
+    "perceptionBaseline": 0,
+    "frightCheckBaseline": 0,
+    "basicSpeedBaseline": 0,
+    "basicMoveBaseline": 0,
+    "visionBaseline": 0,
+    "hearingBaseline": 0,
+    "tasteAndSmellBaseline": 0,
+    "touchBaseline": 0
+  },
+  "points": {
+    "total": 242,
+    "spent": 241,
+    "remaining": 1,
+    "powerPoints": 100,
+    "lightSidePoints": 44,
+    "darkSidePoints": 0,
+    "forceAlignment": 44
+  },
+  "credits": {
+    "total": 0,
+    "tradedCp": 0,
+    "tradedForm": "digital",
+    "trackDigital": false,
+    "trackPhysical": false
+  },
+  "details": {
+    "height": "6'2",
+    "weight": "198",
+    "age": 58,
+    "sizeModifier": 0,
+    "isDroid": false,
+    "isForceSensitive": true,
+    "appearance": "",
+    "techLevel": "",
+    "turnCounter": 0,
+    "stunType": "None",
+    "facing": 0,
+    "incomingBearing": 0,
+    "threatEngaged": false,
+    "additionalBearings": [],
+    "facingChangeUsed": false
+  },
+  "droidBuild": {
+    "chassisId": null,
+    "powerCoreId": null,
+    "head": {
+      "componentId": null,
+      "processorId": null,
+      "memoryCoreId": null,
+      "sensorIds": [],
+      "externalModId": null
+    },
+    "arms": [],
+    "legs": [],
+    "chassisMods": {
+      "internalIds": [],
+      "externalIds": [],
+      "utilityIds": [],
+      "auxiliaryIds": [],
+      "motiveMountIds": [],
+      "reinforcementId": null,
+      "armorId": null,
+      "motivatorId": null,
+      "actuatorId": null,
+      "wiringId": null
+    }
+  },
+  "isConstructed": false,
+  "storageBoxes": [],
+  "statusEffects": [],
+  "pinnedNotifications": [],
+  "shipPosition": null,
+  "assignedStation": null,
+  "languages": "Selkath (Native); Basic (Fluent, granted)",
+  "culturalFamiliarities": "Ahto City (Manaan) [0], Outer Rim, Core Worlds, Nar Shaddaa",
+  "literacy": "Native Literacy [0]",
+  "languagesBaseline": 0,
+  "culturalFamiliaritiesBaseline": 0,
+  "literacyBaseline": 0,
+  "languageEntries": [
+    {
+      "id": "a96136a9-b702-434c-b00a-04fc08ffb690",
+      "tongue": "Selkath",
+      "tier": "native"
+    },
+    {
+      "id": "90fa7c84-69ba-4528-91ea-d68b7ce7171c",
+      "tongue": "Basic",
+      "tier": "fluent",
+      "granted": true
+    }
+  ],
+  "republicRaised": false,
+  "attributes": {
+    "strength": {
+      "value": 13,
+      "points": 30
+    },
+    "dexterity": {
+      "value": 12,
+      "points": 40
+    },
+    "iq": {
+      "value": 12,
+      "points": 40
+    },
+    "health": {
+      "value": 12,
+      "points": 20
+    }
+  },
+  "characteristics": {
+    "hitPoints": {
+      "base": 13,
+      "final": null,
+      "effective": 13,
+      "current": 13
+    },
+    "will": {
+      "base": 12,
+      "final": 15,
+      "effective": 15,
+      "current": 15
+    },
+    "perception": {
+      "base": 12,
+      "final": null,
+      "effective": 12,
+      "current": null
+    },
+    "vision": {
+      "base": 12,
+      "final": 10
+    },
+    "hearing": {
+      "base": 10,
+      "final": 10
+    },
+    "tasteAndSmell": {
+      "base": null,
+      "final": null
+    },
+    "touch": {
+      "base": 10,
+      "final": 10
+    },
+    "endurancePoints": {
+      "base": 12,
+      "final": null,
+      "effective": 12,
+      "current": 12
+    },
+    "forcePoints": {
+      "base": 15,
+      "final": null,
+      "effective": 16,
+      "current": 15
+    },
+    "frightCheck": {
+      "base": 15,
+      "final": 8,
+      "effective": 8,
+      "current": 8
+    },
+    "basicSpeed": {
+      "base": 6,
+      "final": null,
+      "effective": 6
+    },
+    "basicMove": {
+      "base": 6,
+      "final": null
+    },
+    "damage": {
+      "thrust": "",
+      "swing": ""
+    },
+    "basicLift": "",
+    "defenses": {
+      "dodge": 9,
+      "selectedParrySkill": null,
+      "selectedBlockSkill": null
+    },
+    "dr": {
+      "head": 2,
+      "torso": 9,
+      "leftArm": 5,
+      "rightArm": 5,
+      "leftLeg": 6,
+      "rightLeg": 6,
+      "leftHand": 3,
+      "rightHand": 3,
+      "leftFoot": 4,
+      "rightFoot": 4
+    },
+    "locations": [
+      {
+        "name": "Head",
+        "type": "Head",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 2,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 3,
+        "installedHardwareIds": [],
+        "id": "9dfa7d3c-42dc-4e61-aa4d-2a37e217528e"
+      },
+      {
+        "name": "Face",
+        "type": "Face",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 5,
+        "installedHardwareIds": [],
+        "id": "8b7fb31c-0c12-402d-acfd-57e89efdff02"
+      },
+      {
+        "name": "Upper Torso",
+        "type": "Vitals",
+        "side": "Center",
+        "relativeSM": -3,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 17,
+        "installedHardwareIds": [],
+        "id": "a4030fbb-e05a-4ae7-be6d-39b64f79f7e5"
+      },
+      {
+        "name": "Torso",
+        "type": "Torso",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 10,
+        "installedHardwareIds": [],
+        "id": "8cebfff6-56b7-42b8-9cc3-a616293d0806"
+      },
+      {
+        "name": "Right Arm",
+        "type": "Arm",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 7,
+        "installedHardwareIds": [],
+        "id": "cf4d1855-4a34-4ae5-a139-39da7196731d"
+      },
+      {
+        "name": "Right Hand",
+        "type": "Hand",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "3df639ea-ed67-4f97-932d-0aed8d171e51"
+      },
+      {
+        "name": "Left Arm",
+        "type": "Arm",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 8,
+        "installedHardwareIds": [],
+        "id": "9adfcc7b-c432-44a1-8f4c-d57c28086466"
+      },
+      {
+        "name": "Left Hand",
+        "type": "Hand",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "b73d35a1-af34-4afc-b4e0-a77e49b7e4dc"
+      },
+      {
+        "name": "Right Leg",
+        "type": "Leg",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "706ff9ea-948f-4805-bb44-9c4eb78719e0"
+      },
+      {
+        "name": "Right Foot",
+        "type": "Foot",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "4151a6e9-7fd7-41eb-8bde-9525909a718c"
+      },
+      {
+        "name": "Left Leg",
+        "type": "Leg",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "4f2eacfa-8b70-4fdd-affd-f92e1b66246c"
+      },
+      {
+        "name": "Left Foot",
+        "type": "Foot",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "a447ed44-f486-4a22-a40a-63ccdc0f0197"
+      }
+    ]
+  },
+  "narrative": {
+    "description": "",
+    "background": "",
+    "notes": ""
+  },
+  "traits": {
+    "advantages": [
+      {
+        "name": "Amphibious",
+        "points": 10,
+        "level": null,
+        "description": "Graceful in water. You move naturally and comfortably in aquatic environments.",
+        "baselinePoints": 10,
+        "category": "Physical",
+        "fromSpecies": "Selkath",
+        "modifiers": null,
+        "cost": 0
+      },
+      {
+        "name": "Damage Resistance (DR)",
+        "points": 5,
+        "level": 1,
+        "description": "DR 1",
+        "baselinePoints": 5,
+        "category": "Cybernetic",
+        "fromSpecies": "Selkath",
+        "modifiers": null,
+        "cost": 0
+      },
+      {
+        "name": "Striker (Venomous Claws)",
+        "points": 5,
+        "level": null,
+        "description": "Natural claw attack tipped with venom.",
+        "baselinePoints": 5,
+        "category": "Physical",
+        "fromSpecies": "Selkath",
+        "modifiers": null,
+        "cost": 0
+      },
+      {
+        "name": "Fit",
+        "points": 5,
+        "level": null,
+        "description": "You are unusually robust and healthy, granting bonuses to Endurance Point (EP) recovery and resistance to illness. Ensures you can endure long campaigns, torture, or the rigors of galactic travel, serving any master or cause.",
+        "baselinePoints": 5,
+        "category": "Physical",
+        "fromSpecies": "Selkath",
+        "modifiers": null,
+        "cost": 0
+      },
+      {
+        "name": "Force Sensitive",
+        "points": 5,
+        "level": null,
+        "description": "You can feel the Force. Purchasing this advantage is the prerequisite for learning all Apprentice-tier Force Powers. You must purchase this advantage before buying anything else related to the Force (Force Powers, Force Training, Force Talents, Force skills, and other Force Advantages). You can only take this advantage at character creation – your character is either Force Sensitive or not. Taking this advantage does not necessarily mean your character is aware of their abilities. This advantage also grants access to more exotic advantages normally only available in racial templates; these are subject to the \"-Force\" limitation, costing 10% less than normal. This is the foundational ability to tap into the galaxy's ultimate power, which can be bent to any will.",
+        "baselinePoints": 0,
+        "category": "Force",
+        "cost": 5
+      },
+      {
+        "name": "Force Training",
+        "points": 10,
+        "level": 1,
+        "description": "Force Training 1 (Adept). Benefit: You unlock the ability to learn Adept tier Force Powers. You also gain a permanent +1 bonus to your maximum Force Points (FP).",
+        "baselinePoints": 0,
+        "category": "Force",
+        "cost": 10
+      },
+      {
+        "name": "Weapon Master",
+        "points": 20,
+        "level": 1,
+        "description": "Single weapon (e.g., Lightsaber)",
+        "baselinePoints": 0,
+        "category": "Physical",
+        "cost": 20
+      },
+      {
+        "name": "Literacy",
+        "points": 10,
+        "level": null,
+        "description": "You can read and write in your native language. A basic necessity for understanding galactic politics, decrypting intelligence, or forging documents.",
+        "baselinePoints": 0,
+        "category": "Social/Wealth",
+        "cost": 10
+      },
+      {
+        "name": "High Pain Threshold",
+        "points": 10,
+        "level": null,
+        "description": "You are unusually resistant to the effects of pain, suffering fewer penalties from injury. Allows you to endure torture or continue fighting effectively even when severely wounded, a vital trait for a survivor in a brutal war.",
+        "baselinePoints": 0,
+        "category": "Mental",
+        "cost": 10
+      }
+    ],
+    "disadvantages": [
+      {
+        "name": "Dependency",
+        "points": -5,
+        "level": null,
+        "description": "Requires regular immersion in water.",
+        "baselinePoints": -5,
+        "category": "Mental",
+        "fromSpecies": "Selkath",
+        "modifiers": null,
+        "cost": 0
+      },
+      {
+        "name": "Disfigurement",
+        "points": -10,
+        "level": null,
+        "description": "You have a prominent scar, deformity, or other physical mark that causes negative reactions from others. This can make social interactions difficult and you may be shunned or targeted by prejudiced individuals.",
+        "baselinePoints": 0,
+        "category": "Physical",
+        "cost": -10
+      },
+      {
+        "name": "Loner",
+        "points": -5,
+        "level": null,
+        "description": "You prefer solitude and find it difficult to work in groups or rely on others. This can leave you isolated and vulnerable when teamwork is crucial, making you an easier target.",
+        "baselinePoints": 0,
+        "category": "Mental",
+        "cost": -5
+      },
+      {
+        "name": "Post-Combat Shakes",
+        "points": -5,
+        "level": null,
+        "description": "After intense combat, you experience physical tremors or emotional distress. This can leave you vulnerable in prolonged engagements or successive encounters. Range: -5 to -10 points.",
+        "baselinePoints": 0,
+        "category": "Mental",
+        "cost": -5
+      },
+      {
+        "name": "Flashbacks",
+        "points": -5,
+        "level": null,
+        "description": "You experience vivid, disturbing memories of past traumatic events, often triggered by stress. These episodes can render you temporarily helpless and vulnerable in critical moments. Range: -5 to -15 points.",
+        "baselinePoints": 0,
+        "category": "Mental",
+        "cost": -5
+      },
+      {
+        "name": "Stubbornness",
+        "points": -5,
+        "level": null,
+        "description": "The character is unusually resistant to changing their mind or admitting they are wrong, even in the face of overwhelming evidence. This can lead to missed opportunities or continued pursuit of flawed plans despite clear warning signs.",
+        "baselinePoints": 0,
+        "category": "Mental",
+        "cost": -5
+      },
+      {
+        "name": "Paranoia",
+        "points": -10,
+        "level": null,
+        "description": "The character suffers from irrational distrust and suspicion of others. This can lead to misjudgments, strained alliances, and an inability to trust even legitimate offers of help, making you isolated.",
+        "baselinePoints": 0,
+        "category": "Mental",
+        "cost": -10
+      },
+      {
+        "name": "Combat Paralysis",
+        "points": -15,
+        "level": null,
+        "description": "When faced with sudden danger, you freeze up. You must make a Fright Check to do anything for the first few seconds of a sudden combat.",
+        "baselinePoints": 0,
+        "category": "Mental",
+        "cost": -15
+      },
+      {
+        "name": "Nightmares",
+        "points": -5,
+        "description": "You are plagued by bad dreams, often leading to poor sleep. Requires self-control roll.",
+        "baselinePoints": 0,
+        "cost": -5
+      }
+    ],
+    "quirks": [
+      {
+        "name": "Haunted by the War",
+        "points": -1,
+        "description": "The horrors of the Mandalorian Wars have left a mark. You might occasionally fall silent, lost in a memory, or have a low tolerance for loud, sudden noises that remind you of blaster fire.",
+        "baselinePoints": 0,
+        "cost": -1
+      },
+      {
+        "name": "Grizzled and Gruff",
+        "points": -1,
+        "description": "",
+        "baselinePoints": 0,
+        "cost": -1
+      },
+      {
+        "name": "Smells Like Fish",
+        "points": -1,
+        "description": "",
+        "baselinePoints": 0,
+        "cost": -1
+      },
+      {
+        "name": "Hoarse Voice",
+        "points": -1,
+        "description": "",
+        "baselinePoints": 0,
+        "cost": -1
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Brawling",
+      "points": 0,
+      "cost": 0,
+      "level": "11",
+      "relativeLevel": "DX/Easy",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    {
+      "name": "Streetwise",
+      "points": 0,
+      "cost": 0,
+      "level": "10",
+      "relativeLevel": "IQ/Average",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    {
+      "name": "Lightsaber Combat (standard)",
+      "points": 0,
+      "cost": 16,
+      "level": "17",
+      "relativeLevel": "DX/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    {
+      "name": "Lightsaber Construction",
+      "points": 0,
+      "cost": 0,
+      "level": "9",
+      "relativeLevel": "IQ/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    {
+      "name": "Telekinesis",
+      "points": 0,
+      "cost": 1,
+      "level": "13",
+      "relativeLevel": "Will/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    {
+      "name": "Melee Weapon",
+      "points": 0,
+      "cost": 3,
+      "level": "13",
+      "relativeLevel": "DX/Average",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    {
+      "name": "Cooking",
+      "points": 0,
+      "cost": 0,
+      "level": "10",
+      "relativeLevel": "IQ/Easy",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    {
+      "name": "Scrounging",
+      "points": 0,
+      "cost": 0,
+      "level": "11",
+      "relativeLevel": "IQ/Easy",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    {
+      "name": "Movement",
+      "points": 0,
+      "cost": 1,
+      "level": "10",
+      "relativeLevel": "HT/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    {
+      "name": "Sense",
+      "points": 0,
+      "cost": 0,
+      "level": "10",
+      "relativeLevel": "Per/Average",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    {
+      "name": "Swimming",
+      "points": 0,
+      "cost": 0,
+      "level": "0",
+      "relativeLevel": "Native",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    {
+      "name": "Armor (Medium)",
+      "points": 0,
+      "cost": 1,
+      "level": "12",
+      "relativeLevel": "DX/Easy",
+      "notes": "",
+      "baselinePoints": 0
+    }
+  ],
+  "abilities": {
+    "forcePowers": [
+      {
+        "name": "Force Jump/Leap",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 1,
+        "epCost": null,
+        "effect": "Double your effective Jumping skill distance.",
+        "characterTier": "Apprentice",
+        "baseSkill": "Agility (DX/Hard)",
+        "category": "Control Powers",
+        "alignment": "Grey",
+        "baselinePoints": 0
+      },
+      {
+        "description": "The Force-user subtly influences the minds of others, planting suggestions, causing confusion, or altering perceptions.",
+        "category": "Alter Powers",
+        "cpCost": 35,
+        "fpCost": 4,
+        "alignment": "Grey",
+        "baseSkill": "Influence (Will/Hard)",
+        "characterTier": "Expert",
+        "effect": "Compel a simple, non-suicidal action. Range increases to 20 feet. Can target up to three beings, or one Force-sensitive at a penalty.",
+        "name": "Force Mind Trick",
+        "level": 3,
+        "baselinePoints": 0
+      },
+      {
+        "description": "The Force-user can telekinetically push or pull objects and beings.",
+        "category": "Control Powers",
+        "cpCost": 20,
+        "fpCost": 2,
+        "alignment": "Grey",
+        "baseSkill": "Telekinesis (Will/Hard)",
+        "characterTier": "Adept",
+        "effect": "Force increases to 2xBL within 20 feet. Can attempt to disarm an opponent or push/pull a person, causing them to fall prone.",
+        "name": "Force Push/Pull",
+        "level": 2,
+        "baselinePoints": 0
+      }
+    ],
+    "combatTechniques": [
+      {
+        "name": "Feint",
+        "category": "Universal",
+        "level": 1,
+        "cpCost": 4,
+        "epCost": 0,
+        "effect": "Win a Quick Contest of your combat skill vs. your foe's; if you win, their Active Defense is at a penalty equal to your margin of victory on your next attack against them.",
+        "characterTier": "Apprentice",
+        "baseSkill": "Any Melee or Ranged skill",
+        "baselinePoints": 0
+      },
+      {
+        "name": "Disarming Strike",
+        "category": "Universal",
+        "level": 2,
+        "cpCost": 20,
+        "epCost": 2,
+        "effect": "Attack at -2 vs held item. On hit, target rolls DX-1 or drops. Half damage to item.",
+        "characterTier": "Adept",
+        "baseSkill": "Any Melee or Ranged skill",
+        "skillPenalty": 2,
+        "baselinePoints": 0,
+        "fpCost": null,
+        "damageBonus": null,
+        "skillBonus": null
+      }
+    ],
+    "lightsaberForms": [
+      {
+        "name": "Form VI: Niman",
+        "level": 1,
+        "baselinePoints": 0,
+        "cpCost": 10,
+        "effect": "You suffer one less penalty (minimum -1) when attempting a Force power while also making a Lightsaber Combat attack or defense in the same turn. You gain a +1 bonus to Will rolls when using Force powers in combat.",
+        "characterTier": "Apprentice",
+        "applies": {},
+        "conditional": [
+          {
+            "target": "will",
+            "value": 1,
+            "when": "on Will rolls when using Force powers in combat"
+          }
+        ],
+        "baseSkill": "Lightsaber Combat (DX/Hard), Will"
+      },
+      {
+        "name": "Form II: Makashi",
+        "level": 1,
+        "baselinePoints": 0,
+        "cpCost": 10,
+        "effect": "You gain a +1 bonus to Feint skill rolls and a +1 bonus to your Parry score when facing a single opponent wielding a melee weapon. Your thrusting attacks with a lightsaber inflict +1 damage.",
+        "characterTier": "Apprentice",
+        "applies": {},
+        "conditional": [
+          {
+            "target": "parry",
+            "value": 1,
+            "when": "facing a single opponent wielding a melee weapon"
+          },
+          {
+            "target": "feint",
+            "value": 1,
+            "when": "on Feint skill rolls"
+          },
+          {
+            "target": "damage",
+            "value": 1,
+            "when": "on thrusting attacks with a lightsaber"
+          }
+        ],
+        "baseSkill": "Lightsaber Combat (DX/Hard), Fencing (DX/Average)"
+      }
+    ]
+  },
+  "inventory": {
+    "general": [
+      {
+        "id": "b3873cb0-94c4-4f71-819b-d40079902682",
+        "name": "Credit Chip",
+        "category": "Currencies",
+        "weight": 0.28,
+        "quantity": 1,
+        "storedValue": 0,
+        "cost": 0,
+        "description": "Standardized storage for carrying digital Galactic Credits. Reading requires a datapad or terminal.",
+        "condition": "Fine",
+        "notes": "Standardized storage for carrying digital Galactic Credits. Reading requires a datapad or terminal."
+      },
+      {
+        "name": "Medpac",
+        "cost": 204,
+        "skill": "First Aid, or Physician",
+        "description": "A standard dose of Kolto and a small amount of Syth-Flesh for minor wounds. Grants +1 to First Aid skill. Restores 1d Hit Points on a successful First Aid roll, or 3 HP on a failure, up to max HP. A critical failure inflicts 1 HP of damage. Contains 1 use.",
+        "category": "Medical & Pharmaceuticals",
+        "subCategory": "Healing Supplies",
+        "weight": 1,
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Kolto",
+            "amount": 0.4
+          },
+          {
+            "name": "Synth-Flesh",
+            "amount": 0.4
+          },
+          {
+            "name": "Duraplast",
+            "amount": 0.2
+          }
+        ],
+        "id": "4a19141b-ba0e-4dd3-9441-130e0ee72b87",
+        "condition": "Fine",
+        "isInstalled": false,
+        "installedInDroidId": null,
+        "storageLocationId": null,
+        "notes": "A standard dose of Kolto and a small amount of Syth-Flesh for minor wounds. Grants +1 to First Aid skill. Restores 1d Hit Points on a successful First Aid roll, or 3 HP on a failure, up to max HP. A critical failure inflicts 1 HP of damage. Contains 1 use."
+      },
+      {
+        "name": "Water Purifier",
+        "craftingCategory": "Survival & Utility Hardware",
+        "cost": 150,
+        "skill": "Survival",
+        "description": "Handheld device. Purifies 2 gallons/hour. Removes the HT roll against waterborne disease or parasites entirely (Ch1: Disease & Infection).",
+        "category": "Survival Gear",
+        "weight": 2,
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Filtration Mesh",
+            "amount": 1
+          },
+          {
+            "name": "Bronzium",
+            "amount": 1
+          }
+        ],
+        "id": "de391c57-75b7-4ba0-8ba9-47c58aa579e6",
+        "condition": "Fine",
+        "isInstalled": false,
+        "installedInDroidId": null,
+        "storageLocationId": null,
+        "notes": "Handheld device. Purifies 2 gallons/hour. Removes the HT roll against waterborne disease or parasites entirely (Ch1: Disease & Infection)."
+      },
+      {
+        "name": "Commlink (Handheld)",
+        "cost": 1398,
+        "skill": "Electronics Operation (Comms)",
+        "description": "Planetary range (50 mi). Materials: Silicon: 0.2 lbs, Durasteel: 0.5 lbs, Power Cell: 0.7 lbs.",
+        "category": "Communication & Data",
+        "weight": 1.4,
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Silicon",
+            "amount": 0.2
+          },
+          {
+            "name": "Durasteel",
+            "amount": 0.5
+          },
+          {
+            "name": "Power Cell",
+            "amount": 0.7
+          }
+        ],
+        "requiresSoftware": true,
+        "id": "8205cd7a-4bc4-4da6-acf0-0b2fb284061b",
+        "condition": "Fine",
+        "isInstalled": false,
+        "installedInDroidId": null,
+        "storageLocationId": null,
+        "notes": "Planetary range (50 mi). Materials: Silicon: 0.2 lbs, Durasteel: 0.5 lbs, Power Cell: 0.7 lbs."
+      },
+      {
+        "name": "Hydrospanner",
+        "cost": 1548,
+        "skill": "Mechanic",
+        "description": "The quintessential repair tool. Grants +1 to Mechanic rolls for starships and repulsorlift vehicles. Can be used as an improvised melee weapon (Sw-1 Cr, uses Axe/Mace skill at -2). Power Cell lasts 2 hours of continuous use.",
+        "category": "Tools & Electronics",
+        "subCategory": "Non-Consumable Tools",
+        "weight": 2,
+        "quantity": 1,
+        "materials": [
+          {
+            "name": "Silicon",
+            "amount": 0.6
+          },
+          {
+            "name": "Durasteel",
+            "amount": 0.7
+          },
+          {
+            "name": "Power Cell",
+            "amount": 0.7
+          }
+        ],
+        "id": "169b62a2-6e61-40cd-a06a-ba411184d490",
+        "condition": "Fine",
+        "isInstalled": false,
+        "installedInDroidId": null,
+        "storageLocationId": null,
+        "notes": "The quintessential repair tool. Grants +1 to Mechanic rolls for starships and repulsorlift vehicles. Can be used as an improvised melee weapon (Sw-1 Cr, uses Axe/Mace skill at -2). Power Cell lasts 2 hours of continuous use."
+      },
+      {
+        "name": "Power Cell",
+        "craftingCategory": "Power & Energy Components",
+        "cost": 210,
+        "skill": "Electronics Operation or Electronics Repair",
+        "description": "A small battery for an array of devices. Value drops 1 CR every 5 percent used — a full charge is worth 20 CR, so a depleted cell is worth 50. Recharges at a rate of 1% per minute connected to a power source. Needs Computer Programming to function if constructed.",
+        "category": "Utility & Miscellaneous",
+        "weight": 0.7,
+        "quantity": 1,
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "materials": [
+          {
+            "name": "Diatium",
+            "amount": 0.22
+          },
+          {
+            "name": "Silicon",
+            "amount": 0.02
+          },
+          {
+            "name": "Durasteel",
+            "amount": 0.46
+          }
+        ],
+        "requiresSoftware": true,
+        "id": "49dab88c-fb9f-463f-a2e9-bdb0e66feb25",
+        "condition": "Fine",
+        "isInstalled": false,
+        "installedInDroidId": null,
+        "storageLocationId": null,
+        "notes": "A small battery for an array of devices. Value drops 1 CR every 5 percent used — a full charge is worth 20 CR, so a depleted cell is worth 50. Recharges at a rate of 1% per minute connected to a power source. Needs Computer Programming to function if constructed."
+      }
+    ],
+    "weapons": {
+      "melee": [],
+      "blasters": [],
+      "lightsabers": [
+        {
+          "name": "Hshif's Lightsaber",
+          "description": "The classic Jedi weapon. Reliable, balanced, and simple.",
+          "category": "Standard",
+          "isConstructed": true,
+          "buildManifest": {
+            "emitter": {
+              "name": "Standard Emitter",
+              "material": "durasteel"
+            },
+            "switch": {
+              "name": "Standard Switch",
+              "material": "durasteel"
+            },
+            "sleeve": {
+              "name": "Standard Sleeve",
+              "material": "durasteel"
+            },
+            "pommel": {
+              "name": "Standard Pommel",
+              "material": "durasteel"
+            },
+            "powerCell": "Standard Diatium Cell",
+            "lens": "Standard Lens",
+            "matrix": "Standard Matrix",
+            "primaryCrystal": "blue-kyber"
+          },
+          "emitter": {
+            "inventoryId": "5998738b-93fb-4216-beeb-989fc4e1a1c8",
+            "materialId": "durasteel",
+            "wrapId": null
+          },
+          "switch": {
+            "inventoryId": "62218d14-1319-45c7-9841-e18a9b0a5029",
+            "materialId": "durasteel",
+            "wrapId": null
+          },
+          "sleeve": {
+            "inventoryId": "7f5ca2d9-40b9-4140-a1e4-60fa16ca1047",
+            "materialId": "durasteel",
+            "wrapId": null
+          },
+          "pommel": {
+            "inventoryId": "9302d5b0-0f10-4511-9879-332180a963d2",
+            "materialId": "durasteel",
+            "wrapId": null
+          },
+          "bladeLength": 90,
+          "equipped": false,
+          "quantity": 1,
+          "condition": "Fine",
+          "conditionTwo": "Fine",
+          "totalCost": 12726,
+          "finalWeight": 1.98,
+          "classType": "Standard",
+          "durability": 10,
+          "maxDurability": 10,
+          "energyRes": 0,
+          "energyResTwo": 0,
+          "durabilityTwo": null,
+          "maxDurabilityTwo": 0,
+          "id": "3513ea12-f342-4dc4-a609-97408da31370",
+          "powerCell": "64705f71-9792-42f0-afbb-a62acf4d92f0",
+          "lens": "e04b265e-4bc1-4bad-9659-efc13ff69fa0",
+          "emitterMatrix": "92cd9943-8ca1-4abd-a909-f07357dcadb9",
+          "primaryCrystal": "17a585b4-cd50-4c9b-acb1-41dab70f1a10",
+          "calculatedDamage": "8d burn",
+          "calculatedDamageTwo": null,
+          "combinedEffects": "Standard Emitter: Reach 1. Standard containment field.\nStandard Switch: Standard toggle activation.\nStandard Sleeve: +1 Parry bonus. Accommodates 1 or 2 hands.\nStandard Pommel: Basic weighted cap.\nStandard Diatium Cell: Standard 3,000 \"hits\" baseline.\nStandard Lens: \nStandard Matrix: \nBlue Kyber: 3d base burn. +1 to Force Points. Natural.",
+          "crystalAttackPenalty": 0,
+          "powerCellMaxCharge": 0
+        }
+      ]
+    },
+    "armor": [
+      {
+        "id": "56a4ea1b-8133-437b-bf8e-8bf99a944ea2",
+        "name": "Medium Torso Plate (Durasteel)",
+        "type": "Medium",
+        "slot": "Torso",
+        "drHead": null,
+        "drFace": null,
+        "drTorso": 9,
+        "drLeftArm": 9,
+        "drRightArm": 9,
+        "drLeftLeg": null,
+        "drRightLeg": null,
+        "drLeftHand": null,
+        "drRightHand": null,
+        "drLeftFoot": null,
+        "drRightFoot": null,
+        "dxPenalty": null,
+        "movePenalty": null,
+        "weight": 9.59,
+        "cost": 992,
+        "notes": null,
+        "penalties": "",
+        "effects": "",
+        "quantity": 1,
+        "equipped": true,
+        "isActive": false,
+        "integratedSlots": 0,
+        "overlaySlots": 0,
+        "underlaySlots": 0,
+        "utilitySlots": 0,
+        "integratedModId": null,
+        "overlayModId": null,
+        "underlayModId": null,
+        "utilityModId": null,
+        "storageLocationId": null,
+        "finalCoveredLocations": [],
+        "coveredLocationIds": [
+          "a4030fbb-e05a-4ae7-be6d-39b64f79f7e5",
+          "8cebfff6-56b7-42b8-9cc3-a616293d0806",
+          "cf4d1855-4a34-4ae5-a139-39da7196731d",
+          "9adfcc7b-c432-44a1-8f4c-d57c28086466"
+        ],
+        "wornLocationId": null,
+        "setId": null,
+        "drEntries": [
+          {
+            "locationId": "a4030fbb-e05a-4ae7-be6d-39b64f79f7e5",
+            "dr": 9
+          },
+          {
+            "locationId": "8cebfff6-56b7-42b8-9cc3-a616293d0806",
+            "dr": 9
+          },
+          {
+            "locationId": "cf4d1855-4a34-4ae5-a139-39da7196731d",
+            "dr": 9
+          },
+          {
+            "locationId": "9adfcc7b-c432-44a1-8f4c-d57c28086466",
+            "dr": 9
+          }
+        ],
+        "isInstalled": false,
+        "installedInDroidId": null,
+        "modifiers": null,
+        "itemSizeModifier": 0,
+        "modifiedForAnatomy": false,
+        "condition": "Fine",
+        "finalDRValue": 9,
+        "finalWeight": 9.59,
+        "finalCost": 992,
+        "finalMovePenalty": null,
+        "finalDXPenalty": null,
+        "notesAndEffects": "",
+        "baseArmorType": null,
+        "baseDRValue": 9,
+        "baseDRNotes": null,
+        "baseWeight": null,
+        "baseCost": null,
+        "baseMovePenalty": null,
+        "baseDXPenalty": null,
+        "durability": 0,
+        "isConstructed": true,
+        "isCustomBuild": false,
+        "buildProvenance": null,
+        "pieceId": "medium-torso-plate-durasteel",
+        "tier": "Medium",
+        "materialId": "durasteel",
+        "sealed": null,
+        "sleeveless": false,
+        "faceCoverage": null,
+        "utilityId": null,
+        "frame": null,
+        "shellPart": null,
+        "backingPart": null,
+        "framePart": null,
+        "visorPart": null,
+        "trimPart": null,
+        "materials": null,
+        "craftingCategory": null,
+        "craftingCP": null,
+        "isSeveredRemnant": null,
+        "severedFrom": null,
+        "loadedPowerCellId": null,
+        "loadedPowerCellData": null,
+        "currentCharges": null,
+        "maxCharges": null
+      },
+      {
+        "id": "d04dbb38-14bd-46eb-980e-f885a77aa2b3",
+        "name": "Medium Leg Plate (Durasteel)",
+        "type": "Medium",
+        "slot": "Legs",
+        "drHead": null,
+        "drFace": null,
+        "drTorso": null,
+        "drLeftArm": null,
+        "drRightArm": null,
+        "drLeftLeg": 6,
+        "drRightLeg": 6,
+        "drLeftHand": null,
+        "drRightHand": null,
+        "drLeftFoot": null,
+        "drRightFoot": null,
+        "dxPenalty": null,
+        "movePenalty": null,
+        "weight": 9.59,
+        "cost": 992,
+        "notes": null,
+        "penalties": "",
+        "effects": "",
+        "quantity": 1,
+        "equipped": true,
+        "isActive": false,
+        "integratedSlots": 0,
+        "overlaySlots": 0,
+        "underlaySlots": 0,
+        "utilitySlots": 0,
+        "integratedModId": null,
+        "overlayModId": null,
+        "underlayModId": null,
+        "utilityModId": null,
+        "storageLocationId": null,
+        "finalCoveredLocations": [],
+        "coveredLocationIds": [
+          "706ff9ea-948f-4805-bb44-9c4eb78719e0",
+          "4f2eacfa-8b70-4fdd-affd-f92e1b66246c"
+        ],
+        "wornLocationId": null,
+        "setId": null,
+        "drEntries": [
+          {
+            "locationId": "706ff9ea-948f-4805-bb44-9c4eb78719e0",
+            "dr": 6
+          },
+          {
+            "locationId": "4f2eacfa-8b70-4fdd-affd-f92e1b66246c",
+            "dr": 6
+          }
+        ],
+        "isInstalled": false,
+        "installedInDroidId": null,
+        "modifiers": null,
+        "itemSizeModifier": 0,
+        "modifiedForAnatomy": false,
+        "condition": "Fine",
+        "finalDRValue": 6,
+        "finalWeight": 9.59,
+        "finalCost": 992,
+        "finalMovePenalty": null,
+        "finalDXPenalty": null,
+        "notesAndEffects": "",
+        "baseArmorType": null,
+        "baseDRValue": 6,
+        "baseDRNotes": null,
+        "baseWeight": null,
+        "baseCost": null,
+        "baseMovePenalty": null,
+        "baseDXPenalty": null,
+        "durability": 0,
+        "isConstructed": true,
+        "isCustomBuild": false,
+        "buildProvenance": null,
+        "pieceId": "medium-leg-plate-durasteel",
+        "tier": "Medium",
+        "materialId": "durasteel",
+        "sealed": null,
+        "sleeveless": null,
+        "faceCoverage": null,
+        "utilityId": null,
+        "frame": null,
+        "shellPart": null,
+        "backingPart": null,
+        "framePart": null,
+        "visorPart": null,
+        "trimPart": null,
+        "materials": null,
+        "craftingCategory": null,
+        "craftingCP": null,
+        "isSeveredRemnant": null,
+        "severedFrom": null,
+        "loadedPowerCellId": null,
+        "loadedPowerCellData": null,
+        "currentCharges": null,
+        "maxCharges": null
+      },
+      {
+        "id": "6ac6a00c-523c-446a-b66a-19b4e1998609",
+        "name": "Medium Hand Plate (Durasteel)",
+        "type": "Medium",
+        "slot": "Hands",
+        "drHead": null,
+        "drFace": null,
+        "drTorso": null,
+        "drLeftArm": null,
+        "drRightArm": null,
+        "drLeftLeg": null,
+        "drRightLeg": null,
+        "drLeftHand": 3,
+        "drRightHand": 3,
+        "drLeftFoot": null,
+        "drRightFoot": null,
+        "dxPenalty": null,
+        "movePenalty": null,
+        "weight": 2.02,
+        "cost": 226,
+        "notes": null,
+        "penalties": "",
+        "effects": "",
+        "quantity": 1,
+        "equipped": true,
+        "isActive": false,
+        "integratedSlots": 0,
+        "overlaySlots": 0,
+        "underlaySlots": 0,
+        "utilitySlots": 0,
+        "integratedModId": null,
+        "overlayModId": null,
+        "underlayModId": null,
+        "utilityModId": null,
+        "storageLocationId": null,
+        "finalCoveredLocations": [],
+        "coveredLocationIds": [
+          "3df639ea-ed67-4f97-932d-0aed8d171e51",
+          "b73d35a1-af34-4afc-b4e0-a77e49b7e4dc"
+        ],
+        "wornLocationId": null,
+        "setId": null,
+        "drEntries": [
+          {
+            "locationId": "3df639ea-ed67-4f97-932d-0aed8d171e51",
+            "dr": 3
+          },
+          {
+            "locationId": "b73d35a1-af34-4afc-b4e0-a77e49b7e4dc",
+            "dr": 3
+          }
+        ],
+        "isInstalled": false,
+        "installedInDroidId": null,
+        "modifiers": null,
+        "itemSizeModifier": 0,
+        "modifiedForAnatomy": false,
+        "condition": "Fine",
+        "finalDRValue": 3,
+        "finalWeight": 2.02,
+        "finalCost": 226,
+        "finalMovePenalty": null,
+        "finalDXPenalty": null,
+        "notesAndEffects": "",
+        "baseArmorType": null,
+        "baseDRValue": 3,
+        "baseDRNotes": null,
+        "baseWeight": null,
+        "baseCost": null,
+        "baseMovePenalty": null,
+        "baseDXPenalty": null,
+        "durability": 0,
+        "isConstructed": true,
+        "isCustomBuild": false,
+        "buildProvenance": null,
+        "pieceId": "medium-hand-plate-durasteel",
+        "tier": "Medium",
+        "materialId": "durasteel",
+        "sealed": null,
+        "sleeveless": null,
+        "faceCoverage": null,
+        "utilityId": null,
+        "frame": null,
+        "shellPart": null,
+        "backingPart": null,
+        "framePart": null,
+        "visorPart": null,
+        "trimPart": null,
+        "materials": null,
+        "craftingCategory": null,
+        "craftingCP": null,
+        "isSeveredRemnant": null,
+        "severedFrom": null,
+        "loadedPowerCellId": null,
+        "loadedPowerCellData": null,
+        "currentCharges": null,
+        "maxCharges": null
+      },
+      {
+        "id": "dba1c87f-2432-4e86-9e2c-61098a973e7a",
+        "name": "Medium Foot Plate (Durasteel)",
+        "type": "Medium",
+        "slot": "Feet",
+        "drHead": null,
+        "drFace": null,
+        "drTorso": null,
+        "drLeftArm": null,
+        "drRightArm": null,
+        "drLeftLeg": null,
+        "drRightLeg": null,
+        "drLeftHand": null,
+        "drRightHand": null,
+        "drLeftFoot": 4,
+        "drRightFoot": 4,
+        "dxPenalty": null,
+        "movePenalty": null,
+        "weight": 3.31,
+        "cost": 358,
+        "notes": null,
+        "penalties": "",
+        "effects": "",
+        "quantity": 1,
+        "equipped": true,
+        "isActive": false,
+        "integratedSlots": 0,
+        "overlaySlots": 0,
+        "underlaySlots": 0,
+        "utilitySlots": 0,
+        "integratedModId": null,
+        "overlayModId": null,
+        "underlayModId": null,
+        "utilityModId": null,
+        "storageLocationId": null,
+        "finalCoveredLocations": [],
+        "coveredLocationIds": [
+          "4151a6e9-7fd7-41eb-8bde-9525909a718c",
+          "a447ed44-f486-4a22-a40a-63ccdc0f0197"
+        ],
+        "wornLocationId": null,
+        "setId": null,
+        "drEntries": [
+          {
+            "locationId": "4151a6e9-7fd7-41eb-8bde-9525909a718c",
+            "dr": 4
+          },
+          {
+            "locationId": "a447ed44-f486-4a22-a40a-63ccdc0f0197",
+            "dr": 4
+          }
+        ],
+        "isInstalled": false,
+        "installedInDroidId": null,
+        "modifiers": null,
+        "itemSizeModifier": 0,
+        "modifiedForAnatomy": false,
+        "condition": "Fine",
+        "finalDRValue": 4,
+        "finalWeight": 3.31,
+        "finalCost": 358,
+        "finalMovePenalty": null,
+        "finalDXPenalty": null,
+        "notesAndEffects": "",
+        "baseArmorType": null,
+        "baseDRValue": 4,
+        "baseDRNotes": null,
+        "baseWeight": null,
+        "baseCost": null,
+        "baseMovePenalty": null,
+        "baseDXPenalty": null,
+        "durability": 0,
+        "isConstructed": true,
+        "isCustomBuild": false,
+        "buildProvenance": null,
+        "pieceId": "medium-foot-plate-durasteel",
+        "tier": "Medium",
+        "materialId": "durasteel",
+        "sealed": null,
+        "sleeveless": null,
+        "faceCoverage": null,
+        "utilityId": null,
+        "frame": null,
+        "shellPart": null,
+        "backingPart": null,
+        "framePart": null,
+        "visorPart": null,
+        "trimPart": null,
+        "materials": null,
+        "craftingCategory": null,
+        "craftingCP": null,
+        "isSeveredRemnant": null,
+        "severedFrom": null,
+        "loadedPowerCellId": null,
+        "loadedPowerCellData": null,
+        "currentCharges": null,
+        "maxCharges": null
+      }
+    ],
+    "gearSets": [],
+    "explosives": [],
+    "starships": [],
+    "ammunition": [],
+    "weaponModifications": [],
+    "lightsaberModifications": [
+      {
+        "id": "5998738b-93fb-4216-beeb-989fc4e1a1c8",
+        "name": "Standard Emitter",
+        "category": "Emitter Part",
+        "cost": 6,
+        "weight": 0.245,
+        "effect": "Reach 1. Standard containment field.",
+        "volume": 0.0005,
+        "density": 490,
+        "materialId": "durasteel",
+        "wrapId": null,
+        "equipped": true,
+        "isInstalled": true,
+        "installedInSaberId": "3513ea12-f342-4dc4-a609-97408da31370",
+        "quantity": 1
+      },
+      {
+        "id": "62218d14-1319-45c7-9841-e18a9b0a5029",
+        "name": "Standard Switch",
+        "category": "Switch Part",
+        "cost": 2,
+        "weight": 0.098,
+        "effect": "Standard toggle activation.",
+        "volume": 0.0002,
+        "density": 490,
+        "materialId": "durasteel",
+        "wrapId": null,
+        "equipped": true,
+        "isInstalled": true,
+        "installedInSaberId": "3513ea12-f342-4dc4-a609-97408da31370",
+        "quantity": 1
+      },
+      {
+        "id": "7f5ca2d9-40b9-4140-a1e4-60fa16ca1047",
+        "name": "Standard Sleeve",
+        "category": "Sleeve Part",
+        "cost": 10,
+        "weight": 0.392,
+        "effect": "+1 Parry bonus. Accommodates 1 or 2 hands.",
+        "volume": 0.0008,
+        "density": 490,
+        "materialId": "durasteel",
+        "wrapId": null,
+        "equipped": true,
+        "isInstalled": true,
+        "installedInSaberId": "3513ea12-f342-4dc4-a609-97408da31370",
+        "quantity": 1
+      },
+      {
+        "id": "9302d5b0-0f10-4511-9879-332180a963d2",
+        "name": "Standard Pommel",
+        "category": "Pommel Part",
+        "cost": 6,
+        "weight": 0.245,
+        "effect": "Basic weighted cap.",
+        "volume": 0.0005,
+        "density": 490,
+        "materialId": "durasteel",
+        "wrapId": null,
+        "equipped": true,
+        "isInstalled": true,
+        "installedInSaberId": "3513ea12-f342-4dc4-a609-97408da31370",
+        "quantity": 1
+      },
+      {
+        "id": "64705f71-9792-42f0-afbb-a62acf4d92f0",
+        "name": "Standard Diatium Cell",
+        "cost": 135,
+        "weight": 0.5,
+        "hits": 3000,
+        "effect": "Standard 3,000 \"hits\" baseline.",
+        "category": "Lightsaber Power Cell",
+        "materials": [
+          {
+            "name": "Diatium",
+            "amount": 0.4
+          },
+          {
+            "name": "Silicon",
+            "amount": 0.1
+          }
+        ],
+        "equipped": true,
+        "isInstalled": true,
+        "installedInSaberId": "3513ea12-f342-4dc4-a609-97408da31370",
+        "quantity": 1
+      },
+      {
+        "id": "e04b265e-4bc1-4bad-9659-efc13ff69fa0",
+        "name": "Standard Lens",
+        "cost": 8,
+        "weight": 0.1,
+        "category": "Lightsaber Lens",
+        "materials": [
+          {
+            "name": "Clari-crystalline",
+            "amount": 0.1
+          }
+        ],
+        "equipped": true,
+        "isInstalled": true,
+        "installedInSaberId": "3513ea12-f342-4dc4-a609-97408da31370",
+        "quantity": 1
+      },
+      {
+        "id": "92cd9943-8ca1-4abd-a909-f07357dcadb9",
+        "name": "Standard Matrix",
+        "cost": 23,
+        "weight": 0.2,
+        "category": "Lightsaber Emitter Matrix",
+        "materials": [
+          {
+            "name": "Durasteel",
+            "amount": 0.1
+          },
+          {
+            "name": "Silicon",
+            "amount": 0.1
+          }
+        ],
+        "equipped": true,
+        "isInstalled": true,
+        "installedInSaberId": "3513ea12-f342-4dc4-a609-97408da31370",
+        "quantity": 1
+      },
+      {
+        "id": "17a585b4-cd50-4c9b-acb1-41dab70f1a10",
+        "name": "Blue Kyber",
+        "rarity": "Very Common",
+        "cost": 4000,
+        "weight": 0.2,
+        "effect": "3d base burn. +1 to Force Points. Natural.",
+        "category": "Lightsaber Primary Crystal",
+        "equipped": true,
+        "isInstalled": true,
+        "installedInSaberId": "3513ea12-f342-4dc4-a609-97408da31370",
+        "quantity": 1
+      }
+    ],
+    "armorModifications": [],
+    "implants": [],
+    "cybernetics": [],
+    "cyberneticUpgrades": []
+  }
+}

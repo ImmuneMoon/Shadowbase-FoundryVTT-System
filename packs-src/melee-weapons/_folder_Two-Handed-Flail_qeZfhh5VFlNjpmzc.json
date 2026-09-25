@@ -1,0 +1,19 @@
+{
+  "_id": "qeZfhh5VFlNjpmzc",
+  "_key": "!folders!qeZfhh5VFlNjpmzc",
+  "name": "Two-Handed Flail",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 1300000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "path": [
+        "Two-Handed Flail"
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "jXZRduEAYWOjahFE",
+  "_key": "!items!jXZRduEAYWOjahFE",
+  "name": "Blueprint: Basic Labor",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JF5Ffca1GjopsdXr",
+  "sort": 27000000,
+  "system": {
+    "row": {
+      "id": "780260f9-d006-427d-985a-5eb9cf205b72",
+      "name": "Blueprint: Basic Labor",
+      "cost": 1607,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Basic Labor (Generation 0, proven, encoded, catalog design). Required to build Basic Labor; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Basic Labor",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 14327.5,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Processor|Basic Labor"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "5WehB1Y4aolyXJVG",
+  "_key": "!items!5WehB1Y4aolyXJVG",
+  "name": "Dark Side Tainted",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "J2wGZ0rpXlZB2j6l",
+  "sort": 1100000,
+  "system": {
+    "row": {
+      "name": "Dark Side Tainted",
+      "points": -1,
+      "description": "You feel a subtle pull from the Dark Side. When confronted with a choice, you feel a fleeting temptation to take the faster, more aggressive path. This does not mean you are evil, but you must actively resist these impulses. GM Note: This may require occasional self-control rolls in moments of extreme anger or fear.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Dark Side Tainted"
+    }
+  }
+}

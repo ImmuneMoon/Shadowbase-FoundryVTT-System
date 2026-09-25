@@ -1,0 +1,12 @@
+{{!-- shadowbase.section - the accordion trigger (src/components/ui/accordion.tsx AccordionTrigger, with the sheet's
+     `text-xl font-semibold font-headline text-accent` and the handbook chip in `after`). Goes INSIDE a
+     <details class="sb-section" data-section="..."> as its <summary>. Params, all required:
+       title (localized text), icon (FA class or ''), chip (registry id or ''), chipTitle (text or ''), meta (text or ''). --}}
+<summary class="sb-section__summary" data-accordion-trigger>
+  <span class="sb-section__title">{{#if icon}}<i class="{{icon}}"></i>{{/if}}{{title}}</span>
+  <span class="sb-section__after">
+    {{#if meta}}<span class="sb-text-10 sb-text-mono sb-text-muted">{{meta}}</span>{{/if}}
+    {{#if chip}}{{> "shadowbase.chip" entry=chip title=chipTitle}}{{/if}}
+    <i class="sb-section__chevron {{sbIcon 'chevronDown'}}"></i>
+  </span>
+</summary>

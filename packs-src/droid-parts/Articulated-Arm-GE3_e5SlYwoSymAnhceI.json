@@ -1,0 +1,39 @@
+{
+  "_id": "e5SlYwoSymAnhceI",
+  "_key": "!items!e5SlYwoSymAnhceI",
+  "name": "Articulated Arm (GE3)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "fJ2dj0YWvmbw3cIJ",
+  "sort": 4100000,
+  "system": {
+    "row": {
+      "id": "ad6d4a3a-d414-43d2-ad3a-298b8d72b16a",
+      "name": "Articulated Arm (GE3)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Arm",
+      "cost": 1600,
+      "weight": 15,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "ge3-arm",
+      "description": "Standard ST profile"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "ge3-arm"
+    }
+  }
+}

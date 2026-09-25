@@ -1,0 +1,45 @@
+{
+  "_id": "phnl37X9VGnXKxrh",
+  "_key": "!items!phnl37X9VGnXKxrh",
+  "name": "Jenruax",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "CHP7xje9NHnZhKqb",
+  "sort": 7000000,
+  "system": {
+    "row": {
+      "id": "0842062a-e5e1-4b99-bdc8-626b4ae539d5",
+      "name": "Jenruax",
+      "cost": 8000,
+      "weight": 0.2,
+      "damageAdds": 2,
+      "effect": "Grants Enhanced Parry (Lightsaber) +1, +2 damage.",
+      "category": "Lightsaber Power Crystal",
+      "materials": [
+        {
+          "name": "Electrum",
+          "amount": 0.2
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "Grants Enhanced Parry (Lightsaber) +1, +2 damage."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:jenruax-pwr"
+    }
+  }
+}

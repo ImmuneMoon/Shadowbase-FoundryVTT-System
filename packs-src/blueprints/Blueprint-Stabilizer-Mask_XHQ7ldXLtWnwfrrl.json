@@ -1,0 +1,42 @@
+{
+  "_id": "XHQ7ldXLtWnwfrrl",
+  "_key": "!items!XHQ7ldXLtWnwfrrl",
+  "name": "Blueprint: Stabilizer Mask",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "BGNuvLvgx2CRmx9w",
+  "sort": 39000000,
+  "system": {
+    "row": {
+      "id": "ce9bc91b-2060-4873-b787-d4e6f8799d3a",
+      "name": "Blueprint: Stabilizer Mask",
+      "cost": 200,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Stabilizer Mask (Generation 0, proven, encoded, catalog design). Required to build Stabilizer Mask; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Stabilizer Mask",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 253,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Mechanical Face Gear|Stabilizer Mask"
+    }
+  }
+}

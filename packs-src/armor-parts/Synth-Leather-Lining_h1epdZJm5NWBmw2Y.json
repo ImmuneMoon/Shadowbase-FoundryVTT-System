@@ -1,0 +1,42 @@
+{
+  "_id": "h1epdZJm5NWBmw2Y",
+  "_key": "!items!h1epdZJm5NWBmw2Y",
+  "name": "Synth-Leather Lining",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "ngDT5yar8NpPn39m",
+  "sort": 9800000,
+  "system": {
+    "row": {
+      "id": "e8b7ad10-7959-42e7-aa48-c6f20bb64fca",
+      "name": "Synth-Leather Lining",
+      "category": "Armor Trim",
+      "cost": 4,
+      "weight": 0.1,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "trim-synth-leather",
+      "materialId": "synth-leather",
+      "notes": "Optional. Adds no DR - but it has a real weight and cost like everything else in the chapter.",
+      "validSlots": [],
+      "drBonus": null,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "trim-synth-leather"
+    }
+  }
+}

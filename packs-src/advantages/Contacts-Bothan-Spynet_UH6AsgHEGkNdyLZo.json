@@ -1,0 +1,33 @@
+{
+  "_id": "UH6AsgHEGkNdyLZo",
+  "_key": "!items!UH6AsgHEGkNdyLZo",
+  "name": "Contacts (Bothan Spynet)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "3vDRi4uDBtDelTd8",
+  "sort": 3100000,
+  "system": {
+    "row": {
+      "name": "Contacts (Bothan Spynet)",
+      "points": 12,
+      "description": "Network of informants providing highly accurate and detailed intelligence across the galaxy.",
+      "category": "Social/Wealth",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Contacts (Bothan Spynet)"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "_id": "o7AZAZG9TvDyDn5S",
+  "_key": "!items!o7AZAZG9TvDyDn5S",
+  "name": "Firkrann Lens",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "h8dJhplKSlbPF2XD",
+  "sort": 4200000,
+  "system": {
+    "row": {
+      "id": "1310316d-78d7-4cfb-bd17-6e2f7570f793",
+      "name": "Firkrann Lens",
+      "cost": 1429,
+      "weight": 0.1,
+      "effect": "When parrying a blaster bolt, wielder can deflect it to deal an extra +1d-3 energy with the Surge enhancement.",
+      "category": "Lightsaber Lens",
+      "materials": [
+        {
+          "name": "Clari-crystalline",
+          "amount": 0.05
+        },
+        {
+          "name": "Cortosis",
+          "amount": 0.05
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "When parrying a blaster bolt, wielder can deflect it to deal an extra +1d-3 energy with the Surge enhancement."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:firkrann-lens"
+    }
+  }
+}

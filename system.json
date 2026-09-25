@@ -1,108 +1,577 @@
 {
   "id": "shadowbase",
-  "title": "ShadowBase - Shadows of The Mandalorian War",
-  "description": "A custom system for the GURPS-based Shadows of the Mandalorian Wars campaign.",
-  "version": "1.0.1",
+  "title": "ShadowBase — Shadows of the Mandalorian War",
+  "description": "The character sheet, tactical HUD, rules engine and compendia of Shadows of the Mandalorian War (3964 BBY), driven by the ShadowBase website's own engine bundle. Nothing here re-implements a rule.",
+  "version": "2.0.0",
   "authors": [
     {
       "name": "Fulllion Creative Works"
     }
   ],
   "compatibility": {
-    "minimum": "11",
-    "verified": "13"
+    "minimum": "13",
+    "verified": "14.368"
   },
+  "url": "https://github.com/ImmuneMoon/Shadowbase-FoundryVTT-System",
+  "manifest": "https://raw.githubusercontent.com/ImmuneMoon/Shadowbase-FoundryVTT-System/main/system.json",
+  "download": "https://github.com/ImmuneMoon/Shadowbase-FoundryVTT-System/releases/download/v2.0.0/shadowbase.zip",
   "esmodules": [
-    "scripts/shadowbase.js"
+    "module/shadowbase.mjs"
   ],
   "styles": [
-    "styles/sheet.css"
+    "styles/variables.css",
+    "styles/foundry-chrome.css",
+    "styles/components.css",
+    "styles/sheet.css",
+    "styles/sheet-tabs.css",
+    "styles/hud.css",
+    "styles/items.css",
+    "styles/chat.css",
+    "styles/apps.css"
   ],
-  "packs": [
+  "languages": [
     {
-      "name": "skills",
-      "label": "Skills",
-      "path": "packs/skills.db",
-      "type": "Item",
-      "system": "shadowbase"
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "character": {}
     },
+    "Item": {
+      "advantage": {},
+      "disadvantage": {},
+      "quirk": {},
+      "skill": {},
+      "forcePower": {},
+      "combatTechnique": {},
+      "lightsaberForm": {},
+      "equipment": {},
+      "armor": {},
+      "blaster": {},
+      "meleeWeapon": {},
+      "lightsaber": {},
+      "explosive": {},
+      "ammunition": {},
+      "weaponPart": {},
+      "armorPart": {},
+      "implant": {},
+      "cyberneticLimb": {},
+      "cyberneticUpgrade": {},
+      "starship": {},
+      "vehicle": {}
+    }
+  },
+  "packs": [
     {
       "name": "advantages",
       "label": "Advantages",
-      "path": "packs/advantages.db",
+      "path": "packs/advantages",
       "type": "Item",
-      "system": "shadowbase"
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "disadvantages",
       "label": "Disadvantages",
-      "path": "packs/disadvantages.db",
+      "path": "packs/disadvantages",
       "type": "Item",
-      "system": "shadowbase"
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "quirks",
       "label": "Quirks",
-      "path": "packs/quirks.db",
+      "path": "packs/quirks",
       "type": "Item",
-      "system": "shadowbase"
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
-      "name": "forcepowers",
+      "name": "skills",
+      "label": "Skills",
+      "path": "packs/skills",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "force-powers",
       "label": "Force Powers",
-      "path": "packs/forcepowers.db",
+      "path": "packs/force-powers",
       "type": "Item",
-      "system": "shadowbase"
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
-      "name": "combattechniques",
+      "name": "combat-techniques",
       "label": "Combat Techniques",
-      "path": "packs/combattechniques.db",
+      "path": "packs/combat-techniques",
       "type": "Item",
-      "system": "shadowbase"
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
-      "name": "lightsaberforms",
+      "name": "lightsaber-forms",
       "label": "Lightsaber Forms",
-      "path": "packs/lightsaberforms.db",
+      "path": "packs/lightsaber-forms",
       "type": "Item",
-      "system": "shadowbase"
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
-      "name": "vehicles",
-      "label": "Vehicles",
-      "path": "packs/vehicles.db",
+      "name": "equipment",
+      "label": "Equipment",
+      "path": "packs/equipment",
       "type": "Item",
-      "system": "shadowbase"
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
-      "name": "weapons",
-      "label": "Weapons",
-      "path": "packs/weapons.db",
+      "name": "blueprints",
+      "label": "Blueprints",
+      "path": "packs/blueprints",
       "type": "Item",
-      "system": "shadowbase"
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "ammunition",
+      "label": "Ammunition",
+      "path": "packs/ammunition",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "explosives",
+      "label": "Explosives",
+      "path": "packs/explosives",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "armor",
-      "label": "Armor",
-      "path": "packs/armor.db",
+      "label": "Armor & Clothing",
+      "path": "packs/armor",
       "type": "Item",
-      "system": "shadowbase"
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "armor-pieces",
+      "label": "Armor Pieces (Ch13)",
+      "path": "packs/armor-pieces",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "armor-parts",
+      "label": "Armor Components",
+      "path": "packs/armor-parts",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "armor-mods",
+      "label": "Armor Mods",
+      "path": "packs/armor-mods",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "ranged-weapons",
+      "label": "Ranged Weapons",
+      "path": "packs/ranged-weapons",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "ranged-parts",
+      "label": "Blaster Components",
+      "path": "packs/ranged-parts",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "weapon-mods",
+      "label": "Weapon Mods",
+      "path": "packs/weapon-mods",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "melee-weapons",
+      "label": "Melee Weapons",
+      "path": "packs/melee-weapons",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "melee-parts",
+      "label": "Melee Components & Materials",
+      "path": "packs/melee-parts",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "lightsabers",
       "label": "Lightsabers",
-      "path": "packs/lightsabers.db",
+      "path": "packs/lightsabers",
       "type": "Item",
-      "system": "shadowbase"
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "lightsaber-parts",
+      "label": "Lightsaber Components",
+      "path": "packs/lightsaber-parts",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "implants",
+      "label": "Implants",
+      "path": "packs/implants",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "cybernetic-limbs",
+      "label": "Cybernetic Limbs",
+      "path": "packs/cybernetic-limbs",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "cybernetic-upgrades",
+      "label": "Hardware Upgrades",
+      "path": "packs/cybernetic-upgrades",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "starships",
+      "label": "Starships",
+      "path": "packs/starships",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "starship-mods",
+      "label": "Starship Modifications",
+      "path": "packs/starship-mods",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "starship-weapons",
+      "label": "Starship Weapons",
+      "path": "packs/starship-weapons",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "vehicles",
+      "label": "Vehicles",
+      "path": "packs/vehicles",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "droid-parts",
+      "label": "Droid Components",
+      "path": "packs/droid-parts",
+      "type": "Item",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "templates",
+      "label": "Character Templates",
+      "path": "packs/templates",
+      "type": "Actor",
+      "system": "shadowbase",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "handbook",
+      "label": "Handbook",
+      "path": "packs/handbook",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
   ],
-  "languages": [],
-  "socket": false,
+  "packFolders": [
+    {
+      "name": "Traits",
+      "sorting": "m",
+      "color": "#5b3a7a",
+      "packs": [
+        "advantages",
+        "disadvantages",
+        "quirks"
+      ]
+    },
+    {
+      "name": "Skills & Abilities",
+      "sorting": "m",
+      "color": "#2f5f8a",
+      "packs": [
+        "skills",
+        "force-powers",
+        "combat-techniques",
+        "lightsaber-forms"
+      ]
+    },
+    {
+      "name": "Gear",
+      "sorting": "m",
+      "color": "#6b5a2e",
+      "packs": [
+        "equipment",
+        "blueprints",
+        "ammunition",
+        "explosives"
+      ]
+    },
+    {
+      "name": "Armor",
+      "sorting": "m",
+      "color": "#4f5d6b",
+      "packs": [
+        "armor",
+        "armor-pieces",
+        "armor-parts",
+        "armor-mods"
+      ]
+    },
+    {
+      "name": "Weapons",
+      "sorting": "m",
+      "color": "#7a2f2f",
+      "packs": [
+        "ranged-weapons",
+        "ranged-parts",
+        "weapon-mods",
+        "melee-weapons",
+        "melee-parts",
+        "lightsabers",
+        "lightsaber-parts"
+      ]
+    },
+    {
+      "name": "Cybernetics",
+      "sorting": "m",
+      "color": "#2e6b5a",
+      "packs": [
+        "implants",
+        "cybernetic-limbs",
+        "cybernetic-upgrades"
+      ]
+    },
+    {
+      "name": "Vehicles & Starships",
+      "sorting": "m",
+      "color": "#3a5b7a",
+      "packs": [
+        "starships",
+        "starship-mods",
+        "starship-weapons",
+        "vehicles"
+      ]
+    },
+    {
+      "name": "Droids",
+      "sorting": "m",
+      "color": "#5a5a5a",
+      "packs": [
+        "droid-parts"
+      ]
+    },
+    {
+      "name": "Characters",
+      "sorting": "m",
+      "color": "#7a5a2f",
+      "packs": [
+        "templates"
+      ]
+    },
+    {
+      "name": "Rules",
+      "sorting": "m",
+      "color": "#2f7a4f",
+      "packs": [
+        "handbook"
+      ]
+    }
+  ],
   "grid": {
+    "type": 4,
     "distance": 1,
     "units": "yd"
   },
-  "primaryTokenAttribute": "characteristics.hitPoints",
-  "secondaryTokenAttribute": "characteristics.forcePoints"
+  "primaryTokenAttribute": "resources.hp",
+  "secondaryTokenAttribute": "resources.ep",
+  "flags": {
+    "hotReload": {
+      "extensions": [
+        "css",
+        "hbs",
+        "json"
+      ],
+      "paths": [
+        "styles",
+        "templates",
+        "lang"
+      ]
+    }
+  }
 }

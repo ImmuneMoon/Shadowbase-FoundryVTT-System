@@ -1,0 +1,34 @@
+{
+  "_id": "Dz3Uq9uArV85KU91",
+  "_key": "!items!Dz3Uq9uArV85KU91",
+  "name": "One Hand",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "iBhK8LHSekCOv5gO",
+  "sort": 15700000,
+  "system": {
+    "row": {
+      "name": "One Hand",
+      "points": -15,
+      "level": null,
+      "description": "You are missing a hand (or have a non-functional prosthetic), making many two-handed tasks impossible without special assistance.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "One Hand|Physical"
+    }
+  }
+}

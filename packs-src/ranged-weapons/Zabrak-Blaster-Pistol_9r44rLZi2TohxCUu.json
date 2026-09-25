@@ -1,0 +1,225 @@
+{
+  "_id": "9r44rLZi2TohxCUu",
+  "_key": "!items!9r44rLZi2TohxCUu",
+  "name": "Zabrak Blaster Pistol",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "GZba6tawSH3GFse4",
+  "sort": 4900000,
+  "system": {
+    "row": {
+      "id": "19d24419-adfe-46c3-ba4f-a16a5150798e",
+      "customName": "Zabrak Blaster Pistol",
+      "baseType": "Zabrak Blaster Pistol",
+      "baseSkill": "Guns (Blaster Pistol)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 5.6,
+      "finalWeight": 5.6,
+      "baseCost": 423,
+      "finalCost": 2538,
+      "currentCharges": 50,
+      "maxCharges": 50,
+      "loadedAmmunitionId": "0df78f39-254a-4849-b3a7-450e6dd97809",
+      "loadedAmmunitionData": {
+        "id": "0df78f39-254a-4849-b3a7-450e6dd97809",
+        "name": "Standard Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "heavy-pistol-grip",
+        "inventoryId": "b7c357a3-ea8f-46ea-a5d4-b53288158037",
+        "materialId": "durasteel"
+      },
+      "receiverPart": {
+        "partId": "standard-receiver",
+        "inventoryId": "0dc2a268-c89d-4246-9fe2-7c247ed69890",
+        "materialId": "durasteel"
+      },
+      "barrelPart": {
+        "partId": "heavy-emitter",
+        "inventoryId": "0bdb3c69-24a2-4553-9eeb-07f57f9d9821",
+        "materialId": "durasteel"
+      },
+      "targetingPart": {
+        "partId": "advanced-targeting",
+        "inventoryId": "8394929f-3119-46ab-87b7-1105ef3111fb"
+      },
+      "powerUnitPart": {
+        "partId": "standard-pwr-pack",
+        "inventoryId": "aff4dd94-e1e2-4090-9e7d-bac87d70533a"
+      },
+      "powerCellModId": "1cc1e742-1580-4184-8664-724ea43484e8",
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "19d24419-adfe-46c3-ba4f-a16a5150798e",
+        "customName": "Zabrak Blaster Pistol",
+        "baseType": "Zabrak Blaster Pistol",
+        "baseSkill": "Guns (Blaster Pistol)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 5.6,
+        "finalWeight": 5.6,
+        "baseCost": 423,
+        "finalCost": 2538,
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "loadedAmmunitionId": "0df78f39-254a-4849-b3a7-450e6dd97809",
+        "loadedAmmunitionData": {
+          "id": "0df78f39-254a-4849-b3a7-450e6dd97809",
+          "name": "Standard Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 50,
+          "maxCharges": 50,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "heavy-pistol-grip",
+          "inventoryId": "b7c357a3-ea8f-46ea-a5d4-b53288158037",
+          "materialId": "durasteel"
+        },
+        "receiverPart": {
+          "partId": "standard-receiver",
+          "inventoryId": "0dc2a268-c89d-4246-9fe2-7c247ed69890",
+          "materialId": "durasteel"
+        },
+        "barrelPart": {
+          "partId": "heavy-emitter",
+          "inventoryId": "0bdb3c69-24a2-4553-9eeb-07f57f9d9821",
+          "materialId": "durasteel"
+        },
+        "targetingPart": {
+          "partId": "advanced-targeting",
+          "inventoryId": "8394929f-3119-46ab-87b7-1105ef3111fb"
+        },
+        "powerUnitPart": {
+          "partId": "standard-pwr-pack",
+          "inventoryId": "aff4dd94-e1e2-4090-9e7d-bac87d70533a"
+        },
+        "powerCellModId": "1cc1e742-1580-4184-8664-724ea43484e8",
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "b7c357a3-ea8f-46ea-a5d4-b53288158037",
+          "name": "Heavy Pistol Grip",
+          "partId": "heavy-pistol-grip",
+          "category": "Ranged Grip",
+          "materialId": "durasteel",
+          "cost": 74,
+          "weight": 1.47,
+          "isInstalled": true,
+          "installedInBlasterId": "19d24419-adfe-46c3-ba4f-a16a5150798e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Reinforced for heavy chassis."
+        },
+        {
+          "id": "0dc2a268-c89d-4246-9fe2-7c247ed69890",
+          "name": "Standard Receiver",
+          "partId": "standard-receiver",
+          "category": "Ranged Receiver",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInBlasterId": "19d24419-adfe-46c3-ba4f-a16a5150798e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard semi-auto/burst."
+        },
+        {
+          "id": "0bdb3c69-24a2-4553-9eeb-07f57f9d9821",
+          "name": "Heavy Emitter",
+          "partId": "heavy-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "durasteel",
+          "cost": 74,
+          "weight": 1.47,
+          "isInstalled": true,
+          "installedInBlasterId": "19d24419-adfe-46c3-ba4f-a16a5150798e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "8394929f-3119-46ab-87b7-1105ef3111fb",
+          "name": "Advanced Targeting Module",
+          "partId": "advanced-targeting",
+          "category": "Ranged Targeting",
+          "cost": 70,
+          "weight": 0.9,
+          "isInstalled": true,
+          "installedInBlasterId": "19d24419-adfe-46c3-ba4f-a16a5150798e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Military-grade tracking algorithms."
+        },
+        {
+          "id": "aff4dd94-e1e2-4090-9e7d-bac87d70533a",
+          "name": "Standard Power Pack",
+          "partId": "standard-pwr-pack",
+          "category": "Power Unit",
+          "cost": 105,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "19d24419-adfe-46c3-ba4f-a16a5150798e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "1cc1e742-1580-4184-8664-724ea43484e8",
+          "name": "Stagger-Pulse Modulator",
+          "category": "Power Cell",
+          "cost": 50,
+          "weight": 0.3,
+          "isInstalled": true,
+          "installedInBlasterId": "19d24419-adfe-46c3-ba4f-a16a5150798e",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "On hit, target must make an HT roll or be physically Stunned for 1d sec."
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Zabrak Blaster Pistol"
+    }
+  }
+}

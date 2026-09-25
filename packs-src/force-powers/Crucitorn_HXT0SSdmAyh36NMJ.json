@@ -1,0 +1,87 @@
+{
+  "_id": "HXT0SSdmAyh36NMJ",
+  "_key": "!items!HXT0SSdmAyh36NMJ",
+  "name": "Crucitorn",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "KBIMmcUBYi6ZY6I3",
+  "sort": 400000,
+  "system": {
+    "row": {
+      "name": "Crucitorn",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 2,
+      "effect": "You ignore up to -2 in physical shock penalties from injuries for the duration.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Will",
+      "category": "Control Powers",
+      "alignment": "LS",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Crucitorn",
+        "description": "A technique of extreme discipline, allowing the Jedi to transcend physical pain and trauma. They use the Force to suppress shock and agony so they can continue fighting to protect others.",
+        "category": "Control Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 2,
+        "alignment": "LS",
+        "baseSkill": "Will",
+        "characterTier": "Apprentice",
+        "effect": "You ignore up to -2 in physical shock penalties from injuries for the duration."
+      },
+      {
+        "name": "Crucitorn",
+        "description": "A technique of extreme discipline, allowing the Jedi to transcend physical pain and trauma. They use the Force to suppress shock and agony so they can continue fighting to protect others.",
+        "category": "Control Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 3,
+        "alignment": "LS",
+        "baseSkill": "Will",
+        "characterTier": "Adept",
+        "effect": "You gain the High Pain Threshold advantage for the duration. You ignore all shock penalties and get +3 to resist knockdown and stunning."
+      },
+      {
+        "name": "Crucitorn",
+        "description": "A technique of extreme discipline, allowing the Jedi to transcend physical pain and trauma. They use the Force to suppress shock and agony so they can continue fighting to protect others.",
+        "category": "Control Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 4,
+        "alignment": "LS",
+        "baseSkill": "Will",
+        "characterTier": "Expert",
+        "effect": "In addition to High Pain Threshold, you ignore movement or DX penalties associated with crippled limbs (though you cannot use the limb if entirely severed/destroyed)."
+      },
+      {
+        "name": "Crucitorn",
+        "description": "A technique of extreme discipline, allowing the Jedi to transcend physical pain and trauma. They use the Force to suppress shock and agony so they can continue fighting to protect others.",
+        "category": "Control Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 5,
+        "alignment": "LS",
+        "baseSkill": "Will",
+        "characterTier": "Master",
+        "effect": "You remain conscious automatically regardless of negative HP (until you reach -5xHP, at which point you die). You feel no pain whatsoever."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Crucitorn"
+    }
+  }
+}

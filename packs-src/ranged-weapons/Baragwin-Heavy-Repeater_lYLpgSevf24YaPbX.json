@@ -1,0 +1,225 @@
+{
+  "_id": "lYLpgSevf24YaPbX",
+  "_key": "!items!lYLpgSevf24YaPbX",
+  "name": "Baragwin Heavy Repeater",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "56y9TuuExWcEnaAe",
+  "sort": 600000,
+  "system": {
+    "row": {
+      "id": "fed8a4ff-7774-4a7f-a3da-6ace5d22dee2",
+      "customName": "Baragwin Heavy Repeater",
+      "baseType": "Baragwin Heavy Repeater",
+      "baseSkill": "Guns (Blaster Heavy Weapons)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 22.7,
+      "finalWeight": 22.7,
+      "baseCost": 1654,
+      "finalCost": 9924,
+      "currentCharges": 200,
+      "maxCharges": 200,
+      "loadedAmmunitionId": "74c5c04c-b3a6-412f-9237-fde072ac2dd1",
+      "loadedAmmunitionData": {
+        "id": "74c5c04c-b3a6-412f-9237-fde072ac2dd1",
+        "name": "Heavy Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 200,
+        "maxCharges": 200,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "A high-capacity pack for military-grade repeaters and cannons. A gas top-up (60 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "heavy-mount",
+        "inventoryId": "1de26fc1-5b3f-4836-b284-fcc9cf4d1401",
+        "materialId": "durasteel"
+      },
+      "receiverPart": {
+        "partId": "cannon-chamber",
+        "inventoryId": "6e09dfa8-35c4-44f4-952c-cb02eee4611e",
+        "materialId": "durasteel"
+      },
+      "barrelPart": {
+        "partId": "magnetic-coils",
+        "inventoryId": "b86d91e0-032e-4797-a29e-7264690e70d9",
+        "materialId": "durasteel"
+      },
+      "targetingPart": {
+        "partId": "artillery-targeting",
+        "inventoryId": "e75e82d8-471b-425a-aa51-2704720e52b1"
+      },
+      "powerUnitPart": {
+        "partId": "heavy-pwr-pack",
+        "inventoryId": "33298827-2b07-4435-80f2-670349b4742c"
+      },
+      "barrelEmitterModId": "1222ae0d-1532-43e5-a640-233d3de71393",
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "fed8a4ff-7774-4a7f-a3da-6ace5d22dee2",
+        "customName": "Baragwin Heavy Repeater",
+        "baseType": "Baragwin Heavy Repeater",
+        "baseSkill": "Guns (Blaster Heavy Weapons)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 22.7,
+        "finalWeight": 22.7,
+        "baseCost": 1654,
+        "finalCost": 9924,
+        "currentCharges": 200,
+        "maxCharges": 200,
+        "loadedAmmunitionId": "74c5c04c-b3a6-412f-9237-fde072ac2dd1",
+        "loadedAmmunitionData": {
+          "id": "74c5c04c-b3a6-412f-9237-fde072ac2dd1",
+          "name": "Heavy Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 200,
+          "maxCharges": 200,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "A high-capacity pack for military-grade repeaters and cannons. A gas top-up (60 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "heavy-mount",
+          "inventoryId": "1de26fc1-5b3f-4836-b284-fcc9cf4d1401",
+          "materialId": "durasteel"
+        },
+        "receiverPart": {
+          "partId": "cannon-chamber",
+          "inventoryId": "6e09dfa8-35c4-44f4-952c-cb02eee4611e",
+          "materialId": "durasteel"
+        },
+        "barrelPart": {
+          "partId": "magnetic-coils",
+          "inventoryId": "b86d91e0-032e-4797-a29e-7264690e70d9",
+          "materialId": "durasteel"
+        },
+        "targetingPart": {
+          "partId": "artillery-targeting",
+          "inventoryId": "e75e82d8-471b-425a-aa51-2704720e52b1"
+        },
+        "powerUnitPart": {
+          "partId": "heavy-pwr-pack",
+          "inventoryId": "33298827-2b07-4435-80f2-670349b4742c"
+        },
+        "barrelEmitterModId": "1222ae0d-1532-43e5-a640-233d3de71393",
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "1de26fc1-5b3f-4836-b284-fcc9cf4d1401",
+          "name": "Heavy Mount",
+          "partId": "heavy-mount",
+          "category": "Ranged Grip",
+          "materialId": "durasteel",
+          "cost": 490,
+          "weight": 9.8,
+          "isInstalled": true,
+          "installedInBlasterId": "fed8a4ff-7774-4a7f-a3da-6ace5d22dee2",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Requires tripod/bipod."
+        },
+        {
+          "id": "6e09dfa8-35c4-44f4-952c-cb02eee4611e",
+          "name": "Cannon Chamber",
+          "partId": "cannon-chamber",
+          "category": "Ranged Receiver",
+          "materialId": "durasteel",
+          "cost": 196,
+          "weight": 3.92,
+          "isInstalled": true,
+          "installedInBlasterId": "fed8a4ff-7774-4a7f-a3da-6ace5d22dee2",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Suppression fire."
+        },
+        {
+          "id": "b86d91e0-032e-4797-a29e-7264690e70d9",
+          "name": "Magnetic Coils",
+          "partId": "magnetic-coils",
+          "category": "Ranged Barrel",
+          "materialId": "durasteel",
+          "cost": 98,
+          "weight": 1.96,
+          "isInstalled": true,
+          "installedInBlasterId": "fed8a4ff-7774-4a7f-a3da-6ace5d22dee2",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "e75e82d8-471b-425a-aa51-2704720e52b1",
+          "name": "Artillery Targeting Module",
+          "partId": "artillery-targeting",
+          "category": "Ranged Targeting",
+          "cost": 250,
+          "weight": 3,
+          "isInstalled": true,
+          "installedInBlasterId": "fed8a4ff-7774-4a7f-a3da-6ace5d22dee2",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Heavy vehicle-grade targeting arrays."
+        },
+        {
+          "id": "33298827-2b07-4435-80f2-670349b4742c",
+          "name": "Heavy Power Pack",
+          "partId": "heavy-pwr-pack",
+          "category": "Power Unit",
+          "cost": 420,
+          "weight": 2,
+          "isInstalled": true,
+          "installedInBlasterId": "fed8a4ff-7774-4a7f-a3da-6ace5d22dee2",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "1222ae0d-1532-43e5-a640-233d3de71393",
+          "name": "Baragwin Area-Effect Emitter",
+          "category": "Barrel/Emitter",
+          "cost": 200,
+          "weight": 2,
+          "isInstalled": true,
+          "installedInBlasterId": "fed8a4ff-7774-4a7f-a3da-6ace5d22dee2",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Converts portion of payload into explosive burst (+4d energy or +3d sonic) in 2-yd radius."
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Baragwin Heavy Repeater"
+    }
+  }
+}

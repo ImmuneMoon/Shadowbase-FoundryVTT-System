@@ -1,0 +1,53 @@
+{
+  "_id": "qGGmOlSncjxuaoXZ",
+  "_key": "!items!qGGmOlSncjxuaoXZ",
+  "name": "Rifle Casing",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "62SxWxECrgqvwXoo",
+  "sort": 3300000,
+  "system": {
+    "row": {
+      "name": "Rifle Casing",
+      "craftingCategory": "Ammunition",
+      "component": "casing",
+      "type": "Rounds",
+      "containerType": "None",
+      "maxCharges": 0,
+      "cost": 2,
+      "weight": 0.04,
+      "notes": "An empty Slugthrower Rifle shell — recovered from a fired round, or bought or crafted fresh. Load a Shot Type into it to Handload.",
+      "materials": [
+        {
+          "name": "Bronzium",
+          "amount": 0.04
+        }
+      ],
+      "id": "97dd1b06-8532-4265-a84f-23d928d40e6e",
+      "quantity": 1,
+      "currentCharges": 0,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 2,
+      "baseWeight": 0.04,
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Rifle Casing"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{{!-- templates/actor/vehicles.hbs - the Vehicles tab (docs/STYLE-SPEC.md §3.3 Vehicles: V1 Ship Assignment, V2 Starships,
+     V3 Atmospheric Vehicles, V4 Terrestrial Vehicles; crew-action-roller.tsx for the station's actions).
+     Context: module/apps/actor-sheet-tabs.mjs vehiclesContext(actor) merged over the sheet's part context (`tab`). --}}
+<section class="tab sb-tab-panel sb-tab-vehicles sb-sections {{tab.cssClass}}" data-tab="vehicles" data-group="primary">
+
+  <details class="sb-section" data-section="ship-assignment" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Vehicles.ShipAssignment") icon=(sbIcon "Ship") chip="" chipTitle="" meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      <div class="sb-field-grid">
+        <label class="sb-field" data-sheet-row><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Vehicles.AssignedRole"}}</span>
+          <select name="system.shipPosition" {{disabled (not editable)}}>{{#each assignment.positions}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+        </label>
+        <label class="sb-field" data-sheet-row><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Vehicles.CurrentStation"}}</span>
+          <select name="system.assignedStation" {{disabled (not editable)}}>{{#each assignment.stations}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+        </label>
+      </div>
+      {{#if assignment.actions.length}}
+      <h3 class="sb-subhead">{{localize "SHADOWBASE.Sheet.Vehicles.CrewActions"}}</h3>
+      <ul class="sb-crew-actions">
+        {{#each assignment.actions}}
+        <li class="sb-crew-action">
+          <span class="sb-crew-action__label">{{this.label}}{{#if this.modifierText}} <span class="sb-muted sb-mono">({{this.modifierText}})</span>{{/if}}</span>
+          <span class="sb-muted">{{this.skills}}</span>
+          {{#if this.isDamage}}
+          <select class="sb-select sb-select--sm" name="crewWeapon">{{#each @root.assignment.weaponNames}}<option value="{{this}}">{{this}}</option>{{/each}}</select>
+          <button type="button" class="sb-btn sb-btn-destructive sb-btn-xs" data-action="rollCrewAction" data-crew-action="{{this.label}}"><i class="{{sbIcon 'Flame'}}"></i> {{localize "SHADOWBASE.Sheet.Weapon.Damage"}}</button>
+          {{else}}
+          <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="rollCrewAction" data-crew-action="{{this.label}}" {{disabled (not this.target)}} title="{{#if this.target}}{{this.best}} · {{this.describe}}{{else}}{{localize "SHADOWBASE.Sheet.Vehicles.NoDefault"}}{{/if}}"><i class="{{sbIcon 'Dices'}}"></i> {{#if this.target}}{{this.target}}{{else}}—{{/if}}</button>
+          {{/if}}
+        </li>
+        {{/each}}
+      </ul>
+      {{else}}{{#if assignment.assignedStation}}<p class="sb-muted-p">{{localize "SHADOWBASE.Sheet.Vehicles.NoStationActions"}}</p>{{/if}}{{/if}}
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="starships" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Vehicles.Starships") icon=(sbIcon "Rocket") chip="vehicles-starships" chipTitle=(lookup chips "vehicles-starships") meta=starships.length}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#if starships.length}}<ul class="sb-cards">{{#each starships}}{{> "systems/shadowbase/templates/actor/parts/starship-card.hbs" this}}{{/each}}</ul>
+      {{else}}{{> "shadowbase.empty" icon=(sbIcon "Rocket") title=(localize "SHADOWBASE.Sheet.Vehicles.NoStarships") description=(localize "SHADOWBASE.Sheet.Vehicles.NoStarshipsHint") action=(localize "SHADOWBASE.Sheet.AddFromLibrary")}}{{/if}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.starships}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button>
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="customStarship" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Vehicles.ImportStarship"}}</button>
+      </div>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="atmospheric-vehicles" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Vehicles.Atmospheric") icon=(sbIcon "Wind") chip="vehicles-starships" chipTitle=(lookup chips "vehicles-starships") meta=atmospheric.length}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#if atmospheric.length}}<ul class="sb-cards">{{#each atmospheric}}{{> "systems/shadowbase/templates/actor/parts/vehicle-card.hbs" this}}{{/each}}</ul>
+      {{else}}{{> "shadowbase.empty" icon=(sbIcon "Wind") title=(localize "SHADOWBASE.Sheet.Vehicles.NoVehicles") description=(localize "SHADOWBASE.Sheet.Vehicles.NoVehiclesHint") action=(localize "SHADOWBASE.Sheet.AddFromLibrary")}}{{/if}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.vehicles}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button>
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="vehicle" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Vehicles.ImportVehicle"}}</button>
+      </div>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="terrestrial-vehicles" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Vehicles.Terrestrial") icon=(sbIcon "Car") chip="vehicles-starships" chipTitle=(lookup chips "vehicles-starships") meta=terrestrial.length}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#if terrestrial.length}}<ul class="sb-cards">{{#each terrestrial}}{{> "systems/shadowbase/templates/actor/parts/vehicle-card.hbs" this}}{{/each}}</ul>
+      {{else}}{{> "shadowbase.empty" icon=(sbIcon "Car") title=(localize "SHADOWBASE.Sheet.Vehicles.NoVehicles") description=(localize "SHADOWBASE.Sheet.Vehicles.NoVehiclesHint") action=(localize "SHADOWBASE.Sheet.AddFromLibrary")}}{{/if}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.vehicles}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button>
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="importItem" data-kind="vehicle" {{disabled (not editable)}}><i class="{{sbIcon 'Upload'}}"></i> {{localize "SHADOWBASE.Sheet.Vehicles.ImportVehicle"}}</button>
+      </div>
+    </div>
+  </details>
+</section>

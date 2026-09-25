@@ -1,0 +1,88 @@
+{
+  "_id": "2Ehk1fWssYmVXi1E",
+  "_key": "!items!2Ehk1fWssYmVXi1E",
+  "name": "Form VII: Juyo / Vaapad",
+  "type": "lightsaberForm",
+  "img": "icons/svg/sword.svg",
+  "folder": null,
+  "sort": 700000,
+  "system": {
+    "row": {
+      "name": "Form VII: Juyo / Vaapad",
+      "level": 1,
+      "baselinePoints": 0
+    },
+    "source": "lightsaberForms",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "level": 1,
+        "cpCost": 10,
+        "effect": "You gain a +1 bonus to your Lightsaber Combat attack rolls, but suffer a -1 penalty to all Active Defenses. You can make one additional Feint per turn at a -2 penalty.",
+        "characterTier": "Apprentice",
+        "applies": {
+          "attack": 1,
+          "activeDefenses": -1
+        },
+        "conditional": []
+      },
+      {
+        "level": 2,
+        "cpCost": 20,
+        "effect": "You gain a +2 bonus to your Lightsaber Combat attack rolls, but suffer a -2 penalty to all Active Defenses. You can make one additional Feint per turn at no penalty. If your attack hits, you cause +1 injury on a critical hit.",
+        "characterTier": "Adept",
+        "applies": {
+          "attack": 2,
+          "activeDefenses": -2
+        },
+        "conditional": []
+      },
+      {
+        "level": 3,
+        "cpCost": 35,
+        "effect": "You gain a +3 bonus to your Lightsaber Combat attack rolls, but suffer a -3 penalty to all Active Defenses. You can make one additional Feint per turn at +1. If your attack hits, you cause +2 injury on a critical hit. You gain a +1 bonus to Intimidation rolls when facing a single opponent.",
+        "characterTier": "Expert",
+        "applies": {
+          "attack": 3,
+          "activeDefenses": -3
+        },
+        "conditional": [
+          {
+            "target": "intimidation",
+            "value": 1,
+            "when": "facing a single opponent"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "cpCost": 55,
+        "effect": "You gain a +4 bonus to your Lightsaber Combat attack rolls, but suffer a -4 penalty to all Active Defenses. You can make two additional Feints per turn at no penalty. If your attack hits, you cause +3 injury on a critical hit. You gain a +2 bonus to Intimidation rolls and your attacks are considered to have the \"Brutal\" perk (if applicable). On a critical success, you may force a Fright Check on your opponent (GM's discretion).",
+        "characterTier": "Master",
+        "applies": {
+          "attack": 4,
+          "activeDefenses": -4
+        },
+        "conditional": [
+          {
+            "target": "intimidation",
+            "value": 2,
+            "when": "on Intimidation rolls"
+          }
+        ]
+      }
+    ],
+    "catalog": "lightsaber-forms"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-forms",
+      "key": "Form VII: Juyo / Vaapad"
+    }
+  }
+}

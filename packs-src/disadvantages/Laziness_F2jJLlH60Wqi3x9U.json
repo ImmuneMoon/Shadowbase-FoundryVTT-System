@@ -1,0 +1,34 @@
+{
+  "_id": "F2jJLlH60Wqi3x9U",
+  "_key": "!items!F2jJLlH60Wqi3x9U",
+  "name": "Laziness",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 11200000,
+  "system": {
+    "row": {
+      "name": "Laziness",
+      "points": -10,
+      "level": null,
+      "description": "You are perpetually unmotivated and will avoid work or effort whenever possible, always seeking the easiest path.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Laziness|Mental"
+    }
+  }
+}

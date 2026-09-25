@@ -1,0 +1,42 @@
+{
+  "_id": "J9niXKMSh94AuJsp",
+  "_key": "!items!J9niXKMSh94AuJsp",
+  "name": "Torso Backing",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "eBYAuy3r3NWeGfsN",
+  "sort": 7800000,
+  "system": {
+    "row": {
+      "id": "f7823c16-835c-4d9f-a3c0-5e76c73e1bc6",
+      "name": "Torso Backing",
+      "category": "Armor Backing",
+      "cost": 54,
+      "weight": 1,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "backing-torso",
+      "materialId": null,
+      "notes": "Padding and strapping that secures the Shell. Fixed by location - never varies with tier or material.",
+      "validSlots": [],
+      "drBonus": null,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "backing-torso"
+    }
+  }
+}

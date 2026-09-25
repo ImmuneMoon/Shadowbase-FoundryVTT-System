@@ -1,0 +1,32 @@
+{
+  "_id": "8kwEbDZSbeq5RGzh",
+  "_key": "!items!8kwEbDZSbeq5RGzh",
+  "name": "Careful",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 500000,
+  "system": {
+    "row": {
+      "name": "Careful",
+      "points": -1,
+      "description": "You are meticulous and cautious, often double-checking your gear, plans, and surroundings. This is not cowardice, but a deep-seated need for preparedness.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Careful"
+    }
+  }
+}

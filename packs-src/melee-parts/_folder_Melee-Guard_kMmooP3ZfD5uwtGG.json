@@ -1,0 +1,19 @@
+{
+  "_id": "kMmooP3ZfD5uwtGG",
+  "_key": "!folders!kMmooP3ZfD5uwtGG",
+  "name": "Melee Guard",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 200000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "path": [
+        "Melee Guard"
+      ]
+    }
+  }
+}

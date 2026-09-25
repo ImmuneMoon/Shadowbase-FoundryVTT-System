@@ -1,0 +1,42 @@
+{
+  "_id": "VoQ3Kf11jS6CeYqp",
+  "_key": "!items!VoQ3Kf11jS6CeYqp",
+  "name": "Blueprint: Tool Kit (Basic)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "g7UVHPh3r2MYv5Oo",
+  "sort": 49100000,
+  "system": {
+    "row": {
+      "id": "8990aa1c-745e-44a8-91c4-ce54ed3f060a",
+      "name": "Blueprint: Tool Kit (Basic)",
+      "cost": 187,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Tool Kit (Basic) (Generation 0, proven, encoded, catalog design). Required to build Tool Kit (Basic); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Tool Kit (Basic)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 125,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Tools & Electronics|Tool Kit (Basic)"
+    }
+  }
+}

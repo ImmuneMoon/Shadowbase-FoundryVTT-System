@@ -1,0 +1,42 @@
+{
+  "_id": "DWZ6xHpuuO00ZpIQ",
+  "_key": "!items!DWZ6xHpuuO00ZpIQ",
+  "name": "Blueprint: Krath War Blade",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 41900000,
+  "system": {
+    "row": {
+      "id": "eabd787e-22cc-442c-9c8f-e5359b0d7ca9",
+      "name": "Blueprint: Krath War Blade",
+      "cost": 254,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Krath War Blade (Generation 0, proven, encoded, catalog design). Required to build Krath War Blade; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Krath War Blade",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 794,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Krath War Blade"
+    }
+  }
+}

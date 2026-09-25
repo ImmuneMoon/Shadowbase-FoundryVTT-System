@@ -1,0 +1,26 @@
+{{!-- templates/actor/parts/part-row.hbs - one ammunition / weapon part / armour part row (ammunition-and-modifications-section.tsx:
+     name, x qty, installed-in host, Component Effect). Context: a partRow or an ammoRow (both carry id, rowName, quantity, weight, cost,
+     storage, kind, boxed; a partRow adds familyLabel / installed / host / slot / effect / condition, an ammoRow chargesText / gasGrade /
+     containerType / contents / loadedIn - the caller passes `variant`). --}}
+<li class="sb-row sb-part-row" data-item-id="{{id}}">
+  <div class="sb-row__main">
+    <img class="sb-row__icon" src="{{img}}" alt="">
+    <span class="sb-row__name sb-row__name--static">{{rowName}}</span>
+    {{#if (gt quantity 1)}}<span class="sb-badge sb-badge-secondary sb-badge--count">×{{quantity}}</span>{{/if}}
+    {{#if (eq variant "ammo")}}
+      {{#if chargesText}}<span class="sb-badge sb-badge-outline sb-mono"><i class="fa-solid fa-battery-half"></i> {{chargesText}}</span>{{/if}}
+      {{#if gasGrade}}<span class="sb-badge sb-badge-outline">{{gasGrade}}</span>{{/if}}
+      {{#if containerType}}<span class="sb-muted">{{containerType}}</span>{{/if}}
+      {{#if contents}}<span class="sb-muted sb-mono">{{localize "SHADOWBASE.Sheet.Inventory.Rounds" n=contents}}</span>{{/if}}
+      {{#if loadedIn}}<span class="sb-badge sb-badge-accent"><i class="fa-solid fa-link"></i> {{localize "SHADOWBASE.Sheet.Inventory.LoadedIn" name=loadedIn.name}}</span>{{/if}}
+    {{else}}
+      <span class="sb-muted">{{familyLabel}}{{#if slot}} · {{slot}}{{/if}}</span>
+      {{#if host}}<span class="sb-badge sb-badge-accent"><i class="fa-solid fa-link"></i> {{localize "SHADOWBASE.Sheet.Inventory.InstalledIn" name=host.name}}</span>
+      {{else}}{{#if installed}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Sheet.Inventory.Installed"}}</span>{{else}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Sheet.Inventory.Loose"}}</span>{{/if}}{{/if}}
+      <span class="sb-badge {{#if condition.fine}}sb-badge-outline{{else}}sb-badge-destructive{{/if}}">{{condition.text}}</span>
+    {{/if}}
+    <span class="sb-muted sb-mono">{{weight}} lb · {{cost}} cr</span>
+    {{> "systems/shadowbase/templates/actor/parts/row-tools.hbs" id=id storage=storage kind=kind editable=@root.editable}}
+  </div>
+  {{#if (ne variant "ammo")}}{{#if effect}}<p class="sb-muted sb-row__sub">{{effect}}</p>{{/if}}{{/if}}
+</li>

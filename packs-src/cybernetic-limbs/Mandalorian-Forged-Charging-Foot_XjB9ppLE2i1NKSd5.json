@@ -1,0 +1,45 @@
+{
+  "_id": "XjB9ppLE2i1NKSd5",
+  "_key": "!items!XjB9ppLE2i1NKSd5",
+  "name": "Mandalorian-Forged \"Charging\" Foot",
+  "type": "cyberneticLimb",
+  "img": "icons/svg/bones.svg",
+  "folder": "XY3P8r89fv7qHBeH",
+  "sort": 1500000,
+  "system": {
+    "row": {
+      "id": "d9473cd1-6292-4b22-9896-7edde42d6685",
+      "name": "Mandalorian-Forged \"Charging\" Foot",
+      "location": "Right Foot",
+      "extent": "Partial",
+      "material": "Beskar",
+      "cost": 31060,
+      "weight": 3.45,
+      "dr": 10,
+      "currentDr": 10,
+      "effect": "+5 to DR  vs energy (burn/ cr) damage. extreme durability.",
+      "upgrades": [],
+      "hasSynthskin": false,
+      "installed": false,
+      "storageLocationId": null,
+      "quantity": 1,
+      "baselinePoints": 0,
+      "itemSizeModifier": 0
+    },
+    "source": "cybernetics",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-limbs"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-limbs",
+      "key": "Foot|Mandalorian-Forged \"Charging\" Foot"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "czQM76xRLYA4DCz2",
+  "_key": "!items!czQM76xRLYA4DCz2",
+  "name": "3D Spatial Sense",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "name": "3D Spatial Sense",
+      "points": 10,
+      "description": "Ultrasonic awareness. Gives you an intuitive grasp of your surroundings in three dimensions.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "3D Spatial Sense"
+    }
+  }
+}

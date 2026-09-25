@@ -1,0 +1,19 @@
+{
+  "_id": "4MEEpZlW0yDZDn1G",
+  "_key": "!folders!4MEEpZlW0yDZDn1G",
+  "name": "Shortsword",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 900000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "path": [
+        "Shortsword"
+      ]
+    }
+  }
+}

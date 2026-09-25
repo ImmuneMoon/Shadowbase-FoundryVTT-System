@@ -1,0 +1,42 @@
+{
+  "_id": "332vMl0xlPKRiPjg",
+  "_key": "!items!332vMl0xlPKRiPjg",
+  "name": "Ballistic Threading",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "b9NTRG23teMlPT2K",
+  "sort": 2300000,
+  "system": {
+    "row": {
+      "name": "Ballistic Threading",
+      "rarity": "Common",
+      "cost": 10,
+      "density": 85,
+      "category": "Raw Materials",
+      "subCategory": "Clothing",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Standard reinforcement for low-tech or basic armor.",
+      "id": "c67180e1-c8a9-475d-90ed-9f029dbad622",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Ballistic Threading"
+    }
+  }
+}

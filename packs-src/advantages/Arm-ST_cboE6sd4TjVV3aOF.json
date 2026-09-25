@@ -1,0 +1,34 @@
+{
+  "_id": "cboE6sd4TjVV3aOF",
+  "_key": "!items!cboE6sd4TjVV3aOF",
+  "name": "Arm ST",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "GS8kUCPWatq78XxI",
+  "sort": 1600000,
+  "system": {
+    "row": {
+      "name": "Arm ST",
+      "points": 5,
+      "description": "One arm (+1 ST)",
+      "category": "Physical",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Arm ST"
+    }
+  }
+}

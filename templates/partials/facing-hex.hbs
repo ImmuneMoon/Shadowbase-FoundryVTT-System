@@ -1,0 +1,33 @@
+{{!-- shadowbase.facing-hex - the facing dial as a hexagon (src/components/character-sheet/components/facing-hex.tsx).
+     The outer ring places threats (empty adds, occupied becomes the active one, the active one clicked again goes),
+     the inner disc turns the character; arrows point out the way they face and in the way each attack travels.
+     Params: hex (module/helpers/facing-hex.mjs facingHexModel), editable (bool). --}}
+<svg class="sb-facing-hex" viewBox="{{hex.viewBox}}" role="group" aria-label="{{hex.aria}}">
+  {{#each hex.threats}}
+    <path class="sb-hex__threat {{#if isActive}}sb-hex__threat--active{{else if isOther}}sb-hex__threat--other{{/if}}" d="{{d}}"
+      role="button" tabindex="0" data-action="cycle-threat" data-side="{{side}}"
+      aria-label="{{#if isActive}}{{localize "SHADOWBASE.Sheet.Facing.HexRemove" n=label}}{{else if isOther}}{{localize "SHADOWBASE.Sheet.Facing.HexResolve" n=label}}{{else}}{{localize "SHADOWBASE.Sheet.Facing.HexAdd" n=label}}{{/if}}">
+      <title>{{#if isActive}}{{localize "SHADOWBASE.Sheet.Facing.HexRemove" n=label}}{{else if isOther}}{{localize "SHADOWBASE.Sheet.Facing.HexResolve" n=label}}{{else}}{{localize "SHADOWBASE.Sheet.Facing.HexAdd" n=label}}{{/if}}</title>
+    </path>
+  {{/each}}
+  <polygon class="sb-hex__shape" points="{{hex.hex}}"></polygon>
+  {{#each hex.facings}}
+    <path class="sb-hex__facing {{#if isActive}}sb-hex__facing--active{{/if}}" d="{{d}}" role="button" tabindex="0" data-action="set-facing" data-side="{{side}}" aria-label="{{localize "SHADOWBASE.Sheet.Facing.HexFace" n=label}}">
+      <title>{{localize "SHADOWBASE.Sheet.Facing.HexFace" n=label}}</title>
+    </path>
+  {{/each}}
+  {{#each hex.labels}}
+    <text class="sb-hex__label {{#if lit}}sb-hex__label--lit{{/if}}" x="{{x}}" y="{{y}}" text-anchor="middle" dominant-baseline="central">{{label}}</text>
+  {{/each}}
+  <g class="sb-hex__arrow sb-hex__arrow--self">
+    <path d="{{hex.self.shaft}}" stroke-width="3" stroke-linecap="round" fill="none"></path>
+    <path class="sb-hex__head" d="{{hex.self.head}}"></path>
+    <circle cx="{{hex.self.cx}}" cy="{{hex.self.cy}}" r="4"></circle>
+  </g>
+  {{#each hex.threatArrows}}
+    <g class="sb-hex__arrow sb-hex__arrow--{{tone}} {{#unless active}}sb-hex__arrow--other{{/unless}}">
+      <path d="{{shaft}}" stroke-width="{{#if active}}3{{else}}2{{/if}}" stroke-linecap="round" fill="none"></path>
+      <path class="sb-hex__head" d="{{head}}"></path>
+    </g>
+  {{/each}}
+</svg>

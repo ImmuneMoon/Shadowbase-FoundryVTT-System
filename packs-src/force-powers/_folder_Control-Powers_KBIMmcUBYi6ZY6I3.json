@@ -1,0 +1,19 @@
+{
+  "_id": "KBIMmcUBYi6ZY6I3",
+  "_key": "!folders!KBIMmcUBYi6ZY6I3",
+  "name": "Control Powers",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 300000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "path": [
+        "Control Powers"
+      ]
+    }
+  }
+}

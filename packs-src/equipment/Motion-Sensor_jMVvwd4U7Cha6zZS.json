@@ -1,0 +1,59 @@
+{
+  "_id": "jMVvwd4U7Cha6zZS",
+  "_key": "!items!jMVvwd4U7Cha6zZS",
+  "name": "Motion Sensor",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "rzx9eWpiaGSn8iri",
+  "sort": 8900000,
+  "system": {
+    "row": {
+      "name": "Motion Sensor",
+      "cost": 1800,
+      "skill": "Electronics Operation (Security) or Tactics",
+      "description": "Detects movement within a 10-yard radius. Must be placed on a stationary surface. Grants a +4 to Perception in opposed rolls against an intruder's Stealth to detect sneaking. It cannot detect perfectly stationary targets. Lasts 10 hours per full power cell. Needs Computer Programming to function if constructed.",
+      "category": "Restraints & Security",
+      "weight": 2.2,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Data-Crystal",
+          "amount": 0.2
+        },
+        {
+          "name": "Silicon",
+          "amount": 0.3
+        },
+        {
+          "name": "Durasteel",
+          "amount": 1
+        },
+        {
+          "name": "Power Cell",
+          "amount": 0.7
+        }
+      ],
+      "requiresSoftware": true,
+      "id": "cda0b213-fd61-488f-9ed0-bf1750185b99",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Motion Sensor"
+    }
+  }
+}

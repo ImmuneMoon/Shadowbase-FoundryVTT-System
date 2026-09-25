@@ -1,0 +1,42 @@
+{
+  "_id": "bWiJ6dxG3zciHQJa",
+  "_key": "!items!bWiJ6dxG3zciHQJa",
+  "name": "Blueprint: Bothan Shrieker",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "lJCUDV7zwgRAU1yY",
+  "sort": 45400000,
+  "system": {
+    "row": {
+      "id": "f398232f-1d0f-470e-aee0-a184a11d2e10",
+      "name": "Blueprint: Bothan Shrieker",
+      "cost": 334,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Bothan Shrieker (Generation 0, proven, encoded, catalog design). Required to build Bothan Shrieker; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Bothan Shrieker",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1595,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Specialized Pistols|Bothan Shrieker"
+    }
+  }
+}

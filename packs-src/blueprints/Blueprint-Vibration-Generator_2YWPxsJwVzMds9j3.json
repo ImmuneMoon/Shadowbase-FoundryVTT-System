@@ -1,0 +1,42 @@
+{
+  "_id": "2YWPxsJwVzMds9j3",
+  "_key": "!items!2YWPxsJwVzMds9j3",
+  "name": "Blueprint: Vibration Generator",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "XAvVixgLTZA95jcH",
+  "sort": 44400000,
+  "system": {
+    "row": {
+      "id": "eb821df9-e025-4a3e-9365-e1b0e2b128e7",
+      "name": "Blueprint: Vibration Generator",
+      "cost": 189,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Vibration Generator (Generation 0, proven, encoded, catalog design). Required to build Vibration Generator; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Vibration Generator",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 150,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Power & Energy Components|Vibration Generator"
+    }
+  }
+}

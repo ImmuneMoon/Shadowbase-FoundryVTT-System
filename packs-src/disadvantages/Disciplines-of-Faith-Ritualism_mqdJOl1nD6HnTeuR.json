@@ -1,0 +1,34 @@
+{
+  "_id": "mqdJOl1nD6HnTeuR",
+  "_key": "!items!mqdJOl1nD6HnTeuR",
+  "name": "Disciplines of Faith (Ritualism)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 9900000,
+  "system": {
+    "row": {
+      "name": "Disciplines of Faith (Ritualism)",
+      "points": -5,
+      "level": null,
+      "description": "Spiritual observations. You are bound by strict daily rituals or religious observations that take time and focus.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Disciplines of Faith (Ritualism)|Mental"
+    }
+  }
+}

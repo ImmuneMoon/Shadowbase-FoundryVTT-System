@@ -1,0 +1,41 @@
+{
+  "_id": "oFV99nl9McYUE03u",
+  "_key": "!items!oFV99nl9McYUE03u",
+  "name": "Cortosis Weave (Head)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "8GrlQsd0h5olZ7DZ",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "id": "abc8e793-f909-4614-8852-84bb2262fe64",
+      "name": "Cortosis Weave (Head)",
+      "category": "Overlay Mod",
+      "cost": 3000,
+      "weight": 0.2,
+      "notes": "+3 DR vs Head  vs energy (burn/ cr) damage. Roll 3d6: if not crit fail, disrupts Lightsaber for 2d-2 sec (min 2 sec) on contact.",
+      "equipped": false,
+      "quantity": 1,
+      "validSlots": [
+        "Head",
+        "Droid Head"
+      ],
+      "drBonus": 3
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "key": "Cortosis Weave (Head)"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "M3Z80G60je5iO9Xx",
+  "_key": "!items!M3Z80G60je5iO9Xx",
+  "name": "Blueprint: Military-Grade Hydraulics",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "6LwEPFQhc8M6lMfR",
+  "sort": 21200000,
+  "system": {
+    "row": {
+      "id": "f1910f54-e4e5-4558-8408-a2c480f3145e",
+      "name": "Blueprint: Military-Grade Hydraulics",
+      "cost": 831,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Military-Grade Hydraulics (Generation 0, proven, encoded, catalog design). Required to build Military-Grade Hydraulics; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Military-Grade Hydraulics",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 6570,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Actuator|Military-Grade Hydraulics"
+    }
+  }
+}

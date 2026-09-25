@@ -1,0 +1,42 @@
+{
+  "_id": "cl9CZVgoYzOOO4RE",
+  "_key": "!items!cl9CZVgoYzOOO4RE",
+  "name": "Blueprint: Firkrann Lens",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "KDepxQG1NOlrKZaZ",
+  "sort": 33400000,
+  "system": {
+    "row": {
+      "id": "77604ec3-66cf-4f3f-b6e0-28d452ca9508",
+      "name": "Blueprint: Firkrann Lens",
+      "cost": 270,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Firkrann Lens (Generation 0, proven, encoded, catalog design). Required to build Firkrann Lens; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Firkrann Lens",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 952.6666666666667,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Internal|Firkrann Lens"
+    }
+  }
+}

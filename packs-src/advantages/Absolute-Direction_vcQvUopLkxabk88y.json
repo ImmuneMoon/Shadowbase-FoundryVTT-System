@@ -1,0 +1,33 @@
+{
+  "_id": "vcQvUopLkxabk88y",
+  "_key": "!items!vcQvUopLkxabk88y",
+  "name": "Absolute Direction",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 300000,
+  "system": {
+    "row": {
+      "name": "Absolute Direction",
+      "points": 5,
+      "description": "You always know which way is north and can recall any direction you have moved in. Useful for navigation through treacherous territories, whether for strategic military advances or clandestine smuggling routes.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Absolute Direction"
+    }
+  }
+}

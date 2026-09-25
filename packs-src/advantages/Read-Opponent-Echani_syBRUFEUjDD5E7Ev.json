@@ -1,0 +1,33 @@
+{
+  "_id": "syBRUFEUjDD5E7Ev",
+  "_key": "!items!syBRUFEUjDD5E7Ev",
+  "name": "Read Opponent (Echani)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "RdM67Srk6HMq7Ns7",
+  "sort": 13500000,
+  "system": {
+    "row": {
+      "name": "Read Opponent (Echani)",
+      "points": 0,
+      "description": "Echani can instinctively \"read\" an opponent's fighting style, emotions, and intentions through their movements. This grants a +1 bonus to Evaluate maneuvers used against a sentient opponent. When successful, the Echani gains a +1 bonus to all Active Defenses against that specific opponent for the next turn, representing their ability to predict and counter attacks. This analytical approach to combat removes sentiment, making them coldly efficient in dispatching foes. Cost: 1 point (Perk).",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Read Opponent (Echani)"
+    }
+  }
+}

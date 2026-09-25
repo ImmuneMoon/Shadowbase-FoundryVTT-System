@@ -1,0 +1,42 @@
+{
+  "_id": "o02F7Mx9FLPWwZt8",
+  "_key": "!items!o02F7Mx9FLPWwZt8",
+  "name": "Blueprint: Tower Head Unit (Patrol)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "UStUF7LfeXhiWi8K",
+  "sort": 24300000,
+  "system": {
+    "row": {
+      "id": "4892f25b-0715-45c8-9a72-a0385e809d55",
+      "name": "Blueprint: Tower Head Unit (Patrol)",
+      "cost": 407,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Tower Head Unit (Patrol) (Generation 0, proven, encoded, catalog design). Required to build Tower Head Unit (Patrol); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Tower Head Unit (Patrol)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 2325,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Head|Tower Head Unit (Patrol)"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "HC7A5ZLjfrE9rUGy",
+  "_key": "!items!HC7A5ZLjfrE9rUGy",
+  "name": "Filch",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "l1z4BAKrTKyClCsJ",
+  "sort": 5100000,
+  "system": {
+    "row": {
+      "name": "Filch",
+      "level": "",
+      "points": null,
+      "relativeLevel": "DX/Average",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Filch"
+    }
+  }
+}

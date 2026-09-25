@@ -1,0 +1,34 @@
+{
+  "_id": "YKrB0GNLyqp8OiwC",
+  "_key": "!items!YKrB0GNLyqp8OiwC",
+  "name": "Code of the Streets",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "KbQ0mAMpcz5zmcEs",
+  "sort": 5300000,
+  "system": {
+    "row": {
+      "name": "Code of the Streets",
+      "points": -5,
+      "level": null,
+      "description": "You adhere to an informal code of conduct common in the underworld (e.g., never rat out a score, protect your own turf, don't double-cross your partners). While providing a framework, this code can sometimes lead to uncomfortable or dangerous situations if it conflicts with your personal goals or safety.",
+      "category": "Cultural / Background",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Code of the Streets|Cultural / Background"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "sA4MP93t4OYIHNgh",
+  "_key": "!items!sA4MP93t4OYIHNgh",
+  "name": "Light Leg Shell (Scrap Metal)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 3200000,
+  "system": {
+    "row": {
+      "id": "f85c7174-4b36-4e4e-af98-a3b5035ea1bb",
+      "name": "Light Leg Shell (Scrap Metal)",
+      "category": "Armor Shell",
+      "cost": 50,
+      "weight": 2.46,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-light-legs-scrap-metal",
+      "materialId": "scrap-metal",
+      "notes": "Low quality, scavenged metals. Light and Medium tiers only -- scavenged stock will not hold at heavy gauge.",
+      "validSlots": [],
+      "drBonus": 2,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-light-legs-scrap-metal"
+    }
+  }
+}

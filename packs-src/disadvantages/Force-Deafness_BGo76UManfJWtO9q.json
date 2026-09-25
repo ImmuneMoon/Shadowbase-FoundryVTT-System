@@ -1,0 +1,34 @@
+{
+  "_id": "BGo76UManfJWtO9q",
+  "_key": "!items!BGo76UManfJWtO9q",
+  "name": "Force Deafness",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "77PHdGCAvI5e7tCW",
+  "sort": 400000,
+  "system": {
+    "row": {
+      "name": "Force Deafness",
+      "points": -10,
+      "level": null,
+      "description": "You are unable to perceive the Force or its emanations. This effectively makes you non-Force-sensitive, even if you were once able to use it, or renders you incapable of learning Force powers. This disadvantage can be particularly debilitating for Force-sensitives, severing their connection to their primary means of perception and power.",
+      "category": "Force-Related",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Force Deafness|Force-Related"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "cvdavEShFI6MJrj0",
+  "_key": "!items!cvdavEShFI6MJrj0",
+  "name": "Blueprint: Explosive Dart",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DvRG95q4QWZQnNFm",
+  "sort": 300000,
+  "system": {
+    "row": {
+      "id": "3801787d-43f9-48d2-9113-391e05eabed1",
+      "name": "Blueprint: Explosive Dart",
+      "cost": 217,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Explosive Dart (Generation 0, proven, encoded, catalog design). Required to build Explosive Dart; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Explosive Dart",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 421.22222222222223,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Ammunition|Explosive Dart"
+    }
+  }
+}

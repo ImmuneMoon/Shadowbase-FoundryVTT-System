@@ -1,0 +1,34 @@
+{
+  "_id": "wCXLDP2AGADXgeYb",
+  "_key": "!items!wCXLDP2AGADXgeYb",
+  "name": "Social Stigma (Warrior Culture)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "KbQ0mAMpcz5zmcEs",
+  "sort": 4500000,
+  "system": {
+    "row": {
+      "name": "Social Stigma (Warrior Culture)",
+      "points": -5,
+      "level": null,
+      "description": "In many parts of the galaxy, Mandalorians are seen as brutal warmongers or raiders, leading to negative reactions from civilians and authorities outside their own spheres of influence. This can make gaining trust or operating covertly very challenging.",
+      "category": "Cultural / Background",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Social Stigma (Warrior Culture)|Cultural / Background"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "wX5uxXOvDc54vg5u",
+  "_key": "!items!wX5uxXOvDc54vg5u",
+  "name": "Distinctive Features (Feline Appearance)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "iBhK8LHSekCOv5gO",
+  "sort": 14600000,
+  "system": {
+    "row": {
+      "name": "Distinctive Features (Feline Appearance)",
+      "points": -1,
+      "level": null,
+      "description": "Animalistic traits making it difficult to blend in.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Distinctive Features (Feline Appearance)|Physical"
+    }
+  }
+}

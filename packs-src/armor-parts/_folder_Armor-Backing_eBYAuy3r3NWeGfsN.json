@@ -1,0 +1,19 @@
+{
+  "_id": "eBYAuy3r3NWeGfsN",
+  "_key": "!folders!eBYAuy3r3NWeGfsN",
+  "name": "Armor Backing",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "path": [
+        "Armor Backing"
+      ]
+    }
+  }
+}

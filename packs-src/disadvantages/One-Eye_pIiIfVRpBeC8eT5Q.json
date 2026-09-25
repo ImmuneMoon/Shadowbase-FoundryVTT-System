@@ -1,0 +1,34 @@
+{
+  "_id": "pIiIfVRpBeC8eT5Q",
+  "_key": "!items!pIiIfVRpBeC8eT5Q",
+  "name": "One Eye",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "iBhK8LHSekCOv5gO",
+  "sort": 15600000,
+  "system": {
+    "row": {
+      "name": "One Eye",
+      "points": -15,
+      "level": null,
+      "description": "You lack depth perception, giving you a penalty on ranged attacks and tasks requiring precise visual judgment.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "One Eye|Physical"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "MXRTgEYlPGFTsmFD",
+  "_key": "!items!MXRTgEYlPGFTsmFD",
+  "name": "Social Stigma (Sith Empire)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "QdWbP3PunGyoJeht",
+  "sort": 18800000,
+  "system": {
+    "row": {
+      "name": "Social Stigma (Sith Empire)",
+      "points": -10,
+      "level": null,
+      "description": "Enemy alignment. Your affiliation causes immediate distrust and hostility from Republic citizens.",
+      "category": "Social",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Social Stigma (Sith Empire)|Social"
+    }
+  }
+}

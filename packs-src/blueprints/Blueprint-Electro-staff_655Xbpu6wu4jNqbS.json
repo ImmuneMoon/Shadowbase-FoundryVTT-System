@@ -1,0 +1,42 @@
+{
+  "_id": "655Xbpu6wu4jNqbS",
+  "_key": "!items!655Xbpu6wu4jNqbS",
+  "name": "Blueprint: Electro-staff",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 41600000,
+  "system": {
+    "row": {
+      "id": "9ce8fb46-f24b-4be3-a6f6-b909e7e8d7b7",
+      "name": "Blueprint: Electro-staff",
+      "cost": 495,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Electro-staff (Generation 0, proven, encoded, catalog design). Required to build Electro-staff; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Electro-staff",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3210,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Electro-staff"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "_id": "CM9GCzdIZfQXD7HB",
+  "_key": "!items!CM9GCzdIZfQXD7HB",
+  "name": "Sniper Shot",
+  "type": "combatTechnique",
+  "img": "icons/svg/combat.svg",
+  "folder": "yCiHEt47QNFtLtyi",
+  "sort": 1000000,
+  "system": {
+    "row": {
+      "name": "Sniper Shot",
+      "category": "Ranged",
+      "level": 1,
+      "cpCost": 10,
+      "epCost": 1,
+      "effect": "Crit on 3-5. Reduces target DR by 2 for this shot.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Any Ranged Weapon skill",
+      "baselinePoints": 0
+    },
+    "source": "combatTechniques",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Sniper Shot",
+        "category": "Ranged",
+        "level": 1,
+        "cpCost": 10,
+        "epCost": 1,
+        "effect": "Crit on 3-5. Reduces target DR by 2 for this shot.",
+        "characterTier": "Apprentice",
+        "baseSkill": "Any Ranged Weapon skill"
+      },
+      {
+        "name": "Sniper Shot",
+        "category": "Ranged",
+        "level": 2,
+        "cpCost": 20,
+        "epCost": 2,
+        "effect": "Crit on 3-6. Reduces target DR by 4 for this shot.",
+        "characterTier": "Adept",
+        "baseSkill": "Any Ranged Weapon skill"
+      },
+      {
+        "name": "Sniper Shot",
+        "category": "Ranged",
+        "level": 3,
+        "cpCost": 35,
+        "epCost": 3,
+        "effect": "Crit on 3-7. Bypasses half of target DR.",
+        "characterTier": "Expert",
+        "baseSkill": "Any Ranged Weapon skill"
+      },
+      {
+        "name": "Sniper Shot",
+        "category": "Ranged",
+        "level": 4,
+        "cpCost": 55,
+        "epCost": 4,
+        "effect": "Crit on 3-8. Ignores target DR entirely.",
+        "characterTier": "Master",
+        "baseSkill": "Any Ranged Weapon skill"
+      }
+    ],
+    "catalog": "combat-techniques"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "combat-techniques",
+      "key": "Ranged|Sniper Shot"
+    }
+  }
+}

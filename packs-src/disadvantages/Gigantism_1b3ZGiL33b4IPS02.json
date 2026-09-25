@@ -1,0 +1,34 @@
+{
+  "_id": "1b3ZGiL33b4IPS02",
+  "_key": "!items!1b3ZGiL33b4IPS02",
+  "name": "Gigantism",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "iBhK8LHSekCOv5gO",
+  "sort": 15300000,
+  "system": {
+    "row": {
+      "name": "Gigantism",
+      "points": -10,
+      "level": null,
+      "description": "You are much larger than the average for your species, making it difficult to use standard equipment, find shelter, or move stealthily.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Gigantism|Physical"
+    }
+  }
+}

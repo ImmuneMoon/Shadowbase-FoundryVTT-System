@@ -1,0 +1,45 @@
+{
+  "_id": "dHXrIh1O5K1HyYfz",
+  "_key": "!items!dHXrIh1O5K1HyYfz",
+  "name": "Rubat",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "CHP7xje9NHnZhKqb",
+  "sort": 8600000,
+  "system": {
+    "row": {
+      "id": "d7783667-2431-4ed4-90e6-6fdc991c214d",
+      "name": "Rubat",
+      "cost": 2000,
+      "weight": 0.2,
+      "damageAdds": 1,
+      "effect": "+1 to hit, +1 damage.",
+      "category": "Lightsaber Power Crystal",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.2
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "+1 to hit, +1 damage."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:rubat"
+    }
+  }
+}

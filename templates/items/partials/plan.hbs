@@ -1,0 +1,24 @@
+{{!-- shadowbase.item.plan - the Construction panel (customized-blaster-item.tsx:586-620, the melee card :1288-1320,
+     armor ArmorAssembly.tsx:466-520): ready or blocked, why, the shopping list of chosen-not-owned components with what
+     they cost, the rows a Confirm Construction consumes, the chapter's crafting phases. Hidden under Direct Library
+     Access (free placement needs no plan). Context: plan (builders.planView) plus phases (text). --}}
+<div class="sb-plan {{#if plan.canBuild}}sb-plan--ready{{else}}sb-plan--blocked{{/if}}">
+  <div class="sb-plan__head">
+    <span class="sb-caps sb-text-accent">{{localize "SHADOWBASE.Item.Build.Construction"}}</span>
+    <span class="sb-badge {{#if plan.canBuild}}sb-badge-outline{{else}}sb-badge-destructive{{/if}}">{{plan.status}}</span>
+    {{#if plan.consumes}}<span class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Build.Consumes" n=plan.consumes}}</span>{{/if}}
+  </div>
+  {{#if plan.blockedBy.length}}
+  <ul class="sb-plan__blocked">{{#each plan.blockedBy}}<li>{{this}}</li>{{/each}}</ul>
+  {{/if}}
+  {{#if plan.shoppingList.length}}
+  <table class="sb-table sb-table--dense sb-plan__shopping">
+    <thead><tr><th>{{localize "SHADOWBASE.Item.Build.Slot"}}</th><th>{{localize "SHADOWBASE.Item.Build.Component"}}</th><th class="sb-num">{{localize "SHADOWBASE.Item.Build.Cost"}}</th></tr></thead>
+    <tbody>
+      {{#each plan.shoppingList}}<tr><td>{{this.label}}</td><td>{{this.partName}}</td><td class="sb-num sb-mono">{{#if this.priced}}{{this.cost}} cr{{else}}<span class="sb-text-amber">{{localize "SHADOWBASE.Item.Build.Unpriced"}}</span>{{/if}}</td></tr>{{/each}}
+    </tbody>
+    <tfoot><tr><td colspan="2">{{localize "SHADOWBASE.Item.Build.ShoppingTotal"}}</td><td class="sb-num sb-mono">{{plan.shoppingCost}} cr</td></tr></tfoot>
+  </table>
+  {{/if}}
+  {{#if phases}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Build.Phases" chapter=plan.chapter}}: {{phases}}</p>{{/if}}
+</div>

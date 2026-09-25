@@ -1,0 +1,78 @@
+{{!-- templates/actor/header.hbs - the sheet header (docs/ARCHITECTURE.md §6.1; docs/STYLE-SPEC.md §3.1 header block):
+     portrait (system.characterPortrait data URL, else actor.img), the name, the identity line, the points ledger,
+     the Import / Export / HUD / Preferences buttons, and the pinned bar (pools / points) when the user pinned them.
+     The editable Player / Species / Homeworld / Campaign inputs live in the Info tab's Basic Info section so no
+     input name is bound twice on one form. Context: module/apps/actor-sheet.mjs headerContext(). --}}
+<header class="sb-header" data-application-part="header">
+  <div class="sb-header__portrait" data-action="edit-portrait" title="{{localize "SHADOWBASE.Sheet.Header.PortraitHint"}}" role="button" tabindex="0">
+    {{#if header.portrait}}<img src="{{header.portrait}}" alt="{{localize "SHADOWBASE.Sheet.Header.PortraitAlt" name=header.name}}" class="{{#if header.placeholder}}sb-header__portrait--placeholder{{/if}}">{{/if}}
+    {{#if header.placeholder}}<i class="{{sbIcon 'portrait'}}"></i>{{/if}}
+  </div>
+
+  <div class="sb-header__identity">
+    <div class="sb-header__name sb-field" data-sheet-row>
+      <input type="text" name="name" value="{{header.name}}" placeholder="{{localize "SHADOWBASE.Sheet.Header.NamePlaceholder"}}" aria-label="{{localize "SHADOWBASE.Sheet.Basic.CharacterName"}}" {{#unless editable}}readonly{{/unless}}>
+    </div>
+    <div class="sb-field" data-sheet-row>
+      <span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Basic.PlayerName"}}</span>
+      <span class="sb-input sb-input--calc">{{sbOr header.playerName "—"}}</span>
+    </div>
+    <div class="sb-field" data-sheet-row>
+      <span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Basic.Species"}}</span>
+      <span class="sb-input sb-input--calc">{{sbOr header.species "—"}}</span>
+    </div>
+    <div class="sb-field" data-sheet-row>
+      <span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Basic.Homeworld"}}</span>
+      <span class="sb-input sb-input--calc">{{sbOr header.homeworld "—"}}</span>
+    </div>
+    <div class="sb-field sb-span-2" data-sheet-row>
+      <span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Basic.Campaign"}}</span>
+      <span class="sb-input sb-input--calc">{{sbOr header.campaign "—"}}</span>
+    </div>
+  </div>
+
+  <div class="sb-header__ledger">
+    <div class="sb-ledger-figure">
+      <span class="sb-ledger-figure__label">{{localize "SHADOWBASE.Sheet.Basic.PointTotal"}}</span>
+      {{> "shadowbase.qty" id="hdr-pointTotal" name="system.pointTotal" value=header.ledger.total placeholder="150" min="0" max="" step="1" dtype="Number" disabled=(not editable) cls="sb-qty--dense" label=(localize "SHADOWBASE.Sheet.Basic.PointTotal")}}
+    </div>
+    <div class="sb-ledger-figure">
+      <span class="sb-ledger-figure__label">{{localize "SHADOWBASE.Sheet.Ledger.TotalSpent"}}</span>
+      <button type="button" class="sb-ledger-figure__value" data-action="jump-section" data-tab="info" data-section="primary-attributes" title="{{localize "SHADOWBASE.Sheet.Ledger.OpenAttributes"}}">
+        {{sbNumber header.ledger.spent 0}} {{localize "SHADOWBASE.Sheet.Ledger.Pts"}}
+        {{#if header.ledger.racialBudgetBonus}}<small>{{localize "SHADOWBASE.Sheet.Ledger.Budget" bonus=header.ledger.racialBudgetBonus}}</small>{{/if}}
+      </button>
+    </div>
+    <div class="sb-ledger-figure">
+      <span class="sb-ledger-figure__label">{{localize "SHADOWBASE.Sheet.Ledger.Remaining"}}</span>
+      <button type="button" class="sb-ledger-figure__value {{#if header.ledger.negative}}sb-ledger-figure__value--neg{{else}}sb-ledger-figure__value--pos{{/if}}" data-action="jump-section" data-tab="info" data-section="primary-attributes" title="{{localize "SHADOWBASE.Sheet.Ledger.OpenAttributes"}}">
+        {{sbNumber header.ledger.remaining 0}} {{localize "SHADOWBASE.Sheet.Ledger.Pts"}}
+      </button>
+    </div>
+    <div class="sb-header__buttons">
+      {{#each header.buttons}}
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="{{action}}" title="{{label}}"><i class="{{icon}}"></i><span>{{label}}</span></button>
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="sb-header__pinned">
+    {{#if (or header.pinPoints header.pinPools)}}
+    <div class="sb-pinned-bar">
+      {{#if header.pinPoints}}
+        <span class="sb-pinned-bar__item"><span class="sb-pinned-bar__label">{{localize "SHADOWBASE.Sheet.Ledger.Spent"}}</span><span class="sb-pinned-bar__figure">{{sbNumber header.ledger.spent 0}}</span></span>
+        <span class="sb-pinned-bar__item"><span class="sb-pinned-bar__label">{{localize "SHADOWBASE.Sheet.Ledger.Rem"}}</span><span class="sb-pinned-bar__figure {{#if header.ledger.negative}}sb-text-red{{else}}sb-text-green{{/if}}">{{sbNumber header.ledger.remaining 0}}</span></span>
+      {{/if}}
+      {{#if header.pinPools}}
+        {{#each header.pools}}
+          <span class="sb-pinned-bar__item">
+            <span class="sb-pinned-bar__label">{{short}}</span>
+            {{> "shadowbase.qty" id=(sbConcat "pin-" key) name=(sbConcat "system." field) value=display placeholder=placeholder min="" max="" step="1" dtype="Number" disabled=(not @root.editable) cls="sb-qty--short" label=(localize "SHADOWBASE.Sheet.Pools.Current" label=title)}}
+            <span class="sb-pool__max">/ {{max}}</span>
+          </span>
+        {{/each}}
+      {{/if}}
+    </div>
+    {{/if}}
+  </div>
+</header>

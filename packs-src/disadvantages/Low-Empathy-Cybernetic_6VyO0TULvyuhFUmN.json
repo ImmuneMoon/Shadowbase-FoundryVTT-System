@@ -1,0 +1,34 @@
+{
+  "_id": "6VyO0TULvyuhFUmN",
+  "_key": "!items!6VyO0TULvyuhFUmN",
+  "name": "Low Empathy (Cybernetic)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "N9OA5FojtdIRbIeU",
+  "sort": 7700000,
+  "system": {
+    "row": {
+      "name": "Low Empathy (Cybernetic)",
+      "points": -20,
+      "level": null,
+      "description": "Neural processes have become highly logical and algorithmic. You suffer a -3 penalty to empathy-based social skills (Savoir-Faire, Diplomacy, Streetwise).",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Low Empathy (Cybernetic)|Cybernetic"
+    }
+  }
+}

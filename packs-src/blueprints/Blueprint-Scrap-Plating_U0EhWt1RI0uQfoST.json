@@ -1,0 +1,42 @@
+{
+  "_id": "U0EhWt1RI0uQfoST",
+  "_key": "!items!U0EhWt1RI0uQfoST",
+  "name": "Blueprint: Scrap Plating",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ycvPt0NqTHPJjje7",
+  "sort": 22100000,
+  "system": {
+    "row": {
+      "id": "23c11748-f1f6-4f69-8981-0ac5f553b679",
+      "name": "Blueprint: Scrap Plating",
+      "cost": 194,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Scrap Plating (Generation 0, proven, encoded, catalog design). Required to build Scrap Plating; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Scrap Plating",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 200,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Armor|Scrap Plating"
+    }
+  }
+}

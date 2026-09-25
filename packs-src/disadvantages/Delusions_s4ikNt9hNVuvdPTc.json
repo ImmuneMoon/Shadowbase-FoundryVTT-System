@@ -1,0 +1,34 @@
+{
+  "_id": "s4ikNt9hNVuvdPTc",
+  "_key": "!items!s4ikNt9hNVuvdPTc",
+  "name": "Delusions",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 9700000,
+  "system": {
+    "row": {
+      "name": "Delusions",
+      "points": -5,
+      "level": null,
+      "description": "The character holds one or more false beliefs that are resistant to reason. These delusions can be used by manipulative individuals to mislead you. Severity varies by the impact on the character's life (-5 to -15 points).",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Delusions|Mental"
+    }
+  }
+}

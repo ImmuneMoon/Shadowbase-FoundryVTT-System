@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-09-19T10:14:18.211Z",
+  "website": "ShadowBase Website",
+  "websiteCommit": null,
+  "websiteDirty": null,
+  "esbuild": "0.28.2",
+  "bytes": 2267056,
+  "minified": false,
+  "inputFiles": 322,
+  "websiteSourceFiles": 305,
+  "packages": [
+    "clsx",
+    "tailwind-merge",
+    "zod"
+  ],
+  "warnings": 0,
+  "entry": "tools/engine-entry.ts",
+  "entryExports": 205
+}

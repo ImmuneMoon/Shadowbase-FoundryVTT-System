@@ -1,0 +1,42 @@
+{
+  "_id": "KQ0phxwb4qTc1dLC",
+  "_key": "!items!KQ0phxwb4qTc1dLC",
+  "name": "Blueprint: Opila",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 36800000,
+  "system": {
+    "row": {
+      "id": "ad121387-70b2-43ec-8b26-ca8f57cfc3c4",
+      "name": "Blueprint: Opila",
+      "cost": 508,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Opila (Generation 0, proven, encoded, catalog design). Required to build Opila; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Opila",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3333.333333333333,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Opila"
+    }
+  }
+}

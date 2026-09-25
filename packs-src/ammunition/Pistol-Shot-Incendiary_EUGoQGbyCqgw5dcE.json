@@ -1,0 +1,72 @@
+{
+  "_id": "EUGoQGbyCqgw5dcE",
+  "_key": "!items!EUGoQGbyCqgw5dcE",
+  "name": "Pistol Shot (Incendiary)",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "62SxWxECrgqvwXoo",
+  "sort": 3800000,
+  "system": {
+    "row": {
+      "name": "Pistol Shot (Incendiary)",
+      "craftingCategory": "Ammunition",
+      "component": "shot",
+      "projectileClass": "special",
+      "payloadRolls": [
+        {
+          "skill": "Machinist (Guns)",
+          "description": "Seating the incendiary element."
+        },
+        {
+          "skill": "Chemistry",
+          "description": "Integrating the incendiary compound."
+        }
+      ],
+      "type": "Rounds",
+      "containerType": "None",
+      "maxCharges": 0,
+      "cost": 14,
+      "weight": 0.035,
+      "notes": "The projectile and propellant of a Pistol Round (Incendiary), without its Casing. Load it into a Pistol Casing to Handload.",
+      "materials": [
+        {
+          "name": "Baradium",
+          "amount": 0.005
+        },
+        {
+          "name": "Durasteel",
+          "amount": 0.01
+        },
+        {
+          "name": "Gunpowder",
+          "amount": 0.02
+        }
+      ],
+      "id": "9a3af8a1-09e0-4064-9ac4-fd05ea05c74c",
+      "quantity": 1,
+      "currentCharges": 0,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 14,
+      "baseWeight": 0.035,
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Pistol Shot (Incendiary)"
+    }
+  }
+}

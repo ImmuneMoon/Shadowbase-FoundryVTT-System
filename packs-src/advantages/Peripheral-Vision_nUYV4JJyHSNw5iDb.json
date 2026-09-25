@@ -1,0 +1,33 @@
+{
+  "_id": "nUYV4JJyHSNw5iDb",
+  "_key": "!items!nUYV4JJyHSNw5iDb",
+  "name": "Peripheral Vision",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "GS8kUCPWatq78XxI",
+  "sort": 12900000,
+  "system": {
+    "row": {
+      "name": "Peripheral Vision",
+      "points": 15,
+      "description": "You have a 360-degree field of vision, making it impossible to surprise you from behind. This is common for species with eyestalks or unusual eye placement.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Peripheral Vision"
+    }
+  }
+}

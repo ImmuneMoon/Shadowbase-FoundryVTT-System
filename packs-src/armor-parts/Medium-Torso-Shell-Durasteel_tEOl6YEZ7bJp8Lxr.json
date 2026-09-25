@@ -1,0 +1,42 @@
+{
+  "_id": "tEOl6YEZ7bJp8Lxr",
+  "_key": "!items!tEOl6YEZ7bJp8Lxr",
+  "name": "Medium Torso Shell (Durasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 2200000,
+  "system": {
+    "row": {
+      "id": "a2590a17-dfe8-4bfc-aa10-ecac54e8c08e",
+      "name": "Medium Torso Shell (Durasteel)",
+      "category": "Armor Shell",
+      "cost": 400,
+      "weight": 7.99,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-medium-torso-durasteel",
+      "materialId": "durasteel",
+      "notes": "Standard building alloy. Baseline stats.",
+      "validSlots": [],
+      "drBonus": 9,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-medium-torso-durasteel"
+    }
+  }
+}

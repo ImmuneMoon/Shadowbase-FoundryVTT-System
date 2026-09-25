@@ -1,0 +1,42 @@
+{
+  "_id": "sZvX5UcTYkjiwrg2",
+  "_key": "!items!sZvX5UcTYkjiwrg2",
+  "name": "Blueprint: Disc Head - Fixed (R-Series)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "UStUF7LfeXhiWi8K",
+  "sort": 23900000,
+  "system": {
+    "row": {
+      "id": "1e20f102-b866-459b-991f-2ff3fb66c170",
+      "name": "Blueprint: Disc Head - Fixed (R-Series)",
+      "cost": 272,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Disc Head - Fixed (R-Series) (Generation 0, proven, encoded, catalog design). Required to build Disc Head - Fixed (R-Series); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Disc Head - Fixed (R-Series)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 975,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Head|Disc Head - Fixed (R-Series)"
+    }
+  }
+}

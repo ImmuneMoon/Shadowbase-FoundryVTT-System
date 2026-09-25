@@ -1,0 +1,87 @@
+{
+  "_id": "isWgosIYMfU0S1NJ",
+  "_key": "!items!isWgosIYMfU0S1NJ",
+  "name": "Force Crush",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "KBIMmcUBYi6ZY6I3",
+  "sort": 1400000,
+  "system": {
+    "row": {
+      "name": "Force Crush",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 2,
+      "effect": "Victim suffers 1d crushing (cr) damage to a specific limb.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Will",
+      "category": "Control Powers",
+      "alignment": "DS",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Force Crush",
+        "description": "A Force wielder uses the Dark Side to telekinetically crush an opponent, or specific part of an opponent. Requires a Quick Contest of Force Skill (Will) vs target's HT or Will. Win by 3+: choose location. Win by 5+: double damage. Failure: mental stun for 1 turn. Crit Fail: you take 1d6 cr and are physically stunned for 1d turns.",
+        "category": "Control Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 2,
+        "alignment": "DS",
+        "baseSkill": "Will",
+        "characterTier": "Apprentice",
+        "effect": "Victim suffers 1d crushing (cr) damage to a specific limb."
+      },
+      {
+        "name": "Force Crush",
+        "description": "A Force wielder uses the Dark Side to telekinetically crush an opponent, or specific part of an opponent. Requires a Quick Contest of Force Skill (Will) vs target's HT or Will. Win by 3+: choose location. Win by 5+: double damage. Failure: mental stun for 1 turn. Crit Fail: you take 1d6 cr and are physically stunned for 1d turns.",
+        "category": "Control Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 3,
+        "alignment": "DS",
+        "baseSkill": "Will",
+        "characterTier": "Adept",
+        "effect": "Victim suffers 1d+1 cr to the whole body, or 1d+2 cr to a specific limb."
+      },
+      {
+        "name": "Force Crush",
+        "description": "A Force wielder uses the Dark Side to telekinetically crush an opponent, or specific part of an opponent. Requires a Quick Contest of Force Skill (Will) vs target's HT or Will. Win by 3+: choose location. Win by 5+: double damage. Failure: mental stun for 1 turn. Crit Fail: you take 1d6 cr and are physically stunned for 1d turns.",
+        "category": "Control Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 4,
+        "alignment": "DS",
+        "baseSkill": "Will",
+        "characterTier": "Expert",
+        "effect": "May target up to 5 targets (-1 cumulative penalty). Damage: 1d+2 cr to whole body, or 2d cr to a specific limb."
+      },
+      {
+        "name": "Force Crush",
+        "description": "A Force wielder uses the Dark Side to telekinetically crush an opponent, or specific part of an opponent. Requires a Quick Contest of Force Skill (Will) vs target's HT or Will. Win by 3+: choose location. Win by 5+: double damage. Failure: mental stun for 1 turn. Crit Fail: you take 1d6 cr and are physically stunned for 1d turns.",
+        "category": "Control Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 5,
+        "alignment": "DS",
+        "baseSkill": "Will",
+        "characterTier": "Master",
+        "effect": "May target up to 10 targets (-1 for first 5, -2 subsequent). Damage: 1d+5 cr to whole body, or 2d+3 cr to a specific limb."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Force Crush"
+    }
+  }
+}

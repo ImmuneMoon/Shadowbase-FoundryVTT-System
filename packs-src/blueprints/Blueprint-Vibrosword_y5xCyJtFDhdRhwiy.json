@@ -1,0 +1,42 @@
+{
+  "_id": "y5xCyJtFDhdRhwiy",
+  "_key": "!items!y5xCyJtFDhdRhwiy",
+  "name": "Blueprint: Vibrosword",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 43800000,
+  "system": {
+    "row": {
+      "id": "cf0f2e64-0fc1-4c6b-8c6d-2997d6fd3dd2",
+      "name": "Blueprint: Vibrosword",
+      "cost": 386,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Vibrosword (Generation 0, proven, encoded, catalog design). Required to build Vibrosword; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Vibrosword",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 2120,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Vibrosword"
+    }
+  }
+}

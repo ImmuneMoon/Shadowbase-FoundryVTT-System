@@ -1,0 +1,42 @@
+{
+  "_id": "CALcuW2j1ka7hi7i",
+  "_key": "!items!CALcuW2j1ka7hi7i",
+  "name": "Standard Timber",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "h5zpkZemdaiAEI5A",
+  "sort": 3500000,
+  "system": {
+    "row": {
+      "name": "Standard Timber",
+      "rarity": "Very Common",
+      "cost": 5,
+      "density": 40,
+      "category": "Raw Materials",
+      "subCategory": "Wood",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Generic, low-grade wood used for basic crates and fires.",
+      "id": "d5e07088-db14-41b0-b019-268148891ff2",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "material:Standard Timber"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "VY3c18c8IYnsbsx3",
+  "_key": "!items!VY3c18c8IYnsbsx3",
+  "name": "Empathy (Scent/Pheromone-based)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 5200000,
+  "system": {
+    "row": {
+      "name": "Empathy (Scent/Pheromone-based)",
+      "points": 5,
+      "description": "Allows you to sense emotional changes in others through scent and pheromones.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Empathy (Scent/Pheromone-based)"
+    }
+  }
+}

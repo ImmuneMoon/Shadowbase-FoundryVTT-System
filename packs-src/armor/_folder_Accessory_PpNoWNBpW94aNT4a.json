@@ -1,0 +1,19 @@
+{
+  "_id": "PpNoWNBpW94aNT4a",
+  "_key": "!folders!PpNoWNBpW94aNT4a",
+  "name": "Accessory",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 600000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "armor",
+      "path": [
+        "Accessory"
+      ]
+    }
+  }
+}

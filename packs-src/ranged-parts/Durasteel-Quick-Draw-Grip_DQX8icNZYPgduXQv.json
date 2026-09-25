@@ -1,0 +1,46 @@
+{
+  "_id": "DQX8icNZYPgduXQv",
+  "_key": "!items!DQX8icNZYPgduXQv",
+  "name": "Durasteel Quick-Draw Grip",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "6BrK3rjtho5KeSLo",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "id": "d8e02d43-5f43-4bfa-bd9b-a69e4745138e",
+      "name": "Durasteel Quick-Draw Grip",
+      "category": "Ranged Grip",
+      "cost": 38,
+      "weight": 0.735,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "quick-draw-grip",
+      "materialId": "durasteel",
+      "notes": "Streamlined for fast deployment.",
+      "effect": "Streamlined for fast deployment.",
+      "energyResBonus": 0,
+      "volume": 0.0015,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "quick-draw-grip"
+    }
+  }
+}

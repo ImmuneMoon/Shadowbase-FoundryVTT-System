@@ -1,0 +1,42 @@
+{
+  "_id": "pop18MHvmqIQWC2E",
+  "_key": "!items!pop18MHvmqIQWC2E",
+  "name": "Blueprint: Overcharged Energy Shield",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ZMyORA2AHo4Qm477",
+  "sort": 11100000,
+  "system": {
+    "row": {
+      "id": "b7aefde4-034b-4ccc-9fce-d5f1d02996f4",
+      "name": "Blueprint: Overcharged Energy Shield",
+      "cost": 2524,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Overcharged Energy Shield (Generation 0, proven, encoded, catalog design). Required to build Overcharged Energy Shield; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Overcharged Energy Shield",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 23500,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Belt|Overcharged Energy Shield"
+    }
+  }
+}

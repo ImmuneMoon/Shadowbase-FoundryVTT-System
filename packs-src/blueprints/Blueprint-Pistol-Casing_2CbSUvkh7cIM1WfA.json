@@ -1,0 +1,42 @@
+{
+  "_id": "2CbSUvkh7cIM1WfA",
+  "_key": "!items!2CbSUvkh7cIM1WfA",
+  "name": "Blueprint: Pistol Casing",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DvRG95q4QWZQnNFm",
+  "sort": 1100000,
+  "system": {
+    "row": {
+      "id": "fb2d0375-7766-4832-b249-d273abdf1a94",
+      "name": "Blueprint: Pistol Casing",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Pistol Casing (Generation 0, proven, encoded, catalog design). Required to build Pistol Casing; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Pistol Casing",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1.8888888888888888,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Ammunition|Pistol Casing"
+    }
+  }
+}

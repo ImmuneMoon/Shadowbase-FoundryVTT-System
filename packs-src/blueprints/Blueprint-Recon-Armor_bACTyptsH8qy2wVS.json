@@ -1,0 +1,42 @@
+{
+  "_id": "bACTyptsH8qy2wVS",
+  "_key": "!items!bACTyptsH8qy2wVS",
+  "name": "Blueprint: Recon Armor",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 7900000,
+  "system": {
+    "row": {
+      "id": "da4530d6-5b7d-4215-8f44-8db83132c616",
+      "name": "Blueprint: Recon Armor",
+      "cost": 207,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Recon Armor (Generation 0, proven, encoded, catalog design). Required to build Recon Armor; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Recon Armor",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 322,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Recon Armor"
+    }
+  }
+}

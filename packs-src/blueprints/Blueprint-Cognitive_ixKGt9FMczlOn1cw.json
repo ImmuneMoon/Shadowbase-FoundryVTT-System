@@ -1,0 +1,42 @@
+{
+  "_id": "ixKGt9FMczlOn1cw",
+  "_key": "!items!ixKGt9FMczlOn1cw",
+  "name": "Blueprint: Cognitive",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JF5Ffca1GjopsdXr",
+  "sort": 27100000,
+  "system": {
+    "row": {
+      "id": "5bfaf458-e816-428f-bbae-68b4b519922d",
+      "name": "Blueprint: Cognitive",
+      "cost": 812,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Cognitive (Generation 0, proven, encoded, catalog design). Required to build Cognitive; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Cognitive",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 6380,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Processor|Cognitive"
+    }
+  }
+}

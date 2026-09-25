@@ -1,0 +1,34 @@
+{
+  "_id": "cGPqOFIfsOHk5Ydg",
+  "_key": "!items!cGPqOFIfsOHk5Ydg",
+  "name": "Maniac",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 11700000,
+  "system": {
+    "row": {
+      "name": "Maniac",
+      "points": -5,
+      "level": null,
+      "description": "The character suffers from a severe psychological compulsion, often involving irrational fixations or destructive urges. These compulsions can be triggered and exploited by enemies. Examples: Kleptomania (-5 to -15 points); Bloodlust (-10 to -20 points).",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Maniac|Mental"
+    }
+  }
+}

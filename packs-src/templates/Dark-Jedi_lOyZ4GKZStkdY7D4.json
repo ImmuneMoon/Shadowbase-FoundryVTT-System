@@ -1,0 +1,925 @@
+{
+  "_id": "lOyZ4GKZStkdY7D4",
+  "_key": "!actors!lOyZ4GKZStkdY7D4",
+  "name": "Dark Jedi",
+  "type": "character",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "v3NqxSG7oocKV0q1",
+  "sort": 4600000,
+  "system": {
+    "legacy": {},
+    "playerName": "",
+    "species": "Human",
+    "homeworld": "",
+    "characterPortrait": null,
+    "campaign": "Shadows of the Mandalorian Wars",
+    "pointTotal": 175,
+    "turnCounter": 0,
+    "facing": 0,
+    "incomingBearing": 0,
+    "threatEngaged": false,
+    "incomingArc": null,
+    "facingChangeUsed": false,
+    "posture": "standing",
+    "elevation": 0,
+    "parriesThisTurn": 0,
+    "height": "",
+    "weight": "",
+    "sizeModifier": 0,
+    "age": 0,
+    "appearance": "",
+    "techLevel": "",
+    "isDroid": false,
+    "powerPoints": 100,
+    "lightSidePoints": 0,
+    "darkSidePoints": 0,
+    "trackDigital": false,
+    "trackPhysical": false,
+    "totalCredits": 7000,
+    "forceAlignment": -50,
+    "isStartingPointsMode": true,
+    "isConstructed": false,
+    "cpBaseline": 0,
+    "stBaseline": 10,
+    "dxBaseline": 10,
+    "iqBaseline": 10,
+    "htBaseline": 10,
+    "hitPointsBaseline": 0,
+    "endurancePointsBaseline": 0,
+    "forcePointsBaseline": 0,
+    "willBaseline": 0,
+    "perceptionBaseline": 0,
+    "frightCheckBaseline": 0,
+    "basicSpeedBaseline": 0,
+    "basicMoveBaseline": 0,
+    "visionBaseline": 0,
+    "hearingBaseline": 0,
+    "tasteAndSmellBaseline": 0,
+    "touchBaseline": 0,
+    "languagesBaseline": 0,
+    "culturalFamiliaritiesBaseline": 0,
+    "literacyBaseline": 0,
+    "languageEntries": [],
+    "republicRaised": false,
+    "frightCheck": null,
+    "basicSpeed": null,
+    "basicMove": null,
+    "selectedParrySkill": null,
+    "selectedBlockSkill": null,
+    "activeLightsaberForm": null,
+    "hitLocations": [
+      {
+        "name": "Head",
+        "type": "Head",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 2,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 3,
+        "installedHardwareIds": [],
+        "id": "68494ec5-8476-4cc6-ba57-71b9309e5aac"
+      },
+      {
+        "name": "Face",
+        "type": "Face",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 5,
+        "installedHardwareIds": [],
+        "id": "86e0598f-b3be-4697-b37c-39b99748979d"
+      },
+      {
+        "name": "Upper Torso",
+        "type": "Vitals",
+        "side": "Center",
+        "relativeSM": -3,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 17,
+        "installedHardwareIds": [],
+        "id": "8393067c-44fd-4daf-ae72-8460e2742e05"
+      },
+      {
+        "name": "Torso",
+        "type": "Torso",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 10,
+        "installedHardwareIds": [],
+        "id": "04ee6fc7-4e0b-41cd-b5b8-b24e91f0723d"
+      },
+      {
+        "name": "Right Arm",
+        "type": "Arm",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 7,
+        "installedHardwareIds": [],
+        "id": "15353112-b4f9-4ac0-b2e7-d064f0ccf621"
+      },
+      {
+        "name": "Right Hand",
+        "type": "Hand",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "30daf9bd-4282-4443-8267-70ca8056bfbc"
+      },
+      {
+        "name": "Left Arm",
+        "type": "Arm",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 8,
+        "installedHardwareIds": [],
+        "id": "b7f9802e-9faa-4258-8af0-8b7123a05f29"
+      },
+      {
+        "name": "Left Hand",
+        "type": "Hand",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "a6bd5c55-b6e2-4eb3-85cf-b650ca6dada0"
+      },
+      {
+        "name": "Right Leg",
+        "type": "Leg",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "8f235d94-722c-44dd-bcd3-5a26ab6aaf04"
+      },
+      {
+        "name": "Right Foot",
+        "type": "Foot",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "c70bfe17-eff7-48b7-ba0d-790b70f4e225"
+      },
+      {
+        "name": "Left Leg",
+        "type": "Leg",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "d62caab2-be0b-4a63-b0c5-036a6780bada"
+      },
+      {
+        "name": "Left Foot",
+        "type": "Foot",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "85853747-9148-4f7f-ad7b-109e6f861be2"
+      }
+    ],
+    "languages": "",
+    "culturalFamiliarities": "",
+    "literacy": "",
+    "description": "",
+    "background": "",
+    "notes": "",
+    "pointsAttributes": 0,
+    "pointsAdvantages": 0,
+    "pointsDisadvantages": 0,
+    "pointsOther": 0,
+    "cpTradedForCredits": 0,
+    "cpCreditsForm": "digital",
+    "currentHitPoints": 10,
+    "currentEndurancePoints": 11,
+    "currentForcePoints": 12,
+    "strength": 10,
+    "dexterity": 12,
+    "iq": 12,
+    "health": 11,
+    "hitPoints": null,
+    "will": null,
+    "perception": null,
+    "vision": null,
+    "hearing": null,
+    "tasteAndSmell": null,
+    "touch": null,
+    "endurancePoints": null,
+    "forcePoints": null,
+    "shipPosition": null,
+    "assignedStation": null,
+    "storageBoxes": [],
+    "droidBuild": {
+      "chassisId": null,
+      "powerCoreId": null,
+      "head": {
+        "componentId": null,
+        "processorId": null,
+        "memoryCoreId": null,
+        "sensorIds": [],
+        "externalModId": null
+      },
+      "arms": [],
+      "legs": [],
+      "chassisMods": {
+        "internalIds": [],
+        "externalIds": [],
+        "utilityIds": [],
+        "auxiliaryIds": [],
+        "motiveMountIds": [],
+        "reinforcementId": null,
+        "armorId": null,
+        "motivatorId": null,
+        "actuatorId": null,
+        "wiringId": null
+      }
+    },
+    "pinnedNotifications": [],
+    "useLiftingST": true,
+    "useStrikingST": true,
+    "useArmST": true
+  },
+  "prototypeToken": {
+    "name": "Dark Jedi",
+    "actorLink": true,
+    "displayName": 30,
+    "displayBars": 40,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "resources.hp"
+    },
+    "bar2": {
+      "attribute": "resources.ep"
+    }
+  },
+  "items": [
+    {
+      "_id": "3jCTHafyjmonw88C",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.3jCTHafyjmonw88C",
+      "name": "Force Sensitive",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Force Sensitive",
+          "points": 5,
+          "description": "You can feel the Force. Prerequisite for all Force-related abilities."
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "GaoOXyydKU1BnmGP",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.GaoOXyydKU1BnmGP",
+      "name": "Selfish",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Selfish",
+          "points": -5,
+          "description": "You prioritize your own needs and desires above those of others."
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "ibB0Od4t4fZEibLb",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.ibB0Od4t4fZEibLb",
+      "name": "Callous",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Callous",
+          "points": -5,
+          "description": "You have a lack of empathy for others' suffering."
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "XfXlzknj7R9uNLsx",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.XfXlzknj7R9uNLsx",
+      "name": "Enemy",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Enemy",
+          "points": -10,
+          "description": "You are actively hunted or opposed by the Jedi Order."
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "jiAUqDisK34AeipH",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.jiAUqDisK34AeipH",
+      "name": "Lightsaber Combat (Standard)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Lightsaber Combat (Standard)",
+          "relativeLevel": "DX/H",
+          "level": "13",
+          "points": 6,
+          "notes": "The signature skill for wielding a lightsaber."
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "d4wUIIt7oS3iJa39",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.d4wUIIt7oS3iJa39",
+      "name": "Intimidation",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Intimidation",
+          "relativeLevel": "Will/A",
+          "level": "12",
+          "points": 2,
+          "notes": "Using threats, displays of force, or sheer presence to cow others."
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "SnNV7jabqe7vkqQb",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.SnNV7jabqe7vkqQb",
+      "name": "Fast-Talk",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Fast-Talk",
+          "relativeLevel": "IQ/A",
+          "level": "12",
+          "points": 2,
+          "notes": "The skill of bending the truth and weaving convincing lies."
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "TmauZoC0PhMCQ29I",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.TmauZoC0PhMCQ29I",
+      "name": "Lightsaber Construction",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Lightsaber Construction",
+          "relativeLevel": "IQ/H",
+          "level": "11",
+          "points": 2,
+          "notes": "The art and meditation of building a lightsaber."
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "wl6kpb6GThLHkVhi",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.wl6kpb6GThLHkVhi",
+      "name": "Force Lightning",
+      "type": "forcePower",
+      "img": "icons/svg/light.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Force Lightning",
+          "description": "The Force-user generates raw electrical energy from their fingertips, unleashing potent bolts of Force lightning upon their foes.",
+          "category": "Alter Powers",
+          "level": 1,
+          "cpCost": 10,
+          "fpCost": 3,
+          "alignment": "DS",
+          "baseSkill": "Innate Attack (Energy) (DX/Hard)",
+          "characterTier": "Apprentice",
+          "effect": "Project a single bolt at a target within 5 feet, inflicting 1d energy damage + Surge."
+        },
+        "source": "forcePowers"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "bJBx3susvtnwbqQz",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.bJBx3susvtnwbqQz",
+      "name": "Form V: Shien / Djem So",
+      "type": "lightsaberForm",
+      "img": "icons/svg/sword.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Form V: Shien / Djem So",
+          "level": 1
+        },
+        "source": "lightsaberForms"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "ayvHA5hb7DMukxnm",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.ayvHA5hb7DMukxnm",
+      "name": "Dark Robes (Set)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "df6d28c0-0401-4963-95d6-bb1e9fb35439",
+          "name": "Dark Robes (Set)",
+          "weight": 4,
+          "cost": 0,
+          "description": "",
+          "quantity": 1,
+          "category": "Utility & Miscellaneous",
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "ca8EaoiQXo3KrqIF",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.ca8EaoiQXo3KrqIF",
+      "name": "Commlink (Handheld)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "id": "a94d646a-7f01-47da-a7f7-d2b05f3f237e",
+          "name": "Commlink (Handheld)",
+          "weight": 0.5,
+          "cost": 0,
+          "description": "",
+          "quantity": 1,
+          "category": "Utility & Miscellaneous",
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "hnSdFiXkxZrRHtaJ",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.hnSdFiXkxZrRHtaJ",
+      "name": "Datapad",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "id": "483945eb-de4f-4530-aece-e71dba7317d6",
+          "name": "Datapad",
+          "weight": 1,
+          "cost": 0,
+          "description": "",
+          "quantity": 1,
+          "category": "Utility & Miscellaneous",
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "61v59ltv25wkMzpL",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.61v59ltv25wkMzpL",
+      "name": "Medpac (Basic)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "id": "e24ff082-9de0-47c4-b0f3-cf1abbe252e9",
+          "name": "Medpac (Basic)",
+          "weight": 1,
+          "cost": 0,
+          "description": "",
+          "quantity": 1,
+          "category": "Utility & Miscellaneous",
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "ISll87sFzUMUQBuv",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.ISll87sFzUMUQBuv",
+      "name": "Dark Jedi Lightsaber",
+      "type": "lightsaber",
+      "img": "icons/svg/lightning.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "a47b9ea5-d44d-4383-8144-84d49bd9d4df",
+          "name": "Dark Jedi Lightsaber",
+          "baseSkill": "Lightsaber Combat (Standard)",
+          "bladeLength": 90,
+          "emitter": {
+            "materialId": "durasteel",
+            "wrapId": null,
+            "inventoryId": "1a197dc5-f4c5-4c19-9278-742ada8fa8ba"
+          },
+          "sleeve": {
+            "materialId": "durasteel",
+            "wrapId": null,
+            "inventoryId": "2a808cb2-0b50-4469-b376-74a5e94f49d5"
+          },
+          "switch": {
+            "materialId": "durasteel",
+            "wrapId": null,
+            "inventoryId": "94d2f7cc-f27a-4379-a264-e471fd7e69f1"
+          },
+          "pommel": {
+            "materialId": "durasteel",
+            "wrapId": null,
+            "inventoryId": "6c7ec889-f1a2-4fae-af3b-5a6bc02173f8"
+          },
+          "powerCell": "9903142f-fbb7-4654-93e9-671092fa8214",
+          "lens": "01107b2f-5756-461e-af34-6e54adb0e3c5",
+          "emitterMatrix": "846ee027-0203-45a2-9bfe-697b4cd4613d",
+          "primaryCrystal": "15af5587-627e-4983-8601-f5451bf5d58e",
+          "powerCrystal": null,
+          "powerCrystalTwo": null,
+          "primaryCrystalTwo": null,
+          "finalWeight": 1.98,
+          "totalCost": 24726,
+          "powerCellCurrentCharge": 0,
+          "powerCellMaxCharge": 0,
+          "calculatedDamage": "5d+3 energy",
+          "calculatedDamageType": "burn",
+          "combinedEffects": "",
+          "equipped": true,
+          "isConstructed": true
+        },
+        "source": "lightsabers"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "Sxa3CdraVCKzQLgf",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.Sxa3CdraVCKzQLgf",
+      "name": "Standard Emitter",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "1a197dc5-f4c5-4c19-9278-742ada8fa8ba",
+          "name": "Standard Emitter",
+          "category": "Emitter Part",
+          "cost": 6.125,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "a47b9ea5-d44d-4383-8144-84d49bd9d4df",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "4Ns0brsQUwwCA7bc",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.4Ns0brsQUwwCA7bc",
+      "name": "Standard Sleeve",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "id": "2a808cb2-0b50-4469-b376-74a5e94f49d5",
+          "name": "Standard Sleeve",
+          "category": "Sleeve Part",
+          "cost": 9.8,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "a47b9ea5-d44d-4383-8144-84d49bd9d4df",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "gB2VsfjmmHIEzcl0",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.gB2VsfjmmHIEzcl0",
+      "name": "Standard Switch",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "id": "94d2f7cc-f27a-4379-a264-e471fd7e69f1",
+          "name": "Standard Switch",
+          "category": "Switch Part",
+          "cost": 2.45,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "a47b9ea5-d44d-4383-8144-84d49bd9d4df",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "ab3KqRQqrAQfQ98z",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.ab3KqRQqrAQfQ98z",
+      "name": "Standard Pommel",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "id": "6c7ec889-f1a2-4fae-af3b-5a6bc02173f8",
+          "name": "Standard Pommel",
+          "category": "Pommel Part",
+          "cost": 6.125,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "a47b9ea5-d44d-4383-8144-84d49bd9d4df",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "jFumwNJ5uAorQMrO",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.jFumwNJ5uAorQMrO",
+      "name": "Standard Diatium Cell",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "id": "9903142f-fbb7-4654-93e9-671092fa8214",
+          "name": "Standard Diatium Cell",
+          "cost": 135,
+          "weight": 0.5,
+          "hits": 3000,
+          "effect": "Standard 3,000 \"hits\" baseline.",
+          "category": "Lightsaber Power Cell",
+          "materials": [
+            {
+              "name": "Diatium",
+              "amount": 0.4
+            },
+            {
+              "name": "Silicon",
+              "amount": 0.1
+            }
+          ],
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "a47b9ea5-d44d-4383-8144-84d49bd9d4df",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "gKwkdleNFSZyhzA3",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.gKwkdleNFSZyhzA3",
+      "name": "Standard Lens",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 600000,
+      "system": {
+        "row": {
+          "id": "01107b2f-5756-461e-af34-6e54adb0e3c5",
+          "name": "Standard Lens",
+          "cost": 8,
+          "weight": 0.1,
+          "category": "Lightsaber Lens",
+          "materials": [
+            {
+              "name": "Clari-crystalline",
+              "amount": 0.1
+            }
+          ],
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "a47b9ea5-d44d-4383-8144-84d49bd9d4df",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "wEBdujc6AzfYQft5",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.wEBdujc6AzfYQft5",
+      "name": "Standard Matrix",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 700000,
+      "system": {
+        "row": {
+          "id": "846ee027-0203-45a2-9bfe-697b4cd4613d",
+          "name": "Standard Matrix",
+          "cost": 23,
+          "weight": 0.2,
+          "category": "Lightsaber Emitter Matrix",
+          "materials": [
+            {
+              "name": "Durasteel",
+              "amount": 0.1
+            },
+            {
+              "name": "Silicon",
+              "amount": 0.1
+            }
+          ],
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "a47b9ea5-d44d-4383-8144-84d49bd9d4df",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "5gy9CsGgteiz9IqW",
+      "_key": "!actors.items!lOyZ4GKZStkdY7D4.5gy9CsGgteiz9IqW",
+      "name": "Red (Synthetic) Kyber",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 800000,
+      "system": {
+        "row": {
+          "id": "15af5587-627e-4983-8601-f5451bf5d58e",
+          "name": "Red (Synthetic) Kyber",
+          "rarity": "Uncommon",
+          "cost": 8000,
+          "weight": 0.2,
+          "baseDamageDice": 5,
+          "baseDamageAdds": 3,
+          "effect": "5d+3 base energy. Crafted via Dark Side meditation and geological compressor (24-96 hours).",
+          "category": "Lightsaber Primary Crystal",
+          "isSynthetic": true,
+          "materials": [
+            {
+              "name": "Carbon Substrate",
+              "amount": 0.2
+            }
+          ],
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "a47b9ea5-d44d-4383-8144-84d49bd9d4df",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "templates",
+      "key": "darkJedi",
+      "template": {
+        "key": "darkJedi",
+        "category": "Character Archetypes",
+        "description": "A fallen Jedi or self-taught Force user who has embraced the dark side.",
+        "migrated": true,
+        "notices": []
+      }
+    }
+  }
+}

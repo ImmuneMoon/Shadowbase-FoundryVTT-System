@@ -1,0 +1,34 @@
+{
+  "_id": "SUvvuv97f7wnvhTc",
+  "_key": "!items!SUvvuv97f7wnvhTc",
+  "name": "Sleight of Hand",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "l1z4BAKrTKyClCsJ",
+  "sort": 12700000,
+  "system": {
+    "row": {
+      "name": "Sleight of Hand",
+      "level": "",
+      "points": null,
+      "relativeLevel": "DX/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Sleight of Hand"
+    }
+  }
+}

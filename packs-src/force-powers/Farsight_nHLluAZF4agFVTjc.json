@@ -1,0 +1,87 @@
+{
+  "_id": "nHLluAZF4agFVTjc",
+  "_key": "!items!nHLluAZF4agFVTjc",
+  "name": "Farsight",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "lMudTveYN6LSWH7D",
+  "sort": 1100000,
+  "system": {
+    "row": {
+      "name": "Farsight",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 3,
+      "effect": "Project senses to a familiar location within 100 miles for 1 minute.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Sense (Per/Average)",
+      "category": "Sense Powers",
+      "alignment": "Grey",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Farsight",
+        "description": "The Force-user can extend their senses beyond normal limits, perceiving events and locations at great distances through the Force, as if physically present.",
+        "category": "Sense Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 3,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Apprentice",
+        "effect": "Project senses to a familiar location within 100 miles for 1 minute."
+      },
+      {
+        "name": "Farsight",
+        "description": "The Force-user can extend their senses beyond normal limits, perceiving events and locations at great distances through the Force, as if physically present.",
+        "category": "Sense Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 4,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Adept",
+        "effect": "Project senses to any location on the same planet for 5 minutes."
+      },
+      {
+        "name": "Farsight",
+        "description": "The Force-user can extend their senses beyond normal limits, perceiving events and locations at great distances through the Force, as if physically present.",
+        "category": "Sense Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 5,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Expert",
+        "effect": "Project senses to any location within the same star system for 10 minutes."
+      },
+      {
+        "name": "Farsight",
+        "description": "The Force-user can extend their senses beyond normal limits, perceiving events and locations at great distances through the Force, as if physically present.",
+        "category": "Sense Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 6,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Master",
+        "effect": "Project senses to a neighboring star system for 30 minutes. Can perform rudimentary Perception rolls in the viewed area."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Farsight"
+    }
+  }
+}

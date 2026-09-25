@@ -1,0 +1,37 @@
+{
+  "_id": "3YzrgbFNPd1pZpv9",
+  "_key": "!items!3YzrgbFNPd1pZpv9",
+  "name": "Scomp Link Interface",
+  "type": "cyberneticUpgrade",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "cpSb5QRphyGd768K",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "id": "0523d3d4-a9d3-4d3d-9aaa-d3988c16b8fd",
+      "name": "Scomp Link Interface",
+      "cost": 1398,
+      "weight": 1,
+      "effect": "An astromech-style computer interface tool built into the wrist or fingers, functioning as a built-in slicer that cannot be confiscated in a search or left behind. When plugged directly into a terminal, it grants a +2 bonus to Slicing and Computer Programming rolls.",
+      "requiresType": "Arm",
+      "requiresExtent": "Any",
+      "equipped": false,
+      "quantity": 1
+    },
+    "source": "cyberneticUpgrades",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-upgrades"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-upgrades",
+      "key": "Upgrades|Scomp Link Interface"
+    }
+  }
+}

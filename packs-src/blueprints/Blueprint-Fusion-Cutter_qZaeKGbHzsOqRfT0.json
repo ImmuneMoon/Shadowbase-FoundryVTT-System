@@ -1,0 +1,42 @@
+{
+  "_id": "qZaeKGbHzsOqRfT0",
+  "_key": "!items!qZaeKGbHzsOqRfT0",
+  "name": "Blueprint: Fusion Cutter",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "g7UVHPh3r2MYv5Oo",
+  "sort": 48100000,
+  "system": {
+    "row": {
+      "id": "630f55c9-40f0-465e-911c-d298a234b1d7",
+      "name": "Blueprint: Fusion Cutter",
+      "cost": 231,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Fusion Cutter (Generation 0, proven, encoded, catalog design). Required to build Fusion Cutter; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Fusion Cutter",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 566.6666666666666,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Tools & Electronics|Fusion Cutter"
+    }
+  }
+}

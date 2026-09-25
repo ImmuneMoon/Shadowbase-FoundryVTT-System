@@ -1,0 +1,42 @@
+{
+  "_id": "fH3Vke8PVdHEPwON",
+  "_key": "!items!fH3Vke8PVdHEPwON",
+  "name": "Blueprint: Jetpack",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "rp93cLA7jGuZj51F",
+  "sort": 13100000,
+  "system": {
+    "row": {
+      "id": "3117fd12-72db-48b5-b1a2-4fba18e63d59",
+      "name": "Blueprint: Jetpack",
+      "cost": 259,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Jetpack (Generation 0, proven, encoded, catalog design). Required to build Jetpack; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Jetpack",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 850,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Carry Frame|Jetpack"
+    }
+  }
+}

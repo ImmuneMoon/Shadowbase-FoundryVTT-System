@@ -1,0 +1,34 @@
+{
+  "_id": "Tq1z6Rl3PXESgRU1",
+  "_key": "!items!Tq1z6Rl3PXESgRU1",
+  "name": "Greed",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 10400000,
+  "system": {
+    "row": {
+      "name": "Greed",
+      "points": -15,
+      "level": null,
+      "description": "You have an excessive desire for wealth or possessions, often leading you to act selfishly or unethically. This makes you easily bribed or lured into dangerous schemes with promises of riches.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Greed|Mental"
+    }
+  }
+}

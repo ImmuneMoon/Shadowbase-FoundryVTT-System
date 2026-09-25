@@ -1,0 +1,32 @@
+{{!-- templates/items/lightsaber-main.hbs - lightsaber-item.tsx Tactical Analysis (:1684-1930): class type, blade damage,
+     Parry, energy resistance, condition and Durability per blade, the flaw badges, blade length, the cell, the Skill
+     Check. Context: main (lightsaber.mjs), editable, owned, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--lightsaber {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Target'}}"></i> {{localize "SHADOWBASE.Item.Saber.TacticalAnalysis"}}</h4>
+    {{> "shadowbase.item.tiles" tiles=main.tiles}}
+    <div class="sb-hrow sb-hrow--tight sb-item__badges">
+      {{#if main.isStaff}}<span class="sb-badge sb-badge-outline sb-badge-accent">{{localize "SHADOWBASE.Item.Saber.Staff"}}</span>{{/if}}
+      {{#if main.isSplit}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Item.Saber.Split"}}</span>{{/if}}
+      {{#if main.hasHiddenFlaw}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Item.Saber.HiddenFlaw"}}</span>{{/if}}
+      {{#if main.isUnattuned}}<span class="sb-badge sb-badge-outline sb-text-amber">{{localize "SHADOWBASE.Item.Saber.Unattuned"}}</span>{{/if}}
+      {{#if main.crystalAttackPenalty}}<span class="sb-badge sb-badge-outline sb-badge--effect sb-badge--neg">{{localize "SHADOWBASE.Item.Saber.CrystalPenalty" n=main.crystalAttackPenalty}}</span>{{/if}}
+      {{#if main.twoHanded}}<span class="sb-badge sb-badge-outline">2H</span>{{/if}}
+    </div>
+    <div class="sb-item-grid">
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Saber.BladeLength"}}</span><input type="number" class="sb-input" name="system.row.bladeLength" value="{{main.bladeLength}}" data-dtype="Number" min="0" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Saber.CellCharge"}}</span>
+        <span class="sb-hrow sb-hrow--tight"><input type="number" class="sb-input sb-input--sm" name="system.row.powerCellCurrentCharge" value="{{main.cell.current}}" data-dtype="Number" min="0" {{disabled (not editable)}}><span class="sb-text-muted sb-mono">/ {{#if main.cell.max}}{{main.cell.max}}{{else}}—{{/if}}</span></span>
+      </label>
+    </div>
+    {{> "shadowbase.item.condition" main.condition editable=editable owned=owned blade="" label=main.conditionLabel}}
+    {{#if main.conditionTwo}}{{> "shadowbase.item.condition" main.conditionTwo editable=editable owned=owned blade="2" label=(localize "SHADOWBASE.Item.Saber.BladeTwo")}}{{/if}}
+    {{#if main.gate}}<p class="sb-notice sb-notice--warn">{{main.gate}}</p>{{/if}}
+  </div>
+  <div class="sb-item-section sb-item-section--actions">
+    <span class="sb-text-xs">{{localize "SHADOWBASE.Item.Weapon.SkillCheck"}}: <b>{{main.skill.name}}</b> <b class="sb-mono">{{#if main.skill.target}}{{main.skill.target}}{{else}}—{{/if}}</b>{{#if main.skill.bonus}} <span class="sb-text-muted">({{main.skill.base}} {{main.skill.bonus}})</span>{{/if}}{{#if main.skill.note}} <span class="sb-text-muted">· {{main.skill.note}}</span>{{/if}}</span>
+    {{#if main.skill.blocked}}<span class="sb-badge sb-badge-destructive">{{main.skill.blocked}}</span>{{/if}}
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="roll-attack" {{disabled (not main.canAttack)}}><i class="{{sbIcon 'roll'}}"></i> {{localize "SHADOWBASE.Sheet.Weapon.Attack"}}</button>
+    <button type="button" class="sb-btn sb-btn-destructive sb-btn-sm" data-action="roll-damage" {{disabled (not main.canDamage)}} title="{{main.damage}}"><i class="fa-solid fa-burst"></i> {{localize "SHADOWBASE.Sheet.Weapon.Damage"}}{{#if main.pendingHits}} <span class="sb-badge sb-badge-secondary sb-mono">{{main.pendingHits}}</span>{{/if}}</button>
+  </div>
+</section>

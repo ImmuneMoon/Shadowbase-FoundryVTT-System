@@ -1,0 +1,33 @@
+{
+  "_id": "W0icQ8RCMjreUT9h",
+  "_key": "!items!W0icQ8RCMjreUT9h",
+  "name": "Versatility (Human)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "RdM67Srk6HMq7Ns7",
+  "sort": 17300000,
+  "system": {
+    "row": {
+      "name": "Versatility (Human)",
+      "points": 20,
+      "description": "Versatility grants Humans 20 bonus Character Points to spend on anything (attributes, secondary characteristics, skills, or advantages), representing human adaptability. These points are granted free as part of the Human racial package. Humans are equally capable of soaring heroism or profound villainy, able to master any skill or ideology.",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Versatility (Human)"
+    }
+  }
+}

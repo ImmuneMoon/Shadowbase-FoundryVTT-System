@@ -1,0 +1,39 @@
+{
+  "_id": "90bzOXWk2lFJF0WH",
+  "_key": "!items!90bzOXWk2lFJF0WH",
+  "name": "Cortosis Weave",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 7800000,
+  "system": {
+    "row": {
+      "id": "21b19250-b7d8-4ed3-9bca-2e394e4f5ea4",
+      "name": "Cortosis Weave",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 33952,
+      "weight": 150,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "dr-plating-5",
+      "description": "DR 10 (Hardened)"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "dr-plating-5"
+    }
+  }
+}

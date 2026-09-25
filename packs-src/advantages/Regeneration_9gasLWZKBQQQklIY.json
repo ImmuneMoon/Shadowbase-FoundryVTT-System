@@ -1,0 +1,34 @@
+{
+  "_id": "9gasLWZKBQQQklIY",
+  "_key": "!items!9gasLWZKBQQQklIY",
+  "name": "Regeneration",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "GS8kUCPWatq78XxI",
+  "sort": 13600000,
+  "system": {
+    "row": {
+      "name": "Regeneration",
+      "points": 25,
+      "description": "Slow: 1 HP per 12 hours.",
+      "category": "Physical",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Regeneration"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "CfKfYyK7oNwCX7Fi",
+  "_key": "!items!CfKfYyK7oNwCX7Fi",
+  "name": "Reflec Coating (Face)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "8GrlQsd0h5olZ7DZ",
+  "sort": 900000,
+  "system": {
+    "row": {
+      "id": "cc8ecc7d-ca97-43a9-97b0-921355102831",
+      "name": "Reflec Coating (Face)",
+      "category": "Overlay Mod",
+      "cost": 400,
+      "weight": 0.1,
+      "notes": "Grants a +1 equipment bonus to Stealth rolls specifically against electronic scanning systems.",
+      "equipped": false,
+      "quantity": 1,
+      "validSlots": [
+        "Face"
+      ]
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "key": "Reflec Coating (Face)"
+    }
+  }
+}

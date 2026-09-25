@@ -1,0 +1,42 @@
+{
+  "_id": "3Ys4t9SpahbYzfBA",
+  "_key": "!items!3Ys4t9SpahbYzfBA",
+  "name": "Heavy Head Shell (Durasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 1100000,
+  "system": {
+    "row": {
+      "id": "c4e9b573-0c3d-4d35-9a90-0ab6d820c3d9",
+      "name": "Heavy Head Shell (Durasteel)",
+      "category": "Armor Shell",
+      "cost": 270,
+      "weight": 5.39,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-heavy-head-durasteel",
+      "materialId": "durasteel",
+      "notes": "Standard building alloy. Baseline stats.",
+      "validSlots": [],
+      "drBonus": 8,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-heavy-head-durasteel"
+    }
+  }
+}

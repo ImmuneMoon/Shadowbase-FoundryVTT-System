@@ -1,0 +1,42 @@
+{
+  "_id": "vOCnjEHNirLIs1So",
+  "_key": "!items!vOCnjEHNirLIs1So",
+  "name": "Baradium",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "BnJXPGKEnbEN19j3",
+  "sort": 2400000,
+  "system": {
+    "row": {
+      "name": "Baradium",
+      "rarity": "Rare",
+      "cost": 1000,
+      "density": 350,
+      "category": "Raw Materials",
+      "subCategory": "Explosive",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A powerful, highly unstable synthetic element used as the primary explosive filler in thermal detonators and high-yield missiles.",
+      "id": "3c67846b-31e0-4bad-aa75-8dbf34e9bd28",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Baradium"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "Zpez9X1RJMmFEklQ",
+  "_key": "!items!Zpez9X1RJMmFEklQ",
+  "name": "Plasteel",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "h5zpkZemdaiAEI5A",
+  "sort": 3300000,
+  "system": {
+    "row": {
+      "name": "Plasteel",
+      "rarity": "Common",
+      "cost": 40,
+      "density": 300,
+      "category": "Raw Materials",
+      "subCategory": "Metal",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A rigid, durable fusion of plastoid and steel.",
+      "id": "9c594a38-e752-4927-bc05-a7f1633d2216",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "material:Plasteel"
+    }
+  }
+}

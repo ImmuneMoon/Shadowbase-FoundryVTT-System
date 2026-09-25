@@ -1,0 +1,42 @@
+{
+  "_id": "spWVjK9G9dxUTbDd",
+  "_key": "!items!spWVjK9G9dxUTbDd",
+  "name": "Blueprint: Slugthrower Rifle Magazine",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DvRG95q4QWZQnNFm",
+  "sort": 3500000,
+  "system": {
+    "row": {
+      "id": "15b4f892-baf0-4f4c-a177-221738849676",
+      "name": "Blueprint: Slugthrower Rifle Magazine",
+      "cost": 176,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Slugthrower Rifle Magazine (Generation 0, proven, encoded, catalog design). Required to build Slugthrower Rifle Magazine; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Slugthrower Rifle Magazine",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 15.11111111111111,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Ammunition|Slugthrower Rifle Magazine"
+    }
+  }
+}

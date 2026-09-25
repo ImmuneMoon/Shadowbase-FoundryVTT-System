@@ -1,0 +1,55 @@
+{
+  "_id": "Y1nhgoUbrCen8Aap",
+  "_key": "!items!Y1nhgoUbrCen8Aap",
+  "name": "Door/Container Alarm",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "rzx9eWpiaGSn8iri",
+  "sort": 4700000,
+  "system": {
+    "row": {
+      "name": "Door/Container Alarm",
+      "cost": 1410,
+      "skill": "Electronics Operation (Security)",
+      "description": "Installation takes 1 minute and an Electronics Operation (Security) roll. On a critical failure during setup, the alarm sounds immediately. Once armed, it emits a deafening alarm if opened. Bypassing an active alarm requires an Electronics Operation (Security) roll at -2. Lasts 1000 hours per full power cell. Needs Computer Programming to function if constructed.",
+      "category": "Restraints & Security",
+      "weight": 1.4,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Silicon",
+          "amount": 0.3
+        },
+        {
+          "name": "Durasteel",
+          "amount": 0.4
+        },
+        {
+          "name": "Power Cell",
+          "amount": 0.7
+        }
+      ],
+      "requiresSoftware": true,
+      "id": "0a58a4fa-90d0-466d-8b01-613993e66959",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Door/Container Alarm"
+    }
+  }
+}

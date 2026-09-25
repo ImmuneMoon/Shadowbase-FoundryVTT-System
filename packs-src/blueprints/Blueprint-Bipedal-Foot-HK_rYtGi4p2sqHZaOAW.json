@@ -1,0 +1,42 @@
+{
+  "_id": "rYtGi4p2sqHZaOAW",
+  "_key": "!items!rYtGi4p2sqHZaOAW",
+  "name": "Blueprint: Bipedal Foot (HK)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "7uRPK85jklrZpkru",
+  "sort": 25300000,
+  "system": {
+    "row": {
+      "id": "1bcfd1ad-5f83-43db-8307-a4b36c95b3d5",
+      "name": "Blueprint: Bipedal Foot (HK)",
+      "cost": 253,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Bipedal Foot (HK) (Generation 0, proven, encoded, catalog design). Required to build Bipedal Foot (HK); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Bipedal Foot (HK)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 789,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Locomotion|Bipedal Foot (HK)"
+    }
+  }
+}

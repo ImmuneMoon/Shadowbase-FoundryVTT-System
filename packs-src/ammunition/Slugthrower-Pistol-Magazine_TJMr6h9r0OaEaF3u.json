@@ -1,0 +1,53 @@
+{
+  "_id": "TJMr6h9r0OaEaF3u",
+  "_key": "!items!TJMr6h9r0OaEaF3u",
+  "name": "Slugthrower Pistol Magazine",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "qPfJKLGY8EtrruC2",
+  "sort": 400000,
+  "system": {
+    "row": {
+      "name": "Slugthrower Pistol Magazine",
+      "craftingCategory": "Ammunition",
+      "type": "Magazine",
+      "isContainer": true,
+      "containerType": "Pistol",
+      "maxCharges": 12,
+      "cost": 10,
+      "weight": 0.15,
+      "baseCost": 10,
+      "baseWeight": 0.15,
+      "notes": "Standard box magazine. Often purchased full; +12 Standard pistol rounds: +0.6 lbs, +72 CR.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.15
+        }
+      ],
+      "id": "c13e8758-6098-49c0-a951-97e5cf294868",
+      "quantity": 1,
+      "currentCharges": 0,
+      "contents": [],
+      "isLibraryItem": true,
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Slugthrower Pistol Magazine"
+    }
+  }
+}

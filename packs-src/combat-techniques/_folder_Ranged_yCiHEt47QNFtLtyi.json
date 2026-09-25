@@ -1,0 +1,19 @@
+{
+  "_id": "yCiHEt47QNFtLtyi",
+  "_key": "!folders!yCiHEt47QNFtLtyi",
+  "name": "Ranged",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 200000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "combat-techniques",
+      "path": [
+        "Ranged"
+      ]
+    }
+  }
+}

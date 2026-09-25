@@ -1,0 +1,42 @@
+{
+  "_id": "g1b6heBIxrEnJKA5",
+  "_key": "!items!g1b6heBIxrEnJKA5",
+  "name": "Gunpowder",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "BnJXPGKEnbEN19j3",
+  "sort": 7300000,
+  "system": {
+    "row": {
+      "name": "Gunpowder",
+      "rarity": "Uncommon",
+      "cost": 10,
+      "density": 120,
+      "category": "Raw Materials",
+      "subCategory": "Explosive",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A grey-black powder made of volatile materials, used in explosives and slugthrower rounds. Can be carried in many forms, but is safest in a Chemical Storage Vessel. If exposed to an open flame or spark, it ignites violently. Damage: Deals 1d burning damage for a radius of 1d-2 feet (minimum 1 foot) per pound of powder. Partial Quantities: For amounts under 1 lb, roll the standard damage and distance, applying a -1 penalty to both the burning damage and the blast radius for every 0.1 lbs below a full pound. A total result of 0 or less yields no damage.",
+      "id": "6dc90437-ff9e-4862-b924-c0e969859f66",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Gunpowder"
+    }
+  }
+}

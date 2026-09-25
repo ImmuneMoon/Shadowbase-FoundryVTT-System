@@ -1,0 +1,42 @@
+{
+  "_id": "i3HyBEb0XcsDcO8w",
+  "_key": "!items!i3HyBEb0XcsDcO8w",
+  "name": "Blueprint: CNS Strength Enhancer",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ZMyORA2AHo4Qm477",
+  "sort": 10400000,
+  "system": {
+    "row": {
+      "id": "ac9a1cef-09f7-4c3e-8503-37586bdea703",
+      "name": "Blueprint: CNS Strength Enhancer",
+      "cost": 4661,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of CNS Strength Enhancer (Generation 0, proven, encoded, catalog design). Required to build CNS Strength Enhancer; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "CNS Strength Enhancer",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 44870,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Belt|CNS Strength Enhancer"
+    }
+  }
+}

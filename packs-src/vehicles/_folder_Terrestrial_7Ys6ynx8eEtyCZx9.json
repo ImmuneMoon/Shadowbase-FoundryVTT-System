@@ -1,0 +1,19 @@
+{
+  "_id": "7Ys6ynx8eEtyCZx9",
+  "_key": "!folders!7Ys6ynx8eEtyCZx9",
+  "name": "Terrestrial",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 0,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "vehicles",
+      "path": [
+        "Terrestrial"
+      ]
+    }
+  }
+}

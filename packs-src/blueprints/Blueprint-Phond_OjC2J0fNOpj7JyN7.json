@@ -1,0 +1,42 @@
+{
+  "_id": "OjC2J0fNOpj7JyN7",
+  "_key": "!items!OjC2J0fNOpj7JyN7",
+  "name": "Blueprint: Phond",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 37000000,
+  "system": {
+    "row": {
+      "id": "c9e99018-932c-4af6-9e33-42738e8fbb77",
+      "name": "Blueprint: Phond",
+      "cost": 308,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Phond (Generation 0, proven, encoded, catalog design). Required to build Phond; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Phond",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1333.3333333333335,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Phond"
+    }
+  }
+}

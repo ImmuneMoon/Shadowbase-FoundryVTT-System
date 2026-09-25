@@ -1,0 +1,42 @@
+{
+  "_id": "sJX99h5qTpCHOuLV",
+  "_key": "!items!sJX99h5qTpCHOuLV",
+  "name": "Blueprint: Geological Compressor",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "xmuqFFeb1ERgUjDK",
+  "sort": 47500000,
+  "system": {
+    "row": {
+      "id": "258a43fe-19c5-429f-8a39-32c7f0fa3cc8",
+      "name": "Blueprint: Geological Compressor",
+      "cost": 605,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Geological Compressor (Generation 0, proven, encoded, catalog design). Required to build Geological Compressor; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Geological Compressor",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 4305,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Survival & Utility Hardware|Geological Compressor"
+    }
+  }
+}

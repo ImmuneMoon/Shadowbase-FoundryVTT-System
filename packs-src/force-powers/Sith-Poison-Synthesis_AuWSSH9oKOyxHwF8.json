@@ -1,0 +1,51 @@
+{
+  "_id": "AuWSSH9oKOyxHwF8",
+  "_key": "!items!AuWSSH9oKOyxHwF8",
+  "name": "Sith Poison Synthesis",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "joTOdeYSoLzidovy",
+  "sort": 4200000,
+  "system": {
+    "row": {
+      "name": "Sith Poison Synthesis",
+      "level": 1,
+      "cpCost": 20,
+      "fpCost": 8,
+      "effect": "Inflicts 2d toxic damage and requires Will roll. Failure: -4 to Force skills and hallucinations for 1d hours. Incantation: 10 min.",
+      "characterTier": "Adept",
+      "baseSkill": "Sith Alchemy (IQ/Hard)",
+      "category": "Sith Sorcery/Alchemy",
+      "alignment": "DS",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Sith Poison Synthesis",
+        "description": "Alters a mundane liquid or gas into a potent, Force-infused toxin.",
+        "category": "Sith Sorcery/Alchemy",
+        "level": 1,
+        "cpCost": 20,
+        "fpCost": 8,
+        "alignment": "DS",
+        "baseSkill": "Sith Alchemy (IQ/Hard)",
+        "characterTier": "Adept",
+        "effect": "Inflicts 2d toxic damage and requires Will roll. Failure: -4 to Force skills and hallucinations for 1d hours. Incantation: 10 min."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Sith Poison Synthesis"
+    }
+  }
+}

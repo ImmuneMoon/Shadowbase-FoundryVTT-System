@@ -1,0 +1,34 @@
+{
+  "_id": "AAUtzmcifHuihGey",
+  "_key": "!items!AAUtzmcifHuihGey",
+  "name": "Sith Trooper Gear",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "3vDRi4uDBtDelTd8",
+  "sort": 15100000,
+  "system": {
+    "row": {
+      "name": "Sith Trooper Gear",
+      "points": 20,
+      "description": "Your issued combat armor plus a Blaster Rifle, granted free at character creation. Mirrors the Republic trooper's issued kit (Republic Issued Gear, 20-point tier) in application. The armor is currently a Combat Suit (Medium, Durasteel, full coverage: the 3,580 CR suit in Chapter 13), standing in for a dedicated Sith trooper armor until one is designed.",
+      "category": "Social/Wealth",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Sith Trooper Gear"
+    }
+  }
+}

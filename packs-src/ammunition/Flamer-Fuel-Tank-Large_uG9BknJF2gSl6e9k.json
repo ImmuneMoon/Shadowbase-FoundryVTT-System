@@ -1,0 +1,56 @@
+{
+  "_id": "uG9BknJF2gSl6e9k",
+  "_key": "!items!uG9BknJF2gSl6e9k",
+  "name": "Flamer Fuel Tank (Large)",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "dxTCAIxf45IiQ4SF",
+  "sort": 2300000,
+  "system": {
+    "row": {
+      "name": "Flamer Fuel Tank (Large)",
+      "craftingCategory": "Ammunition",
+      "type": "Fuel Canister",
+      "containerType": "Flamer",
+      "maxCharges": 10,
+      "cost": 550,
+      "weight": 10,
+      "baseCost": 250,
+      "baseWeight": 5,
+      "notes": "Refill: 300 CR.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 5
+        },
+        {
+          "name": "Flamer Fuel",
+          "amount": 5
+        }
+      ],
+      "id": "7a94ee77-449c-43f0-bbc3-f1878334c500",
+      "quantity": 1,
+      "currentCharges": 10,
+      "contents": [],
+      "isLibraryItem": true,
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Flamer Fuel Tank (Large)"
+    }
+  }
+}

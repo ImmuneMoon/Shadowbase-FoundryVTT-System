@@ -1,0 +1,39 @@
+{
+  "_id": "SQyEakVWRLntHI9A",
+  "_key": "!items!SQyEakVWRLntHI9A",
+  "name": "Reflec Coating (Feet)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "8GrlQsd0h5olZ7DZ",
+  "sort": 2300000,
+  "system": {
+    "row": {
+      "id": "9e9f0d4f-1376-4c8e-ab04-81c17952e680",
+      "name": "Reflec Coating (Feet)",
+      "category": "Overlay Mod",
+      "cost": 400,
+      "weight": 0.1,
+      "notes": "Grants a +1 equipment bonus to Stealth rolls specifically against electronic scanning systems.",
+      "equipped": false,
+      "quantity": 1,
+      "validSlots": [
+        "Feet"
+      ]
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "key": "Reflec Coating (Feet)"
+    }
+  }
+}

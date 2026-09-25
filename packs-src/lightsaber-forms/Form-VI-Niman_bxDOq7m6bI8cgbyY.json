@@ -1,0 +1,93 @@
+{
+  "_id": "bxDOq7m6bI8cgbyY",
+  "_key": "!items!bxDOq7m6bI8cgbyY",
+  "name": "Form VI: Niman",
+  "type": "lightsaberForm",
+  "img": "icons/svg/sword.svg",
+  "folder": null,
+  "sort": 600000,
+  "system": {
+    "row": {
+      "name": "Form VI: Niman",
+      "level": 1,
+      "baselinePoints": 0
+    },
+    "source": "lightsaberForms",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "level": 1,
+        "cpCost": 10,
+        "effect": "You suffer one less penalty (minimum -1) when attempting a Force power while also making a Lightsaber Combat attack or defense in the same turn. You gain a +1 bonus to Will rolls when using Force powers in combat.",
+        "characterTier": "Apprentice",
+        "applies": {},
+        "conditional": [
+          {
+            "target": "will",
+            "value": 1,
+            "when": "on Will rolls when using Force powers in combat"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "cpCost": 20,
+        "effect": "You suffer one less penalty (minimum 0) when attempting a Force power while also making a Lightsaber Combat attack or defense. You gain a +2 bonus to Will rolls when using Force powers in combat. You can maintain two Force powers at once (if they allow maintenance) by paying the combined FP cost for both.",
+        "characterTier": "Adept",
+        "applies": {},
+        "conditional": [
+          {
+            "target": "will",
+            "value": 2,
+            "when": "on Will rolls when using Force powers in combat"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "cpCost": 35,
+        "effect": "You can attempt a Force power and make a Lightsaber Combat attack/defense in the same turn with no penalty to either action. You gain a +3 bonus to Will rolls when using Force powers in combat. You can maintain two Force powers with a single FP cost as if they were one, as long as they are related (GM's discretion).",
+        "characterTier": "Expert",
+        "applies": {},
+        "conditional": [
+          {
+            "target": "will",
+            "value": 3,
+            "when": "on Will rolls when using Force powers in combat"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "cpCost": 55,
+        "effect": "You can attempt a Force power and make a Lightsaber Combat attack/defense in the same turn with no penalty to either action, and gain a +1 bonus to your Lightsaber Combat skill roll if you successfully cast a Force power that turn. You gain a +4 bonus to Will rolls when using Force powers in combat. You can use two different Force powers in the same turn (one as an attack, one as a defense, or two attack rolls) at -1 penalty to each.",
+        "characterTier": "Master",
+        "applies": {},
+        "conditional": [
+          {
+            "target": "will",
+            "value": 4,
+            "when": "on Will rolls when using Force powers in combat"
+          },
+          {
+            "target": "attack",
+            "value": 1,
+            "when": "on Lightsaber Combat, if you successfully cast a Force power that turn"
+          }
+        ]
+      }
+    ],
+    "catalog": "lightsaber-forms"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-forms",
+      "key": "Form VI: Niman"
+    }
+  }
+}

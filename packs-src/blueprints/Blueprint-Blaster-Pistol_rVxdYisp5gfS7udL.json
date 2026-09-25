@@ -1,0 +1,42 @@
+{
+  "_id": "rVxdYisp5gfS7udL",
+  "_key": "!items!rVxdYisp5gfS7udL",
+  "name": "Blueprint: Blaster Pistol",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Cwowcy4l2Q3n79PK",
+  "sort": 46800000,
+  "system": {
+    "row": {
+      "id": "2eef156f-0e74-4fe0-aaa2-9abe02ace5bc",
+      "name": "Blueprint: Blaster Pistol",
+      "cost": 319,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Blaster Pistol (Generation 0, proven, encoded, catalog design). Required to build Blaster Pistol; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Blaster Pistol",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1445,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Standard Pistols|Blaster Pistol"
+    }
+  }
+}

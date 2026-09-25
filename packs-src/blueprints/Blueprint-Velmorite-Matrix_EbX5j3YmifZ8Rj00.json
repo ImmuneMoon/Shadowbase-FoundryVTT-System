@@ -1,0 +1,42 @@
+{
+  "_id": "EbX5j3YmifZ8Rj00",
+  "_key": "!items!EbX5j3YmifZ8Rj00",
+  "name": "Blueprint: Velmorite Matrix",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "KDepxQG1NOlrKZaZ",
+  "sort": 34100000,
+  "system": {
+    "row": {
+      "id": "d6e0861a-7f6f-4c37-b0d3-23f2ba66449c",
+      "name": "Blueprint: Velmorite Matrix",
+      "cost": 237,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Velmorite Matrix (Generation 0, proven, encoded, catalog design). Required to build Velmorite Matrix; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Velmorite Matrix",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 630,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Internal|Velmorite Matrix"
+    }
+  }
+}

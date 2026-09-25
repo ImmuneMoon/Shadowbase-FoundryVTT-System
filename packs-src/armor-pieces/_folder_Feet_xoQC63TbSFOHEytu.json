@@ -1,0 +1,19 @@
+{
+  "_id": "xoQC63TbSFOHEytu",
+  "_key": "!folders!xoQC63TbSFOHEytu",
+  "name": "Feet",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 400000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-pieces",
+      "path": [
+        "Feet"
+      ]
+    }
+  }
+}

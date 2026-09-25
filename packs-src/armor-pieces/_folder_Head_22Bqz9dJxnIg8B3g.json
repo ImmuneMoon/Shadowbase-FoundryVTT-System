@@ -1,0 +1,19 @@
+{
+  "_id": "22Bqz9dJxnIg8B3g",
+  "_key": "!folders!22Bqz9dJxnIg8B3g",
+  "name": "Head",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 0,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-pieces",
+      "path": [
+        "Head"
+      ]
+    }
+  }
+}

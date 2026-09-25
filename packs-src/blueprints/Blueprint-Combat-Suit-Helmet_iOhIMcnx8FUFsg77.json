@@ -1,0 +1,42 @@
+{
+  "_id": "iOhIMcnx8FUFsg77",
+  "_key": "!items!iOhIMcnx8FUFsg77",
+  "name": "Blueprint: Combat Suit Helmet",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 6100000,
+  "system": {
+    "row": {
+      "id": "29e94b80-1738-4520-8f33-06b247691a93",
+      "name": "Blueprint: Combat Suit Helmet",
+      "cost": 196,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Combat Suit Helmet (Generation 0, proven, encoded, catalog design). Required to build Combat Suit Helmet; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Combat Suit Helmet",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 214,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Combat Suit Helmet"
+    }
+  }
+}

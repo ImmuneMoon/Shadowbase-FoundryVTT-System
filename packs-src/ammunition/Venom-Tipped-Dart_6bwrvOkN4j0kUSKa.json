@@ -1,0 +1,65 @@
+{
+  "_id": "6bwrvOkN4j0kUSKa",
+  "_key": "!items!6bwrvOkN4j0kUSKa",
+  "name": "Venom-Tipped Dart",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "Q5SU8xBIJ2uiJh6y",
+  "sort": 3100000,
+  "system": {
+    "row": {
+      "name": "Venom-Tipped Dart",
+      "craftingCategory": "Ammunition",
+      "projectileClass": "special",
+      "type": "Dart Magazine",
+      "maxCharges": 1,
+      "cost": 928,
+      "weight": 0.2,
+      "formula": "1d",
+      "notes": "HT-3 or 1d-2 tox/sec for 5 min.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.15
+        },
+        {
+          "name": "Malkite Pelage",
+          "amount": 0.05
+        }
+      ],
+      "payloadRolls": [
+        {
+          "skill": "Chemistry",
+          "or": "Poisons",
+          "description": "Synthesising the venom and securing it in the delivery system."
+        }
+      ],
+      "id": "0cd7ffdf-bb12-40e6-bab9-a0c1d153478e",
+      "quantity": 1,
+      "currentCharges": 1,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 928,
+      "baseWeight": 0.2,
+      "containerType": "None",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Venom-Tipped Dart"
+    }
+  }
+}

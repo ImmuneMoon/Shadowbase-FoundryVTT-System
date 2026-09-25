@@ -1,0 +1,42 @@
+{
+  "_id": "EPKCpjdxXeNGK53W",
+  "_key": "!items!EPKCpjdxXeNGK53W",
+  "name": "Synox",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "L59P5EnuWomMzPUE",
+  "sort": 11300000,
+  "system": {
+    "row": {
+      "name": "Synox",
+      "rarity": "Rare",
+      "cost": 800,
+      "density": 80,
+      "category": "Raw Materials",
+      "subCategory": "Poison",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A highly lethal neurotoxin, used as an odorless, tasteless powder, or liquid payload in toxic darts made for assassinations. If consumed, touched, or injected: Target makes HT-5, or poison resistance-5 related roll. On fail, deals 3d tox. Cyclic, 1 cycles per sec, target makes rerolls each cycle, until dead, unless treated using an Antidote Kit. On success, deals 1d tox, Cyclic, 1 cycles per min. On crit success, target takes 1d tox, Cyclic, 1 cycles per min.",
+      "id": "7ab8e5bb-3587-4aad-ba1e-36c5cff87c35",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Synox"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "5PdOQxj5ZSUuS2ET",
+  "_key": "!items!5PdOQxj5ZSUuS2ET",
+  "name": "Cortosis Weave (Legs)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "8GrlQsd0h5olZ7DZ",
+  "sort": 1400000,
+  "system": {
+    "row": {
+      "id": "1853976c-3625-4f3d-b4fe-391ed20bbdf5",
+      "name": "Cortosis Weave (Legs)",
+      "category": "Overlay Mod",
+      "cost": 11250,
+      "weight": 0.75,
+      "notes": "+3 to Legs DR  vs energy (burn/ cr) damage. Roll 3d, if not crit fail, disrupts Lightsaber for 2d-2 sec, for a minimum of 2 sec.",
+      "equipped": false,
+      "quantity": 1,
+      "validSlots": [
+        "Legs",
+        "Droid Leg"
+      ],
+      "drBonus": 3
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "key": "Cortosis Weave (Legs)"
+    }
+  }
+}

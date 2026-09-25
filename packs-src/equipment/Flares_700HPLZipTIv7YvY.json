@@ -1,0 +1,50 @@
+{
+  "_id": "700HPLZipTIv7YvY",
+  "_key": "!items!700HPLZipTIv7YvY",
+  "name": "Flares",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Oh3x5u0Hy1HpzLID",
+  "sort": 6400000,
+  "system": {
+    "row": {
+      "name": "Flares",
+      "craftingCategory": "Chemical Charges",
+      "cost": 57,
+      "description": "Pack of 3 chemical flares. 5 min light. Materials: Chemical Reactants: 1 lb, Plastoid: 0.1 lbs.",
+      "category": "Survival Gear",
+      "weight": 1.1,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Chemical Reactants",
+          "amount": 1
+        },
+        {
+          "name": "Plastoid",
+          "amount": 0.1
+        }
+      ],
+      "id": "b5f30f31-0d36-4481-838c-867ca44ad634",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Flares"
+    }
+  }
+}

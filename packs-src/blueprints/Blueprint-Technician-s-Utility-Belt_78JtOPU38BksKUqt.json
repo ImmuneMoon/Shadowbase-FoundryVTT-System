@@ -1,0 +1,42 @@
+{
+  "_id": "78JtOPU38BksKUqt",
+  "_key": "!items!78JtOPU38BksKUqt",
+  "name": "Blueprint: Technician's Utility Belt",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ZMyORA2AHo4Qm477",
+  "sort": 11500000,
+  "system": {
+    "row": {
+      "id": "38550b40-e78a-4917-a4ae-cd970f2e9413",
+      "name": "Blueprint: Technician's Utility Belt",
+      "cost": 1951,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Technician's Utility Belt (Generation 0, proven, encoded, catalog design). Required to build Technician's Utility Belt; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Technician's Utility Belt",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 17765,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Belt|Technician's Utility Belt"
+    }
+  }
+}

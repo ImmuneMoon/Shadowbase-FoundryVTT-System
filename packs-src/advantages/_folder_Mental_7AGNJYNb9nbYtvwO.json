@@ -1,0 +1,19 @@
+{
+  "_id": "7AGNJYNb9nbYtvwO",
+  "_key": "!folders!7AGNJYNb9nbYtvwO",
+  "name": "Mental",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "path": [
+        "Mental"
+      ]
+    }
+  }
+}

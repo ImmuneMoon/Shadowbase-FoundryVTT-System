@@ -1,0 +1,42 @@
+{
+  "_id": "HSYcaKJvYRl9u0XO",
+  "_key": "!items!HSYcaKJvYRl9u0XO",
+  "name": "Blueprint: Arctic Jacket",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 14100000,
+  "system": {
+    "row": {
+      "id": "e4559d71-2508-4839-82cf-34b3bdf72541",
+      "name": "Blueprint: Arctic Jacket",
+      "cost": 177,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Arctic Jacket (Generation 0, proven, encoded, catalog design). Required to build Arctic Jacket; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Arctic Jacket",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 25,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Arctic Jacket"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "_id": "TsGyxmfuQoUP5tqM",
+  "_key": "!items!TsGyxmfuQoUP5tqM",
+  "name": "Chiewab \"Lifeline\" Prosthetic",
+  "type": "cyberneticLimb",
+  "img": "icons/svg/bones.svg",
+  "folder": "FGcNgftFg9UhXTOm",
+  "sort": 700000,
+  "system": {
+    "row": {
+      "id": "4675304f-4951-4b98-baff-180b69119d1e",
+      "name": "Chiewab \"Lifeline\" Prosthetic",
+      "location": "Right Arm",
+      "extent": "Full",
+      "material": "Plasteel",
+      "cost": 1894,
+      "weight": 5.49,
+      "dr": 4,
+      "currentDr": 4,
+      "effect": "Standard clinical replacement.",
+      "upgrades": [],
+      "hasSynthskin": false,
+      "installed": false,
+      "storageLocationId": null,
+      "quantity": 1,
+      "baselinePoints": 0,
+      "itemSizeModifier": 0
+    },
+    "source": "cybernetics",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-limbs"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-limbs",
+      "key": "Arm|Chiewab \"Lifeline\" Prosthetic"
+    }
+  }
+}

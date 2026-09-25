@@ -1,0 +1,42 @@
+{
+  "_id": "e93LgEdvqIBFvP0n",
+  "_key": "!items!e93LgEdvqIBFvP0n",
+  "name": "Durasteel Curved Sleeve",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "aLkD1xam7i1el3MD",
+  "sort": 600000,
+  "system": {
+    "row": {
+      "name": "Durasteel Curved Sleeve",
+      "category": "Sleeve Part",
+      "effect": "1-handed only. +3 Parry. +1 to Feint maneuvers and Disarming strikes.",
+      "weight": 0.392,
+      "cost": 10,
+      "id": "322d5d8b-6866-400a-96e6-19ddd74b4ba5",
+      "partId": "curved-sleeve",
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "materialId": "durasteel",
+      "wrapId": null,
+      "volume": 0.0008,
+      "density": 490
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "hilt:curved-sleeve"
+    }
+  }
+}

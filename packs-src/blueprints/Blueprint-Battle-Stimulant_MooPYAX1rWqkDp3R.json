@@ -1,0 +1,42 @@
+{
+  "_id": "MooPYAX1rWqkDp3R",
+  "_key": "!items!MooPYAX1rWqkDp3R",
+  "name": "Blueprint: Battle Stimulant",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "57dSrgDssXtG4x1L",
+  "sort": 39600000,
+  "system": {
+    "row": {
+      "id": "af8dc27a-3800-41e8-a011-da5215d46640",
+      "name": "Blueprint: Battle Stimulant",
+      "cost": 204,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Battle Stimulant (Generation 0, proven, encoded, catalog design). Required to build Battle Stimulant; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Battle Stimulant",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 300,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Medical & Pharmaceuticals|Battle Stimulant"
+    }
+  }
+}

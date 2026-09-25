@@ -1,0 +1,32 @@
+{
+  "_id": "53CsbhKHjNsXYb7o",
+  "_key": "!items!53CsbhKHjNsXYb7o",
+  "name": "Proud",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 3300000,
+  "system": {
+    "row": {
+      "name": "Proud",
+      "points": -1,
+      "description": "You have a strong sense of self-worth and dignity and will react poorly to insults or challenges to your honor.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Proud"
+    }
+  }
+}

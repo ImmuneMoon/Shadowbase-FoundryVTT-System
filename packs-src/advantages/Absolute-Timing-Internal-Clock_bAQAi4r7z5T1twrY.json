@@ -1,0 +1,33 @@
+{
+  "_id": "bAQAi4r7z5T1twrY",
+  "_key": "!items!bAQAi4r7z5T1twrY",
+  "name": "Absolute Timing (Internal Clock)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "b0AkEhPa45uoNffk",
+  "sort": 600000,
+  "system": {
+    "row": {
+      "name": "Absolute Timing (Internal Clock)",
+      "points": 2,
+      "description": "An internal atomic clock synchronized with planetary network frequencies.",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Absolute Timing (Internal Clock)"
+    }
+  }
+}

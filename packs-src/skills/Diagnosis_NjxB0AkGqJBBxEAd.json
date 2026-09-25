@@ -1,0 +1,34 @@
+{
+  "_id": "NjxB0AkGqJBBxEAd",
+  "_key": "!items!NjxB0AkGqJBBxEAd",
+  "name": "Diagnosis",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "gAzYSLPjIJTF25Cz",
+  "sort": 3800000,
+  "system": {
+    "row": {
+      "name": "Diagnosis",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Diagnosis"
+    }
+  }
+}

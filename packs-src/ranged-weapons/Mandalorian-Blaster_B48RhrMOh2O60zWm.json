@@ -1,0 +1,211 @@
+{
+  "_id": "B48RhrMOh2O60zWm",
+  "_key": "!items!B48RhrMOh2O60zWm",
+  "name": "Mandalorian Blaster",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "GZba6tawSH3GFse4",
+  "sort": 3300000,
+  "system": {
+    "row": {
+      "id": "3767ad12-c7dc-4bc6-ada3-78339182e46d",
+      "customName": "Mandalorian Blaster",
+      "baseType": "Mandalorian Blaster",
+      "baseSkill": "Guns (Blaster Pistol)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 4.6,
+      "finalWeight": 4.6,
+      "baseCost": 337,
+      "finalCost": 2022,
+      "currentCharges": 50,
+      "maxCharges": 50,
+      "loadedAmmunitionId": "f0369e57-3bee-4273-a2d2-a630ddd7bff2",
+      "loadedAmmunitionData": {
+        "id": "f0369e57-3bee-4273-a2d2-a630ddd7bff2",
+        "name": "Standard Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "pistol-grip",
+        "inventoryId": "c0e440fa-f044-49ea-99d0-97c5c3ce541a",
+        "materialId": "durasteel"
+      },
+      "receiverPart": {
+        "partId": "magnum-receiver",
+        "inventoryId": "44c04aec-3b3f-412c-914b-0951cd7c0abe",
+        "materialId": "durasteel"
+      },
+      "barrelPart": {
+        "partId": "fine-emitter",
+        "inventoryId": "74af1ff3-ba8f-4997-aa72-4675fa9f6cad",
+        "materialId": "durasteel"
+      },
+      "targetingPart": {
+        "partId": "advanced-targeting",
+        "inventoryId": "0dea677e-a806-4b18-82ed-459443c096f3"
+      },
+      "powerUnitPart": {
+        "partId": "standard-pwr-pack",
+        "inventoryId": "19fd0c6d-4be5-4a86-ae01-4763cf4a5afc"
+      },
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "3767ad12-c7dc-4bc6-ada3-78339182e46d",
+        "customName": "Mandalorian Blaster",
+        "baseType": "Mandalorian Blaster",
+        "baseSkill": "Guns (Blaster Pistol)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 4.6,
+        "finalWeight": 4.6,
+        "baseCost": 337,
+        "finalCost": 2022,
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "loadedAmmunitionId": "f0369e57-3bee-4273-a2d2-a630ddd7bff2",
+        "loadedAmmunitionData": {
+          "id": "f0369e57-3bee-4273-a2d2-a630ddd7bff2",
+          "name": "Standard Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 50,
+          "maxCharges": 50,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "pistol-grip",
+          "inventoryId": "c0e440fa-f044-49ea-99d0-97c5c3ce541a",
+          "materialId": "durasteel"
+        },
+        "receiverPart": {
+          "partId": "magnum-receiver",
+          "inventoryId": "44c04aec-3b3f-412c-914b-0951cd7c0abe",
+          "materialId": "durasteel"
+        },
+        "barrelPart": {
+          "partId": "fine-emitter",
+          "inventoryId": "74af1ff3-ba8f-4997-aa72-4675fa9f6cad",
+          "materialId": "durasteel"
+        },
+        "targetingPart": {
+          "partId": "advanced-targeting",
+          "inventoryId": "0dea677e-a806-4b18-82ed-459443c096f3"
+        },
+        "powerUnitPart": {
+          "partId": "standard-pwr-pack",
+          "inventoryId": "19fd0c6d-4be5-4a86-ae01-4763cf4a5afc"
+        },
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "c0e440fa-f044-49ea-99d0-97c5c3ce541a",
+          "name": "Pistol Grip",
+          "partId": "pistol-grip",
+          "category": "Ranged Grip",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInBlasterId": "3767ad12-c7dc-4bc6-ada3-78339182e46d",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard 1-handed grip."
+        },
+        {
+          "id": "44c04aec-3b3f-412c-914b-0951cd7c0abe",
+          "name": "Magnum Receiver",
+          "partId": "magnum-receiver",
+          "category": "Ranged Receiver",
+          "materialId": "durasteel",
+          "cost": 62,
+          "weight": 1.225,
+          "isInstalled": true,
+          "installedInBlasterId": "3767ad12-c7dc-4bc6-ada3-78339182e46d",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Heavy handgun mechanism."
+        },
+        {
+          "id": "74af1ff3-ba8f-4997-aa72-4675fa9f6cad",
+          "name": "Fine Emitter",
+          "partId": "fine-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInBlasterId": "3767ad12-c7dc-4bc6-ada3-78339182e46d",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "0dea677e-a806-4b18-82ed-459443c096f3",
+          "name": "Advanced Targeting Module",
+          "partId": "advanced-targeting",
+          "category": "Ranged Targeting",
+          "cost": 70,
+          "weight": 0.9,
+          "isInstalled": true,
+          "installedInBlasterId": "3767ad12-c7dc-4bc6-ada3-78339182e46d",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Military-grade tracking algorithms."
+        },
+        {
+          "id": "19fd0c6d-4be5-4a86-ae01-4763cf4a5afc",
+          "name": "Standard Power Pack",
+          "partId": "standard-pwr-pack",
+          "category": "Power Unit",
+          "cost": 105,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "3767ad12-c7dc-4bc6-ada3-78339182e46d",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Mandalorian Blaster"
+    }
+  }
+}

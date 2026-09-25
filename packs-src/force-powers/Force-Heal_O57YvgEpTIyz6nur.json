@@ -1,0 +1,87 @@
+{
+  "_id": "O57YvgEpTIyz6nur",
+  "_key": "!items!O57YvgEpTIyz6nur",
+  "name": "Force Heal",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "rmtyp4NN8f3tD1ba",
+  "sort": 1600000,
+  "system": {
+    "row": {
+      "name": "Force Heal",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 2,
+      "effect": "Stabilize a dying character or remove 1 point of injury penalty.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Healing (Will/Hard)",
+      "category": "Enhance Powers",
+      "alignment": "LS",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Force Heal",
+        "description": "The Force-user channels life-giving energy through the Force to accelerate natural healing.",
+        "category": "Enhance Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 2,
+        "alignment": "LS",
+        "baseSkill": "Healing (Will/Hard)",
+        "characterTier": "Apprentice",
+        "effect": "Stabilize a dying character or remove 1 point of injury penalty."
+      },
+      {
+        "name": "Force Heal",
+        "description": "The Force-user channels life-giving energy through the Force to accelerate natural healing.",
+        "category": "Enhance Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 3,
+        "alignment": "LS",
+        "baseSkill": "Healing (Will/Hard)",
+        "characterTier": "Adept",
+        "effect": "Restore 1 HP to a target. Can cure minor illnesses."
+      },
+      {
+        "name": "Force Heal",
+        "description": "The Force-user channels life-giving energy through the Force to accelerate natural healing.",
+        "category": "Enhance Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 4,
+        "alignment": "LS",
+        "baseSkill": "Healing (Will/Hard)",
+        "characterTier": "Expert",
+        "effect": "Restore 2 HP to a target. Can cure moderate illnesses or poisons."
+      },
+      {
+        "name": "Force Heal",
+        "description": "The Force-user channels life-giving energy through the Force to accelerate natural healing.",
+        "category": "Enhance Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 5,
+        "alignment": "LS",
+        "baseSkill": "Healing (Will/Hard)",
+        "characterTier": "Master",
+        "effect": "Restore 3 HP to a target. Can instead perform \"Regenerative Healing\": rather than restoring HP at once, the target regenerates 1 HP per minute for as long as you concentrate, paying this power's FP cost again each minute to maintain it. Break concentration and the regeneration ends."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Force Heal"
+    }
+  }
+}

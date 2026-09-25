@@ -1,0 +1,42 @@
+{
+  "_id": "ECO0Oih0Az1oRhFO",
+  "_key": "!items!ECO0Oih0Az1oRhFO",
+  "name": "Blueprint: Core World Finery (Trousers)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 15100000,
+  "system": {
+    "row": {
+      "id": "16201732-d110-473c-82b3-969262c792de",
+      "name": "Blueprint: Core World Finery (Trousers)",
+      "cost": 192,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Core World Finery (Trousers) (Generation 0, proven, encoded, catalog design). Required to build Core World Finery (Trousers); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Core World Finery (Trousers)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 174.33333333333331,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Core World Finery (Trousers)"
+    }
+  }
+}

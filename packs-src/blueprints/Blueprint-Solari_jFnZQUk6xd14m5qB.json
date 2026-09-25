@@ -1,0 +1,42 @@
+{
+  "_id": "jFnZQUk6xd14m5qB",
+  "_key": "!items!jFnZQUk6xd14m5qB",
+  "name": "Blueprint: Solari",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 38200000,
+  "system": {
+    "row": {
+      "id": "d209f29e-9e08-4f0c-9432-6667f1e4df0e",
+      "name": "Blueprint: Solari",
+      "cost": 4841,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Solari (Generation 0, proven, encoded, catalog design). Required to build Solari; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Solari",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 46666.66666666667,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Solari"
+    }
+  }
+}

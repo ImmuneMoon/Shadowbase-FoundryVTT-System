@@ -1,0 +1,20 @@
+{
+  "_id": "JrkU4ZaeofVVe8Qh",
+  "_key": "!folders!JrkU4ZaeofVVe8Qh",
+  "name": "Wood",
+  "type": "Item",
+  "folder": "3XecnUQT2Vf6eRWf",
+  "sorting": "a",
+  "sort": 1600000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "path": [
+        "Raw Materials",
+        "Wood"
+      ]
+    }
+  }
+}

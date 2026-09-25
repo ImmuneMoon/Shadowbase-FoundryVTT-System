@@ -1,0 +1,42 @@
+{
+  "_id": "wXOxZ207OrY9Z3Zq",
+  "_key": "!items!wXOxZ207OrY9Z3Zq",
+  "name": "Blueprint: Datacard",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "muygUURylK1A9j1R",
+  "sort": 19700000,
+  "system": {
+    "row": {
+      "id": "23a5fa5e-7693-4bcd-be20-51d826ac20ea",
+      "name": "Blueprint: Datacard",
+      "cost": 189,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Datacard (Generation 0, proven, encoded, catalog design). Required to build Datacard; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Datacard",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 145,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Communication & Data|Datacard"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "BYS7ka2h8Aopj1ZB",
+  "_key": "!items!BYS7ka2h8Aopj1ZB",
+  "name": "Blueprint: Stealth Field Generator",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ZMyORA2AHo4Qm477",
+  "sort": 11400000,
+  "system": {
+    "row": {
+      "id": "e736d2cf-ada8-454f-bbf4-dd54f082c2d5",
+      "name": "Blueprint: Stealth Field Generator",
+      "cost": 1871,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Stealth Field Generator (Generation 0, proven, encoded, catalog design). Required to build Stealth Field Generator; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Stealth Field Generator",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 16965,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Belt|Stealth Field Generator"
+    }
+  }
+}

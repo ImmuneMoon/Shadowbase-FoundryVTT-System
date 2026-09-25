@@ -1,0 +1,42 @@
+{
+  "_id": "Vye0qtR3tK4iWO9Y",
+  "_key": "!items!Vye0qtR3tK4iWO9Y",
+  "name": "Medium Leg Shell (Plasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 3800000,
+  "system": {
+    "row": {
+      "id": "68dc8d59-c0c4-49f9-8ca7-564c2efbd49f",
+      "name": "Medium Leg Shell (Plasteel)",
+      "category": "Armor Shell",
+      "cost": 392,
+      "weight": 4.89,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-medium-legs-plasteel",
+      "materialId": "plasteel",
+      "notes": "Rigid, durable fusion of plastoid and steel.",
+      "validSlots": [],
+      "drBonus": 8,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-medium-legs-plasteel"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "Ib1C963aEMBpa9H6",
+  "_key": "!items!Ib1C963aEMBpa9H6",
+  "name": "Foot Backing",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "eBYAuy3r3NWeGfsN",
+  "sort": 8400000,
+  "system": {
+    "row": {
+      "id": "19d0f9d6-a97f-4b65-b12b-cd62736b1e0e",
+      "name": "Foot Backing",
+      "category": "Armor Backing",
+      "cost": 16,
+      "weight": 0.31,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "backing-feet",
+      "materialId": null,
+      "notes": "Padding and strapping that secures the Shell. Fixed by location - never varies with tier or material.",
+      "validSlots": [],
+      "drBonus": null,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "backing-feet"
+    }
+  }
+}

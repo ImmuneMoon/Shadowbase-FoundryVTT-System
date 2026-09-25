@@ -1,0 +1,42 @@
+{
+  "_id": "5iuo6vzce5mpGExD",
+  "_key": "!items!5iuo6vzce5mpGExD",
+  "name": "Medium Foot Shell (Beskar)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 7000000,
+  "system": {
+    "row": {
+      "id": "00b2f7d4-800e-4b49-9fe5-5faee5aa8ecf",
+      "name": "Medium Foot Shell (Beskar)",
+      "category": "Armor Shell",
+      "cost": 7350,
+      "weight": 2.45,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-medium-feet-beskar",
+      "materialId": "beskar",
+      "notes": "Mandalorian iron. +5 DR vs. energy damage. Medium and Heavy tiers only -- it is not milled thin.",
+      "validSlots": [],
+      "drBonus": 8,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-medium-feet-beskar"
+    }
+  }
+}

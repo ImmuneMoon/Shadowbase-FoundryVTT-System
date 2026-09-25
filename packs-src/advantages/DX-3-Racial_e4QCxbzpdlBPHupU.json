@@ -1,0 +1,33 @@
+{
+  "_id": "e4QCxbzpdlBPHupU",
+  "_key": "!items!e4QCxbzpdlBPHupU",
+  "name": "DX +3 (Racial)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "RdM67Srk6HMq7Ns7",
+  "sort": 4500000,
+  "system": {
+    "row": {
+      "name": "DX +3 (Racial)",
+      "points": 0,
+      "description": "Species-based coordination.",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "DX +3 (Racial)"
+    }
+  }
+}

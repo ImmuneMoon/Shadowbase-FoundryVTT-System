@@ -1,0 +1,46 @@
+{
+  "_id": "ZgIzoGeLOrotasFI",
+  "_key": "!items!ZgIzoGeLOrotasFI",
+  "name": "Iron Sights",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "bs6fEOIOLSPvkEJ3",
+  "sort": 5600000,
+  "system": {
+    "row": {
+      "id": "3a0066f2-2483-4562-b571-8f28fc7b0381",
+      "name": "Iron Sights",
+      "category": "Ranged Targeting",
+      "cost": 10,
+      "weight": 0.2,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "iron-sights",
+      "materialId": null,
+      "notes": "Mechanical alignment only.",
+      "effect": "Mechanical alignment only.",
+      "energyResBonus": 0,
+      "volume": null,
+      "density": null,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "iron-sights"
+    }
+  }
+}

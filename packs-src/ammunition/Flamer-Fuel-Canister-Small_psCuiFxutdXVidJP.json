@@ -1,0 +1,56 @@
+{
+  "_id": "psCuiFxutdXVidJP",
+  "_key": "!items!psCuiFxutdXVidJP",
+  "name": "Flamer Fuel Canister (Small)",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "dxTCAIxf45IiQ4SF",
+  "sort": 2200000,
+  "system": {
+    "row": {
+      "name": "Flamer Fuel Canister (Small)",
+      "craftingCategory": "Ammunition",
+      "type": "Fuel Canister",
+      "containerType": "Flamer",
+      "maxCharges": 5,
+      "cost": 110,
+      "weight": 2,
+      "baseCost": 50,
+      "baseWeight": 1,
+      "notes": "Refill: 60 CR.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 1
+        },
+        {
+          "name": "Flamer Fuel",
+          "amount": 1
+        }
+      ],
+      "id": "25be2107-eb52-43b5-ae1f-329df012f7f2",
+      "quantity": 1,
+      "currentCharges": 5,
+      "contents": [],
+      "isLibraryItem": true,
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Flamer Fuel Canister (Small)"
+    }
+  }
+}

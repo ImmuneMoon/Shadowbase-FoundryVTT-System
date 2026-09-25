@@ -1,0 +1,42 @@
+{
+  "_id": "jxbh2nEsBr51CKas",
+  "_key": "!items!jxbh2nEsBr51CKas",
+  "name": "Blueprint: Primary Optic (R-Series)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "idvhLPGyw0BIk332",
+  "sort": 28700000,
+  "system": {
+    "row": {
+      "id": "8d61a622-47ee-4a87-b8a7-de935317934a",
+      "name": "Blueprint: Primary Optic (R-Series)",
+      "cost": 184,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Primary Optic (R-Series) (Generation 0, proven, encoded, catalog design). Required to build Primary Optic (R-Series); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Primary Optic (R-Series)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 99,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Sensor|Primary Optic (R-Series)"
+    }
+  }
+}

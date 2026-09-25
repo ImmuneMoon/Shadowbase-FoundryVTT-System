@@ -1,0 +1,42 @@
+{
+  "_id": "aRqTbUoiK0xRqi0x",
+  "_key": "!items!aRqTbUoiK0xRqi0x",
+  "name": "Blueprint: Czerka Corporate Slacks",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 15400000,
+  "system": {
+    "row": {
+      "id": "cf54573f-c7e8-44dc-ae79-24e03d13ef23",
+      "name": "Blueprint: Czerka Corporate Slacks",
+      "cost": 180,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Czerka Corporate Slacks (Generation 0, proven, encoded, catalog design). Required to build Czerka Corporate Slacks; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Czerka Corporate Slacks",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 57.66666666666667,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Czerka Corporate Slacks"
+    }
+  }
+}

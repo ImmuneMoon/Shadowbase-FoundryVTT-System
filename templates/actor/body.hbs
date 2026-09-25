@@ -1,0 +1,95 @@
+{{!-- templates/actor/body.hbs - the Body tab (docs/STYLE-SPEC.md §3.3 Body: B0 Droid PC Status strip, B1 Droid PC Tactical
+     Dossier, B2 Droid Character Workshop, B3 Load-Out by Location, B4 Anatomy Workshop; plus N2 Hit Locations & DR from
+     hit-location-section.tsx, placed here per the unit brief, and the Combat State mirror).
+     Context: module/apps/actor-sheet-tabs.mjs bodyContext(actor) merged over the sheet's part context (`tab`). --}}
+<section class="tab sb-tab-panel sb-tab-body sb-sections {{tab.cssClass}}" data-tab="body" data-group="primary">
+  {{#if engineError}}<p class="sb-notice sb-notice--error">{{localize "SHADOWBASE.Sheet.EngineError" error=engineError}}</p>{{/if}}
+
+  <div class="sb-toolbar sb-toolbar--status">
+    <span class="sb-caps sb-text-accent"><i class="{{sbIcon 'Bot'}}"></i> {{localize "SHADOWBASE.Sheet.Body.DroidStatus"}}</span>
+    <label class="sb-check-row">
+      <input type="checkbox" name="system.isDroid" {{checked isDroid}} {{disabled (not editable)}}>
+      <span>{{#if isDroid}}{{localize "SHADOWBASE.Sheet.Body.StatusDroid"}}{{else}}{{localize "SHADOWBASE.Sheet.Body.StatusOrganic"}}{{/if}}</span>
+    </label>
+    <span class="sb-toolbar__spacer"></span>
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="openHudStatus" {{disabled (not apps.hud)}} title="{{localize "SHADOWBASE.Sheet.Body.DamageProcessorHint"}}"><i class="{{sbIcon 'Crosshair'}}"></i> {{localize "SHADOWBASE.Sheet.Body.DamageProcessor"}}</button>
+  </div>
+
+  {{#if isDroid}}
+  <details class="sb-section" data-section="droid-dossier" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Body.DroidDossier") icon=(sbIcon "Activity") chip="droids-constructs" chipTitle=(lookup chips "droids-constructs") meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#if droid}}
+      <div class="sb-stat-grid">
+        <div class="sb-stat-tile sb-stat-tile--dossier"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Sheet.Body.StHp"}}</span><span class="sb-stat-tile__value">{{droid.st}} / {{droid.hp}}</span></div>
+        <div class="sb-stat-tile sb-stat-tile--dossier"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Sheet.Body.DxIq"}}</span><span class="sb-stat-tile__value">{{droid.dx}} / {{droid.iq}}</span></div>
+        <div class="sb-stat-tile sb-stat-tile--dossier"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Sheet.Body.MoveDodge"}}</span><span class="sb-stat-tile__value">{{droid.move}} / {{droid.dodge}}</span></div>
+        <div class="sb-stat-tile sb-stat-tile--dossier"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Sheet.Body.DesignPower"}}</span><span class="sb-stat-tile__value">{{droid.pp}} PP</span></div>
+        <div class="sb-stat-tile sb-stat-tile--dossier"><span class="sb-stat-tile__label">{{localize "SHADOWBASE.Sheet.Body.HardwareCp"}}</span><span class="sb-stat-tile__value">{{droid.hardwareCp}}</span></div>
+      </div>
+      {{/if}}
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="droid-workshop" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Body.DroidWorkshop") icon=(sbIcon "Wrench") chip="" chipTitle="" meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-secondary sb-btn-sm" data-action="openDroidWorkshop" {{disabled (not apps.droidWorkshop)}}><i class="{{sbIcon 'Wrench'}}"></i> {{localize "SHADOWBASE.Sheet.Body.DroidWorkshop"}}</button>
+        {{#unless apps.droidWorkshop}}<span class="sb-muted">{{localize "SHADOWBASE.Sheet.AppPending" app=(localize "SHADOWBASE.Sheet.App.DroidWorkshop")}}</span>{{/unless}}
+      </div>
+    </div>
+  </details>
+  {{/if}}
+
+  <details class="sb-section" data-section="body-loadout" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Body.Loadout") icon=(sbIcon "Shirt") chip="equipment-crafting" chipTitle=(lookup chips "equipment-crafting") meta=(localize "SHADOWBASE.Sheet.Body.LoadoutMeta" readied=loadout.readiedCount free=loadout.freeHands hands=loadout.handCount)}}
+    <div class="sb-section__body" data-accordion-body>
+      <p class="sb-muted-p">{{localize "SHADOWBASE.Sheet.Body.LoadoutHint"}}</p>
+      {{#if loadout.unlocated.length}}
+      <p class="sb-hrow sb-hrow--tight"><span class="sb-caps sb-text-muted">{{localize "SHADOWBASE.Sheet.Body.WornOnBody"}}</span>
+        {{#each loadout.unlocated}}<span class="sb-tag">{{this.name}}</span>{{/each}}
+      </p>
+      {{/if}}
+      {{#each loadout.unplaced}}
+      <p class="sb-notice sb-notice--warn"><i class="{{sbIcon 'AlertTriangle'}}"></i> {{localize "SHADOWBASE.Sheet.Body.Unplaced" name=this.name}}{{#if this.twoHanded}} {{localize "SHADOWBASE.Sheet.Body.NeedsTwo"}}{{/if}}</p>
+      {{/each}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-secondary sb-btn-sm" data-action="openBodyLoadout" {{disabled (not apps.bodyLoadout)}}><i class="{{sbIcon 'Shirt'}}"></i> {{localize "SHADOWBASE.Sheet.Body.OpenLoadout"}}</button>
+        <button type="button" class="sb-btn sb-btn-secondary sb-btn-sm" data-action="openAnatomyWorkshop" {{disabled (not apps.anatomyWorkshop)}}><i class="{{sbIcon 'Combine'}}"></i> {{localize "SHADOWBASE.Sheet.Body.AnatomyWorkshop"}}</button>
+      </div>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="hit-locations" open>
+    {{> "shadowbase.section" title=hitLocationsTitle icon=(sbIcon "Crosshair") chip="combat-damage" chipTitle=(lookup chips "combat-damage") meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      {{> "systems/shadowbase/templates/actor/parts/hit-location-table.hbs" locations=locations editable=editable}}
+    </div>
+  </details>
+
+  <details class="sb-section sb-combat-state" data-section="body-combat-state" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Body.CombatState") icon=(sbIcon "Compass") chip="combat-damage" chipTitle=(lookup chips "combat-damage") meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      <div class="sb-field-grid">
+        <label class="sb-field" data-sheet-row><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Body.TurnCounter"}}</span><input type="number" name="system.turnCounter" value="{{state.turnCounter}}" data-dtype="Number" {{disabled (not editable)}}></label>
+        <label class="sb-field" data-sheet-row><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Body.Facing"}}</span><input type="number" min="0" max="5" name="system.facing" value="{{state.facing}}" data-dtype="Number" {{disabled (not editable)}}></label>
+        <label class="sb-field" data-sheet-row><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Body.IncomingBearing"}}</span><input type="number" min="0" max="5" name="system.incomingBearing" value="{{state.incomingBearing}}" data-dtype="Number" {{disabled (not editable)}}></label>
+        <label class="sb-check-row" data-sheet-row><input type="checkbox" name="system.threatEngaged" {{checked state.threatEngaged}} {{disabled (not editable)}}><span>{{localize "SHADOWBASE.Sheet.Body.ThreatEngaged"}}</span></label>
+        <label class="sb-check-row" data-sheet-row><input type="checkbox" name="system.facingChangeUsed" {{checked state.facingChangeUsed}} {{disabled (not editable)}}><span>{{localize "SHADOWBASE.Sheet.Body.FacingChangeUsed"}}</span></label>
+        <label class="sb-field" data-sheet-row><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Body.StunType"}}</span>
+          <select name="system.stunType" {{disabled (not editable)}}>{{#each state.stunOptions}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+        </label>
+      </div>
+      <div class="sb-hrow sb-hrow--tight">
+        {{#if state.arc}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Sheet.Body.Arc" arc=state.arc}}</span>{{/if}}
+        {{#if state.flanked}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Status.Flanked"}}</span>{{/if}}
+        {{#if state.stunned}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Sheet.Body.Stunned" type=state.stunType}}</span>
+          <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="rollStunRecovery"><i class="{{sbIcon 'Dices'}}"></i> {{localize "SHADOWBASE.Sheet.Body.StunRecovery"}}</button>{{/if}}
+        <span class="sb-badge sb-badge-secondary">{{localize "SHADOWBASE.Sheet.Body.DodgeNow" dodge=state.dodge}}</span>
+        <span class="sb-badge {{#if state.parryAvailable}}sb-badge-outline{{else}}sb-badge-destructive{{/if}}">{{localize "SHADOWBASE.Sheet.Body.ParryGate"}}</span>
+        <span class="sb-badge {{#if state.blockAvailable}}sb-badge-outline{{else}}sb-badge-destructive{{/if}}">{{localize "SHADOWBASE.Sheet.Body.BlockGate"}}</span>
+      </div>
+    </div>
+  </details>
+</section>

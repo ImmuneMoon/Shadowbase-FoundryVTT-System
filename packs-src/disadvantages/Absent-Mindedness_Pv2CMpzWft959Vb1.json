@@ -1,0 +1,34 @@
+{
+  "_id": "Pv2CMpzWft959Vb1",
+  "_key": "!items!Pv2CMpzWft959Vb1",
+  "name": "Absent-Mindedness",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 8100000,
+  "system": {
+    "row": {
+      "name": "Absent-Mindedness",
+      "points": -15,
+      "level": null,
+      "description": "You are often lost in thought and easily distracted. You must make an IQ roll to notice things that aren't directly in your field of attention.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Absent-Mindedness|Mental"
+    }
+  }
+}

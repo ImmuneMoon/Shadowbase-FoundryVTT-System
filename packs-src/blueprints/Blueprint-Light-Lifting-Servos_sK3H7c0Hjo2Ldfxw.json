@@ -1,0 +1,42 @@
+{
+  "_id": "sK3H7c0Hjo2Ldfxw",
+  "_key": "!items!sK3H7c0Hjo2Ldfxw",
+  "name": "Blueprint: Light Lifting Servos",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "6LwEPFQhc8M6lMfR",
+  "sort": 21100000,
+  "system": {
+    "row": {
+      "id": "9a7d66ed-9de1-49d8-8fee-e7fa497fc1c9",
+      "name": "Blueprint: Light Lifting Servos",
+      "cost": 275,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Light Lifting Servos (Generation 0, proven, encoded, catalog design). Required to build Light Lifting Servos; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Light Lifting Servos",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1005,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Actuator|Light Lifting Servos"
+    }
+  }
+}

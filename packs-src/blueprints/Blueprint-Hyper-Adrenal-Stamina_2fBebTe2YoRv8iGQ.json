@@ -1,0 +1,42 @@
+{
+  "_id": "2fBebTe2YoRv8iGQ",
+  "_key": "!items!2fBebTe2YoRv8iGQ",
+  "name": "Blueprint: Hyper-Adrenal Stamina",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "57dSrgDssXtG4x1L",
+  "sort": 39900000,
+  "system": {
+    "row": {
+      "id": "c1466507-315c-470f-bc3f-b85ae12ebaed",
+      "name": "Blueprint: Hyper-Adrenal Stamina",
+      "cost": 204,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Hyper-Adrenal Stamina (Generation 0, proven, encoded, catalog design). Required to build Hyper-Adrenal Stamina; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Hyper-Adrenal Stamina",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 300,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Medical & Pharmaceuticals|Hyper-Adrenal Stamina"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "RA8GFwI4twRaYu3x",
+  "_key": "!items!RA8GFwI4twRaYu3x",
+  "name": "Mute",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "iBhK8LHSekCOv5gO",
+  "sort": 14100000,
+  "system": {
+    "row": {
+      "name": "Mute",
+      "points": -25,
+      "level": null,
+      "description": "You cannot speak at all, whether from a missing or nonfunctional voice box, vocal trauma, or a species with no capacity for speech. You can still hear and understand spoken language normally, and can communicate through writing, standard sign language, or a vocoder/comm implant if you have one.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Mute|Physical"
+    }
+  }
+}

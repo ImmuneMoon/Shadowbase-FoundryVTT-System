@@ -1,0 +1,87 @@
+{
+  "_id": "rWScidOFYbBxqvh7",
+  "_key": "!items!rWScidOFYbBxqvh7",
+  "name": "Power Shot",
+  "type": "combatTechnique",
+  "img": "icons/svg/combat.svg",
+  "folder": "yCiHEt47QNFtLtyi",
+  "sort": 800000,
+  "system": {
+    "row": {
+      "name": "Power Shot",
+      "category": "Ranged",
+      "level": 1,
+      "cpCost": 10,
+      "epCost": 1,
+      "effect": "Single shot at -1 to skill; +1 damage. Counts as All-Out Attack (Determined); no active defenses possible.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Any Ranged Weapon skill",
+      "damageBonus": "+1",
+      "skillPenalty": 1,
+      "baselinePoints": 0
+    },
+    "source": "combatTechniques",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Power Shot",
+        "category": "Ranged",
+        "level": 1,
+        "cpCost": 10,
+        "epCost": 1,
+        "effect": "Single shot at -1 to skill; +1 damage. Counts as All-Out Attack (Determined); no active defenses possible.",
+        "characterTier": "Apprentice",
+        "baseSkill": "Any Ranged Weapon skill",
+        "damageBonus": "+1",
+        "skillPenalty": 1
+      },
+      {
+        "name": "Power Shot",
+        "category": "Ranged",
+        "level": 2,
+        "cpCost": 20,
+        "epCost": 2,
+        "effect": "Single shot at no penalty; +2 damage. Counts as All-Out Attack (Determined); no active defenses possible.",
+        "characterTier": "Adept",
+        "baseSkill": "Any Ranged Weapon skill",
+        "damageBonus": "+2"
+      },
+      {
+        "name": "Power Shot",
+        "category": "Ranged",
+        "level": 3,
+        "cpCost": 35,
+        "epCost": 3,
+        "effect": "Single shot at +1 to skill; +1d-1 damage. Counts as All-Out Attack (Determined); no active defenses possible.",
+        "characterTier": "Expert",
+        "baseSkill": "Any Ranged Weapon skill",
+        "damageBonus": "+1d-1",
+        "skillBonus": 1
+      },
+      {
+        "name": "Power Shot",
+        "category": "Ranged",
+        "level": 4,
+        "cpCost": 55,
+        "epCost": 4,
+        "effect": "Single shot at +2 to skill; +1d+1 damage. Counts as All-Out Attack (Determined); no active defenses possible.",
+        "characterTier": "Master",
+        "baseSkill": "Any Ranged Weapon skill",
+        "damageBonus": "+1d+1",
+        "skillBonus": 2
+      }
+    ],
+    "catalog": "combat-techniques"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "combat-techniques",
+      "key": "Ranged|Power Shot"
+    }
+  }
+}

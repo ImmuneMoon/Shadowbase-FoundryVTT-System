@@ -1,0 +1,42 @@
+{
+  "_id": "96ljO33CA6sHgLRq",
+  "_key": "!items!96ljO33CA6sHgLRq",
+  "name": "Wired Leg Backing",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "eBYAuy3r3NWeGfsN",
+  "sort": 8100000,
+  "system": {
+    "row": {
+      "id": "fab40f92-85da-4dc7-ba66-b597b9a5f4f7",
+      "name": "Wired Leg Backing",
+      "category": "Armor Backing",
+      "cost": 69,
+      "weight": 1.15,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "backing-wired-legs",
+      "materialId": null,
+      "notes": "The same layer with 0.15 lbs of Silicon run through it as a conductor, letting the Piece host powered Mods - active plating, sensors, comms. It carries current, it does not store it, so a powered Mod brings its own Power Cell. Fabricating one takes two rolls: Sewing for the layer, then Electronics Repair to run and seat the Silicon.",
+      "validSlots": [],
+      "drBonus": null,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "backing-wired-legs"
+    }
+  }
+}

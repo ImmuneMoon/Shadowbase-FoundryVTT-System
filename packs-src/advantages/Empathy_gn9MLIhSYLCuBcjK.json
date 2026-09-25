@@ -1,0 +1,33 @@
+{
+  "_id": "gn9MLIhSYLCuBcjK",
+  "_key": "!items!gn9MLIhSYLCuBcjK",
+  "name": "Empathy",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 5000000,
+  "system": {
+    "row": {
+      "name": "Empathy",
+      "points": 15,
+      "description": "You have an intuitive sense for the emotions, motivations, and sincerity of others. You can tell when someone is lying to you (though not why), and gain insight into a target's emotional state with a successful Per or Psychology roll. Some species' Empathy is limited to a specific mode of perception (e.g., scent) rather than general body language.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Empathy"
+    }
+  }
+}

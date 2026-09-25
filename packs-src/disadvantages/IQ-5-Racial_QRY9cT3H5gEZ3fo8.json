@@ -1,0 +1,34 @@
+{
+  "_id": "QRY9cT3H5gEZ3fo8",
+  "_key": "!items!QRY9cT3H5gEZ3fo8",
+  "name": "IQ -5 (Racial)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "XWDBqE5xIGYEuyLo",
+  "sort": 2100000,
+  "system": {
+    "row": {
+      "name": "IQ -5 (Racial)",
+      "points": 0,
+      "level": null,
+      "description": "Species-based mental acuity.",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "IQ -5 (Racial)|Racial"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "D6ebUMtGDvjb2IHl",
+  "_key": "!items!D6ebUMtGDvjb2IHl",
+  "name": "Mathematics",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "gAzYSLPjIJTF25Cz",
+  "sort": 8800000,
+  "system": {
+    "row": {
+      "name": "Mathematics",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Mathematics"
+    }
+  }
+}

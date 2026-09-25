@@ -1,0 +1,456 @@
+{
+  "_id": "6CeTAsDkfUOqE3g9",
+  "_key": "!items!6CeTAsDkfUOqE3g9",
+  "name": "Splitting Saberstaff",
+  "type": "lightsaber",
+  "img": "icons/svg/lightning.svg",
+  "folder": "ccqdIylak7skotbc",
+  "sort": 900000,
+  "system": {
+    "row": {
+      "name": "Splitting Saberstaff",
+      "description": "A modular staff that can decouple into two distinct weapons.",
+      "category": "Staff",
+      "isConstructed": true,
+      "isSplit": true,
+      "buildManifest": {
+        "emitter": {
+          "name": "Standard Emitter",
+          "material": "durasteel"
+        },
+        "switch": {
+          "name": "Standard Switch",
+          "material": "durasteel"
+        },
+        "sleeve": {
+          "name": "Standard Sleeve",
+          "material": "durasteel"
+        },
+        "coupler": {
+          "name": "Splitting Coupler",
+          "material": "durasteel"
+        },
+        "emitterTwo": {
+          "name": "Standard Emitter",
+          "material": "durasteel"
+        },
+        "switchTwo": {
+          "name": "Standard Switch",
+          "material": "durasteel"
+        },
+        "sleeveTwo": {
+          "name": "Standard Sleeve",
+          "material": "durasteel"
+        },
+        "powerCell": "Standard Diatium Cell",
+        "lens": "Standard Lens",
+        "matrix": "Standard Matrix",
+        "primaryCrystal": "yellow-kyber",
+        "primaryCrystalTwo": "yellow-kyber"
+      },
+      "emitter": {
+        "inventoryId": "5efc2f46-c5f2-4e74-928f-c543c29e6572",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "switch": {
+        "inventoryId": "896b9cc5-a3e1-4fdd-b693-ac3d9b40dc4d",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "sleeve": {
+        "inventoryId": "0babe185-a59a-45de-b27f-a814253ad3cc",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "pommel": {},
+      "bladeLength": 90,
+      "equipped": false,
+      "quantity": 1,
+      "condition": "Fine",
+      "conditionTwo": "Fine",
+      "totalCost": 12558,
+      "finalWeight": 4.94,
+      "classType": "Standard Jar'Kai-Saberstaff",
+      "durability": null,
+      "maxDurability": 0,
+      "durabilityTwo": null,
+      "maxDurabilityTwo": 0,
+      "energyRes": 0,
+      "energyResTwo": 0,
+      "id": "c264a680-e735-403e-9fd9-629cc7d8b056",
+      "coupler": {
+        "inventoryId": "f244a305-1701-4c87-99f6-124b67a4c736",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "couplerTwo": {
+        "inventoryId": "7d7f11ab-f538-45df-9fc3-4ee64af80bdd",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "emitterTwo": {
+        "inventoryId": "122793d3-4a78-43dc-a3f9-95e992bba6bf",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "switchTwo": {
+        "inventoryId": "86d80ef4-f39c-47a9-a0b1-334aff1fa656",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "sleeveTwo": {
+        "inventoryId": "49aee224-fb0f-4757-b51a-cf99912da89b",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "powerCell": "d61b0788-700b-4cab-893f-d721ca306b6e",
+      "lens": "cedc23d5-0dda-4442-b873-b42e9351423f",
+      "emitterMatrix": "ec267649-26d7-4d33-9c59-bfcce4073d57",
+      "primaryCrystal": "5b4e814c-2659-4d5d-a1f5-7d8d02dc44a0",
+      "primaryCrystalTwo": "d73556ef-ed77-49a9-8f6b-f8240eb60272"
+    },
+    "source": "lightsabers",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "name": "Splitting Saberstaff",
+        "description": "A modular staff that can decouple into two distinct weapons.",
+        "category": "Staff",
+        "isConstructed": true,
+        "isSplit": true,
+        "buildManifest": {
+          "emitter": {
+            "name": "Standard Emitter",
+            "material": "durasteel"
+          },
+          "switch": {
+            "name": "Standard Switch",
+            "material": "durasteel"
+          },
+          "sleeve": {
+            "name": "Standard Sleeve",
+            "material": "durasteel"
+          },
+          "coupler": {
+            "name": "Splitting Coupler",
+            "material": "durasteel"
+          },
+          "emitterTwo": {
+            "name": "Standard Emitter",
+            "material": "durasteel"
+          },
+          "switchTwo": {
+            "name": "Standard Switch",
+            "material": "durasteel"
+          },
+          "sleeveTwo": {
+            "name": "Standard Sleeve",
+            "material": "durasteel"
+          },
+          "powerCell": "Standard Diatium Cell",
+          "lens": "Standard Lens",
+          "matrix": "Standard Matrix",
+          "primaryCrystal": "yellow-kyber",
+          "primaryCrystalTwo": "yellow-kyber"
+        },
+        "emitter": {
+          "inventoryId": "5efc2f46-c5f2-4e74-928f-c543c29e6572",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "switch": {
+          "inventoryId": "896b9cc5-a3e1-4fdd-b693-ac3d9b40dc4d",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "sleeve": {
+          "inventoryId": "0babe185-a59a-45de-b27f-a814253ad3cc",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "pommel": {},
+        "bladeLength": 90,
+        "equipped": false,
+        "quantity": 1,
+        "condition": "Fine",
+        "conditionTwo": "Fine",
+        "totalCost": 12558,
+        "finalWeight": 4.94,
+        "classType": "Standard Jar'Kai-Saberstaff",
+        "durability": null,
+        "maxDurability": 0,
+        "durabilityTwo": null,
+        "maxDurabilityTwo": 0,
+        "energyRes": 0,
+        "energyResTwo": 0,
+        "id": "c264a680-e735-403e-9fd9-629cc7d8b056",
+        "coupler": {
+          "inventoryId": "f244a305-1701-4c87-99f6-124b67a4c736",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "couplerTwo": {
+          "inventoryId": "7d7f11ab-f538-45df-9fc3-4ee64af80bdd",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "emitterTwo": {
+          "inventoryId": "122793d3-4a78-43dc-a3f9-95e992bba6bf",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "switchTwo": {
+          "inventoryId": "86d80ef4-f39c-47a9-a0b1-334aff1fa656",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "sleeveTwo": {
+          "inventoryId": "49aee224-fb0f-4757-b51a-cf99912da89b",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "powerCell": "d61b0788-700b-4cab-893f-d721ca306b6e",
+        "lens": "cedc23d5-0dda-4442-b873-b42e9351423f",
+        "emitterMatrix": "ec267649-26d7-4d33-9c59-bfcce4073d57",
+        "primaryCrystal": "5b4e814c-2659-4d5d-a1f5-7d8d02dc44a0",
+        "primaryCrystalTwo": "d73556ef-ed77-49a9-8f6b-f8240eb60272"
+      },
+      "parts": [
+        {
+          "id": "5efc2f46-c5f2-4e74-928f-c543c29e6572",
+          "name": "Standard Emitter",
+          "category": "Emitter Part",
+          "cost": 6,
+          "weight": 0.245,
+          "effect": "Reach 1. Standard containment field.",
+          "volume": 0.0005,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "c264a680-e735-403e-9fd9-629cc7d8b056",
+          "quantity": 1
+        },
+        {
+          "id": "896b9cc5-a3e1-4fdd-b693-ac3d9b40dc4d",
+          "name": "Standard Switch",
+          "category": "Switch Part",
+          "cost": 2,
+          "weight": 0.098,
+          "effect": "Standard toggle activation.",
+          "volume": 0.0002,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "c264a680-e735-403e-9fd9-629cc7d8b056",
+          "quantity": 1
+        },
+        {
+          "id": "0babe185-a59a-45de-b27f-a814253ad3cc",
+          "name": "Standard Sleeve",
+          "category": "Sleeve Part",
+          "cost": 10,
+          "weight": 0.392,
+          "effect": "+1 Parry bonus. Accommodates 1 or 2 hands.",
+          "volume": 0.0008,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "c264a680-e735-403e-9fd9-629cc7d8b056",
+          "quantity": 1
+        },
+        {
+          "id": "f244a305-1701-4c87-99f6-124b67a4c736",
+          "name": "Splitting Coupler",
+          "category": "Coupler Part",
+          "cost": 18,
+          "weight": 0.735,
+          "effect": "Saberstaff joiner. Split into two as Ready maneuver.",
+          "volume": 0.0015,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "c264a680-e735-403e-9fd9-629cc7d8b056",
+          "quantity": 1
+        },
+        {
+          "id": "7d7f11ab-f538-45df-9fc3-4ee64af80bdd",
+          "name": "Splitting Coupler",
+          "category": "Coupler Part",
+          "cost": 18,
+          "weight": 0.735,
+          "effect": "Saberstaff joiner. Split into two as Ready maneuver.",
+          "volume": 0.0015,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "c264a680-e735-403e-9fd9-629cc7d8b056",
+          "quantity": 1
+        },
+        {
+          "id": "122793d3-4a78-43dc-a3f9-95e992bba6bf",
+          "name": "Standard Emitter",
+          "category": "Emitter Part",
+          "cost": 6,
+          "weight": 0.245,
+          "effect": "Reach 1. Standard containment field.",
+          "volume": 0.0005,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "c264a680-e735-403e-9fd9-629cc7d8b056",
+          "quantity": 1
+        },
+        {
+          "id": "86d80ef4-f39c-47a9-a0b1-334aff1fa656",
+          "name": "Standard Switch",
+          "category": "Switch Part",
+          "cost": 2,
+          "weight": 0.098,
+          "effect": "Standard toggle activation.",
+          "volume": 0.0002,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "c264a680-e735-403e-9fd9-629cc7d8b056",
+          "quantity": 1
+        },
+        {
+          "id": "49aee224-fb0f-4757-b51a-cf99912da89b",
+          "name": "Standard Sleeve",
+          "category": "Sleeve Part",
+          "cost": 10,
+          "weight": 0.392,
+          "effect": "+1 Parry bonus. Accommodates 1 or 2 hands.",
+          "volume": 0.0008,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "c264a680-e735-403e-9fd9-629cc7d8b056",
+          "quantity": 1
+        },
+        {
+          "id": "d61b0788-700b-4cab-893f-d721ca306b6e",
+          "name": "Standard Diatium Cell",
+          "cost": 135,
+          "weight": 0.5,
+          "hits": 3000,
+          "effect": "Standard 3,000 \"hits\" baseline.",
+          "category": "Lightsaber Power Cell",
+          "materials": [
+            {
+              "name": "Diatium",
+              "amount": 0.4
+            },
+            {
+              "name": "Silicon",
+              "amount": 0.1
+            }
+          ],
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "c264a680-e735-403e-9fd9-629cc7d8b056",
+          "quantity": 1
+        },
+        {
+          "id": "cedc23d5-0dda-4442-b873-b42e9351423f",
+          "name": "Standard Lens",
+          "cost": 8,
+          "weight": 0.1,
+          "category": "Lightsaber Lens",
+          "materials": [
+            {
+              "name": "Clari-crystalline",
+              "amount": 0.1
+            }
+          ],
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "c264a680-e735-403e-9fd9-629cc7d8b056",
+          "quantity": 1
+        },
+        {
+          "id": "ec267649-26d7-4d33-9c59-bfcce4073d57",
+          "name": "Standard Matrix",
+          "cost": 23,
+          "weight": 0.2,
+          "category": "Lightsaber Emitter Matrix",
+          "materials": [
+            {
+              "name": "Durasteel",
+              "amount": 0.1
+            },
+            {
+              "name": "Silicon",
+              "amount": 0.1
+            }
+          ],
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "c264a680-e735-403e-9fd9-629cc7d8b056",
+          "quantity": 1
+        },
+        {
+          "id": "5b4e814c-2659-4d5d-a1f5-7d8d02dc44a0",
+          "name": "Yellow Kyber",
+          "rarity": "Common",
+          "cost": 6000,
+          "weight": 0.2,
+          "baseDamageDice": 5,
+          "baseDamageAdds": 0,
+          "effect": "5d base energy. +1 to Force Points. Natural.",
+          "category": "Lightsaber Primary Crystal",
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "c264a680-e735-403e-9fd9-629cc7d8b056",
+          "quantity": 1
+        },
+        {
+          "id": "d73556ef-ed77-49a9-8f6b-f8240eb60272",
+          "name": "Yellow Kyber",
+          "rarity": "Common",
+          "cost": 6000,
+          "weight": 0.2,
+          "baseDamageDice": 5,
+          "baseDamageAdds": 0,
+          "effect": "5d base energy. +1 to Force Points. Natural.",
+          "category": "Lightsaber Primary Crystal",
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "c264a680-e735-403e-9fd9-629cc7d8b056",
+          "quantity": 1
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "lightsabers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsabers",
+      "key": "Splitting Saberstaff"
+    }
+  }
+}

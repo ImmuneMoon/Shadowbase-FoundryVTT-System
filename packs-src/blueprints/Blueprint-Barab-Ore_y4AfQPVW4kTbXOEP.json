@@ -1,0 +1,42 @@
+{
+  "_id": "y4AfQPVW4kTbXOEP",
+  "_key": "!items!y4AfQPVW4kTbXOEP",
+  "name": "Blueprint: Barab Ore",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 34200000,
+  "system": {
+    "row": {
+      "id": "3ec7272c-9e66-439f-ba44-10961acd3551",
+      "name": "Blueprint: Barab Ore",
+      "cost": 308,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Barab Ore (Generation 0, proven, encoded, catalog design). Required to build Barab Ore; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Barab Ore",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1333.3333333333335,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Barab Ore"
+    }
+  }
+}

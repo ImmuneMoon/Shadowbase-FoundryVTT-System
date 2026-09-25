@@ -1,0 +1,87 @@
+{
+  "_id": "7Mciq6AifIuBcSAD",
+  "_key": "!items!7Mciq6AifIuBcSAD",
+  "name": "Force Lightning",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "PlGZu46M1spj53xV",
+  "sort": 2000000,
+  "system": {
+    "row": {
+      "name": "Force Lightning",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 3,
+      "effect": "Project a single bolt at a target within 5 feet, inflicting 1d energy damage + Surge.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Innate Attack (Energy) (DX/Hard)",
+      "category": "Alter Powers",
+      "alignment": "DS",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Force Lightning",
+        "description": "The Force-user generates raw electrical energy from their fingertips, unleashing potent bolts of Force lightning upon their foes.",
+        "category": "Alter Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 3,
+        "alignment": "DS",
+        "baseSkill": "Innate Attack (Energy) (DX/Hard)",
+        "characterTier": "Apprentice",
+        "effect": "Project a single bolt at a target within 5 feet, inflicting 1d energy damage + Surge."
+      },
+      {
+        "name": "Force Lightning",
+        "description": "The Force-user generates raw electrical energy from their fingertips, unleashing potent bolts of Force lightning upon their foes.",
+        "category": "Alter Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 4,
+        "alignment": "DS",
+        "baseSkill": "Innate Attack (Energy) (DX/Hard)",
+        "characterTier": "Adept",
+        "effect": "Project a more potent bolt within 10 feet, inflicting 2d energy damage + Surge. Can be maintained as a continuous stream."
+      },
+      {
+        "name": "Force Lightning",
+        "description": "The Force-user generates raw electrical energy from their fingertips, unleashing potent bolts of Force lightning upon their foes.",
+        "category": "Alter Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 5,
+        "alignment": "DS",
+        "baseSkill": "Innate Attack (Energy) (DX/Hard)",
+        "characterTier": "Expert",
+        "effect": "Project a torrent within 20 feet, inflicting 3d energy damage + Surge. Can chain to hit up to 3 targets."
+      },
+      {
+        "name": "Force Lightning",
+        "description": "The Force-user generates raw electrical energy from their fingertips, unleashing potent bolts of Force lightning upon their foes.",
+        "category": "Alter Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 6,
+        "alignment": "DS",
+        "baseSkill": "Innate Attack (Energy) (DX/Hard)",
+        "characterTier": "Master",
+        "effect": "Unleash a devastating surge within 10 yards, inflicting 4d energy damage + Surge, or a 3-yard cone for 2d energy + Surge."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Force Lightning"
+    }
+  }
+}

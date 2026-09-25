@@ -1,0 +1,42 @@
+{
+  "_id": "HEbPHS7bND13CA74",
+  "_key": "!items!HEbPHS7bND13CA74",
+  "name": "Precision Feeding System",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "jSmzbLsgJWi447va",
+  "sort": 3200000,
+  "system": {
+    "row": {
+      "name": "Precision Feeding System",
+      "category": "Magazine/Feed System",
+      "cost": 250,
+      "weight": 1,
+      "notes": "Increases RoF by 1.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 1
+        }
+      ],
+      "id": "bcb9c73d-f801-44a8-9a52-4702d22f27d8",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Precision Feeding System"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "A3PXroo86RlOIx5P",
+  "_key": "!items!A3PXroo86RlOIx5P",
+  "name": "Gordian Precision System",
+  "type": "implant",
+  "img": "icons/svg/regen.svg",
+  "folder": "Xt5bv6RNBDGNU8uh",
+  "sort": 800000,
+  "system": {
+    "row": {
+      "id": "b9a4e606-25a5-4aa4-8bb0-d993d4f9e472",
+      "name": "Gordian Precision System",
+      "cost": 8820,
+      "finalCp": 24,
+      "effect": "Grants +1 DX and +1 to Brawling and all Melee Weapon specialties.",
+      "category": "Neural",
+      "pathways": [
+        "DX"
+      ],
+      "slotType": "Neural",
+      "installed": false,
+      "weight": 0.2,
+      "notes": "Trait Package: 24 CP of Advantages (all Melee Weapon specialties); Mandatory Flaws offset. Occupies DX pathway. Materials: Silicon: 0.2 lbs (10 cr)."
+    },
+    "source": "implants",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "implants"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "implants",
+      "key": "Neural|Gordian Precision System"
+    }
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "_id": "6f8YV49ihimPvvMA",
+  "_key": "!items!6f8YV49ihimPvvMA",
+  "name": "Cinnagaran Carbine",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "E4h2Xn4pTV0QLLdh",
+  "sort": 1800000,
+  "system": {
+    "row": {
+      "id": "5a495d80-37ad-4c29-97cb-9e11f1ea609f",
+      "customName": "Cinnagaran Carbine",
+      "baseType": "Cinnagaran Carbine",
+      "baseSkill": "Guns (Blaster Rifle)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 11.6,
+      "finalWeight": 11.6,
+      "baseCost": 840,
+      "finalCost": 5040,
+      "currentCharges": 100,
+      "maxCharges": 100,
+      "loadedAmmunitionId": "6de10d0a-3f91-495d-b1e4-80214bb8e36c",
+      "loadedAmmunitionData": {
+        "id": "6de10d0a-3f91-495d-b1e4-80214bb8e36c",
+        "name": "Rifle Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "A larger, more robust pack used for rifles and carbines. A gas top-up (30 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "carbine-stock",
+        "inventoryId": "7e0dccf6-c169-473d-a613-3587731163bf",
+        "materialId": "durasteel"
+      },
+      "receiverPart": {
+        "partId": "repeater-receiver",
+        "inventoryId": "75594365-921f-49a3-8adf-8c768dd41225",
+        "materialId": "durasteel"
+      },
+      "barrelPart": {
+        "partId": "long-emitter",
+        "inventoryId": "da5750f5-6e19-421f-ac05-c2b6b3aab62e",
+        "materialId": "durasteel"
+      },
+      "targetingPart": {
+        "partId": "artillery-targeting",
+        "inventoryId": "482382b9-ae1e-426d-ad9f-d4bb04f7ebe2"
+      },
+      "powerUnitPart": {
+        "partId": "rifle-pwr-pack",
+        "inventoryId": "5ea2e12a-4822-473a-992b-0369d3ab39e8"
+      },
+      "powerCellModId": "e5f89ce8-c74a-400d-bc00-17183879b181",
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "5a495d80-37ad-4c29-97cb-9e11f1ea609f",
+        "customName": "Cinnagaran Carbine",
+        "baseType": "Cinnagaran Carbine",
+        "baseSkill": "Guns (Blaster Rifle)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 11.6,
+        "finalWeight": 11.6,
+        "baseCost": 840,
+        "finalCost": 5040,
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "loadedAmmunitionId": "6de10d0a-3f91-495d-b1e4-80214bb8e36c",
+        "loadedAmmunitionData": {
+          "id": "6de10d0a-3f91-495d-b1e4-80214bb8e36c",
+          "name": "Rifle Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 100,
+          "maxCharges": 100,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "A larger, more robust pack used for rifles and carbines. A gas top-up (30 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "carbine-stock",
+          "inventoryId": "7e0dccf6-c169-473d-a613-3587731163bf",
+          "materialId": "durasteel"
+        },
+        "receiverPart": {
+          "partId": "repeater-receiver",
+          "inventoryId": "75594365-921f-49a3-8adf-8c768dd41225",
+          "materialId": "durasteel"
+        },
+        "barrelPart": {
+          "partId": "long-emitter",
+          "inventoryId": "da5750f5-6e19-421f-ac05-c2b6b3aab62e",
+          "materialId": "durasteel"
+        },
+        "targetingPart": {
+          "partId": "artillery-targeting",
+          "inventoryId": "482382b9-ae1e-426d-ad9f-d4bb04f7ebe2"
+        },
+        "powerUnitPart": {
+          "partId": "rifle-pwr-pack",
+          "inventoryId": "5ea2e12a-4822-473a-992b-0369d3ab39e8"
+        },
+        "powerCellModId": "e5f89ce8-c74a-400d-bc00-17183879b181",
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "7e0dccf6-c169-473d-a613-3587731163bf",
+          "name": "Carbine Stock",
+          "partId": "carbine-stock",
+          "category": "Ranged Grip",
+          "materialId": "durasteel",
+          "cost": 148,
+          "weight": 2.94,
+          "isInstalled": true,
+          "installedInBlasterId": "5a495d80-37ad-4c29-97cb-9e11f1ea609f",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Compact shoulder brace."
+        },
+        {
+          "id": "75594365-921f-49a3-8adf-8c768dd41225",
+          "name": "Repeater Receiver",
+          "partId": "repeater-receiver",
+          "category": "Ranged Receiver",
+          "materialId": "durasteel",
+          "cost": 98,
+          "weight": 1.96,
+          "isInstalled": true,
+          "installedInBlasterId": "5a495d80-37ad-4c29-97cb-9e11f1ea609f",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Automatic mechanisms. Also supports Heavy Power Pack."
+        },
+        {
+          "id": "da5750f5-6e19-421f-ac05-c2b6b3aab62e",
+          "name": "Long Emitter",
+          "partId": "long-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "durasteel",
+          "cost": 98,
+          "weight": 1.96,
+          "isInstalled": true,
+          "installedInBlasterId": "5a495d80-37ad-4c29-97cb-9e11f1ea609f",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "482382b9-ae1e-426d-ad9f-d4bb04f7ebe2",
+          "name": "Artillery Targeting Module",
+          "partId": "artillery-targeting",
+          "category": "Ranged Targeting",
+          "cost": 250,
+          "weight": 3,
+          "isInstalled": true,
+          "installedInBlasterId": "5a495d80-37ad-4c29-97cb-9e11f1ea609f",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Heavy vehicle-grade targeting arrays."
+        },
+        {
+          "id": "5ea2e12a-4822-473a-992b-0369d3ab39e8",
+          "name": "Rifle Power Pack",
+          "partId": "rifle-pwr-pack",
+          "category": "Power Unit",
+          "cost": 210,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInBlasterId": "5a495d80-37ad-4c29-97cb-9e11f1ea609f",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "e5f89ce8-c74a-400d-bc00-17183879b181",
+          "name": "Phased-Plasma Modulator",
+          "category": "Power Cell",
+          "cost": 36,
+          "weight": 0.7,
+          "isInstalled": true,
+          "installedInBlasterId": "5a495d80-37ad-4c29-97cb-9e11f1ea609f",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Grants the weapon's damage an Armor Divisor of (2)."
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Cinnagaran Carbine"
+    }
+  }
+}

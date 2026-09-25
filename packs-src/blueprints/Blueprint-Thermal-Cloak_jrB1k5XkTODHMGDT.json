@@ -1,0 +1,42 @@
+{
+  "_id": "jrB1k5XkTODHMGDT",
+  "_key": "!items!jrB1k5XkTODHMGDT",
+  "name": "Blueprint: Thermal Cloak",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "rp93cLA7jGuZj51F",
+  "sort": 13400000,
+  "system": {
+    "row": {
+      "id": "8412982b-2964-4c61-afee-c8e6ed4c2b33",
+      "name": "Blueprint: Thermal Cloak",
+      "cost": 201,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Thermal Cloak (Generation 0, proven, encoded, catalog design). Required to build Thermal Cloak; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Thermal Cloak",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 261,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Carry Frame|Thermal Cloak"
+    }
+  }
+}

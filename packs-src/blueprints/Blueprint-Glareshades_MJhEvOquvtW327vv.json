@@ -1,0 +1,42 @@
+{
+  "_id": "MJhEvOquvtW327vv",
+  "_key": "!items!MJhEvOquvtW327vv",
+  "name": "Blueprint: Glareshades",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 16000000,
+  "system": {
+    "row": {
+      "id": "b6b9f006-5259-456a-958f-8a4c1447dfee",
+      "name": "Blueprint: Glareshades",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Glareshades (Generation 0, proven, encoded, catalog design). Required to build Glareshades; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Glareshades",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 6.666666666666666,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Glareshades"
+    }
+  }
+}

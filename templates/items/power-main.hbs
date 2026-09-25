@@ -1,0 +1,105 @@
+{{!-- templates/items/power-main.hbs - a Force power / combat technique / lightsaber form (force-powers-section.tsx
+     :180-262, combat-techniques-section.tsx, lightsaber-forms-section.tsx): the level select (re-reads the catalog),
+     tier, alignment, base skill, CP / FP / EP, the roll and Apply Costs, the effect; a custom row's tier effects.
+     Context: main (power.mjs), editable, owned, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--power {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <div class="sb-item-grid">
+      {{#if main.isForm}}
+      <label class="sb-field sb-span-2"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Power.Form"}}</span>
+        <select class="sb-select" name="system.row.name" {{disabled (not editable)}}>{{#each main.forms}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{/if}}
+      <label class="sb-field"><span class="sb-field__label">{{#if main.isTechnique}}{{localize "SHADOWBASE.Item.Power.Tier"}}{{else}}{{localize "SHADOWBASE.Item.Power.Level"}}{{/if}}</span>
+        <select class="sb-select" name="level" {{disabled (not editable)}}>{{#each main.levels}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{#if main.isPower}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Power.AlignmentLabel"}}</span>
+        <select class="sb-select" name="system.row.alignment" {{disabled (not editable)}}>{{#each main.alignments}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{/if}}
+      {{#if main.isTechnique}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Power.Category"}}</span>
+        <select class="sb-select" name="system.row.category" {{disabled (not editable)}}>{{#each main.categories}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{else}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Power.Category"}}</span>
+        <input type="text" class="sb-input" name="system.row.category" value="{{main.category}}" {{disabled (not editable)}}>
+      </label>
+      {{/if}}
+      <label class="sb-field sb-span-2"><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Abilities.BaseSkill"}}</span>
+        <input type="text" class="sb-input" name="system.row.baseSkill" value="{{main.baseSkill}}" {{disabled (not editable)}}>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Abilities.CpCost"}}</span>
+        <input type="number" class="sb-input" name="system.row.cpCost" value="{{main.cpCost}}" data-dtype="Number" step="1" {{disabled (not editable)}}>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Trait.BaselinePoints"}}</span>
+        <input type="number" class="sb-input" name="system.row.baselinePoints" value="{{main.baselinePoints}}" data-dtype="Number" step="1" {{disabled (not editable)}}>
+      </label>
+      <div class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Abilities.PointsCalculated"}}</span><output class="sb-input sb-input--calc">{{main.effective}}</output></div>
+      {{#unless main.isForm}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Power.FpCost"}}</span>
+        <input type="number" class="sb-input" name="system.row.fpCost" value="{{main.fpCost}}" data-dtype="Number" step="1" {{disabled (not editable)}}>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Power.EpCost"}}</span>
+        <input type="number" class="sb-input" name="system.row.epCost" value="{{main.epCost}}" data-dtype="Number" step="1" {{disabled (not editable)}}>
+      </label>
+      {{/unless}}
+      {{#if main.isTechnique}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Power.DamageBonus"}}</span>
+        <input type="text" class="sb-input" name="system.row.damageBonus" value="{{main.damageBonus}}" {{disabled (not editable)}}>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Power.SkillBonus"}}</span>
+        <input type="number" class="sb-input" name="system.row.skillBonus" value="{{main.skillBonus}}" data-dtype="Number" step="1" {{disabled (not editable)}}>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Power.SkillPenalty"}}</span>
+        <input type="number" class="sb-input" name="system.row.skillPenalty" value="{{main.skillPenalty}}" data-dtype="Number" step="1" {{disabled (not editable)}}>
+      </label>
+      {{#unless main.isUnarmed}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Power.Weapon"}}</span>
+        <select class="sb-select" name="sel.selectedWeaponId" {{disabled (not editable)}}>{{#each main.weapons}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{/unless}}
+      {{/if}}
+    </div>
+    <div class="sb-hrow sb-hrow--tight sb-item__badges">
+      {{#if main.tier}}<span class="sb-badge sb-badge-secondary">{{main.tier}}</span>{{/if}}
+      {{#if main.inCatalog}}<span class="sb-badge sb-badge-outline sb-badge-accent">{{localize "SHADOWBASE.Item.Trait.InLibrary"}}</span>{{else}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Item.Trait.Custom"}}</span>{{/if}}
+      {{#if main.isPower}}{{#if main.adjustedFp}}<span class="sb-badge sb-badge-outline" title="{{localize "SHADOWBASE.Item.Power.AdjustedHint"}}">{{localize "SHADOWBASE.Item.Power.Adjusted" fp=main.adjustedFp ep=main.adjustedEp}}</span>{{/if}}{{/if}}
+      {{#if main.requirements}}<span class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Sheet.Abilities.Requires"}}: {{main.requirements}}</span>{{/if}}
+    </div>
+  </div>
+  <div class="sb-item-section sb-item-section--actions">
+    {{#if main.isPower}}
+      <span class="sb-text-xs">{{localize "SHADOWBASE.Item.Power.Target"}}: <b class="sb-mono">{{#if main.target}}{{main.target}}{{else}}—{{/if}}</b>{{#if main.targetSkill}} <span class="sb-text-muted">({{main.targetSkill}}{{#if main.describe}} · {{main.describe}}{{/if}})</span>{{/if}}</span>
+      <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="roll-power" {{disabled (not main.target)}}><i class="{{sbIcon 'roll'}}"></i> {{localize "SHADOWBASE.Item.Power.Roll"}}</button>
+      <button type="button" class="sb-btn sb-btn-outline sb-btn-sm sb-accent" data-action="apply-power-costs" {{disabled (not owned)}} title="{{localize "SHADOWBASE.Sheet.Abilities.ApplyCosts" fp=main.adjustedFp ep=main.adjustedEp}}"><i class="fa-solid fa-bolt"></i> {{localize "SHADOWBASE.Item.Power.ApplyCosts"}}</button>
+      {{#if main.gate}}<p class="sb-notice sb-notice--warn">{{main.gate}}</p>{{/if}}
+    {{/if}}
+    {{#if main.isTechnique}}
+      <span class="sb-text-xs">{{localize "SHADOWBASE.Item.Power.Target"}}: <b class="sb-mono">{{#if main.target}}{{main.target}}{{else}}—{{/if}}</b>{{#if main.targetSkill}} <span class="sb-text-muted">({{main.targetSkill}})</span>{{/if}}</span>
+      <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="roll-technique" {{disabled (not main.target)}}><i class="{{sbIcon 'roll'}}"></i> {{localize "SHADOWBASE.Item.Power.Roll"}}</button>
+      <button type="button" class="sb-btn sb-btn-outline sb-btn-sm sb-accent" data-action="apply-technique-costs" {{disabled (not owned)}}><i class="fa-solid fa-bolt"></i> {{localize "SHADOWBASE.Item.Power.ApplyCosts"}}</button>
+    {{/if}}
+    {{#if main.isForm}}
+      <button type="button" class="sb-btn sb-btn-sm {{#if main.isActive}}sb-btn-default{{else}}sb-btn-outline{{/if}}" data-action="toggle-active-form" {{disabled (not owned)}}><i class="fa-regular fa-circle-dot"></i> {{#if main.isActive}}{{localize "SHADOWBASE.Item.Power.FormActive"}}{{else}}{{localize "SHADOWBASE.Item.Power.ActivateForm"}}{{/if}}</button>
+      {{#if main.applies.length}}<span class="sb-hrow sb-hrow--tight">{{#each main.applies}}<span class="sb-badge sb-badge-outline sb-badge--effect sb-badge--pos">{{this.value}} {{this.label}}</span>{{/each}}</span>{{/if}}
+      {{#if main.conditional.length}}<p class="sb-text-muted sb-text-xs">{{#each main.conditional}}<span class="sb-tag">{{this}}</span>{{/each}}</p>{{/if}}
+      {{#if main.gate}}<p class="sb-notice sb-notice--warn">{{main.gate}}</p>{{/if}}
+    {{/if}}
+  </div>
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Sheet.Abilities.Effect"}}</h4>
+    {{#if main.isCustom}}
+      {{#each main.tierEffects}}
+      <label class="sb-field"><span class="sb-field__label">{{this.name}} ({{this.level}})</span>
+        <textarea class="sb-textarea" name="tier.{{this.level}}" rows="2" {{disabled (not @root.editable)}}>{{this.effect}}</textarea>
+      </label>
+      {{/each}}
+      <label class="sb-check-row sb-check-row--tiny"><input type="checkbox" name="system.row.confirmed" {{checked main.confirmed}} {{disabled (not editable)}}> {{localize "SHADOWBASE.Item.Power.Confirmed"}}</label>
+    {{else}}
+      <textarea class="sb-textarea" name="system.row.effect" rows="3" {{disabled (not editable)}}>{{main.effect}}</textarea>
+    {{/if}}
+    {{#if main.description}}<p class="sb-dossier">{{main.description}}</p>{{/if}}
+  </div>
+</section>

@@ -1,0 +1,42 @@
+{
+  "_id": "C9Kj4ecB62LATncJ",
+  "_key": "!items!C9Kj4ecB62LATncJ",
+  "name": "Blueprint: Wookiee Ceremonial Blade",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 43900000,
+  "system": {
+    "row": {
+      "id": "b36a11fc-ffca-447d-8ef3-1b173ce55675",
+      "name": "Blueprint: Wookiee Ceremonial Blade",
+      "cost": 399,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Wookiee Ceremonial Blade (Generation 0, proven, encoded, catalog design). Required to build Wookiee Ceremonial Blade; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Wookiee Ceremonial Blade",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 2250,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Wookiee Ceremonial Blade"
+    }
+  }
+}

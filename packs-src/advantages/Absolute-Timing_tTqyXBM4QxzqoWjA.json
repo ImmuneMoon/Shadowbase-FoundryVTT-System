@@ -1,0 +1,33 @@
+{
+  "_id": "tTqyXBM4QxzqoWjA",
+  "_key": "!items!tTqyXBM4QxzqoWjA",
+  "name": "Absolute Timing",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 500000,
+  "system": {
+    "row": {
+      "name": "Absolute Timing",
+      "points": 2,
+      "description": "You always know the precise time without needing a clock. Valuable for coordinating precise ambushes, meeting illicit contacts, or maintaining tight schedules under pressure.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Absolute Timing"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "dvZJUFvptwaelp1a",
+  "_key": "!items!dvZJUFvptwaelp1a",
+  "name": "Blueprint: Bipedal Hand (GE3)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "6LwEPFQhc8M6lMfR",
+  "sort": 20500000,
+  "system": {
+    "row": {
+      "id": "d7339d95-227b-485e-bf73-c88d31cad685",
+      "name": "Blueprint: Bipedal Hand (GE3)",
+      "cost": 205,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Bipedal Hand (GE3) (Generation 0, proven, encoded, catalog design). Required to build Bipedal Hand (GE3); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Bipedal Hand (GE3)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 309,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Actuator|Bipedal Hand (GE3)"
+    }
+  }
+}

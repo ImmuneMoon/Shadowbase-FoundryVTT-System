@@ -1,0 +1,45 @@
+{
+  "_id": "fTHSXtjPv4NAjaga",
+  "_key": "!items!fTHSXtjPv4NAjaga",
+  "name": "Ultima-Pearl",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "CHP7xje9NHnZhKqb",
+  "sort": 9200000,
+  "system": {
+    "row": {
+      "id": "99546c1e-893b-4166-8d15-02b67e4195f7",
+      "name": "Ultima-Pearl",
+      "cost": 6000,
+      "weight": 0.2,
+      "damageAdds": 2,
+      "effect": "+3 to hit, +2 damage, +1d damage on crit, -2 to Lightsaber Construction to install.",
+      "category": "Lightsaber Power Crystal",
+      "materials": [
+        {
+          "name": "Beskar",
+          "amount": 0.2
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "+3 to hit, +2 damage, +1d damage on crit, -2 to Lightsaber Construction to install."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:ultima-pearl"
+    }
+  }
+}

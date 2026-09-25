@@ -1,0 +1,33 @@
+{
+  "_id": "oXxcOEjsZ7L0babn",
+  "_key": "!items!oXxcOEjsZ7L0babn",
+  "name": "Sealed",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "GS8kUCPWatq78XxI",
+  "sort": 14200000,
+  "system": {
+    "row": {
+      "name": "Sealed",
+      "points": 15,
+      "description": "Your body is a closed system, allowing you to survive in a vacuum or underwater without a suit. Standard for many droids or characters with extensive cybernetic conversion.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Sealed"
+    }
+  }
+}

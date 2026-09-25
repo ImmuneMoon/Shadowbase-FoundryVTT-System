@@ -1,0 +1,39 @@
+{
+  "_id": "nSnC2fiQdpJoCzFF",
+  "_key": "!items!nSnC2fiQdpJoCzFF",
+  "name": "Cognitive",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "VjgnV56H65xMb5QI",
+  "sort": 2200000,
+  "system": {
+    "row": {
+      "id": "3080e126-26cf-474b-bcad-3276a6d755bb",
+      "name": "Cognitive",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Processor",
+      "cost": 6960,
+      "weight": 0.8,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "cognitive",
+      "description": "IQ 11 [20], Reprogrammable [-10], Eidetic Memory [5], Language Talent [10]"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "cognitive"
+    }
+  }
+}

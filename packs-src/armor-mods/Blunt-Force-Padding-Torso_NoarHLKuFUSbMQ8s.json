@@ -1,0 +1,41 @@
+{
+  "_id": "NoarHLKuFUSbMQ8s",
+  "_key": "!items!NoarHLKuFUSbMQ8s",
+  "name": "Blunt Force Padding (Torso)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "g3ttGbCetYWw12Jx",
+  "sort": 1000000,
+  "system": {
+    "row": {
+      "id": "47622b17-6b14-4f49-b111-b25706023fc2",
+      "name": "Blunt Force Padding (Torso)",
+      "category": "Underlay Mod",
+      "cost": 1000,
+      "weight": 1,
+      "notes": "+5 to Torso DR vs blunt damage",
+      "equipped": false,
+      "quantity": 1,
+      "validSlots": [
+        "Torso",
+        "Droid Torso"
+      ],
+      "drBonus": 5
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "key": "Blunt Force Padding (Torso)"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "v3EgRhiews1a975s",
+  "_key": "!items!v3EgRhiews1a975s",
+  "name": "Synth-Silk",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "b9NTRG23teMlPT2K",
+  "sort": 12000000,
+  "system": {
+    "row": {
+      "name": "Synth-Silk",
+      "rarity": "Uncommon",
+      "cost": 50,
+      "density": 25,
+      "category": "Raw Materials",
+      "subCategory": "Clothing",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A high-quality, comfortable artificial fabric.",
+      "id": "8dca4fb1-859f-4a9a-86de-6dd2f590de55",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Synth-Silk"
+    }
+  }
+}

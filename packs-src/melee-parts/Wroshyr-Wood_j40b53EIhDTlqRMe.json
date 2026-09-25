@@ -1,0 +1,42 @@
+{
+  "_id": "j40b53EIhDTlqRMe",
+  "_key": "!items!j40b53EIhDTlqRMe",
+  "name": "Wroshyr Wood",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "VqX65UQVOs2JpxDL",
+  "sort": 3700000,
+  "system": {
+    "row": {
+      "name": "Wroshyr Wood",
+      "rarity": "Uncommon",
+      "cost": 40,
+      "density": 375,
+      "category": "Raw Materials",
+      "subCategory": "Wood",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A heavy and durable wood native to Kashyyyk. Weapons or items crafted from it should have their weight increased by at least 50%, requiring a higher Minimum ST to wield effectively.",
+      "id": "d253060e-adf4-45c1-9bbb-84d31e641d21",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "material:Wroshyr Wood"
+    }
+  }
+}

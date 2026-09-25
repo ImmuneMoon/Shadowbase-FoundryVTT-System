@@ -1,0 +1,33 @@
+{
+  "_id": "hNtrlHCLwmGA5hc2",
+  "_key": "!items!hNtrlHCLwmGA5hc2",
+  "name": "Underworld Savvy",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "3vDRi4uDBtDelTd8",
+  "sort": 17000000,
+  "system": {
+    "row": {
+      "name": "Underworld Savvy",
+      "points": 15,
+      "description": "Characters from the galaxy's shadowy underbelly possess practical street knowledge, illicit contacts, and a knack for navigating dangerous situations. Benefits: Contacts (Criminal or Smuggler, 3 points) (representing connections in the underworld, subject to GM approval for specific contacts). +1 to Streetwise (IQ/Average) and Scrounging (IQ/Easy) skills. (These bonuses apply after buying skill levels.) Intuition (5 points) (representing a gut feeling for trouble or opportunity). These are the tools of survival and opportunism in a ruthless galaxy. Such individuals excel at operating outside the law, exploiting loopholes, and prioritizing personal gain or the survival of their immediate crew over abstract ideals.",
+      "category": "Social/Wealth",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Underworld Savvy"
+    }
+  }
+}

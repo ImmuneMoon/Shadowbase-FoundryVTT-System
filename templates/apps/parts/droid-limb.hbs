@@ -1,0 +1,28 @@
+{{!-- One arm / strut card (droid-workshop.tsx:839-947): side select, model select, then the sub-slots the model opens.
+     Context: a limb object from DroidWorkshop#_prepareContext (kind, index, title, side{name,options}, component,
+     hasDef, manipulator|null, motiveMount|null, actuator|null, wiring|null) plus `editable`. --}}
+<div class="sb-card sb-droid__limb">
+  <div class="sb-droid__limb-head">
+    <span class="sb-badge sb-badge-outline sb-caps sb-text-10">{{title}}</span>
+    <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-btn-xs is-destructive" data-action="remove-limb" data-kind="{{kind}}" data-index="{{index}}" title="{{localize 'SHADOWBASE.Apps.Droid.RemoveLimb'}}" {{disabled (not editable)}}><i class="fa-solid fa-trash-can"></i></button>
+  </div>
+  <div class="sb-card__content sb-droid__limb-body">
+    <div class="sb-grid-2">
+      <div class="sb-field" data-sheet-row>
+        <label class="sb-field__label" for="{{side.name}}">{{localize "SHADOWBASE.Apps.Droid.Side.Label"}}</label>
+        <select class="sb-select" id="{{side.name}}" name="{{side.name}}" {{disabled (not editable)}}>{{#each side.options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+      </div>
+      {{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" component editable=editable}}
+    </div>
+    {{#if hasDef}}
+    <div class="sb-droid__chain">
+      {{#if manipulator}}{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" manipulator editable=editable}}{{/if}}
+      {{#if motiveMount}}{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" motiveMount editable=editable}}{{/if}}
+      <div class="sb-grid-2">
+        {{#if actuator}}{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" actuator editable=editable}}{{/if}}
+        {{#if wiring}}{{> "systems/shadowbase/templates/apps/parts/droid-select.hbs" wiring editable=editable}}{{/if}}
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</div>

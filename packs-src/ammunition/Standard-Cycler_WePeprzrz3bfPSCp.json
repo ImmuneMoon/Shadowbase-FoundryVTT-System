@@ -1,0 +1,60 @@
+{
+  "_id": "WePeprzrz3bfPSCp",
+  "_key": "!items!WePeprzrz3bfPSCp",
+  "name": "Standard Cycler",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "62SxWxECrgqvwXoo",
+  "sort": 1700000,
+  "system": {
+    "row": {
+      "name": "Standard Cycler",
+      "craftingCategory": "Ammunition",
+      "projectileClass": "standard",
+      "caliber": "Cycler",
+      "type": "Rounds",
+      "containerType": "Rounds",
+      "maxCharges": 1,
+      "cost": 20,
+      "weight": 0.5,
+      "formula": "3d",
+      "damageTypeOverride": "pi++",
+      "notes": "Armor Divisor (2) vs energy shields.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.32
+        },
+        {
+          "name": "Gunpowder",
+          "amount": 0.18
+        }
+      ],
+      "id": "d325dda4-7f6d-4330-99d9-d1350bf5b7c3",
+      "quantity": 1,
+      "currentCharges": 1,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 20,
+      "baseWeight": 0.5,
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Standard Cycler"
+    }
+  }
+}

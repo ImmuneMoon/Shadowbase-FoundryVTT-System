@@ -1,0 +1,34 @@
+{
+  "_id": "YCnG5NYlw1iVrOEL",
+  "_key": "!items!YCnG5NYlw1iVrOEL",
+  "name": "Computer Operation",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "Dql9Lb6aKuSPlhaq",
+  "sort": 2700000,
+  "system": {
+    "row": {
+      "name": "Computer Operation",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Easy",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Computer Operation"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+/* styles/sheet-tabs.css - the actor sheet's Body / Abilities / Inventory / Vehicles tab CONTENT (unit U06).
+   Scoped under .shadowbase, classes sb-*, tokens from styles/variables.css by the website's names (HSL triplets read
+   through hsl(); the literal Tailwind palette colours the website uses beside the tokens come from
+   variables.css as --sb-green-400 / --sb-red-400 / --sb-blue-400 / --sb-amber-400, docs/STYLE-SPEC.md §1.4).
+   The section anatomy (.sb-section / __summary / __title / __after / __body, .sb-section--sub), the buttons, badges,
+   inputs, empty states, stat tiles and the tab STRIP are components.css recipes (U05); this file styles only what is
+   particular to the four tab panels: the row lists, the wallet card, the hit-location / encumbrance / ship-system
+   tables, the storage boxes, the vessel cards, the crew-action list. Layout is flex/grid so a narrow window wraps
+   instead of overflowing; every table scrolls inside its own .sb-table-wrap. */
+
+.shadowbase .sb-tab-panel { display: none; }
+.shadowbase .sb-tab-panel.active { display: flex; flex-direction: column; gap: 0.75rem; }
+.shadowbase .sb-tab-panel .sb-section__body > * + * { margin-top: 0.75rem; }
+
+/* ---- row lists (the website's per-item cards, compacted to one line + an optional detail line) ---- */
+.shadowbase .sb-rows, .shadowbase .sb-cards, .shadowbase .sb-storage-boxes, .shadowbase .sb-gear-sets, .shadowbase .sb-crew-actions, .shadowbase .sb-armaments { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.35rem; }
+.shadowbase .sb-row { border: 1px solid hsl(var(--border) / 0.7); border-radius: var(--radius); background: rgb(0 0 0 / 0.1); padding: 0.35rem 0.5rem; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); }
+.shadowbase .sb-row.is-readied, .shadowbase .sb-row.is-equipped, .shadowbase .sb-row.is-active, .shadowbase .sb-row.is-installed { border-color: hsl(var(--accent) / 0.5); background: hsl(var(--accent) / 0.06); }
+.shadowbase .sb-row.is-unready { border-color: hsl(var(--destructive) / 0.6); }
+.shadowbase .sb-row__main { display: flex; align-items: center; flex-wrap: wrap; gap: 0.35rem 0.5rem; }
+.shadowbase .sb-row__sub { margin: 0.25rem 0 0; font-size: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; align-items: center; }
+.shadowbase .sb-row__spacer, .shadowbase .sb-toolbar__spacer { flex: 1 1 auto; }
+.shadowbase .sb-row__icon { width: 1.35rem; height: 1.35rem; border: none; border-radius: 3px; flex: 0 0 auto; opacity: 0.85; }
+.shadowbase .sb-row__name { flex: 1 1 10rem; min-width: 8rem; font-weight: 700; font-family: var(--font-headline); }
+.shadowbase .sb-row__name--static { display: inline-block; padding: 0.15rem 0; }
+.shadowbase .sb-row__details { font-size: 0.78rem; margin-top: 0.3rem; }
+.shadowbase .sb-row__details > summary { cursor: pointer; list-style: none; color: hsl(var(--muted-foreground)); font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; }
+.shadowbase .sb-row__details > summary::-webkit-details-marker { display: none; }
+.shadowbase .sb-row-tools { display: inline-flex; align-items: center; gap: 0.15rem; margin-left: auto; }
+.shadowbase .sb-dossier { margin: 0.35rem 0 0; padding: 0.4rem 0.5rem; border: 1px solid hsl(var(--border) / 0.5); border-radius: var(--radius); background: hsl(var(--muted) / 0.2); font-size: 0.78rem; line-height: 1.4; box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.2); }
+.shadowbase .sb-pre { white-space: pre-line; }
+.shadowbase .sb-calc { display: inline-block; min-width: 2.4rem; height: 1.8rem; line-height: 1.6rem; padding: 0 0.4rem; text-align: center; font-weight: 700; color: hsl(var(--primary)); font-variant-numeric: tabular-nums; }
+.shadowbase .sb-inline { display: inline-flex; align-items: center; gap: 0.25rem; }
+.shadowbase .sb-check input { margin: 0; }
+.shadowbase .sb-muted { color: hsl(var(--muted-foreground)); font-size: 0.78rem; }
+.shadowbase .sb-mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-variant-numeric: tabular-nums; }
+.shadowbase .sb-accent { color: hsl(var(--accent)); }
+.shadowbase .sb-danger { color: hsl(var(--destructive)); }
+.shadowbase .sb-actions, .shadowbase .sb-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; }
+.shadowbase .sb-toolbar--status { padding: 0.4rem 0.6rem; height: 3rem; border: 1px solid hsl(var(--border)); border-radius: var(--radius); background: hsl(var(--muted) / 0.1); }
+.shadowbase .sb-notice { margin: 0; padding: 0.4rem 0.6rem; border-radius: var(--radius); font-size: 0.78rem; border: 1px solid hsl(var(--border)); }
+.shadowbase .sb-notice--warn { color: var(--sb-amber-400); border-color: rgb(245 158 11 / 0.5); background: rgb(245 158 11 / 0.08); }
+.shadowbase .sb-notice--error { color: hsl(var(--destructive)); border-color: hsl(var(--destructive) / 0.5); background: hsl(var(--destructive) / 0.08); }
+
+/* dense controls inside rows (the recipes are components.css; these only size them - the website pins h-8 on dense rows) */
+.shadowbase .sb-row input[type="text"], .shadowbase .sb-row input[type="number"], .shadowbase .sb-row select, .shadowbase .sb-row output, .shadowbase .sb-card input, .shadowbase .sb-card select { height: 1.8rem; font-size: 0.8rem; padding-top: 0; padding-bottom: 0; }
+.shadowbase .sb-input--tiny { width: 3.6rem; text-align: center; }
+.shadowbase .sb-input--sm { width: 5.5rem; }
+.shadowbase .sb-select--tiny { width: 4.4rem; }
+.shadowbase .sb-select--sm { width: auto; max-width: 12rem; }
+.shadowbase .sb-textarea { width: 100%; min-height: 2.4rem; font-size: 0.78rem; resize: vertical; }
+
+/* ---- generic tags (a small inline pill for names in a cell: worn armour, held weapons, hardware, coverage) ---- */
+.shadowbase .sb-tag { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.1rem 0.4rem; border-radius: 9999px; font-size: 10px; border: 1px solid hsl(var(--border)); background: hsl(var(--muted) / 0.3); white-space: nowrap; }
+.shadowbase .sb-tag--muted { opacity: 0.7; }
+.shadowbase .sb-tag--accent { border-color: hsl(var(--accent) / 0.5); color: hsl(var(--accent)); background: hsl(var(--accent) / 0.08); }
+.shadowbase .sb-tag--pinned { border-style: dashed; }
+.shadowbase .sb-tag--stat small { text-transform: uppercase; letter-spacing: 0.05em; color: hsl(var(--muted-foreground)); font-size: 9px; }
+.shadowbase .sb-badge-accent { border-color: hsl(var(--accent) / 0.5); color: hsl(var(--accent)); }
+.shadowbase .sb-align-LS { color: var(--sb-blue-400); } .shadowbase .sb-align-DS { color: var(--sb-red-400); } .shadowbase .sb-align-Grey { color: hsl(var(--muted-foreground)); }
+.shadowbase .sb-cell-list { display: flex; flex-wrap: wrap; gap: 0.2rem; }
+
+/* ---- tables (the website's table.tsx recipe is .sb-table in components.css; the tab tables are denser) ---- */
+.shadowbase .sb-tab-panel .sb-table th, .shadowbase .sb-tab-panel .sb-table td { padding: 0.3rem 0.45rem; height: auto; }
+.shadowbase .sb-tab-panel .sb-table thead th { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; background: hsl(var(--muted) / 0.1); }
+.shadowbase .sb-table .sb-num { text-align: center; }
+.shadowbase .sb-table tr.is-current { background: hsl(var(--accent) / 0.2); }
+.shadowbase .sb-hit-location.is-amputated { opacity: 0.55; filter: grayscale(0.6); }
+.shadowbase .sb-hit-location.is-crippled td:first-child { color: hsl(var(--destructive)); }
+.shadowbase .sb-hit-location__name { font-weight: 600; }
+.shadowbase .sb-ship-system.is-ok select { color: var(--sb-green-400); border-color: rgb(74 222 128 / 0.5); }
+.shadowbase .sb-ship-system.is-warn select { color: var(--sb-amber-400); border-color: rgb(251 191 36 / 0.5); }
+.shadowbase .sb-ship-system.is-bad select { color: var(--sb-red-500); border-color: rgb(239 68 68 / 0.5); }
+
+/* ---- stat tiles, field grids (the tile recipe is components.css; the dossier is a 2 / 4 grid) ---- */
+.shadowbase .sb-stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr)); gap: 0.5rem; }
+.shadowbase .sb-stat-grid--5 { grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr)); }
+.shadowbase .sb-field-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 0.4rem 0.75rem; align-items: end; }
+.shadowbase .sb-field-grid--vehicle { grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr)); }
+.shadowbase .sb-field--wide { grid-column: span 2; }
+
+/* ---- the wallet card (character-inventory.tsx 129-235: Carry Weight | Credit Chip Total / Physical Credit Total) ---- */
+.shadowbase .sb-wallet { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 3rem; padding: 1.25rem; }
+.shadowbase .sb-wallet__weight { display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border-right: 1px solid hsl(var(--border) / 0.3); padding-right: 2rem; }
+.shadowbase .sb-wallet__weight p { display: flex; justify-content: space-between; align-items: baseline; margin: 0; font-size: 0.9rem; font-weight: 500; color: hsl(var(--foreground) / 0.9); }
+.shadowbase .sb-wallet__weight strong { font-size: 0.9rem; }
+.shadowbase .sb-wallet__weight small { font-size: 0.75rem; font-weight: 400; color: hsl(var(--muted-foreground)); }
+.shadowbase .sb-wallet__credits { display: flex; flex-direction: column; justify-content: center; gap: 1rem; }
+.shadowbase .sb-wallet__line { display: grid; grid-template-columns: auto 2rem 1fr; align-items: center; gap: 0.5rem; }
+.shadowbase .sb-wallet__line > .sb-caps { font-size: 9px; letter-spacing: 0.1em; }
+.shadowbase .sb-wallet__toggle { width: 2rem; height: 2rem; border-radius: 9999px; border: 1px solid hsl(var(--border) / 0.5); background: hsl(var(--muted) / 0.1); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: inset 0 2px 4px rgb(0 0 0 / 0.06); transition: all 0.15s; }
+.shadowbase .sb-wallet__toggle.is-on.is-digital { border-color: var(--sb-blue-500); background: rgb(59 130 246 / 0.2); box-shadow: 0 0 10px rgb(59 130 246 / 0.3); }
+.shadowbase .sb-wallet__toggle.is-on.is-physical { border-color: var(--sb-amber-500); background: rgb(245 158 11 / 0.2); box-shadow: 0 0 10px rgb(245 158 11 / 0.3); }
+.shadowbase .sb-wallet__figure { display: block; height: 2rem; line-height: 2rem; text-align: center; border-radius: var(--radius); background: hsl(var(--muted) / 0.2); font-size: 1rem; font-weight: 700; }
+@media (max-width: 640px) { .shadowbase .sb-wallet { grid-template-columns: 1fr; } .shadowbase .sb-wallet__weight { border-right: none; padding-right: 0; } }
+
+/* ---- storage boxes, gear sets, vessels, crew ---- */
+.shadowbase .sb-storage-box { border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 0.4rem 0.5rem; background: hsl(var(--background) / 0.3); }
+.shadowbase .sb-storage-box__head { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.shadowbase .sb-storage-box__rows { list-style: none; margin: 0.35rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 0.2rem; }
+.shadowbase .sb-stored-row { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; padding: 0.25rem 0.4rem; border: 1px solid hsl(var(--border) / 0.3); border-radius: var(--radius); background: hsl(var(--background) / 0.5); font-size: 0.8rem; }
+.shadowbase .sb-stored-row:hover { border-color: hsl(var(--accent) / 0.5); }
+.shadowbase .sb-stored-row__name { font-weight: 600; }
+.shadowbase .sb-gear-set { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; font-size: 0.8rem; padding: 0.25rem 0.4rem; border: 1px solid hsl(var(--border) / 0.5); border-radius: var(--radius); }
+.shadowbase .sb-gear-set__name { font-weight: 600; }
+.shadowbase .sb-vessel-card { border: 1px solid hsl(var(--border)); border-radius: var(--radius); padding: 0.5rem 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; background: rgb(0 0 0 / 0.1); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+.shadowbase .sb-card__head { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.shadowbase .sb-crew-action, .shadowbase .sb-armaments li { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; font-size: 0.8rem; padding: 0.25rem 0.4rem; border: 1px solid hsl(var(--border) / 0.5); border-radius: var(--radius); }
+.shadowbase .sb-crew-action__label, .shadowbase .sb-armament__name { font-weight: 600; flex: 1 1 10rem; }

@@ -1,0 +1,58 @@
+{{!-- templates/hud/footer.hbs - the bell (notification-history.tsx: kept alerts, pins saved on the
+     character), the settings gear (sheet-settings-menu.tsx) and the Roll History drawer
+     (roller-window.tsx RollHistoryDisplay + the collapsed header with CLEAR). Context: #footerContext. --}}
+<footer class="sb-hud__footer">
+  {{#if footer.bellOpen}}
+  <div class="sb-hud__bell-panel">
+    <div class="sb-hud__bell-head">
+      <span class="sb-hud__bell-title">{{localize "SHADOWBASE.Hud.Notifications"}}{{#if footer.pinnedCount}} <span class="sb-hud__muted">{{footer.pinnedLine}}</span>{{/if}}</span>
+      {{#if footer.hasUnpinned}}<button type="button" class="sb-btn sb-btn-ghost sb-btn-xs" data-action="clear-notifications"><i class="fa-solid fa-trash"></i> {{#if footer.pinnedCount}}{{localize "SHADOWBASE.Hud.ClearUnpinned"}}{{else}}{{localize "SHADOWBASE.Hud.ClearAll"}}{{/if}}</button>{{/if}}
+    </div>
+    {{#if footer.count}}
+    <ul class="sb-hud__notes">
+      {{#each footer.notifications}}
+      <li class="sb-hud__note{{#if this.pinned}} is-pinned{{/if}}{{#if this.destructive}} is-destructive{{/if}}">
+        <div class="sb-hud__note-body">
+          {{#if this.title}}<span class="sb-hud__note-title">{{this.title}}</span>{{/if}}
+          {{#if this.description}}<span class="sb-hud__note-text">{{this.description}}</span>{{/if}}
+          <span class="sb-hud__note-time">{{this.ago}}</span>
+        </div>
+        <div class="sb-hud__note-actions">
+          <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-btn-xs" data-action="pin-notification" data-notification-id="{{this.id}}" title="{{#if this.pinned}}{{localize 'SHADOWBASE.Hud.Unpin'}}{{else}}{{localize 'SHADOWBASE.Hud.Pin'}}{{/if}}" {{#if (and ../footer.pinsExhausted (not this.pinned))}}disabled{{/if}}><i class="fa-solid {{#if this.pinned}}fa-thumbtack-slash{{else}}fa-thumbtack{{/if}}"></i></button>
+          <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-btn-xs" data-action="delete-notification" data-notification-id="{{this.id}}" title="{{localize 'SHADOWBASE.Hud.Delete'}}"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+    {{else}}
+    <p class="sb-hud__empty">{{localize "SHADOWBASE.Hud.NoNotifications"}}</p>
+    {{/if}}
+  </div>
+  {{/if}}
+  <div class="sb-hud__history-bar{{#if footer.historyExpanded}} is-open{{/if}}">
+    <button type="button" class="sb-hud__history-toggle" data-action="toggle-history" title="{{localize 'SHADOWBASE.Hud.RollHistoryTitle'}}">
+      <span class="sb-hud__history-icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
+      <span class="sb-hud__history-label">{{localize "SHADOWBASE.Hud.RollHistory"}}{{#if footer.hasHistory}}{{#if (not footer.historyExpanded)}} <span class="sb-hud__new">{{localize "SHADOWBASE.Hud.New"}}</span>{{/if}}{{/if}}</span>
+      <i class="fa-solid {{#if footer.historyExpanded}}fa-chevron-down{{else}}fa-chevron-up{{/if}} sb-hud__history-chevron"></i>
+    </button>
+    <div class="sb-hud__footer-tools">
+      {{#if footer.historyExpanded}}{{#if footer.hasHistory}}<button type="button" class="sb-btn sb-btn-ghost sb-btn-xs" data-action="clear-history">{{localize "SHADOWBASE.Hud.Clear"}}</button>{{/if}}{{/if}}
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-btn-sm" data-action="open-settings" title="{{localize 'SHADOWBASE.Hud.SettingsTitle'}}"><i class="fa-solid fa-sliders"></i></button>
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-btn-sm sb-hud__bell" data-action="toggle-bell" title="{{footer.bellTitle}}"><i class="fa-solid fa-bell"></i>{{#if footer.count}}<span class="sb-hud__bell-count">{{footer.count}}</span>{{/if}}</button>
+    </div>
+  </div>
+  {{#if footer.historyExpanded}}
+  <div class="sb-hud__history">
+    {{#if footer.hasHistory}}
+    {{#each footer.history}}
+    <div class="sb-hud__roll{{#if this.success}} is-success{{/if}}{{#if this.failure}} is-failure{{/if}}">
+      <div class="sb-hud__roll-head"><span class="sb-hud__roll-title">{{this.title}}</span><span class="sb-hud__roll-time">{{this.time}}</span></div>
+      <p class="sb-hud__roll-text">{{this.description}}</p>
+    </div>
+    {{/each}}
+    {{else}}
+    <p class="sb-hud__empty">{{localize "SHADOWBASE.Hud.NoRolls"}}</p>
+    {{/if}}
+  </div>
+  {{/if}}
+</footer>

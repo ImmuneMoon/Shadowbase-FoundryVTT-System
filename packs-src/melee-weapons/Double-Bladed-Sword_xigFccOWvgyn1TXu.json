@@ -1,0 +1,123 @@
+{
+  "_id": "xigFccOWvgyn1TXu",
+  "_key": "!items!xigFccOWvgyn1TXu",
+  "name": "Double-Bladed Sword",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "qZVJoDG1XMA9W21U",
+  "sort": 800000,
+  "system": {
+    "row": {
+      "id": "7565d299-4a20-4984-8da7-655a5e38f06c",
+      "customName": "Double-Bladed Sword",
+      "baseType": "Double-Bladed Sword",
+      "baseSkill": "Two-Handed Sword",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": null,
+      "maxCharges": null,
+      "condition": "Fine",
+      "baseReach": "1, 2",
+      "baseWeight": 4.9,
+      "finalWeight": 4.9,
+      "baseCost": 246,
+      "finalCost": 492,
+      "gripParts": [
+        {
+          "inventoryId": "a0693718-7921-457b-bdbe-7bd17c820e98",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "3824d1d5-210f-42d5-9a95-7bc7ea2bf9dc",
+          "materialId": "durasteel",
+          "quantity": 2
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "7565d299-4a20-4984-8da7-655a5e38f06c",
+        "customName": "Double-Bladed Sword",
+        "baseType": "Double-Bladed Sword",
+        "baseSkill": "Two-Handed Sword",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": null,
+        "maxCharges": null,
+        "condition": "Fine",
+        "baseReach": "1, 2",
+        "baseWeight": 4.9,
+        "finalWeight": 4.9,
+        "baseCost": 246,
+        "finalCost": 492,
+        "gripParts": [
+          {
+            "inventoryId": "a0693718-7921-457b-bdbe-7bd17c820e98",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "3824d1d5-210f-42d5-9a95-7bc7ea2bf9dc",
+            "materialId": "durasteel",
+            "quantity": 2
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "a0693718-7921-457b-bdbe-7bd17c820e98",
+          "name": "Extended Hilt",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 98,
+          "weight": 1.96,
+          "isInstalled": true,
+          "installedInMeleeId": "7565d299-4a20-4984-8da7-655a5e38f06c",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Two-Handed Sword. 1 or 2 hands.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "3824d1d5-210f-42d5-9a95-7bc7ea2bf9dc",
+          "name": "Light Blade",
+          "category": "Melee Head",
+          "materialId": "durasteel",
+          "cost": 74,
+          "weight": 1.47,
+          "isInstalled": true,
+          "installedInMeleeId": "7565d299-4a20-4984-8da7-655a5e38f06c",
+          "equipped": true,
+          "quantity": 2,
+          "notes": "Balanced.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Double-Bladed Sword"
+    }
+  }
+}

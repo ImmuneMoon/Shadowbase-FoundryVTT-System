@@ -1,0 +1,198 @@
+{
+  "_id": "QD9SOsp2PLsi7llq",
+  "_key": "!journal!QD9SOsp2PLsi7llq",
+  "name": "Chapter 1: Introduction & Core Mechanics",
+  "pages": [
+    {
+      "_id": "Yq7wRus1ESRrHzhM",
+      "_key": "!journal.pages!QD9SOsp2PLsi7llq.Yq7wRus1ESRrHzhM",
+      "name": "Overview",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>This handbook outlines a homebrew tabletop roleplaying game system, combining the detailed mechanics of [GURPS 4th Edition](https://gurps.fandom.com/wiki/GURPS_Star_Wars) (unofficial SW Gamebook) with thematic elements and character archetypes of the [Star Wars: Knights of the Old Republic](https://en.wikipedia.org/wiki/Star_Wars:_Knights_of_the_Old_Republic_(video_game)) video game, set within the tumultuous [Mandalorian Wars era](https://starwars.fandom.com/wiki/Mandalorian_Wars) (approximately 3964 BBY). This period is defined by gritty, gray-morality, and war-driven themes, with growing Force-based mysticism and tragedy as the galaxy endures conflict and the lines between good and evil blur.</p>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch01-core-mechanics",
+            "heading": null,
+            "overview": true,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "k3tx4uEj31AmTgjx",
+      "_key": "!journal.pages!QD9SOsp2PLsi7llq.k3tx4uEj31AmTgjx",
+      "name": "How to Play: The 3d6 Roll-Under Mechanic",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The system utilizes the [GURPS 3d6 roll-under mechanic](https://www.google.com/search?q=gurps+3d6+roll-under+mechanic+explanation&amp;client=firefox-b-1-d&amp;sca_esv=9bb6a8d79ae60b0c&amp;ei=uQQ3aPbGK66s5NoPyuLMgQ4&amp;oq=GURPS+3d6+roll-under+mechanic+exp&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiIUdVUlBTIDNkNiByb2xsLXVuZGVyIG1lY2hhbmljIGV4cCoCCAEyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKABMgUQIRigAUi7FVCVBljJC3ABeACQAQCYAVOgAfICqgEBNbgBA8gBAPgBAZgCBaACywLCAg4QABiABBiwAxiGAxiKBcICCxAAGIAEGLADGKIEwgIIEAAYsAMY7wXCAgUQIRirApgDAIgGAZAGBpIHATWgB98VsgcBNLgHxwLCBwUwLjQuMcgHCQ&amp;sclient=gws-wiz-serp) as its foundation for all task resolution, providing a consistent probability curve and granular skill differentiation.</p>\n<p>To perform an action with a chance of failure, roll three six-sided dice (3d6). If the total is less than or equal to your relevant Skill Level or Attribute Score, the action succeeds. The amount by which a roll succeeds or fails is its Margin: subtract the roll from the number you needed. A roll of 9 against a skill of 14 is a Margin of Success of 5; a roll of 16 against the same skill is a Margin of Failure of 2. Where a rule pays out per point of margin -- an extra salvaged part per 2 points, a defence penalty equal to your margin of victory -- this is the number it means.</p>\n<ul><li>Rolls of 3 or 4 are always critical successes. A 5 is a critical success if your effective skill is 15 or higher; a 6 is a critical success if it is 16 or higher.</li><li>Rolls of 17 or 18 always fail, whatever your effective skill. An 18 is always a critical failure. A 17 is a critical failure if your effective skill is 15 or lower; at 16 or higher it is an ordinary failure. Any roll that fails by 10 or more is also a critical failure.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch01-core-mechanics",
+            "heading": "How to Play: The 3d6 Roll-Under Mechanic",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "r4NPFJooBKUcsL6Z",
+      "_key": "!journal.pages!QD9SOsp2PLsi7llq.r4NPFJooBKUcsL6Z",
+      "name": "Attributes",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The four primary attributes form the foundation of a character’s capabilities:</p>\n<ul><li><strong>Strength (ST):</strong> Physical power, lifting capacity, melee damage.</li><li><strong>Dexterity (DX):</strong> Agility, coordination, hand-eye precision, ranged attacks.</li><li><strong>Intelligence (IQ):</strong> Mental acuity, knowledge, reasoning, most skills.</li><li><strong>Health (HT):</strong> Stamina, resistance to injury, recovery, willpower (for some checks).</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch01-core-mechanics",
+            "heading": "Attributes",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "IrzX3tKlu4QeKzqi",
+      "_key": "!journal.pages!QD9SOsp2PLsi7llq.IrzX3tKlu4QeKzqi",
+      "name": "Secondary Characteristics",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Derived from attributes, these characteristics define a character’s baseline abilities and resources:</p>\n<ul><li><strong>Hit Points (HP):</strong> Physical endurance and ability to withstand damage. When HP drops to 0 or below, a character is severely injured and risks unconsciousness or death.</li><li><strong>Will:</strong> Mental fortitude, courage, focus, and the ability to resist intimidation, pain, and temptation. Derived from <strong>IQ</strong> by default.</li><li><strong>Perception (Per):</strong> General awareness and ability to notice things using all your senses. Derived from <strong>IQ</strong> by default.</li><li><strong>Endurance Points (EP):</strong> (Formerly “Fatigue Points”) This resource represents a character’s physical stamina and energy for strenuous actions, prolonged exertion, and certain combat maneuvers (e.g., All-Out Attacks, specific Martial Arts techniques).</li><li>When a character drops below 1/3rd their max EP, they must make a <strong>HT</strong> roll to perform strenuous actions, or fight effectively.</li><li>When EP drops to 0, the character suffers extreme fatigue, but is not immediately out of the fight. Any further strenuous activity requires a <strong>Will</strong> roll, on a failed roll at 0, the character loses consciousness.</li><li>When the character drops below 0 EP, for every point below zero, they lose 1 point from <strong>ST</strong>, <strong>DX</strong>, and <strong>IQ</strong> and must continue to make <strong>Will</strong> rolls. If any of these attributes drop to 0, the character instantly passes out.</li><li>Rest is the primary way to regain EP, and characters typically recover 1EP for every 10 minutes of quiet, restful activity. Alternatively, characters fully restore their EP upon a full night’s rest.</li><li><strong>Force Points (FP):</strong> A dedicated resource for activating and sustaining Force powers. Force Points represent a Force-user’s connection to and mastery over the Force. Unlike Endurance Points, Force Points are specifically tied to a character’s Force Sensitivity and power. (Detailed further in <strong>@UUID[Compendium.shadowbase.handbook.JournalEntry.cvf2pB6RpI78AvBt]{Chapter 8}: Force Powers</strong>).</li><li>FP will restore 1 point for every 10 min of non use, or fully restore upon a full night’s rest.</li><li><strong>Basic Speed:</strong> Derived from (<strong>DX</strong> + <strong>HT</strong>) / 4, this determines movement rate and combat initiative.</li><li><strong>Basic Move:</strong> Derived from (<strong>ST</strong> + <strong>DX</strong>) / 4 (rounded down), this indicates ground movement speed in yards per second or yards per turn in combat.</li><li><strong>Damage Resistance (DR):</strong> Protection provided by armor, natural toughness, or Force powers, reducing incoming damage.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch01-core-mechanics",
+            "heading": "Secondary Characteristics",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "A9Qk7d5DLkANda8K",
+      "_key": "!journal.pages!QD9SOsp2PLsi7llq.A9Qk7d5DLkANda8K",
+      "name": "Hazards: Hunger, Thirst, and Disease",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Two hazards come up often enough to need a standing rule rather than a fresh ruling each time. Both resolve with machinery already described above -- Endurance Points for going without, an HT roll for infection -- and both are what several pieces of gear in @UUID[Compendium.shadowbase.handbook.JournalEntry.Skjt6Gqhhw8BiF1Y]{Chapter 10} exist to prevent.</p>\n<h3 id=\"going-without-food-or-water\">Going Without Food or Water</h3>\n<p>A character who does not eat within a 24-hour period loses 1 EP, and 1 more for each further day without food. A character who does not drink loses 1 EP per 12 hours. EP lost this way cannot be recovered by rest until the character eats or drinks: the usual 1 EP per 10 minutes does not touch it, and a full night’s sleep restores them to that lowered ceiling rather than to full. Everything above about low and negative EP still applies, so a character who goes long enough without water will begin losing ST, DX and IQ and will eventually fall unconscious.</p>\n<p>One pack of Field Rations (@UUID[Compendium.shadowbase.handbook.JournalEntry.Skjt6Gqhhw8BiF1Y]{Chapter 10}) covers a day’s food, as does a successful Survival roll for the terrain. Water must come from a safe source, or be made safe with a Water Purifier.</p>\n<h3 id=\"disease-infection\">Disease &amp; Infection</h3>\n<p>Disease is resolved the way poison is -- see the toxin entries in @UUID[Compendium.shadowbase.handbook.JournalEntry.Skjt6Gqhhw8BiF1Y]{Chapter 10} -- as an HT roll at a penalty set by severity; any disease-resistance trait a character has adds its bonus to that roll. Exposure means contaminated food or water, a wound left untreated in the field, a parasite, or close quarters with someone already sick, and calls for one roll. Success: no effect. Failure: the character contracts it, and symptoms begin after the incubation below. Critical failure: as failure, one severity step worse.</p>\n<p>Severity sets the penalty and the effect. Mild is HT-1 and leaves the character Nauseated (-2 to all attributes and skills). Serious is HT-3, Nauseated, and EP does not restore on rest. Severe is HT-5, Nauseated, no EP restoration, and 1 HP lost per day. Incubation is 1d hours for Mild and 1d days for Serious or Severe. A disease outside these three states its own penalty and effect the way a toxin does.</p>\n<p>Shaking it off: a sick character rolls HT once per day at the same penalty. One success ends a Mild case; Serious and Severe need two consecutive successes. A critical failure worsens the case by one step. An Antidote Kit, or a successful Physician roll, grants +2 to these rolls.</p>\n<p>A Water Purifier removes the roll entirely for anything waterborne -- that is what it is for. Every bonus that names disease adds to all of the rolls above: the Body Glove and Thermal Cloak’s +1 (@UUID[Compendium.shadowbase.handbook.JournalEntry.sM4JaeipflPpOZgw]{Chapter 13}), a species’ Resistant to Disease (@UUID[Compendium.shadowbase.handbook.JournalEntry.ZDm9XH32h0ghbSSm]{Chapter 18}), and the Immunity Implant’s +8 (@UUID[Compendium.shadowbase.handbook.JournalEntry.o2ZbGiux36xwNCw0]{Chapter 14}). A droid, immune to metabolic hazards, never rolls at all.</p>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 500000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch01-core-mechanics",
+            "heading": "Hazards: Hunger, Thirst, and Disease",
+            "overview": false,
+            "anchors": [
+              "going-without-food-or-water",
+              "disease-infection"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "categories": [],
+  "folder": null,
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "handbook",
+      "key": "ch01-core-mechanics",
+      "handbook": {
+        "chapterId": "ch01-core-mechanics",
+        "generatedAt": "2026-09-19T09:02:30.342Z",
+        "headings": 6,
+        "tables": 0
+      }
+    }
+  }
+}

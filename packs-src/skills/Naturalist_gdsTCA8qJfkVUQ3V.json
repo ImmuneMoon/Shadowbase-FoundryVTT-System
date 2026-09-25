@@ -1,0 +1,34 @@
+{
+  "_id": "gdsTCA8qJfkVUQ3V",
+  "_key": "!items!gdsTCA8qJfkVUQ3V",
+  "name": "Naturalist",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "gAzYSLPjIJTF25Cz",
+  "sort": 9600000,
+  "system": {
+    "row": {
+      "name": "Naturalist",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Naturalist"
+    }
+  }
+}

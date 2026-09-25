@@ -1,0 +1,42 @@
+{
+  "_id": "hjEhhWwLz9ug5PIJ",
+  "_key": "!items!hjEhhWwLz9ug5PIJ",
+  "name": "Blueprint: Magenta Kyber",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 36400000,
+  "system": {
+    "row": {
+      "id": "07da222c-cd92-4810-be13-fde229613278",
+      "name": "Blueprint: Magenta Kyber",
+      "cost": 1841,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Magenta Kyber (Generation 0, proven, encoded, catalog design). Required to build Magenta Kyber; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Magenta Kyber",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 16666.666666666664,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Magenta Kyber"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_id": "tnzjtPxUpQNQ2IaF",
+  "_key": "!items!tnzjtPxUpQNQ2IaF",
+  "name": "Power Cell",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "5PEjVjBPZfD3PSGN",
+  "sort": 1700000,
+  "system": {
+    "row": {
+      "id": "d4598791-068d-43ac-a8e9-824da279625f",
+      "name": "Power Cell",
+      "category": "Melee Power Unit",
+      "cost": 210,
+      "weight": 0.7,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "power-cell",
+      "materialId": null,
+      "notes": "Provides baseline power for attached emitters/generators.",
+      "effect": "Provides baseline power for attached emitters/generators.",
+      "energyResBonus": 0,
+      "volume": null,
+      "density": null,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "part:power-cell"
+    }
+  }
+}

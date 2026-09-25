@@ -1,0 +1,42 @@
+{
+  "_id": "JT2vhBoS38s5A1yp",
+  "_key": "!items!JT2vhBoS38s5A1yp",
+  "name": "Blueprint: Czerka Vibro-Rapier",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 41100000,
+  "system": {
+    "row": {
+      "id": "65838e89-d9a1-4a67-b785-cc269a55fd5d",
+      "name": "Blueprint: Czerka Vibro-Rapier",
+      "cost": 350,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Czerka Vibro-Rapier (Generation 0, proven, encoded, catalog design). Required to build Czerka Vibro-Rapier; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Czerka Vibro-Rapier",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1760,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Czerka Vibro-Rapier"
+    }
+  }
+}

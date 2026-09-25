@@ -1,0 +1,39 @@
+{
+  "_id": "DgLaPYvjP4ojd0U8",
+  "_key": "!items!DgLaPYvjP4ojd0U8",
+  "name": "Cybernetic Eye (Telescopic)",
+  "type": "implant",
+  "img": "icons/svg/regen.svg",
+  "folder": "STmujteizjG6Ekf7",
+  "sort": 1800000,
+  "system": {
+    "row": {
+      "id": "178e7f7b-9565-497f-922d-a01f8dc509d5",
+      "name": "Cybernetic Eye (Telescopic)",
+      "cost": 3744,
+      "finalCp": 10,
+      "effect": "Telescopic Vision 2",
+      "category": "Sensory",
+      "pathways": [],
+      "slotType": "Eye",
+      "installed": false,
+      "weight": 0.2,
+      "notes": "Trait Package: 10 CP of Advantages (Telescopic Vision); Mandatory Flaws offset. Materials: Plastoid: 0.08 lbs (3 cr), Silicon: 0.05 lbs 3 cr), Clari-crystalline: 0.07 lbs (2 cr)."
+    },
+    "source": "implants",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "implants"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "implants",
+      "key": "Sensory|Cybernetic Eye (Telescopic)"
+    }
+  }
+}

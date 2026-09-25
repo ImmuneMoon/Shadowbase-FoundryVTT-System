@@ -1,0 +1,24 @@
+{{!-- templates/items/vehicle-main.hbs - a vehicle (vehicle-item.tsx:92-185): the printed figures as fields, the
+     Terrestrial / Atmospheric category. Context: main (vehicle.mjs), editable, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--vehicle {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <div class="sb-item-grid">
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Vehicle.category"}}</span>
+        <select class="sb-select" name="system.row.category" {{disabled (not editable)}}>{{#each main.categories}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{#each main.fields}}
+      <label class="sb-field"><span class="sb-field__label">{{this.label}}</span>
+        {{#if this.number}}<input type="number" class="sb-input" name="{{this.name}}" value="{{this.value}}" data-dtype="Number" {{disabled (not @root.editable)}}>{{else}}<input type="text" class="sb-input" name="{{this.name}}" value="{{this.value}}" {{disabled (not @root.editable)}}>{{/if}}
+      </label>
+      {{/each}}
+    </div>
+    {{#unless main.categoryExplicit}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Vehicle.CategoryInferred"}}</p>{{/unless}}
+    {{#if main.inCatalog}}<span class="sb-badge sb-badge-outline sb-badge-accent">{{localize "SHADOWBASE.Item.Trait.InLibrary"}}</span>{{/if}}
+  </div>
+  {{#if main.catalogNotes}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Sheet.Abilities.LibraryDossier"}}</h4>
+    <p class="sb-dossier">{{main.catalogNotes}}</p>
+  </div>
+  {{/if}}
+</section>

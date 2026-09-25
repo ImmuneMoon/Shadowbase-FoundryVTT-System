@@ -1,0 +1,46 @@
+{
+  "_id": "g6bkRTdIdhc9JaZu",
+  "_key": "!items!g6bkRTdIdhc9JaZu",
+  "name": "Durasteel Weighted Pommel",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "kMmooP3ZfD5uwtGG",
+  "sort": 1600000,
+  "system": {
+    "row": {
+      "id": "b7dd8be4-f1d2-437b-b28a-4a27e8f73b56",
+      "name": "Durasteel Weighted Pommel",
+      "category": "Melee Guard",
+      "cost": 50,
+      "weight": 0.98,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "weighted-pommel",
+      "materialId": "durasteel",
+      "notes": "-1 Deceptive Attack or +1 Feint.",
+      "effect": "-1 Deceptive Attack or +1 Feint.",
+      "energyResBonus": 0,
+      "volume": 0.002,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "part:weighted-pommel"
+    }
+  }
+}

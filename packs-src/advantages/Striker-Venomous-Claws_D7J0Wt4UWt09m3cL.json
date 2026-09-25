@@ -1,0 +1,33 @@
+{
+  "_id": "D7J0Wt4UWt09m3cL",
+  "_key": "!items!D7J0Wt4UWt09m3cL",
+  "name": "Striker (Venomous Claws)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "GS8kUCPWatq78XxI",
+  "sort": 16000000,
+  "system": {
+    "row": {
+      "name": "Striker (Venomous Claws)",
+      "points": 5,
+      "description": "Natural claw attack tipped with venom.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Striker (Venomous Claws)"
+    }
+  }
+}

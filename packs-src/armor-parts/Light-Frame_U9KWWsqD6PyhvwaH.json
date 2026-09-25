@@ -1,0 +1,42 @@
+{
+  "_id": "U9KWWsqD6PyhvwaH",
+  "_key": "!items!U9KWWsqD6PyhvwaH",
+  "name": "Light Frame",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "yXDilaSMuXLkPwTX",
+  "sort": 8600000,
+  "system": {
+    "row": {
+      "id": "7e785e6c-b2af-4bf1-8149-a712bd750737",
+      "name": "Light Frame",
+      "category": "Armor Frame",
+      "cost": 23,
+      "weight": 0.32,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "frame-light",
+      "materialId": null,
+      "notes": "1 Mod Slot. Milled from Plastoid. Default on Light tier.",
+      "validSlots": [],
+      "drBonus": null,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "frame-light"
+    }
+  }
+}

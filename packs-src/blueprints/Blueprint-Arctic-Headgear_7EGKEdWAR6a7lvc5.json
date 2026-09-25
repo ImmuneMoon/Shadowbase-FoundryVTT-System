@@ -1,0 +1,42 @@
+{
+  "_id": "7EGKEdWAR6a7lvc5",
+  "_key": "!items!7EGKEdWAR6a7lvc5",
+  "name": "Blueprint: Arctic Headgear",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 14000000,
+  "system": {
+    "row": {
+      "id": "5d0ed63b-fbd8-4199-93e6-b65d35118911",
+      "name": "Blueprint: Arctic Headgear",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Arctic Headgear (Generation 0, proven, encoded, catalog design). Required to build Arctic Headgear; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Arctic Headgear",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 10,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Arctic Headgear"
+    }
+  }
+}

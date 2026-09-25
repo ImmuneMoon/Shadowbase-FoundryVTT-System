@@ -1,0 +1,42 @@
+{
+  "_id": "reJWWDVK3u9RxrnR",
+  "_key": "!items!reJWWDVK3u9RxrnR",
+  "name": "Leg Backing",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "eBYAuy3r3NWeGfsN",
+  "sort": 8000000,
+  "system": {
+    "row": {
+      "id": "41b0d2cb-c096-4fd1-9dca-26cb89456fec",
+      "name": "Leg Backing",
+      "category": "Armor Backing",
+      "cost": 54,
+      "weight": 1,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "backing-legs",
+      "materialId": null,
+      "notes": "Padding and strapping that secures the Shell. Fixed by location - never varies with tier or material.",
+      "validSlots": [],
+      "drBonus": null,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "backing-legs"
+    }
+  }
+}

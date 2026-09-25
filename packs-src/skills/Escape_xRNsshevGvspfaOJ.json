@@ -1,0 +1,34 @@
+{
+  "_id": "xRNsshevGvspfaOJ",
+  "_key": "!items!xRNsshevGvspfaOJ",
+  "name": "Escape",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "l1z4BAKrTKyClCsJ",
+  "sort": 4600000,
+  "system": {
+    "row": {
+      "name": "Escape",
+      "level": "",
+      "points": null,
+      "relativeLevel": "DX/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Escape"
+    }
+  }
+}

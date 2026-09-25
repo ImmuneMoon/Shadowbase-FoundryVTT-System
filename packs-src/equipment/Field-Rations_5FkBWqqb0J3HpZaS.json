@@ -1,0 +1,50 @@
+{
+  "_id": "5FkBWqqb0J3HpZaS",
+  "_key": "!items!5FkBWqqb0J3HpZaS",
+  "name": "Field Rations",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Oh3x5u0Hy1HpzLID",
+  "sort": 6100000,
+  "system": {
+    "row": {
+      "name": "Field Rations",
+      "craftingCategory": "Rations & Preserved Food",
+      "cost": 11,
+      "description": "A day's worth of nutrient paste. Covers a day's food and prevents the EP loss for going without it (Ch1: Hazards). Materials: Nutrient Paste: 0.95 lb, Plastoid: 0.05 lbs.",
+      "category": "Survival Gear",
+      "weight": 1,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Nutrient Paste",
+          "amount": 0.95
+        },
+        {
+          "name": "Plastoid",
+          "amount": 0.05
+        }
+      ],
+      "id": "cd720dd5-f110-4023-977f-3e3828de522c",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Field Rations"
+    }
+  }
+}

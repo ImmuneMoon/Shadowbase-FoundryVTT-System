@@ -1,0 +1,42 @@
+{
+  "_id": "KASpUqbGyme6CGzP",
+  "_key": "!items!KASpUqbGyme6CGzP",
+  "name": "Blueprint: Red Kyber",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 37500000,
+  "system": {
+    "row": {
+      "id": "098ee754-fdeb-48b6-8236-2835534477bb",
+      "name": "Blueprint: Red Kyber",
+      "cost": 574,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Red Kyber (Generation 0, proven, encoded, catalog design). Required to build Red Kyber; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Red Kyber",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 4000,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Red Kyber"
+    }
+  }
+}

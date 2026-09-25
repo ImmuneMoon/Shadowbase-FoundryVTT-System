@@ -1,0 +1,34 @@
+{
+  "_id": "4qNi8FXE8W1tkcbJ",
+  "_key": "!items!4qNi8FXE8W1tkcbJ",
+  "name": "Bard",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "WshyFJKrPydzbiCs",
+  "sort": 1600000,
+  "system": {
+    "row": {
+      "name": "Bard",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Average",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Bard"
+    }
+  }
+}

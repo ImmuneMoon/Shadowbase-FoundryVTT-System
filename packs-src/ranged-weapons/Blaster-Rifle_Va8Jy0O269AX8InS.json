@@ -1,0 +1,211 @@
+{
+  "_id": "Va8Jy0O269AX8InS",
+  "_key": "!items!Va8Jy0O269AX8InS",
+  "name": "Blaster Rifle",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "E4h2Xn4pTV0QLLdh",
+  "sort": 1100000,
+  "system": {
+    "row": {
+      "id": "1905fe47-1f97-471b-8e80-7dd0033ccb6c",
+      "customName": "Blaster Rifle",
+      "baseType": "Blaster Rifle",
+      "baseSkill": "Guns (Blaster Rifle)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 8.2,
+      "finalWeight": 8.2,
+      "baseCost": 782,
+      "finalCost": 4692,
+      "currentCharges": 100,
+      "maxCharges": 100,
+      "loadedAmmunitionId": "aecd288a-bed3-4e09-b019-1e6dfbfaad29",
+      "loadedAmmunitionData": {
+        "id": "aecd288a-bed3-4e09-b019-1e6dfbfaad29",
+        "name": "Rifle Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "A larger, more robust pack used for rifles and carbines. A gas top-up (30 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "rifle-stock",
+        "inventoryId": "77c95f7d-eaf8-4904-99f3-d809d976e391",
+        "materialId": "plasteel"
+      },
+      "receiverPart": {
+        "partId": "rifle-receiver",
+        "inventoryId": "7ba44f79-957e-424b-abe5-fbcfba7607e0",
+        "materialId": "plasteel"
+      },
+      "barrelPart": {
+        "partId": "long-emitter",
+        "inventoryId": "856f8944-08fa-4406-b7de-77de12671c4d",
+        "materialId": "plasteel"
+      },
+      "targetingPart": {
+        "partId": "precision-targeting",
+        "inventoryId": "b0124b52-6d85-402a-acb0-ae7f6bc9ceb3"
+      },
+      "powerUnitPart": {
+        "partId": "rifle-pwr-pack",
+        "inventoryId": "a79a1fda-0c1e-4167-8805-326e531a9831"
+      },
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "1905fe47-1f97-471b-8e80-7dd0033ccb6c",
+        "customName": "Blaster Rifle",
+        "baseType": "Blaster Rifle",
+        "baseSkill": "Guns (Blaster Rifle)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 8.2,
+        "finalWeight": 8.2,
+        "baseCost": 782,
+        "finalCost": 4692,
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "loadedAmmunitionId": "aecd288a-bed3-4e09-b019-1e6dfbfaad29",
+        "loadedAmmunitionData": {
+          "id": "aecd288a-bed3-4e09-b019-1e6dfbfaad29",
+          "name": "Rifle Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 100,
+          "maxCharges": 100,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "A larger, more robust pack used for rifles and carbines. A gas top-up (30 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "rifle-stock",
+          "inventoryId": "77c95f7d-eaf8-4904-99f3-d809d976e391",
+          "materialId": "plasteel"
+        },
+        "receiverPart": {
+          "partId": "rifle-receiver",
+          "inventoryId": "7ba44f79-957e-424b-abe5-fbcfba7607e0",
+          "materialId": "plasteel"
+        },
+        "barrelPart": {
+          "partId": "long-emitter",
+          "inventoryId": "856f8944-08fa-4406-b7de-77de12671c4d",
+          "materialId": "plasteel"
+        },
+        "targetingPart": {
+          "partId": "precision-targeting",
+          "inventoryId": "b0124b52-6d85-402a-acb0-ae7f6bc9ceb3"
+        },
+        "powerUnitPart": {
+          "partId": "rifle-pwr-pack",
+          "inventoryId": "a79a1fda-0c1e-4167-8805-326e531a9831"
+        },
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "77c95f7d-eaf8-4904-99f3-d809d976e391",
+          "name": "Rifle Stock",
+          "partId": "rifle-stock",
+          "category": "Ranged Grip",
+          "materialId": "plasteel",
+          "cost": 240,
+          "weight": 3,
+          "isInstalled": true,
+          "installedInBlasterId": "1905fe47-1f97-471b-8e80-7dd0033ccb6c",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "2-handed, full shoulder stock."
+        },
+        {
+          "id": "7ba44f79-957e-424b-abe5-fbcfba7607e0",
+          "name": "Rifle Receiver",
+          "partId": "rifle-receiver",
+          "category": "Ranged Receiver",
+          "materialId": "plasteel",
+          "cost": 120,
+          "weight": 1.5,
+          "isInstalled": true,
+          "installedInBlasterId": "1905fe47-1f97-471b-8e80-7dd0033ccb6c",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Infantry-grade cycling."
+        },
+        {
+          "id": "856f8944-08fa-4406-b7de-77de12671c4d",
+          "name": "Long Emitter",
+          "partId": "long-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "plasteel",
+          "cost": 96,
+          "weight": 1.2,
+          "isInstalled": true,
+          "installedInBlasterId": "1905fe47-1f97-471b-8e80-7dd0033ccb6c",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "b0124b52-6d85-402a-acb0-ae7f6bc9ceb3",
+          "name": "Precision Targeting Module",
+          "partId": "precision-targeting",
+          "category": "Ranged Targeting",
+          "cost": 116,
+          "weight": 1.5,
+          "isInstalled": true,
+          "installedInBlasterId": "1905fe47-1f97-471b-8e80-7dd0033ccb6c",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Sniper and specialized assassin optics."
+        },
+        {
+          "id": "a79a1fda-0c1e-4167-8805-326e531a9831",
+          "name": "Rifle Power Pack",
+          "partId": "rifle-pwr-pack",
+          "category": "Power Unit",
+          "cost": 210,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInBlasterId": "1905fe47-1f97-471b-8e80-7dd0033ccb6c",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Blaster Rifle"
+    }
+  }
+}

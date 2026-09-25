@@ -1,0 +1,33 @@
+{
+  "_id": "OLdMYGi7PohfBSWn",
+  "_key": "!items!OLdMYGi7PohfBSWn",
+  "name": "Regrowth",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "GS8kUCPWatq78XxI",
+  "sort": 13700000,
+  "system": {
+    "row": {
+      "name": "Regrowth",
+      "points": 40,
+      "description": "You can regrow lost limbs and organs over time. A trait of certain reptilian aliens or those with extreme regenerative abilities, often seen as unnatural and unsettling.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Regrowth"
+    }
+  }
+}

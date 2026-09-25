@@ -1,0 +1,172 @@
+/* styles/chat.css - the chat cards of module/rolls.mjs (docs/ARCHITECTURE.md §5.1, §6.6).
+ *
+ * Tokens come from styles/variables.css (unit U05: the website's HSL triplets
+ * under `.shadowbase`); every use carries a fallback so a card still reads
+ * before that file lands. Class recipes follow the sb-* names of §6.6
+ * (sb-badge, sb-btn) and BEM-style sb-chat-card__* parts for the card itself.
+ */
+
+.shadowbase.sb-chat-card {
+  --sb-card-bg: hsl(var(--card, 0 0% 12%));
+  --sb-card-fg: hsl(var(--card-foreground, 0 0% 92%));
+  --sb-card-muted: hsl(var(--muted-foreground, 0 0% 62%));
+  --sb-card-border: hsl(var(--border, 0 0% 22%));
+  --sb-card-primary: hsl(var(--primary, 199 89% 48%));
+  --sb-card-accent: hsl(var(--accent, 38 92% 50%));
+  --sb-card-destructive: hsl(var(--destructive, 0 72% 51%));
+  --sb-card-success: #4ade80;
+  --sb-card-failure: #f87171;
+  --sb-card-radius: var(--radius, 0.375rem);
+  font-family: var(--font-body, Inter, system-ui, sans-serif);
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--sb-card-fg);
+  background: var(--sb-card-bg);
+  border: 1px solid var(--sb-card-border);
+  border-left: 3px solid var(--sb-card-primary);
+  border-radius: var(--sb-card-radius);
+  padding: 0.5rem 0.6rem;
+  margin: 0.15rem 0;
+}
+.shadowbase.sb-chat-card.is-success { border-left-color: var(--sb-card-success); }
+.shadowbase.sb-chat-card.is-failure { border-left-color: var(--sb-card-failure); }
+.shadowbase.sb-chat-card.is-malfunction,
+.shadowbase.sb-chat-card--damage { border-left-color: var(--sb-card-destructive); }
+.shadowbase.sb-chat-card--notice { border-left-color: var(--sb-card-accent); }
+.shadowbase.sb-chat-card--costs { border-left-color: var(--sb-card-muted); }
+
+.sb-chat-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+.sb-chat-card__title {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--sb-card-primary);
+  border: 0;
+}
+.sb-chat-card__badge {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.05rem 0.35rem;
+  border-radius: 999px;
+  border: 1px solid var(--sb-card-border);
+  color: var(--sb-card-muted);
+  white-space: nowrap;
+}
+.sb-chat-card .sb-badge-destructive { color: var(--sb-card-destructive); border-color: var(--sb-card-destructive); }
+
+.sb-chat-card__lines {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.6rem;
+  row-gap: 0.15rem;
+  margin: 0;
+}
+.sb-chat-card__lines dt {
+  margin: 0;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--sb-card-muted);
+  align-self: baseline;
+}
+.sb-chat-card__lines dd { margin: 0; }
+.sb-chat-card__dice { font-family: var(--font-mono, ui-monospace, monospace); color: var(--sb-card-muted); }
+.sb-chat-card__muted { color: var(--sb-card-muted); }
+.sb-chat-card__total { font-size: 1.15rem; color: var(--sb-card-destructive); }
+
+.sb-chat-card__result { font-weight: 700; white-space: pre-wrap; }
+.sb-chat-card__result-line { display: block; }
+.shadowbase.sb-chat-card.is-success .sb-chat-card__result-line:first-child { color: var(--sb-card-success); }
+.shadowbase.sb-chat-card.is-failure .sb-chat-card__result-line:first-child { color: var(--sb-card-failure); }
+
+.sb-chat-card__breakdown {
+  list-style: none;
+  margin: 0.35rem 0 0;
+  padding: 0.3rem 0.45rem;
+  border: 1px solid var(--sb-card-border);
+  border-radius: var(--sb-card-radius);
+  background: color-mix(in srgb, var(--sb-card-bg) 80%, black);
+  font-size: 0.7rem;
+}
+.sb-chat-card__breakdown li { display: flex; justify-content: space-between; gap: 0.5rem; }
+.sb-chat-card__value { font-weight: 700; font-family: var(--font-mono, ui-monospace, monospace); }
+
+.sb-chat-card__shots { list-style: none; margin: 0.25rem 0 0; padding: 0; }
+.sb-chat-card__shot {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.5rem;
+  padding: 0.1rem 0;
+  border-bottom: 1px dashed var(--sb-card-border);
+}
+.sb-chat-card__shot:last-child { border-bottom: 0; }
+.sb-chat-card__tag { font-weight: 700; color: var(--sb-card-failure); }
+.sb-chat-card__shot.is-hit .sb-chat-card__tag { color: var(--sb-card-success); }
+.sb-chat-card__shot.is-malfunction .sb-chat-card__tag { color: var(--sb-card-accent); }
+.sb-chat-card__shot.is-unrollable { opacity: 0.7; }
+
+.sb-chat-card__power { margin: 0 0 0.3rem; font-size: 0.7rem; color: var(--sb-card-muted); }
+.sb-chat-card__effect { margin: 0.35rem 0 0; font-size: 0.72rem; color: var(--sb-card-muted); }
+.sb-chat-card__hint { margin: 0.35rem 0 0; font-size: 0.68rem; font-style: italic; }
+
+.sb-chat-card__advisories {
+  margin-top: 0.35rem;
+  padding: 0.3rem 0.45rem;
+  border: 1px solid color-mix(in srgb, var(--sb-card-accent) 40%, transparent);
+  border-radius: var(--sb-card-radius);
+  background: color-mix(in srgb, var(--sb-card-accent) 10%, transparent);
+  font-size: 0.7rem;
+}
+.sb-chat-card__advisory { margin: 0.1rem 0; }
+.sb-chat-card__advisory strong { color: var(--sb-card-accent); }
+.sb-chat-card__advisory-title { margin: 0 0 0.2rem; font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--sb-card-accent); }
+
+.sb-chat-card__notice-lines { margin: 0; padding-left: 1.1rem; }
+.sb-chat-card__notice-lines li { margin: 0.1rem 0; }
+
+.sb-chat-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.45rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--sb-card-border);
+}
+.sb-chat-card__costs { margin-right: auto; font-size: 0.7rem; color: var(--sb-card-muted); }
+.sb-chat-card .sb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: auto;
+  height: auto;
+  line-height: 1.2;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: var(--sb-card-radius);
+  border: 1px solid var(--sb-card-border);
+  background: transparent;
+  color: var(--sb-card-fg);
+  cursor: pointer;
+}
+.sb-chat-card .sb-btn:hover { border-color: var(--sb-card-primary); box-shadow: none; }
+.sb-chat-card .sb-btn-destructive { border-color: var(--sb-card-destructive); color: var(--sb-card-destructive); }
+.sb-chat-card .sb-btn-secondary { border-color: var(--sb-card-primary); color: var(--sb-card-primary); }
+
+/* The roll prompt (module/apps/roll-dialog.mjs). */
+.sb-roll-dialog .sb-roll-dialog__label { margin: 0 0 0.25rem; color: var(--sb-card-primary, hsl(199 89% 48%)); }
+.sb-roll-dialog .sb-roll-dialog__base { margin: 0 0 0.5rem; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75; }
+.sb-roll-dialog .sb-roll-dialog__malf { margin: 0 0 0.5rem; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; color: hsl(var(--accent, 38 92% 50%)); }
+.sb-roll-dialog .form-group { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin: 0.35rem 0; }
+.sb-roll-dialog input[type="number"], .sb-roll-dialog select { max-width: 9rem; }

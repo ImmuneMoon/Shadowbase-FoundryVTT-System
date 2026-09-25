@@ -1,0 +1,34 @@
+{
+  "_id": "hU9JXxECPyBJyIEj",
+  "_key": "!items!hU9JXxECPyBJyIEj",
+  "name": "Compulsive Behavior (Snobbery/Elitism)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "KbQ0mAMpcz5zmcEs",
+  "sort": 5400000,
+  "system": {
+    "row": {
+      "name": "Compulsive Behavior (Snobbery/Elitism)",
+      "points": -5,
+      "level": null,
+      "description": "You may have an ingrained belief in your own superiority or the superiority of Core World culture, leading to arrogance or condescension towards others, especially those from the Outer Rim or lower classes. This can alienate potential allies and provide leverage for those who exploit your prejudices. Range: -5 to -10 points.",
+      "category": "Cultural / Background",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Compulsive Behavior (Snobbery/Elitism)|Cultural / Background"
+    }
+  }
+}

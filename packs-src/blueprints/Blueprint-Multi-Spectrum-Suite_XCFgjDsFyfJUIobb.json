@@ -1,0 +1,42 @@
+{
+  "_id": "XCFgjDsFyfJUIobb",
+  "_key": "!items!XCFgjDsFyfJUIobb",
+  "name": "Blueprint: Multi-Spectrum Suite",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "idvhLPGyw0BIk332",
+  "sort": 27900000,
+  "system": {
+    "row": {
+      "id": "0810fd61-d324-4293-9005-cffa01d36128",
+      "name": "Blueprint: Multi-Spectrum Suite",
+      "cost": 294,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Multi-Spectrum Suite (Generation 0, proven, encoded, catalog design). Required to build Multi-Spectrum Suite; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Multi-Spectrum Suite",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1200,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Sensor|Multi-Spectrum Suite"
+    }
+  }
+}

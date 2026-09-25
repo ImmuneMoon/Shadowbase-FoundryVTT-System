@@ -1,0 +1,42 @@
+{
+  "_id": "1T9mkifdAOTnQkfV",
+  "_key": "!items!1T9mkifdAOTnQkfV",
+  "name": "Aurodium",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "kfQydMv29Z6e9EC4",
+  "sort": 900000,
+  "system": {
+    "row": {
+      "name": "Aurodium",
+      "rarity": "Ultra Rare",
+      "cost": 10000,
+      "density": 1200,
+      "category": "Raw Materials",
+      "subCategory": "Precious",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Highly valuable metal used primarily for currency and gold aesthetic adornment.",
+      "id": "226e6e04-3d76-43c0-a0dd-c788562b4769",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Aurodium"
+    }
+  }
+}

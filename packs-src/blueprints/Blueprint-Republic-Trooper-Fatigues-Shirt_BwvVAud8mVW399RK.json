@@ -1,0 +1,42 @@
+{
+  "_id": "BwvVAud8mVW399RK",
+  "_key": "!items!BwvVAud8mVW399RK",
+  "name": "Blueprint: Republic Trooper Fatigues (Shirt)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 17600000,
+  "system": {
+    "row": {
+      "id": "7ec08ed1-32b8-45e0-9e45-95eb123efc19",
+      "name": "Blueprint: Republic Trooper Fatigues (Shirt)",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Republic Trooper Fatigues (Shirt) (Generation 0, proven, encoded, catalog design). Required to build Republic Trooper Fatigues (Shirt); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Republic Trooper Fatigues (Shirt)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 2.666666666666667,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Republic Trooper Fatigues (Shirt)"
+    }
+  }
+}

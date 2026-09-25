@@ -1,0 +1,42 @@
+{
+  "_id": "TVHl7V0bkEFwg5M9",
+  "_key": "!items!TVHl7V0bkEFwg5M9",
+  "name": "Nutrient Paste",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "SWSgchplcyxAp6ww",
+  "sort": 9100000,
+  "system": {
+    "row": {
+      "name": "Nutrient Paste",
+      "rarity": "Very Common",
+      "cost": 5,
+      "density": 70,
+      "category": "Raw Materials",
+      "subCategory": "Medical",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Dense, synthesized caloric and vitamin survival food.",
+      "id": "f9e2bfbb-0421-4ec7-afee-2cab45d9c0ce",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Nutrient Paste"
+    }
+  }
+}

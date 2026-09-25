@@ -1,0 +1,34 @@
+{
+  "_id": "GFihmsFS0MlGGd0t",
+  "_key": "!items!GFihmsFS0MlGGd0t",
+  "name": "Code of Honor (Wookiee)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "KbQ0mAMpcz5zmcEs",
+  "sort": 6100000,
+  "system": {
+    "row": {
+      "name": "Code of Honor (Wookiee)",
+      "points": -10,
+      "level": null,
+      "description": "You live by the honor code of Kashyyyk: loyalty to family and clan above self, courage in the face of any enemy, hospitality to guests, and the duty to repay a debt in full. A life debt is one expression of this code - a Wookiee whose life is saved is bound to protect their rescuer, and their family, for as long as it takes. Breaking the code brings shame before all Wookiees, and a Wookiee who turns their claws on another in anger is cast out. Like any Code of Honor, it can be used to steer you into actions you would rather refuse, or to hold you to a promise.",
+      "category": "Cultural / Background",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Code of Honor (Wookiee)|Cultural / Background"
+    }
+  }
+}

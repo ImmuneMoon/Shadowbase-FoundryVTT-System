@@ -1,0 +1,19 @@
+{
+  "_id": "lfXIbDoNBuuBniFz",
+  "_key": "!folders!lfXIbDoNBuuBniFz",
+  "name": "Slugthrowers",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 900000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "path": [
+        "Slugthrowers"
+      ]
+    }
+  }
+}

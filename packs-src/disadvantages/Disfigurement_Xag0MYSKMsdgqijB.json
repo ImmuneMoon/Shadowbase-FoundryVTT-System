@@ -1,0 +1,34 @@
+{
+  "_id": "Xag0MYSKMsdgqijB",
+  "_key": "!items!Xag0MYSKMsdgqijB",
+  "name": "Disfigurement",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "iBhK8LHSekCOv5gO",
+  "sort": 14400000,
+  "system": {
+    "row": {
+      "name": "Disfigurement",
+      "points": -10,
+      "level": null,
+      "description": "You have a prominent scar, deformity, or other physical mark that causes negative reactions from others. This can make social interactions difficult and you may be shunned or targeted by prejudiced individuals.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Disfigurement|Physical"
+    }
+  }
+}

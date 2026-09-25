@@ -1,0 +1,34 @@
+{
+  "_id": "cQfRmBZeQix3VWpC",
+  "_key": "!items!cQfRmBZeQix3VWpC",
+  "name": "Jealousy",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 11000000,
+  "system": {
+    "row": {
+      "name": "Jealousy",
+      "points": -10,
+      "level": null,
+      "description": "You feel envy and resentment toward others' possessions, achievements, or relationships. This can be stoked by manipulative individuals to turn you against allies or drive you to reckless acts.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Jealousy|Mental"
+    }
+  }
+}

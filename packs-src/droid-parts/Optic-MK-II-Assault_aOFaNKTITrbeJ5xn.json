@@ -1,0 +1,39 @@
+{
+  "_id": "aOFaNKTITrbeJ5xn",
+  "_key": "!items!aOFaNKTITrbeJ5xn",
+  "name": "Optic (MK II Assault)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "oqIU8n2TNn1530V9",
+  "sort": 2800000,
+  "system": {
+    "row": {
+      "id": "713d7991-2199-4ef8-9e4b-44dd2a91c06d",
+      "name": "Optic (MK II Assault)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Sensor",
+      "cost": 1504,
+      "weight": 2,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "optic-mkii-assault",
+      "description": "Infravision, Night Vision 5"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "optic-mkii-assault"
+    }
+  }
+}

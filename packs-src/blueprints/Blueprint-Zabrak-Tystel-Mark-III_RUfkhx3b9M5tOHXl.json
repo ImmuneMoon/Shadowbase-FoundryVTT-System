@@ -1,0 +1,42 @@
+{
+  "_id": "RUfkhx3b9M5tOHXl",
+  "_key": "!items!RUfkhx3b9M5tOHXl",
+  "name": "Blueprint: Zabrak Tystel Mark III",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Msjm8tq0CvBX1hii",
+  "sort": 32000000,
+  "system": {
+    "row": {
+      "id": "d76d6017-bfa1-4723-a9e7-6ee45dfd4eb8",
+      "name": "Blueprint: Zabrak Tystel Mark III",
+      "cost": 635,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Zabrak Tystel Mark III (Generation 0, proven, encoded, catalog design). Required to build Zabrak Tystel Mark III; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Zabrak Tystel Mark III",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 4610,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Heavy Pistols|Zabrak Tystel Mark III"
+    }
+  }
+}

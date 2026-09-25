@@ -1,0 +1,42 @@
+{
+  "_id": "gUULOTDRBfk84Cv7",
+  "_key": "!items!gUULOTDRBfk84Cv7",
+  "name": "Blueprint: Bowcaster",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "kwAEXZ4PgPp7KZ6S",
+  "sort": 12400000,
+  "system": {
+    "row": {
+      "id": "4fddaa96-45ae-4441-999f-d6ba9e113a1c",
+      "name": "Blueprint: Bowcaster",
+      "cost": 1019,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Bowcaster (Generation 0, proven, encoded, catalog design). Required to build Bowcaster; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Bowcaster",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 8448,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Bowcasters|Bowcaster"
+    }
+  }
+}

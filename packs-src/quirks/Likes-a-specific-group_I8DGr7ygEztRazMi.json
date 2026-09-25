@@ -1,0 +1,32 @@
+{
+  "_id": "I8DGr7ygEztRazMi",
+  "_key": "!items!I8DGr7ygEztRazMi",
+  "name": "Likes a specific group",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 2600000,
+  "system": {
+    "row": {
+      "name": "Likes a specific group",
+      "points": -1,
+      "description": "You have a notable fondness for a particular group, such as Wookiees, droids, or a specific alien culture.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Likes a specific group"
+    }
+  }
+}

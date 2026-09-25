@@ -1,0 +1,41 @@
+{
+  "_id": "INF2266KYfb4SZlI",
+  "_key": "!items!INF2266KYfb4SZlI",
+  "name": "Blast Padding (Legs)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "g3ttGbCetYWw12Jx",
+  "sort": 2500000,
+  "system": {
+    "row": {
+      "id": "d17b5b84-072f-4e4a-958b-b4a9d23fc1c2",
+      "name": "Blast Padding (Legs)",
+      "category": "Underlay Mod",
+      "cost": 80,
+      "weight": 1,
+      "notes": "+2 DR vs. explosive damage to that location. Imposes DX -1 while worn.",
+      "equipped": false,
+      "quantity": 1,
+      "validSlots": [
+        "Legs",
+        "Droid Leg"
+      ],
+      "drBonus": 2
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "key": "Blast Padding (Legs)"
+    }
+  }
+}

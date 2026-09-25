@@ -1,0 +1,41 @@
+{
+  "_id": "vQtUCN1tKtJijbdu",
+  "_key": "!items!vQtUCN1tKtJijbdu",
+  "name": "Purple Kyber",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "orWVaxdlAjqEWg6h",
+  "sort": 5500000,
+  "system": {
+    "row": {
+      "id": "37736d4f-7f41-41bd-ae39-d65d804f81a1",
+      "name": "Purple Kyber",
+      "rarity": "Uncommon",
+      "cost": 8000,
+      "weight": 0.2,
+      "baseDamageDice": 5,
+      "baseDamageAdds": 0,
+      "effect": "5d base energy. x1.25 to Force Points. Natural.",
+      "category": "Lightsaber Primary Crystal",
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "5d base energy. x1.25 to Force Points. Natural."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:purple-kyber"
+    }
+  }
+}

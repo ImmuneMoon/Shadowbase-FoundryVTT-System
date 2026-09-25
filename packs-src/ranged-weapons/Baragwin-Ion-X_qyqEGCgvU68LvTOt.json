@@ -1,0 +1,225 @@
+{
+  "_id": "qyqEGCgvU68LvTOt",
+  "_key": "!items!qyqEGCgvU68LvTOt",
+  "name": "Baragwin Ion-X",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "kvW0wIZQTzAxW6LY",
+  "sort": 700000,
+  "system": {
+    "row": {
+      "id": "bfe1908c-b721-41ca-9d5d-b465dbbaf328",
+      "customName": "Baragwin Ion-X",
+      "baseType": "Baragwin Ion-X",
+      "baseSkill": "Guns (Blaster Heavy Weapons)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 13.5,
+      "finalWeight": 13.5,
+      "baseCost": 938,
+      "finalCost": 5628,
+      "currentCharges": 100,
+      "maxCharges": 100,
+      "loadedAmmunitionId": "ed18856a-d4d4-432e-a4b6-6e8f1097c5e6",
+      "loadedAmmunitionData": {
+        "id": "ed18856a-d4d4-432e-a4b6-6e8f1097c5e6",
+        "name": "Rifle Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "A larger, more robust pack used for rifles and carbines. A gas top-up (30 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "rifle-stock",
+        "inventoryId": "a50e9700-6dba-4b33-938a-0375c97824c5",
+        "materialId": "durasteel"
+      },
+      "receiverPart": {
+        "partId": "heavy-ion-chamber",
+        "inventoryId": "ff28f4f9-21e2-4eca-bfee-725c996be2b6",
+        "materialId": "durasteel"
+      },
+      "barrelPart": {
+        "partId": "long-emitter",
+        "inventoryId": "94828399-14cd-4b0b-9f3a-3afeb5502367",
+        "materialId": "durasteel"
+      },
+      "targetingPart": {
+        "partId": "artillery-targeting",
+        "inventoryId": "a2c78bf2-6e3d-4880-9a2f-dbf8d4213db1"
+      },
+      "powerUnitPart": {
+        "partId": "rifle-pwr-pack",
+        "inventoryId": "086fe9d5-3513-41fa-a1e2-dc238198de67"
+      },
+      "powerCellModId": "b7eefc8b-42af-47b3-9977-6cd2e8e93e7b",
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "bfe1908c-b721-41ca-9d5d-b465dbbaf328",
+        "customName": "Baragwin Ion-X",
+        "baseType": "Baragwin Ion-X",
+        "baseSkill": "Guns (Blaster Heavy Weapons)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 13.5,
+        "finalWeight": 13.5,
+        "baseCost": 938,
+        "finalCost": 5628,
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "loadedAmmunitionId": "ed18856a-d4d4-432e-a4b6-6e8f1097c5e6",
+        "loadedAmmunitionData": {
+          "id": "ed18856a-d4d4-432e-a4b6-6e8f1097c5e6",
+          "name": "Rifle Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 100,
+          "maxCharges": 100,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "A larger, more robust pack used for rifles and carbines. A gas top-up (30 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "rifle-stock",
+          "inventoryId": "a50e9700-6dba-4b33-938a-0375c97824c5",
+          "materialId": "durasteel"
+        },
+        "receiverPart": {
+          "partId": "heavy-ion-chamber",
+          "inventoryId": "ff28f4f9-21e2-4eca-bfee-725c996be2b6",
+          "materialId": "durasteel"
+        },
+        "barrelPart": {
+          "partId": "long-emitter",
+          "inventoryId": "94828399-14cd-4b0b-9f3a-3afeb5502367",
+          "materialId": "durasteel"
+        },
+        "targetingPart": {
+          "partId": "artillery-targeting",
+          "inventoryId": "a2c78bf2-6e3d-4880-9a2f-dbf8d4213db1"
+        },
+        "powerUnitPart": {
+          "partId": "rifle-pwr-pack",
+          "inventoryId": "086fe9d5-3513-41fa-a1e2-dc238198de67"
+        },
+        "powerCellModId": "b7eefc8b-42af-47b3-9977-6cd2e8e93e7b",
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "a50e9700-6dba-4b33-938a-0375c97824c5",
+          "name": "Rifle Stock",
+          "partId": "rifle-stock",
+          "category": "Ranged Grip",
+          "materialId": "durasteel",
+          "cost": 246,
+          "weight": 4.9,
+          "isInstalled": true,
+          "installedInBlasterId": "bfe1908c-b721-41ca-9d5d-b465dbbaf328",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "2-handed, full shoulder stock."
+        },
+        {
+          "id": "ff28f4f9-21e2-4eca-bfee-725c996be2b6",
+          "name": "Heavy Ion Chamber",
+          "partId": "heavy-ion-chamber",
+          "category": "Ranged Receiver",
+          "materialId": "durasteel",
+          "cost": 98,
+          "weight": 1.96,
+          "isInstalled": true,
+          "installedInBlasterId": "bfe1908c-b721-41ca-9d5d-b465dbbaf328",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Heavy Ion."
+        },
+        {
+          "id": "94828399-14cd-4b0b-9f3a-3afeb5502367",
+          "name": "Long Emitter",
+          "partId": "long-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "durasteel",
+          "cost": 98,
+          "weight": 1.96,
+          "isInstalled": true,
+          "installedInBlasterId": "bfe1908c-b721-41ca-9d5d-b465dbbaf328",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "a2c78bf2-6e3d-4880-9a2f-dbf8d4213db1",
+          "name": "Artillery Targeting Module",
+          "partId": "artillery-targeting",
+          "category": "Ranged Targeting",
+          "cost": 250,
+          "weight": 3,
+          "isInstalled": true,
+          "installedInBlasterId": "bfe1908c-b721-41ca-9d5d-b465dbbaf328",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Heavy vehicle-grade targeting arrays."
+        },
+        {
+          "id": "086fe9d5-3513-41fa-a1e2-dc238198de67",
+          "name": "Rifle Power Pack",
+          "partId": "rifle-pwr-pack",
+          "category": "Power Unit",
+          "cost": 210,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInBlasterId": "bfe1908c-b721-41ca-9d5d-b465dbbaf328",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "b7eefc8b-42af-47b3-9977-6cd2e8e93e7b",
+          "name": "Phased-Plasma Modulator",
+          "category": "Power Cell",
+          "cost": 36,
+          "weight": 0.7,
+          "isInstalled": true,
+          "installedInBlasterId": "bfe1908c-b721-41ca-9d5d-b465dbbaf328",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Grants the weapon's damage an Armor Divisor of (2)."
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Baragwin Ion-X"
+    }
+  }
+}

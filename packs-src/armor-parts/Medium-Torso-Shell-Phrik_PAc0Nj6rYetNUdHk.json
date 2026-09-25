@@ -1,0 +1,42 @@
+{
+  "_id": "PAc0Nj6rYetNUdHk",
+  "_key": "!items!PAc0Nj6rYetNUdHk",
+  "name": "Medium Torso Shell (Phrik)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 2400000,
+  "system": {
+    "row": {
+      "id": "48ce3ea5-2019-49a4-99bc-0705b4ec6bef",
+      "name": "Medium Torso Shell (Phrik)",
+      "category": "Armor Shell",
+      "cost": 66015,
+      "weight": 7.34,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-medium-torso-phrik",
+      "materialId": "phrik",
+      "notes": "Nearly indestructible, highly lightsaber-resistant. Medium and Heavy tiers only -- it is not milled thin.",
+      "validSlots": [],
+      "drBonus": 17,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-medium-torso-phrik"
+    }
+  }
+}

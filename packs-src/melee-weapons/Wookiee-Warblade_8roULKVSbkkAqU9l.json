@@ -1,0 +1,123 @@
+{
+  "_id": "8roULKVSbkkAqU9l",
+  "_key": "!items!8roULKVSbkkAqU9l",
+  "name": "Wookiee Warblade",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "d4eK6lRChskXlqOO",
+  "sort": 3600000,
+  "system": {
+    "row": {
+      "id": "b80bc7a0-bfcb-440c-ba92-9391e421f88c",
+      "customName": "Wookiee Warblade",
+      "baseType": "Wookiee Warblade",
+      "baseSkill": "Broadsword",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": null,
+      "maxCharges": null,
+      "condition": "Fine",
+      "baseReach": "1, 2",
+      "baseWeight": 5.86,
+      "finalWeight": 5.86,
+      "baseCost": 2132,
+      "finalCost": 4264,
+      "gripParts": [
+        {
+          "inventoryId": "752361ed-bd2f-4cbe-90c3-51f16aadfb9a",
+          "materialId": "wroshyr",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "d2daa39b-1e28-451b-b63c-2b4fe9923b0c",
+          "materialId": "mullinine",
+          "quantity": 1
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "b80bc7a0-bfcb-440c-ba92-9391e421f88c",
+        "customName": "Wookiee Warblade",
+        "baseType": "Wookiee Warblade",
+        "baseSkill": "Broadsword",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": null,
+        "maxCharges": null,
+        "condition": "Fine",
+        "baseReach": "1, 2",
+        "baseWeight": 5.86,
+        "finalWeight": 5.86,
+        "baseCost": 2132,
+        "finalCost": 4264,
+        "gripParts": [
+          {
+            "inventoryId": "752361ed-bd2f-4cbe-90c3-51f16aadfb9a",
+            "materialId": "wroshyr",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "d2daa39b-1e28-451b-b63c-2b4fe9923b0c",
+            "materialId": "mullinine",
+            "quantity": 1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "752361ed-bd2f-4cbe-90c3-51f16aadfb9a",
+          "name": "Extended Hilt",
+          "category": "Melee Grip",
+          "materialId": "wroshyr",
+          "cost": 152,
+          "weight": 1.9,
+          "isInstalled": true,
+          "installedInMeleeId": "b80bc7a0-bfcb-440c-ba92-9391e421f88c",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Two-Handed Sword. 1 or 2 hands.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "d2daa39b-1e28-451b-b63c-2b4fe9923b0c",
+          "name": "Heavy Cleaver",
+          "category": "Melee Head",
+          "materialId": "mullinine",
+          "cost": 1980,
+          "weight": 3.96,
+          "isInstalled": true,
+          "installedInMeleeId": "b80bc7a0-bfcb-440c-ba92-9391e421f88c",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Unbalanced.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Wookiee Warblade"
+    }
+  }
+}

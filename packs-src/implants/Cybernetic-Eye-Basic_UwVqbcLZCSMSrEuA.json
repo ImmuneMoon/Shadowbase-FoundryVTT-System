@@ -1,0 +1,39 @@
+{
+  "_id": "UwVqbcLZCSMSrEuA",
+  "_key": "!items!UwVqbcLZCSMSrEuA",
+  "name": "Cybernetic Eye (Basic)",
+  "type": "implant",
+  "img": "icons/svg/regen.svg",
+  "folder": "STmujteizjG6Ekf7",
+  "sort": 1600000,
+  "system": {
+    "row": {
+      "id": "a1fd12ba-cbc1-4ac5-8720-f4b871b38526",
+      "name": "Cybernetic Eye (Basic)",
+      "cost": 1872,
+      "finalCp": 5,
+      "effect": "Protected Vision",
+      "category": "Sensory",
+      "pathways": [],
+      "slotType": "Eye",
+      "installed": false,
+      "weight": 0.1,
+      "notes": "Trait Package: 5 CP of Advantages (Protected Vision); Mandatory Flaws offset. Materials: Plastoid: 0.08 lbs (3 cr), Silicon: 0.02 lbs (1 cr)."
+    },
+    "source": "implants",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "implants"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "implants",
+      "key": "Sensory|Cybernetic Eye (Basic)"
+    }
+  }
+}

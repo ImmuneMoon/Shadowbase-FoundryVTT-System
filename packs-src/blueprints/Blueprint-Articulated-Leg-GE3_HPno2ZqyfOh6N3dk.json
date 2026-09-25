@@ -1,0 +1,42 @@
+{
+  "_id": "HPno2ZqyfOh6N3dk",
+  "_key": "!items!HPno2ZqyfOh6N3dk",
+  "name": "Blueprint: Articulated Leg (GE3)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "aIx8UcDfl9Lpb4Iz",
+  "sort": 24700000,
+  "system": {
+    "row": {
+      "id": "b05fb393-c92b-4f52-8865-ec463276eb92",
+      "name": "Blueprint: Articulated Leg (GE3)",
+      "cost": 368,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Articulated Leg (GE3) (Generation 0, proven, encoded, catalog design). Required to build Articulated Leg (GE3); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Articulated Leg (GE3)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1935,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Leg|Articulated Leg (GE3)"
+    }
+  }
+}

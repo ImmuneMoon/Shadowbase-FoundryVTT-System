@@ -1,0 +1,166 @@
+{
+  "_id": "jjx5YvnOl9Xh9TI3",
+  "_key": "!items!jjx5YvnOl9Xh9TI3",
+  "name": "Cortosis Parrying Dagger",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "TxRySmb0kP2FQfVP",
+  "sort": 400000,
+  "system": {
+    "row": {
+      "id": "cb4d4058-34c0-4bf3-a2cc-da257f6df177",
+      "customName": "Cortosis Parrying Dagger",
+      "baseType": "Cortosis Parrying Dagger",
+      "baseSkill": "Jitte/Sai",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": null,
+      "maxCharges": null,
+      "condition": "Fine",
+      "baseReach": "C, 1",
+      "baseWeight": 1.57,
+      "finalWeight": 1.57,
+      "baseCost": 1578,
+      "finalCost": 3156,
+      "gripParts": [
+        {
+          "inventoryId": "f6786f07-281a-473d-a8ca-e95051578053",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "100c64d6-dc28-425d-ab1e-07a38c388c43",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "guardParts": [
+        {
+          "inventoryId": "bce5cd78-1e7e-45fd-985e-f69eaacaa6b5",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "edgeAccentModId": "cebd0cb2-c95f-4555-a661-685e71ec059c"
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "cb4d4058-34c0-4bf3-a2cc-da257f6df177",
+        "customName": "Cortosis Parrying Dagger",
+        "baseType": "Cortosis Parrying Dagger",
+        "baseSkill": "Jitte/Sai",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": null,
+        "maxCharges": null,
+        "condition": "Fine",
+        "baseReach": "C, 1",
+        "baseWeight": 1.57,
+        "finalWeight": 1.57,
+        "baseCost": 1578,
+        "finalCost": 3156,
+        "gripParts": [
+          {
+            "inventoryId": "f6786f07-281a-473d-a8ca-e95051578053",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "100c64d6-dc28-425d-ab1e-07a38c388c43",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "guardParts": [
+          {
+            "inventoryId": "bce5cd78-1e7e-45fd-985e-f69eaacaa6b5",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "edgeAccentModId": "cebd0cb2-c95f-4555-a661-685e71ec059c"
+      },
+      "parts": [
+        {
+          "id": "f6786f07-281a-473d-a8ca-e95051578053",
+          "name": "Short Hilt",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 26,
+          "weight": 0.49,
+          "isInstalled": true,
+          "installedInMeleeId": "cb4d4058-34c0-4bf3-a2cc-da257f6df177",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Knife/Smallsword. 1-handed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "100c64d6-dc28-425d-ab1e-07a38c388c43",
+          "name": "Thrusting Point",
+          "category": "Melee Head",
+          "materialId": "durasteel",
+          "cost": 26,
+          "weight": 0.49,
+          "isInstalled": true,
+          "installedInMeleeId": "cb4d4058-34c0-4bf3-a2cc-da257f6df177",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Balanced.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "bce5cd78-1e7e-45fd-985e-f69eaacaa6b5",
+          "name": "Crossguard",
+          "category": "Melee Guard",
+          "materialId": "durasteel",
+          "cost": 26,
+          "weight": 0.49,
+          "isInstalled": true,
+          "installedInMeleeId": "cb4d4058-34c0-4bf3-a2cc-da257f6df177",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Provides DR 3 to hand.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "cebd0cb2-c95f-4555-a661-685e71ec059c",
+          "name": "Cortosis Weave Guard",
+          "category": "edgeAccentMod",
+          "cost": 1500,
+          "weight": 0.1,
+          "isInstalled": true,
+          "installedInMeleeId": "cb4d4058-34c0-4bf3-a2cc-da257f6df177",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Grants on block vs lightsaber: roll 3d, if not crit fail, disrupts Lightsaber for 2d-2 sec, for a minimum of 2 sec. +3 Dur to energy resistance. Requires Armstech (the weapon's specialty).",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Cortosis Parrying Dagger"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "7vJAlAvB63Ocz8hH",
+  "_key": "!items!7vJAlAvB63Ocz8hH",
+  "name": "Bloodlust",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 8500000,
+  "system": {
+    "row": {
+      "name": "Bloodlust",
+      "points": -10,
+      "level": null,
+      "description": "You have a compulsive urge to kill or inflict grievous harm in combat.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Bloodlust|Mental"
+    }
+  }
+}

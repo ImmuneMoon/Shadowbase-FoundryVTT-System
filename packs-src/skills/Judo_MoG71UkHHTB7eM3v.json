@@ -1,0 +1,34 @@
+{
+  "_id": "MoG71UkHHTB7eM3v",
+  "_key": "!items!MoG71UkHHTB7eM3v",
+  "name": "Judo",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "Qk98hM4zoKa5Uio8",
+  "sort": 7300000,
+  "system": {
+    "row": {
+      "name": "Judo",
+      "level": "",
+      "points": null,
+      "relativeLevel": "DX/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Judo"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "_id": "FTwBpjbEgp7Ad8VH",
+  "_key": "!items!FTwBpjbEgp7Ad8VH",
+  "name": "Echani \"Saber-Catcher\"",
+  "type": "cyberneticLimb",
+  "img": "icons/svg/bones.svg",
+  "folder": "Ion0lHQozspiLAyd",
+  "sort": 400000,
+  "system": {
+    "row": {
+      "id": "6e27b7f9-41a4-42fc-9a2a-c9ffd69c0c35",
+      "name": "Echani \"Saber-Catcher\"",
+      "location": "Right Hand",
+      "extent": "Partial",
+      "material": "Cortosis-Durasteel",
+      "cost": 8460,
+      "weight": 3.65,
+      "dr": 6,
+      "currentDr": 6,
+      "effect": "+3 to DR  vs energy (burn/ cr) damage. disrupts lightsabers on contact.",
+      "upgrades": [],
+      "hasSynthskin": false,
+      "installed": false,
+      "storageLocationId": null,
+      "quantity": 1,
+      "baselinePoints": 0,
+      "itemSizeModifier": 0
+    },
+    "source": "cybernetics",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-limbs"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-limbs",
+      "key": "Hand|Echani \"Saber-Catcher\""
+    }
+  }
+}

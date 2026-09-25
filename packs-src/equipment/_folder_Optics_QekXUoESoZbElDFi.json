@@ -1,0 +1,20 @@
+{
+  "_id": "QekXUoESoZbElDFi",
+  "_key": "!folders!QekXUoESoZbElDFi",
+  "name": "Optics",
+  "type": "Item",
+  "folder": "3XecnUQT2Vf6eRWf",
+  "sorting": "a",
+  "sort": 2000000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "path": [
+        "Raw Materials",
+        "Optics"
+      ]
+    }
+  }
+}

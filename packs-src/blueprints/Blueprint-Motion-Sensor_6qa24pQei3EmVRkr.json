@@ -1,0 +1,42 @@
+{
+  "_id": "6qa24pQei3EmVRkr",
+  "_key": "!items!6qa24pQei3EmVRkr",
+  "name": "Blueprint: Motion Sensor",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "xtHjuvh0p0WoiA5W",
+  "sort": 44800000,
+  "system": {
+    "row": {
+      "id": "054ccd2e-8209-46e2-89e6-f3b8cd0251cc",
+      "name": "Blueprint: Motion Sensor",
+      "cost": 339,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Motion Sensor (Generation 0, proven, encoded, catalog design). Required to build Motion Sensor; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Motion Sensor",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1650,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Restraints & Security|Motion Sensor"
+    }
+  }
+}

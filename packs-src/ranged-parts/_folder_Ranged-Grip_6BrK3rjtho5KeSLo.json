@@ -1,0 +1,19 @@
+{
+  "_id": "6BrK3rjtho5KeSLo",
+  "_key": "!folders!6BrK3rjtho5KeSLo",
+  "name": "Ranged Grip",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 0,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "path": [
+        "Ranged Grip"
+      ]
+    }
+  }
+}

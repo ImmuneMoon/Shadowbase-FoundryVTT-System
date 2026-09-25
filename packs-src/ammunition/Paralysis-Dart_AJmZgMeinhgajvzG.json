@@ -1,0 +1,65 @@
+{
+  "_id": "AJmZgMeinhgajvzG",
+  "_key": "!items!AJmZgMeinhgajvzG",
+  "name": "Paralysis Dart",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "Q5SU8xBIJ2uiJh6y",
+  "sort": 2900000,
+  "system": {
+    "row": {
+      "name": "Paralysis Dart",
+      "craftingCategory": "Ammunition",
+      "projectileClass": "special",
+      "type": "Dart Magazine",
+      "maxCharges": 1,
+      "cost": 1238,
+      "weight": 0.2,
+      "formula": "1d",
+      "notes": "HT-4 or Paralysis for 1 hr.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.15
+        },
+        {
+          "name": "Senflax",
+          "amount": 0.05
+        }
+      ],
+      "payloadRolls": [
+        {
+          "skill": "Chemistry",
+          "or": "Poisons",
+          "description": "Synthesising the sleep agent and securing it in the delivery system."
+        }
+      ],
+      "id": "06e7a005-b90b-4d48-9cd0-2446555c2247",
+      "quantity": 1,
+      "currentCharges": 1,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 1238,
+      "baseWeight": 0.2,
+      "containerType": "None",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Paralysis Dart"
+    }
+  }
+}

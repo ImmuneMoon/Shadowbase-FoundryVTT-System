@@ -1,0 +1,9 @@
+{{!-- shadowbase.empty - what an empty section says (src/components/character-sheet/components/section-empty-state.tsx):
+     an icon, what lives here, why it matters, and which button starts you off.
+     Params: icon (FA class), title (text), description (text), action (button name text or ''). --}}
+<div class="sb-empty">
+  <i class="{{icon}}"></i>
+  <p class="sb-empty__title">{{title}}</p>
+  <p class="sb-empty__description">{{description}}</p>
+  {{#if action}}<p class="sb-empty__action">{{localize "SHADOWBASE.Sheet.Empty.StartWith"}} <b>{{action}}</b> {{localize "SHADOWBASE.Sheet.Empty.Below"}}</p>{{/if}}
+</div>

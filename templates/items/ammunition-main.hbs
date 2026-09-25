@@ -1,0 +1,50 @@
+{{!-- templates/items/ammunition-main.hbs - ammunition (ammunition-and-modifications-section.tsx:280-330): type, the gas
+     grade of a Power Pack, charges, the full and casing figures with the depleted readouts, a magazine's contents.
+     Context: main (ammunition.mjs), editable, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--ammunition {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <div class="sb-item-grid">
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Ammo.Type"}}</span>
+        <select class="sb-select" name="system.row.type" {{disabled (not editable)}}>{{#each main.types}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{#if main.isPowerPack}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Ammo.GasGrade"}}</span>
+        <select class="sb-select" name="sel.gasGrade" {{disabled (not editable)}}>{{#each main.gasGrades}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{/if}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Ammo.CurrentCharges"}}</span><input type="number" class="sb-input" name="system.row.currentCharges" value="{{main.currentCharges}}" data-dtype="Number" min="0" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Ammo.MaxCharges"}}</span><input type="number" class="sb-input" name="system.row.maxCharges" value="{{main.maxCharges}}" data-dtype="Number" min="0" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Ammo.BaseCost"}}</span><input type="number" class="sb-input" name="system.row.baseCost" value="{{main.baseCost}}" data-dtype="Number" min="0" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Ammo.BaseWeight"}}</span><input type="number" class="sb-input" name="system.row.baseWeight" value="{{main.baseWeight}}" data-dtype="Number" min="0" step="0.01" {{disabled (not editable)}}></label>
+      <div class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Ammo.DepletedCost"}}</span><output class="sb-input sb-input--calc" title="{{localize "SHADOWBASE.Item.Ammo.DepletedHint"}}">{{main.depletedCost}} cr</output></div>
+      <div class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Ammo.DepletedWeight"}}</span><output class="sb-input sb-input--calc" title="{{localize "SHADOWBASE.Item.Ammo.DepletedHint"}}">{{main.depletedWeight}} lb</output></div>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Ammo.Formula"}}</span><input type="text" class="sb-input" name="system.row.formula" value="{{main.formula}}" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Ammo.DamageTypeOverride"}}</span><input type="text" class="sb-input" name="system.row.damageTypeOverride" value="{{main.damageTypeOverride}}" {{disabled (not editable)}}></label>
+    </div>
+    <div class="sb-hrow sb-hrow--tight sb-item__badges">
+      <span class="sb-badge sb-badge-outline sb-mono" title="{{localize "SHADOWBASE.Item.Ammo.ChargeRatioHint"}}"><i class="fa-solid fa-battery-half"></i> {{main.chargeRatio}}%</span>
+      {{#if main.grade}}<span class="sb-badge sb-badge-outline" style="border-color: {{main.grade.color}}">{{main.grade.label}}{{#if main.grade.malfMod}} · Malf {{main.grade.malfMod}}{{/if}}</span>{{/if}}
+      {{#if main.inCatalog}}<span class="sb-badge sb-badge-outline sb-badge-accent">{{localize "SHADOWBASE.Item.Trait.InLibrary"}}</span>{{/if}}
+      {{#if main.isLibraryItem}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Item.Ammo.LibraryItem"}}</span>{{/if}}
+    </div>
+    {{#if main.grade}}<p class="sb-text-muted sb-text-xs">{{main.grade.effect}}</p>{{/if}}
+  </div>
+  {{#if main.isContainer}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Item.Ammo.Contents" n=main.contentsCount}}</h4>
+    <div class="sb-item-grid">
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Ammo.ContainerType"}}</span><input type="text" class="sb-input" name="system.row.containerType" value="{{main.containerType}}" {{disabled (not editable)}}></label>
+    </div>
+    {{#if main.contents.length}}
+    <ul class="sb-ammo-contents">{{#each main.contents}}<li><span class="sb-badge sb-badge-secondary">{{this.name}}{{#if this.formula}} <small class="sb-mono">{{this.formula}}</small>{{/if}}</span></li>{{/each}}</ul>
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="unload-round" {{disabled (not editable)}}><i class="{{sbIcon 'Unplug'}}"></i> {{localize "SHADOWBASE.Item.Ammo.UnloadRound"}}</button>
+    {{else}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Ammo.Empty"}}</p>{{/if}}
+  </div>
+  {{/if}}
+  {{#if main.catalogNotes}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Sheet.Abilities.LibraryDossier"}}</h4>
+    <p class="sb-dossier">{{main.catalogNotes}}</p>
+  </div>
+  {{/if}}
+</section>

@@ -1,0 +1,34 @@
+{
+  "_id": "9Gcp0R7tRJrxRoKb",
+  "_key": "!items!9Gcp0R7tRJrxRoKb",
+  "name": "Lightsaber Construction",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "TmHeseJfr7BHisdh",
+  "sort": 8100000,
+  "system": {
+    "row": {
+      "name": "Lightsaber Construction",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Lightsaber Construction"
+    }
+  }
+}

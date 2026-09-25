@@ -1,0 +1,19 @@
+{
+  "_id": "oIAkFNroktrF45Rp",
+  "_key": "!folders!oIAkFNroktrF45Rp",
+  "name": "Saber",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 1600000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "path": [
+        "Saber"
+      ]
+    }
+  }
+}

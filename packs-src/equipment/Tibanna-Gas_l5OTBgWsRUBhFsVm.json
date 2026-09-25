@@ -1,0 +1,42 @@
+{
+  "_id": "l5OTBgWsRUBhFsVm",
+  "_key": "!items!l5OTBgWsRUBhFsVm",
+  "name": "Tibanna Gas",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "mTXYblXUqFOk3xNT",
+  "sort": 12200000,
+  "system": {
+    "row": {
+      "name": "Tibanna Gas",
+      "rarity": "Common",
+      "cost": 75,
+      "density": 45,
+      "category": "Raw Materials",
+      "subCategory": "Chemical",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Refined blaster gas; ionized by a power pack's charge into a blaster bolt. Priced per pound of compressed reservoir fill (Chapter 11: Power Packs & Blaster Gas).",
+      "id": "9078731f-8693-44b6-9737-aa6d641ec157",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Tibanna Gas"
+    }
+  }
+}

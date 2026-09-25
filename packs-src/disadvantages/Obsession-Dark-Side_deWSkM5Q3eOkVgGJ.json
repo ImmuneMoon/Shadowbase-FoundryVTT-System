@@ -1,0 +1,34 @@
+{
+  "_id": "deWSkM5Q3eOkVgGJ",
+  "_key": "!items!deWSkM5Q3eOkVgGJ",
+  "name": "Obsession (Dark Side)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "77PHdGCAvI5e7tCW",
+  "sort": 500000,
+  "system": {
+    "row": {
+      "name": "Obsession (Dark Side)",
+      "points": -15,
+      "level": null,
+      "description": "You are consumed by the pursuit of Dark Side power or knowledge, often at the expense of all else, including morality or personal safety. This single-minded drive makes you vulnerable to manipulation by Sith Lords or Dark Side cults who can offer pathways to greater power.",
+      "category": "Force-Related",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Obsession (Dark Side)|Force-Related"
+    }
+  }
+}

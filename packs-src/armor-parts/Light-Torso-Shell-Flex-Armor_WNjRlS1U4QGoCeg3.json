@@ -1,0 +1,42 @@
+{
+  "_id": "WNjRlS1U4QGoCeg3",
+  "_key": "!items!WNjRlS1U4QGoCeg3",
+  "name": "Light Torso Shell (Flex-Armor)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 1600000,
+  "system": {
+    "row": {
+      "id": "8305a3ec-a133-4f66-900e-e27d12675475",
+      "name": "Light Torso Shell (Flex-Armor)",
+      "category": "Armor Shell",
+      "cost": 80,
+      "weight": 0.8,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-light-torso-flex-armor",
+      "materialId": "flex-armor",
+      "notes": "Pliable, woven material. Never imposes a Basic Move penalty. Light tier only.",
+      "validSlots": [],
+      "drBonus": 4,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-light-torso-flex-armor"
+    }
+  }
+}

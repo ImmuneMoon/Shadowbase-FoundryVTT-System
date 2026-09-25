@@ -1,0 +1,33 @@
+{
+  "_id": "v4aMDq7D54q5haNx",
+  "_key": "!items!v4aMDq7D54q5haNx",
+  "name": "Double-Jointed",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "GS8kUCPWatq78XxI",
+  "sort": 4200000,
+  "system": {
+    "row": {
+      "name": "Double-Jointed",
+      "points": 5,
+      "description": "You are incredibly flexible, granting bonuses to escape bonds or fit into tight spaces. A valuable trait for a contortionist spy or a thief.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Double-Jointed"
+    }
+  }
+}

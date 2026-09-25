@@ -1,0 +1,42 @@
+{
+  "_id": "R5ikDFoA9TSf2M4g",
+  "_key": "!items!R5ikDFoA9TSf2M4g",
+  "name": "Synth-Leather",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "VqX65UQVOs2JpxDL",
+  "sort": 3600000,
+  "system": {
+    "row": {
+      "name": "Synth-Leather",
+      "rarity": "Common",
+      "cost": 20,
+      "density": 50,
+      "category": "Raw Materials",
+      "subCategory": "Clothing",
+      "weight": 1,
+      "quantity": 1,
+      "description": "Artificial leather, durable and common.",
+      "id": "8c2eb2e0-b2d1-42b9-8588-25bd43aed09e",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "material:Synth-Leather"
+    }
+  }
+}

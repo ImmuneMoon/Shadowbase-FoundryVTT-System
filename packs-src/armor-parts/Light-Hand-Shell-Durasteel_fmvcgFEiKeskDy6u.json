@@ -1,0 +1,42 @@
+{
+  "_id": "fmvcgFEiKeskDy6u",
+  "_key": "!items!fmvcgFEiKeskDy6u",
+  "name": "Light Hand Shell (Durasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 4900000,
+  "system": {
+    "row": {
+      "id": "27133b6a-5256-468b-a1d3-5b652c0ad65e",
+      "name": "Light Hand Shell (Durasteel)",
+      "category": "Armor Shell",
+      "cost": 45,
+      "weight": 0.88,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-light-hands-durasteel",
+      "materialId": "durasteel",
+      "notes": "Standard building alloy. Baseline stats.",
+      "validSlots": [],
+      "drBonus": 2,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-light-hands-durasteel"
+    }
+  }
+}

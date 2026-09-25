@@ -1,0 +1,42 @@
+{
+  "_id": "FTrnyBmnz6s8x40C",
+  "_key": "!items!FTrnyBmnz6s8x40C",
+  "name": "Blueprint: Sand People Footwear",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 17800000,
+  "system": {
+    "row": {
+      "id": "16c162eb-08e2-4efe-b5bd-215ff3f090bd",
+      "name": "Blueprint: Sand People Footwear",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Sand People Footwear (Generation 0, proven, encoded, catalog design). Required to build Sand People Footwear; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Sand People Footwear",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 2.333333333333333,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Sand People Footwear"
+    }
+  }
+}

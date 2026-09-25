@@ -1,0 +1,19 @@
+{
+  "_id": "cpSb5QRphyGd768K",
+  "_key": "!folders!cpSb5QRphyGd768K",
+  "name": "Upgrades",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 0,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-upgrades",
+      "path": [
+        "Upgrades"
+      ]
+    }
+  }
+}

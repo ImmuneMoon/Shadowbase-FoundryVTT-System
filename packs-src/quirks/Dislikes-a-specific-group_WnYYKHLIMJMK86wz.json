@@ -1,0 +1,32 @@
+{
+  "_id": "WnYYKHLIMJMK86wz",
+  "_key": "!items!WnYYKHLIMJMK86wz",
+  "name": "Dislikes a specific group",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 1200000,
+  "system": {
+    "row": {
+      "name": "Dislikes a specific group",
+      "points": -1,
+      "description": "You have an irrational aversion to a particular group, such as droids, a specific alien species (e.g., 'I can't stand the chittering of Verpine'), or a corporate entity.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Dislikes a specific group"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "x9EH972lEQ8TNmwc",
+  "_key": "!items!x9EH972lEQ8TNmwc",
+  "name": "Blueprint: Glowrod",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "g7UVHPh3r2MYv5Oo",
+  "sort": 48300000,
+  "system": {
+    "row": {
+      "id": "f51bc3dc-7a0b-4e85-aab5-8f0be5bf14bd",
+      "name": "Blueprint: Glowrod",
+      "cost": 180,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Glowrod (Generation 0, proven, encoded, catalog design). Required to build Glowrod; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Glowrod",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 55,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Tools & Electronics|Glowrod"
+    }
+  }
+}

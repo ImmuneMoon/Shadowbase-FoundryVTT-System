@@ -1,0 +1,46 @@
+{
+  "_id": "gwSP6jhvusTdGVdg",
+  "_key": "!items!gwSP6jhvusTdGVdg",
+  "name": "Durasteel Oversized Emitter",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "fqyMKj3bXsbnJOuN",
+  "sort": 4600000,
+  "system": {
+    "row": {
+      "id": "d39b2a61-1b42-465f-b096-cf27868dea5d",
+      "name": "Durasteel Oversized Emitter",
+      "category": "Ranged Barrel",
+      "cost": 196,
+      "weight": 3.92,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "oversized-emitter",
+      "materialId": "durasteel",
+      "notes": "",
+      "effect": "",
+      "energyResBonus": 0,
+      "volume": 0.008,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "oversized-emitter"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "DdhMoNuJWeSNoYbo",
+  "_key": "!items!DdhMoNuJWeSNoYbo",
+  "name": "Reflec",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "OBCR0jn6rNMN1U7F",
+  "sort": 9600000,
+  "system": {
+    "row": {
+      "name": "Reflec",
+      "rarity": "Rare",
+      "cost": 2000,
+      "density": 90,
+      "category": "Raw Materials",
+      "subCategory": "Electronics",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A sophisticated electromagnetic-absorptive polymer. It registers as a \"cold\" spot to electronic sensors, radar, and thermographics.",
+      "id": "17a8d6c3-fdd2-4944-935d-c13730bd7bf8",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Reflec"
+    }
+  }
+}

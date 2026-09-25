@@ -1,0 +1,52 @@
+{
+  "_id": "etouaBx6HJ2LeRAT",
+  "_key": "!items!etouaBx6HJ2LeRAT",
+  "name": "Electronics Tool Kit",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "cK2OmLlfEjsr72q3",
+  "sort": 5400000,
+  "system": {
+    "row": {
+      "name": "Electronics Tool Kit",
+      "cost": 228,
+      "skill": "Electronics Repair or Engineer (Droids)",
+      "description": "Quality precision tools. Grants +1 to Electronics Repair or Engineer (Droids) rolls. A critical failure when using these tools to repair high-voltage systems may inflict 1d burning (electrical) damage to the user. Needs Computer Programming to function if constructed.",
+      "category": "Tools & Electronics",
+      "subCategory": "Non-Consumable Tools",
+      "weight": 1,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.5
+        },
+        {
+          "name": "Silicon",
+          "amount": 0.5
+        }
+      ],
+      "requiresSoftware": true,
+      "id": "c3c7a264-c98a-43a2-9c72-643678efccab",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Electronics Tool Kit"
+    }
+  }
+}

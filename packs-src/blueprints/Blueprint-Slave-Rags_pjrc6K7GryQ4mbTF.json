@@ -1,0 +1,42 @@
+{
+  "_id": "pjrc6K7GryQ4mbTF",
+  "_key": "!items!pjrc6K7GryQ4mbTF",
+  "name": "Blueprint: Slave Rags",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 18700000,
+  "system": {
+    "row": {
+      "id": "6d6eb8c1-3af4-4cd8-a21d-9dad598a7049",
+      "name": "Blueprint: Slave Rags",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Slave Rags (Generation 0, proven, encoded, catalog design). Required to build Slave Rags; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Slave Rags",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 0.33333333333333337,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Slave Rags"
+    }
+  }
+}

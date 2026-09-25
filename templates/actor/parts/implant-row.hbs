@@ -1,0 +1,22 @@
+{{!-- templates/actor/parts/implant-row.hbs - one implant / cybernetic limb / upgrade row (implants-cybernetics-section.tsx 540-800:
+     Installed / Attached badge, pathways, extent / material, upgrade slots, linked hit location). Context: an implantRow. --}}
+<li class="sb-row sb-implant-row{{#if installed}} is-installed{{/if}}" data-item-id="{{id}}">
+  <div class="sb-row__main">
+    <img class="sb-row__icon" src="{{img}}" alt="">
+    <span class="sb-row__name sb-row__name--static">{{rowName}}</span>
+    <span class="sb-badge {{#if installed}}sb-badge-accent{{else}}sb-badge-outline{{/if}}">{{#if installed}}{{installedLabel}}{{else}}{{localize "SHADOWBASE.Sheet.Inventory.NotInstalled"}}{{/if}}</span>
+    {{#each linkedTo}}<span class="sb-tag sb-tag--accent"><i class="fa-solid fa-link"></i> {{this}}</span>{{/each}}
+    {{#if location}}<span class="sb-muted">{{location}}</span>{{/if}}
+    {{#if slotType}}<span class="sb-badge sb-badge-outline">{{slotType}}</span>{{/if}}
+    {{#if extent}}<span class="sb-badge sb-badge-outline">{{extent}}</span>{{/if}}
+    {{#if material}}<span class="sb-badge sb-badge-outline">{{material}}</span>{{/if}}
+    {{#each pathways}}<span class="sb-badge sb-badge-outline sb-badge-accent">{{this}}</span>{{/each}}
+    {{#if dr}}<span class="sb-badge sb-badge-outline sb-mono">DR {{#if currentDr}}{{currentDr}}/{{/if}}{{dr}}</span>{{/if}}
+    {{#if upgrades}}<span class="sb-badge sb-badge-outline sb-mono">{{localize "SHADOWBASE.Sheet.Inventory.UpgradeSlots" n=upgrades}}</span>{{/if}}
+    {{#if cp}}<span class="sb-badge sb-badge-secondary sb-mono">{{cp}} CP</span>{{/if}}
+    {{#each modifiers}}<span class="sb-badge sb-badge-outline sb-badge--effect {{#if this.positive}}sb-badge--pos{{else}}sb-badge--neg{{/if}}">{{this.text}}</span>{{/each}}
+    <span class="sb-muted sb-mono">{{weight}} lb · {{cost}} cr</span>
+    {{> "systems/shadowbase/templates/actor/parts/row-tools.hbs" id=id storage=storage kind=kind editable=@root.editable}}
+  </div>
+  {{#if effect}}<p class="sb-muted sb-row__sub">{{effect}}</p>{{/if}}
+</li>

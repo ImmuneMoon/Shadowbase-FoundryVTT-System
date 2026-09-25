@@ -1,0 +1,42 @@
+{
+  "_id": "AMZ1oE4aHEV0utzp",
+  "_key": "!items!AMZ1oE4aHEV0utzp",
+  "name": "Blueprint: Adrenal Amplifier",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ZMyORA2AHo4Qm477",
+  "sort": 9900000,
+  "system": {
+    "row": {
+      "id": "a4f03db6-fa17-49c7-a192-19cac9e6ae53",
+      "name": "Blueprint: Adrenal Amplifier",
+      "cost": 331,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Adrenal Amplifier (Generation 0, proven, encoded, catalog design). Required to build Adrenal Amplifier; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Adrenal Amplifier",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1565,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Belt|Adrenal Amplifier"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "A0IYsBEti81c73Q6",
+  "_key": "!items!A0IYsBEti81c73Q6",
+  "name": "Sphere Chassis (S6-Series)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "bppESUx5QjA1oXLP",
+  "sort": 900000,
+  "system": {
+    "row": {
+      "id": "285878ca-db11-40bd-b19f-3ea3dcd94764",
+      "name": "Sphere Chassis (S6-Series)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Chassis",
+      "cost": 2900,
+      "weight": 20,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "sphere-chassis",
+      "description": "Base ST 6, HP 6, 3D Spatial Awareness; Torso 0.30 m, sphere (SM +2)"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "sphere-chassis"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "P8m7gCwLJQ5bPKQv",
+  "_key": "!items!P8m7gCwLJQ5bPKQv",
+  "name": "Optic (GE3)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "oqIU8n2TNn1530V9",
+  "sort": 3000000,
+  "system": {
+    "row": {
+      "id": "46a70049-88a2-4330-95d6-f3ddb9a34397",
+      "name": "Optic (GE3)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Sensor",
+      "cost": 132,
+      "weight": 1,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "optic-ge3",
+      "description": "Standard Vision"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "optic-ge3"
+    }
+  }
+}

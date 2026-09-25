@@ -1,0 +1,42 @@
+{
+  "_id": "Zm1LBILWOnmWPfSn",
+  "_key": "!items!Zm1LBILWOnmWPfSn",
+  "name": "Visor (Durasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "pemnqyPR360SzyYE",
+  "sort": 9200000,
+  "system": {
+    "row": {
+      "id": "05ab7d16-4034-4ae4-b436-a595861839f3",
+      "name": "Visor (Durasteel)",
+      "category": "Armor Visor",
+      "cost": 86,
+      "weight": 1.72,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "visor-durasteel",
+      "materialId": "durasteel",
+      "notes": "Sealed Head Plates only. Face DR equals Head DR and the Piece carries a 1hr Vacuum seal.",
+      "validSlots": [],
+      "drBonus": null,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "visor-durasteel"
+    }
+  }
+}

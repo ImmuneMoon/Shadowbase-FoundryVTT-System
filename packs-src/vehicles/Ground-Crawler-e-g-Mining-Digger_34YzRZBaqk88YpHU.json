@@ -1,0 +1,46 @@
+{
+  "_id": "34YzRZBaqk88YpHU",
+  "_key": "!items!34YzRZBaqk88YpHU",
+  "name": "Ground Crawler (e.g., Mining Digger)",
+  "type": "vehicle",
+  "img": "icons/svg/direction.svg",
+  "folder": "7Ys6ynx8eEtyCZx9",
+  "sort": 100000,
+  "system": {
+    "row": {
+      "name": "Ground Crawler (e.g., Mining Digger)",
+      "type": "Utility Ground Vehicle",
+      "category": "Terrestrial",
+      "handling": "-1",
+      "speed": "20 mph",
+      "accelDecel": "1/2",
+      "hp": 80,
+      "dr": 8,
+      "crew": "2+",
+      "passengers": "0",
+      "cargo": "5 tons",
+      "cost": 30000,
+      "weapons": "1x Mining drill/laser (4d6 cut)",
+      "weaponSkill": "Gunner (Vehicle)",
+      "hyperdrive": "N/A",
+      "notes": "Specialized vehicle for excavation or traversing extremely difficult landscapes.",
+      "id": "db8560fb-262d-4de0-8514-1bbdf249b2a8",
+      "quantity": 1
+    },
+    "source": "vehicles",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "vehicles"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "vehicles",
+      "key": "Ground Crawler (e.g., Mining Digger)"
+    }
+  }
+}

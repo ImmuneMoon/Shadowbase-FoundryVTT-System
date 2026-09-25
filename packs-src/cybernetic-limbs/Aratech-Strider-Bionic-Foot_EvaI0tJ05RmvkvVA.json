@@ -1,0 +1,45 @@
+{
+  "_id": "EvaI0tJ05RmvkvVA",
+  "_key": "!items!EvaI0tJ05RmvkvVA",
+  "name": "Aratech \"Strider\" Bionic Foot",
+  "type": "cyberneticLimb",
+  "img": "icons/svg/bones.svg",
+  "folder": "XY3P8r89fv7qHBeH",
+  "sort": 1300000,
+  "system": {
+    "row": {
+      "id": "1d40239e-a1cb-47be-8a6c-613dec64a342",
+      "name": "Aratech \"Strider\" Bionic Foot",
+      "location": "Right Foot",
+      "extent": "Partial",
+      "material": "Duraplast",
+      "cost": 884,
+      "weight": 1.48,
+      "dr": 6,
+      "currentDr": 6,
+      "effect": "Grants +1 damage to all kicks.",
+      "upgrades": [],
+      "hasSynthskin": false,
+      "installed": false,
+      "storageLocationId": null,
+      "quantity": 1,
+      "baselinePoints": 0,
+      "itemSizeModifier": 0
+    },
+    "source": "cybernetics",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-limbs"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-limbs",
+      "key": "Foot|Aratech \"Strider\" Bionic Foot"
+    }
+  }
+}

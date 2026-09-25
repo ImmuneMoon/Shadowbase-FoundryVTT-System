@@ -1,0 +1,63 @@
+{
+  "_id": "nWP3raRMZE0UzOOm",
+  "_key": "!items!nWP3raRMZE0UzOOm",
+  "name": "Electrobinoculars",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "cK2OmLlfEjsr72q3",
+  "sort": 5200000,
+  "system": {
+    "row": {
+      "name": "Electrobinoculars",
+      "cost": 2010,
+      "skill": "Observation or Perception",
+      "description": "Includes low-light and thermal vision modes. Eliminates up to -4 in darkness penalties and grants the Infravision advantage while looking through them. Power Cell lasts 100 hours of continuous use. Needs Computer Programming to function if constructed.",
+      "category": "Tools & Electronics",
+      "subCategory": "Non-Consumable Tools",
+      "weight": 2.3,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Silicon",
+          "amount": 0.4
+        },
+        {
+          "name": "Duraplast",
+          "amount": 1
+        },
+        {
+          "name": "Clari-crystalline",
+          "amount": 0.2
+        },
+        {
+          "name": "Power Cell",
+          "amount": 0.7
+        }
+      ],
+      "requiresSoftware": true,
+      "modifiers": {
+        "perception": 2
+      },
+      "id": "cc933dd5-ff4a-4500-bc71-0a31df369997",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Electrobinoculars"
+    }
+  }
+}

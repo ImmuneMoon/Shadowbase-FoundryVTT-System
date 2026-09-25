@@ -1,0 +1,34 @@
+{
+  "_id": "pVDGPLUYB1i6X14Z",
+  "_key": "!items!pVDGPLUYB1i6X14Z",
+  "name": "Social Stigma (Refugee)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "QdWbP3PunGyoJeht",
+  "sort": 18400000,
+  "system": {
+    "row": {
+      "name": "Social Stigma (Refugee)",
+      "points": -10,
+      "level": null,
+      "description": "Displaced by war. You are often treated as an unwanted burden by established societies.",
+      "category": "Social",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Social Stigma (Refugee)|Social"
+    }
+  }
+}

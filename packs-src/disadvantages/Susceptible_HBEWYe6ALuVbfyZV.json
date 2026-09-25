@@ -1,0 +1,34 @@
+{
+  "_id": "HBEWYe6ALuVbfyZV",
+  "_key": "!items!HBEWYe6ALuVbfyZV",
+  "name": "Susceptible",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "iBhK8LHSekCOv5gO",
+  "sort": 16100000,
+  "system": {
+    "row": {
+      "name": "Susceptible",
+      "points": -1,
+      "level": null,
+      "description": "You have a particular vulnerability to a specific poison or disease, getting a penalty on HT rolls to resist it. Range: -1 to -8 points.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Susceptible|Physical"
+    }
+  }
+}

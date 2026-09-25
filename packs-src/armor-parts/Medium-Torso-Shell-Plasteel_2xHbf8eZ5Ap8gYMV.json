@@ -1,0 +1,42 @@
+{
+  "_id": "2xHbf8eZ5Ap8gYMV",
+  "_key": "!items!2xHbf8eZ5Ap8gYMV",
+  "name": "Medium Torso Shell (Plasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 2300000,
+  "system": {
+    "row": {
+      "id": "2da78366-dfdb-42f6-b65a-b22283dbfa0f",
+      "name": "Medium Torso Shell (Plasteel)",
+      "category": "Armor Shell",
+      "cost": 392,
+      "weight": 4.89,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-medium-torso-plasteel",
+      "materialId": "plasteel",
+      "notes": "Rigid, durable fusion of plastoid and steel.",
+      "validSlots": [],
+      "drBonus": 12,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-medium-torso-plasteel"
+    }
+  }
+}

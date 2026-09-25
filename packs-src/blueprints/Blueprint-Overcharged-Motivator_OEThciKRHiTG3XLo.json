@@ -1,0 +1,42 @@
+{
+  "_id": "OEThciKRHiTG3XLo",
+  "_key": "!items!OEThciKRHiTG3XLo",
+  "name": "Blueprint: Overcharged Motivator",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Uksq0NTbraqbh8ly",
+  "sort": 26100000,
+  "system": {
+    "row": {
+      "id": "7951bea3-5662-4622-95ac-3abbc191a6d8",
+      "name": "Blueprint: Overcharged Motivator",
+      "cost": 429,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Overcharged Motivator (Generation 0, proven, encoded, catalog design). Required to build Overcharged Motivator; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Overcharged Motivator",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 2550,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Motivator|Overcharged Motivator"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{{!-- templates/items/lightsaber-build.hbs - lightsaber-item.tsx Hilt Construction (:1542-1660): the hilt slots this build
+     has (a fitted Shared Coupler opens the second blade), each with material and wrap, the assembled hilt figures, the
+     Lightsaber Construction strip and plan. Context: build (lightsaber.mjs), editable, owned, canToggleLibrary,
+     libraryAccess, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--build {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  {{> "shadowbase.item.provenance" provenance=build.provenance editable=editable owned=owned canToggleLibrary=canToggleLibrary libraryAccess=libraryAccess crafting=crafting title=(localize "SHADOWBASE.Item.Saber.Construction")}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Combine'}}"></i> {{localize "SHADOWBASE.Item.Saber.HiltConstruction"}}{{#if build.isStaff}} <span class="sb-badge sb-badge-outline sb-badge-accent">{{localize "SHADOWBASE.Item.Saber.Staff"}}</span>{{/if}}</h4>
+    <p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Saber.CouplerNote"}}</p>
+    <div class="sb-slot-grid">
+      {{#each build.slots}}
+      <div class="sb-hilt-slot {{#if this.staffOnly}}sb-hilt-slot--staff{{/if}}">
+        {{> "shadowbase.item.slot" this editable=@root.editable prefix="slot" materialPrefix="material" wrapPrefix="wrap" qtyPrefix=""}}
+        {{#if this.templateName}}<p class="sb-text-muted sb-text-xs sb-mono">{{#if this.componentClass}}{{this.componentClass}} · {{/if}}{{#if this.price}}{{this.price}} cr · {{/if}}{{#if this.weight}}{{this.weight}} lb · {{/if}}{{#if this.durability}}Dur {{this.durability}}{{/if}}</p>{{/if}}
+      </div>
+      {{/each}}
+    </div>
+    <p class="sb-text-xs"><span class="sb-caps sb-text-accent">{{localize "SHADOWBASE.Item.Saber.Assembled"}}</span> <span class="sb-mono">{{build.assembled.weight}} lb · {{localize "SHADOWBASE.Item.Saber.Parry"}} {{build.assembled.parry}} · Dur {{build.assembled.durability}}</span></p>
+  </div>
+  {{#if build.plan}}{{#if build.plan.show}}
+    {{> "shadowbase.item.plan" plan=build.plan phases=build.phases}}
+  {{/if}}{{/if}}
+</section>

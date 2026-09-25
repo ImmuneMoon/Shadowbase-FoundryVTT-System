@@ -1,0 +1,34 @@
+{
+  "_id": "k8y10qPlQZnaDzdw",
+  "_key": "!items!k8y10qPlQZnaDzdw",
+  "name": "Intolerance (Surface Dwellers)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "KbQ0mAMpcz5zmcEs",
+  "sort": 5900000,
+  "system": {
+    "row": {
+      "name": "Intolerance (Surface Dwellers)",
+      "points": -5,
+      "level": null,
+      "description": "Distrust of land-livers. You harbor a cultural or personal prejudice against those who live on the surface of planets.",
+      "category": "Cultural / Background",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Intolerance (Surface Dwellers)|Cultural / Background"
+    }
+  }
+}

@@ -1,0 +1,1794 @@
+{
+  "_id": "7ZH5STJroYcPwEJ9",
+  "_key": "!actors!7ZH5STJroYcPwEJ9",
+  "name": "Kaelen Rarr (Human Jedi Guardian)",
+  "type": "character",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "jE1PQo0cu0pzNz0Y",
+  "sort": 200000,
+  "system": {
+    "legacy": {},
+    "playerName": "",
+    "species": "Human",
+    "homeworld": "Unknown",
+    "characterPortrait": null,
+    "campaign": "Shadows of the Mandalorian Wars",
+    "pointTotal": 220,
+    "turnCounter": 0,
+    "facing": 0,
+    "incomingBearing": 0,
+    "threatEngaged": false,
+    "incomingArc": null,
+    "facingChangeUsed": false,
+    "posture": "standing",
+    "elevation": 0,
+    "parriesThisTurn": 0,
+    "height": "1.83 m",
+    "weight": "79 kg / 175 lb",
+    "sizeModifier": 0,
+    "age": 0,
+    "appearance": "",
+    "techLevel": "",
+    "isDroid": false,
+    "powerPoints": 100,
+    "lightSidePoints": 0,
+    "darkSidePoints": 0,
+    "trackDigital": false,
+    "trackPhysical": false,
+    "totalCredits": 500,
+    "forceAlignment": 35,
+    "isStartingPointsMode": true,
+    "isConstructed": false,
+    "cpBaseline": 211,
+    "stBaseline": 10,
+    "dxBaseline": 10,
+    "iqBaseline": 10,
+    "htBaseline": 10,
+    "hitPointsBaseline": 0,
+    "endurancePointsBaseline": 0,
+    "forcePointsBaseline": 0,
+    "willBaseline": 0,
+    "perceptionBaseline": 0,
+    "frightCheckBaseline": 0,
+    "basicSpeedBaseline": 0,
+    "basicMoveBaseline": 0,
+    "visionBaseline": 0,
+    "hearingBaseline": 0,
+    "tasteAndSmellBaseline": 0,
+    "touchBaseline": 0,
+    "languagesBaseline": 0,
+    "culturalFamiliaritiesBaseline": 0,
+    "literacyBaseline": 0,
+    "languageEntries": [
+      {
+        "id": "kaelen-lang-basic",
+        "tongue": "Basic",
+        "tier": "native",
+        "notes": "Free to Humans (Ch3)."
+      }
+    ],
+    "republicRaised": false,
+    "frightCheck": null,
+    "basicSpeed": null,
+    "basicMove": null,
+    "selectedParrySkill": null,
+    "selectedBlockSkill": null,
+    "activeLightsaberForm": null,
+    "hitLocations": [
+      {
+        "name": "Head",
+        "type": "Head",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 2,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 3,
+        "installedHardwareIds": [],
+        "id": "48f93462-2e36-4ae1-a6dd-4f8b78d9ee4b"
+      },
+      {
+        "name": "Face",
+        "type": "Face",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 5,
+        "installedHardwareIds": [],
+        "id": "47d396b8-4931-4caf-91e8-0053918874ec"
+      },
+      {
+        "name": "Upper Torso",
+        "type": "Vitals",
+        "side": "Center",
+        "relativeSM": -3,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 17,
+        "installedHardwareIds": [],
+        "id": "2ca38dfe-cf14-4cd9-8f5f-59c25132b36e"
+      },
+      {
+        "name": "Torso",
+        "type": "Torso",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 10,
+        "installedHardwareIds": [],
+        "id": "6a153089-56cc-410f-a3fc-00fcd2e39b60"
+      },
+      {
+        "name": "Right Arm",
+        "type": "Arm",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 7,
+        "installedHardwareIds": [],
+        "id": "0822bce4-b942-4e27-b118-26376aad89da"
+      },
+      {
+        "name": "Right Hand",
+        "type": "Hand",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "1942e884-2aed-4ab6-b657-a7a8fcee71d7"
+      },
+      {
+        "name": "Left Arm",
+        "type": "Arm",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 8,
+        "installedHardwareIds": [],
+        "id": "b3006644-acdb-477e-b691-4cf445c1d415"
+      },
+      {
+        "name": "Left Hand",
+        "type": "Hand",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "91c7335e-ce9b-4ce7-ad46-551a74ca745b"
+      },
+      {
+        "name": "Right Leg",
+        "type": "Leg",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "b9adadff-6a26-4b2d-8a5b-d551c544f349"
+      },
+      {
+        "name": "Right Foot",
+        "type": "Foot",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "97088c42-6203-4992-85f7-e8af79b64c2a"
+      },
+      {
+        "name": "Left Leg",
+        "type": "Leg",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "e2be70ca-1e95-4869-bd1d-843d5aad5d9b"
+      },
+      {
+        "name": "Left Foot",
+        "type": "Foot",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "70036cc5-eba2-464c-bccc-0aef993ab398"
+      }
+    ],
+    "languages": "Basic (Native)",
+    "culturalFamiliarities": "",
+    "literacy": "",
+    "description": "",
+    "background": "",
+    "notes": "",
+    "pointsAttributes": 0,
+    "pointsAdvantages": 0,
+    "pointsDisadvantages": 0,
+    "pointsOther": 0,
+    "cpTradedForCredits": 0,
+    "cpCreditsForm": "digital",
+    "currentHitPoints": 12,
+    "currentEndurancePoints": 12,
+    "currentForcePoints": 13,
+    "strength": 12,
+    "dexterity": 14,
+    "iq": 11,
+    "health": 12,
+    "hitPoints": null,
+    "will": null,
+    "perception": null,
+    "vision": null,
+    "hearing": null,
+    "tasteAndSmell": null,
+    "touch": null,
+    "endurancePoints": null,
+    "forcePoints": null,
+    "shipPosition": null,
+    "assignedStation": null,
+    "storageBoxes": [],
+    "droidBuild": {
+      "chassisId": null,
+      "powerCoreId": null,
+      "head": {
+        "componentId": null,
+        "processorId": null,
+        "memoryCoreId": null,
+        "sensorIds": [],
+        "externalModId": null
+      },
+      "arms": [],
+      "legs": [],
+      "chassisMods": {
+        "internalIds": [],
+        "externalIds": [],
+        "utilityIds": [],
+        "auxiliaryIds": [],
+        "motiveMountIds": [],
+        "reinforcementId": null,
+        "armorId": null,
+        "motivatorId": null,
+        "actuatorId": null,
+        "wiringId": null
+      }
+    },
+    "pinnedNotifications": [],
+    "useLiftingST": true,
+    "useStrikingST": true,
+    "useArmST": true
+  },
+  "prototypeToken": {
+    "name": "Kaelen Rarr (Human Jedi Guardian)",
+    "actorLink": true,
+    "displayName": 30,
+    "displayBars": 40,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "resources.hp"
+    },
+    "bar2": {
+      "attribute": "resources.ep"
+    }
+  },
+  "items": [
+    {
+      "_id": "YW3wZKYmvamPJKkV",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.YW3wZKYmvamPJKkV",
+      "name": "Combat Reflexes",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Combat Reflexes",
+          "points": 15,
+          "description": "Quick reactions.",
+          "level": null,
+          "category": "Mental",
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 1,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 2,
+            "parry": 1,
+            "block": 1,
+            "stunRecovery": 6,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "Y2vt0sVIjWRYPUNs",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.Y2vt0sVIjWRYPUNs",
+      "name": "Enhanced Parry (Narrowed)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Enhanced Parry (Narrowed)",
+          "level": 1,
+          "points": 5,
+          "baselinePoints": 0,
+          "description": "Lightsaber."
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "Nkm7Fy8cd0njJXJ2",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.Nkm7Fy8cd0njJXJ2",
+      "name": "Force Sensitive",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Force Sensitive",
+          "points": 5,
+          "baselinePoints": 0,
+          "description": "Connection to the Force."
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "75Go0twVxC5IUS3z",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.75Go0twVxC5IUS3z",
+      "name": "Fit",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Fit",
+          "points": 5,
+          "baselinePoints": 0,
+          "description": "Robust and healthy."
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "2CaSDnlJd7d2rvwG",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.2CaSDnlJd7d2rvwG",
+      "name": "Jedi Equipped",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Jedi Equipped",
+          "level": 12,
+          "points": 30,
+          "baselinePoints": 0,
+          "description": "Gift from the Order; includes Lightsaber Construction at IQ level."
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "k2I8QCJg62bXiNv5",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.k2I8QCJg62bXiNv5",
+      "name": "Jedi Code of Honor",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Jedi Code of Honor",
+          "points": -15,
+          "baselinePoints": 0,
+          "description": "Jedi principles."
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "tXQo6N5X8i7MJuQ3",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.tXQo6N5X8i7MJuQ3",
+      "name": "Vow",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Vow",
+          "points": -10,
+          "baselinePoints": 0,
+          "description": "No Attachments."
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "QcflNfOVXi4Fpjyh",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.QcflNfOVXi4Fpjyh",
+      "name": "Wealth (Poor)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Wealth (Poor)",
+          "points": -15,
+          "baselinePoints": 0,
+          "description": "Poor: 500 CR starting wealth, Status -2."
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "FRVyRcAxPzCYM60S",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.FRVyRcAxPzCYM60S",
+      "name": "Old Republic Patriot",
+      "type": "quirk",
+      "img": "icons/svg/aura.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Old Republic Patriot",
+          "description": "You are a staunch believer in the ideals of the Republic, even as its bureaucracy and military struggles are laid bare by the war. You may salute Republic soldiers or speak fondly of Coruscant.",
+          "baselinePoints": 0,
+          "points": -1
+        },
+        "source": "quirks"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "hlSxSomkYiYmoQPV",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.hlSxSomkYiYmoQPV",
+      "name": "Acrobatics",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Acrobatics",
+          "relativeLevel": "DX/H",
+          "level": "13",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "Kshk14yYxTDBAolP",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.Kshk14yYxTDBAolP",
+      "name": "Brawling",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Brawling",
+          "relativeLevel": "DX/E",
+          "level": "14",
+          "points": 1,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "EF7Iohq98EPEGJW2",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.EF7Iohq98EPEGJW2",
+      "name": "Leadership",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Leadership",
+          "relativeLevel": "IQ/A",
+          "level": "10",
+          "points": 1,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "iJByu0tp71myOylS",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.iJByu0tp71myOylS",
+      "name": "Lightsaber Combat (Standard)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Lightsaber Combat (Standard)",
+          "relativeLevel": "DX/H",
+          "level": "17",
+          "points": 10,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "5Fd1PgbtPYWgnlhA",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.5Fd1PgbtPYWgnlhA",
+      "name": "Meditation",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Meditation",
+          "relativeLevel": "Will/H",
+          "level": "10",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "Bb7hMxf5majoZaeQ",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.Bb7hMxf5majoZaeQ",
+      "name": "Tactics (Ground)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 600000,
+      "system": {
+        "row": {
+          "name": "Tactics (Ground)",
+          "relativeLevel": "IQ/H",
+          "level": "10",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "8AoGmJSsCL8fcvk4",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.8AoGmJSsCL8fcvk4",
+      "name": "Telekinesis",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 700000,
+      "system": {
+        "row": {
+          "name": "Telekinesis",
+          "relativeLevel": "Will/H",
+          "level": "10",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "nunDAkywcNdOKxJV",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.nunDAkywcNdOKxJV",
+      "name": "Agility",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 800000,
+      "system": {
+        "row": {
+          "name": "Agility",
+          "relativeLevel": "DX/H",
+          "level": "13",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "pfilJnf9by4ngEuu",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.pfilJnf9by4ngEuu",
+      "name": "Lightsaber Construction",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 900000,
+      "system": {
+        "row": {
+          "name": "Lightsaber Construction",
+          "relativeLevel": "IQ/H",
+          "level": "11",
+          "points": 0,
+          "baselinePoints": 4
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "jS3DO57Wgz8ILosH",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.jS3DO57Wgz8ILosH",
+      "name": "Force Jump/Leap",
+      "type": "forcePower",
+      "img": "icons/svg/light.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Force Jump/Leap",
+          "description": "The Force-user enhances their physical jump or leap through an application of the Force.",
+          "category": "Control Powers",
+          "level": 1,
+          "cpCost": 10,
+          "fpCost": 1,
+          "alignment": "Grey",
+          "baseSkill": "Agility (DX/Hard)",
+          "characterTier": "Apprentice",
+          "effect": "Double your effective Jumping skill distance.",
+          "baselinePoints": 0
+        },
+        "source": "forcePowers"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "cCIQXy64CqI7tZ0i",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.cCIQXy64CqI7tZ0i",
+      "name": "Force Push/Pull",
+      "type": "forcePower",
+      "img": "icons/svg/light.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Force Push/Pull",
+          "description": "The Force-user can telekinetically push or pull objects and beings.",
+          "category": "Control Powers",
+          "level": 1,
+          "cpCost": 10,
+          "fpCost": 2,
+          "alignment": "Grey",
+          "baseSkill": "Telekinesis (Will/Hard)",
+          "characterTier": "Apprentice",
+          "effect": "Exert a telekinetic force equal to your Basic Lift (BL) on objects within 10 feet. Cannot inflict damage directly.",
+          "baselinePoints": 0
+        },
+        "source": "forcePowers"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "cphaeXptmAS2PCTf",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.cphaeXptmAS2PCTf",
+      "name": "Form III: Soresu",
+      "type": "lightsaberForm",
+      "img": "icons/svg/sword.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Form III: Soresu",
+          "level": 1,
+          "baselinePoints": 0
+        },
+        "source": "lightsaberForms"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "4CX6evt9I9Gx3VfN",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.4CX6evt9I9Gx3VfN",
+      "name": "Commlink (Handheld)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "c6e3b87e-c080-49d6-a175-64123f60074b",
+          "name": "Commlink (Handheld)",
+          "weight": 1.4,
+          "cost": 1398,
+          "quantity": 1,
+          "condition": "Fine",
+          "category": "Communication & Data"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "akawGJIETQvJN7XP",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.akawGJIETQvJN7XP",
+      "name": "Glowrod",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "id": "26711323-6631-4779-9b97-7b2b197f18a5",
+          "name": "Glowrod",
+          "weight": 0.2,
+          "cost": 66,
+          "quantity": 1,
+          "condition": "Fine",
+          "category": "Tools & Electronics"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "EZ0LPs7veoCdVVPi",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.EZ0LPs7veoCdVVPi",
+      "name": "Field Rations",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "id": "c1021970-220f-4c0c-b32e-be70cf2f14ee",
+          "name": "Field Rations",
+          "weight": 1,
+          "cost": 11,
+          "quantity": 3,
+          "condition": "Fine",
+          "category": "Survival Gear"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "RTN0QACfM1PgV8vM",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.RTN0QACfM1PgV8vM",
+      "name": "Medpac",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "id": "0d575d01-fe16-4a3d-8113-bf7055f4ae18",
+          "name": "Medpac",
+          "weight": 1,
+          "cost": 204,
+          "quantity": 1,
+          "condition": "Fine",
+          "category": "Medical & Pharmaceuticals"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "VgG36wZvh1Ek2SCF",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.VgG36wZvh1Ek2SCF",
+      "name": "Credit Chip",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "id": "ef9508fe-5fdb-43ef-9205-b17d1c78826b",
+          "name": "Credit Chip",
+          "category": "Currencies",
+          "weight": 0.28,
+          "quantity": 1,
+          "storedValue": 296,
+          "cost": 0,
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "TRQ3LriQlwJmnoWr",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.TRQ3LriQlwJmnoWr",
+      "name": "Jedi Robes",
+      "type": "armor",
+      "img": "icons/svg/shield.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "6625fe46-ae93-462b-aa3f-e2f857f917ce",
+          "name": "Jedi Robes",
+          "type": "Clothing",
+          "slot": "Torso",
+          "drHead": 0,
+          "drFace": 0,
+          "drTorso": 0,
+          "drLeftArm": 0,
+          "drRightArm": 0,
+          "drLeftLeg": 0,
+          "drRightLeg": 0,
+          "drLeftHand": 0,
+          "drRightHand": 0,
+          "drLeftFoot": 0,
+          "drRightFoot": 0,
+          "dxPenalty": null,
+          "movePenalty": null,
+          "weight": 1,
+          "cost": 15,
+          "notes": "Part of Jedi Robes Ensemble.",
+          "penalties": "",
+          "effects": "+1 FP (Set bonus).",
+          "quantity": 1,
+          "equipped": true,
+          "isActive": false,
+          "integratedSlots": 0,
+          "overlaySlots": 0,
+          "underlaySlots": 0,
+          "utilitySlots": 0,
+          "integratedModId": null,
+          "overlayModId": null,
+          "underlayModId": null,
+          "utilityModId": null,
+          "storageLocationId": null,
+          "finalCoveredLocations": [
+            "Torso",
+            "Upper Torso",
+            "Vitals",
+            "Left Arm",
+            "Right Arm"
+          ],
+          "coveredLocationIds": [
+            "2ca38dfe-cf14-4cd9-8f5f-59c25132b36e",
+            "6a153089-56cc-410f-a3fc-00fcd2e39b60",
+            "0822bce4-b942-4e27-b118-26376aad89da",
+            "b3006644-acdb-477e-b691-4cf445c1d415"
+          ],
+          "wornLocationId": null,
+          "setId": "clothing-jedi-robes",
+          "drEntries": [
+            {
+              "locationId": "2ca38dfe-cf14-4cd9-8f5f-59c25132b36e",
+              "dr": 0
+            },
+            {
+              "locationId": "6a153089-56cc-410f-a3fc-00fcd2e39b60",
+              "dr": 0
+            },
+            {
+              "locationId": "0822bce4-b942-4e27-b118-26376aad89da",
+              "dr": 0
+            },
+            {
+              "locationId": "b3006644-acdb-477e-b691-4cf445c1d415",
+              "dr": 0
+            }
+          ],
+          "isInstalled": false,
+          "installedInDroidId": null,
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "itemSizeModifier": 0,
+          "modifiedForAnatomy": false,
+          "condition": "Fine",
+          "finalDRValue": null,
+          "finalWeight": null,
+          "finalCost": null,
+          "finalMovePenalty": null,
+          "finalDXPenalty": null,
+          "notesAndEffects": null,
+          "baseArmorType": "Jedi Robes",
+          "baseDRValue": 0,
+          "baseDRNotes": "Part of Jedi Robes Ensemble.",
+          "baseWeight": 1,
+          "baseCost": 15,
+          "baseMovePenalty": null,
+          "baseDXPenalty": null,
+          "durability": 10,
+          "isConstructed": true,
+          "isCustomBuild": false,
+          "buildProvenance": null,
+          "pieceId": null,
+          "tier": null,
+          "materialId": null,
+          "sealed": null,
+          "sleeveless": null,
+          "faceCoverage": null,
+          "utilityId": null,
+          "frame": null,
+          "shellPart": null,
+          "backingPart": null,
+          "framePart": null,
+          "visorPart": null,
+          "trimPart": null,
+          "materials": [
+            {
+              "name": "Synth-Cloth",
+              "amount": 1
+            }
+          ],
+          "craftingCategory": "Clothing",
+          "craftingCP": null,
+          "isSeveredRemnant": null,
+          "severedFrom": null,
+          "loadedPowerCellId": null,
+          "loadedPowerCellData": null,
+          "currentCharges": null,
+          "maxCharges": null
+        },
+        "source": "armor"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "R9NyUO6qW2oVJ0Sz",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.R9NyUO6qW2oVJ0Sz",
+      "name": "Jedi Robes (Trousers)",
+      "type": "armor",
+      "img": "icons/svg/shield.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "id": "3c915e47-0d52-406e-a399-7cf4c6adbf05",
+          "name": "Jedi Robes (Trousers)",
+          "type": "Clothing",
+          "slot": "Legs",
+          "drHead": 0,
+          "drFace": 0,
+          "drTorso": 0,
+          "drLeftArm": 0,
+          "drRightArm": 0,
+          "drLeftLeg": 0,
+          "drRightLeg": 0,
+          "drLeftHand": 0,
+          "drRightHand": 0,
+          "drLeftFoot": 0,
+          "drRightFoot": 0,
+          "dxPenalty": null,
+          "movePenalty": null,
+          "weight": 1,
+          "cost": 15,
+          "notes": "Part of Jedi Robes Ensemble.",
+          "penalties": "",
+          "effects": "",
+          "quantity": 1,
+          "equipped": true,
+          "isActive": false,
+          "integratedSlots": 0,
+          "overlaySlots": 0,
+          "underlaySlots": 0,
+          "utilitySlots": 0,
+          "integratedModId": null,
+          "overlayModId": null,
+          "underlayModId": null,
+          "utilityModId": null,
+          "storageLocationId": null,
+          "finalCoveredLocations": [
+            "Left Leg",
+            "Right Leg"
+          ],
+          "coveredLocationIds": [
+            "b9adadff-6a26-4b2d-8a5b-d551c544f349",
+            "e2be70ca-1e95-4869-bd1d-843d5aad5d9b"
+          ],
+          "wornLocationId": null,
+          "setId": "clothing-jedi-robes",
+          "drEntries": [
+            {
+              "locationId": "b9adadff-6a26-4b2d-8a5b-d551c544f349",
+              "dr": 0
+            },
+            {
+              "locationId": "e2be70ca-1e95-4869-bd1d-843d5aad5d9b",
+              "dr": 0
+            }
+          ],
+          "isInstalled": false,
+          "installedInDroidId": null,
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "itemSizeModifier": 0,
+          "modifiedForAnatomy": false,
+          "condition": "Fine",
+          "finalDRValue": null,
+          "finalWeight": null,
+          "finalCost": null,
+          "finalMovePenalty": null,
+          "finalDXPenalty": null,
+          "notesAndEffects": null,
+          "baseArmorType": "Jedi Robes (Trousers)",
+          "baseDRValue": 0,
+          "baseDRNotes": "Part of Jedi Robes Ensemble.",
+          "baseWeight": 1,
+          "baseCost": 15,
+          "baseMovePenalty": null,
+          "baseDXPenalty": null,
+          "durability": 10,
+          "isConstructed": true,
+          "isCustomBuild": false,
+          "buildProvenance": null,
+          "pieceId": null,
+          "tier": null,
+          "materialId": null,
+          "sealed": null,
+          "sleeveless": null,
+          "faceCoverage": null,
+          "utilityId": null,
+          "frame": null,
+          "shellPart": null,
+          "backingPart": null,
+          "framePart": null,
+          "visorPart": null,
+          "trimPart": null,
+          "materials": [
+            {
+              "name": "Synth-Cloth",
+              "amount": 1
+            }
+          ],
+          "craftingCategory": "Clothing",
+          "craftingCP": null,
+          "isSeveredRemnant": null,
+          "severedFrom": null,
+          "loadedPowerCellId": null,
+          "loadedPowerCellData": null,
+          "currentCharges": null,
+          "maxCharges": null
+        },
+        "source": "armor"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "Mux8CYd6NSBHUIW0",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.Mux8CYd6NSBHUIW0",
+      "name": "Jedi Robes (Boots)",
+      "type": "armor",
+      "img": "icons/svg/shield.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "id": "cf27c94d-5b0b-4120-a4ff-ef24546f42dd",
+          "name": "Jedi Robes (Boots)",
+          "type": "Clothing",
+          "slot": "Feet",
+          "drHead": 0,
+          "drFace": 0,
+          "drTorso": 0,
+          "drLeftArm": 0,
+          "drRightArm": 0,
+          "drLeftLeg": 0,
+          "drRightLeg": 0,
+          "drLeftHand": 0,
+          "drRightHand": 0,
+          "drLeftFoot": 0,
+          "drRightFoot": 0,
+          "dxPenalty": null,
+          "movePenalty": null,
+          "weight": 0.75,
+          "cost": 23,
+          "notes": "Part of Jedi Robes Ensemble.",
+          "penalties": "",
+          "effects": "",
+          "quantity": 1,
+          "equipped": true,
+          "isActive": false,
+          "integratedSlots": 0,
+          "overlaySlots": 0,
+          "underlaySlots": 0,
+          "utilitySlots": 0,
+          "integratedModId": null,
+          "overlayModId": null,
+          "underlayModId": null,
+          "utilityModId": null,
+          "storageLocationId": null,
+          "finalCoveredLocations": [
+            "Left Foot",
+            "Right Foot"
+          ],
+          "coveredLocationIds": [
+            "97088c42-6203-4992-85f7-e8af79b64c2a",
+            "70036cc5-eba2-464c-bccc-0aef993ab398"
+          ],
+          "wornLocationId": null,
+          "setId": "clothing-jedi-robes",
+          "drEntries": [
+            {
+              "locationId": "97088c42-6203-4992-85f7-e8af79b64c2a",
+              "dr": 0
+            },
+            {
+              "locationId": "70036cc5-eba2-464c-bccc-0aef993ab398",
+              "dr": 0
+            }
+          ],
+          "isInstalled": false,
+          "installedInDroidId": null,
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "itemSizeModifier": 0,
+          "modifiedForAnatomy": false,
+          "condition": "Fine",
+          "finalDRValue": null,
+          "finalWeight": null,
+          "finalCost": null,
+          "finalMovePenalty": null,
+          "finalDXPenalty": null,
+          "notesAndEffects": null,
+          "baseArmorType": "Jedi Robes (Boots)",
+          "baseDRValue": 0,
+          "baseDRNotes": "Part of Jedi Robes Ensemble.",
+          "baseWeight": 0.75,
+          "baseCost": 23,
+          "baseMovePenalty": null,
+          "baseDXPenalty": null,
+          "durability": 10,
+          "isConstructed": true,
+          "isCustomBuild": false,
+          "buildProvenance": null,
+          "pieceId": null,
+          "tier": null,
+          "materialId": null,
+          "sealed": null,
+          "sleeveless": null,
+          "faceCoverage": null,
+          "utilityId": null,
+          "frame": null,
+          "shellPart": null,
+          "backingPart": null,
+          "framePart": null,
+          "visorPart": null,
+          "trimPart": null,
+          "materials": [
+            {
+              "name": "Synth-Leather",
+              "amount": 0.75
+            }
+          ],
+          "craftingCategory": "Clothing",
+          "craftingCP": null,
+          "isSeveredRemnant": null,
+          "severedFrom": null,
+          "loadedPowerCellId": null,
+          "loadedPowerCellData": null,
+          "currentCharges": null,
+          "maxCharges": null
+        },
+        "source": "armor"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "jH0OTyo5b35YV1rG",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.jH0OTyo5b35YV1rG",
+      "name": "Jedi Robes (Cloak)",
+      "type": "armor",
+      "img": "icons/svg/shield.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "id": "0826c44f-e9f6-4e1f-a41e-c75679020616",
+          "name": "Jedi Robes (Cloak)",
+          "type": "Accessory",
+          "slot": "Accessory",
+          "drHead": null,
+          "drFace": null,
+          "drTorso": 0,
+          "drLeftArm": null,
+          "drRightArm": null,
+          "drLeftLeg": null,
+          "drRightLeg": null,
+          "drLeftHand": null,
+          "drRightHand": null,
+          "drLeftFoot": null,
+          "drRightFoot": null,
+          "dxPenalty": null,
+          "movePenalty": null,
+          "weight": 1,
+          "cost": 15,
+          "notes": "Part of Jedi Robes Ensemble. Includes a hood.",
+          "penalties": "",
+          "effects": "Part of the Jedi Robes Ensemble; +1 FP even without the rest. Usually tan, cream or brown -- color is the player’s choice.",
+          "quantity": 1,
+          "equipped": true,
+          "isActive": false,
+          "integratedSlots": 0,
+          "overlaySlots": 0,
+          "underlaySlots": 0,
+          "utilitySlots": 0,
+          "integratedModId": null,
+          "overlayModId": null,
+          "underlayModId": null,
+          "utilityModId": null,
+          "storageLocationId": null,
+          "finalCoveredLocations": [
+            "Head",
+            "Face",
+            "Torso",
+            "Upper Torso",
+            "Vitals",
+            "Left Arm",
+            "Right Arm",
+            "Left Leg",
+            "Right Leg",
+            "Left Hand",
+            "Right Hand",
+            "Left Foot",
+            "Right Foot"
+          ],
+          "coveredLocationIds": [],
+          "wornLocationId": null,
+          "setId": "clothing-jedi-robes",
+          "drEntries": [],
+          "isInstalled": false,
+          "installedInDroidId": null,
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "itemSizeModifier": 0,
+          "modifiedForAnatomy": false,
+          "condition": "Fine",
+          "finalDRValue": null,
+          "finalWeight": null,
+          "finalCost": null,
+          "finalMovePenalty": null,
+          "finalDXPenalty": null,
+          "notesAndEffects": null,
+          "baseArmorType": "Jedi Robes (Cloak)",
+          "baseDRValue": null,
+          "baseDRNotes": "Part of Jedi Robes Ensemble. Includes a hood.",
+          "baseWeight": 1,
+          "baseCost": 15,
+          "baseMovePenalty": null,
+          "baseDXPenalty": null,
+          "durability": 0,
+          "isConstructed": true,
+          "isCustomBuild": false,
+          "buildProvenance": null,
+          "pieceId": null,
+          "tier": null,
+          "materialId": null,
+          "sealed": null,
+          "sleeveless": null,
+          "faceCoverage": null,
+          "utilityId": "jedi-robes-cloak",
+          "frame": null,
+          "shellPart": null,
+          "backingPart": null,
+          "framePart": null,
+          "visorPart": null,
+          "trimPart": null,
+          "materials": [
+            {
+              "name": "Synth-Cloth",
+              "amount": 1
+            }
+          ],
+          "craftingCategory": "Clothing",
+          "craftingCP": null,
+          "isSeveredRemnant": null,
+          "severedFrom": null,
+          "loadedPowerCellId": null,
+          "loadedPowerCellData": null,
+          "currentCharges": null,
+          "maxCharges": null
+        },
+        "source": "armor"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "pY6fMK19tDiOEHgJ",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.pY6fMK19tDiOEHgJ",
+      "name": "Kaelen's Lightsaber",
+      "type": "lightsaber",
+      "img": "icons/svg/lightning.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "5b465fc4-8f7e-49b5-99bd-e681d319c8e7",
+          "name": "Kaelen's Lightsaber",
+          "baseSkill": "Lightsaber Combat (Standard)",
+          "bladeLength": 90,
+          "emitter": {
+            "materialId": "durasteel",
+            "wrapId": null,
+            "inventoryId": "c775cf85-2d2e-4c30-a809-c084b538d4fe"
+          },
+          "sleeve": {
+            "materialId": "durasteel",
+            "wrapId": null,
+            "inventoryId": "a44fff64-07e4-406f-91ea-0824e1295126"
+          },
+          "switch": {
+            "materialId": "durasteel",
+            "wrapId": null,
+            "inventoryId": "5ca6edf8-f965-41bb-9f0b-096e0fb08068"
+          },
+          "pommel": {
+            "materialId": "durasteel",
+            "wrapId": null,
+            "inventoryId": "9ea5ae03-9b74-4c17-8ecf-adfc43937102"
+          },
+          "powerCell": "389ce70a-2fd1-4225-9c8e-1fc6e357616f",
+          "lens": "0d7f307c-ecf4-4abe-9dff-a56384e7e51f",
+          "emitterMatrix": "e8e212bb-3c84-4ac7-958d-87e7f018721f",
+          "primaryCrystal": "f44a08f7-d227-4356-9331-c7de003b114d",
+          "powerCrystal": null,
+          "powerCrystalTwo": null,
+          "primaryCrystalTwo": null,
+          "finalWeight": 1.98,
+          "totalCost": 12726,
+          "powerCellCurrentCharge": 0,
+          "powerCellMaxCharge": 0,
+          "calculatedDamage": "5d energy",
+          "calculatedDamageType": "burn",
+          "combinedEffects": "",
+          "equipped": true,
+          "isConstructed": true
+        },
+        "source": "lightsabers"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "b6zXZX2vrWjwQJ9j",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.b6zXZX2vrWjwQJ9j",
+      "name": "Standard Emitter",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "c775cf85-2d2e-4c30-a809-c084b538d4fe",
+          "name": "Standard Emitter",
+          "category": "Emitter Part",
+          "cost": 6.125,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "5b465fc4-8f7e-49b5-99bd-e681d319c8e7",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "35wOp6Guk1Bxu5Om",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.35wOp6Guk1Bxu5Om",
+      "name": "Standard Sleeve",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "id": "a44fff64-07e4-406f-91ea-0824e1295126",
+          "name": "Standard Sleeve",
+          "category": "Sleeve Part",
+          "cost": 9.8,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "5b465fc4-8f7e-49b5-99bd-e681d319c8e7",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "F6DL6KncCKHGvtH0",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.F6DL6KncCKHGvtH0",
+      "name": "Standard Switch",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "id": "5ca6edf8-f965-41bb-9f0b-096e0fb08068",
+          "name": "Standard Switch",
+          "category": "Switch Part",
+          "cost": 2.45,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "5b465fc4-8f7e-49b5-99bd-e681d319c8e7",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "gauQlkeEB1bTYY80",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.gauQlkeEB1bTYY80",
+      "name": "Standard Pommel",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "id": "9ea5ae03-9b74-4c17-8ecf-adfc43937102",
+          "name": "Standard Pommel",
+          "category": "Pommel Part",
+          "cost": 6.125,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "5b465fc4-8f7e-49b5-99bd-e681d319c8e7",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "CM8pQEiOxtbSUJCb",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.CM8pQEiOxtbSUJCb",
+      "name": "Standard Diatium Cell",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "id": "389ce70a-2fd1-4225-9c8e-1fc6e357616f",
+          "name": "Standard Diatium Cell",
+          "cost": 135,
+          "weight": 0.5,
+          "hits": 3000,
+          "effect": "Standard 3,000 \"hits\" baseline.",
+          "category": "Lightsaber Power Cell",
+          "materials": [
+            {
+              "name": "Diatium",
+              "amount": 0.4
+            },
+            {
+              "name": "Silicon",
+              "amount": 0.1
+            }
+          ],
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "5b465fc4-8f7e-49b5-99bd-e681d319c8e7",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "9gqrGNSJNXOOgPDW",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.9gqrGNSJNXOOgPDW",
+      "name": "Standard Lens",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 600000,
+      "system": {
+        "row": {
+          "id": "0d7f307c-ecf4-4abe-9dff-a56384e7e51f",
+          "name": "Standard Lens",
+          "cost": 8,
+          "weight": 0.1,
+          "category": "Lightsaber Lens",
+          "materials": [
+            {
+              "name": "Clari-crystalline",
+              "amount": 0.1
+            }
+          ],
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "5b465fc4-8f7e-49b5-99bd-e681d319c8e7",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "QaWioUz9VH3N4lcs",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.QaWioUz9VH3N4lcs",
+      "name": "Standard Matrix",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 700000,
+      "system": {
+        "row": {
+          "id": "e8e212bb-3c84-4ac7-958d-87e7f018721f",
+          "name": "Standard Matrix",
+          "cost": 23,
+          "weight": 0.2,
+          "category": "Lightsaber Emitter Matrix",
+          "materials": [
+            {
+              "name": "Durasteel",
+              "amount": 0.1
+            },
+            {
+              "name": "Silicon",
+              "amount": 0.1
+            }
+          ],
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "5b465fc4-8f7e-49b5-99bd-e681d319c8e7",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "9uEhhrN4Hi430ojE",
+      "_key": "!actors.items!7ZH5STJroYcPwEJ9.9uEhhrN4Hi430ojE",
+      "name": "Blue Kyber",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 800000,
+      "system": {
+        "row": {
+          "id": "f44a08f7-d227-4356-9331-c7de003b114d",
+          "name": "Blue Kyber",
+          "rarity": "Very Common",
+          "cost": 4000,
+          "weight": 0.2,
+          "baseDamageDice": 5,
+          "baseDamageAdds": 0,
+          "effect": "5d base energy. +1 to Force Points. Natural.",
+          "category": "Lightsaber Primary Crystal",
+          "quantity": 1,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "5b465fc4-8f7e-49b5-99bd-e681d319c8e7",
+          "energyResBonus": 0
+        },
+        "source": "lightsaberModifications",
+        "family": "lightsaber"
+      },
+      "effects": [],
+      "flags": {}
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "templates",
+      "key": "kaelenRarr",
+      "template": {
+        "key": "kaelenRarr",
+        "category": "Example Player Characters",
+        "description": "A disciplined Jedi Guardian ready for combat.",
+        "migrated": true,
+        "notices": []
+      }
+    }
+  }
+}

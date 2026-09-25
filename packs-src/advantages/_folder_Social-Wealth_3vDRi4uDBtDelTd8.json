@@ -1,0 +1,19 @@
+{
+  "_id": "3vDRi4uDBtDelTd8",
+  "_key": "!folders!3vDRi4uDBtDelTd8",
+  "name": "Social/Wealth",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 200000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "path": [
+        "Social/Wealth"
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "D7958xaUqV6500We",
+  "_key": "!items!D7958xaUqV6500We",
+  "name": "Versatile",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 17200000,
+  "system": {
+    "row": {
+      "name": "Versatile",
+      "points": 5,
+      "description": "Resourceful and adaptable. You are naturally good at figuring out solutions to unusual problems.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Versatile"
+    }
+  }
+}

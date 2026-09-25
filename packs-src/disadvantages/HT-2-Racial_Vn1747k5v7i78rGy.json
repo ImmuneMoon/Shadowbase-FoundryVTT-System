@@ -1,0 +1,34 @@
+{
+  "_id": "Vn1747k5v7i78rGy",
+  "_key": "!items!Vn1747k5v7i78rGy",
+  "name": "HT -2 (Racial)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "XWDBqE5xIGYEuyLo",
+  "sort": 2300000,
+  "system": {
+    "row": {
+      "name": "HT -2 (Racial)",
+      "points": 0,
+      "level": null,
+      "description": "Species-based stamina.",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "HT -2 (Racial)|Racial"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "V147hfQlSRzd714l",
+  "_key": "!items!V147hfQlSRzd714l",
+  "name": "Blueprint: Slicer Gear (Advanced)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "g7UVHPh3r2MYv5Oo",
+  "sort": 48900000,
+  "system": {
+    "row": {
+      "id": "88929136-e5b1-45e3-94d1-1ef72668eae6",
+      "name": "Blueprint: Slicer Gear (Advanced)",
+      "cost": 567,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Slicer Gear (Advanced) (Generation 0, proven, encoded, catalog design). Required to build Slicer Gear (Advanced); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Slicer Gear (Advanced)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3925,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Tools & Electronics|Slicer Gear (Advanced)"
+    }
+  }
+}

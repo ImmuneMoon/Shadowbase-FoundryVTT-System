@@ -1,0 +1,47 @@
+{
+  "_id": "ML9iwhnQ7JpDNCcg",
+  "_key": "!items!ML9iwhnQ7JpDNCcg",
+  "name": "Standard Matrix",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "wdgF4I9g207o5qq5",
+  "sort": 4400000,
+  "system": {
+    "row": {
+      "id": "f93dff22-1d09-4113-a295-ddb2e2b65f51",
+      "name": "Standard Matrix",
+      "cost": 23,
+      "weight": 0.2,
+      "category": "Lightsaber Emitter Matrix",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.1
+        },
+        {
+          "name": "Silicon",
+          "amount": 0.1
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": ""
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:std-matrix"
+    }
+  }
+}

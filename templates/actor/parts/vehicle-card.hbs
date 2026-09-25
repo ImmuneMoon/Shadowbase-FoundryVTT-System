@@ -1,0 +1,34 @@
+{{!-- templates/actor/parts/vehicle-card.hbs - one terrestrial / atmospheric vehicle (vehicle-item.tsx 140-175: Handling, Speed, HP, DR,
+     Cost, Crew, Passengers, Hyperdrive; weapons / cargo / notes). Context: a vehicleCard. --}}
+<li class="sb-card sb-vessel-card sb-vehicle-card" data-item-id="{{id}}">
+  <header class="sb-card__head">
+    <img class="sb-row__icon" src="{{img}}" alt="">
+    <input type="text" class="sb-input sb-row__name" name="items.{{id}}.row.name" value="{{rowName}}" {{disabled (not @root.editable)}}>
+    <span class="sb-muted">{{vehicleType}}</span>
+    <span class="sb-badge sb-badge-outline">{{category}}</span>
+    {{#if (gt quantity 1)}}<span class="sb-badge sb-badge-secondary sb-badge--count">×{{quantity}}</span>{{/if}}
+    <span class="sb-row-tools">
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon" data-action="openItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.OpenSheet"}}"><i class="fa-solid fa-up-right-from-square"></i></button>
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon" data-action="exportItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.Inventory.ExportItem"}}"><i class="fa-solid fa-download"></i></button>
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-danger" data-action="deleteItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.Delete"}}" {{disabled (not @root.editable)}}><i class="fa-solid fa-xmark"></i></button>
+    </span>
+  </header>
+  <div class="sb-field-grid sb-field-grid--vehicle">
+    <label class="sb-field"><span>{{localize "SHADOWBASE.Sheet.Vehicles.Handling"}}</span><input type="text" name="items.{{id}}.row.handling" value="{{handling}}" {{disabled (not @root.editable)}}></label>
+    <label class="sb-field"><span>{{localize "SHADOWBASE.Sheet.Vehicles.Speed"}}</span><input type="text" name="items.{{id}}.row.speed" value="{{speed}}" {{disabled (not @root.editable)}}></label>
+    <label class="sb-field"><span>{{localize "SHADOWBASE.Sheet.Vehicles.AccelDecel"}}</span><input type="text" name="items.{{id}}.row.accelDecel" value="{{accelDecel}}" {{disabled (not @root.editable)}}></label>
+    <label class="sb-field"><span>HP</span><input type="number" name="items.{{id}}.row.hp" value="{{hp}}" data-dtype="Number" {{disabled (not @root.editable)}}></label>
+    <label class="sb-field"><span>DR</span><input type="number" name="items.{{id}}.row.dr" value="{{dr}}" data-dtype="Number" {{disabled (not @root.editable)}}></label>
+    <label class="sb-field"><span>{{localize "SHADOWBASE.Sheet.Vehicles.Cost"}}</span><input type="number" name="items.{{id}}.row.cost" value="{{cost}}" data-dtype="Number" {{disabled (not @root.editable)}}></label>
+    <label class="sb-field"><span>{{localize "SHADOWBASE.Sheet.Vehicles.Crew"}}</span><input type="text" name="items.{{id}}.row.crew" value="{{crew}}" {{disabled (not @root.editable)}}></label>
+    <label class="sb-field"><span>{{localize "SHADOWBASE.Sheet.Vehicles.Passengers"}}</span><input type="text" name="items.{{id}}.row.passengers" value="{{passengers}}" {{disabled (not @root.editable)}}></label>
+    <label class="sb-field"><span>{{localize "SHADOWBASE.Sheet.Vehicles.Cargo"}}</span><input type="text" name="items.{{id}}.row.cargo" value="{{cargo}}" {{disabled (not @root.editable)}}></label>
+    <label class="sb-field"><span>{{localize "SHADOWBASE.Sheet.Vehicles.Hyperdrive"}}</span><input type="text" name="items.{{id}}.row.hyperdrive" value="{{hyperdrive}}" {{disabled (not @root.editable)}}></label>
+    <label class="sb-field sb-field--wide"><span>{{localize "SHADOWBASE.Sheet.Vehicles.Weapons"}}</span><input type="text" name="items.{{id}}.row.weapons" value="{{weapons}}" {{disabled (not @root.editable)}}></label>
+    <label class="sb-field"><span>{{localize "SHADOWBASE.Sheet.Vehicles.WeaponSkill"}}</span><input type="text" name="items.{{id}}.row.weaponSkill" value="{{weaponSkill}}" {{disabled (not @root.editable)}}></label>
+  </div>
+  {{#if notes}}<p class="sb-dossier">{{notes}}</p>{{/if}}
+  <details class="sb-row__details"><summary>{{localize "SHADOWBASE.Sheet.Vehicles.CustomNotes"}}</summary>
+    <textarea class="sb-textarea" name="items.{{id}}.row.customNotes" rows="2" {{disabled (not @root.editable)}}>{{customNotes}}</textarea>
+  </details>
+</li>

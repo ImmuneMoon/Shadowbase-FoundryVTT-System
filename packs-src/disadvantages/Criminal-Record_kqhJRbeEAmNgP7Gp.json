@@ -1,0 +1,34 @@
+{
+  "_id": "kqhJRbeEAmNgP7Gp",
+  "_key": "!items!kqhJRbeEAmNgP7Gp",
+  "name": "Criminal Record",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "KbQ0mAMpcz5zmcEs",
+  "sort": 5000000,
+  "system": {
+    "row": {
+      "name": "Criminal Record",
+      "points": -5,
+      "level": null,
+      "description": "You have a history of illegal activities known to authorities, leading to increased scrutiny and potential arrest in civilized systems. This record can be used by law enforcement or rivals to pressure you. Points vary by severity of record (-5 to -10 points).",
+      "category": "Cultural / Background",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Criminal Record|Cultural / Background"
+    }
+  }
+}

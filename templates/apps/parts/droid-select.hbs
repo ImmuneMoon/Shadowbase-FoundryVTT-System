@@ -1,0 +1,27 @@
+{{!-- One slot select (droid-workshop.tsx:529-573 renderUpgradeSelect + PartInfoDisplay): the warped line with its
+     Structural Repair button, the select bound to `droid.<path>`, the "Uses 1 X Slot" caption, the part's spec box.
+     Context: a `select` object from DroidWorkshop#_prepareContext (path, name, label, slotLabel, warped, current,
+     options[{value,label,selected}], part|null) plus `editable`. --}}
+<div class="sb-droid__select" data-path="{{path}}">
+  <label class="sb-field__label" for="droid-{{path}}">{{label}}</label>
+  {{#if warped}}
+  <div class="sb-droid__warped">
+    <span class="sb-caps sb-text-10">{{localize "SHADOWBASE.Apps.Droid.SlotWarpedShort"}}</span>
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="structural-repair" data-path="{{path}}" {{disabled (not editable)}}>{{localize "SHADOWBASE.Apps.Droid.StructuralRepair"}}</button>
+  </div>
+  {{/if}}
+  <select class="sb-select" id="droid-{{path}}" name="{{name}}" {{disabled (not editable)}}>
+    {{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+  </select>
+  <span class="sb-droid__slot-note">{{localize "SHADOWBASE.Apps.Droid.UsesSlot" slot=slotLabel}}</span>
+  {{#if part}}
+  <div class="sb-droid__part">
+    <i class="fa-solid fa-circle-info"></i>
+    <div>
+      <p class="sb-droid__part-effect">{{localize "SHADOWBASE.Apps.Droid.Effect"}}: {{part.effect}}</p>
+      {{#if part.notes}}<p class="sb-droid__part-notes">{{part.notes}}</p>{{/if}}
+      <p class="sb-hrow sb-hrow--tight sb-droid__part-figures"><span class="sb-droid__figure">{{localize "SHADOWBASE.Apps.Droid.Weight"}}: {{part.weight}} lbs.</span><span class="sb-droid__figure sb-droid__figure--cr">{{localize "SHADOWBASE.Apps.Droid.Value"}}: {{part.costCr}} cr</span></p>
+    </div>
+  </div>
+  {{/if}}
+</div>

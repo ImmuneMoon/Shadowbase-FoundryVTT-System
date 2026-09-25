@@ -1,0 +1,39 @@
+{
+  "_id": "kgQDRkOPzdg0G0nl",
+  "_key": "!items!kgQDRkOPzdg0G0nl",
+  "name": "Overcharged Motivator",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 8400000,
+  "system": {
+    "row": {
+      "id": "6830ae68-6999-489e-8a4b-589c075a0881",
+      "name": "Overcharged Motivator",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 3400,
+      "weight": 25,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "move-motor-2",
+      "description": "+2 Move"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "move-motor-2"
+    }
+  }
+}

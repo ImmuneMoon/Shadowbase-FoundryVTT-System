@@ -1,0 +1,16 @@
+{{!-- templates/chat/notice.hbs - an advisory: the turn sweep's expiries, combat-economy flags (combat-economy.ts,
+     warn only), the damage processor's ledger and its HT prompts. Context: module/rolls.mjs postNotice. --}}
+<div class="shadowbase sb-chat-card sb-chat-card--notice" data-actor-id="{{actorId}}">
+  <header class="sb-chat-card__header"><h3 class="sb-chat-card__title">{{title}}</h3></header>
+  {{#if lines.length}}
+  <ul class="sb-chat-card__notice-lines">
+    {{#each lines}}<li>{{this}}</li>{{/each}}
+  </ul>
+  {{/if}}
+  {{#if economy.length}}
+  <div class="sb-chat-card__advisories">
+    <p class="sb-chat-card__advisory-title">{{localize "SHADOWBASE.Combat.EconomyTitle"}}</p>
+    {{#each economy}}<p class="sb-chat-card__advisory"><strong>{{this.label}}:</strong> {{this.detail}}</p>{{/each}}
+  </div>
+  {{/if}}
+</div>

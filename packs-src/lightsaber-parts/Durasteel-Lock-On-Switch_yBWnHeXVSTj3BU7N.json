@@ -1,0 +1,42 @@
+{
+  "_id": "yBWnHeXVSTj3BU7N",
+  "_key": "!items!yBWnHeXVSTj3BU7N",
+  "name": "Durasteel Lock-On Switch",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "9ECWDaoCgwDpUCaw",
+  "sort": 1100000,
+  "system": {
+    "row": {
+      "name": "Durasteel Lock-On Switch",
+      "category": "Switch Part",
+      "effect": "Double-click to deactivate. Prevents accidental shut-off if dropped.",
+      "weight": 0.147,
+      "cost": 4,
+      "id": "ac51e8bd-b5c7-4a79-adce-627eebc4ebb1",
+      "partId": "lock-switch",
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "materialId": "durasteel",
+      "wrapId": null,
+      "volume": 0.0003,
+      "density": 490
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "hilt:lock-switch"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "9slOaOQBKYEodfC2",
+  "_key": "!items!9slOaOQBKYEodfC2",
+  "name": "Detect Lies",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "gJ04IFKOKVTXdKLa",
+  "sort": 3700000,
+  "system": {
+    "row": {
+      "name": "Detect Lies",
+      "level": "",
+      "points": null,
+      "relativeLevel": "Per/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Detect Lies"
+    }
+  }
+}

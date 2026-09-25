@@ -1,0 +1,42 @@
+{
+  "_id": "66D4XWLmLs6diDz2",
+  "_key": "!items!66D4XWLmLs6diDz2",
+  "name": "Blueprint: Republic Trooper Standard Boots",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 8900000,
+  "system": {
+    "row": {
+      "id": "22f296f5-0bb5-449f-baf6-cf48d1015b1b",
+      "name": "Blueprint: Republic Trooper Standard Boots",
+      "cost": 192,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Republic Trooper Standard Boots (Generation 0, proven, encoded, catalog design). Required to build Republic Trooper Standard Boots; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Republic Trooper Standard Boots",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 176,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Republic Trooper Standard Boots"
+    }
+  }
+}

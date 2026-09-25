@@ -1,0 +1,44 @@
+{
+  "_id": "CSJcjFaGtkhAw2hf",
+  "_key": "!items!CSJcjFaGtkhAw2hf",
+  "name": "Nextor",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "CHP7xje9NHnZhKqb",
+  "sort": 7900000,
+  "system": {
+    "row": {
+      "id": "3b354db4-f5be-42d3-822a-e47412f7bdce",
+      "name": "Nextor",
+      "cost": 2000,
+      "weight": 0.2,
+      "effect": "+1 to hit, +1 Armor Divisor.",
+      "category": "Lightsaber Power Crystal",
+      "materials": [
+        {
+          "name": "Mullinine",
+          "amount": 0.2
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "+1 to hit, +1 Armor Divisor."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:nextor"
+    }
+  }
+}

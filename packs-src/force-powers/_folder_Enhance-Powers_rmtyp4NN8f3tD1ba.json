@@ -1,0 +1,19 @@
+{
+  "_id": "rmtyp4NN8f3tD1ba",
+  "_key": "!folders!rmtyp4NN8f3tD1ba",
+  "name": "Enhance Powers",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "path": [
+        "Enhance Powers"
+      ]
+    }
+  }
+}

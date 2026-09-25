@@ -1,0 +1,454 @@
+{
+  "_id": "dZeSHgKPQU7y7Cgc",
+  "_key": "!items!dZeSHgKPQU7y7Cgc",
+  "name": "Dual Bladed Lightsaber (Saberstaff)",
+  "type": "lightsaber",
+  "img": "icons/svg/lightning.svg",
+  "folder": "ccqdIylak7skotbc",
+  "sort": 300000,
+  "system": {
+    "row": {
+      "name": "Dual Bladed Lightsaber (Saberstaff)",
+      "description": "A staff-like joiner hilt that yields 10/10 Durability on both sides.",
+      "category": "Staff",
+      "isConstructed": true,
+      "buildManifest": {
+        "emitter": {
+          "name": "Standard Emitter",
+          "material": "durasteel"
+        },
+        "switch": {
+          "name": "Standard Switch",
+          "material": "durasteel"
+        },
+        "sleeve": {
+          "name": "Standard Sleeve",
+          "material": "durasteel"
+        },
+        "coupler": {
+          "name": "Static Coupler",
+          "material": "durasteel"
+        },
+        "emitterTwo": {
+          "name": "Standard Emitter",
+          "material": "durasteel"
+        },
+        "switchTwo": {
+          "name": "Standard Switch",
+          "material": "durasteel"
+        },
+        "sleeveTwo": {
+          "name": "Standard Sleeve",
+          "material": "durasteel"
+        },
+        "powerCell": "Standard Diatium Cell",
+        "lens": "Standard Lens",
+        "matrix": "Standard Matrix",
+        "primaryCrystal": "red-kyber",
+        "primaryCrystalTwo": "red-kyber"
+      },
+      "emitter": {
+        "inventoryId": "13304ae3-736c-47a2-a0d7-216ab9756e38",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "switch": {
+        "inventoryId": "e2e9d600-7ac8-4204-b4f5-780aad5c654c",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "sleeve": {
+        "inventoryId": "2b2c8b87-dae6-4615-8d8d-091b7443cd2d",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "pommel": {},
+      "bladeLength": 90,
+      "equipped": false,
+      "quantity": 1,
+      "condition": "Fine",
+      "conditionTwo": "Fine",
+      "totalCost": 12520,
+      "finalWeight": 4.45,
+      "classType": "Standard Saberstaff",
+      "durability": null,
+      "maxDurability": 0,
+      "durabilityTwo": null,
+      "maxDurabilityTwo": 0,
+      "energyRes": 0,
+      "energyResTwo": 0,
+      "id": "eea9e931-671f-499c-821c-28eb29d9f54e",
+      "coupler": {
+        "inventoryId": "35f59562-c1d9-47d2-abdc-1ef251fc3b11",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "couplerTwo": {
+        "inventoryId": "323866f6-048d-4e61-bf15-fe8cd4d7b078",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "emitterTwo": {
+        "inventoryId": "668cded5-f291-4938-864d-fb11c6f99220",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "switchTwo": {
+        "inventoryId": "adf172ce-6d4d-4cd7-8f4e-dadebaad8338",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "sleeveTwo": {
+        "inventoryId": "2cd1251c-7c5c-4e16-848c-33c676a49ca0",
+        "materialId": "durasteel",
+        "wrapId": null
+      },
+      "powerCell": "643d81ff-4896-4643-80ec-f7295fcf379e",
+      "lens": "97dc4278-9d96-45cf-8b94-069f2d82f7ca",
+      "emitterMatrix": "0c48f514-6330-4495-a5aa-1b3bfbf9d8a8",
+      "primaryCrystal": "82cc1c00-7c3d-4f1a-8015-2dc069494f79",
+      "primaryCrystalTwo": "8e20b518-5b95-4be6-b6eb-5706da6afb3d"
+    },
+    "source": "lightsabers",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "name": "Dual Bladed Lightsaber (Saberstaff)",
+        "description": "A staff-like joiner hilt that yields 10/10 Durability on both sides.",
+        "category": "Staff",
+        "isConstructed": true,
+        "buildManifest": {
+          "emitter": {
+            "name": "Standard Emitter",
+            "material": "durasteel"
+          },
+          "switch": {
+            "name": "Standard Switch",
+            "material": "durasteel"
+          },
+          "sleeve": {
+            "name": "Standard Sleeve",
+            "material": "durasteel"
+          },
+          "coupler": {
+            "name": "Static Coupler",
+            "material": "durasteel"
+          },
+          "emitterTwo": {
+            "name": "Standard Emitter",
+            "material": "durasteel"
+          },
+          "switchTwo": {
+            "name": "Standard Switch",
+            "material": "durasteel"
+          },
+          "sleeveTwo": {
+            "name": "Standard Sleeve",
+            "material": "durasteel"
+          },
+          "powerCell": "Standard Diatium Cell",
+          "lens": "Standard Lens",
+          "matrix": "Standard Matrix",
+          "primaryCrystal": "red-kyber",
+          "primaryCrystalTwo": "red-kyber"
+        },
+        "emitter": {
+          "inventoryId": "13304ae3-736c-47a2-a0d7-216ab9756e38",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "switch": {
+          "inventoryId": "e2e9d600-7ac8-4204-b4f5-780aad5c654c",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "sleeve": {
+          "inventoryId": "2b2c8b87-dae6-4615-8d8d-091b7443cd2d",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "pommel": {},
+        "bladeLength": 90,
+        "equipped": false,
+        "quantity": 1,
+        "condition": "Fine",
+        "conditionTwo": "Fine",
+        "totalCost": 12520,
+        "finalWeight": 4.45,
+        "classType": "Standard Saberstaff",
+        "durability": null,
+        "maxDurability": 0,
+        "durabilityTwo": null,
+        "maxDurabilityTwo": 0,
+        "energyRes": 0,
+        "energyResTwo": 0,
+        "id": "eea9e931-671f-499c-821c-28eb29d9f54e",
+        "coupler": {
+          "inventoryId": "35f59562-c1d9-47d2-abdc-1ef251fc3b11",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "couplerTwo": {
+          "inventoryId": "323866f6-048d-4e61-bf15-fe8cd4d7b078",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "emitterTwo": {
+          "inventoryId": "668cded5-f291-4938-864d-fb11c6f99220",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "switchTwo": {
+          "inventoryId": "adf172ce-6d4d-4cd7-8f4e-dadebaad8338",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "sleeveTwo": {
+          "inventoryId": "2cd1251c-7c5c-4e16-848c-33c676a49ca0",
+          "materialId": "durasteel",
+          "wrapId": null
+        },
+        "powerCell": "643d81ff-4896-4643-80ec-f7295fcf379e",
+        "lens": "97dc4278-9d96-45cf-8b94-069f2d82f7ca",
+        "emitterMatrix": "0c48f514-6330-4495-a5aa-1b3bfbf9d8a8",
+        "primaryCrystal": "82cc1c00-7c3d-4f1a-8015-2dc069494f79",
+        "primaryCrystalTwo": "8e20b518-5b95-4be6-b6eb-5706da6afb3d"
+      },
+      "parts": [
+        {
+          "id": "13304ae3-736c-47a2-a0d7-216ab9756e38",
+          "name": "Standard Emitter",
+          "category": "Emitter Part",
+          "cost": 6,
+          "weight": 0.245,
+          "effect": "Reach 1. Standard containment field.",
+          "volume": 0.0005,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "eea9e931-671f-499c-821c-28eb29d9f54e",
+          "quantity": 1
+        },
+        {
+          "id": "e2e9d600-7ac8-4204-b4f5-780aad5c654c",
+          "name": "Standard Switch",
+          "category": "Switch Part",
+          "cost": 2,
+          "weight": 0.098,
+          "effect": "Standard toggle activation.",
+          "volume": 0.0002,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "eea9e931-671f-499c-821c-28eb29d9f54e",
+          "quantity": 1
+        },
+        {
+          "id": "2b2c8b87-dae6-4615-8d8d-091b7443cd2d",
+          "name": "Standard Sleeve",
+          "category": "Sleeve Part",
+          "cost": 10,
+          "weight": 0.392,
+          "effect": "+1 Parry bonus. Accommodates 1 or 2 hands.",
+          "volume": 0.0008,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "eea9e931-671f-499c-821c-28eb29d9f54e",
+          "quantity": 1
+        },
+        {
+          "id": "35f59562-c1d9-47d2-abdc-1ef251fc3b11",
+          "name": "Static Coupler",
+          "category": "Coupler Part",
+          "cost": 12,
+          "weight": 0.49,
+          "effect": "Permanent staff joiner. Parry +4. 2 attacks at -3.",
+          "volume": 0.001,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "eea9e931-671f-499c-821c-28eb29d9f54e",
+          "quantity": 1
+        },
+        {
+          "id": "323866f6-048d-4e61-bf15-fe8cd4d7b078",
+          "name": "Static Coupler",
+          "category": "Coupler Part",
+          "cost": 12,
+          "weight": 0.49,
+          "effect": "Permanent staff joiner. Parry +4. 2 attacks at -3.",
+          "volume": 0.001,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "eea9e931-671f-499c-821c-28eb29d9f54e",
+          "quantity": 1
+        },
+        {
+          "id": "668cded5-f291-4938-864d-fb11c6f99220",
+          "name": "Standard Emitter",
+          "category": "Emitter Part",
+          "cost": 6,
+          "weight": 0.245,
+          "effect": "Reach 1. Standard containment field.",
+          "volume": 0.0005,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "eea9e931-671f-499c-821c-28eb29d9f54e",
+          "quantity": 1
+        },
+        {
+          "id": "adf172ce-6d4d-4cd7-8f4e-dadebaad8338",
+          "name": "Standard Switch",
+          "category": "Switch Part",
+          "cost": 2,
+          "weight": 0.098,
+          "effect": "Standard toggle activation.",
+          "volume": 0.0002,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "eea9e931-671f-499c-821c-28eb29d9f54e",
+          "quantity": 1
+        },
+        {
+          "id": "2cd1251c-7c5c-4e16-848c-33c676a49ca0",
+          "name": "Standard Sleeve",
+          "category": "Sleeve Part",
+          "cost": 10,
+          "weight": 0.392,
+          "effect": "+1 Parry bonus. Accommodates 1 or 2 hands.",
+          "volume": 0.0008,
+          "density": 490,
+          "materialId": "durasteel",
+          "wrapId": null,
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "eea9e931-671f-499c-821c-28eb29d9f54e",
+          "quantity": 1
+        },
+        {
+          "id": "643d81ff-4896-4643-80ec-f7295fcf379e",
+          "name": "Standard Diatium Cell",
+          "cost": 135,
+          "weight": 0.5,
+          "hits": 3000,
+          "effect": "Standard 3,000 \"hits\" baseline.",
+          "category": "Lightsaber Power Cell",
+          "materials": [
+            {
+              "name": "Diatium",
+              "amount": 0.4
+            },
+            {
+              "name": "Silicon",
+              "amount": 0.1
+            }
+          ],
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "eea9e931-671f-499c-821c-28eb29d9f54e",
+          "quantity": 1
+        },
+        {
+          "id": "97dc4278-9d96-45cf-8b94-069f2d82f7ca",
+          "name": "Standard Lens",
+          "cost": 8,
+          "weight": 0.1,
+          "category": "Lightsaber Lens",
+          "materials": [
+            {
+              "name": "Clari-crystalline",
+              "amount": 0.1
+            }
+          ],
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "eea9e931-671f-499c-821c-28eb29d9f54e",
+          "quantity": 1
+        },
+        {
+          "id": "0c48f514-6330-4495-a5aa-1b3bfbf9d8a8",
+          "name": "Standard Matrix",
+          "cost": 23,
+          "weight": 0.2,
+          "category": "Lightsaber Emitter Matrix",
+          "materials": [
+            {
+              "name": "Durasteel",
+              "amount": 0.1
+            },
+            {
+              "name": "Silicon",
+              "amount": 0.1
+            }
+          ],
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "eea9e931-671f-499c-821c-28eb29d9f54e",
+          "quantity": 1
+        },
+        {
+          "id": "82cc1c00-7c3d-4f1a-8015-2dc069494f79",
+          "name": "Red Kyber",
+          "rarity": "Common",
+          "cost": 6000,
+          "weight": 0.2,
+          "baseDamageDice": 5,
+          "baseDamageAdds": 0,
+          "effect": "5d base energy. +1 to Force Points. Natural.",
+          "category": "Lightsaber Primary Crystal",
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "eea9e931-671f-499c-821c-28eb29d9f54e",
+          "quantity": 1
+        },
+        {
+          "id": "8e20b518-5b95-4be6-b6eb-5706da6afb3d",
+          "name": "Red Kyber",
+          "rarity": "Common",
+          "cost": 6000,
+          "weight": 0.2,
+          "baseDamageDice": 5,
+          "baseDamageAdds": 0,
+          "effect": "5d base energy. +1 to Force Points. Natural.",
+          "category": "Lightsaber Primary Crystal",
+          "equipped": true,
+          "isInstalled": true,
+          "installedInSaberId": "eea9e931-671f-499c-821c-28eb29d9f54e",
+          "quantity": 1
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "lightsabers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsabers",
+      "key": "Dual Bladed Lightsaber (Saberstaff)"
+    }
+  }
+}

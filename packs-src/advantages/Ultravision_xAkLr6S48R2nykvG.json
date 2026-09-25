@@ -1,0 +1,34 @@
+{
+  "_id": "xAkLr6S48R2nykvG",
+  "_key": "!items!xAkLr6S48R2nykvG",
+  "name": "Ultravision",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "b0AkEhPa45uoNffk",
+  "sort": 16900000,
+  "system": {
+    "row": {
+      "name": "Ultravision",
+      "points": 0,
+      "description": "Replacing normal vision",
+      "category": "Cybernetic",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Ultravision"
+    }
+  }
+}

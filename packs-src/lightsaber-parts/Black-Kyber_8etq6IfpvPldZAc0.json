@@ -1,0 +1,41 @@
+{
+  "_id": "8etq6IfpvPldZAc0",
+  "_key": "!items!8etq6IfpvPldZAc0",
+  "name": "Black Kyber",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "orWVaxdlAjqEWg6h",
+  "sort": 4800000,
+  "system": {
+    "row": {
+      "id": "f0ab265e-c2b2-4825-888f-b0021c75f448",
+      "name": "Black Kyber",
+      "rarity": "Ultra Rare",
+      "cost": 200000,
+      "weight": 0.2,
+      "baseDamageDice": 5,
+      "baseDamageAdds": 0,
+      "effect": "5d base energy. x2 to Force Points. Natural.",
+      "category": "Lightsaber Primary Crystal",
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "5d base energy. x2 to Force Points. Natural."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:black-kyber"
+    }
+  }
+}

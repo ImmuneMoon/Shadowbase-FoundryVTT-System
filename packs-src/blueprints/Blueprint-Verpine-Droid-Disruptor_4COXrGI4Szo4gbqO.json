@@ -1,0 +1,42 @@
+{
+  "_id": "4COXrGI4Szo4gbqO",
+  "_key": "!items!4COXrGI4Szo4gbqO",
+  "name": "Blueprint: Verpine Droid Disruptor",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Wn54IYbNSxjtPGwZ",
+  "sort": 46500000,
+  "system": {
+    "row": {
+      "id": "ee61f63b-f3bd-4dae-847c-73691fe1dde3",
+      "name": "Blueprint: Verpine Droid Disruptor",
+      "cost": 623,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Verpine Droid Disruptor (Generation 0, proven, encoded, catalog design). Required to build Verpine Droid Disruptor; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Verpine Droid Disruptor",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 4490,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Specialized Rifles|Verpine Droid Disruptor"
+    }
+  }
+}

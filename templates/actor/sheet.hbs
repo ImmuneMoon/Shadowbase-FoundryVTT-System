@@ -1,0 +1,16 @@
+{{!-- templates/actor/sheet.hbs - the WHOLE sheet as one page, for tools/render-preview.mjs and any host that wants the
+     parts composed (ApplicationV2 renders the PARTS of module/apps/actor-sheet.mjs one by one into the form and
+     never reads this file). The parts are rendered to HTML first and handed in as `parts` (header, tabs, info,
+     body, abilities, inventory, vehicles), so this template only lays them out in the order the sheet does. --}}
+<div class="sb-sheet application shadowbase sheet actor" data-compact-rows="{{prefs.compactRows}}" data-reduce-motion="{{prefs.reduceMotion}}" data-point-costs="{{prefs.showPointCosts}}" data-handbook-chips="{{prefs.showHandbookChips}}" data-sticky-headers="{{prefs.stickySectionHeaders}}">
+  <form class="sb-sheet" autocomplete="off">
+    {{{parts.header}}}
+    {{{parts.dashboard}}}
+    {{{parts.tabs}}}
+    {{{parts.info}}}
+    {{{parts.body}}}
+    {{{parts.abilities}}}
+    {{{parts.inventory}}}
+    {{{parts.vehicles}}}
+  </form>
+</div>

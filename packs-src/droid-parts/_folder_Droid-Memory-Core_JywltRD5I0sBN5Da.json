@@ -1,0 +1,19 @@
+{
+  "_id": "JywltRD5I0sBN5Da",
+  "_key": "!folders!JywltRD5I0sBN5Da",
+  "name": "Droid Memory Core",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 300000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "path": [
+        "Droid Memory Core"
+      ]
+    }
+  }
+}

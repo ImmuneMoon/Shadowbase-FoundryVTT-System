@@ -1,0 +1,91 @@
+{
+  "_id": "u7M4WPtP4o0ubOqM",
+  "_key": "!items!u7M4WPtP4o0ubOqM",
+  "name": "Miralukan Force Sight",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "lMudTveYN6LSWH7D",
+  "sort": 3500000,
+  "system": {
+    "row": {
+      "name": "Miralukan Force Sight",
+      "level": 1,
+      "cpCost": 0,
+      "fpCost": 2,
+      "effect": "You can perceive the world through the Force in 360 vision, bypassing blindness, illusions, and normal darkness within 50 feet.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Sense (Per/Average)",
+      "category": "Sense Powers",
+      "alignment": "Grey",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Miralukan Force Sight",
+        "description": "The Miralukan species is a force sensitive humanoid race born without eyes, who perceive the world through the Force. This aids them in bypassing blindness, illusions, or even physical obstructions like smoke, darkness, or physical objects.",
+        "category": "Sense Powers",
+        "level": 1,
+        "cpCost": 0,
+        "fpCost": 2,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Apprentice",
+        "requirements": "Required Advantage: Force Sight (Miraluka Specialized Vision)",
+        "effect": "You can perceive the world through the Force in 360 vision, bypassing blindness, illusions, and normal darkness within 50 feet."
+      },
+      {
+        "name": "Miralukan Force Sight",
+        "description": "The Miralukan species is a force sensitive humanoid race born without eyes, who perceive the world through the Force. This aids them in bypassing blindness, illusions, or even physical obstructions like smoke, darkness, or physical objects.",
+        "category": "Sense Powers",
+        "level": 2,
+        "cpCost": 10,
+        "fpCost": 1,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Adept",
+        "requirements": "Required Advantage: Force Sight (Miraluka Specialized Vision)",
+        "effect": "Range extends to 75 feet. You can detect living beings through thin objects within 5 yards. Gain +1 to Perception to detect hidden opponents."
+      },
+      {
+        "name": "Miralukan Force Sight",
+        "description": "The Miralukan species is a force sensitive humanoid race born without eyes, who perceive the world through the Force. This aids them in bypassing blindness, illusions, or even physical obstructions like smoke, darkness, or physical objects.",
+        "category": "Sense Powers",
+        "level": 3,
+        "cpCost": 25,
+        "fpCost": 1,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Expert",
+        "requirements": "Required Advantage: Force Sight (Miraluka Specialized Vision)",
+        "effect": "Range extends to 100 feet. You can see through heavier objects within 10 yards. You gain 360-degree vision and +2 to defend against surprise attacks."
+      },
+      {
+        "name": "Miralukan Force Sight",
+        "description": "The Miralukan species is a force sensitive humanoid race born without eyes, who perceive the world through the Force. This aids them in bypassing blindness, illusions, or even physical obstructions like smoke, darkness, or physical objects.",
+        "category": "Sense Powers",
+        "level": 4,
+        "cpCost": 45,
+        "fpCost": 1,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Master",
+        "requirements": "Required Advantage: Force Sight (Miraluka Specialized Vision)",
+        "effect": "Range is increased to 300 feet, and up to the horizon in a Force-rich environment. You can discern emotional states and immediate intentions within 100 feet. You can no longer be surprised."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Miralukan Force Sight"
+    }
+  }
+}

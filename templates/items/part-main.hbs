@@ -1,0 +1,52 @@
+{{!-- templates/items/part-main.hbs - a weapon / lightsaber / armor part (ammunition-and-modifications-section.tsx
+     :370-800: Piece Profile, Component Effect, Fits): family, category, the catalog template, the material (re-milled
+     through pricePart), a sleeve's wrap, the figures, fracture and condition, the host. Context: main (part.mjs),
+     editable, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--part {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <div class="sb-item-grid">
+      {{#if main.isWeaponPart}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Part.FamilyLabel"}}</span>
+        <select class="sb-select" name="system.family" {{disabled (not editable)}}>{{#each main.families}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{/if}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Part.Category"}}</span>
+        <select class="sb-select" name="system.row.category" {{disabled (not editable)}}>{{#each main.categories}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      <label class="sb-field sb-span-2"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Part.Template"}}</span>
+        <select class="sb-select" name="template" {{disabled (not editable)}}>{{#each main.templates}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{#if main.takesMaterial}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Slot.Material"}}</span>
+        <select class="sb-select" name="material" {{disabled (not editable)}}>{{#each main.materialOptions}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{/if}}
+      {{#if main.isSleeve}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Slot.Wrap"}}</span>
+        <select class="sb-select" name="wrap" {{disabled (not editable)}}>{{#each main.wraps}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{/if}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.Condition"}}</span>
+        <select class="sb-select" name="system.row.condition" {{disabled (not editable)}}>{{#each main.conditions}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Part.EnergyResBonus"}}</span><input type="number" class="sb-input" name="system.row.energyResBonus" value="{{main.energyResBonus}}" data-dtype="Number" {{disabled (not editable)}}></label>
+      {{#if main.isArmor}}<label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Part.DrBonus"}}</span><input type="number" class="sb-input" name="system.row.drBonus" value="{{main.drBonus}}" data-dtype="Number" {{disabled (not editable)}}></label>{{/if}}
+    </div>
+    <div class="sb-hrow sb-hrow--tight sb-item__badges">
+      <label class="sb-check-row sb-check-row--tiny" title="{{localize "SHADOWBASE.Item.Part.FracturedHint"}}"><input type="checkbox" name="system.row.isFractured" {{checked main.isFractured}} {{disabled (not editable)}}> {{localize "SHADOWBASE.Item.Part.Fractured"}}</label>
+      {{#if main.componentClass}}<span class="sb-badge sb-badge-outline">{{main.componentClass}}</span>{{/if}}
+      {{#if main.materialName}}<span class="sb-badge sb-badge-outline">{{main.materialName}}</span>{{/if}}
+      {{#if main.inCatalog}}<span class="sb-badge sb-badge-outline sb-badge-accent">{{localize "SHADOWBASE.Item.Trait.InLibrary"}}</span>{{else}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Item.Trait.Custom"}}</span>{{/if}}
+      {{#if main.host}}<span class="sb-badge sb-badge-accent"><i class="fa-solid fa-link"></i> {{localize "SHADOWBASE.Sheet.Inventory.InstalledIn" name=main.host.name}}</span>{{else}}{{#if main.installed}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Sheet.Inventory.Installed"}}</span>{{else}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Sheet.Inventory.Loose"}}</span>{{/if}}{{/if}}
+      {{#if main.validSlots.length}}<span class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Part.Fits"}}: {{#each main.validSlots}}<span class="sb-tag sb-tag--muted">{{this}}</span>{{/each}}</span>{{/if}}
+    </div>
+    {{#if main.priced}}<p class="sb-text-xs"><span class="sb-caps sb-text-accent">{{localize "SHADOWBASE.Item.Part.ShopPrice"}}</span> <span class="sb-mono">{{#if main.priced.priced}}{{main.priced.cost}} cr · {{main.priced.weight}} lb{{#if main.priced.value}} · {{localize "SHADOWBASE.Item.Part.RawValue" v=main.priced.value}}{{/if}}{{else}}{{localize "SHADOWBASE.Item.Build.Unpriced"}}{{/if}}</span></p>{{/if}}
+    {{#if main.volume}}<p class="sb-text-muted sb-text-xs sb-mono">{{localize "SHADOWBASE.Item.Part.Volume" v=main.volume}}{{#if main.density}} · {{localize "SHADOWBASE.Item.Part.Density" d=main.density}}{{/if}}{{#if main.durMod}} · Dur {{main.durMod}}{{/if}}</p>{{/if}}
+    {{#if main.materials.length}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Part.Materials"}}: {{#each main.materials}}<span class="sb-tag sb-tag--muted">{{this}}</span>{{/each}}</p>{{/if}}
+  </div>
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Item.Part.ComponentEffect"}}</h4>
+    <textarea class="sb-textarea" name="system.row.effect" rows="3" {{disabled (not editable)}}>{{main.effect}}</textarea>
+    {{#if main.templateNotes}}<p class="sb-dossier">{{main.templateNotes}}</p>{{/if}}
+  </div>
+</section>

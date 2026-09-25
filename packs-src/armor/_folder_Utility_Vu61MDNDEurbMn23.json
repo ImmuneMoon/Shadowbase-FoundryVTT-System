@@ -1,0 +1,19 @@
+{
+  "_id": "Vu61MDNDEurbMn23",
+  "_key": "!folders!Vu61MDNDEurbMn23",
+  "name": "Utility",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 400000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "armor",
+      "path": [
+        "Utility"
+      ]
+    }
+  }
+}

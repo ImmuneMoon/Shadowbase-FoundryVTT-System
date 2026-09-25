@@ -1,0 +1,19 @@
+{
+  "_id": "nbRV9VVXrN4o4HMj",
+  "_key": "!folders!nbRV9VVXrN4o4HMj",
+  "name": "Smallsword",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 1800000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "path": [
+        "Smallsword"
+      ]
+    }
+  }
+}

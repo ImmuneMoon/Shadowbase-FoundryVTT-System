@@ -1,0 +1,32 @@
+{
+  "_id": "OIV2YxBry2QpKlW9",
+  "_key": "!items!OIV2YxBry2QpKlW9",
+  "name": "Incurious",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 2300000,
+  "system": {
+    "row": {
+      "name": "Incurious",
+      "points": -1,
+      "description": "You are content with what you know and rarely seek out new information or experiences.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Incurious"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "_id": "IdcBhqQR4w9MZIUo",
+  "_key": "!items!IdcBhqQR4w9MZIUo",
+  "name": "Scrap-Tech Jerryrigged Manipulator",
+  "type": "cyberneticLimb",
+  "img": "icons/svg/bones.svg",
+  "folder": "Ion0lHQozspiLAyd",
+  "sort": 100000,
+  "system": {
+    "row": {
+      "id": "4f395aa6-a944-49b9-a288-0a758fe3173b",
+      "name": "Scrap-Tech Jerryrigged Manipulator",
+      "location": "Right Hand",
+      "extent": "Partial",
+      "material": "Scrap Metal",
+      "cost": 584,
+      "weight": 2.43,
+      "dr": 1,
+      "currentDr": 1,
+      "effect": "Imposes the Ham-Fisted 1 disadvantage.",
+      "upgrades": [],
+      "hasSynthskin": false,
+      "installed": false,
+      "storageLocationId": null,
+      "quantity": 1,
+      "baselinePoints": 0,
+      "itemSizeModifier": 0
+    },
+    "source": "cybernetics",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-limbs"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-limbs",
+      "key": "Hand|Scrap-Tech Jerryrigged Manipulator"
+    }
+  }
+}

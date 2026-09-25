@@ -1,0 +1,111 @@
+{
+  "_id": "CwoufCpotQ3nsi6w",
+  "_key": "!items!CwoufCpotQ3nsi6w",
+  "name": "Form IV: Ataru",
+  "type": "lightsaberForm",
+  "img": "icons/svg/sword.svg",
+  "folder": null,
+  "sort": 400000,
+  "system": {
+    "row": {
+      "name": "Form IV: Ataru",
+      "level": 1,
+      "baselinePoints": 0
+    },
+    "source": "lightsaberForms",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "level": 1,
+        "cpCost": 10,
+        "effect": "You gain a +2 bonus to Basic Move and a +1 bonus to Jumping (DX/Easy) skill for vertical or horizontal distance. You may make one extra attack at a -3 skill penalty if you also move at least 2 yards.",
+        "characterTier": "Apprentice",
+        "applies": {
+          "basicMove": 2
+        },
+        "conditional": [
+          {
+            "target": "jumping",
+            "value": 1,
+            "when": "on Jumping rolls for vertical or horizontal distance"
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "cpCost": 20,
+        "effect": "You gain a +4 bonus to Basic Move and a +2 bonus to Jumping (DX/Easy) skill. You may make one extra attack at a -2 skill penalty after moving at least 2 yards. You gain a +1 bonus to your Dodge score if you moved 3+ yards that turn.",
+        "characterTier": "Adept",
+        "applies": {
+          "basicMove": 4
+        },
+        "conditional": [
+          {
+            "target": "jumping",
+            "value": 2,
+            "when": "on Jumping rolls"
+          },
+          {
+            "target": "dodge",
+            "value": 1,
+            "when": "if you moved 3+ yards that turn"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "cpCost": 35,
+        "effect": "You gain a +6 bonus to Basic Move and a +3 bonus to Jumping (DX/Easy) skill. You may make one extra attack at a -1 skill penalty after moving at least 2 yards. You gain a +2 bonus to your Dodge score if you moved 3+ yards that turn, and can make one \"Force-assisted Pounce\" per turn (see Force Jump/Leap, Expert level effect).",
+        "characterTier": "Expert",
+        "applies": {
+          "basicMove": 6
+        },
+        "conditional": [
+          {
+            "target": "jumping",
+            "value": 3,
+            "when": "on Jumping rolls"
+          },
+          {
+            "target": "dodge",
+            "value": 2,
+            "when": "if you moved 3+ yards that turn"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "cpCost": 55,
+        "effect": "You gain a +8 bonus to Basic Move and a +4 bonus to Jumping (DX/Easy) skill. You may make two extra attacks at a -2 skill penalty after moving at least 2 yards. You gain a +3 bonus to your Dodge score if you moved 3+ yards that turn. You can also ignore 1 point of attack penalty from range or cover when making a melee attack after a significant leap.",
+        "characterTier": "Master",
+        "applies": {
+          "basicMove": 8
+        },
+        "conditional": [
+          {
+            "target": "jumping",
+            "value": 4,
+            "when": "on Jumping rolls"
+          },
+          {
+            "target": "dodge",
+            "value": 3,
+            "when": "if you moved 3+ yards that turn"
+          }
+        ]
+      }
+    ],
+    "catalog": "lightsaber-forms"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-forms",
+      "key": "Form IV: Ataru"
+    }
+  }
+}

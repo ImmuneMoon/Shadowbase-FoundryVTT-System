@@ -1,0 +1,19 @@
+{
+  "_id": "RVWiXn8XomUZ0ki2",
+  "_key": "!folders!RVWiXn8XomUZ0ki2",
+  "name": "Stock/Chassis",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "path": [
+        "Stock/Chassis"
+      ]
+    }
+  }
+}

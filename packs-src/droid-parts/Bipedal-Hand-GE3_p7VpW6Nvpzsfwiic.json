@@ -1,0 +1,39 @@
+{
+  "_id": "p7VpW6Nvpzsfwiic",
+  "_key": "!items!p7VpW6Nvpzsfwiic",
+  "name": "Bipedal Hand (GE3)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "6aMcjhuriK5wkg8t",
+  "sort": 4900000,
+  "system": {
+    "row": {
+      "id": "729c67ad-4230-461a-b917-8f33ce1edf17",
+      "name": "Bipedal Hand (GE3)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Manipulator",
+      "cost": 412,
+      "weight": 2,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "ge3-hand",
+      "description": "None"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "ge3-hand"
+    }
+  }
+}

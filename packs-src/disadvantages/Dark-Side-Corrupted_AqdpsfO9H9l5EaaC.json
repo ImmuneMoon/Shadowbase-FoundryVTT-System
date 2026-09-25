@@ -1,0 +1,34 @@
+{
+  "_id": "AqdpsfO9H9l5EaaC",
+  "_key": "!items!AqdpsfO9H9l5EaaC",
+  "name": "Dark Side Corrupted",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "77PHdGCAvI5e7tCW",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "name": "Dark Side Corrupted",
+      "points": -5,
+      "level": null,
+      "description": "The character has succumbed to the corrupting influence of the Dark Side of the Force. This can manifest as physical deformities (e.g., sallow skin, Sith eyes), psychological instability (e.g., Sadism, Megalomania, Cruelty), or a reduction in mental or physical attributes. The severity and specific manifestations of this disadvantage should be determined by the GM in consultation with the player, often increasing as the character delves deeper into the Dark Side. This can sometimes lead to other disadvantages being gained or intensified, representing the Force's corrupting power. (Inspired by effects seen on Sith Lords in Star Wars lore). Range: -5 to -50 points or more.",
+      "category": "Force-Related",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Dark Side Corrupted|Force-Related"
+    }
+  }
+}

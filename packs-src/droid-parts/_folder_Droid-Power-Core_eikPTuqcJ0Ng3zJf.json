@@ -1,0 +1,19 @@
+{
+  "_id": "eikPTuqcJ0Ng3zJf",
+  "_key": "!folders!eikPTuqcJ0Ng3zJf",
+  "name": "Droid Power Core",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 500000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "path": [
+        "Droid Power Core"
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "kxieIU4MbxPmhTK2",
+  "_key": "!folders!kxieIU4MbxPmhTK2",
+  "name": "Staff",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 1000000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "path": [
+        "Staff"
+      ]
+    }
+  }
+}

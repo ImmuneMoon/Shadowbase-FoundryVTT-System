@@ -1,0 +1,42 @@
+{
+  "_id": "bqvAJuDVaF8tS6Og",
+  "_key": "!items!bqvAJuDVaF8tS6Og",
+  "name": "Blueprint: Combat Suit Cuirass",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 5800000,
+  "system": {
+    "row": {
+      "id": "7741ef33-a4a1-4711-9001-4c5582aa51b2",
+      "name": "Blueprint: Combat Suit Cuirass",
+      "cost": 224,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Combat Suit Cuirass (Generation 0, proven, encoded, catalog design). Required to build Combat Suit Cuirass; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Combat Suit Cuirass",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 496,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Combat Suit Cuirass"
+    }
+  }
+}

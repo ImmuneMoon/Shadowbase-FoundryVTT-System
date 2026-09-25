@@ -1,0 +1,33 @@
+{
+  "_id": "6RUHX0ladcAC17Hb",
+  "_key": "!items!6RUHX0ladcAC17Hb",
+  "name": "Protected Senses (Cybernetic)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "b0AkEhPa45uoNffk",
+  "sort": 13200000,
+  "system": {
+    "row": {
+      "name": "Protected Senses (Cybernetic)",
+      "points": 5,
+      "description": "Automated optical shutters or audio dampening software that makes you immune to blinding flashes and deafening noises. Specify Vision or Hearing (5 points each).",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Protected Senses (Cybernetic)"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "_id": "fLjhdmBclV7mAYEp",
+  "_key": "!items!fLjhdmBclV7mAYEp",
+  "name": "Multi-Spectrum Visual Overlay",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "JvrUnSAZpdPuNMMK",
+  "sort": 600000,
+  "system": {
+    "row": {
+      "id": "e9de555a-1d78-4816-b1f4-7df59c615740",
+      "name": "Multi-Spectrum Visual Overlay",
+      "category": "Utility Mod",
+      "cost": 268,
+      "weight": 0.85,
+      "notes": "+1 to-hit bonus when aiming. Tactical HUD for helmets with a built-in or attached visor. Needs a Computer Programming check to function if constructed.",
+      "equipped": false,
+      "quantity": 1,
+      "validSlots": [
+        "Head",
+        "Droid Head"
+      ]
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "key": "Multi-Spectrum Visual Overlay"
+    }
+  }
+}

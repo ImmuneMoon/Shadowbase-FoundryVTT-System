@@ -1,0 +1,34 @@
+{
+  "_id": "hU3hHco6MngWfsHJ",
+  "_key": "!items!hU3hHco6MngWfsHJ",
+  "name": "Lifting ST (Cybernetic)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "b0AkEhPa45uoNffk",
+  "sort": 10800000,
+  "system": {
+    "row": {
+      "name": "Lifting ST (Cybernetic)",
+      "points": 3,
+      "description": "+1 Lifting ST",
+      "category": "Cybernetic",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Lifting ST (Cybernetic)"
+    }
+  }
+}

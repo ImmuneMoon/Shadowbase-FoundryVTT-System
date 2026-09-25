@@ -1,0 +1,25 @@
+{{!-- templates/actor/parts/skill-row.hbs - one skill row (skills-section.tsx 218-262: Skill Name / Relative Level / Level + roll /
+     Points (Calculated); Gear Bonuses 337; notes 383). Context: a skillRow. --}}
+<li class="sb-row sb-skill-row" data-item-id="{{id}}">
+  <div class="sb-row__main">
+    <input type="text" class="sb-input sb-row__name" name="items.{{id}}.row.name" value="{{rowName}}" placeholder="{{localize "SHADOWBASE.Sheet.Abilities.SkillName"}}" {{disabled (not @root.editable)}}>
+    {{#if specialty}}<span class="sb-badge sb-badge-outline" title="{{localize "SHADOWBASE.Sheet.Abilities.Specialty"}}">{{specialty}}</span>{{/if}}
+    <input type="text" class="sb-input sb-input--sm" name="items.{{id}}.row.relativeLevel" value="{{relativeLevel}}" placeholder="{{localize "SHADOWBASE.Sheet.Abilities.RelativeLevelPlaceholder"}}" title="{{localize "SHADOWBASE.Sheet.Abilities.RelativeLevel"}}" {{disabled (not @root.editable)}}>
+    {{!-- The level is a STRING on the website's row (engine parseInts it): no data-dtype. --}}
+    <input type="text" class="sb-input sb-input--tiny" name="items.{{id}}.row.level" value="{{level}}" placeholder="12" title="{{localize "SHADOWBASE.Sheet.Abilities.Level"}}" {{disabled (not @root.editable)}}>
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-icon" data-action="rollSkill" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.Abilities.RollSkill" target=target}}"><i class="fa-solid fa-dice"></i></button>
+    <output class="sb-input sb-input--calc sb-calc" title="{{localize "SHADOWBASE.Sheet.Abilities.PointsCalculated"}}">{{effective}}</output>
+    {{#if baselinePoints}}<span class="sb-badge sb-badge-secondary">{{localize "SHADOWBASE.Sheet.Abilities.Baseline" n=baselinePoints}}</span>{{/if}}
+    {{#if gearFlat}}<span class="sb-badge sb-badge-outline sb-badge--effect sb-badge--pos" title="{{localize "SHADOWBASE.Sheet.Abilities.GearBonuses"}}">{{localize "SHADOWBASE.Sheet.Abilities.GearFlat" n=gearFlat}}</span>{{/if}}
+    <span class="sb-row-tools">
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon" data-action="openItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.OpenSheet"}}"><i class="fa-solid fa-up-right-from-square"></i></button>
+      <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-danger" data-action="deleteItem" data-item-id="{{id}}" title="{{localize "SHADOWBASE.Sheet.Delete"}}" {{disabled (not @root.editable)}}><i class="fa-solid fa-xmark"></i></button>
+    </span>
+  </div>
+  {{#if bareSpecialtyWarning}}<p class="sb-notice sb-notice--warn">{{bareSpecialtyWarning}}</p>{{/if}}
+  {{#if gearSituational.length}}<p class="sb-muted">{{localize "SHADOWBASE.Sheet.Abilities.GearSituational"}}: {{#each gearSituational}}<span class="sb-tag">{{this}}</span>{{/each}}</p>{{/if}}
+  <details class="sb-row__details">
+    <summary>{{localize "SHADOWBASE.Sheet.Abilities.Notes"}}{{#if describe}} · <span class="sb-muted">{{describe}}</span>{{/if}}</summary>
+    <textarea class="sb-textarea" name="items.{{id}}.row.notes" rows="1" placeholder="{{localize "SHADOWBASE.Sheet.Abilities.SkillNotesPlaceholder"}}" {{disabled (not @root.editable)}}>{{notes}}</textarea>
+  </details>
+</li>

@@ -1,0 +1,43 @@
+{
+  "_id": "az1d9nkmKKiiU2jY",
+  "_key": "!items!az1d9nkmKKiiU2jY",
+  "name": "Cortosis Weave Guard",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "YUsRrWuTGRcVAl2P",
+  "sort": 4900000,
+  "system": {
+    "row": {
+      "name": "Cortosis Weave Guard",
+      "category": "edgeAccentMod",
+      "cost": 1500,
+      "weight": 0.1,
+      "energyResBonus": 3,
+      "notes": "Grants on block vs lightsaber: roll 3d, if not crit fail, disrupts Lightsaber for 2d-2 sec, for a minimum of 2 sec. +3 Dur to energy resistance. Requires Armstech (the weapon's specialty).",
+      "materials": [
+        {
+          "name": "Cortosis",
+          "amount": 0.1
+        }
+      ],
+      "id": "7172f1f8-b987-4242-b092-9e785f2c219e",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Cortosis Weave Guard"
+    }
+  }
+}

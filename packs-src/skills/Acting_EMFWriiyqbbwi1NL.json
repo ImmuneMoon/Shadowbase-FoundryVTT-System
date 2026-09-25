@@ -1,0 +1,34 @@
+{
+  "_id": "EMFWriiyqbbwi1NL",
+  "_key": "!items!EMFWriiyqbbwi1NL",
+  "name": "Acting",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "gJ04IFKOKVTXdKLa",
+  "sort": 200000,
+  "system": {
+    "row": {
+      "name": "Acting",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Average",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Acting"
+    }
+  }
+}

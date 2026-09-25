@@ -1,0 +1,34 @@
+{
+  "_id": "c7XGqWQazH9Mwk5k",
+  "_key": "!items!c7XGqWQazH9Mwk5k",
+  "name": "Mindlink (Wireless Network)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "b0AkEhPa45uoNffk",
+  "sort": 11600000,
+  "system": {
+    "row": {
+      "name": "Mindlink (Wireless Network)",
+      "points": 5,
+      "description": "1 person",
+      "category": "Cybernetic",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Mindlink (Wireless Network)"
+    }
+  }
+}

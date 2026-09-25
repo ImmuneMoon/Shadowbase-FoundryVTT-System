@@ -1,0 +1,45 @@
+{
+  "_id": "ogoIBGIihJM848lw",
+  "_key": "!items!ogoIBGIihJM848lw",
+  "name": "Qixoni",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "CHP7xje9NHnZhKqb",
+  "sort": 8400000,
+  "system": {
+    "row": {
+      "id": "91259f6d-1c9a-4ef7-afb2-34e69ba1b8d5",
+      "name": "Qixoni",
+      "cost": 90000,
+      "weight": 0.2,
+      "damageAdds": 5,
+      "effect": "+5 damage, grants Energy Reserve (Force) +5 (Dark Side only).",
+      "category": "Lightsaber Power Crystal",
+      "materials": [
+        {
+          "name": "Baradium",
+          "amount": 0.2
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "+5 damage, grants Energy Reserve (Force) +5 (Dark Side only)."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:qixoni"
+    }
+  }
+}

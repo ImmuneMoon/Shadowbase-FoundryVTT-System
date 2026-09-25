@@ -1,0 +1,34 @@
+{
+  "_id": "xdDyjA62oLpPAsdW",
+  "_key": "!items!xdDyjA62oLpPAsdW",
+  "name": "Squeamish",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 13300000,
+  "system": {
+    "row": {
+      "name": "Squeamish",
+      "points": -10,
+      "level": null,
+      "description": "You are easily sickened by the sight of blood, gore, or filth, and must make a HT roll to avoid nausea and penalties in such situations.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Squeamish|Mental"
+    }
+  }
+}

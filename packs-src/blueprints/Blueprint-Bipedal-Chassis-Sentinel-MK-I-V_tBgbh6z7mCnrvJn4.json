@@ -1,0 +1,42 @@
+{
+  "_id": "tBgbh6z7mCnrvJn4",
+  "_key": "!items!tBgbh6z7mCnrvJn4",
+  "name": "Blueprint: Bipedal Chassis (Sentinel MK I-V)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Lfv4W7rcXgY71wjN",
+  "sort": 22800000,
+  "system": {
+    "row": {
+      "id": "df791985-208c-4578-a996-147b7b14ba97",
+      "name": "Blueprint: Bipedal Chassis (Sentinel MK I-V)",
+      "cost": 669,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Bipedal Chassis (Sentinel MK I-V) (Generation 0, proven, encoded, catalog design). Required to build Bipedal Chassis (Sentinel MK I-V); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Bipedal Chassis (Sentinel MK I-V)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 4950,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Chassis|Bipedal Chassis (Sentinel MK I-V)"
+    }
+  }
+}

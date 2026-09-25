@@ -1,0 +1,34 @@
+{
+  "_id": "ybDqSKjssY8Rd7Sf",
+  "_key": "!items!ybDqSKjssY8Rd7Sf",
+  "name": "Area Knowledge",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "gAzYSLPjIJTF25Cz",
+  "sort": 800000,
+  "system": {
+    "row": {
+      "name": "Area Knowledge",
+      "level": "",
+      "points": null,
+      "relativeLevel": "IQ/Easy",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Area Knowledge"
+    }
+  }
+}

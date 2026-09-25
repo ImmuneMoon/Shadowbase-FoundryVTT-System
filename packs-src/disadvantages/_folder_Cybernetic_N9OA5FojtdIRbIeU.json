@@ -1,0 +1,19 @@
+{
+  "_id": "N9OA5FojtdIRbIeU",
+  "_key": "!folders!N9OA5FojtdIRbIeU",
+  "name": "Cybernetic",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 300000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "path": [
+        "Cybernetic"
+      ]
+    }
+  }
+}

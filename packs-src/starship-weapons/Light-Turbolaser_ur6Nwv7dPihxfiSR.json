@@ -1,0 +1,36 @@
+{
+  "_id": "ur6Nwv7dPihxfiSR",
+  "_key": "!items!ur6Nwv7dPihxfiSR",
+  "name": "Light Turbolaser",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": null,
+  "sort": 500000,
+  "system": {
+    "row": {
+      "id": "ad799ebe-9d6f-46e2-915c-5381f50697a4",
+      "name": "Light Turbolaser",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Starship Weapon",
+      "cost": 80000,
+      "weight": 0,
+      "quantity": 1,
+      "description": "8d cr ex. Capital ship-grade weapon, slow firing but powerful."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "starship-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "starship-weapons",
+      "key": "Light Turbolaser"
+    }
+  }
+}

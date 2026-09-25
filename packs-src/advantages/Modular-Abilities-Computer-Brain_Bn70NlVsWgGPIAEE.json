@@ -1,0 +1,33 @@
+{
+  "_id": "Bn70NlVsWgGPIAEE",
+  "_key": "!items!Bn70NlVsWgGPIAEE",
+  "name": "Modular Abilities (Computer Brain)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "b0AkEhPa45uoNffk",
+  "sort": 11700000,
+  "system": {
+    "row": {
+      "name": "Modular Abilities (Computer Brain)",
+      "points": 4,
+      "description": "A neural chip slot that allows the user to swap out specialized skill chips. (Example: A chip slot holding a 4-point skill costs 24 CP). Cost: 4 points base + 5 points per point of capacity.",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Modular Abilities (Computer Brain)"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "FGcNgftFg9UhXTOm",
+  "_key": "!folders!FGcNgftFg9UhXTOm",
+  "name": "Arms",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-limbs",
+      "path": [
+        "Arms"
+      ]
+    }
+  }
+}

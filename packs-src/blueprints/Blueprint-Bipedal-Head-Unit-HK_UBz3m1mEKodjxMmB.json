@@ -1,0 +1,42 @@
+{
+  "_id": "UBz3m1mEKodjxMmB",
+  "_key": "!items!UBz3m1mEKodjxMmB",
+  "name": "Blueprint: Bipedal Head Unit (HK)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "UStUF7LfeXhiWi8K",
+  "sort": 23800000,
+  "system": {
+    "row": {
+      "id": "64fca749-ccb9-4dd2-841c-2d31b61697b0",
+      "name": "Blueprint: Bipedal Head Unit (HK)",
+      "cost": 324,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Bipedal Head Unit (HK) (Generation 0, proven, encoded, catalog design). Required to build Bipedal Head Unit (HK); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Bipedal Head Unit (HK)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1500,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Head|Bipedal Head Unit (HK)"
+    }
+  }
+}

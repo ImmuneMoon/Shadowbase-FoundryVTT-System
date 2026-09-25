@@ -1,0 +1,42 @@
+{
+  "_id": "4pkOsGlL7ysWpiG8",
+  "_key": "!items!4pkOsGlL7ysWpiG8",
+  "name": "Combat Visor",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "uE3X2qPuGKc8KNFf",
+  "sort": 100000,
+  "system": {
+    "row": {
+      "id": "2dd204d4-4e30-4a9a-a0d1-a803efbf067f",
+      "name": "Combat Visor",
+      "category": "Integrated Mod",
+      "cost": 80,
+      "weight": 1,
+      "notes": "+3 Face DR",
+      "equipped": false,
+      "quantity": 1,
+      "validSlots": [
+        "Head",
+        "Droid Head",
+        "Face"
+      ],
+      "drBonus": 3
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-mods",
+      "key": "Combat Visor"
+    }
+  }
+}

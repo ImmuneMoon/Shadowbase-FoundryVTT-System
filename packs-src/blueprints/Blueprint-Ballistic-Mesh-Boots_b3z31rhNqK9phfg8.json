@@ -1,0 +1,42 @@
+{
+  "_id": "b3z31rhNqK9phfg8",
+  "_key": "!items!b3z31rhNqK9phfg8",
+  "name": "Blueprint: Ballistic Mesh Boots",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 4000000,
+  "system": {
+    "row": {
+      "id": "91905e35-0cb8-4ab4-aa35-4f7aa1b1c704",
+      "name": "Blueprint: Ballistic Mesh Boots",
+      "cost": 179,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Ballistic Mesh Boots (Generation 0, proven, encoded, catalog design). Required to build Ballistic Mesh Boots; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Ballistic Mesh Boots",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 43,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Ballistic Mesh Boots"
+    }
+  }
+}

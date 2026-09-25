@@ -1,0 +1,36 @@
+{
+  "_id": "wEckC9BgaiGfsA6l",
+  "_key": "!items!wEckC9BgaiGfsA6l",
+  "name": "Chaff/Flare Dispensers",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "2cE16pJiC7zNUXvN",
+  "sort": 700000,
+  "system": {
+    "row": {
+      "id": "62f54a2a-1811-44a0-94b9-9133348a4194",
+      "name": "Chaff/Flare Dispensers",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Starship Modification",
+      "cost": 0,
+      "weight": 0,
+      "quantity": 1,
+      "description": "Defensive modification. Deploy to give missile attacks a -3 penalty. Cost: undefined% of the flat cost."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "starship-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "starship-mods",
+      "key": "Chaff/Flare Dispensers"
+    }
+  }
+}

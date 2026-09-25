@@ -1,0 +1,36 @@
+{
+  "_id": "7FFJYWmu1Gi3GOPA",
+  "_key": "!items!7FFJYWmu1Gi3GOPA",
+  "name": "Material Coating (Guard)",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "YUsRrWuTGRcVAl2P",
+  "sort": 5200000,
+  "system": {
+    "row": {
+      "name": "Material Coating (Guard)",
+      "category": "edgeAccentMod",
+      "cost": 0,
+      "weight": 0,
+      "notes": "Any material with \"Coating\" suitability. Cost = Weight x Cost Per lb; weight = +0.0002 x Density. Grants that material's own effect (e.g. Aurodium adds social status/adornment value). Requires Armoury (Melee).",
+      "id": "b8de85e8-4687-411e-8c9f-da5a4f8e6800",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Material Coating (Guard)"
+    }
+  }
+}

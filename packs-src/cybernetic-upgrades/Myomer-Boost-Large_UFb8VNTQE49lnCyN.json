@@ -1,0 +1,37 @@
+{
+  "_id": "UFb8VNTQE49lnCyN",
+  "_key": "!items!UFb8VNTQE49lnCyN",
+  "name": "Myomer Boost (Large)",
+  "type": "cyberneticUpgrade",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "TfvIhoH9DGxojfNq",
+  "sort": 600000,
+  "system": {
+    "row": {
+      "id": "37ac08b5-e6cb-40a5-994b-be4b512d2196",
+      "name": "Myomer Boost (Large)",
+      "cost": 40,
+      "weight": 0.2,
+      "effect": "Grants +2 Striking ST in that limb only.",
+      "requiresType": null,
+      "requiresExtent": "Any",
+      "equipped": false,
+      "quantity": 1
+    },
+    "source": "cyberneticUpgrades",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-upgrades"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-upgrades",
+      "key": "Enhancement Modules|Myomer Boost (Large)"
+    }
+  }
+}

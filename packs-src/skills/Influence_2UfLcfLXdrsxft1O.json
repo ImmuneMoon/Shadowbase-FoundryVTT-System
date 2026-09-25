@@ -1,0 +1,34 @@
+{
+  "_id": "2UfLcfLXdrsxft1O",
+  "_key": "!items!2UfLcfLXdrsxft1O",
+  "name": "Influence",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "TmHeseJfr7BHisdh",
+  "sort": 6700000,
+  "system": {
+    "row": {
+      "name": "Influence",
+      "level": "",
+      "points": null,
+      "relativeLevel": "Will/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Influence"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "PlrYkc4jPWg0cefx",
+  "_key": "!items!PlrYkc4jPWg0cefx",
+  "name": "Glitterstim Spice",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "uMnBF9a3GgNfK10s",
+  "sort": 6900000,
+  "system": {
+    "row": {
+      "name": "Glitterstim Spice",
+      "rarity": "Ultra Rare",
+      "cost": 3000,
+      "density": 75,
+      "category": "Raw Materials",
+      "subCategory": "Spice",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A rare, photo-active crystalline narcotic mined on Kessel. Can be processed into potent combat stimulants or temporary telepathic enhancers, though it carries a severe risk of addiction.",
+      "id": "edf4c288-2c87-437a-8258-03783afbcad5",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Glitterstim Spice"
+    }
+  }
+}

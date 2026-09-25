@@ -1,0 +1,34 @@
+{
+  "_id": "8c31IpqbKaQfKuyM",
+  "_key": "!items!8c31IpqbKaQfKuyM",
+  "name": "Power-Based Disadvantage",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "77PHdGCAvI5e7tCW",
+  "sort": 600000,
+  "system": {
+    "row": {
+      "name": "Power-Based Disadvantage",
+      "points": -5,
+      "level": null,
+      "description": "Certain high-level Force powers or abilities might come with inherent drawbacks. For example, constant use of powerful Dark Side abilities might cause you to gain negative Reputation, or develop a specific Phobia or Quirk related to the Force's corrupting influence. These are determined by the GM in relation to the specific power or character, representing the cost of wielding immense power. (Varies).",
+      "category": "Force-Related",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Power-Based Disadvantage|Force-Related"
+    }
+  }
+}

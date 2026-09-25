@@ -1,0 +1,42 @@
+{
+  "_id": "xZATPt3vRrqWDm5u",
+  "_key": "!items!xZATPt3vRrqWDm5u",
+  "name": "Blueprint: Bipedal Foot (Sentinel MK I-V)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "7uRPK85jklrZpkru",
+  "sort": 25400000,
+  "system": {
+    "row": {
+      "id": "37c7fa54-f4d7-47de-93f4-548de7ab434f",
+      "name": "Blueprint: Bipedal Foot (Sentinel MK I-V)",
+      "cost": 223,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Bipedal Foot (Sentinel MK I-V) (Generation 0, proven, encoded, catalog design). Required to build Bipedal Foot (Sentinel MK I-V); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Bipedal Foot (Sentinel MK I-V)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 489,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Locomotion|Bipedal Foot (Sentinel MK I-V)"
+    }
+  }
+}

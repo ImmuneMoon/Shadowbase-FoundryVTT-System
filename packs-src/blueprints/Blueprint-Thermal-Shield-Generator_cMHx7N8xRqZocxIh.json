@@ -1,0 +1,42 @@
+{
+  "_id": "cMHx7N8xRqZocxIh",
+  "_key": "!items!cMHx7N8xRqZocxIh",
+  "name": "Blueprint: Thermal Shield Generator",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ZMyORA2AHo4Qm477",
+  "sort": 11600000,
+  "system": {
+    "row": {
+      "id": "4eddc6ff-6449-49a9-bd48-a496b26deec9",
+      "name": "Blueprint: Thermal Shield Generator",
+      "cost": 4274,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Thermal Shield Generator (Generation 0, proven, encoded, catalog design). Required to build Thermal Shield Generator; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Thermal Shield Generator",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 41000,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Belt|Thermal Shield Generator"
+    }
+  }
+}

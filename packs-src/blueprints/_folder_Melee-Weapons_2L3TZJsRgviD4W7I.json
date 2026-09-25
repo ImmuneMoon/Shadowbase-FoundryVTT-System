@@ -1,0 +1,19 @@
+{
+  "_id": "2L3TZJsRgviD4W7I",
+  "_key": "!folders!2L3TZJsRgviD4W7I",
+  "name": "Melee Weapons",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 4400000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "path": [
+        "Melee Weapons"
+      ]
+    }
+  }
+}

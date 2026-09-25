@@ -1,0 +1,94 @@
+{{!-- templates/items/cybernetic-main.hbs - implant / limb / upgrade (implants-cybernetics-section.tsx:540-860): the
+     install link to a hit location, an implant's pathways and CP, a limb's location / extent / material / DR / integrated
+     upgrades and SM fit, an upgrade's host limb, Ch14's mandatory flaws and quirk choice. Context: main (cybernetic.mjs),
+     editable, owned, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--cybernetic {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <div class="sb-item-grid">
+      {{#unless main.isUpgrade}}
+      <label class="sb-field sb-span-2"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.InstalledAt"}}</span>
+        <select class="sb-select" name="install" {{disabled (not main.install.available)}} {{disabled (not editable)}}>{{#each main.install.options}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{/unless}}
+      {{#if main.isImplant}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.Category"}}</span><input type="text" class="sb-input" name="system.row.category" value="{{main.category}}" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.SlotType"}}</span><input type="text" class="sb-input" name="system.row.slotType" value="{{main.slotType}}" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.Location"}}</span><input type="text" class="sb-input" name="system.row.location" value="{{main.location}}" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.Pathways"}}</span><input type="text" class="sb-input" name="pathways" value="{{main.pathwaysText}}" placeholder="DX, IQ" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.BaseCp"}}</span><input type="number" class="sb-input" name="system.row.baseCp" value="{{main.baseCp}}" data-dtype="Number" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.FinalCp"}}</span><input type="number" class="sb-input" name="system.row.finalCp" value="{{main.finalCp}}" data-dtype="Number" {{disabled (not editable)}}></label>
+      {{/if}}
+      {{#if main.isLimb}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.LimbType"}}</span>
+        <select class="sb-select" name="system.row.type" {{disabled (not editable)}}>{{#each main.types}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.Location"}}</span>
+        <select class="sb-select" name="sel.location" {{disabled (not editable)}}>{{#each main.locations}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.Extent"}}</span><input type="text" class="sb-input" name="system.row.extent" value="{{main.extent}}" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.Material"}}</span><input type="text" class="sb-input" name="system.row.material" value="{{main.material}}" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.DR"}}</span><input type="number" class="sb-input" name="system.row.dr" value="{{main.dr}}" data-dtype="Number" min="0" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.CurrentDr"}}</span><input type="number" class="sb-input" name="system.row.currentDr" value="{{main.currentDr}}" data-dtype="Number" min="0" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.ItemSm"}}</span><input type="number" class="sb-input" name="system.row.itemSizeModifier" value="{{main.itemSizeModifier}}" data-dtype="Number" step="0.25" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Trait.BaselinePoints"}}</span><input type="number" class="sb-input" name="system.row.baselinePoints" value="{{main.baselinePoints}}" data-dtype="Number" {{disabled (not editable)}}></label>
+      {{/if}}
+      {{#if main.isUpgrade}}
+      <label class="sb-field sb-span-2"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.HostLimb"}}</span>
+        <select class="sb-select" name="limb" {{disabled (not owned)}} {{disabled (not editable)}}>{{#each main.limbOptions}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.RequiresType"}}</span><input type="text" class="sb-input" name="system.row.requiresType" value="{{main.requiresType}}" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Cyber.RequiresExtent"}}</span><input type="text" class="sb-input" name="system.row.requiresExtent" value="{{main.requiresExtent}}" {{disabled (not editable)}}></label>
+      {{/if}}
+    </div>
+    <div class="sb-hrow sb-hrow--tight sb-item__badges">
+      <span class="sb-badge {{#if main.installed}}sb-badge-accent{{else}}sb-badge-outline{{/if}}">{{#if main.installed}}{{#if main.isLimb}}{{localize "SHADOWBASE.Sheet.Inventory.Attached"}}{{else}}{{localize "SHADOWBASE.Sheet.Inventory.Installed"}}{{/if}}{{else}}{{localize "SHADOWBASE.Sheet.Inventory.NotInstalled"}}{{/if}}</span>
+      {{#each main.linked}}<span class="sb-tag sb-tag--accent"><i class="fa-solid fa-link"></i> {{this.name}}</span>{{/each}}
+      {{#if main.installed}}<button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="uninstall" {{disabled (not editable)}}><i class="{{sbIcon 'Unplug'}}"></i> {{localize "SHADOWBASE.Item.Cyber.Uninstall"}}</button>{{/if}}
+      {{#if main.isImplant}}
+        {{#each main.pathways}}<span class="sb-badge sb-badge-outline sb-badge-accent">{{this}}</span>{{/each}}
+        {{#if main.finalCp}}<span class="sb-badge sb-badge-secondary sb-mono">{{main.finalCp}} CP</span>{{/if}}
+        {{#if main.inCatalog}}<span class="sb-badge sb-badge-outline sb-badge-accent">{{localize "SHADOWBASE.Item.Trait.InLibrary"}}</span>{{/if}}
+      {{/if}}
+      {{#if main.isLimb}}
+        {{#if main.extent}}<span class="sb-badge sb-badge-outline">{{main.extent}}</span>{{/if}}
+        {{#if main.material}}<span class="sb-badge sb-badge-outline">{{main.material}}</span>{{/if}}
+        <label class="sb-check-row sb-check-row--tiny"><input type="checkbox" name="system.row.hasSynthskin" {{checked main.hasSynthskin}} {{disabled (not editable)}}> {{localize "SHADOWBASE.Item.Cyber.Synthskin"}}</label>
+      {{/if}}
+      {{#if main.isUpgrade}}{{#if main.limbName}}<span class="sb-badge sb-badge-accent"><i class="fa-solid fa-link"></i> {{localize "SHADOWBASE.Sheet.Inventory.InstalledIn" name=main.limbName}}</span>{{/if}}{{/if}}
+    </div>
+    {{#if main.isImplant}}
+      {{#if main.modifiers.length}}<p class="sb-text-xs"><span class="sb-caps sb-text-accent">{{localize "SHADOWBASE.Item.Trait.Modifiers"}}</span> {{> "shadowbase.badges" badges=main.modifiers}}</p>{{/if}}
+      {{#if main.granted.length}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Cyber.Grants"}}: {{#each main.granted}}<span class="sb-tag">{{this}}</span>{{/each}}</p>{{/if}}
+      {{#if main.profileNotes}}<p class="sb-dossier">{{main.profileNotes}}</p>{{/if}}
+    {{/if}}
+    {{#if main.isLimb}}{{#each main.fitProblems}}<p class="sb-notice sb-notice--warn">{{this}}</p>{{/each}}{{/if}}
+  </div>
+  {{#if main.isLimb}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Wrench'}}"></i> {{localize "SHADOWBASE.Item.Cyber.IntegratedUpgrades"}} <span class="sb-badge {{#if main.overCapacity}}sb-badge-destructive{{else}}sb-badge-outline{{/if}} sb-mono">{{main.upgrades.length}} / {{#if main.capacity}}{{main.capacity}}{{else}}—{{/if}}</span></h4>
+    {{#if main.upgrades.length}}
+    <ul class="sb-item__list">
+      {{#each main.upgrades}}<li><span class="sb-badge sb-badge-secondary">{{this.name}}</span> <span class="sb-text-muted sb-text-xs">{{this.effect}}</span> <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-btn-xs sb-danger" data-action="remove-upgrade" data-index="{{this.index}}" title="{{localize "SHADOWBASE.Item.Cyber.RemoveUpgrade"}}" {{disabled (not @root.editable)}}><i class="{{sbIcon 'close'}}"></i></button></li>{{/each}}
+    </ul>
+    {{else}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Cyber.NoUpgrades"}}</p>{{/if}}
+    {{#if main.canAddUpgrade}}
+    <select class="sb-select sb-select--sm" name="addUpgrade" {{disabled (not editable)}}>{{#each main.upgradeOptions}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+    {{/if}}
+  </div>
+  {{/if}}
+  {{#unless main.isUpgrade}}
+  <div class="sb-item-section sb-item-section--callout">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Item.Cyber.MandatoryFlaws"}}</h4>
+    {{#if main.flaws.required.length}}
+    <ul class="sb-item__list">
+      {{#each main.flaws.required}}<li><span class="sb-badge {{#if this.missing}}sb-badge-destructive{{else}}sb-badge-outline{{/if}}">{{this.name}} ({{this.points}})</span> <span class="sb-text-muted sb-text-xs">{{this.description}}</span></li>{{/each}}
+    </ul>
+    {{#if main.flaws.missing}}<button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="add-flaws" {{disabled (not owned)}}><i class="{{sbIcon 'add'}}"></i> {{localize "SHADOWBASE.Item.Cyber.AddFlaws" n=main.flaws.missing}}</button>{{else}}<p class="sb-text-green sb-text-xs">{{localize "SHADOWBASE.Item.Cyber.FlawsHeld"}}</p>{{/if}}
+    {{#if main.flaws.quirks.length}}
+    <p class="sb-text-xs">{{localize "SHADOWBASE.Item.Cyber.QuirkChoice"}}{{#if main.flaws.hasQuirk}} <span class="sb-text-green">{{localize "SHADOWBASE.Item.Cyber.QuirkHeld"}}</span>{{/if}}</p>
+    <div class="sb-hrow sb-hrow--tight">{{#each main.flaws.quirks}}<button type="button" class="sb-btn sb-btn-xs {{#if this.held}}sb-btn-default{{else}}sb-btn-outline{{/if}}" data-action="add-quirk" data-name="{{this.name}}" {{disabled (not @root.owned)}} {{#if this.held}}disabled{{/if}}>{{this.name}}</button>{{/each}}</div>
+    {{/if}}
+    {{else}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Cyber.FlawsWhenInstalled"}}</p>{{/if}}
+  </div>
+  {{/unless}}
+</section>

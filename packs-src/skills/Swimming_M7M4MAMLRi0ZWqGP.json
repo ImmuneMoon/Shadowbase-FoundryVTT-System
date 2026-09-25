@@ -1,0 +1,34 @@
+{
+  "_id": "M7M4MAMLRi0ZWqGP",
+  "_key": "!items!M7M4MAMLRi0ZWqGP",
+  "name": "Swimming",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "l1z4BAKrTKyClCsJ",
+  "sort": 13800000,
+  "system": {
+    "row": {
+      "name": "Swimming",
+      "level": "",
+      "points": null,
+      "relativeLevel": "HT/Easy",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Swimming"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "t0I8GsXNsW79Wg8N",
+  "_key": "!items!t0I8GsXNsW79Wg8N",
+  "name": "Disc Head - Rotating (3C, IT, T1, T3-Series)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "QVHxjnveCs2gG8nK",
+  "sort": 1500000,
+  "system": {
+    "row": {
+      "id": "d94efb9a-d62c-45b9-97c7-33d8a71584ad",
+      "name": "Disc Head - Rotating (3C, IT, T1, T3-Series)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Head",
+      "cost": 3300,
+      "weight": 12,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "t3-rotating",
+      "description": "360-Degree Vision"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "t3-rotating"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "PjqNWKdhuEi2S8rH",
+  "_key": "!items!PjqNWKdhuEi2S8rH",
+  "name": "Blueprint: Republic Officer's Hat",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 17200000,
+  "system": {
+    "row": {
+      "id": "1620e80c-08b0-4832-aca2-31166b134bac",
+      "name": "Blueprint: Republic Officer's Hat",
+      "cost": 190,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Republic Officer's Hat (Generation 0, proven, encoded, catalog design). Required to build Republic Officer's Hat; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Republic Officer's Hat",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 152.66666666666669,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Republic Officer's Hat"
+    }
+  }
+}

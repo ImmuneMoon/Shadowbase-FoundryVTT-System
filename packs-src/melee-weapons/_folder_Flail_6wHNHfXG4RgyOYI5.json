@@ -1,0 +1,19 @@
+{
+  "_id": "6wHNHfXG4RgyOYI5",
+  "_key": "!folders!6wHNHfXG4RgyOYI5",
+  "name": "Flail",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 1200000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "path": [
+        "Flail"
+      ]
+    }
+  }
+}

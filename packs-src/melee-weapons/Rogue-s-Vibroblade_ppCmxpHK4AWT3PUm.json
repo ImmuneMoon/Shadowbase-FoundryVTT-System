@@ -1,0 +1,201 @@
+{
+  "_id": "ppCmxpHK4AWT3PUm",
+  "_key": "!items!ppCmxpHK4AWT3PUm",
+  "name": "Rogue's Vibroblade",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "4MEEpZlW0yDZDn1G",
+  "sort": 2300000,
+  "system": {
+    "row": {
+      "id": "9f6931b1-67af-4290-ae54-d4f664ced483",
+      "customName": "Rogue's Vibroblade",
+      "baseType": "Rogue's Vibroblade",
+      "baseSkill": "Shortsword",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": 50,
+      "maxCharges": 50,
+      "condition": "Fine",
+      "baseReach": "1",
+      "baseWeight": 5.13,
+      "finalWeight": 5.13,
+      "baseCost": 684,
+      "finalCost": 4104,
+      "gripParts": [
+        {
+          "inventoryId": "c6cdbd79-24e9-45c8-9787-14ce9c980282",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "efd5f915-2252-474e-9971-0c7f7073f007",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "guardParts": [
+        {
+          "inventoryId": "530e7103-16ad-478e-967a-3de09fbfacf8",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "utilityParts": [
+        {
+          "inventoryId": "3278628b-b034-45de-a1ee-2fdc10486cd1",
+          "materialId": null,
+          "quantity": 1
+        },
+        {
+          "inventoryId": "d256518a-481c-48d7-814e-d221290ac15b",
+          "materialId": null,
+          "quantity": 1
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "9f6931b1-67af-4290-ae54-d4f664ced483",
+        "customName": "Rogue's Vibroblade",
+        "baseType": "Rogue's Vibroblade",
+        "baseSkill": "Shortsword",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "condition": "Fine",
+        "baseReach": "1",
+        "baseWeight": 5.13,
+        "finalWeight": 5.13,
+        "baseCost": 684,
+        "finalCost": 4104,
+        "gripParts": [
+          {
+            "inventoryId": "c6cdbd79-24e9-45c8-9787-14ce9c980282",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "efd5f915-2252-474e-9971-0c7f7073f007",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "guardParts": [
+          {
+            "inventoryId": "530e7103-16ad-478e-967a-3de09fbfacf8",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "utilityParts": [
+          {
+            "inventoryId": "3278628b-b034-45de-a1ee-2fdc10486cd1",
+            "materialId": null,
+            "quantity": 1
+          },
+          {
+            "inventoryId": "d256518a-481c-48d7-814e-d221290ac15b",
+            "materialId": null,
+            "quantity": 1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "c6cdbd79-24e9-45c8-9787-14ce9c980282",
+          "name": "Standard Hilt",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInMeleeId": "9f6931b1-67af-4290-ae54-d4f664ced483",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Broadsword/Shortsword/Saber. 1-handed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "efd5f915-2252-474e-9971-0c7f7073f007",
+          "name": "Light Blade",
+          "category": "Melee Head",
+          "materialId": "durasteel",
+          "cost": 74,
+          "weight": 1.47,
+          "isInstalled": true,
+          "installedInMeleeId": "9f6931b1-67af-4290-ae54-d4f664ced483",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Balanced.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "530e7103-16ad-478e-967a-3de09fbfacf8",
+          "name": "Weighted Pommel",
+          "category": "Melee Guard",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInMeleeId": "9f6931b1-67af-4290-ae54-d4f664ced483",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "-1 Deceptive Attack or +1 Feint.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "3278628b-b034-45de-a1ee-2fdc10486cd1",
+          "name": "Vibration Generator",
+          "category": "Melee Power Unit",
+          "cost": 300,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInMeleeId": "9f6931b1-67af-4290-ae54-d4f664ced483",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Adds +1d cut/imp. Grants Armor Divisor (3). Needs a successful Computer Programming skill check to function if constructed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "d256518a-481c-48d7-814e-d221290ac15b",
+          "name": "Power Cell",
+          "category": "Melee Power Unit",
+          "cost": 210,
+          "weight": 0.7,
+          "isInstalled": true,
+          "installedInMeleeId": "9f6931b1-67af-4290-ae54-d4f664ced483",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Provides baseline power for attached emitters/generators.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Rogue's Vibroblade"
+    }
+  }
+}

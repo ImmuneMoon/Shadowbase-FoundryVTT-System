@@ -1,0 +1,42 @@
+{
+  "_id": "ZDODwUy3DH94EocO",
+  "_key": "!items!ZDODwUy3DH94EocO",
+  "name": "Heavy Head Shell (Duraplast)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 1300000,
+  "system": {
+    "row": {
+      "id": "f86215b7-99f5-411b-a053-383d2fe11a25",
+      "name": "Heavy Head Shell (Duraplast)",
+      "category": "Armor Shell",
+      "cost": 209,
+      "weight": 1.05,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-heavy-head-duraplast",
+      "materialId": "duraplast",
+      "notes": "Lightweight ceramic/plastic hybrid used in armor. Heavy tier only.",
+      "validSlots": [],
+      "drBonus": 12,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-heavy-head-duraplast"
+    }
+  }
+}

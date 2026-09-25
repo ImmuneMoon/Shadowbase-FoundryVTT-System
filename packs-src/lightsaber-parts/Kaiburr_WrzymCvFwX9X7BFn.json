@@ -1,0 +1,45 @@
+{
+  "_id": "WrzymCvFwX9X7BFn",
+  "_key": "!items!WrzymCvFwX9X7BFn",
+  "name": "Kaiburr",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "CHP7xje9NHnZhKqb",
+  "sort": 7100000,
+  "system": {
+    "row": {
+      "id": "5db7a6b2-8d32-4efe-a5e0-90a22ab06fe9",
+      "name": "Kaiburr",
+      "cost": 310000,
+      "weight": 0.2,
+      "damageDice": 3,
+      "effect": "+3d damage, +3 to all Force powers, Regeneration (1 HP/min).",
+      "category": "Lightsaber Power Crystal",
+      "materials": [
+        {
+          "name": "Aurodium",
+          "amount": 0.2
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "+3d damage, +3 to all Force powers, Regeneration (1 HP/min)."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:kaiburr"
+    }
+  }
+}

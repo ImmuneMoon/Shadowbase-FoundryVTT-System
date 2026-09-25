@@ -1,0 +1,58 @@
+{
+  "_id": "Wc9VoHZBy41oxKhp",
+  "_key": "!items!Wc9VoHZBy41oxKhp",
+  "name": "Geological Compressor",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "7rGdcjDF69anM1Pj",
+  "sort": 6800000,
+  "system": {
+    "row": {
+      "name": "Geological Compressor",
+      "craftingCategory": "Survival & Utility Hardware",
+      "cost": 8610,
+      "skill": "Electronics Operation (Industrial)",
+      "description": "A compressor that squeezes materials into stone. Uses one full power cell charge per operation. On failed operation, the machine is not calibrated correctly, starting material remains. On critical fail, the machine is damaged and no longer works. Must be salvaged and rebuilt, or replaced. Needs a successful Computer Programming skill check to function if constructed.",
+      "category": "Utility & Miscellaneous",
+      "weight": 47.7,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 45
+        },
+        {
+          "name": "Silicon",
+          "amount": 2
+        },
+        {
+          "name": "Power Cell",
+          "amount": 0.7
+        }
+      ],
+      "requiresSoftware": true,
+      "currentCharges": 1,
+      "maxCharges": 1,
+      "id": "14c0d315-1d05-41f4-92d3-b030ce0685e9",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Geological Compressor"
+    }
+  }
+}

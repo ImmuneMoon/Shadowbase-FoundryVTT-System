@@ -1,0 +1,42 @@
+{
+  "_id": "4mua6cWRfmcwfLhE",
+  "_key": "!items!4mua6cWRfmcwfLhE",
+  "name": "Blueprint: Skill Matrix",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JF5Ffca1GjopsdXr",
+  "sort": 27500000,
+  "system": {
+    "row": {
+      "id": "3cb10d23-69c1-4746-888d-526bcd46fc6b",
+      "name": "Blueprint: Skill Matrix",
+      "cost": 326,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Skill Matrix (Generation 0, proven, encoded, catalog design). Required to build Skill Matrix; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Skill Matrix",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1512.5,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Processor|Skill Matrix"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "GkzxjEI3pHfDkyBG",
+  "_key": "!items!GkzxjEI3pHfDkyBG",
+  "name": "Code of Honor (Republic Soldier)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 8900000,
+  "system": {
+    "row": {
+      "name": "Code of Honor (Republic Soldier)",
+      "points": -10,
+      "level": null,
+      "description": "You uphold military discipline, loyalty to the chain of command, and protection of Republic citizens and interests, even when doing so may be personally difficult or morally ambiguous.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Code of Honor (Republic Soldier)|Mental"
+    }
+  }
+}

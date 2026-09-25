@@ -1,0 +1,34 @@
+{
+  "_id": "oWmnEoR8nuDupGYz",
+  "_key": "!items!oWmnEoR8nuDupGYz",
+  "name": "Longevity",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "GS8kUCPWatq78XxI",
+  "sort": 11000000,
+  "system": {
+    "row": {
+      "name": "Longevity",
+      "points": 2,
+      "description": "Level 1 Longevity.",
+      "category": "Physical",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Longevity"
+    }
+  }
+}

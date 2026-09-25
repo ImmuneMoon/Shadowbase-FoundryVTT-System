@@ -1,0 +1,19 @@
+{
+  "_id": "gAzYSLPjIJTF25Cz",
+  "_key": "!folders!gAzYSLPjIJTF25Cz",
+  "name": "Knowledge & Mental",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 200000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "path": [
+        "Knowledge & Mental"
+      ]
+    }
+  }
+}

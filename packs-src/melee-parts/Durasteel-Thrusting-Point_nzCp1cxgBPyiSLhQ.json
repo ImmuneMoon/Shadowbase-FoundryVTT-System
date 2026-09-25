@@ -1,0 +1,46 @@
+{
+  "_id": "nzCp1cxgBPyiSLhQ",
+  "_key": "!items!nzCp1cxgBPyiSLhQ",
+  "name": "Durasteel Thrusting Point",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "tS9seYVcjKTzsj6l",
+  "sort": 700000,
+  "system": {
+    "row": {
+      "id": "05bda6fe-bba8-4a3c-ab92-f4212e9dd02f",
+      "name": "Durasteel Thrusting Point",
+      "category": "Melee Head",
+      "cost": 26,
+      "weight": 0.49,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "thrust-point",
+      "materialId": "durasteel",
+      "notes": "Balanced.",
+      "effect": "Balanced.",
+      "energyResBonus": 0,
+      "volume": 0.001,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "part:thrust-point"
+    }
+  }
+}

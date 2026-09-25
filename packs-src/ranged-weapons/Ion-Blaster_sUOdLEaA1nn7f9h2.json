@@ -1,0 +1,211 @@
+{
+  "_id": "sUOdLEaA1nn7f9h2",
+  "_key": "!items!sUOdLEaA1nn7f9h2",
+  "name": "Ion Blaster",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "pmcK4V56g8solhpu",
+  "sort": 2900000,
+  "system": {
+    "row": {
+      "id": "e44a5855-054a-4c56-a576-04fad4c163ea",
+      "customName": "Ion Blaster",
+      "baseType": "Ion Blaster",
+      "baseSkill": "Guns (Blaster Pistol)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 2.5,
+      "finalWeight": 2.5,
+      "baseCost": 265,
+      "finalCost": 1590,
+      "currentCharges": 50,
+      "maxCharges": 50,
+      "loadedAmmunitionId": "8e7a8d7f-5aed-4e28-99f3-60e59425393e",
+      "loadedAmmunitionData": {
+        "id": "8e7a8d7f-5aed-4e28-99f3-60e59425393e",
+        "name": "Standard Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "pistol-grip",
+        "inventoryId": "c1a9a654-b0ad-4c18-99c3-b61d8622692f",
+        "materialId": "plasteel"
+      },
+      "receiverPart": {
+        "partId": "ion-chamber",
+        "inventoryId": "51735d67-a7aa-494a-8880-489b4b55c2e6",
+        "materialId": "plasteel"
+      },
+      "barrelPart": {
+        "partId": "snub-emitter",
+        "inventoryId": "85285863-8db6-48bb-93b9-8cfb28e05219",
+        "materialId": "plasteel"
+      },
+      "targetingPart": {
+        "partId": "basic-targeting",
+        "inventoryId": "1adda281-6de9-4ccf-8071-d2f7365e6687"
+      },
+      "powerUnitPart": {
+        "partId": "standard-pwr-pack",
+        "inventoryId": "294c7964-1b43-48bf-9aab-eacd238e2004"
+      },
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "e44a5855-054a-4c56-a576-04fad4c163ea",
+        "customName": "Ion Blaster",
+        "baseType": "Ion Blaster",
+        "baseSkill": "Guns (Blaster Pistol)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 2.5,
+        "finalWeight": 2.5,
+        "baseCost": 265,
+        "finalCost": 1590,
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "loadedAmmunitionId": "8e7a8d7f-5aed-4e28-99f3-60e59425393e",
+        "loadedAmmunitionData": {
+          "id": "8e7a8d7f-5aed-4e28-99f3-60e59425393e",
+          "name": "Standard Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 50,
+          "maxCharges": 50,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "pistol-grip",
+          "inventoryId": "c1a9a654-b0ad-4c18-99c3-b61d8622692f",
+          "materialId": "plasteel"
+        },
+        "receiverPart": {
+          "partId": "ion-chamber",
+          "inventoryId": "51735d67-a7aa-494a-8880-489b4b55c2e6",
+          "materialId": "plasteel"
+        },
+        "barrelPart": {
+          "partId": "snub-emitter",
+          "inventoryId": "85285863-8db6-48bb-93b9-8cfb28e05219",
+          "materialId": "plasteel"
+        },
+        "targetingPart": {
+          "partId": "basic-targeting",
+          "inventoryId": "1adda281-6de9-4ccf-8071-d2f7365e6687"
+        },
+        "powerUnitPart": {
+          "partId": "standard-pwr-pack",
+          "inventoryId": "294c7964-1b43-48bf-9aab-eacd238e2004"
+        },
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "c1a9a654-b0ad-4c18-99c3-b61d8622692f",
+          "name": "Pistol Grip",
+          "partId": "pistol-grip",
+          "category": "Ranged Grip",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "e44a5855-054a-4c56-a576-04fad4c163ea",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard 1-handed grip."
+        },
+        {
+          "id": "51735d67-a7aa-494a-8880-489b4b55c2e6",
+          "name": "Ion Chamber",
+          "partId": "ion-chamber",
+          "category": "Ranged Receiver",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "e44a5855-054a-4c56-a576-04fad4c163ea",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard Ion."
+        },
+        {
+          "id": "85285863-8db6-48bb-93b9-8cfb28e05219",
+          "name": "Snub Emitter",
+          "partId": "snub-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "plasteel",
+          "cost": 24,
+          "weight": 0.3,
+          "isInstalled": true,
+          "installedInBlasterId": "e44a5855-054a-4c56-a576-04fad4c163ea",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "1adda281-6de9-4ccf-8071-d2f7365e6687",
+          "name": "Basic Targeting Module",
+          "partId": "basic-targeting",
+          "category": "Ranged Targeting",
+          "cost": 40,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "e44a5855-054a-4c56-a576-04fad4c163ea",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard civilian uplink."
+        },
+        {
+          "id": "294c7964-1b43-48bf-9aab-eacd238e2004",
+          "name": "Standard Power Pack",
+          "partId": "standard-pwr-pack",
+          "category": "Power Unit",
+          "cost": 105,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "e44a5855-054a-4c56-a576-04fad4c163ea",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Ion Blaster"
+    }
+  }
+}

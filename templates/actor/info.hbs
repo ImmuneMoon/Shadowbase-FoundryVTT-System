@@ -1,0 +1,265 @@
+{{!-- templates/actor/info.hbs - the Info tab, section by section in the website's order (docs/STYLE-SPEC.md §3.3
+     rows I1-I8, laid out as the eleven sections of the unit brief; templates/actor/README.md is the checklist).
+     Every section is a <details class="sb-section" data-section="..."> (the website's accordion) whose open state
+     the sheet remembers per user. Inputs bind by full dotted name; numbers carry data-dtype="Number"; a blank
+     number is null for the engine's null-means-derive fields (module/apps/actor-sheet.mjs _processFormData).
+     Context: module/apps/actor-sheet.mjs infoContext() under `info`, plus `pools`, `sections`, `editable`, `isDroid`. --}}
+<section class="tab sb-tab-panel sb-tab-info {{tab.cssClass}}" data-tab="info" data-group="primary" data-application-part="info">
+  {{#if engineError}}<p class="sb-notice sb-notice--error">{{localize "SHADOWBASE.Sheet.EngineError" error=engineError}}</p>{{/if}}
+
+  {{!-- I1 Basic Info (basic-info-section.tsx:105-151) --}}
+  <details class="sb-section" data-section="basic-info" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Info.BasicInfo") icon=(sbIcon "User") chip="" chipTitle="" meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      <div class="sb-grid-3">
+        {{#> "shadowbase.field" id="playerName" label=(localize "SHADOWBASE.Sheet.Basic.PlayerName") cls=""}}
+          <input type="text" id="playerName" name="system.playerName" value="{{header.playerName}}" {{#unless editable}}readonly{{/unless}}>
+        {{/shadowbase.field}}
+        {{#> "shadowbase.field" id="species" label=(localize "SHADOWBASE.Sheet.Basic.Species") cls=""}}
+          <div class="sb-field__control">
+            <input type="text" id="species" name="system.species" value="{{header.species}}" list="species-list-{{actor.id}}" placeholder="{{localize "SHADOWBASE.Sheet.Basic.SpeciesPlaceholder"}}" {{#unless editable}}readonly{{/unless}}>
+            <datalist id="species-list-{{actor.id}}">{{#each header.speciesOptions}}<option value="{{value}}">{{label}}</option>{{/each}}</datalist>
+          </div>
+          <p class="sb-field__hint">{{localize "SHADOWBASE.Sheet.Basic.SpeciesHint"}}</p>
+        {{/shadowbase.field}}
+        {{#> "shadowbase.field" id="homeworld" label=(localize "SHADOWBASE.Sheet.Basic.Homeworld") cls=""}}
+          <input type="text" id="homeworld" name="system.homeworld" value="{{header.homeworld}}" placeholder="{{localize "SHADOWBASE.Sheet.Basic.HomeworldPlaceholder"}}" {{#unless editable}}readonly{{/unless}}>
+        {{/shadowbase.field}}
+        {{#> "shadowbase.field" id="campaign" label=(localize "SHADOWBASE.Sheet.Basic.Campaign") cls="sb-span-2"}}
+          <input type="text" id="campaign" name="system.campaign" value="{{header.campaign}}" {{#unless editable}}readonly{{/unless}}>
+        {{/shadowbase.field}}
+        <div class="sb-field" data-sheet-row>
+          <span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Basic.CpSpending"}}</span>
+          <div class="sb-hrow">
+            <span class="sb-switch-box"><label for="isStartingPointsMode">{{localize "SHADOWBASE.Sheet.Basic.CpSpending"}}</label>{{> "shadowbase.switch" id="isStartingPointsMode" name="system.isStartingPointsMode" checked=info.ledger.isStartingPointsMode disabled=(not editable) label=(localize "SHADOWBASE.Sheet.Basic.CpSpending") cls=""}}</span>
+            <button type="button" class="sb-btn sb-btn-micro {{#if header.pinPoints}}sb-btn-default{{else}}sb-btn-outline{{/if}}" data-action="pin-points"><i class="{{#if header.pinPoints}}{{sbIcon 'pinOff'}}{{else}}{{sbIcon 'pin'}}{{/if}}"></i> {{localize "SHADOWBASE.Sheet.Basic.PinPts"}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  {{!-- I6a Primary Attributes (primary-attributes-section.tsx) --}}
+  <details class="sb-section" data-section="primary-attributes" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Info.PrimaryAttributes") icon=(sbIcon "Dices") chip="core-system-attributes" chipTitle=(lookup chips "core-system-attributes") meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      <p class="sb-explainer">{{localize "SHADOWBASE.Sheet.Attr.PrimaryExplainer"}}</p>
+      <div class="sb-grid-4">
+        {{#each info.primaries}}
+        <div class="sb-attr">
+          {{#> "shadowbase.field" id=key label=label cls=""}}
+            <div class="sb-field__control">
+              {{> "shadowbase.qty" id=key name=(sbConcat "system." key) value=value placeholder=placeholder min="" max="" step="1" dtype="Number" disabled=(or readOnly (not @root.editable)) cls="sb-qty--dense" label=label}}
+              {{> "shadowbase.roll-btn" action="roll-attribute" key=roll name="" title=rollTitle label=(localize "SHADOWBASE.Sheet.Attr.RollAria" attr=label) disabled=false}}
+            </div>
+            <div class="sb-field__caption">
+              <div class="sb-attr__costline">{{localize "SHADOWBASE.Sheet.Attr.Base" label=baselineLabel value=baseline}}{{differenceText}}
+                {{#if hasCost}}{{#if isSpendingOn}}<span class="sb-attr__cost {{#unless cost}}sb-attr__cost--zero{{/unless}}">{{costText}}</span>{{else}}<span class="sb-attr__cost sb-attr__cost--template">{{localize "SHADOWBASE.Sheet.Attr.CostTemplate"}}</span>{{/if}}{{/if}}
+              </div>
+              {{#if readOnly}}<div class="sb-attr__droid-note">{{localize "SHADOWBASE.Sheet.Attr.DroidNote"}}</div>{{/if}}
+              {{#if modifier}}
+                <div class="sb-field__mod {{#if (lt modifier 0)}}sb-field__mod--neg{{else}}sb-field__mod--pos{{/if}}">
+                  {{localize "SHADOWBASE.Sheet.Attr.Mod" mod=(sbSigned modifier)}} <small>{{localize "SHADOWBASE.Sheet.Attr.Effective" value=effective}}</small>
+                  {{#if contributors.length}}<div class="sb-attr__contrib">{{contributorsText}}</div>{{/if}}
+                </div>
+              {{/if}}
+            </div>
+          {{/shadowbase.field}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </details>
+
+  {{!-- I6b Secondary Characteristics & Senses (secondary-characteristics-section.tsx) --}}
+  <details class="sb-section" data-section="secondary-characteristics" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Info.SecondaryCharacteristics") icon=(sbIcon "Activity") chip="core-system-attributes" chipTitle=(lookup chips "core-system-attributes") meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      <p class="sb-explainer">{{localize "SHADOWBASE.Sheet.Attr.SecondaryExplainer"}}</p>
+      <div class="sb-grid-4">
+        {{#each info.secondaries}}
+          {{#> "shadowbase.field" id=name label=label cls=""}}
+            <div class="sb-field__control">
+              {{#if editable}}
+                {{> "shadowbase.qty" id=name name=(sbConcat "system." name) value=value placeholder=placeholder min="" max="" step=step dtype="Number" disabled=(not @root.editable) cls="sb-qty--dense" label=label}}
+              {{else}}
+                <input type="text" id="{{name}}" value="{{value}}" readonly class="sb-input--calc" aria-label="{{label}}">
+              {{/if}}
+              {{#if rollable}}{{> "shadowbase.roll-btn" action="roll-characteristic" key=name name="" title=(localize "SHADOWBASE.Sheet.Attr.RollAria" attr=label) label=(localize "SHADOWBASE.Sheet.Attr.RollAria" attr=label) disabled=false}}{{/if}}
+            </div>
+            <div class="sb-field__caption">
+              {{#if editable}}<div class="sb-attr__costline">{{localize "SHADOWBASE.Sheet.Attr.BaseDot" label=sourceLabel value=baseDisplay}} {{#if hasCost}}<span class="{{#if isSpendingOn}}sb-attr__cost{{else}}sb-attr__cost sb-attr__cost--template{{/if}}">{{costText}}</span>{{/if}}</div>{{/if}}
+              {{#if applied}}<div class="sb-field__mod {{#if (lt applied 0)}}sb-field__mod--neg{{else}}sb-field__mod--pos{{/if}}">{{localize "SHADOWBASE.Sheet.Attr.Mod" mod=appliedText}} <small>{{localize "SHADOWBASE.Sheet.Attr.Effective" value=effectiveText}}</small></div>{{/if}}
+              {{#if isImmune}}<div class="sb-attr__immune">{{localize "SHADOWBASE.Sheet.Attr.Immune"}}</div>{{/if}}
+            </div>
+          {{/shadowbase.field}}
+        {{/each}}
+      </div>
+    </div>
+  </details>
+
+  {{!-- A5 Languages (languages-section.tsx + languages-panel.tsx; on the Info tab per the unit brief) --}}
+  <details class="sb-section" data-section="languages" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Info.Languages") icon=(sbIcon "Globe") chip="traits-skills" chipTitle=(lookup chips "traits-skills") meta=(localize "SHADOWBASE.Sheet.Lang.Total" cp=info.languages.totalCp)}}
+    <div class="sb-section__body" data-accordion-body>
+      <div class="sb-lang-rows">
+        {{#each info.languages.entries}}
+        <div class="sb-lang-row" title="{{notes}}">
+          <input type="text" name="system.languageEntries.{{index}}.tongue" value="{{tongue}}" placeholder="{{localize "SHADOWBASE.Sheet.Lang.TonguePlaceholder"}}" aria-label="{{localize "SHADOWBASE.Sheet.Lang.TongueAria"}}" {{#unless @root.editable}}readonly{{/unless}}>
+          <select name="system.languageEntries.{{index}}.tier" aria-label="{{localize "SHADOWBASE.Sheet.Lang.FluencyAria"}}" {{#unless @root.editable}}disabled{{/unless}}>
+            {{#each @root.info.languages.tierOptions}}<option value="{{value}}" {{#if (eq value ../tier)}}selected{{/if}}>{{label}}</option>{{/each}}
+          </select>
+          <label class="sb-check-row sb-check-row--tiny" title="{{localize "SHADOWBASE.Sheet.Lang.ComprHint"}}"><input type="checkbox" name="system.languageEntries.{{index}}.comprehensionOnly" {{#if comprehensionOnly}}checked{{/if}} aria-label="{{localize "SHADOWBASE.Sheet.Lang.ComprAria"}}" {{#unless @root.editable}}disabled{{/unless}}>{{localize "SHADOWBASE.Sheet.Lang.Compr"}}</label>
+          {{#unless isNative}}<label class="sb-check-row sb-check-row--tiny" title="{{localize "SHADOWBASE.Sheet.Lang.FreeHint"}}"><input type="checkbox" name="system.languageEntries.{{index}}.granted" {{#if granted}}checked{{/if}} aria-label="{{localize "SHADOWBASE.Sheet.Lang.FreeAria"}}" {{#unless @root.editable}}disabled{{/unless}}>{{localize "SHADOWBASE.Sheet.Lang.FreeLabel"}}</label>{{/unless}}
+          <span class="sb-lang-row__cost {{#if paid}}sb-lang-row__cost--paid{{/if}}">{{costText}}</span>
+          <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon" data-action="remove-language" data-index="{{index}}" aria-label="{{localize "SHADOWBASE.Sheet.Lang.Remove"}}" title="{{localize "SHADOWBASE.Sheet.Lang.Remove"}}" {{#unless @root.editable}}disabled{{/unless}}><i class="{{sbIcon 'remove'}}"></i></button>
+        </div>
+        {{/each}}
+        {{#unless info.languages.entries.length}}{{#unless info.languages.hasLegacy}}<p class="sb-muted-p">{{localize "SHADOWBASE.Sheet.Lang.None"}}</p>{{/unless}}{{/unless}}
+      </div>
+      {{#if info.languages.hasLegacy}}<p class="sb-lang-note sb-lang-note--warn">{{localize "SHADOWBASE.Sheet.Lang.LegacyBilled" list=info.languages.legacyText}}</p>{{/if}}
+      <div class="sb-lang-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="add-language" {{#unless editable}}disabled{{/unless}}><i class="{{sbIcon 'add'}}"></i> {{localize "SHADOWBASE.Sheet.Lang.Add"}}</button>
+        {{#if info.languages.offerNative}}<button type="button" class="sb-btn sb-btn-outline sb-btn-sm sb-text-accent" data-action="add-native-language" data-tongue="{{info.languages.expectedNative}}" {{#unless editable}}disabled{{/unless}}><i class="{{sbIcon 'add'}}"></i> {{localize "SHADOWBASE.Sheet.Lang.AddNative" tongue=info.languages.expectedNative}}</button>{{/if}}
+        <span class="sb-lang-total">{{localize "SHADOWBASE.Sheet.Lang.Total" cp=info.languages.totalCp}}</span>
+      </div>
+      {{#if info.languages.tooManyFree}}<p class="sb-lang-note sb-lang-note--warn">{{localize "SHADOWBASE.Sheet.Lang.TooManyFree" count=info.languages.freeCount allowed=info.languages.freeAllowed coverage=info.languages.coverage}}</p>{{/if}}
+      {{#if info.languages.hasLanguageTalent}}<p class="sb-lang-note">{{localize "SHADOWBASE.Sheet.Lang.Talent"}}</p>{{/if}}
+      <p class="sb-lang-note">{{localize "SHADOWBASE.Sheet.Lang.Ladder"}}</p>
+      {{#if info.languages.showRepublicRaised}}
+        <label class="sb-check-row sb-check-row--muted"><input type="checkbox" name="system.republicRaised" {{#if info.languages.republicRaised}}checked{{/if}} {{#unless editable}}disabled{{/unless}}>
+          <span>{{localize "SHADOWBASE.Sheet.Lang.RepublicRaised" tongue=info.languages.speciesTongue}}{{#if info.languages.cannotSpeakBasic}}{{localize "SHADOWBASE.Sheet.Lang.RepublicRaisedCompr"}}{{/if}}</span></label>
+      {{/if}}
+      <p class="sb-literacy {{#if info.languages.illiterate}}sb-literacy--illiterate{{/if}}">{{#if info.languages.illiterate}}{{localize "SHADOWBASE.Sheet.Lang.Illiterate"}}{{else}}{{localize "SHADOWBASE.Sheet.Lang.Literate"}}{{/if}}</p>
+      {{#if info.languages.hasLegacyLiteracy}}
+        <div class="sb-field" data-sheet-row>
+          <input type="text" name="system.literacy" value="{{info.languages.literacy}}" aria-label="{{localize "SHADOWBASE.Sheet.Lang.LegacyLiteracyAria"}}" {{#unless editable}}readonly{{/unless}}>
+          <p class="sb-lang-note sb-lang-note--warn">{{localize "SHADOWBASE.Sheet.Lang.LegacyLiteracyNote"}}</p>
+        </div>
+      {{/if}}
+      {{#> "shadowbase.field" id="culturalFamiliarities" label=(localize "SHADOWBASE.Sheet.Details.CulturalFamiliarities") cls=""}}
+        <textarea id="culturalFamiliarities" name="system.culturalFamiliarities" rows="2" placeholder="{{localize "SHADOWBASE.Sheet.Details.CfPlaceholder"}}" {{#unless editable}}readonly{{/unless}}>{{info.languages.culturalFamiliarities}}</textarea>
+        <p class="sb-field__hint">{{localize "SHADOWBASE.Sheet.Details.CfHint"}}</p>
+      {{/shadowbase.field}}
+    </div>
+  </details>
+
+  {{!-- N1 (the Move half) Encumbrance & Move (encumbrance-section.tsx:99-137, 330-370; defenses are the Inventory tab's) --}}
+  <details class="sb-section sb-encumbrance" data-section="encumbrance" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Info.Encumbrance") icon=(sbIcon "Weight") chip="combat-damage" chipTitle=(lookup chips "combat-damage") meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      <div class="sb-grid-3">
+        {{#> "shadowbase.field" id="basicLift" label=(localize "SHADOWBASE.Sheet.Enc.BasicLift") cls=""}}<input type="text" id="basicLift" value="{{info.encumbrance.basicLift}}" readonly class="sb-input--calc">{{/shadowbase.field}}
+        {{#> "shadowbase.field" id="currentEncumbranceLevel" label=(localize "SHADOWBASE.Sheet.Enc.Level") cls=""}}<input type="text" id="currentEncumbranceLevel" value="{{info.encumbrance.level}}" readonly class="sb-input--calc">{{/shadowbase.field}}
+        {{#> "shadowbase.field" id="currentMove" label=(localize "SHADOWBASE.Sheet.Enc.Move") cls=""}}<input type="text" id="currentMove" value="{{info.encumbrance.move}}" readonly class="sb-input--calc">{{/shadowbase.field}}
+        {{#> "shadowbase.field" id="currentDodge" label=(localize "SHADOWBASE.Sheet.Enc.Dodge") cls=""}}<input type="text" id="currentDodge" value="{{#if info.encumbrance.dodgeAvailable}}{{info.encumbrance.dodge}}{{else}}{{localize "SHADOWBASE.Sheet.Enc.NA"}}{{/if}}" readonly class="sb-input--calc">{{/shadowbase.field}}
+        {{#> "shadowbase.field" id="armorEpCost" label=(localize "SHADOWBASE.Sheet.Enc.EpPerFight") cls=""}}<input type="text" id="armorEpCost" value="{{info.encumbrance.epPerFight}}" readonly class="sb-input--calc">{{/shadowbase.field}}
+        {{#if info.encumbrance.hasLiftingST}}
+        <div class="sb-field" data-sheet-row>
+          <span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Enc.LiftingST"}}</span>
+          <span class="sb-switch-box"><label for="useLiftingST">{{localize "SHADOWBASE.Sheet.Enc.ApplyLiftingST"}}</label>{{> "shadowbase.switch" id="useLiftingST" name="system.useLiftingST" checked=info.encumbrance.useLiftingST disabled=(not editable) label=(localize "SHADOWBASE.Sheet.Enc.ApplyLiftingST") cls=""}}</span>
+        </div>
+        {{/if}}
+      </div>
+      <div class="sb-jump-box">
+        <div class="sb-jump-box__head"><span class="sb-jump-box__title">{{localize "SHADOWBASE.Sheet.Enc.Jumping"}}</span><span class="sb-jump-box__off">{{localize "SHADOWBASE.Sheet.Enc.OffMove" move=info.encumbrance.move}}</span></div>
+        <div class="sb-jump-box__grid">
+          <div class="sb-jump-tile" title="{{localize "SHADOWBASE.Sheet.Enc.JumpRunningTip"}}"><div class="sb-jump-tile__label">{{localize "SHADOWBASE.Sheet.Enc.JumpRunning"}}</div><div class="sb-jump-tile__value">{{info.encumbrance.jump.running}}</div></div>
+          <div class="sb-jump-tile" title="{{localize "SHADOWBASE.Sheet.Enc.JumpStandingTip"}}"><div class="sb-jump-tile__label">{{localize "SHADOWBASE.Sheet.Enc.JumpStanding"}}</div><div class="sb-jump-tile__value">{{info.encumbrance.jump.standing}}</div></div>
+          <div class="sb-jump-tile" title="{{localize "SHADOWBASE.Sheet.Enc.JumpVerticalTip"}}"><div class="sb-jump-tile__label">{{localize "SHADOWBASE.Sheet.Enc.JumpVertical"}}</div><div class="sb-jump-tile__value">{{info.encumbrance.jump.vertical}}</div></div>
+        </div>
+        <p class="sb-jump-box__note">{{localize "SHADOWBASE.Sheet.Enc.JumpNote"}}</p>
+      </div>
+      <p class="sb-muted-p">{{localize "SHADOWBASE.Sheet.Enc.DefensesElsewhere"}}</p>
+    </div>
+  </details>
+
+  {{!-- I7a Character Details (character-details-section.tsx:284-462) --}}
+  <details class="sb-section" data-section="character-details" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Info.CharacterDetails") icon=(sbIcon "Ruler") chip="" chipTitle="" meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      <div class="sb-droid-row">
+        <span class="sb-lead-icon sb-icon-accent"><i class="{{sbIcon 'droid'}}"></i></span>
+        <span class="sb-field__label">{{localize "SHADOWBASE.Sheet.Details.IsDroid"}}</span>
+        <button type="button" class="sb-btn sb-btn-micro {{#if isDroid}}sb-btn-accent{{else}}sb-btn-outline{{/if}}" data-action="toggle-droid" aria-pressed="{{#if isDroid}}true{{else}}false{{/if}}" title="{{info.details.droidRule}}" {{#unless editable}}disabled{{/unless}}>{{#if isDroid}}{{localize "SHADOWBASE.Sheet.Details.StatusDroid"}}{{else}}{{localize "SHADOWBASE.Sheet.Details.StatusOrganic"}}{{/if}}</button>
+      </div>
+      {{#if isDroid}}<p class="sb-droid-note">{{info.droidPowerNote}}</p>{{/if}}
+      <hr class="sb-separator sb-separator--tight">
+      <div class="sb-grid-2">
+        {{#> "shadowbase.field" id="height" label=(localize "SHADOWBASE.Sheet.Details.Height") cls=""}}<input type="text" id="height" name="system.height" value="{{info.details.height}}" {{#unless editable}}readonly{{/unless}}>{{/shadowbase.field}}
+        {{#> "shadowbase.field" id="weight" label=(localize "SHADOWBASE.Sheet.Details.Weight") cls=""}}<input type="text" id="weight" name="system.weight" value="{{info.details.weight}}" {{#unless editable}}readonly{{/unless}}>{{/shadowbase.field}}
+        {{#> "shadowbase.field" id="sizeModifier" label=(localize "SHADOWBASE.Sheet.Details.SizeModifier") cls=""}}
+          <div class="sb-field__control">
+            <span class="sb-lead-icon sb-icon-accent"><i class="{{sbIcon 'sizeModifier'}}"></i></span>
+            {{> "shadowbase.qty" id="sizeModifier" name="system.sizeModifier" value=info.details.sizeModifier placeholder="0" min="" max="" step="0.01" dtype="Number" disabled=(or isDroid (not editable)) cls="sb-qty--dense" label=(localize "SHADOWBASE.Sheet.Details.SizeModifier")}}
+          </div>
+          {{#if isDroid}}<span class="sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Sheet.Details.SmDroid"}}</span>{{/if}}
+          {{#if info.details.smHint}}<p class="sb-sm-hint">{{info.details.smHint}}</p>{{/if}}
+          {{#if info.details.showApply}}
+            <p class="sb-sm-hint">{{localize "SHADOWBASE.Sheet.Details.SmSuggested" sm=info.details.smSuggestedText}}
+              <button type="button" class="sb-btn sb-btn-sm {{#if info.details.smMatches}}sb-btn-outline{{else}}sb-btn-default{{/if}}" data-action="apply-sm" data-value="{{info.details.smSuggested}}" {{#if info.details.smMatches}}disabled{{/if}} {{#unless editable}}disabled{{/unless}} aria-label="{{localize "SHADOWBASE.Sheet.Details.ApplySmAria" sm=info.details.smSuggestedText}}">{{#if info.details.smMatches}}{{localize "SHADOWBASE.Sheet.Details.SmMatches"}}{{else}}{{localize "SHADOWBASE.Sheet.Details.ApplySm" sm=info.details.smSuggestedText}}{{/if}}</button>
+            </p>
+          {{/if}}
+        {{/shadowbase.field}}
+        {{#> "shadowbase.field" id="age" label=(localize "SHADOWBASE.Sheet.Details.Age") cls=""}}
+          {{> "shadowbase.qty" id="age" name="system.age" value=info.details.age placeholder="0" min="0" max="" step="1" dtype="Number" disabled=(not editable) cls="sb-qty--dense" label=(localize "SHADOWBASE.Sheet.Details.Age")}}
+        {{/shadowbase.field}}
+        {{#> "shadowbase.field" id="appearance" label=(localize "SHADOWBASE.Sheet.Details.Appearance") cls="sb-span-all"}}
+          <textarea id="appearance" name="system.appearance" rows="3" {{#unless editable}}readonly{{/unless}}>{{info.details.appearance}}</textarea>
+        {{/shadowbase.field}}
+      </div>
+    </div>
+  </details>
+
+  {{!-- I7b Narrative (narrative-section.tsx: three plain textareas, as the website) --}}
+  <details class="sb-section sb-narrative" data-section="narrative" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Info.Narrative") icon=(sbIcon "PenLine") chip="" chipTitle="" meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      <section>
+        <h3 class="sb-subhead">{{localize "SHADOWBASE.Sheet.Narrative.Description"}}</h3>
+        <textarea name="system.description" rows="4" aria-label="{{localize "SHADOWBASE.Sheet.Narrative.Description"}}" {{#unless editable}}readonly{{/unless}}>{{info.narrative.description}}</textarea>
+      </section>
+      <section>
+        <h3 class="sb-subhead">{{localize "SHADOWBASE.Sheet.Narrative.Background"}}</h3>
+        <textarea name="system.background" rows="6" aria-label="{{localize "SHADOWBASE.Sheet.Narrative.Background"}}" {{#unless editable}}readonly{{/unless}}>{{info.narrative.background}}</textarea>
+      </section>
+      <section>
+        <h3 class="sb-subhead">{{localize "SHADOWBASE.Sheet.Narrative.Notes"}}</h3>
+        <textarea name="system.notes" rows="6" placeholder="{{localize "SHADOWBASE.Sheet.Narrative.NotesPlaceholder"}}" aria-label="{{localize "SHADOWBASE.Sheet.Narrative.Notes"}}" {{#unless editable}}readonly{{/unless}}>{{info.narrative.notes}}</textarea>
+      </section>
+    </div>
+  </details>
+
+  {{!-- I2 Point Ledger (basic-info-section.tsx:153-304 point totals + stats.points itemised) --}}
+  <details class="sb-section" data-section="point-ledger" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Info.PointLedger") icon=(sbIcon "Calculator") chip="core-system-attributes" chipTitle=(lookup chips "core-system-attributes") meta=""}}
+    <div class="sb-section__body" data-accordion-body>
+      <div class="sb-grid-2">
+        <dl class="sb-ledger">
+          {{#each info.ledger.rows}}<dt>{{label}}</dt><dd>{{sbNumber value 0}}</dd>{{/each}}
+          <dt class="sb-ledger__total">{{localize "SHADOWBASE.Sheet.Ledger.TotalSpent"}}</dt><dd class="sb-ledger__total">{{sbNumber info.ledger.spent 0}}</dd>
+          <dt>{{localize "SHADOWBASE.Sheet.Basic.PointTotal"}}</dt><dd>{{sbNumber info.ledger.total 0}}</dd>
+          <dt>{{localize "SHADOWBASE.Sheet.Ledger.Remaining"}}</dt><dd class="{{#if info.ledger.negative}}sb-text-red{{else}}sb-text-green{{/if}}">{{sbNumber info.ledger.remaining 0}}</dd>
+          {{#if info.ledger.racialBudgetBonus}}<dt>{{localize "SHADOWBASE.Sheet.Ledger.RacialBudget"}}</dt><dd>{{sbSigned info.ledger.racialBudgetBonus}}</dd>{{/if}}
+          <dt>{{localize "SHADOWBASE.Sheet.Ledger.TotalWeight"}}</dt><dd>{{sbNumber info.ledger.totalWeight 2}} lb</dd>
+          <dt>{{localize "SHADOWBASE.Sheet.Ledger.TotalCost"}}</dt><dd>{{sbNumber info.ledger.totalCost 0}} CR</dd>
+        </dl>
+        <div class="sb-section-block">
+          {{#> "shadowbase.field" id="pointsOther" label=(localize "SHADOWBASE.Sheet.Ledger.OtherInput") cls=""}}
+            {{> "shadowbase.qty" id="pointsOther" name="system.pointsOther" value=(sbOr info.ledger.pointsOther "") placeholder="0" min="" max="" step="1" dtype="Number" disabled=(not editable) cls="sb-qty--dense" label=(localize "SHADOWBASE.Sheet.Ledger.OtherInput")}}
+            <p class="sb-field__hint">{{localize "SHADOWBASE.Sheet.Ledger.OtherHint"}}</p>
+          {{/shadowbase.field}}
+          {{#> "shadowbase.field" id="cpTradedForCredits" label=(localize "SHADOWBASE.Sheet.Ledger.TradeCp" max=info.ledger.cpMax) cls=""}}
+            <div class="sb-trade-cp">
+              {{> "shadowbase.qty" id="cpTradedForCredits" name="system.cpTradedForCredits" value=info.ledger.cpTraded placeholder="0" min="0" max=info.ledger.cpMax step="1" dtype="Number" disabled=(not editable) cls="sb-qty--dense" label=(localize "SHADOWBASE.Sheet.Ledger.TradeCp" max=info.ledger.cpMax)}}
+              <select name="system.cpCreditsForm" aria-label="{{localize "SHADOWBASE.Sheet.Ledger.CreditForm"}}" {{#unless editable}}disabled{{/unless}}>
+                {{#each info.ledger.creditForms}}<option value="{{value}}" {{#if (eq value @root.info.ledger.creditForm)}}selected{{/if}}>{{label}}</option>{{/each}}
+              </select>
+              <span class="sb-trade-cp__note">{{sbNumber info.ledger.creditsFromCp 0}} CR <span>· {{localize "SHADOWBASE.Sheet.Ledger.PerCp" credits=info.ledger.creditsPerCp}}</span></span>
+            </div>
+          {{/shadowbase.field}}
+        </div>
+      </div>
+    </div>
+  </details>
+</section>

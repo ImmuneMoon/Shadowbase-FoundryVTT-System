@@ -1,0 +1,34 @@
+{
+  "_id": "7WdG84kPLrMhtOX5",
+  "_key": "!items!7WdG84kPLrMhtOX5",
+  "name": "Enhanced Move",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "GS8kUCPWatq78XxI",
+  "sort": 5500000,
+  "system": {
+    "row": {
+      "name": "Enhanced Move",
+      "points": 20,
+      "description": "Double ground speed (after accel).",
+      "category": "Physical",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Enhanced Move"
+    }
+  }
+}

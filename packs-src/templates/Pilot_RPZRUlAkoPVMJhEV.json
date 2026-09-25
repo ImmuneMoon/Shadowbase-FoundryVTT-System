@@ -1,0 +1,733 @@
+{
+  "_id": "RPZRUlAkoPVMJhEV",
+  "_key": "!actors!RPZRUlAkoPVMJhEV",
+  "name": "Pilot",
+  "type": "character",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "v3NqxSG7oocKV0q1",
+  "sort": 5100000,
+  "system": {
+    "legacy": {},
+    "playerName": "",
+    "species": "Human",
+    "homeworld": "",
+    "characterPortrait": null,
+    "campaign": "Shadows of the Mandalorian Wars",
+    "pointTotal": 150,
+    "turnCounter": 0,
+    "facing": 0,
+    "incomingBearing": 0,
+    "threatEngaged": false,
+    "incomingArc": null,
+    "facingChangeUsed": false,
+    "posture": "standing",
+    "elevation": 0,
+    "parriesThisTurn": 0,
+    "height": "",
+    "weight": "",
+    "sizeModifier": 0,
+    "age": 0,
+    "appearance": "",
+    "techLevel": "",
+    "isDroid": false,
+    "powerPoints": 100,
+    "lightSidePoints": 0,
+    "darkSidePoints": 0,
+    "trackDigital": false,
+    "trackPhysical": false,
+    "totalCredits": 7000,
+    "forceAlignment": 0,
+    "isStartingPointsMode": true,
+    "isConstructed": false,
+    "cpBaseline": 0,
+    "stBaseline": 10,
+    "dxBaseline": 10,
+    "iqBaseline": 10,
+    "htBaseline": 10,
+    "hitPointsBaseline": 0,
+    "endurancePointsBaseline": 0,
+    "forcePointsBaseline": 0,
+    "willBaseline": 0,
+    "perceptionBaseline": 0,
+    "frightCheckBaseline": 0,
+    "basicSpeedBaseline": 0,
+    "basicMoveBaseline": 0,
+    "visionBaseline": 0,
+    "hearingBaseline": 0,
+    "tasteAndSmellBaseline": 0,
+    "touchBaseline": 0,
+    "languagesBaseline": 0,
+    "culturalFamiliaritiesBaseline": 0,
+    "literacyBaseline": 0,
+    "languageEntries": [],
+    "republicRaised": false,
+    "frightCheck": null,
+    "basicSpeed": null,
+    "basicMove": null,
+    "selectedParrySkill": null,
+    "selectedBlockSkill": null,
+    "activeLightsaberForm": null,
+    "hitLocations": [
+      {
+        "name": "Head",
+        "type": "Head",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 2,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 3,
+        "installedHardwareIds": [],
+        "id": "d0af6a29-b520-46af-9c80-a998a62482f4"
+      },
+      {
+        "name": "Face",
+        "type": "Face",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 5,
+        "installedHardwareIds": [],
+        "id": "32fb97ca-212e-4351-80da-3d9a2f076093"
+      },
+      {
+        "name": "Upper Torso",
+        "type": "Vitals",
+        "side": "Center",
+        "relativeSM": -3,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 17,
+        "installedHardwareIds": [],
+        "id": "4e168d46-c45c-4ec2-b6cd-2cc1d651e596"
+      },
+      {
+        "name": "Torso",
+        "type": "Torso",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 10,
+        "installedHardwareIds": [],
+        "id": "a3bfbe2d-4e4f-463f-8d8a-95a0b41803bc"
+      },
+      {
+        "name": "Right Arm",
+        "type": "Arm",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 7,
+        "installedHardwareIds": [],
+        "id": "ffeb73ef-b5b8-4216-905e-8e508207f4cd"
+      },
+      {
+        "name": "Right Hand",
+        "type": "Hand",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "90894514-69d1-4a28-8267-246733a2a4c1"
+      },
+      {
+        "name": "Left Arm",
+        "type": "Arm",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 8,
+        "installedHardwareIds": [],
+        "id": "00f0d92e-9e2d-4497-a21c-d27437d385c3"
+      },
+      {
+        "name": "Left Hand",
+        "type": "Hand",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "cb3d8d42-0f51-431c-bd55-cac10de6625a"
+      },
+      {
+        "name": "Right Leg",
+        "type": "Leg",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "2d5329e6-5697-4cf4-8623-0d7bb232f550"
+      },
+      {
+        "name": "Right Foot",
+        "type": "Foot",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "ddf816f3-3e90-45d0-af76-a476b85aa425"
+      },
+      {
+        "name": "Left Leg",
+        "type": "Leg",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "7649ea11-286a-4b23-94da-0a771cbffd61"
+      },
+      {
+        "name": "Left Foot",
+        "type": "Foot",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "9d6cee7a-b80c-4f98-9ca9-b81f8411e0a8"
+      }
+    ],
+    "languages": "",
+    "culturalFamiliarities": "",
+    "literacy": "",
+    "description": "",
+    "background": "",
+    "notes": "",
+    "pointsAttributes": 0,
+    "pointsAdvantages": 0,
+    "pointsDisadvantages": 0,
+    "pointsOther": 0,
+    "cpTradedForCredits": 0,
+    "cpCreditsForm": "digital",
+    "currentHitPoints": 10,
+    "currentEndurancePoints": 10,
+    "currentForcePoints": 11,
+    "strength": 10,
+    "dexterity": 12,
+    "iq": 11,
+    "health": 10,
+    "hitPoints": null,
+    "will": null,
+    "perception": null,
+    "vision": null,
+    "hearing": null,
+    "tasteAndSmell": null,
+    "touch": null,
+    "endurancePoints": null,
+    "forcePoints": null,
+    "shipPosition": null,
+    "assignedStation": null,
+    "storageBoxes": [],
+    "droidBuild": {
+      "chassisId": null,
+      "powerCoreId": null,
+      "head": {
+        "componentId": null,
+        "processorId": null,
+        "memoryCoreId": null,
+        "sensorIds": [],
+        "externalModId": null
+      },
+      "arms": [],
+      "legs": [],
+      "chassisMods": {
+        "internalIds": [],
+        "externalIds": [],
+        "utilityIds": [],
+        "auxiliaryIds": [],
+        "motiveMountIds": [],
+        "reinforcementId": null,
+        "armorId": null,
+        "motivatorId": null,
+        "actuatorId": null,
+        "wiringId": null
+      }
+    },
+    "pinnedNotifications": [],
+    "useLiftingST": true,
+    "useStrikingST": true,
+    "useArmST": true
+  },
+  "prototypeToken": {
+    "name": "Pilot",
+    "actorLink": true,
+    "displayName": 30,
+    "displayBars": 40,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "resources.hp"
+    },
+    "bar2": {
+      "attribute": "resources.ep"
+    }
+  },
+  "items": [
+    {
+      "_id": "HUi0NUpQVGR6aX4o",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.HUi0NUpQVGR6aX4o",
+      "name": "Absolute Direction",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Absolute Direction",
+          "points": 5,
+          "description": "Intuitive navigation."
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "CHCfyXzVCXlttpNk",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.CHCfyXzVCXlttpNk",
+      "name": "Fit",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Fit",
+          "points": 5,
+          "description": "Healthy conditioning."
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "LTzrOMH4IRTScyFv",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.LTzrOMH4IRTScyFv",
+      "name": "Overconfidence",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Overconfidence",
+          "points": -5,
+          "description": "Belief in destiny."
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "g2pBGsKLA5n8q926",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.g2pBGsKLA5n8q926",
+      "name": "Piloting (Starfighter)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Piloting (Starfighter)",
+          "relativeLevel": "DX/A",
+          "level": "14",
+          "points": 4
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "a4WNbobj0QKxyl38",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.a4WNbobj0QKxyl38",
+      "name": "Gunner (Laser Cannon)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Gunner (Laser Cannon)",
+          "relativeLevel": "DX/E",
+          "level": "13",
+          "points": 2
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "9UT2faoxv6n70DOH",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.9UT2faoxv6n70DOH",
+      "name": "Mechanic (Starship)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Mechanic (Starship)",
+          "relativeLevel": "IQ/A",
+          "level": "11",
+          "points": 2
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "OILjvRtqHyU5PIYF",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.OILjvRtqHyU5PIYF",
+      "name": "Navigation (Astrogation)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Navigation (Astrogation)",
+          "relativeLevel": "IQ/H",
+          "level": "10",
+          "points": 2
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "4qhIMgDA9StYj1s5",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.4qhIMgDA9StYj1s5",
+      "name": "Guns (Blaster Pistol)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Guns (Blaster Pistol)",
+          "relativeLevel": "DX/E",
+          "level": "12",
+          "points": 1
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "uY7qhoQccRS2FKgU",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.uY7qhoQccRS2FKgU",
+      "name": "Commlink (Wrist-link)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "cd0e272f-e5ce-420b-9a16-42f5eeb9da9c",
+          "name": "Commlink (Wrist-link)",
+          "weight": 0.5,
+          "cost": 150,
+          "quantity": 1,
+          "condition": "Fine",
+          "category": "Communication & Data"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "lKKMt0yeRVOfwn5F",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.lKKMt0yeRVOfwn5F",
+      "name": "Tool Kit (Basic)",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "id": "720bbdec-72b2-451c-9e01-f3d86f875fbb",
+          "name": "Tool Kit (Basic)",
+          "weight": 10,
+          "cost": 100,
+          "quantity": 1,
+          "condition": "Fine",
+          "category": "Tools & Electronics"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "4FChsdDWeBqdRMCR",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.4FChsdDWeBqdRMCR",
+      "name": "Sidearm",
+      "type": "blaster",
+      "img": "icons/svg/target.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "97ae9247-c206-4965-900f-8fb03ec726a4",
+          "customName": "Sidearm",
+          "baseType": "Blaster Pistol",
+          "baseSkill": "Guns (Blaster Pistol)",
+          "isConstructed": true,
+          "equipped": true,
+          "quantity": 1,
+          "baseWeight": 2.8,
+          "finalWeight": 2.8,
+          "baseCost": 289,
+          "finalCost": 1734,
+          "currentCharges": 50,
+          "maxCharges": 50,
+          "loadedAmmunitionId": "31c03cf4-2fc6-4b17-9fd3-c51dee98fc8d",
+          "loadedAmmunitionData": {
+            "id": "31c03cf4-2fc6-4b17-9fd3-c51dee98fc8d",
+            "name": "Standard Power Pack",
+            "type": "Power Packs",
+            "currentCharges": 50,
+            "maxCharges": 50,
+            "cost": 0,
+            "weight": 0,
+            "baseCost": 0,
+            "baseWeight": 0,
+            "quantity": 1,
+            "contents": [],
+            "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+          },
+          "gripPart": {
+            "partId": "pistol-grip",
+            "inventoryId": "f4a4ba01-8314-4e5d-a92c-0d64889d7bc7",
+            "materialId": "plasteel"
+          },
+          "receiverPart": {
+            "partId": "standard-receiver",
+            "inventoryId": "2e67961f-6c5c-4bab-ada1-cdda4a2f6b14",
+            "materialId": "plasteel"
+          },
+          "barrelPart": {
+            "partId": "std-emitter",
+            "inventoryId": "52efcc26-59d8-4ecc-9aff-de1277a104e0",
+            "materialId": "plasteel"
+          },
+          "targetingPart": {
+            "partId": "basic-targeting",
+            "inventoryId": "f696c44a-2e58-4bb1-bf1f-c911139f46a2"
+          },
+          "powerUnitPart": {
+            "partId": "standard-pwr-pack",
+            "inventoryId": "5feabaf2-da27-4a16-9766-35227a951539"
+          },
+          "condition": "Fine",
+          "malfunction": 17,
+          "durability": null
+        },
+        "source": "customBlasters"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "UZHd84iPfKZZOX0B",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.UZHd84iPfKZZOX0B",
+      "name": "Pistol Grip",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "f4a4ba01-8314-4e5d-a92c-0d64889d7bc7",
+          "name": "Pistol Grip",
+          "partId": "pistol-grip",
+          "category": "Ranged Grip",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "97ae9247-c206-4965-900f-8fb03ec726a4",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard 1-handed grip."
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "t3dCXyqi41KL2yPS",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.t3dCXyqi41KL2yPS",
+      "name": "Standard Receiver",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "id": "2e67961f-6c5c-4bab-ada1-cdda4a2f6b14",
+          "name": "Standard Receiver",
+          "partId": "standard-receiver",
+          "category": "Ranged Receiver",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "97ae9247-c206-4965-900f-8fb03ec726a4",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard semi-auto/burst."
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "DO2MRr50TOkM18lM",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.DO2MRr50TOkM18lM",
+      "name": "Standard Emitter",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "id": "52efcc26-59d8-4ecc-9aff-de1277a104e0",
+          "name": "Standard Emitter",
+          "partId": "std-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "97ae9247-c206-4965-900f-8fb03ec726a4",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "du3FMk0LugtSgSiq",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.du3FMk0LugtSgSiq",
+      "name": "Basic Targeting Module",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "id": "f696c44a-2e58-4bb1-bf1f-c911139f46a2",
+          "name": "Basic Targeting Module",
+          "partId": "basic-targeting",
+          "category": "Ranged Targeting",
+          "cost": 40,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "97ae9247-c206-4965-900f-8fb03ec726a4",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard civilian uplink."
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "VOQ8tbPQsA92G4Ta",
+      "_key": "!actors.items!RPZRUlAkoPVMJhEV.VOQ8tbPQsA92G4Ta",
+      "name": "Standard Power Pack",
+      "type": "weaponPart",
+      "img": "icons/svg/clockwork.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "id": "5feabaf2-da27-4a16-9766-35227a951539",
+          "name": "Standard Power Pack",
+          "partId": "standard-pwr-pack",
+          "category": "Power Unit",
+          "cost": 105,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "97ae9247-c206-4965-900f-8fb03ec726a4",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        "source": "weaponModifications",
+        "family": "weapon"
+      },
+      "effects": [],
+      "flags": {}
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "templates",
+      "key": "pilot",
+      "template": {
+        "key": "pilot",
+        "category": "Character Archetypes",
+        "description": "A skilled individual adept at operating various spacecraft.",
+        "migrated": true,
+        "notices": []
+      }
+    }
+  }
+}

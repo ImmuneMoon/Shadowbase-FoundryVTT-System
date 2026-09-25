@@ -1,0 +1,42 @@
+{
+  "_id": "5nAnEYbWg5r0td4u",
+  "_key": "!items!5nAnEYbWg5r0td4u",
+  "name": "Blueprint: Outcast's Bowcaster",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "kwAEXZ4PgPp7KZ6S",
+  "sort": 12600000,
+  "system": {
+    "row": {
+      "id": "487c5203-9ace-4c17-a422-2a3116e26f64",
+      "name": "Blueprint: Outcast's Bowcaster",
+      "cost": 1056,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Outcast's Bowcaster (Generation 0, proven, encoded, catalog design). Required to build Outcast's Bowcaster; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Outcast's Bowcaster",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 8816,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Bowcasters|Outcast's Bowcaster"
+    }
+  }
+}

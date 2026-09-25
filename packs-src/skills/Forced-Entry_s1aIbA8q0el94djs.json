@@ -1,0 +1,34 @@
+{
+  "_id": "s1aIbA8q0el94djs",
+  "_key": "!items!s1aIbA8q0el94djs",
+  "name": "Forced Entry",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "l1z4BAKrTKyClCsJ",
+  "sort": 5600000,
+  "system": {
+    "row": {
+      "name": "Forced Entry",
+      "level": "",
+      "points": null,
+      "relativeLevel": "DX/Easy",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Forced Entry"
+    }
+  }
+}

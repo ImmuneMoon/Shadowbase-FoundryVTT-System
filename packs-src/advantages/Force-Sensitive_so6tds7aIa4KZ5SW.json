@@ -1,0 +1,33 @@
+{
+  "_id": "so6tds7aIa4KZ5SW",
+  "_key": "!items!so6tds7aIa4KZ5SW",
+  "name": "Force Sensitive",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "ZDeYWzANbrPJf7Qw",
+  "sort": 6800000,
+  "system": {
+    "row": {
+      "name": "Force Sensitive",
+      "points": 5,
+      "description": "You can feel the Force. Purchasing this advantage is the prerequisite for learning all Apprentice-tier Force Powers. You must purchase this advantage before buying anything else related to the Force (Force Powers, Force Training, Force Talents, Force skills, and other Force Advantages). You can only take this advantage at character creation – your character is either Force Sensitive or not. Taking this advantage does not necessarily mean your character is aware of their abilities. This advantage also grants access to more exotic advantages normally only available in racial templates; these are subject to the \"-Force\" limitation, costing 10% less than normal. This is the foundational ability to tap into the galaxy's ultimate power, which can be bent to any will.",
+      "category": "Force",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Force Sensitive"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "wL7JGxFnKsR9TNu4",
+  "_key": "!items!wL7JGxFnKsR9TNu4",
+  "name": "Mullinine",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "BfpmoyLxdxsbBggo",
+  "sort": 9000000,
+  "system": {
+    "row": {
+      "name": "Mullinine",
+      "rarity": "Uncommon",
+      "cost": 250,
+      "density": 495,
+      "category": "Raw Materials",
+      "subCategory": "Metal",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A highly durable metallic substance often used to craft and augment melee weapons because of its ability to retain an exceptionally sharp and lasting edge.",
+      "id": "98d22cb5-4724-48a9-82c9-e620e621327e",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Mullinine"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "UtDeHYftLpSx2d6S",
+  "_key": "!items!UtDeHYftLpSx2d6S",
+  "name": "Heavy Foot Shell (Plasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 7200000,
+  "system": {
+    "row": {
+      "id": "b0b4ab04-72b3-4de7-8949-3eff737c039b",
+      "name": "Heavy Foot Shell (Plasteel)",
+      "category": "Armor Shell",
+      "cost": 336,
+      "weight": 4.2,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-heavy-feet-plasteel",
+      "materialId": "plasteel",
+      "notes": "Rigid, durable fusion of plastoid and steel.",
+      "validSlots": [],
+      "drBonus": 7,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-heavy-feet-plasteel"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "OfQW2nioizOWsUJ0",
+  "_key": "!items!OfQW2nioizOWsUJ0",
+  "name": "Motion Sensor",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 9000000,
+  "system": {
+    "row": {
+      "id": "b267fdf9-fbf5-4ce4-bea8-e9fa8f47aef1",
+      "name": "Motion Sensor",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 952,
+      "weight": 1,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "motion-spec",
+      "description": "Vibration Sense (Ground) [10]"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "motion-spec"
+    }
+  }
+}

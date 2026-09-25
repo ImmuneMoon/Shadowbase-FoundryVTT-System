@@ -1,0 +1,41 @@
+{
+  "_id": "CH8GCIqX4DWwWItX",
+  "_key": "!items!CH8GCIqX4DWwWItX",
+  "name": "Nerve Enhancement Package",
+  "type": "implant",
+  "img": "icons/svg/regen.svg",
+  "folder": "Xt5bv6RNBDGNU8uh",
+  "sort": 1100000,
+  "system": {
+    "row": {
+      "id": "e1eec7fe-5fda-463e-8c5c-d0c1246975dc",
+      "name": "Nerve Enhancement Package",
+      "cost": 1530,
+      "finalCp": 4,
+      "effect": "Grants +2 Will strictly for resisting Force Mind Tricks and Intimidation.",
+      "category": "Neural",
+      "pathways": [
+        "Will"
+      ],
+      "slotType": "Neural",
+      "installed": false,
+      "weight": 0.1,
+      "notes": "Trait Package: 4 CP of Advantages; Mandatory Flaws offset. Occupies Will pathway. Materials: Silicon: 0.1 lbs (5 cr)."
+    },
+    "source": "implants",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "implants"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "implants",
+      "key": "Neural|Nerve Enhancement Package"
+    }
+  }
+}

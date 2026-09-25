@@ -1,0 +1,65 @@
+{
+  "_id": "sBKkF2YVoILfncUb",
+  "_key": "!items!sBKkF2YVoILfncUb",
+  "name": "Standard Power Pack",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "ZFpraypQo4dx6fo9",
+  "sort": 100000,
+  "system": {
+    "row": {
+      "name": "Standard Power Pack",
+      "craftingCategory": "Ammunition",
+      "type": "Power Packs",
+      "maxCharges": 50,
+      "cost": 105,
+      "weight": 0.5,
+      "baseCost": 90,
+      "baseWeight": 0.4,
+      "formula": "0",
+      "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.3
+        },
+        {
+          "name": "Silicon",
+          "amount": 0.05
+        },
+        {
+          "name": "Diatium",
+          "amount": 0.05
+        },
+        {
+          "name": "Tibanna Gas",
+          "amount": 0.1
+        }
+      ],
+      "id": "88946d0b-13dd-4cf7-a5f5-a009ae263411",
+      "quantity": 1,
+      "currentCharges": 50,
+      "contents": [],
+      "isLibraryItem": true,
+      "containerType": "None",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Standard Power Pack"
+    }
+  }
+}

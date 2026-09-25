@@ -1,0 +1,39 @@
+{
+  "_id": "tR71lLu8NZWsKdBs",
+  "_key": "!items!tR71lLu8NZWsKdBs",
+  "name": "Micro Jets",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 9700000,
+  "system": {
+    "row": {
+      "id": "f2065611-2e41-4764-867c-ecd1a2599303",
+      "name": "Micro Jets",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 1800,
+      "weight": 5,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "micro-jets",
+      "description": "Flight (10 Move, Max 3m)"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "micro-jets"
+    }
+  }
+}

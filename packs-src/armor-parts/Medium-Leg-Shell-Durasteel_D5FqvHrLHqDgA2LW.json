@@ -1,0 +1,42 @@
+{
+  "_id": "D5FqvHrLHqDgA2LW",
+  "_key": "!items!D5FqvHrLHqDgA2LW",
+  "name": "Medium Leg Shell (Durasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 3700000,
+  "system": {
+    "row": {
+      "id": "71e11b9a-fd26-476e-97af-4d8cc2bd5915",
+      "name": "Medium Leg Shell (Durasteel)",
+      "category": "Armor Shell",
+      "cost": 400,
+      "weight": 7.99,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-medium-legs-durasteel",
+      "materialId": "durasteel",
+      "notes": "Standard building alloy. Baseline stats.",
+      "validSlots": [],
+      "drBonus": 6,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-medium-legs-durasteel"
+    }
+  }
+}

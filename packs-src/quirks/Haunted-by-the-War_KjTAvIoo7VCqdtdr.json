@@ -1,0 +1,32 @@
+{
+  "_id": "KjTAvIoo7VCqdtdr",
+  "_key": "!items!KjTAvIoo7VCqdtdr",
+  "name": "Haunted by the War",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "J2wGZ0rpXlZB2j6l",
+  "sort": 2000000,
+  "system": {
+    "row": {
+      "name": "Haunted by the War",
+      "points": -1,
+      "description": "The horrors of the Mandalorian Wars have left a mark. You might occasionally fall silent, lost in a memory, or have a low tolerance for loud, sudden noises that remind you of blaster fire.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Haunted by the War"
+    }
+  }
+}

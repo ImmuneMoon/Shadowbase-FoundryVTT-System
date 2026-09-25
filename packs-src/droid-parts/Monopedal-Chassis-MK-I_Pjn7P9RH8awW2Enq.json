@@ -1,0 +1,39 @@
+{
+  "_id": "Pjn7P9RH8awW2Enq",
+  "_key": "!items!Pjn7P9RH8awW2Enq",
+  "name": "Monopedal Chassis (MK I)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "bppESUx5QjA1oXLP",
+  "sort": 1000000,
+  "system": {
+    "row": {
+      "id": "1eef96f4-5df4-4ff4-81ea-c8e0c09c7b9a",
+      "name": "Monopedal Chassis (MK I)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Chassis",
+      "cost": 7500,
+      "weight": 50,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "monopedal-mk1",
+      "description": "Base ST 10, HP 10, DR 5; Torso 0.65 m"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "monopedal-mk1"
+    }
+  }
+}

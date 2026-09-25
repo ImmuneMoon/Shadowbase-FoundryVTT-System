@@ -1,0 +1,34 @@
+{
+  "_id": "1SVLeFLvfSM8R41C",
+  "_key": "!items!1SVLeFLvfSM8R41C",
+  "name": "Less Sleep",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "GS8kUCPWatq78XxI",
+  "sort": 10600000,
+  "system": {
+    "row": {
+      "name": "Less Sleep",
+      "points": 2,
+      "description": "One hour less sleep per day.",
+      "category": "Physical",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Less Sleep"
+    }
+  }
+}

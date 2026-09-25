@@ -1,0 +1,79 @@
+{{!-- templates/items/header.hbs - the common card header of every item sheet (customized-blaster-item.tsx:430-480,
+     customized-melee-weapon-item.tsx:1020-1080, armor-item-card.tsx:585-680, equipment-section.tsx EquipmentItemCard):
+     name or custom name, the type and base, quantity, weight and cost (the derived figure over the stored one),
+     readied / equipped / active, the storage box, the condition badge, the item-file transfer. Context: header (base.mjs
+     _headerContext) over the sheet's root context. --}}
+<header class="sb-item__header" data-application-part="header">
+  <div class="sb-item__identity">
+    <img class="sb-item__img" src="{{item.img}}" alt="">
+    <div class="sb-item__name">
+      {{#if header.nameIsSelect}}
+        <select class="sb-select sb-item__name-input" name="{{header.nameField}}" {{disabled (not editable)}} aria-label="{{header.namePlaceholder}}">
+          {{#each main.options}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+        </select>
+      {{else}}
+        <input type="text" class="sb-input sb-item__name-input" name="{{header.nameField}}" value="{{header.nameValue}}" placeholder="{{header.namePlaceholder}}" {{disabled (not editable)}} aria-label="{{header.namePlaceholder}}">
+      {{/if}}
+      <div class="sb-item__meta">
+        <span class="sb-badge sb-badge-secondary"><i class="{{typeIcon}}"></i> {{typeLabel}}</span>
+        {{#if header.baseType}}<span class="sb-text-muted sb-text-xs">{{header.baseType}}</span>{{/if}}
+        {{#if header.ownerName}}<button type="button" class="sb-btn sb-btn-link sb-btn-xs" data-action="open-owner" title="{{localize "SHADOWBASE.Item.Header.OpenOwner"}}"><i class="{{sbIcon 'actor'}}"></i> {{header.ownerName}}</button>{{else}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Item.Header.Unowned"}}</span>{{/if}}
+        {{#if header.host}}<span class="sb-badge sb-badge-outline sb-badge-accent"><i class="fa-solid fa-link"></i> {{localize "SHADOWBASE.Item.Header.InstalledIn" name=header.host.name}}</span>{{/if}}
+      </div>
+    </div>
+  </div>
+  <div class="sb-item__figures">
+    {{#if header.hasQty}}
+    <label class="sb-item__figure" title="{{localize "SHADOWBASE.Item.Header.Quantity"}}">
+      <span class="sb-item__figure-label">{{localize "SHADOWBASE.Item.Header.Qty"}}</span>
+      <input type="number" class="sb-input sb-input--tiny" name="system.row.quantity" value="{{header.quantity}}" data-dtype="Number" min="0" step="1" {{disabled (not editable)}}>
+    </label>
+    {{/if}}
+    <label class="sb-item__figure" title="{{#if header.weight.derived}}{{localize "SHADOWBASE.Item.Header.WeightDerived"}}{{else}}{{localize "SHADOWBASE.Item.Header.WeightStored"}}{{/if}}">
+      <span class="sb-item__figure-label">{{localize "SHADOWBASE.Item.Header.Weight"}}</span>
+      {{#if header.weight.editable}}
+        <input type="number" class="sb-input sb-input--sm" name="system.row.weight" value="{{header.weight.stored}}" data-dtype="Number" step="0.01" min="0" {{disabled (not editable)}}>
+      {{else}}
+        <span class="sb-input sb-input--calc sb-input--sm">{{header.weight.value}}</span>
+      {{/if}}
+      <span class="sb-text-muted sb-text-xs">lb</span>
+    </label>
+    <label class="sb-item__figure" title="{{#if header.cost.derived}}{{localize "SHADOWBASE.Item.Header.CostDerived"}}{{else}}{{localize "SHADOWBASE.Item.Header.CostStored"}}{{/if}}">
+      <span class="sb-item__figure-label">{{localize "SHADOWBASE.Item.Header.Cost"}}</span>
+      {{#if header.cost.editable}}
+        <input type="number" class="sb-input sb-input--sm" name="system.row.cost" value="{{header.cost.stored}}" data-dtype="Number" min="0" {{disabled (not editable)}}>
+      {{else}}
+        <span class="sb-input sb-input--calc sb-input--sm">{{header.cost.value}}</span>
+      {{/if}}
+      <span class="sb-text-muted sb-text-xs">cr</span>
+    </label>
+    <span class="sb-badge {{#if header.condition.fine}}sb-badge-outline{{else}}sb-badge-destructive{{/if}}" title="{{localize "SHADOWBASE.Item.Header.Condition"}}">{{header.condition.text}}</span>
+    {{#if header.isUnready}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Status.Unready"}}</span>{{/if}}
+    {{#if header.flawed}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Sheet.Weapon.Flawed"}}</span>{{/if}}
+    {{#if header.unbuilt}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Sheet.Weapon.Unbuilt"}}</span>{{/if}}
+    {{#if header.showInstalled}}<span class="sb-badge {{#if header.installed}}sb-badge-accent{{else}}sb-badge-outline{{/if}}">{{#if header.installed}}{{localize "SHADOWBASE.Sheet.Inventory.Installed"}}{{else}}{{localize "SHADOWBASE.Sheet.Inventory.Loose"}}{{/if}}</span>{{/if}}
+  </div>
+  <div class="sb-item__controls">
+    {{#if header.storage.show}}
+    <label class="sb-item__figure" title="{{localize "SHADOWBASE.Sheet.Inventory.SendToStorage"}}">
+      <i class="{{sbIcon 'storage'}}"></i>
+      <select class="sb-select sb-select--sm" name="sel.storageLocationId" {{disabled (not editable)}}>
+        {{#each header.storage.options}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+      </select>
+    </label>
+    {{/if}}
+    {{#if header.showEquipped}}
+    <button type="button" class="sb-btn sb-btn-sm {{#if header.equipped}}sb-btn-default{{else}}sb-btn-outline{{/if}}" data-action="toggle-equipped" {{disabled (not editable)}}><i class="fa-solid fa-hand"></i> {{header.equippedLabel}}</button>
+    {{/if}}
+    {{#if header.showActive}}
+    <button type="button" class="sb-btn sb-btn-sm {{#if header.isActive}}sb-btn-default{{else}}sb-btn-outline{{/if}}" data-action="toggle-active" {{disabled (not editable)}}><i class="fa-solid fa-shield"></i> {{#if header.isActive}}{{localize "SHADOWBASE.Sheet.Inventory.ShieldActive"}}{{else}}{{localize "SHADOWBASE.Sheet.Inventory.ShieldInactive"}}{{/if}}</button>
+    {{/if}}
+    {{#if header.transfer}}
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="transfer-item" title="{{localize "SHADOWBASE.Item.Header.TransferHint" kind=header.transfer.label}}" {{disabled (not owned)}}><i class="{{sbIcon 'export'}}"></i> {{localize "SHADOWBASE.Item.Header.Transfer"}}</button>
+    {{/if}}
+    {{#if canToggleLibrary}}
+    <button type="button" class="sb-btn sb-btn-sm {{#if libraryAccess}}sb-btn-accent{{else}}sb-btn-outline{{/if}}" data-action="toggle-library-access" title="{{localize "SHADOWBASE.Item.Library.Hint"}}"><i class="{{sbIcon 'library'}}"></i> {{localize "SHADOWBASE.Item.Library.Toggle"}}</button>
+    {{/if}}
+  </div>
+  {{#if derivedError}}<p class="sb-notice sb-notice--error">{{derivedError}}</p>{{/if}}
+</header>

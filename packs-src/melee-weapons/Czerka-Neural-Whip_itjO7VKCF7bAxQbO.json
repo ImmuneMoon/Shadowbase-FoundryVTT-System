@@ -1,0 +1,145 @@
+{
+  "_id": "itjO7VKCF7bAxQbO",
+  "_key": "!items!itjO7VKCF7bAxQbO",
+  "name": "Czerka Neural Whip",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "e7afobHVa7xSzTqO",
+  "sort": 600000,
+  "system": {
+    "row": {
+      "id": "f31bf58d-9310-4551-9212-af4bbc44374b",
+      "customName": "Czerka Neural Whip",
+      "baseType": "Czerka Neural Whip",
+      "baseSkill": "Whips",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": 50,
+      "maxCharges": 50,
+      "condition": "Fine",
+      "baseReach": "1-3",
+      "baseWeight": 5.62,
+      "finalWeight": 5.62,
+      "baseCost": 604,
+      "finalCost": 3624,
+      "gripParts": [
+        {
+          "inventoryId": "6afbd3d6-4e71-418a-963a-56073b430271",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "utilityParts": [
+        {
+          "inventoryId": "908bb25b-2c6a-4f5b-8cd8-bf14edbbbeea",
+          "materialId": null,
+          "quantity": 1
+        },
+        {
+          "inventoryId": "48ba1b1a-0774-434d-89ed-6f77cc165887",
+          "materialId": null,
+          "quantity": 1
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "f31bf58d-9310-4551-9212-af4bbc44374b",
+        "customName": "Czerka Neural Whip",
+        "baseType": "Czerka Neural Whip",
+        "baseSkill": "Whips",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "condition": "Fine",
+        "baseReach": "1-3",
+        "baseWeight": 5.62,
+        "finalWeight": 5.62,
+        "baseCost": 604,
+        "finalCost": 3624,
+        "gripParts": [
+          {
+            "inventoryId": "6afbd3d6-4e71-418a-963a-56073b430271",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "utilityParts": [
+          {
+            "inventoryId": "908bb25b-2c6a-4f5b-8cd8-bf14edbbbeea",
+            "materialId": null,
+            "quantity": 1
+          },
+          {
+            "inventoryId": "48ba1b1a-0774-434d-89ed-6f77cc165887",
+            "materialId": null,
+            "quantity": 1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "6afbd3d6-4e71-418a-963a-56073b430271",
+          "name": "Flexible Chain",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 196,
+          "weight": 3.92,
+          "isInstalled": true,
+          "installedInMeleeId": "f31bf58d-9310-4551-9212-af4bbc44374b",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Flail/Kusari/Whip. Ignores parries. Unready after attack. Roll attack at -2 for declared weapon entangle.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "908bb25b-2c6a-4f5b-8cd8-bf14edbbbeea",
+          "name": "Shock Emitter",
+          "category": "Melee Power Unit",
+          "cost": 198,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInMeleeId": "f31bf58d-9310-4551-9212-af4bbc44374b",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Adds +1d-2 (min 1) shock follow-up. Target rolls HT or is Stunned.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "48ba1b1a-0774-434d-89ed-6f77cc165887",
+          "name": "Power Cell",
+          "category": "Melee Power Unit",
+          "cost": 210,
+          "weight": 0.7,
+          "isInstalled": true,
+          "installedInMeleeId": "f31bf58d-9310-4551-9212-af4bbc44374b",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Provides baseline power for attached emitters/generators.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Czerka Neural Whip"
+    }
+  }
+}

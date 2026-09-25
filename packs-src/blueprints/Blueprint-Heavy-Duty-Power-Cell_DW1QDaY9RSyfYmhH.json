@@ -1,0 +1,42 @@
+{
+  "_id": "DW1QDaY9RSyfYmhH",
+  "_key": "!items!DW1QDaY9RSyfYmhH",
+  "name": "Blueprint: Heavy-Duty Power Cell",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "K45FlY41iVH89Btt",
+  "sort": 26500000,
+  "system": {
+    "row": {
+      "id": "a2033b77-df47-4f4c-a610-18d068ca3af4",
+      "name": "Blueprint: Heavy-Duty Power Cell",
+      "cost": 347,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Heavy-Duty Power Cell (Generation 0, proven, encoded, catalog design). Required to build Heavy-Duty Power Cell; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Heavy-Duty Power Cell",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1725,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Power|Heavy-Duty Power Cell"
+    }
+  }
+}

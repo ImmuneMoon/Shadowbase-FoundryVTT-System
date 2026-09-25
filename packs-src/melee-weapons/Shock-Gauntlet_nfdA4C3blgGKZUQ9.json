@@ -1,0 +1,173 @@
+{
+  "_id": "nfdA4C3blgGKZUQ9",
+  "_key": "!items!nfdA4C3blgGKZUQ9",
+  "name": "Shock Gauntlet",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "oEcrAqJxhKbjpfxK",
+  "sort": 2600000,
+  "system": {
+    "row": {
+      "id": "76e0ec85-5f9b-4603-bda2-ceabfcbc69c5",
+      "customName": "Shock Gauntlet",
+      "baseType": "Shock Gauntlet",
+      "baseSkill": "Melee Weapon (Shock Gauntlet)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": 50,
+      "maxCharges": 50,
+      "condition": "Fine",
+      "baseReach": "C",
+      "baseWeight": 3.66,
+      "finalWeight": 3.66,
+      "baseCost": 508,
+      "finalCost": 3048,
+      "gripParts": [
+        {
+          "inventoryId": "1b775f85-8ab8-43be-b222-e0c69325989e",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "40c7c56e-7b7b-43d6-98a5-96da88f69d84",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "utilityParts": [
+        {
+          "inventoryId": "f6406e8b-175d-4505-92ea-a7e8330efc7e",
+          "materialId": null,
+          "quantity": 1
+        },
+        {
+          "inventoryId": "9aeb7f9c-544a-469b-a4c3-3a7b651bb2ce",
+          "materialId": null,
+          "quantity": 1
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "76e0ec85-5f9b-4603-bda2-ceabfcbc69c5",
+        "customName": "Shock Gauntlet",
+        "baseType": "Shock Gauntlet",
+        "baseSkill": "Melee Weapon (Shock Gauntlet)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "condition": "Fine",
+        "baseReach": "C",
+        "baseWeight": 3.66,
+        "finalWeight": 3.66,
+        "baseCost": 508,
+        "finalCost": 3048,
+        "gripParts": [
+          {
+            "inventoryId": "1b775f85-8ab8-43be-b222-e0c69325989e",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "40c7c56e-7b7b-43d6-98a5-96da88f69d84",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "utilityParts": [
+          {
+            "inventoryId": "f6406e8b-175d-4505-92ea-a7e8330efc7e",
+            "materialId": null,
+            "quantity": 1
+          },
+          {
+            "inventoryId": "9aeb7f9c-544a-469b-a4c3-3a7b651bb2ce",
+            "materialId": null,
+            "quantity": 1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "1b775f85-8ab8-43be-b222-e0c69325989e",
+          "name": "Gauntlet",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInMeleeId": "76e0ec85-5f9b-4603-bda2-ceabfcbc69c5",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Brawling/Karate. Leaves hand free. Parries as unarmed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "40c7c56e-7b7b-43d6-98a5-96da88f69d84",
+          "name": "Weighted End",
+          "category": "Melee Head",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInMeleeId": "76e0ec85-5f9b-4603-bda2-ceabfcbc69c5",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Balanced.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "f6406e8b-175d-4505-92ea-a7e8330efc7e",
+          "name": "Shock Emitter",
+          "category": "Melee Power Unit",
+          "cost": 198,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInMeleeId": "76e0ec85-5f9b-4603-bda2-ceabfcbc69c5",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Adds +1d-2 (min 1) shock follow-up. Target rolls HT or is Stunned.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "9aeb7f9c-544a-469b-a4c3-3a7b651bb2ce",
+          "name": "Power Cell",
+          "category": "Melee Power Unit",
+          "cost": 210,
+          "weight": 0.7,
+          "isInstalled": true,
+          "installedInMeleeId": "76e0ec85-5f9b-4603-bda2-ceabfcbc69c5",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Provides baseline power for attached emitters/generators.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Shock Gauntlet"
+    }
+  }
+}

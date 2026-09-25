@@ -1,0 +1,42 @@
+{
+  "_id": "NsAYFy1QQykOzVBM",
+  "_key": "!items!NsAYFy1QQykOzVBM",
+  "name": "Blueprint: Flamer Fuel Tank (Large)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DvRG95q4QWZQnNFm",
+  "sort": 500000,
+  "system": {
+    "row": {
+      "id": "8f71c6d8-ae60-4423-8268-8d587bf40e0a",
+      "name": "Blueprint: Flamer Fuel Tank (Large)",
+      "cost": 226,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Flamer Fuel Tank (Large) (Generation 0, proven, encoded, catalog design). Required to build Flamer Fuel Tank (Large); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Flamer Fuel Tank (Large)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 519.4444444444445,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Ammunition|Flamer Fuel Tank (Large)"
+    }
+  }
+}

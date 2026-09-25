@@ -1,0 +1,42 @@
+{
+  "_id": "CKeVpqyyfJLcu4rG",
+  "_key": "!items!CKeVpqyyfJLcu4rG",
+  "name": "Blueprint: Commlink (Handheld)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "muygUURylK1A9j1R",
+  "sort": 19600000,
+  "system": {
+    "row": {
+      "id": "be20e8e0-9f57-410c-8f43-425c32eb556c",
+      "name": "Blueprint: Commlink (Handheld)",
+      "cost": 291,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Commlink (Handheld) (Generation 0, proven, encoded, catalog design). Required to build Commlink (Handheld); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Commlink (Handheld)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1165,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Communication & Data|Commlink (Handheld)"
+    }
+  }
+}

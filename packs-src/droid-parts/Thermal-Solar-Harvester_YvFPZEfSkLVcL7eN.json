@@ -1,0 +1,39 @@
+{
+  "_id": "YvFPZEfSkLVcL7eN",
+  "_key": "!items!YvFPZEfSkLVcL7eN",
+  "name": "Thermal/Solar Harvester",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 8700000,
+  "system": {
+    "row": {
+      "id": "3cc59f21-3a3e-4292-9662-420ddaf9df2a",
+      "name": "Thermal/Solar Harvester",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 1000,
+      "weight": 5,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "pp-solar",
+      "description": "Recharge 5 PP/hr in sun"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "pp-solar"
+    }
+  }
+}

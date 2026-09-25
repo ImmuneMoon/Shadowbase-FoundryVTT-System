@@ -1,0 +1,45 @@
+{
+  "_id": "KltuINV95DCaiAfO",
+  "_key": "!items!KltuINV95DCaiAfO",
+  "name": "Med-Tek \"Step-Sure\"",
+  "type": "cyberneticLimb",
+  "img": "icons/svg/bones.svg",
+  "folder": "XY3P8r89fv7qHBeH",
+  "sort": 1200000,
+  "system": {
+    "row": {
+      "id": "4b5bb135-3a7d-46a0-932a-4e7e44e28759",
+      "name": "Med-Tek \"Step-Sure\"",
+      "location": "Right Foot",
+      "extent": "Partial",
+      "material": "Plasteel",
+      "cost": 950,
+      "weight": 2.43,
+      "dr": 3,
+      "currentDr": 3,
+      "effect": "Reliable stability.",
+      "upgrades": [],
+      "hasSynthskin": false,
+      "installed": false,
+      "storageLocationId": null,
+      "quantity": 1,
+      "baselinePoints": 0,
+      "itemSizeModifier": 0
+    },
+    "source": "cybernetics",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-limbs"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-limbs",
+      "key": "Foot|Med-Tek \"Step-Sure\""
+    }
+  }
+}

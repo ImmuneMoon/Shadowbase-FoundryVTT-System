@@ -1,0 +1,127 @@
+{
+  "_id": "BfYaW2RFh13jUtzi",
+  "_key": "!journal!BfYaW2RFh13jUtzi",
+  "name": "Chapter 6: Quirks",
+  "pages": [
+    {
+      "_id": "xaFl3zZMhVz8f3Nj",
+      "_key": "!journal.pages!BfYaW2RFh13jUtzi.xaFl3zZMhVz8f3Nj",
+      "name": "Overview",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Quirks are minor personality traits that add flavor to your character but are not significant enough to be considered a full-fledged advantage or disadvantage. They represent habits, minor beliefs, and personal mannerisms that help define a character beyond their stats. Each quirk is worth -1 character point, and you may take up to five.</p>\n<p>Quirks should be roleplayed consistently. While they provide a small point break, their real value lies in making your character more memorable and unique.</p>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch06-quirks",
+            "heading": null,
+            "overview": true,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "GJj4dhO0el0ZICX9",
+      "_key": "!journal.pages!BfYaW2RFh13jUtzi.GJj4dhO0el0ZICX9",
+      "name": "Standard Quirks",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The following quirks are adapted from the GURPS Lite handbook and are suitable for any character in the Shadows of the Mandalorian War setting.</p>\n<ul><li><strong>Always wears a specific item of clothing:</strong> You have a signature piece of apparel—a battered helmet, a lucky charm on a necklace, a specific style of worn leather gloves—that you are never seen without.</li><li><strong>Atheist/Skeptic:</strong> In a galaxy where the Force is a tangible reality, you are deeply skeptical of its power, dismissing it as superstition, Jedi mind tricks, or misunderstood technology.</li><li><strong>Broad-minded:</strong> You are exceptionally open to new ideas, cultures, and alien customs, rarely passing judgment.</li><li><strong>Careful:</strong> You are meticulous and cautious, often double-checking your gear, plans, and surroundings. This is not cowardice, but a deep-seated need for preparedness. (GURPS Lite, p. 12)</li><li><strong>Chauvinistic:</strong> You believe your species, homeworld, or culture is inherently superior to all others.</li><li><strong>Congenial:</strong> You are naturally friendly and eager to please.</li><li><strong>Curious:</strong> You have a strong desire to know things, sometimes to your detriment. You might poke your nose into places it doesn’t belong or ask too many questions.</li><li><strong>Dislikes a specific group:</strong> You have an irrational aversion to a particular group, such as droids, a specific alien species (e.g., “I can’t stand the chittering of Verpine”), or a corporate entity.</li><li><strong>Distractible:</strong> Your attention wanders easily. A passing datapad screen or an interesting conversation can pull you away from the task at hand.</li><li><strong>Dreamer:</strong> Your head is often in the clouds, contemplating philosophies, grand plans, or far-off places, sometimes at the expense of paying attention to the here-and-now.</li><li><strong>Dull:</strong> You have very little imagination and a strictly literal, pragmatic view of the world.</li><li><strong>Egotistical:</strong> You talk about yourself and your accomplishments frequently, often exaggerating your role in successful endeavors.</li><li><strong>Follows a strict personal code:</strong> You have a set of self-imposed rules you will not break (e.g., “Never deal with Hutts,” “Always pay my debts,” “Never leave a squadmate behind”).</li><li><strong>Humble:</strong> You consistently downplay your own achievements and importance.</li><li><strong>Imaginative:</strong> You have a vivid imagination, which can be a source of brilliant ideas or baseless paranoia.</li><li><strong>Incurious:</strong> You are content with what you know and rarely seek out new information or experiences.</li><li><strong>Likes a specific group:</strong> You have a notable fondness for a particular group, such as Wookiees, droids, or a specific alien culture.</li><li><strong>Nosy:</strong> You are actively interested in other people’s business and may eavesdrop or snoop.</li><li><strong>Oversensitive:</strong> You are easily insulted or emotionally wounded by perceived slights.</li><li><strong>Proud:</strong> You have a strong sense of self-worth and dignity and will react poorly to insults or challenges to your honor. This differs from Egotistical in that it’s about dignity, not just boasting.</li><li><strong>Responsive:</strong> You are a “go-getter” who is always the first to volunteer or act on a new idea.</li><li><strong>Shy:</strong> You are uncomfortable in social situations, especially with strangers, and tend to speak only when spoken to. (GURPS Lite, p. 12)</li><li><strong>Squeamish:</strong> You are easily unnerved by the sight of blood, gore, or serious injury. (GURPS Lite, p. 12)</li><li><strong>Staid:</strong> You are serious, sober, and not given to flights of fancy or strong emotional displays.</li><li><strong>Struggles with a particular technology:</strong> You are inept with a common piece of tech. For example, you might be unable to operate astromech droids properly, always jam blaster power packs, or find interacting with holographic interfaces frustrating.</li><li><strong>Talkative:</strong> You talk constantly, filling silences with chatter, stories, or observations, sometimes revealing more than you should.</li><li><strong>Uncongenial:</strong> You are grumpy, reserved, and generally difficult to get along with.</li><li><strong>Vow:</strong> You have a minor vow, such as never drinking alcohol, never refusing a request for aid from a child, or always carrying a lost comrade’s dog tags.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch06-quirks",
+            "heading": "Standard Quirks",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "jmqOB4gpiQbqwknc",
+      "_key": "!journal.pages!BfYaW2RFh13jUtzi.jmqOB4gpiQbqwknc",
+      "name": "Star Wars Themed Quirks",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>These quirks are specifically designed to reflect the setting of the Mandalorian Wars and the influence of the Force.</p>\n<ul><li><strong>Adherent to a Mandalorian Tradition:</strong> You follow a minor, specific Mandalorian custom, even if you are not Mandalorian. This could be tapping your chest before combat, refusing to sit with your back to a door, or reciting a particular proverb in stressful situations.</li><li><strong>Czerka Loyalist (Minor):</strong> You believe that Czerka Corporation, despite its reputation, is a force for order and progress in the galaxy. You tend to defend their actions and trust their representatives.</li><li><strong>Dark Side Tainted:</strong> You feel a subtle pull from the Dark Side. When confronted with a choice, you feel a fleeting temptation to take the faster, more aggressive path. This does not mean you are evil, but you must actively resist these impulses. GM Note: This may require occasional self-control rolls in moments of extreme anger or fear.</li><li><strong>Droidspeak:</strong> Now a language, not a quirk -- see Language (Droidspeak), @UUID[Compendium.shadowbase.handbook.JournalEntry.aHFgSZUXNODEwQd2]{Chapter 3}.</li><li><strong>Force-Insensitive Commentary:</strong> You frequently make light of the Force, referring to Jedi abilities as “hokey religions” or “fancy laser sword tricks,” not out of malice, but out of a genuine lack of understanding.</li><li><strong>Haunted by the War:</strong> The horrors of the Mandalorian Wars have left a mark. You might occasionally fall silent, lost in a memory, or have a low tolerance for loud, sudden noises that remind you of blaster fire.</li><li><strong>Jedi Sympathizer:</strong> You hold the Jedi Order in high regard, perhaps idealizing the tales of their wisdom and prowess. You are more likely to trust and help individuals you believe to be Jedi.</li><li><strong>Light Side Affinity:</strong> You have a natural inclination toward compassion and serenity. You feel a pang of guilt when you act selfishly and find it easier to show mercy than to seek revenge. GM Note: This quirk might offer a small, situational bonus (+1) to resist fear or intimidation when protecting others.</li><li><strong>Old Republic Patriot:</strong> You are a staunch believer in the ideals of the Republic, even as its bureaucracy and military struggles are laid bare by the war. You may salute Republic soldiers or speak fondly of Coruscant.</li><li><strong>Prejudiced Against Droids:</strong> You view droids not just with dislike, but as inferior objects. You might call them “clankers” or “tin cans” and refuse to acknowledge them as anything more than tools.</li><li><strong>Tech Scavenger:</strong> You have a habit of compulsively stripping downed droids, broken equipment, or abandoned consoles for spare parts, convinced they might be useful later. You often have pockets full of random wires, power cells, and processors.</li><li><strong>Wary of Force Users:</strong> Having seen or heard of the power wielded by Jedi and their dark counterparts, you are inherently suspicious of anyone who can use the Force. You keep your distance and watch them closely.</li><li><strong>Static Feedback (Cybernetic Quirk):</strong> Your neural interface occasionally suffers from micro-static when you get startled, causing you to briefly blink or rub your eyes.</li><li><strong>Obsessive Overclocking (Cybernetic Quirk):</strong> You have a habit of compulsively optimizing your cooling and processing speeds whenever you have a quiet moment, sometimes causing minor whirring noises.</li><li><strong>Glitchy HUD (Cybernetic Quirk):</strong> Your sensory optical overlay occasionally shows flickering pixels or obsolete warning signs, which you stubbornly refuse to calibrate.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch06-quirks",
+            "heading": "Star Wars Themed Quirks",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    }
+  ],
+  "categories": [],
+  "folder": null,
+  "sort": 600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "handbook",
+      "key": "ch06-quirks",
+      "handbook": {
+        "chapterId": "ch06-quirks",
+        "generatedAt": "2026-09-19T09:02:30.342Z",
+        "headings": 2,
+        "tables": 0
+      }
+    }
+  }
+}

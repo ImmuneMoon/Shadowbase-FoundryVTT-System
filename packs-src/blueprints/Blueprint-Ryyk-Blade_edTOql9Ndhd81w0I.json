@@ -1,0 +1,42 @@
+{
+  "_id": "edTOql9Ndhd81w0I",
+  "_key": "!items!edTOql9Ndhd81w0I",
+  "name": "Blueprint: Ryyk Blade",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 42800000,
+  "system": {
+    "row": {
+      "id": "6430e912-488d-4acb-a008-a6cfc081232d",
+      "name": "Blueprint: Ryyk Blade",
+      "cost": 202,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Ryyk Blade (Generation 0, proven, encoded, catalog design). Required to build Ryyk Blade; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Ryyk Blade",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 272,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Ryyk Blade"
+    }
+  }
+}

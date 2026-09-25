@@ -1,0 +1,36 @@
+{
+  "_id": "9qEkZw8rn8sMaLfA",
+  "_key": "!items!9qEkZw8rn8sMaLfA",
+  "name": "Improved Maneuvering Jets",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "YTgdmbmaEwnsBSTa",
+  "sort": 400000,
+  "system": {
+    "row": {
+      "id": "95c16b04-2540-4d8c-b13e-b58e8090fde1",
+      "name": "Improved Maneuvering Jets",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Starship Modification",
+      "cost": 0,
+      "weight": 0,
+      "quantity": 1,
+      "description": "Performance modification. +1 Handling. Cost: 15% of the hull cost."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "starship-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "starship-mods",
+      "key": "Improved Maneuvering Jets"
+    }
+  }
+}

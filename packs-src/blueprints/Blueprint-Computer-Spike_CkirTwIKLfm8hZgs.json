@@ -1,0 +1,42 @@
+{
+  "_id": "CkirTwIKLfm8hZgs",
+  "_key": "!items!CkirTwIKLfm8hZgs",
+  "name": "Blueprint: Computer Spike",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "g7UVHPh3r2MYv5Oo",
+  "sort": 47800000,
+  "system": {
+    "row": {
+      "id": "6ec25389-c6cf-4d3d-b105-7caa921d7821",
+      "name": "Blueprint: Computer Spike",
+      "cost": 242,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Computer Spike (Generation 0, proven, encoded, catalog design). Required to build Computer Spike; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Computer Spike",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 675,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Tools & Electronics|Computer Spike"
+    }
+  }
+}

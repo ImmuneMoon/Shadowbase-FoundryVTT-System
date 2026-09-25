@@ -1,0 +1,33 @@
+{
+  "_id": "IojTyQJpXWfSHReD",
+  "_key": "!items!IojTyQJpXWfSHReD",
+  "name": "Spectrum Vision (Cybernetic)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "b0AkEhPa45uoNffk",
+  "sort": 15300000,
+  "system": {
+    "row": {
+      "name": "Spectrum Vision (Cybernetic)",
+      "points": 25,
+      "description": "Advanced multispectral optics (infrared, ultraviolet, X-rays, and electromagnetic radiation).",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Spectrum Vision (Cybernetic)"
+    }
+  }
+}

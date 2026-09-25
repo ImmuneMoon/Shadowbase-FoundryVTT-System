@@ -1,0 +1,37 @@
+{
+  "_id": "43uAwdQmMR6SoSWO",
+  "_key": "!items!43uAwdQmMR6SoSWO",
+  "name": "Milled Receiver",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "jSmzbLsgJWi447va",
+  "sort": 3100000,
+  "system": {
+    "row": {
+      "name": "Milled Receiver",
+      "category": "Magazine/Feed System",
+      "cost": 500,
+      "weight": 0,
+      "notes": "Reduces overall weapon weight by 10%.",
+      "materials": [],
+      "id": "79f69b52-13d0-4477-bd4e-70674fa87e1f",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Milled Receiver"
+    }
+  }
+}

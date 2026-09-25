@@ -1,0 +1,34 @@
+{
+  "_id": "7VUMxRjqmHohVeKf",
+  "_key": "!items!7VUMxRjqmHohVeKf",
+  "name": "Lecherousness",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 11300000,
+  "system": {
+    "row": {
+      "name": "Lecherousness",
+      "points": -15,
+      "level": null,
+      "description": "You have a powerful, often inappropriate, interest in romantic or physical pursuits, which frequently lands you in trouble. You must make a self-control roll to avoid acting on this impulse.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Lecherousness|Mental"
+    }
+  }
+}

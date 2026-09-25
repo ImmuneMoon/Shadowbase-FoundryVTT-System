@@ -1,0 +1,39 @@
+{
+  "_id": "KvqeRP2Okd8eQTVJ",
+  "_key": "!items!KvqeRP2Okd8eQTVJ",
+  "name": "Wedge Chassis (3C, IT, T1, T3-Series)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "bppESUx5QjA1oXLP",
+  "sort": 1100000,
+  "system": {
+    "row": {
+      "id": "652db043-ee3d-48f2-b719-22ab5c989930",
+      "name": "Wedge Chassis (3C, IT, T1, T3-Series)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Chassis",
+      "cost": 4152,
+      "weight": 32.5,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "wedge-series",
+      "description": "Base ST 8, HP 13, DR 2"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "wedge-series"
+    }
+  }
+}

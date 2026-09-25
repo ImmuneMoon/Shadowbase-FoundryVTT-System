@@ -1,0 +1,33 @@
+{
+  "_id": "SP2HykPwAb15EFav",
+  "_key": "!items!SP2HykPwAb15EFav",
+  "name": "Unfazeable",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 17100000,
+  "system": {
+    "row": {
+      "name": "Unfazeable",
+      "points": 15,
+      "description": "You are immune to mundane surprise and are mentally unshakable when faced with horrific sights. This is the mark of a veteran soldier who has seen the worst of war, or a cold-blooded assassin. (This is listed here as a general option, though it is part of the Zabrak racial template).",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Unfazeable"
+    }
+  }
+}

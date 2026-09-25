@@ -1,0 +1,34 @@
+{
+  "_id": "AUzB5ojZRFNTx4et",
+  "_key": "!items!AUzB5ojZRFNTx4et",
+  "name": "Scheduled Maintenance",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "N9OA5FojtdIRbIeU",
+  "sort": 6300000,
+  "system": {
+    "row": {
+      "name": "Scheduled Maintenance",
+      "points": -5,
+      "level": null,
+      "description": "Hardware requires periodic upkeep from someone with a Repair or Mechanic skill to prevent glitches. Range: -2 to -10 points, by how often attention is needed.",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Scheduled Maintenance|Cybernetic"
+    }
+  }
+}

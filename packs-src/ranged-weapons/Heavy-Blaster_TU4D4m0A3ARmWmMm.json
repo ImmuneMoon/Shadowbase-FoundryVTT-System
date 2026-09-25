@@ -1,0 +1,211 @@
+{
+  "_id": "TU4D4m0A3ARmWmMm",
+  "_key": "!items!TU4D4m0A3ARmWmMm",
+  "name": "Heavy Blaster",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "ic06auazNKJrut2o",
+  "sort": 2600000,
+  "system": {
+    "row": {
+      "id": "54e43537-cb77-4313-b170-4ca2647027cc",
+      "customName": "Heavy Blaster",
+      "baseType": "Heavy Blaster",
+      "baseSkill": "Guns (Blaster Pistol)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 5.3,
+      "finalWeight": 5.3,
+      "baseCost": 682,
+      "finalCost": 4092,
+      "currentCharges": 200,
+      "maxCharges": 200,
+      "loadedAmmunitionId": "1d14ea5c-d184-4290-b168-e0d8307329fc",
+      "loadedAmmunitionData": {
+        "id": "1d14ea5c-d184-4290-b168-e0d8307329fc",
+        "name": "Heavy Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 200,
+        "maxCharges": 200,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "A high-capacity pack for military-grade repeaters and cannons. A gas top-up (60 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "heavy-pistol-grip",
+        "inventoryId": "3b92a2cd-5ebb-45f4-a70e-3dc2902b9a87",
+        "materialId": "plasteel"
+      },
+      "receiverPart": {
+        "partId": "heavy-receiver",
+        "inventoryId": "6cfdd8c4-5d26-47ae-8901-ec700c8bb288",
+        "materialId": "plasteel"
+      },
+      "barrelPart": {
+        "partId": "std-emitter",
+        "inventoryId": "8898a308-9d87-4f0e-88de-8a5e8818a951",
+        "materialId": "plasteel"
+      },
+      "targetingPart": {
+        "partId": "advanced-targeting",
+        "inventoryId": "752e5859-fb51-4bf5-b0d0-ce0ec8488158"
+      },
+      "powerUnitPart": {
+        "partId": "heavy-pwr-pack",
+        "inventoryId": "cdfb91c2-856e-4356-81ec-df66bf82bf46"
+      },
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "54e43537-cb77-4313-b170-4ca2647027cc",
+        "customName": "Heavy Blaster",
+        "baseType": "Heavy Blaster",
+        "baseSkill": "Guns (Blaster Pistol)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 5.3,
+        "finalWeight": 5.3,
+        "baseCost": 682,
+        "finalCost": 4092,
+        "currentCharges": 200,
+        "maxCharges": 200,
+        "loadedAmmunitionId": "1d14ea5c-d184-4290-b168-e0d8307329fc",
+        "loadedAmmunitionData": {
+          "id": "1d14ea5c-d184-4290-b168-e0d8307329fc",
+          "name": "Heavy Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 200,
+          "maxCharges": 200,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "A high-capacity pack for military-grade repeaters and cannons. A gas top-up (60 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "heavy-pistol-grip",
+          "inventoryId": "3b92a2cd-5ebb-45f4-a70e-3dc2902b9a87",
+          "materialId": "plasteel"
+        },
+        "receiverPart": {
+          "partId": "heavy-receiver",
+          "inventoryId": "6cfdd8c4-5d26-47ae-8901-ec700c8bb288",
+          "materialId": "plasteel"
+        },
+        "barrelPart": {
+          "partId": "std-emitter",
+          "inventoryId": "8898a308-9d87-4f0e-88de-8a5e8818a951",
+          "materialId": "plasteel"
+        },
+        "targetingPart": {
+          "partId": "advanced-targeting",
+          "inventoryId": "752e5859-fb51-4bf5-b0d0-ce0ec8488158"
+        },
+        "powerUnitPart": {
+          "partId": "heavy-pwr-pack",
+          "inventoryId": "cdfb91c2-856e-4356-81ec-df66bf82bf46"
+        },
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "3b92a2cd-5ebb-45f4-a70e-3dc2902b9a87",
+          "name": "Heavy Pistol Grip",
+          "partId": "heavy-pistol-grip",
+          "category": "Ranged Grip",
+          "materialId": "plasteel",
+          "cost": 72,
+          "weight": 0.9,
+          "isInstalled": true,
+          "installedInBlasterId": "54e43537-cb77-4313-b170-4ca2647027cc",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Reinforced for heavy chassis."
+        },
+        {
+          "id": "6cfdd8c4-5d26-47ae-8901-ec700c8bb288",
+          "name": "Heavy Receiver",
+          "partId": "heavy-receiver",
+          "category": "Ranged Receiver",
+          "materialId": "plasteel",
+          "cost": 72,
+          "weight": 0.9,
+          "isInstalled": true,
+          "installedInBlasterId": "54e43537-cb77-4313-b170-4ca2647027cc",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Heavy payload action."
+        },
+        {
+          "id": "8898a308-9d87-4f0e-88de-8a5e8818a951",
+          "name": "Standard Emitter",
+          "partId": "std-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "54e43537-cb77-4313-b170-4ca2647027cc",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "752e5859-fb51-4bf5-b0d0-ce0ec8488158",
+          "name": "Advanced Targeting Module",
+          "partId": "advanced-targeting",
+          "category": "Ranged Targeting",
+          "cost": 70,
+          "weight": 0.9,
+          "isInstalled": true,
+          "installedInBlasterId": "54e43537-cb77-4313-b170-4ca2647027cc",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Military-grade tracking algorithms."
+        },
+        {
+          "id": "cdfb91c2-856e-4356-81ec-df66bf82bf46",
+          "name": "Heavy Power Pack",
+          "partId": "heavy-pwr-pack",
+          "category": "Power Unit",
+          "cost": 420,
+          "weight": 2,
+          "isInstalled": true,
+          "installedInBlasterId": "54e43537-cb77-4313-b170-4ca2647027cc",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Heavy Blaster"
+    }
+  }
+}

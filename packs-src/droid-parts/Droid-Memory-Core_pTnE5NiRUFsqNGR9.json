@@ -1,0 +1,39 @@
+{
+  "_id": "pTnE5NiRUFsqNGR9",
+  "_key": "!items!pTnE5NiRUFsqNGR9",
+  "name": "Droid Memory Core",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JywltRD5I0sBN5Da",
+  "sort": 2600000,
+  "system": {
+    "row": {
+      "id": "87b6fba1-bb86-42a5-aad4-5c4f6bca10eb",
+      "name": "Droid Memory Core",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Memory Core",
+      "cost": 390,
+      "weight": 0.25,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "std-mem-core",
+      "description": "Holds droids memories, skills, and consciousness."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "std-mem-core"
+    }
+  }
+}

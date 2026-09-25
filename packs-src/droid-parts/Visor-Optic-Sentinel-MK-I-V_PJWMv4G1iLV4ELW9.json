@@ -1,0 +1,39 @@
+{
+  "_id": "PJWMv4G1iLV4ELW9",
+  "_key": "!items!PJWMv4G1iLV4ELW9",
+  "name": "Visor Optic (Sentinel MK I-V)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "oqIU8n2TNn1530V9",
+  "sort": 3600000,
+  "system": {
+    "row": {
+      "id": "492545d3-9e7c-4ff0-b67e-0ef18ba72325",
+      "name": "Visor Optic (Sentinel MK I-V)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Sensor",
+      "cost": 444,
+      "weight": 1.5,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "optic-sentinel",
+      "description": "Night Vision 3"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "optic-sentinel"
+    }
+  }
+}

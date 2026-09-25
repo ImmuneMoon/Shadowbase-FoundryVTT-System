@@ -1,0 +1,42 @@
+{
+  "_id": "63Na4bD6nlpjstRG",
+  "_key": "!items!63Na4bD6nlpjstRG",
+  "name": "Heavy Hand Shell (Duraplast)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 5800000,
+  "system": {
+    "row": {
+      "id": "051ad098-6ffb-4fb9-8c19-1dcbb2d02c07",
+      "name": "Heavy Hand Shell (Duraplast)",
+      "category": "Armor Shell",
+      "cost": 133,
+      "weight": 0.67,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-heavy-hands-duraplast",
+      "materialId": "duraplast",
+      "notes": "Lightweight ceramic/plastic hybrid used in armor. Heavy tier only.",
+      "validSlots": [],
+      "drBonus": 11,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-heavy-hands-duraplast"
+    }
+  }
+}

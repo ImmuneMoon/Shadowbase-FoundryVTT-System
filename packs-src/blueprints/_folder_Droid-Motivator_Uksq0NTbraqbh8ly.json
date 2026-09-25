@@ -1,0 +1,20 @@
+{
+  "_id": "Uksq0NTbraqbh8ly",
+  "_key": "!folders!Uksq0NTbraqbh8ly",
+  "name": "Droid Motivator",
+  "type": "Item",
+  "folder": "AHUgnqohVTlbyS6h",
+  "sorting": "a",
+  "sort": 2300000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "path": [
+        "Droid Parts",
+        "Droid Motivator"
+      ]
+    }
+  }
+}

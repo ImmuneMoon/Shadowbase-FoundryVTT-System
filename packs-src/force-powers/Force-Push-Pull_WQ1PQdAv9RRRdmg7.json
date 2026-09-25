@@ -1,0 +1,87 @@
+{
+  "_id": "WQ1PQdAv9RRRdmg7",
+  "_key": "!items!WQ1PQdAv9RRRdmg7",
+  "name": "Force Push/Pull",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "KBIMmcUBYi6ZY6I3",
+  "sort": 2200000,
+  "system": {
+    "row": {
+      "name": "Force Push/Pull",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 2,
+      "effect": "Exert a telekinetic force equal to your Basic Lift (BL) on objects within 10 feet. Cannot inflict damage directly.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Telekinesis (Will/Hard)",
+      "category": "Control Powers",
+      "alignment": "Grey",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Force Push/Pull",
+        "description": "The Force-user can telekinetically push or pull objects and beings.",
+        "category": "Control Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 2,
+        "alignment": "Grey",
+        "baseSkill": "Telekinesis (Will/Hard)",
+        "characterTier": "Apprentice",
+        "effect": "Exert a telekinetic force equal to your Basic Lift (BL) on objects within 10 feet. Cannot inflict damage directly."
+      },
+      {
+        "name": "Force Push/Pull",
+        "description": "The Force-user can telekinetically push or pull objects and beings.",
+        "category": "Control Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 2,
+        "alignment": "Grey",
+        "baseSkill": "Telekinesis (Will/Hard)",
+        "characterTier": "Adept",
+        "effect": "Force increases to 2xBL within 20 feet. Can attempt to disarm an opponent or push/pull a person, causing them to fall prone."
+      },
+      {
+        "name": "Force Push/Pull",
+        "description": "The Force-user can telekinetically push or pull objects and beings.",
+        "category": "Control Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 3,
+        "alignment": "Grey",
+        "baseSkill": "Telekinesis (Will/Hard)",
+        "characterTier": "Expert",
+        "effect": "Force increases to 4xBL within 30 feet. Can inflict 1d-3 crushing damage with thrown objects, or 1d on a pushed person."
+      },
+      {
+        "name": "Force Push/Pull",
+        "description": "The Force-user can telekinetically push or pull objects and beings.",
+        "category": "Control Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 4,
+        "alignment": "Grey",
+        "baseSkill": "Telekinesis (Will/Hard)",
+        "characterTier": "Master",
+        "effect": "Force increases to 8xBL within 17 yards. Can hurl a person up to 5 yards, causing 2d crushing damage."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Force Push/Pull"
+    }
+  }
+}

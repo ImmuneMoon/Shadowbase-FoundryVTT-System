@@ -1,0 +1,19 @@
+{
+  "_id": "6aMcjhuriK5wkg8t",
+  "_key": "!folders!6aMcjhuriK5wkg8t",
+  "name": "Droid Manipulator",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 700000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "path": [
+        "Droid Manipulator"
+      ]
+    }
+  }
+}

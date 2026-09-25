@@ -1,0 +1,46 @@
+{
+  "_id": "oLrTEH9noU9iJLZF",
+  "_key": "!items!oLrTEH9noU9iJLZF",
+  "name": "Durasteel Snub Emitter",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "fqyMKj3bXsbnJOuN",
+  "sort": 4000000,
+  "system": {
+    "row": {
+      "id": "c5e537d6-a81c-454a-b064-6aa7afef0f43",
+      "name": "Durasteel Snub Emitter",
+      "category": "Ranged Barrel",
+      "cost": 26,
+      "weight": 0.49,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "snub-emitter",
+      "materialId": "durasteel",
+      "notes": "",
+      "effect": "",
+      "energyResBonus": 0,
+      "volume": 0.001,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "snub-emitter"
+    }
+  }
+}

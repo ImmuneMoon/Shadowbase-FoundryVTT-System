@@ -1,0 +1,20 @@
+{
+  "_id": "57dSrgDssXtG4x1L",
+  "_key": "!folders!57dSrgDssXtG4x1L",
+  "name": "Medical & Pharmaceuticals",
+  "type": "Item",
+  "folder": "Sh8yC8SuR7f77FkG",
+  "sorting": "a",
+  "sort": 4300000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "path": [
+        "General Equipment",
+        "Medical & Pharmaceuticals"
+      ]
+    }
+  }
+}

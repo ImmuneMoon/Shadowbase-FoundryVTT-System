@@ -1,0 +1,42 @@
+{
+  "_id": "UeHcw2MVwj4tt3c1",
+  "_key": "!items!UeHcw2MVwj4tt3c1",
+  "name": "Blueprint: Light Plating",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ycvPt0NqTHPJjje7",
+  "sort": 22000000,
+  "system": {
+    "row": {
+      "id": "e4b53266-e503-4e15-9814-a1323e8c75ee",
+      "name": "Blueprint: Light Plating",
+      "cost": 264,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Light Plating (Generation 0, proven, encoded, catalog design). Required to build Light Plating; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Light Plating",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 900,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Armor|Light Plating"
+    }
+  }
+}

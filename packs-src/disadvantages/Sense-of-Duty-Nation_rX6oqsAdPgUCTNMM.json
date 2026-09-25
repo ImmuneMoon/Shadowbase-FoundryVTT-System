@@ -1,0 +1,34 @@
+{
+  "_id": "rX6oqsAdPgUCTNMM",
+  "_key": "!items!rX6oqsAdPgUCTNMM",
+  "name": "Sense of Duty (Nation)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "QdWbP3PunGyoJeht",
+  "sort": 17700000,
+  "system": {
+    "row": {
+      "name": "Sense of Duty (Nation)",
+      "points": -15,
+      "level": null,
+      "description": "You feel a strong obligation to members of a nation.",
+      "category": "Social",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Sense of Duty (Nation)|Social"
+    }
+  }
+}

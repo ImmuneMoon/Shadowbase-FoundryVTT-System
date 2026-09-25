@@ -1,0 +1,42 @@
+{
+  "_id": "y5iQVtIGw97aymxw",
+  "_key": "!items!y5iQVtIGw97aymxw",
+  "name": "Blueprint: Qixoni",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 37300000,
+  "system": {
+    "row": {
+      "id": "8c35ac13-9f3a-4f86-940d-843ce33e19a1",
+      "name": "Blueprint: Qixoni",
+      "cost": 6174,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Qixoni (Generation 0, proven, encoded, catalog design). Required to build Qixoni; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Qixoni",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 60000,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Qixoni"
+    }
+  }
+}

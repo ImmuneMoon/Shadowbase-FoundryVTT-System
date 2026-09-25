@@ -1,0 +1,42 @@
+{
+  "_id": "OsaAFs0qgokoHjoe",
+  "_key": "!items!OsaAFs0qgokoHjoe",
+  "name": "Blueprint: Republic Officer's Pants",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 17300000,
+  "system": {
+    "row": {
+      "id": "83d67441-d3dc-467e-8d39-b080981efb17",
+      "name": "Blueprint: Republic Officer's Pants",
+      "cost": 200,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Republic Officer's Pants (Generation 0, proven, encoded, catalog design). Required to build Republic Officer's Pants; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Republic Officer's Pants",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 260,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Republic Officer's Pants"
+    }
+  }
+}

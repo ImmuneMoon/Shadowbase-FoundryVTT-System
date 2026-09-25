@@ -1,0 +1,33 @@
+{
+  "_id": "lMfioQo7A5TWfSSO",
+  "_key": "!items!lMfioQo7A5TWfSSO",
+  "name": "Combat Reflexes",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 2400000,
+  "system": {
+    "row": {
+      "name": "Combat Reflexes",
+      "points": 15,
+      "description": "You react quickly to threats and keep your composure under pressure. Grants a +1 bonus to active defenses, +2 to Fright Checks, and a +6 bonus to the IQ roll to recover from mental stun (Chapter 9). Those two bonuses are the whole of what steadiness buys: it makes freezing less likely and shorter, and does not make you immune to either. Turn order is unaffected; it is set by Basic Speed and is never rolled for (Chapter 7). Prerequisite: Force Sensitive (if taken as a Force-related advantage, representing a Force-user's enhanced combat intuition).",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Combat Reflexes"
+    }
+  }
+}

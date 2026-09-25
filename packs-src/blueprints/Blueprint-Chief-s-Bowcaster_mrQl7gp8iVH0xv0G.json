@@ -1,0 +1,42 @@
+{
+  "_id": "mrQl7gp8iVH0xv0G",
+  "_key": "!items!mrQl7gp8iVH0xv0G",
+  "name": "Blueprint: Chief's Bowcaster",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "kwAEXZ4PgPp7KZ6S",
+  "sort": 12500000,
+  "system": {
+    "row": {
+      "id": "06830c01-8d56-44ce-b557-c3364b4cf403",
+      "name": "Blueprint: Chief's Bowcaster",
+      "cost": 1242,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Chief's Bowcaster (Generation 0, proven, encoded, catalog design). Required to build Chief's Bowcaster; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Chief's Bowcaster",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 10672,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Bowcasters|Chief's Bowcaster"
+    }
+  }
+}

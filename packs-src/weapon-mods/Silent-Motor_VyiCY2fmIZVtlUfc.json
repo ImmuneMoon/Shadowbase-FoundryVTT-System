@@ -1,0 +1,42 @@
+{
+  "_id": "VyiCY2fmIZVtlUfc",
+  "_key": "!items!VyiCY2fmIZVtlUfc",
+  "name": "Silent Motor",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "Hi0SNsuto8300vVQ",
+  "sort": 4300000,
+  "system": {
+    "row": {
+      "name": "Silent Motor",
+      "category": "Deployment Mechanism",
+      "cost": 610,
+      "weight": 0.1,
+      "notes": "Negates audible 'click'. -3 Hearing to detect deployment.",
+      "materials": [
+        {
+          "name": "Silicon",
+          "amount": 0.1
+        }
+      ],
+      "id": "2478877f-6310-42c3-bef9-738cb7b674e6",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Silent Motor"
+    }
+  }
+}

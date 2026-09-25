@@ -1,0 +1,55 @@
+{
+  "_id": "R4IrIBLoLfWJzSmk",
+  "_key": "!items!R4IrIBLoLfWJzSmk",
+  "name": "Glowrod",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "cK2OmLlfEjsr72q3",
+  "sort": 7000000,
+  "system": {
+    "row": {
+      "name": "Glowrod",
+      "cost": 66,
+      "description": "Portable light source. Eliminates darkness penalties within a 5-yard radius (electronic, lasts 24 hours per charge). Turning on a glowrod is a Ready maneuver. Needs Computer Programming to function if constructed.",
+      "category": "Tools & Electronics",
+      "subCategory": "Non-Consumable Tools",
+      "weight": 0.2,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Silicon",
+          "amount": 0.05
+        },
+        {
+          "name": "Clari-crystalline",
+          "amount": 0.1
+        },
+        {
+          "name": "Diatium",
+          "amount": 0.05
+        }
+      ],
+      "requiresSoftware": true,
+      "id": "80f665f2-f3eb-40ce-9897-9fd382ad0900",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Glowrod"
+    }
+  }
+}

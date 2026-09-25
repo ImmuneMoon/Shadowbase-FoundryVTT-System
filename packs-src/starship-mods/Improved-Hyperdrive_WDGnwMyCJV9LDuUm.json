@@ -1,0 +1,36 @@
+{
+  "_id": "WDGnwMyCJV9LDuUm",
+  "_key": "!items!WDGnwMyCJV9LDuUm",
+  "name": "Improved Hyperdrive",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "YTgdmbmaEwnsBSTa",
+  "sort": 300000,
+  "system": {
+    "row": {
+      "id": "ad4ecd55-f981-4332-9b67-61609a10a1aa",
+      "name": "Improved Hyperdrive",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Starship Modification",
+      "cost": 0,
+      "weight": 0,
+      "quantity": 1,
+      "description": "Performance modification. Reduces hyperdrive multiplier by 1 (e.g., x2 to x1). Cost: 75% of the hull cost."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "starship-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "starship-mods",
+      "key": "Improved Hyperdrive"
+    }
+  }
+}

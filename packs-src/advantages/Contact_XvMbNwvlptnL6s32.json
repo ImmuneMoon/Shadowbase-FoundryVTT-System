@@ -1,0 +1,34 @@
+{
+  "_id": "XvMbNwvlptnL6s32",
+  "_key": "!items!XvMbNwvlptnL6s32",
+  "name": "Contact",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "3vDRi4uDBtDelTd8",
+  "sort": 2900000,
+  "system": {
+    "row": {
+      "name": "Contact",
+      "points": 1,
+      "description": "Reliability 9-",
+      "category": "Social/Wealth",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Contact"
+    }
+  }
+}

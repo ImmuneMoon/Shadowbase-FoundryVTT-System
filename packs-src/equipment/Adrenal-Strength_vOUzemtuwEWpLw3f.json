@@ -1,0 +1,54 @@
+{
+  "_id": "vOUzemtuwEWpLw3f",
+  "_key": "!items!vOUzemtuwEWpLw3f",
+  "name": "Adrenal Strength",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qZqVLO7SneSLTvXP",
+  "sort": 300000,
+  "system": {
+    "row": {
+      "name": "Adrenal Strength",
+      "cost": 240,
+      "skill": "First Aid, or Physician",
+      "description": "Grants +2 ST (increases melee damage and lifting capacity) for 3 minutes. A failure results in effects only lasting 1.5 minutes. A critical failure results in effects only lasting 1.5 minutes and inflicts 1 HP of damage. Crash: Lose 1 EP when the effect ends.",
+      "category": "Medical & Pharmaceuticals",
+      "subCategory": "Combat Stimulants",
+      "weight": 0.3,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Adrenal Synthetics",
+          "amount": 0.1
+        },
+        {
+          "name": "Durasteel",
+          "amount": 0.2
+        }
+      ],
+      "modifiers": {
+        "strength": 2
+      },
+      "id": "0bf51dfb-7907-49f9-be52-4c94dc007350",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Adrenal Strength"
+    }
+  }
+}

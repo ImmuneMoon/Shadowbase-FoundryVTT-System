@@ -1,0 +1,34 @@
+{{!-- shadowbase.item.slot - one structural slot (BlasterBaseInfo.tsx:236-300, the melee PieceSelector, the saber
+     InventoryPieceSelector, ArmorComponentSelector.tsx): a select of the OWNED rows that fit, then the component catalog
+     under Direct Library Access (engine.partAcquisition.slotScope), the material a milled part takes, a sleeve's wrap,
+     a melee entry's quantity, and the "chosen, not owned" caption. Context: a builders.slotView() object plus
+     editable, prefix (the edit key family), materialPrefix, wrapPrefix, qtyPrefix ('' when unused). --}}
+<div class="sb-slot {{#if required}}sb-slot--required{{/if}} {{#if chosenNotOwned}}sb-slot--unowned{{/if}}">
+  <label class="sb-slot__label" for="{{prefix}}-{{key}}">{{label}}{{#if required}} <span class="sb-slot__required" title="{{localize "SHADOWBASE.Item.Slot.Required"}}">*</span>{{/if}}</label>
+  <select class="sb-select sb-slot__select" id="{{prefix}}-{{key}}" name="{{prefix}}.{{key}}" {{#if locked}}disabled{{/if}} {{#unless editable}}disabled{{/unless}}>
+    <option value="" {{#if select.isNone}}selected{{/if}}>{{localize "SHADOWBASE.Item.Slot.None"}}</option>
+    {{#each select.groups}}
+      <optgroup label="{{this.label}}">
+        {{#each this.options}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+      </optgroup>
+    {{/each}}
+  </select>
+  {{#if takesMaterial}}
+  <select class="sb-select sb-slot__material" name="{{materialPrefix}}.{{key}}" title="{{localize "SHADOWBASE.Item.Slot.Material"}}" {{#unless materialEditable}}disabled{{/unless}} {{#unless editable}}disabled{{/unless}}>
+    {{#each materials}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+  </select>
+  {{/if}}
+  {{#if takesWrap}}
+  <select class="sb-select sb-slot__wrap" name="{{wrapPrefix}}.{{key}}" title="{{localize "SHADOWBASE.Item.Slot.Wrap"}}" {{#unless wrapEditable}}disabled{{/unless}} {{#unless editable}}disabled{{/unless}}>
+    {{#each wraps}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+  </select>
+  {{/if}}
+  {{#if hasQuantity}}
+  <label class="sb-slot__qty" title="{{localize "SHADOWBASE.Item.Slot.Quantity"}}"><span class="sb-text-muted">×</span><input type="number" class="sb-input sb-input--tiny" name="{{qtyPrefix}}.{{key}}" value="{{quantity}}" data-dtype="Number" min="1" step="1" {{#if locked}}disabled{{/if}} {{#unless editable}}disabled{{/unless}}></label>
+  {{/if}}
+  <p class="sb-slot__caption">
+    {{#if chosenNotOwned}}<span class="sb-text-amber">{{localize "SHADOWBASE.Item.Slot.ChosenNotOwned"}}</span>{{else if ownedName}}<span class="sb-text-green">{{localize "SHADOWBASE.Item.Slot.Owned" name=ownedName}}</span>{{else if emptyReason}}<span class="sb-text-muted">{{emptyReason}}</span>{{/if}}
+    {{#if materialName}}<span class="sb-text-muted"> · {{materialName}}</span>{{/if}}
+    {{#if wrapName}}<span class="sb-text-muted"> · {{localize "SHADOWBASE.Item.Slot.WrapNamed" name=wrapName}}</span>{{/if}}
+  </p>
+</div>

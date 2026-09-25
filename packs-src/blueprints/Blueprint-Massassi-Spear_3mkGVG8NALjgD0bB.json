@@ -1,0 +1,42 @@
+{
+  "_id": "3mkGVG8NALjgD0bB",
+  "_key": "!items!3mkGVG8NALjgD0bB",
+  "name": "Blueprint: Massassi Spear",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 42300000,
+  "system": {
+    "row": {
+      "id": "7ac65dd3-d64f-4be2-a630-d18b7af12987",
+      "name": "Blueprint: Massassi Spear",
+      "cost": 197,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Massassi Spear (Generation 0, proven, encoded, catalog design). Required to build Massassi Spear; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Massassi Spear",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 222,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Massassi Spear"
+    }
+  }
+}

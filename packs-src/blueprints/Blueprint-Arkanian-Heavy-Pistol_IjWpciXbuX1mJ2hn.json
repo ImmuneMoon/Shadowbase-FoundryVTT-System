@@ -1,0 +1,42 @@
+{
+  "_id": "IjWpciXbuX1mJ2hn",
+  "_key": "!items!IjWpciXbuX1mJ2hn",
+  "name": "Blueprint: Arkanian Heavy Pistol",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Msjm8tq0CvBX1hii",
+  "sort": 31700000,
+  "system": {
+    "row": {
+      "id": "7a88b2b7-0c71-46a7-882e-a8f6f99f1bdc",
+      "name": "Blueprint: Arkanian Heavy Pistol",
+      "cost": 565,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Arkanian Heavy Pistol (Generation 0, proven, encoded, catalog design). Required to build Arkanian Heavy Pistol; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Arkanian Heavy Pistol",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3910,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Heavy Pistols|Arkanian Heavy Pistol"
+    }
+  }
+}

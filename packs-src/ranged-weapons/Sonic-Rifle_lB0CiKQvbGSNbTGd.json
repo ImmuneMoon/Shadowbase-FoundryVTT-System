@@ -1,0 +1,211 @@
+{
+  "_id": "lB0CiKQvbGSNbTGd",
+  "_key": "!items!lB0CiKQvbGSNbTGd",
+  "name": "Sonic Rifle",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "kvW0wIZQTzAxW6LY",
+  "sort": 4400000,
+  "system": {
+    "row": {
+      "id": "6d202ed9-7e71-4d83-b7e9-2f0ee069c418",
+      "customName": "Sonic Rifle",
+      "baseType": "Sonic Rifle",
+      "baseSkill": "Guns (Blaster Rifle)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 6.7,
+      "finalWeight": 6.7,
+      "baseCost": 664,
+      "finalCost": 3984,
+      "currentCharges": 100,
+      "maxCharges": 100,
+      "loadedAmmunitionId": "675fa07f-43fa-47ec-a699-140b4c93f14a",
+      "loadedAmmunitionData": {
+        "id": "675fa07f-43fa-47ec-a699-140b4c93f14a",
+        "name": "Rifle Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "A larger, more robust pack used for rifles and carbines. A gas top-up (30 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "rifle-stock",
+        "inventoryId": "fd7dacbc-401e-4ba9-8e29-84320ab43305",
+        "materialId": "plasteel"
+      },
+      "receiverPart": {
+        "partId": "sonic-chamber",
+        "inventoryId": "64ae93ff-b47a-4899-9068-9acf8c8f8e25",
+        "materialId": "plasteel"
+      },
+      "barrelPart": {
+        "partId": "long-emitter",
+        "inventoryId": "b7a35260-2d93-402b-9123-1afda1b14559",
+        "materialId": "plasteel"
+      },
+      "targetingPart": {
+        "partId": "advanced-targeting",
+        "inventoryId": "ee43e06e-615a-4097-90de-69b9b9537fa4"
+      },
+      "powerUnitPart": {
+        "partId": "rifle-pwr-pack",
+        "inventoryId": "45676d84-9c66-46fd-82e1-d1d32d0266d8"
+      },
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "6d202ed9-7e71-4d83-b7e9-2f0ee069c418",
+        "customName": "Sonic Rifle",
+        "baseType": "Sonic Rifle",
+        "baseSkill": "Guns (Blaster Rifle)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 6.7,
+        "finalWeight": 6.7,
+        "baseCost": 664,
+        "finalCost": 3984,
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "loadedAmmunitionId": "675fa07f-43fa-47ec-a699-140b4c93f14a",
+        "loadedAmmunitionData": {
+          "id": "675fa07f-43fa-47ec-a699-140b4c93f14a",
+          "name": "Rifle Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 100,
+          "maxCharges": 100,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "A larger, more robust pack used for rifles and carbines. A gas top-up (30 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "rifle-stock",
+          "inventoryId": "fd7dacbc-401e-4ba9-8e29-84320ab43305",
+          "materialId": "plasteel"
+        },
+        "receiverPart": {
+          "partId": "sonic-chamber",
+          "inventoryId": "64ae93ff-b47a-4899-9068-9acf8c8f8e25",
+          "materialId": "plasteel"
+        },
+        "barrelPart": {
+          "partId": "long-emitter",
+          "inventoryId": "b7a35260-2d93-402b-9123-1afda1b14559",
+          "materialId": "plasteel"
+        },
+        "targetingPart": {
+          "partId": "advanced-targeting",
+          "inventoryId": "ee43e06e-615a-4097-90de-69b9b9537fa4"
+        },
+        "powerUnitPart": {
+          "partId": "rifle-pwr-pack",
+          "inventoryId": "45676d84-9c66-46fd-82e1-d1d32d0266d8"
+        },
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "fd7dacbc-401e-4ba9-8e29-84320ab43305",
+          "name": "Rifle Stock",
+          "partId": "rifle-stock",
+          "category": "Ranged Grip",
+          "materialId": "plasteel",
+          "cost": 240,
+          "weight": 3,
+          "isInstalled": true,
+          "installedInBlasterId": "6d202ed9-7e71-4d83-b7e9-2f0ee069c418",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "2-handed, full shoulder stock."
+        },
+        {
+          "id": "64ae93ff-b47a-4899-9068-9acf8c8f8e25",
+          "name": "Sonic Chamber",
+          "partId": "sonic-chamber",
+          "category": "Ranged Receiver",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "6d202ed9-7e71-4d83-b7e9-2f0ee069c418",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard Sonic."
+        },
+        {
+          "id": "b7a35260-2d93-402b-9123-1afda1b14559",
+          "name": "Long Emitter",
+          "partId": "long-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "plasteel",
+          "cost": 96,
+          "weight": 1.2,
+          "isInstalled": true,
+          "installedInBlasterId": "6d202ed9-7e71-4d83-b7e9-2f0ee069c418",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "ee43e06e-615a-4097-90de-69b9b9537fa4",
+          "name": "Advanced Targeting Module",
+          "partId": "advanced-targeting",
+          "category": "Ranged Targeting",
+          "cost": 70,
+          "weight": 0.9,
+          "isInstalled": true,
+          "installedInBlasterId": "6d202ed9-7e71-4d83-b7e9-2f0ee069c418",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Military-grade tracking algorithms."
+        },
+        {
+          "id": "45676d84-9c66-46fd-82e1-d1d32d0266d8",
+          "name": "Rifle Power Pack",
+          "partId": "rifle-pwr-pack",
+          "category": "Power Unit",
+          "cost": 210,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInBlasterId": "6d202ed9-7e71-4d83-b7e9-2f0ee069c418",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Sonic Rifle"
+    }
+  }
+}

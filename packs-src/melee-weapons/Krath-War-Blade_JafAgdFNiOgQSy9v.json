@@ -1,0 +1,123 @@
+{
+  "_id": "JafAgdFNiOgQSy9v",
+  "_key": "!items!JafAgdFNiOgQSy9v",
+  "name": "Krath War Blade",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "d4eK6lRChskXlqOO",
+  "sort": 1500000,
+  "system": {
+    "row": {
+      "id": "992c94b8-4a30-41a5-9871-ba3e0436d5e4",
+      "customName": "Krath War Blade",
+      "baseType": "Krath War Blade",
+      "baseSkill": "Broadsword",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": null,
+      "maxCharges": null,
+      "condition": "Fine",
+      "baseReach": "1",
+      "baseWeight": 2.46,
+      "finalWeight": 2.46,
+      "baseCost": 794,
+      "finalCost": 1588,
+      "gripParts": [
+        {
+          "inventoryId": "4e7f3d7c-822e-45bb-ad61-75b15542b637",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "dbd17536-b676-471c-a6dc-487dd04f385e",
+          "materialId": "mullinine",
+          "quantity": 1
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "992c94b8-4a30-41a5-9871-ba3e0436d5e4",
+        "customName": "Krath War Blade",
+        "baseType": "Krath War Blade",
+        "baseSkill": "Broadsword",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": null,
+        "maxCharges": null,
+        "condition": "Fine",
+        "baseReach": "1",
+        "baseWeight": 2.46,
+        "finalWeight": 2.46,
+        "baseCost": 794,
+        "finalCost": 1588,
+        "gripParts": [
+          {
+            "inventoryId": "4e7f3d7c-822e-45bb-ad61-75b15542b637",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "dbd17536-b676-471c-a6dc-487dd04f385e",
+            "materialId": "mullinine",
+            "quantity": 1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "4e7f3d7c-822e-45bb-ad61-75b15542b637",
+          "name": "Standard Hilt",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInMeleeId": "992c94b8-4a30-41a5-9871-ba3e0436d5e4",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Broadsword/Shortsword/Saber. 1-handed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "dbd17536-b676-471c-a6dc-487dd04f385e",
+          "name": "Light Blade",
+          "category": "Melee Head",
+          "materialId": "mullinine",
+          "cost": 744,
+          "weight": 1.485,
+          "isInstalled": true,
+          "installedInMeleeId": "992c94b8-4a30-41a5-9871-ba3e0436d5e4",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Balanced.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Krath War Blade"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{{!-- templates/items/equipment-main.hbs - general equipment (equipment-section.tsx EquipmentItemCard:1080-1300): category,
+     weight (typed where editable, Weightless), condition, the skill, a currency's value, a cell's charges, the modifier
+     bag, the Blueprint (Ch10) and firmware panels. Context: main (equipment.mjs), editable, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--equipment {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <div class="sb-item-grid">
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.Category"}}</span>
+        <select class="sb-select" name="system.row.category" {{disabled (not editable)}}>{{#each main.categories}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.SubCategory"}}</span>
+        <input type="text" class="sb-input" name="system.row.subCategory" value="{{main.subCategory}}" {{disabled (not editable)}}>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.Condition"}}</span>
+        <select class="sb-select" name="system.row.condition" {{disabled (not editable)}}>{{#each main.conditions}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.Skill"}}</span>
+        <input type="text" class="sb-input" name="system.row.skill" value="{{main.skill}}" {{disabled (not editable)}}>
+      </label>
+      <div class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.TotalWeight"}}</span><output class="sb-input sb-input--calc">{{main.totalWeight}} lb</output></div>
+      <div class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.TotalCost"}}</span><output class="sb-input sb-input--calc">{{main.totalCost}} cr</output></div>
+    </div>
+    <div class="sb-hrow sb-hrow--tight sb-item__badges">
+      <label class="sb-check-row sb-check-row--tiny" title="{{localize "SHADOWBASE.Sheet.Inventory.WeightlessHint"}}"><input type="checkbox" name="system.row.weightless" {{checked main.weightless}} {{disabled (not editable)}}> {{localize "SHADOWBASE.Sheet.Inventory.Weightless"}}</label>
+      {{#if main.weightSource}}<span class="sb-text-muted sb-text-xs">{{main.weightSource}}</span>{{/if}}
+      {{#if main.isUtility}}<span class="sb-badge sb-badge-outline" title="{{localize "SHADOWBASE.Item.Equipment.UtilityHint"}}">{{localize "SHADOWBASE.Item.Equipment.Utility"}}</span>{{/if}}
+      {{#if main.installed}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Sheet.Inventory.Installed"}}</span>{{/if}}
+      {{#if main.flawed}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Sheet.Weapon.Flawed"}}</span>{{/if}}
+      {{#if main.inCatalog}}<span class="sb-badge sb-badge-outline sb-badge-accent">{{localize "SHADOWBASE.Item.Trait.InLibrary"}}</span>{{/if}}
+    </div>
+  </div>
+  {{#if main.isCurrency}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Item.Equipment.Currency"}}</h4>
+    <div class="sb-item-grid">
+      {{#if main.isChip}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.StoredValue"}}</span>
+        <input type="number" class="sb-input sb-text-blue" name="system.row.storedValue" value="{{main.storedValue}}" data-dtype="Number" min="0" {{disabled (not editable)}}>
+      </label>
+      {{else}}
+      <div class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.Denomination"}}</span><output class="sb-input sb-input--calc sb-text-amber">{{main.denominationValue}} cr</output></div>
+      {{/if}}
+      <div class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.CurrencyTotal"}}</span><output class="sb-input sb-input--calc">{{main.currencyTotal}} cr</output></div>
+    </div>
+  </div>
+  {{/if}}
+  {{#if main.hasCharges}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Item.Equipment.Charges"}}</h4>
+    <div class="sb-item-grid">
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.CurrentCharges"}}</span><input type="number" class="sb-input" name="system.row.currentCharges" value="{{main.currentCharges}}" data-dtype="Number" min="0" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.MaxCharges"}}</span><input type="number" class="sb-input" name="system.row.maxCharges" value="{{main.maxCharges}}" data-dtype="Number" min="0" {{disabled (not editable)}}></label>
+    </div>
+  </div>
+  {{/if}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Item.Equipment.Stats"}}</h4>
+    <div class="sb-item-grid">
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.DR"}}</span><input type="number" class="sb-input" name="system.row.dr" value="{{main.dr}}" data-dtype="Number" min="0" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.Damage"}}</span><input type="text" class="sb-input" name="system.row.damage" value="{{main.damage}}" {{disabled (not editable)}}></label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.Modifier"}}</span><input type="text" class="sb-input" name="system.row.modifier" value="{{main.modifier}}" {{disabled (not editable)}}></label>
+    </div>
+    {{#if main.modifiers.length}}<p class="sb-text-xs"><span class="sb-caps sb-text-accent">{{localize "SHADOWBASE.Item.Trait.Modifiers"}}</span> {{> "shadowbase.badges" badges=main.modifiers}}</p>{{/if}}
+  </div>
+  {{#if main.isBlueprint}}
+  <div class="sb-item-section sb-item-section--callout">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Binary'}}"></i> {{localize "SHADOWBASE.Item.Equipment.Blueprint"}}</h4>
+    <p class="sb-text-xs">{{localize "SHADOWBASE.Item.Equipment.BlueprintOf" of=main.blueprint.of}} · {{main.blueprint.description}}</p>
+    <p class="sb-text-xs sb-text-muted">{{localize "SHADOWBASE.Item.Equipment.BlueprintBuild" summary=main.blueprint.buildSummary bonus=main.blueprint.buildBonus}}{{#if main.blueprint.family}} · {{main.blueprint.family}}{{/if}}{{#if main.blueprint.parts}} · {{localize "SHADOWBASE.Item.Equipment.BlueprintParts" n=main.blueprint.parts}}{{/if}}</p>
+    <div class="sb-hrow sb-hrow--tight">
+      {{#if main.blueprint.locked}}<span class="sb-badge sb-badge-outline"><i class="{{sbIcon 'Lock'}}"></i> {{localize "SHADOWBASE.Item.Equipment.Encoded"}}</span>{{/if}}
+      {{#if main.blueprint.flawed}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Item.Equipment.BlueprintFlawed"}}</span>{{/if}}
+      {{#if main.blueprint.bricked}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Item.Equipment.Bricked"}}</span>{{/if}}
+      <span class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Equipment.BlueprintRollsNote"}}</span>
+    </div>
+  </div>
+  {{/if}}
+  {{#if main.isFirmware}}
+  <div class="sb-item-section sb-item-section--callout">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Binary'}}"></i> {{localize "SHADOWBASE.Item.Equipment.Firmware"}}</h4>
+    <p class="sb-text-xs">{{localize "SHADOWBASE.Item.Equipment.FirmwareLine" generation=main.firmware.generation fee=main.firmware.fee}}{{#if main.firmware.band}} · {{main.firmware.band}}{{/if}}{{#if main.firmware.encoded}} · {{localize "SHADOWBASE.Item.Equipment.Encoded"}}{{/if}}</p>
+  </div>
+  {{/if}}
+  {{#if main.catalogDescription}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Sheet.Abilities.LibraryDossier"}}</h4>
+    <p class="sb-dossier">{{main.catalogDescription}}</p>
+  </div>
+  {{/if}}
+</section>

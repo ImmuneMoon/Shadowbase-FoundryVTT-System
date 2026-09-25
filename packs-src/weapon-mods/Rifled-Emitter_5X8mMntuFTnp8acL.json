@@ -1,0 +1,43 @@
+{
+  "_id": "5X8mMntuFTnp8acL",
+  "_key": "!items!5X8mMntuFTnp8acL",
+  "name": "Rifled Emitter",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "8V76cT7Mk3a6jBdw",
+  "sort": 2600000,
+  "system": {
+    "row": {
+      "name": "Rifled Emitter",
+      "category": "Barrel/Emitter",
+      "cost": 250,
+      "weight": 1,
+      "notes": "Stabilizes the energy bolt, increasing the weapon's Accuracy (Acc) by +1.",
+      "accuracyBonus": 1,
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 1
+        }
+      ],
+      "id": "9704b3bd-2b62-4b5e-9f78-291437ca8fef",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Rifled Emitter"
+    }
+  }
+}

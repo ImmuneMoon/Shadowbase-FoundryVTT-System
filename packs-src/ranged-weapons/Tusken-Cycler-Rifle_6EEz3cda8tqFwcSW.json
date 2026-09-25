@@ -1,0 +1,336 @@
+{
+  "_id": "6EEz3cda8tqFwcSW",
+  "_key": "!items!6EEz3cda8tqFwcSW",
+  "name": "Tusken Cycler Rifle",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "lfXIbDoNBuuBniFz",
+  "sort": 4500000,
+  "system": {
+    "row": {
+      "id": "0eee410d-c167-4a3f-9fe5-b3996a688979",
+      "customName": "Tusken Cycler Rifle",
+      "baseType": "Tusken Cycler Rifle",
+      "baseSkill": "Guns (Slugthrower Rifle)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 7.7,
+      "finalWeight": 7.7,
+      "baseCost": 444,
+      "finalCost": 888,
+      "currentCharges": 5,
+      "maxCharges": 5,
+      "loadedAmmunitionId": "501a4ec9-8418-42c9-9c7d-1ea1a5f1a48f",
+      "loadedAmmunitionData": {
+        "id": "501a4ec9-8418-42c9-9c7d-1ea1a5f1a48f",
+        "name": "Cycler Rifle Clip",
+        "type": "Magazine",
+        "isContainer": true,
+        "containerType": "Cycler",
+        "currentCharges": 5,
+        "maxCharges": 5,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [
+          {
+            "id": "df584f8d-1a89-4bbe-afd2-3fa1a024232b",
+            "name": "Standard Cycler",
+            "type": "Rounds",
+            "currentCharges": 1,
+            "maxCharges": 1,
+            "cost": 0,
+            "weight": 0,
+            "quantity": 1,
+            "contents": [],
+            "formula": "3d",
+            "damageTypeOverride": "pi++",
+            "notes": "Armor Divisor (2) vs energy shields. Bundled with the weapon."
+          },
+          {
+            "id": "46d8b8a0-f7de-4bb8-8f34-2d7a52c55c27",
+            "name": "Standard Cycler",
+            "type": "Rounds",
+            "currentCharges": 1,
+            "maxCharges": 1,
+            "cost": 0,
+            "weight": 0,
+            "quantity": 1,
+            "contents": [],
+            "formula": "3d",
+            "damageTypeOverride": "pi++",
+            "notes": "Armor Divisor (2) vs energy shields. Bundled with the weapon."
+          },
+          {
+            "id": "a9df8ee3-e062-44ef-b211-7b27cbb523b6",
+            "name": "Standard Cycler",
+            "type": "Rounds",
+            "currentCharges": 1,
+            "maxCharges": 1,
+            "cost": 0,
+            "weight": 0,
+            "quantity": 1,
+            "contents": [],
+            "formula": "3d",
+            "damageTypeOverride": "pi++",
+            "notes": "Armor Divisor (2) vs energy shields. Bundled with the weapon."
+          },
+          {
+            "id": "052e2b2e-d4ba-4349-b20a-b7080ab1db0b",
+            "name": "Standard Cycler",
+            "type": "Rounds",
+            "currentCharges": 1,
+            "maxCharges": 1,
+            "cost": 0,
+            "weight": 0,
+            "quantity": 1,
+            "contents": [],
+            "formula": "3d",
+            "damageTypeOverride": "pi++",
+            "notes": "Armor Divisor (2) vs energy shields. Bundled with the weapon."
+          },
+          {
+            "id": "99544b7e-8f31-4508-aa0f-a259f6394542",
+            "name": "Standard Cycler",
+            "type": "Rounds",
+            "currentCharges": 1,
+            "maxCharges": 1,
+            "cost": 0,
+            "weight": 0,
+            "quantity": 1,
+            "contents": [],
+            "formula": "3d",
+            "damageTypeOverride": "pi++",
+            "notes": "Armor Divisor (2) vs energy shields. Bundled with the weapon."
+          }
+        ],
+        "notes": "Tusken-style clip. Often purchased full; +5 Standard cycler rounds: +2.5 lbs, +100 CR. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "rifle-stock",
+        "inventoryId": "a4e49c2b-e126-4f02-9fa3-ac528dfad295",
+        "materialId": "wroshyr"
+      },
+      "receiverPart": {
+        "partId": "cycler-mech-action",
+        "inventoryId": "921da086-f324-4ca1-8674-caed74ac709b",
+        "materialId": "scrap-metal"
+      },
+      "barrelPart": {
+        "partId": "rifled-barrel",
+        "inventoryId": "d16363ce-6e3c-424f-bb4b-c0a094d55106",
+        "materialId": "scrap-metal"
+      },
+      "targetingPart": {
+        "partId": "iron-sights",
+        "inventoryId": "e5db3218-6434-4258-9262-acaa8cbe16a7"
+      },
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "0eee410d-c167-4a3f-9fe5-b3996a688979",
+        "customName": "Tusken Cycler Rifle",
+        "baseType": "Tusken Cycler Rifle",
+        "baseSkill": "Guns (Slugthrower Rifle)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 7.7,
+        "finalWeight": 7.7,
+        "baseCost": 444,
+        "finalCost": 888,
+        "currentCharges": 5,
+        "maxCharges": 5,
+        "loadedAmmunitionId": "501a4ec9-8418-42c9-9c7d-1ea1a5f1a48f",
+        "loadedAmmunitionData": {
+          "id": "501a4ec9-8418-42c9-9c7d-1ea1a5f1a48f",
+          "name": "Cycler Rifle Clip",
+          "type": "Magazine",
+          "isContainer": true,
+          "containerType": "Cycler",
+          "currentCharges": 5,
+          "maxCharges": 5,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [
+            {
+              "id": "df584f8d-1a89-4bbe-afd2-3fa1a024232b",
+              "name": "Standard Cycler",
+              "type": "Rounds",
+              "currentCharges": 1,
+              "maxCharges": 1,
+              "cost": 0,
+              "weight": 0,
+              "quantity": 1,
+              "contents": [],
+              "formula": "3d",
+              "damageTypeOverride": "pi++",
+              "notes": "Armor Divisor (2) vs energy shields. Bundled with the weapon."
+            },
+            {
+              "id": "46d8b8a0-f7de-4bb8-8f34-2d7a52c55c27",
+              "name": "Standard Cycler",
+              "type": "Rounds",
+              "currentCharges": 1,
+              "maxCharges": 1,
+              "cost": 0,
+              "weight": 0,
+              "quantity": 1,
+              "contents": [],
+              "formula": "3d",
+              "damageTypeOverride": "pi++",
+              "notes": "Armor Divisor (2) vs energy shields. Bundled with the weapon."
+            },
+            {
+              "id": "a9df8ee3-e062-44ef-b211-7b27cbb523b6",
+              "name": "Standard Cycler",
+              "type": "Rounds",
+              "currentCharges": 1,
+              "maxCharges": 1,
+              "cost": 0,
+              "weight": 0,
+              "quantity": 1,
+              "contents": [],
+              "formula": "3d",
+              "damageTypeOverride": "pi++",
+              "notes": "Armor Divisor (2) vs energy shields. Bundled with the weapon."
+            },
+            {
+              "id": "052e2b2e-d4ba-4349-b20a-b7080ab1db0b",
+              "name": "Standard Cycler",
+              "type": "Rounds",
+              "currentCharges": 1,
+              "maxCharges": 1,
+              "cost": 0,
+              "weight": 0,
+              "quantity": 1,
+              "contents": [],
+              "formula": "3d",
+              "damageTypeOverride": "pi++",
+              "notes": "Armor Divisor (2) vs energy shields. Bundled with the weapon."
+            },
+            {
+              "id": "99544b7e-8f31-4508-aa0f-a259f6394542",
+              "name": "Standard Cycler",
+              "type": "Rounds",
+              "currentCharges": 1,
+              "maxCharges": 1,
+              "cost": 0,
+              "weight": 0,
+              "quantity": 1,
+              "contents": [],
+              "formula": "3d",
+              "damageTypeOverride": "pi++",
+              "notes": "Armor Divisor (2) vs energy shields. Bundled with the weapon."
+            }
+          ],
+          "notes": "Tusken-style clip. Often purchased full; +5 Standard cycler rounds: +2.5 lbs, +100 CR. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "rifle-stock",
+          "inventoryId": "a4e49c2b-e126-4f02-9fa3-ac528dfad295",
+          "materialId": "wroshyr"
+        },
+        "receiverPart": {
+          "partId": "cycler-mech-action",
+          "inventoryId": "921da086-f324-4ca1-8674-caed74ac709b",
+          "materialId": "scrap-metal"
+        },
+        "barrelPart": {
+          "partId": "rifled-barrel",
+          "inventoryId": "d16363ce-6e3c-424f-bb4b-c0a094d55106",
+          "materialId": "scrap-metal"
+        },
+        "targetingPart": {
+          "partId": "iron-sights",
+          "inventoryId": "e5db3218-6434-4258-9262-acaa8cbe16a7"
+        },
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "a4e49c2b-e126-4f02-9fa3-ac528dfad295",
+          "name": "Rifle Stock",
+          "partId": "rifle-stock",
+          "category": "Ranged Grip",
+          "materialId": "wroshyr",
+          "cost": 380,
+          "weight": 4.75,
+          "isInstalled": true,
+          "installedInBlasterId": "0eee410d-c167-4a3f-9fe5-b3996a688979",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "2-handed, full shoulder stock."
+        },
+        {
+          "id": "921da086-f324-4ca1-8674-caed74ac709b",
+          "name": "Cycler Mechanical Action",
+          "partId": "cycler-mech-action",
+          "category": "Ranged Receiver",
+          "materialId": "scrap-metal",
+          "cost": 30,
+          "weight": 1.5,
+          "isInstalled": true,
+          "installedInBlasterId": "0eee410d-c167-4a3f-9fe5-b3996a688979",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Cycler slugthrower mechanism."
+        },
+        {
+          "id": "d16363ce-6e3c-424f-bb4b-c0a094d55106",
+          "name": "Rifled Barrel",
+          "partId": "rifled-barrel",
+          "category": "Ranged Barrel",
+          "materialId": "scrap-metal",
+          "cost": 24,
+          "weight": 1.2,
+          "isInstalled": true,
+          "installedInBlasterId": "0eee410d-c167-4a3f-9fe5-b3996a688979",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "e5db3218-6434-4258-9262-acaa8cbe16a7",
+          "name": "Iron Sights",
+          "partId": "iron-sights",
+          "category": "Ranged Targeting",
+          "cost": 10,
+          "weight": 0.2,
+          "isInstalled": true,
+          "installedInBlasterId": "0eee410d-c167-4a3f-9fe5-b3996a688979",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Mechanical alignment only."
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Tusken Cycler Rifle"
+    }
+  }
+}

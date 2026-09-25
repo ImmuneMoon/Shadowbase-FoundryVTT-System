@@ -1,0 +1,123 @@
+{
+  "_id": "PvkYh7bZIlMRyYJu",
+  "_key": "!items!PvkYh7bZIlMRyYJu",
+  "name": "Short Sword",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "4MEEpZlW0yDZDn1G",
+  "sort": 2700000,
+  "system": {
+    "row": {
+      "id": "3572e30e-9e18-423f-957d-fc7494d1f2b7",
+      "customName": "Short Sword",
+      "baseType": "Short Sword",
+      "baseSkill": "Shortsword",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": null,
+      "maxCharges": null,
+      "condition": "Fine",
+      "baseReach": "C, 1",
+      "baseWeight": 1.96,
+      "finalWeight": 1.96,
+      "baseCost": 100,
+      "finalCost": 200,
+      "gripParts": [
+        {
+          "inventoryId": "480c87fa-a47b-4466-aa54-6cc8bf87cadd",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "e1e79b62-bb07-4757-908f-d0395b578c3e",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "3572e30e-9e18-423f-957d-fc7494d1f2b7",
+        "customName": "Short Sword",
+        "baseType": "Short Sword",
+        "baseSkill": "Shortsword",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": null,
+        "maxCharges": null,
+        "condition": "Fine",
+        "baseReach": "C, 1",
+        "baseWeight": 1.96,
+        "finalWeight": 1.96,
+        "baseCost": 100,
+        "finalCost": 200,
+        "gripParts": [
+          {
+            "inventoryId": "480c87fa-a47b-4466-aa54-6cc8bf87cadd",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "e1e79b62-bb07-4757-908f-d0395b578c3e",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "480c87fa-a47b-4466-aa54-6cc8bf87cadd",
+          "name": "Short Hilt",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 26,
+          "weight": 0.49,
+          "isInstalled": true,
+          "installedInMeleeId": "3572e30e-9e18-423f-957d-fc7494d1f2b7",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Knife/Smallsword. 1-handed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "e1e79b62-bb07-4757-908f-d0395b578c3e",
+          "name": "Light Blade",
+          "category": "Melee Head",
+          "materialId": "durasteel",
+          "cost": 74,
+          "weight": 1.47,
+          "isInstalled": true,
+          "installedInMeleeId": "3572e30e-9e18-423f-957d-fc7494d1f2b7",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Balanced.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Short Sword"
+    }
+  }
+}

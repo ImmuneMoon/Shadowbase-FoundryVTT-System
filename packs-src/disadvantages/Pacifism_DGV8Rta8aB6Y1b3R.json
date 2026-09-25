@@ -1,0 +1,34 @@
+{
+  "_id": "DGV8Rta8aB6Y1b3R",
+  "_key": "!items!DGV8Rta8aB6Y1b3R",
+  "name": "Pacifism",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 12600000,
+  "system": {
+    "row": {
+      "name": "Pacifism",
+      "points": -10,
+      "level": null,
+      "description": "The character has a deeply ingrained aversion to violence. While noble, this can make you reluctant to act decisively in dangerous situations, or make you a target for those who exploit your non-violent stance. Examples: Cannot Harm Innocents (-10 points); Self-Defense Only (-15 points).",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Pacifism|Mental"
+    }
+  }
+}

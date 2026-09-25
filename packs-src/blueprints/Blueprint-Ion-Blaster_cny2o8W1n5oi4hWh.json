@@ -1,0 +1,42 @@
+{
+  "_id": "cny2o8W1n5oi4hWh",
+  "_key": "!items!cny2o8W1n5oi4hWh",
+  "name": "Blueprint: Ion Blaster",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "lJCUDV7zwgRAU1yY",
+  "sort": 45600000,
+  "system": {
+    "row": {
+      "id": "bbd77216-b3f2-4244-9247-fe780967f0ae",
+      "name": "Blueprint: Ion Blaster",
+      "cost": 307,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Ion Blaster (Generation 0, proven, encoded, catalog design). Required to build Ion Blaster; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Ion Blaster",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1325,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Specialized Pistols|Ion Blaster"
+    }
+  }
+}

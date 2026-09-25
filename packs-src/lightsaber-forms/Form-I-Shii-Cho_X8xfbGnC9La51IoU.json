@@ -1,0 +1,90 @@
+{
+  "_id": "X8xfbGnC9La51IoU",
+  "_key": "!items!X8xfbGnC9La51IoU",
+  "name": "Form I: Shii-Cho",
+  "type": "lightsaberForm",
+  "img": "icons/svg/sword.svg",
+  "folder": null,
+  "sort": 100000,
+  "system": {
+    "row": {
+      "name": "Form I: Shii-Cho",
+      "level": 1,
+      "baselinePoints": 0
+    },
+    "source": "lightsaberForms",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "level": 1,
+        "cpCost": 10,
+        "effect": "You gain a +1 bonus to your Parry score when using a lightsaber. You may target one additional opponent in a single attack action at a -4 penalty to skill for each additional target.",
+        "characterTier": "Apprentice",
+        "applies": {
+          "parry": 1
+        },
+        "conditional": []
+      },
+      {
+        "level": 2,
+        "cpCost": 20,
+        "effect": "You gain a +2 bonus to your Parry score. You may target one additional opponent at a -3 penalty. You gain a +1 bonus to your attack roll against any opponent who parries your attack.",
+        "characterTier": "Adept",
+        "applies": {
+          "parry": 2
+        },
+        "conditional": [
+          {
+            "target": "attack",
+            "value": 1,
+            "when": "against any opponent who parries your attack"
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "cpCost": 35,
+        "effect": "You gain a +3 bonus to your Parry score. You may target two additional opponents at a -3 penalty each. You gain a +2 bonus to your attack roll against any opponent who parries your attack, and you may make a rapid Feint and attack against one opponent at a -1 skill penalty to the attack.",
+        "characterTier": "Expert",
+        "applies": {
+          "parry": 3
+        },
+        "conditional": [
+          {
+            "target": "attack",
+            "value": 2,
+            "when": "against any opponent who parries your attack"
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "cpCost": 55,
+        "effect": "You gain a +4 bonus to your Parry score. You may target two additional opponents at a -2 penalty each. You gain a +3 bonus to your attack roll against any opponent who parries your attack, and you may make a rapid Feint and attack against one opponent with no penalty to the attack. You are adept at breaking defenses, gaining +1 damage against shields or active defenses.",
+        "characterTier": "Master",
+        "applies": {
+          "parry": 4
+        },
+        "conditional": [
+          {
+            "target": "attack",
+            "value": 3,
+            "when": "against any opponent who parries your attack"
+          }
+        ]
+      }
+    ],
+    "catalog": "lightsaber-forms"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-forms",
+      "key": "Form I: Shii-Cho"
+    }
+  }
+}

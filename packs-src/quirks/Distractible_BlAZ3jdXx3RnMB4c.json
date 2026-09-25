@@ -1,0 +1,32 @@
+{
+  "_id": "BlAZ3jdXx3RnMB4c",
+  "_key": "!items!BlAZ3jdXx3RnMB4c",
+  "name": "Distractible",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "wQgtUSRK4J8QHzA7",
+  "sort": 1300000,
+  "system": {
+    "row": {
+      "name": "Distractible",
+      "points": -1,
+      "description": "Your attention wanders easily. A passing datapad screen or an interesting conversation can pull you away from the task at hand.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Distractible"
+    }
+  }
+}

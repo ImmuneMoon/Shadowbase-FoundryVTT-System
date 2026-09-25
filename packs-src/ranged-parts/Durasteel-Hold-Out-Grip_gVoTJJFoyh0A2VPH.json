@@ -1,0 +1,46 @@
+{
+  "_id": "gVoTJJFoyh0A2VPH",
+  "_key": "!items!gVoTJJFoyh0A2VPH",
+  "name": "Durasteel Hold-Out Grip",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "6BrK3rjtho5KeSLo",
+  "sort": 100000,
+  "system": {
+    "row": {
+      "id": "eaef514d-475f-4128-b758-e48004f6ec58",
+      "name": "Durasteel Hold-Out Grip",
+      "category": "Ranged Grip",
+      "cost": 26,
+      "weight": 0.49,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "hold-out-grip",
+      "materialId": "durasteel",
+      "notes": "Concealable, palm-sized.",
+      "effect": "Concealable, palm-sized.",
+      "energyResBonus": 0,
+      "volume": 0.001,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "hold-out-grip"
+    }
+  }
+}

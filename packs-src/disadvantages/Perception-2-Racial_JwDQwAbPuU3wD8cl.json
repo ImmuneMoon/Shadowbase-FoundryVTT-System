@@ -1,0 +1,34 @@
+{
+  "_id": "JwDQwAbPuU3wD8cl",
+  "_key": "!items!JwDQwAbPuU3wD8cl",
+  "name": "Perception -2 (Racial)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "XWDBqE5xIGYEuyLo",
+  "sort": 2800000,
+  "system": {
+    "row": {
+      "name": "Perception -2 (Racial)",
+      "points": 0,
+      "level": null,
+      "description": "Species-based sensory awareness.",
+      "category": "Racial",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Perception -2 (Racial)|Racial"
+    }
+  }
+}

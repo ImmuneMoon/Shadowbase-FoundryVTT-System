@@ -1,0 +1,51 @@
+{
+  "_id": "y7EmvU83dCXaqdsn",
+  "_key": "!items!y7EmvU83dCXaqdsn",
+  "name": "Chrysalis Beast Mutation",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "joTOdeYSoLzidovy",
+  "sort": 300000,
+  "system": {
+    "row": {
+      "name": "Chrysalis Beast Mutation",
+      "level": 1,
+      "cpCost": 40,
+      "fpCost": 20,
+      "effect": "Creature gains +1d ST/HT, DR 4, and aggressive loyalty. Crit fail: Beast attacks caster. Incantation: 1 hour.",
+      "characterTier": "Master",
+      "baseSkill": "Sith Alchemy (IQ/Hard) vs Target’s HT",
+      "category": "Sith Sorcery/Alchemy",
+      "alignment": "DS",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Chrysalis Beast Mutation",
+        "description": "Mutates a living creature into a dark side abomination (e.g., Massassi, mutated Rancor).",
+        "category": "Sith Sorcery/Alchemy",
+        "level": 1,
+        "cpCost": 40,
+        "fpCost": 20,
+        "alignment": "DS",
+        "baseSkill": "Sith Alchemy (IQ/Hard) vs Target’s HT",
+        "characterTier": "Master",
+        "effect": "Creature gains +1d ST/HT, DR 4, and aggressive loyalty. Crit fail: Beast attacks caster. Incantation: 1 hour."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Chrysalis Beast Mutation"
+    }
+  }
+}

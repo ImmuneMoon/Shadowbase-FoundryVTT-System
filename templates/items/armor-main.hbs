@@ -1,0 +1,87 @@
+{{!-- templates/items/armor-main.hbs - armor-item-card.tsx (:585-680 header facts, :759-790 the per-location DR entries,
+     :848-870 fit and Inherent Protections, :1076-1140 Maintenance Protocol): identity, the DR table with the listed
+     figure beside the tracked current DR, the derived figures, the limb it is worn on, an energy shield's state.
+     Context: main (armor.mjs), editable, owned, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--armor {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    {{> "shadowbase.item.tiles" tiles=main.tiles}}
+    <div class="sb-item-grid">
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Armor.Type"}}</span>
+        <select class="sb-select" name="system.row.type" {{disabled (not editable)}}>{{#each main.types}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Armor.Slot"}}</span>
+        <select class="sb-select" name="system.row.slot" {{disabled (not editable)}}>{{#each main.slots}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Armor.Tier"}}</span>
+        <select class="sb-select" name="sel.tier" {{disabled (not editable)}}>{{#each main.tiers}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      <label class="sb-field" title="{{localize "SHADOWBASE.Item.Armor.FitHint" sm=main.wearerSm}}"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Armor.ItemSm"}}</span>
+        <span class="sb-hrow sb-hrow--tight"><input type="number" class="sb-input sb-input--sm" name="system.row.itemSizeModifier" value="{{main.itemSizeModifier}}" data-dtype="Number" step="0.25" {{disabled (not editable)}}><span class="sb-badge {{#if main.fit.ok}}sb-badge-outline{{else}}sb-badge-destructive{{/if}}">{{main.fit.label}}</span></span>
+      </label>
+      {{#if main.wornLocation.available}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Armor.WornOn"}}</span>
+        <select class="sb-select" name="sel.wornLocationId" {{disabled (not editable)}}>{{#each main.wornLocation.options}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{/if}}
+      {{#if main.isClothing}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Condition.Durability"}}</span><input type="number" class="sb-input" name="system.row.durability" value="{{main.durability}}" data-dtype="Number" min="0" {{disabled (not editable)}}></label>
+      {{/if}}
+    </div>
+    <div class="sb-hrow sb-hrow--tight sb-item__badges">
+      <label class="sb-check-row sb-check-row--tiny"><input type="checkbox" name="system.row.sealed" {{checked main.sealed}} {{disabled (not editable)}}> {{localize "SHADOWBASE.Sheet.Inventory.Sealed"}}</label>
+      <label class="sb-check-row sb-check-row--tiny"><input type="checkbox" name="system.row.sleeveless" {{checked main.sleeveless}} {{disabled (not editable)}}> {{localize "SHADOWBASE.Item.Armor.Sleeveless"}}</label>
+      <span class="sb-badge {{#if main.condition.fine}}sb-badge-outline{{else}}sb-badge-destructive{{/if}}">{{main.condition.text}}</span>
+      {{#if main.canRepair}}<button type="button" class="sb-btn sb-btn-outline sb-btn-xs sb-text-green" data-action="field-repair" title="{{localize "SHADOWBASE.Item.Armor.MaintenanceHint"}}" {{disabled (not editable)}}><i class="fa-solid fa-wrench"></i> {{localize "SHADOWBASE.Item.Armor.Maintenance"}}</button>{{/if}}
+      {{#if main.flags.flawed}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Sheet.Weapon.Flawed"}}</span>{{/if}}
+      {{#if main.flags.isCustomBuild}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Item.Armor.CustomBuild"}}</span>{{/if}}
+      {{#if main.flags.isSeveredRemnant}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Item.Armor.SeveredRemnant"}}</span>{{/if}}
+      {{#if main.setId}}<span class="sb-badge sb-badge-secondary"><i class="{{sbIcon 'Layers'}}"></i> {{main.setId}}</span>{{/if}}
+      {{#if main.inCatalog}}<span class="sb-badge sb-badge-outline sb-badge-accent">{{localize "SHADOWBASE.Item.Trait.InLibrary"}}</span>{{/if}}
+    </div>
+    {{#if main.coverage.length}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Sheet.Inventory.Covers"}}: {{#each main.coverage}}<span class="sb-tag sb-tag--muted">{{this}}</span>{{/each}}</p>{{/if}}
+  </div>
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Shield'}}"></i> {{localize "SHADOWBASE.Item.Armor.DrByLocation"}}</h4>
+    {{#if main.hasDrEntries}}
+    <div class="sb-table-wrap">
+    <table class="sb-table sb-table--dense sb-dr-table">
+      <thead><tr><th>{{localize "SHADOWBASE.Item.Armor.Location"}}</th><th class="sb-num">{{localize "SHADOWBASE.Item.Armor.Listed"}}</th><th class="sb-num">{{localize "SHADOWBASE.Item.Armor.CurrentDr"}}</th></tr></thead>
+      <tbody>
+        {{#each main.drEntries}}
+        <tr class="{{#if this.degraded}}is-degraded{{/if}}">
+          <td>{{this.name}}</td>
+          <td class="sb-num sb-mono">{{this.listed}}</td>
+          <td class="sb-num"><input type="number" class="sb-input sb-input--tiny" name="dr.{{this.locationId}}" value="{{this.dr}}" data-dtype="Number" min="0" step="1" {{disabled (not @root.editable)}}></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    </div>
+    {{else}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Armor.NoDrEntries"}}</p>{{/if}}
+    <div class="sb-hrow sb-hrow--tight">
+      <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="reset-dr-entries" {{disabled (not owned)}} title="{{localize "SHADOWBASE.Item.Armor.ResetDrHint"}}"><i class="{{sbIcon 'reset'}}"></i> {{localize "SHADOWBASE.Item.Armor.ResetDr"}}</button>
+      {{#if main.drNotes}}<span class="sb-text-muted sb-text-xs">{{main.drNotes}}</span>{{/if}}
+      {{#if main.baseDR}}<span class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Armor.BaseDr" n=main.baseDR}}</span>{{/if}}
+    </div>
+  </div>
+  {{#if main.isShield}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'ShieldCheck'}}"></i> {{localize "SHADOWBASE.Item.Armor.EnergyShield"}}</h4>
+    <div class="sb-item-grid">
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Armor.PowerCell"}}</span>
+        <select class="sb-select" name="cell" {{disabled (not owned)}} {{disabled (not editable)}}>{{#each main.cell.options}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      <div class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Blaster.Charges"}}</span><output class="sb-input sb-input--calc sb-mono">{{#if main.cell.maxCharges}}{{main.cell.currentCharges}} / {{main.cell.maxCharges}}{{else}}—{{/if}}</output></div>
+    </div>
+    <p class="sb-text-xs">{{#if main.shield}}{{localize "SHADOWBASE.Item.Armor.ShieldLine" dr=main.shield.dr active=main.shield.activeDr}}{{#if main.shield.note}} · {{main.shield.note}}{{/if}}{{else}}{{localize "SHADOWBASE.Item.Armor.ShieldUnknown"}}{{/if}}</p>
+  </div>
+  {{/if}}
+  {{#if main.modifiers.length}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title">{{localize "SHADOWBASE.Item.Trait.Modifiers"}}</h4>
+    {{> "shadowbase.badges" badges=main.modifiers}}
+  </div>
+  {{/if}}
+  {{#if main.penalties}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Armor.Penalties"}}: {{main.penalties}}</p>{{/if}}
+  {{#if main.effects}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Armor.Effects"}}: {{main.effects}}</p>{{/if}}
+</section>

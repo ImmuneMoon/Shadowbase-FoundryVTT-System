@@ -1,0 +1,39 @@
+{
+  "_id": "mNnTKslKAEPIcyQw",
+  "_key": "!items!mNnTKslKAEPIcyQw",
+  "name": "Articulated Manipulator",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 9300000,
+  "system": {
+    "row": {
+      "id": "c33de4db-b7d6-4db1-b9ab-2d506bbf6706",
+      "name": "Articulated Manipulator",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 952,
+      "weight": 5,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "art-manip",
+      "description": "Extra Arm 1 (Short, Weak)"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "art-manip"
+    }
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "_id": "AEszor9mlC61TR93",
+  "_key": "!items!AEszor9mlC61TR93",
+  "name": "Zabrak Tystel Mark III",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "ic06auazNKJrut2o",
+  "sort": 5100000,
+  "system": {
+    "row": {
+      "id": "b183499b-b581-46a4-8158-8eb96ac3cbee",
+      "customName": "Zabrak Tystel Mark III",
+      "baseType": "Zabrak Tystel Mark III",
+      "baseSkill": "Guns (Blaster Pistol)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 11.5,
+      "finalWeight": 11.5,
+      "baseCost": 922,
+      "finalCost": 5532,
+      "currentCharges": 200,
+      "maxCharges": 200,
+      "loadedAmmunitionId": "7c3f4954-2bfb-4c11-9806-94692f8b96f2",
+      "loadedAmmunitionData": {
+        "id": "7c3f4954-2bfb-4c11-9806-94692f8b96f2",
+        "name": "Heavy Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 200,
+        "maxCharges": 200,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "A high-capacity pack for military-grade repeaters and cannons. A gas top-up (60 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "oversized-grip",
+        "inventoryId": "028b0632-a256-4a3e-8aaf-ecd1228707a5",
+        "materialId": "durasteel"
+      },
+      "receiverPart": {
+        "partId": "heavy-receiver",
+        "inventoryId": "389ac9c3-d240-4c37-a7a9-b726750b35dd",
+        "materialId": "durasteel"
+      },
+      "barrelPart": {
+        "partId": "oversized-emitter",
+        "inventoryId": "82ec4a8f-473b-4b3d-b4fb-9582f3a13981",
+        "materialId": "durasteel"
+      },
+      "targetingPart": {
+        "partId": "advanced-targeting",
+        "inventoryId": "d4dfd4f0-eabf-4372-a0ca-cad780ea7985"
+      },
+      "powerUnitPart": {
+        "partId": "heavy-pwr-pack",
+        "inventoryId": "43e45726-1695-4276-a852-22b56eaf4689"
+      },
+      "barrelEmitterModId": "c9499d6c-5962-4bab-84b5-e979556b5c8f",
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "b183499b-b581-46a4-8158-8eb96ac3cbee",
+        "customName": "Zabrak Tystel Mark III",
+        "baseType": "Zabrak Tystel Mark III",
+        "baseSkill": "Guns (Blaster Pistol)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 11.5,
+        "finalWeight": 11.5,
+        "baseCost": 922,
+        "finalCost": 5532,
+        "currentCharges": 200,
+        "maxCharges": 200,
+        "loadedAmmunitionId": "7c3f4954-2bfb-4c11-9806-94692f8b96f2",
+        "loadedAmmunitionData": {
+          "id": "7c3f4954-2bfb-4c11-9806-94692f8b96f2",
+          "name": "Heavy Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 200,
+          "maxCharges": 200,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "A high-capacity pack for military-grade repeaters and cannons. A gas top-up (60 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "oversized-grip",
+          "inventoryId": "028b0632-a256-4a3e-8aaf-ecd1228707a5",
+          "materialId": "durasteel"
+        },
+        "receiverPart": {
+          "partId": "heavy-receiver",
+          "inventoryId": "389ac9c3-d240-4c37-a7a9-b726750b35dd",
+          "materialId": "durasteel"
+        },
+        "barrelPart": {
+          "partId": "oversized-emitter",
+          "inventoryId": "82ec4a8f-473b-4b3d-b4fb-9582f3a13981",
+          "materialId": "durasteel"
+        },
+        "targetingPart": {
+          "partId": "advanced-targeting",
+          "inventoryId": "d4dfd4f0-eabf-4372-a0ca-cad780ea7985"
+        },
+        "powerUnitPart": {
+          "partId": "heavy-pwr-pack",
+          "inventoryId": "43e45726-1695-4276-a852-22b56eaf4689"
+        },
+        "barrelEmitterModId": "c9499d6c-5962-4bab-84b5-e979556b5c8f",
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "028b0632-a256-4a3e-8aaf-ecd1228707a5",
+          "name": "Oversized Grip",
+          "partId": "oversized-grip",
+          "category": "Ranged Grip",
+          "materialId": "durasteel",
+          "cost": 86,
+          "weight": 1.715,
+          "isInstalled": true,
+          "installedInBlasterId": "b183499b-b581-46a4-8158-8eb96ac3cbee",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Large, heavy-duty sidearm grip."
+        },
+        {
+          "id": "389ac9c3-d240-4c37-a7a9-b726750b35dd",
+          "name": "Heavy Receiver",
+          "partId": "heavy-receiver",
+          "category": "Ranged Receiver",
+          "materialId": "durasteel",
+          "cost": 74,
+          "weight": 1.47,
+          "isInstalled": true,
+          "installedInBlasterId": "b183499b-b581-46a4-8158-8eb96ac3cbee",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Heavy payload action."
+        },
+        {
+          "id": "82ec4a8f-473b-4b3d-b4fb-9582f3a13981",
+          "name": "Oversized Emitter",
+          "partId": "oversized-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "durasteel",
+          "cost": 196,
+          "weight": 3.92,
+          "isInstalled": true,
+          "installedInBlasterId": "b183499b-b581-46a4-8158-8eb96ac3cbee",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "d4dfd4f0-eabf-4372-a0ca-cad780ea7985",
+          "name": "Advanced Targeting Module",
+          "partId": "advanced-targeting",
+          "category": "Ranged Targeting",
+          "cost": 70,
+          "weight": 0.9,
+          "isInstalled": true,
+          "installedInBlasterId": "b183499b-b581-46a4-8158-8eb96ac3cbee",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Military-grade tracking algorithms."
+        },
+        {
+          "id": "43e45726-1695-4276-a852-22b56eaf4689",
+          "name": "Heavy Power Pack",
+          "partId": "heavy-pwr-pack",
+          "category": "Power Unit",
+          "cost": 420,
+          "weight": 2,
+          "isInstalled": true,
+          "installedInBlasterId": "b183499b-b581-46a4-8158-8eb96ac3cbee",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "c9499d6c-5962-4bab-84b5-e979556b5c8f",
+          "name": "Weighted Barrel Shroud",
+          "category": "Barrel/Emitter",
+          "cost": 76,
+          "weight": 1.52,
+          "isInstalled": true,
+          "installedInBlasterId": "b183499b-b581-46a4-8158-8eb96ac3cbee",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Allows use as a club (thr cr or thr+1 cr) without damaging internals."
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Zabrak Tystel Mark III"
+    }
+  }
+}

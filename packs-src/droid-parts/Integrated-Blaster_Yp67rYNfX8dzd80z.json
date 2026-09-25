@@ -1,0 +1,39 @@
+{
+  "_id": "Yp67rYNfX8dzd80z",
+  "_key": "!items!Yp67rYNfX8dzd80z",
+  "name": "Integrated Blaster",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 9100000,
+  "system": {
+    "row": {
+      "id": "8656b415-3811-4090-892f-168a9291e8a2",
+      "name": "Integrated Blaster",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 2100,
+      "weight": 8,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "integ-blaster",
+      "description": "Innate Attack [15]"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "integ-blaster"
+    }
+  }
+}

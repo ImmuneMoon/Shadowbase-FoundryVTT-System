@@ -1,0 +1,46 @@
+{
+  "_id": "bjVswiONUZyluQvY",
+  "_key": "!items!bjVswiONUZyluQvY",
+  "name": "Repulsorlift Assault Tank (e.g., AAT precursor)",
+  "type": "vehicle",
+  "img": "icons/svg/direction.svg",
+  "folder": "ihuSXoinyPE3l7QQ",
+  "sort": 900000,
+  "system": {
+    "row": {
+      "name": "Repulsorlift Assault Tank (e.g., AAT precursor)",
+      "type": "Military Atmospheric Vehicle",
+      "category": "Atmospheric",
+      "handling": "0",
+      "speed": "40 mph",
+      "accelDecel": "3/5",
+      "hp": 200,
+      "dr": 15,
+      "crew": "3-4",
+      "passengers": "0",
+      "cargo": "0",
+      "cost": 250000,
+      "weapons": "1x Main Cannon (8d exp), 2x Heavy Blasters (7d burn)",
+      "weaponSkill": "Gunner (Vehicle)",
+      "hyperdrive": "N/A",
+      "notes": "Relies on powerful repulsorlifts to glide over the battlefield, offering superior mobility.",
+      "id": "272f1f18-d21d-4456-86ca-283d842db00b",
+      "quantity": 1
+    },
+    "source": "vehicles",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "vehicles"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "vehicles",
+      "key": "Repulsorlift Assault Tank (e.g., AAT precursor)"
+    }
+  }
+}

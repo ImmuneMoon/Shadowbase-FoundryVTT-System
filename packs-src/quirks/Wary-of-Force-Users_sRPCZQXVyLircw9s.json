@@ -1,0 +1,32 @@
+{
+  "_id": "sRPCZQXVyLircw9s",
+  "_key": "!items!sRPCZQXVyLircw9s",
+  "name": "Wary of Force Users",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "J2wGZ0rpXlZB2j6l",
+  "sort": 4500000,
+  "system": {
+    "row": {
+      "name": "Wary of Force Users",
+      "points": -1,
+      "description": "Having seen or heard of the power wielded by Jedi and their dark counterparts, you are inherently suspicious of anyone who can use the Force. You keep your distance and watch them closely.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Wary of Force Users"
+    }
+  }
+}

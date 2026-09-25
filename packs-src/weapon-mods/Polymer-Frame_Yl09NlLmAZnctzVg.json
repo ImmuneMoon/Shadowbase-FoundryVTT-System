@@ -1,0 +1,46 @@
+{
+  "_id": "Yl09NlLmAZnctzVg",
+  "_key": "!items!Yl09NlLmAZnctzVg",
+  "name": "Polymer Frame",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "RVWiXn8XomUZ0ki2",
+  "sort": 900000,
+  "system": {
+    "row": {
+      "name": "Polymer Frame",
+      "category": "Stock/Chassis",
+      "cost": 570,
+      "weight": 0,
+      "notes": "Reduces the weapon's overall weight by 25% but reduces its HT by 2.",
+      "materials": [
+        {
+          "name": "Duraplast",
+          "amount": 1.5
+        },
+        {
+          "name": "Plastoid",
+          "amount": 1
+        }
+      ],
+      "id": "ee2ab75d-1e7d-426d-a7ed-368a3a0dfe37",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Polymer Frame"
+    }
+  }
+}

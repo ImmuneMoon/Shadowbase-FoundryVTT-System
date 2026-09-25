@@ -1,0 +1,36 @@
+{
+  "_id": "owm1pb76axXT2wLd",
+  "_key": "!items!owm1pb76axXT2wLd",
+  "name": "Stealth Plating/Signature Dampeners",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DapjGzFEDYWwk37E",
+  "sort": 1700000,
+  "system": {
+    "row": {
+      "id": "a6e11171-a57d-426b-94a8-a2ad6025055b",
+      "name": "Stealth Plating/Signature Dampeners",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Starship Modification",
+      "cost": 0,
+      "weight": 0,
+      "quantity": 1,
+      "description": "Utility modification. -2 to enemy sensor rolls to detect ship. Cost: 20% of the hull cost."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "starship-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "starship-mods",
+      "key": "Stealth Plating/Signature Dampeners"
+    }
+  }
+}

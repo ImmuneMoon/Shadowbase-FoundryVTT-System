@@ -1,0 +1,42 @@
+{
+  "_id": "AXxVogSPnp5SkYl3",
+  "_key": "!items!AXxVogSPnp5SkYl3",
+  "name": "Blueprint: Pistol Shot (Armor-Piercing)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DvRG95q4QWZQnNFm",
+  "sort": 1700000,
+  "system": {
+    "row": {
+      "id": "60a5d9f0-5cdb-4260-9645-7182fba35888",
+      "name": "Blueprint: Pistol Shot (Armor-Piercing)",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Pistol Shot (Armor-Piercing) (Generation 0, proven, encoded, catalog design). Required to build Pistol Shot (Armor-Piercing); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Pistol Shot (Armor-Piercing)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3.7777777777777777,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Ammunition|Pistol Shot (Armor-Piercing)"
+    }
+  }
+}

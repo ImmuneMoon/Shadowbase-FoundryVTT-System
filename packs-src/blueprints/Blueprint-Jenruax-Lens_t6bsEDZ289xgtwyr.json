@@ -1,0 +1,42 @@
+{
+  "_id": "t6bsEDZ289xgtwyr",
+  "_key": "!items!t6bsEDZ289xgtwyr",
+  "name": "Blueprint: Jenruax Lens",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "KDepxQG1NOlrKZaZ",
+  "sort": 33500000,
+  "system": {
+    "row": {
+      "id": "478fd8cc-63e7-4f49-bc17-91a5513670b4",
+      "name": "Blueprint: Jenruax Lens",
+      "cost": 260,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Jenruax Lens (Generation 0, proven, encoded, catalog design). Required to build Jenruax Lens; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Jenruax Lens",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 852.6666666666667,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Internal|Jenruax Lens"
+    }
+  }
+}

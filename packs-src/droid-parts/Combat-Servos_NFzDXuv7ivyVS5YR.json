@@ -1,0 +1,39 @@
+{
+  "_id": "NFzDXuv7ivyVS5YR",
+  "_key": "!items!NFzDXuv7ivyVS5YR",
+  "name": "Combat Servos",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "qObejjeHU0HEzNSH",
+  "sort": 7000000,
+  "system": {
+    "row": {
+      "id": "fceebef8-4494-43d2-a4ea-70c869adfdfe",
+      "name": "Combat Servos",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Upgrade",
+      "cost": 1500,
+      "weight": 10,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "combat-servos",
+      "description": "+1 Striking ST"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "combat-servos"
+    }
+  }
+}

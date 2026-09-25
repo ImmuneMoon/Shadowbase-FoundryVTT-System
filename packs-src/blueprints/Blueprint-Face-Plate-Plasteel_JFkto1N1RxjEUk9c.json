@@ -1,0 +1,42 @@
+{
+  "_id": "JFkto1N1RxjEUk9c",
+  "_key": "!items!JFkto1N1RxjEUk9c",
+  "name": "Blueprint: Face Plate (Plasteel)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 6900000,
+  "system": {
+    "row": {
+      "id": "766582a4-9493-433f-a866-1c813e9b5efc",
+      "name": "Blueprint: Face Plate (Plasteel)",
+      "cost": 185,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Face Plate (Plasteel) (Generation 0, proven, encoded, catalog design). Required to build Face Plate (Plasteel); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Face Plate (Plasteel)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 107,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Face Plate (Plasteel)"
+    }
+  }
+}

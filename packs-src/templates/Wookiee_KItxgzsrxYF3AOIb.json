@@ -1,0 +1,606 @@
+{
+  "_id": "KItxgzsrxYF3AOIb",
+  "_key": "!actors!KItxgzsrxYF3AOIb",
+  "name": "Wookiee",
+  "type": "character",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "tOOcAKJoPw2S7Ljt",
+  "sort": 1800000,
+  "system": {
+    "legacy": {},
+    "playerName": "",
+    "species": "Wookiee",
+    "homeworld": "",
+    "characterPortrait": null,
+    "campaign": "Shadows of the Mandalorian Wars",
+    "pointTotal": 150,
+    "turnCounter": 0,
+    "facing": 0,
+    "incomingBearing": 0,
+    "threatEngaged": false,
+    "incomingArc": null,
+    "facingChangeUsed": false,
+    "posture": "standing",
+    "elevation": 0,
+    "parriesThisTurn": 0,
+    "height": "2.10 m",
+    "weight": "142 kg / 312 lb",
+    "sizeModifier": 0.36,
+    "age": 0,
+    "appearance": "",
+    "techLevel": "",
+    "isDroid": false,
+    "powerPoints": 100,
+    "lightSidePoints": 0,
+    "darkSidePoints": 0,
+    "trackDigital": false,
+    "trackPhysical": false,
+    "totalCredits": 7000,
+    "forceAlignment": 0,
+    "isStartingPointsMode": true,
+    "isConstructed": false,
+    "cpBaseline": 0,
+    "stBaseline": 10,
+    "dxBaseline": 10,
+    "iqBaseline": 10,
+    "htBaseline": 10,
+    "hitPointsBaseline": 0,
+    "endurancePointsBaseline": 0,
+    "forcePointsBaseline": 0,
+    "willBaseline": 0,
+    "perceptionBaseline": 0,
+    "frightCheckBaseline": 0,
+    "basicSpeedBaseline": 0,
+    "basicMoveBaseline": 0,
+    "visionBaseline": 0,
+    "hearingBaseline": 0,
+    "tasteAndSmellBaseline": 0,
+    "touchBaseline": 0,
+    "languagesBaseline": 0,
+    "culturalFamiliaritiesBaseline": 0,
+    "literacyBaseline": -10,
+    "languageEntries": [
+      {
+        "id": "fe382e18-f562-48eb-b432-cce41a284a90",
+        "tongue": "Shyriiwook",
+        "tier": "native"
+      }
+    ],
+    "republicRaised": false,
+    "frightCheck": null,
+    "basicSpeed": null,
+    "basicMove": null,
+    "selectedParrySkill": null,
+    "selectedBlockSkill": null,
+    "activeLightsaberForm": null,
+    "hitLocations": [
+      {
+        "name": "Head",
+        "type": "Head",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 2,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 3,
+        "installedHardwareIds": [],
+        "id": "0cd26557-f8fc-4c46-92fb-875364f9b6a8"
+      },
+      {
+        "name": "Face",
+        "type": "Face",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 5,
+        "installedHardwareIds": [],
+        "id": "ce0c639e-045d-4e95-98ac-6ecc7bd1ef12"
+      },
+      {
+        "name": "Upper Torso",
+        "type": "Vitals",
+        "side": "Center",
+        "relativeSM": -3,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 17,
+        "installedHardwareIds": [],
+        "id": "201729a0-a1c0-4ccb-bdf4-7d714e024db2"
+      },
+      {
+        "name": "Torso",
+        "type": "Torso",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 10,
+        "installedHardwareIds": [],
+        "id": "1bbfef40-828f-4dc0-80fc-851c08b51cf5"
+      },
+      {
+        "name": "Right Arm",
+        "type": "Arm",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 7,
+        "installedHardwareIds": [],
+        "id": "9503c3c0-c288-4a72-bfb6-374fee4691b9"
+      },
+      {
+        "name": "Right Hand",
+        "type": "Hand",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "d044297d-f3b4-41a7-85c2-9e360b0c4474"
+      },
+      {
+        "name": "Left Arm",
+        "type": "Arm",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 8,
+        "installedHardwareIds": [],
+        "id": "9fb941b7-1421-45a4-b56a-5b86052aff22"
+      },
+      {
+        "name": "Left Hand",
+        "type": "Hand",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "35b030d0-0c6c-4952-8625-9a0d5571b7fa"
+      },
+      {
+        "name": "Right Leg",
+        "type": "Leg",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "71411aa8-caab-44bb-9924-06323a762a0b"
+      },
+      {
+        "name": "Right Foot",
+        "type": "Foot",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "994b5625-dff2-4952-8cc8-23ea912c0813"
+      },
+      {
+        "name": "Left Leg",
+        "type": "Leg",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "2e4374c1-f0f1-44dc-a598-922419217f8b"
+      },
+      {
+        "name": "Left Foot",
+        "type": "Foot",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "ad457c16-14eb-4bcf-ad1b-bae71e0b451b"
+      }
+    ],
+    "languages": "Shyriiwook (Native)",
+    "culturalFamiliarities": "Kashyyyk [0]",
+    "literacy": "Illiterate [-10]",
+    "description": "",
+    "background": "",
+    "notes": "",
+    "pointsAttributes": 0,
+    "pointsAdvantages": 0,
+    "pointsDisadvantages": 0,
+    "pointsOther": 0,
+    "cpTradedForCredits": 0,
+    "cpCreditsForm": "digital",
+    "currentHitPoints": 14,
+    "currentEndurancePoints": 10,
+    "currentForcePoints": 8,
+    "strength": 10,
+    "dexterity": 10,
+    "iq": 10,
+    "health": 10,
+    "hitPoints": null,
+    "will": null,
+    "perception": null,
+    "vision": null,
+    "hearing": null,
+    "tasteAndSmell": null,
+    "touch": null,
+    "endurancePoints": null,
+    "forcePoints": null,
+    "shipPosition": null,
+    "assignedStation": null,
+    "storageBoxes": [],
+    "droidBuild": {
+      "chassisId": null,
+      "powerCoreId": null,
+      "head": {
+        "componentId": null,
+        "processorId": null,
+        "memoryCoreId": null,
+        "sensorIds": [],
+        "externalModId": null
+      },
+      "arms": [],
+      "legs": [],
+      "chassisMods": {
+        "internalIds": [],
+        "externalIds": [],
+        "utilityIds": [],
+        "auxiliaryIds": [],
+        "motiveMountIds": [],
+        "reinforcementId": null,
+        "armorId": null,
+        "motivatorId": null,
+        "actuatorId": null,
+        "wiringId": null
+      }
+    },
+    "pinnedNotifications": [],
+    "useLiftingST": true,
+    "useStrikingST": true,
+    "useArmST": true
+  },
+  "prototypeToken": {
+    "name": "Wookiee",
+    "actorLink": true,
+    "displayName": 30,
+    "displayBars": 40,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "resources.hp"
+    },
+    "bar2": {
+      "attribute": "resources.ep"
+    }
+  },
+  "items": [
+    {
+      "_id": "4VjndWtC0gvPUIc2",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.4VjndWtC0gvPUIc2",
+      "name": "ST +4 (Racial)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "ST +4 (Racial)",
+          "points": 0,
+          "description": "Species-based physical power.",
+          "level": null,
+          "category": "Racial",
+          "modifiers": {
+            "strength": 4,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "yOCP6tXojNvPHWZI",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.yOCP6tXojNvPHWZI",
+      "name": "Damage Resistance (DR)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Damage Resistance (DR)",
+          "points": 5,
+          "level": 1,
+          "description": "DR 1",
+          "category": "Cybernetic",
+          "baselinePoints": 5
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "UT3ZPmcaDBV9no2r",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.UT3ZPmcaDBV9no2r",
+      "name": "Fit",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Fit",
+          "points": 5,
+          "description": "You are unusually robust and healthy, granting bonuses to Endurance Point (EP) recovery and resistance to illness. Ensures you can endure long campaigns, torture, or the rigors of galactic travel, serving any master or cause.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": 5
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "lGH5enlWr9Su0xTA",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.lGH5enlWr9Su0xTA",
+      "name": "High Pain Threshold",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "High Pain Threshold",
+          "points": 10,
+          "description": "You are unusually resistant to the effects of pain, suffering fewer penalties from injury. Allows you to endure torture or continue fighting effectively even when severely wounded, a vital trait for a survivor in a brutal war.",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": 10
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "mP1KNUaHWW5CirGF",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.mP1KNUaHWW5CirGF",
+      "name": "IQ -2 (Racial)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "IQ -2 (Racial)",
+          "points": 0,
+          "description": "Species-based mental acuity.",
+          "level": null,
+          "category": "Racial",
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": -2,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 0,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 0,
+            "parry": 0,
+            "block": 0,
+            "stunRecovery": 0,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "elByP0LTvTp3oiv1",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.elByP0LTvTp3oiv1",
+      "name": "Bad Temper",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Bad Temper",
+          "points": -10,
+          "description": "You are prone to anger and easily provoked, often leading to rash decisions or confrontations.",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": -10
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "xGf3ccDcZutlEj6Z",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.xGf3ccDcZutlEj6Z",
+      "name": "Code of Honor (Wookiee)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Code of Honor (Wookiee)",
+          "points": -10,
+          "description": "You live by the honor code of Kashyyyk: loyalty to family and clan above self, courage in the face of any enemy, hospitality to guests, and the duty to repay a debt in full. A life debt is one expression of this code - a Wookiee whose life is saved is bound to protect their rescuer, and their family, for as long as it takes. Breaking the code brings shame before all Wookiees, and a Wookiee who turns their claws on another in anger is cast out. Like any Code of Honor, it can be used to steer you into actions you would rather refuse, or to hold you to a promise.",
+          "level": null,
+          "category": "Cultural / Background",
+          "baselinePoints": -10
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "NyGZRYCyWetrbhNe",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.NyGZRYCyWetrbhNe",
+      "name": "Distinctive Features (8ft tall)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Distinctive Features (8ft tall)",
+          "points": -1,
+          "description": "Immense stature. You stand out in any normal-sized crowd and struggle to use standard-sized facilities.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": -1
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "tems07Bh01kwduUk",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.tems07Bh01kwduUk",
+      "name": "Roars when angered",
+      "type": "quirk",
+      "img": "icons/svg/aura.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Roars when angered",
+          "description": "Frustration or anger comes out as a full-throated Wookiee roar before it comes out as words. Impressive in a fight, inconvenient during negotiations or while hiding.",
+          "points": -1,
+          "baselinePoints": -1
+        },
+        "source": "quirks"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "lTU289T3MIEdpbec",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.lTU289T3MIEdpbec",
+      "name": "Credit Chip",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "00b4fb65-7b54-4877-b6ca-bccbfdb6d026",
+          "name": "Credit Chip",
+          "category": "Currencies",
+          "weight": 0.28,
+          "quantity": 1,
+          "storedValue": 7000,
+          "cost": 0,
+          "description": "Standardized storage for carrying digital Galactic Credits. Reading requires a datapad or terminal.",
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "templates",
+      "key": "wookiee",
+      "template": {
+        "key": "wookiee",
+        "category": "Species",
+        "description": "Powerful hairy humanoids from Kashyyyk. (Spent: 0)",
+        "migrated": true,
+        "notices": [
+          "language-entries"
+        ]
+      }
+    }
+  }
+}

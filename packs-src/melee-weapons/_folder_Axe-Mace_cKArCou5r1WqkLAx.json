@@ -1,0 +1,19 @@
+{
+  "_id": "cKArCou5r1WqkLAx",
+  "_key": "!folders!cKArCou5r1WqkLAx",
+  "name": "Axe/Mace",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 1100000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "path": [
+        "Axe/Mace"
+      ]
+    }
+  }
+}

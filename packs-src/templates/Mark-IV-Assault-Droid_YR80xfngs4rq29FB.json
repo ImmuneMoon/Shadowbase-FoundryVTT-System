@@ -1,0 +1,627 @@
+{
+  "_id": "YR80xfngs4rq29FB",
+  "_key": "!actors!YR80xfngs4rq29FB",
+  "name": "Mark IV Assault Droid",
+  "type": "character",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "vQod5iBtogydF5Dh",
+  "sort": 6100000,
+  "system": {
+    "legacy": {},
+    "playerName": "",
+    "species": "Droid (Elite Assault)",
+    "homeworld": "Czerka Corporation (various worlds)",
+    "characterPortrait": null,
+    "campaign": "Shadows of the Mandalorian Wars",
+    "pointTotal": 150,
+    "turnCounter": 0,
+    "facing": 0,
+    "incomingBearing": 0,
+    "threatEngaged": false,
+    "incomingArc": null,
+    "facingChangeUsed": false,
+    "posture": "standing",
+    "elevation": 0,
+    "parriesThisTurn": 0,
+    "height": "2.00 m",
+    "weight": "281 kg / 619 lb",
+    "sizeModifier": 0,
+    "age": 0,
+    "appearance": "",
+    "techLevel": "",
+    "isDroid": true,
+    "powerPoints": 500,
+    "lightSidePoints": 0,
+    "darkSidePoints": 0,
+    "trackDigital": false,
+    "trackPhysical": false,
+    "totalCredits": 7000,
+    "forceAlignment": 0,
+    "isStartingPointsMode": true,
+    "isConstructed": true,
+    "cpBaseline": 0,
+    "stBaseline": 10,
+    "dxBaseline": 10,
+    "iqBaseline": 10,
+    "htBaseline": 10,
+    "hitPointsBaseline": 0,
+    "endurancePointsBaseline": 0,
+    "forcePointsBaseline": 0,
+    "willBaseline": 0,
+    "perceptionBaseline": 0,
+    "frightCheckBaseline": 0,
+    "basicSpeedBaseline": 0,
+    "basicMoveBaseline": 0,
+    "visionBaseline": 0,
+    "hearingBaseline": 0,
+    "tasteAndSmellBaseline": 0,
+    "touchBaseline": 0,
+    "languagesBaseline": 0,
+    "culturalFamiliaritiesBaseline": 0,
+    "literacyBaseline": 0,
+    "languageEntries": [
+      {
+        "id": "11441059-1caf-4d20-92c6-0f73f1a20bf8",
+        "tongue": "Droidspeak",
+        "tier": "native",
+        "notes": "binary"
+      },
+      {
+        "id": "f1cef923-6db7-4559-b71b-a6a962c7ed96",
+        "tongue": "Basic",
+        "tier": "fluent",
+        "comprehensionOnly": true,
+        "granted": true
+      }
+    ],
+    "republicRaised": false,
+    "frightCheck": null,
+    "basicSpeed": null,
+    "basicMove": null,
+    "selectedParrySkill": null,
+    "selectedBlockSkill": null,
+    "activeLightsaberForm": null,
+    "hitLocations": [
+      {
+        "name": "Head",
+        "type": "Head",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 2,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 3,
+        "installedHardwareIds": [],
+        "id": "5ec4ea4b-e9ad-4563-a8fa-50d2e12232cc"
+      },
+      {
+        "name": "Face",
+        "type": "Face",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 5,
+        "installedHardwareIds": [],
+        "id": "c7bfb4ea-2d1e-4b29-97de-47854d42855e"
+      },
+      {
+        "name": "Upper Torso",
+        "type": "Vitals",
+        "side": "Center",
+        "relativeSM": -3,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 17,
+        "installedHardwareIds": [],
+        "id": "163879d8-8d05-4f06-8c94-d271e0c2b6c5"
+      },
+      {
+        "name": "Torso",
+        "type": "Torso",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 10,
+        "installedHardwareIds": [],
+        "id": "903e5d25-10eb-4d1b-8e09-194c0d8bdd77"
+      },
+      {
+        "name": "Right Arm",
+        "type": "Arm",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 7,
+        "installedHardwareIds": [],
+        "id": "004adff7-0d99-471c-b2be-040991ed7f89"
+      },
+      {
+        "name": "Right Hand",
+        "type": "Hand",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "bfbf5c9f-123b-43a3-ab76-588c9127046e"
+      },
+      {
+        "name": "Left Arm",
+        "type": "Arm",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 8,
+        "installedHardwareIds": [],
+        "id": "45971abf-7580-4ce6-82ac-976e92e37f8d"
+      },
+      {
+        "name": "Left Hand",
+        "type": "Hand",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "3db72699-bda7-4a27-8f1d-bc82090a49a1"
+      },
+      {
+        "name": "Right Leg",
+        "type": "Leg",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "f1498717-700c-4b31-9db0-e613cf36d84d"
+      },
+      {
+        "name": "Right Foot",
+        "type": "Foot",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "00045430-af6a-45d8-a34e-f9a477f9e1a6"
+      },
+      {
+        "name": "Left Leg",
+        "type": "Leg",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "e60d3837-fd6b-4234-83a2-4d38d87a3bdd"
+      },
+      {
+        "name": "Left Foot",
+        "type": "Foot",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "d6eeae86-3de6-452c-bfed-1a809b41c161"
+      }
+    ],
+    "languages": "Droidspeak (Native); Basic (Fluent, Comprehension-only, granted)",
+    "culturalFamiliarities": "",
+    "literacy": "",
+    "description": "",
+    "background": "",
+    "notes": "",
+    "pointsAttributes": 0,
+    "pointsAdvantages": 0,
+    "pointsDisadvantages": 0,
+    "pointsOther": 0,
+    "cpTradedForCredits": 0,
+    "cpCreditsForm": "digital",
+    "currentHitPoints": 21,
+    "currentEndurancePoints": 0,
+    "currentForcePoints": 0,
+    "strength": null,
+    "dexterity": null,
+    "iq": null,
+    "health": null,
+    "hitPoints": null,
+    "will": null,
+    "perception": null,
+    "vision": null,
+    "hearing": null,
+    "tasteAndSmell": null,
+    "touch": null,
+    "endurancePoints": null,
+    "forcePoints": null,
+    "shipPosition": null,
+    "assignedStation": null,
+    "storageBoxes": [],
+    "droidBuild": {
+      "chassisId": "mk3-quad",
+      "powerCoreId": "iso-5-core",
+      "head": {
+        "componentId": "assault-dome",
+        "processorId": "combat-matrix",
+        "coProcessorId": null,
+        "memoryCoreId": null,
+        "sensorIds": [
+          "optic-mkiii-iv-assault"
+        ],
+        "externalModId": null
+      },
+      "arms": [
+        {
+          "id": "abe81a28-cbb8-4386-959e-ad36d696231c",
+          "componentId": "mount-mk3-assault",
+          "side": "Right"
+        },
+        {
+          "id": "6c56237a-9845-4d34-a4cd-90867c2cbf21",
+          "componentId": "mount-mk3-assault",
+          "side": "Left"
+        }
+      ],
+      "legs": [
+        {
+          "id": "cb249a9e-2253-4404-850a-2ad0708f07bf",
+          "componentId": "arachnid-leg",
+          "side": "Right",
+          "actuatorId": "combat-servos"
+        },
+        {
+          "id": "2a81b208-6d9a-41b6-b844-99b37215c9fd",
+          "componentId": "arachnid-leg",
+          "side": "Left"
+        },
+        {
+          "id": "6e8d4d68-0813-4734-8421-1763032238d2",
+          "componentId": "arachnid-leg",
+          "side": "Right"
+        },
+        {
+          "id": "c83ea321-8ba4-4cb9-abbc-5825f4c9cea4",
+          "componentId": "arachnid-leg",
+          "side": "Left"
+        }
+      ],
+      "chassisMods": {
+        "internalIds": [],
+        "externalIds": [
+          "integ-blaster",
+          "integ-blaster",
+          "shield-proj"
+        ],
+        "utilityIds": [],
+        "auxiliaryIds": [],
+        "motiveMountIds": [],
+        "reinforcementId": "hp-reinf-3",
+        "armorId": "dr-plating-6",
+        "motivatorId": "move-motor-2",
+        "actuatorId": "st-servos-4",
+        "wiringId": "dx-wiring-3"
+      }
+    },
+    "pinnedNotifications": [],
+    "useLiftingST": true,
+    "useStrikingST": true,
+    "useArmST": true
+  },
+  "prototypeToken": {
+    "name": "Mark IV Assault Droid",
+    "actorLink": true,
+    "displayName": 30,
+    "displayBars": 40,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "resources.hp"
+    },
+    "bar2": {
+      "attribute": "resources.ep"
+    }
+  },
+  "items": [
+    {
+      "_id": "GdD1dK0bjy0zr8i1",
+      "_key": "!actors.items!YR80xfngs4rq29FB.GdD1dK0bjy0zr8i1",
+      "name": "Machine",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Machine",
+          "points": 25,
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "XsIMxi9eqDpqCx2M",
+      "_key": "!actors.items!YR80xfngs4rq29FB.XsIMxi9eqDpqCx2M",
+      "name": "Injury Tolerance (Unliving)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Injury Tolerance (Unliving)",
+          "points": 20,
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "Oe9zNVgyOg3Nt0zR",
+      "_key": "!actors.items!YR80xfngs4rq29FB.Oe9zNVgyOg3Nt0zR",
+      "name": "Digital Mind",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Digital Mind",
+          "points": 5,
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "EMMdTMssx6NXV5yp",
+      "_key": "!actors.items!YR80xfngs4rq29FB.EMMdTMssx6NXV5yp",
+      "name": "Combat Reflexes",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Combat Reflexes",
+          "points": 15,
+          "description": "You react quickly to threats and keep your composure under pressure. Grants a +1 bonus to active defenses, +2 to Fright Checks, and a +6 bonus to the IQ roll to recover from mental stun (Chapter 9). Those two bonuses are the whole of what steadiness buys: it makes freezing less likely and shorter, and does not make you immune to either. Turn order is unaffected; it is set by Basic Speed and is never rolled for (Chapter 7). Prerequisite: Force Sensitive (if taken as a Force-related advantage, representing a Force-user's enhanced combat intuition).",
+          "level": null,
+          "category": "Mental",
+          "modifiers": {
+            "strength": 0,
+            "dexterity": 0,
+            "iq": 0,
+            "health": 0,
+            "will": 0,
+            "perception": 0,
+            "move": 0,
+            "dodge": 1,
+            "dr": 0,
+            "carryCapacity": 0,
+            "endurancePoints": 0,
+            "forcePoints": 0,
+            "toHit": 0,
+            "basicSpeed": 0,
+            "hitPoints": 0,
+            "frightCheck": 2,
+            "parry": 1,
+            "block": 1,
+            "stunRecovery": 6,
+            "strikingSt": 0,
+            "liftingSt": 0,
+            "kickDamage": 0,
+            "jumpDistance": 0,
+            "frightImmune": false,
+            "moveMultiplier": 1
+          },
+          "baselinePoints": 15
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "WuUT5rD8dI3gexYm",
+      "_key": "!actors.items!YR80xfngs4rq29FB.WuUT5rD8dI3gexYm",
+      "name": "Unhealing (Total)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Unhealing (Total)",
+          "points": -30,
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "tDrNIqcjqn7ZJfTS",
+      "_key": "!actors.items!YR80xfngs4rq29FB.tDrNIqcjqn7ZJfTS",
+      "name": "Electrical",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Electrical",
+          "points": -20,
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "JaRQ88Y6lfcPEsd3",
+      "_key": "!actors.items!YR80xfngs4rq29FB.JaRQ88Y6lfcPEsd3",
+      "name": "Social Stigma (Valuable Property)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Social Stigma (Valuable Property)",
+          "points": -10,
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "24m18jg3MF5Js7RM",
+      "_key": "!actors.items!YR80xfngs4rq29FB.24m18jg3MF5Js7RM",
+      "name": "Callous",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Callous",
+          "points": -5,
+          "baselinePoints": -5
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "ki0Cohj38YSlzgPh",
+      "_key": "!actors.items!YR80xfngs4rq29FB.ki0Cohj38YSlzgPh",
+      "name": "Guns (Blaster Heavy Weapons)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Guns (Blaster Heavy Weapons)",
+          "relativeLevel": "DX/E",
+          "level": "15",
+          "points": 3,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "tnMLjl1jdepFuLIm",
+      "_key": "!actors.items!YR80xfngs4rq29FB.tnMLjl1jdepFuLIm",
+      "name": "Tactics",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Tactics",
+          "relativeLevel": "IQ/H",
+          "level": "10",
+          "points": 8,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "qZCFsldrHTGjcEiR",
+      "_key": "!actors.items!YR80xfngs4rq29FB.qZCFsldrHTGjcEiR",
+      "name": "Credit Chip",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "febd36c2-c5e3-4f2c-a2d1-2802596dbe09",
+          "name": "Credit Chip",
+          "category": "Currencies",
+          "weight": 0.28,
+          "quantity": 1,
+          "storedValue": 7000,
+          "cost": 0,
+          "description": "Standardized storage for carrying digital Galactic Credits. Reading requires a datapad or terminal.",
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "templates",
+      "key": "markIVAssault",
+      "template": {
+        "key": "markIVAssault",
+        "category": "Droids",
+        "description": "Beskar-plated elite walker on an experimental 500 PP core. (Cost: 20 CP)",
+        "migrated": true,
+        "notices": [
+          "language-entries"
+        ]
+      }
+    }
+  }
+}

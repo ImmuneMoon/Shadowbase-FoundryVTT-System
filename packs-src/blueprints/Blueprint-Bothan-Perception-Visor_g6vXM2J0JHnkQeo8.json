@@ -1,0 +1,42 @@
+{
+  "_id": "g6vXM2J0JHnkQeo8",
+  "_key": "!items!g6vXM2J0JHnkQeo8",
+  "name": "Blueprint: Bothan Perception Visor",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "5sWB7AbQG1BGKlEY",
+  "sort": 30600000,
+  "system": {
+    "row": {
+      "id": "ca4dc430-a4cd-4007-8fd6-437b162c5658",
+      "name": "Blueprint: Bothan Perception Visor",
+      "cost": 1329,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Bothan Perception Visor (Generation 0, proven, encoded, catalog design). Required to build Bothan Perception Visor; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Bothan Perception Visor",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 11550,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Face Gadget|Bothan Perception Visor"
+    }
+  }
+}

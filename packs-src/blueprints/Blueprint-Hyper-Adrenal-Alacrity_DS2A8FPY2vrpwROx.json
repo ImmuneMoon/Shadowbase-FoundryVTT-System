@@ -1,0 +1,42 @@
+{
+  "_id": "DS2A8FPY2vrpwROx",
+  "_key": "!items!DS2A8FPY2vrpwROx",
+  "name": "Blueprint: Hyper-Adrenal Alacrity",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "57dSrgDssXtG4x1L",
+  "sort": 39800000,
+  "system": {
+    "row": {
+      "id": "1324666b-f525-4058-85d8-21e9eb92972f",
+      "name": "Blueprint: Hyper-Adrenal Alacrity",
+      "cost": 216,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Hyper-Adrenal Alacrity (Generation 0, proven, encoded, catalog design). Required to build Hyper-Adrenal Alacrity; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Hyper-Adrenal Alacrity",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 420,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Medical & Pharmaceuticals|Hyper-Adrenal Alacrity"
+    }
+  }
+}

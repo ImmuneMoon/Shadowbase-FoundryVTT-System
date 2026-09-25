@@ -1,0 +1,36 @@
+{
+  "_id": "dQ6nBVmScEQECAhl",
+  "_key": "!items!dQ6nBVmScEQECAhl",
+  "name": "Weapon Upgrade (Damage)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "uR0UoLTcsbSiD5ki",
+  "sort": 1400000,
+  "system": {
+    "row": {
+      "id": "6c71f116-50a6-4fc3-bc4e-f0422ecc8f6d",
+      "name": "Weapon Upgrade (Damage)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Starship Modification",
+      "cost": 0,
+      "weight": 0,
+      "quantity": 1,
+      "description": "Offensive modification. Increase damage of one base weapon system by +1d. Cost: 35% of the weapon cost."
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "starship-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "starship-mods",
+      "key": "Weapon Upgrade (Damage)"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{{!-- templates/chat/volley.hbs - a volley: one line per shot (use-dice-roller.ts rollTargetVolley), or one per
+     hit for a damage volley (rollDamageVolley). Context: module/rolls.mjs rollVolley / rollDamageVolley. --}}
+<div class="shadowbase sb-chat-card sb-chat-card--volley{{#if damage}} sb-chat-card--damage{{/if}}" data-actor-id="{{actorId}}"{{#if itemId}} data-item-id="{{itemId}}"{{/if}}>
+  <header class="sb-chat-card__header">
+    <h3 class="sb-chat-card__title">{{title}}</h3>
+    {{#unless damage}}<span class="sb-badge sb-badge-outline sb-chat-card__badge">{{localize "SHADOWBASE.Roll.HitsOf" hits=hits shots=shots}}</span>{{/unless}}
+  </header>
+  {{#unless damage}}
+  <dl class="sb-chat-card__lines">
+    {{#if skillName}}<dt>{{localize "SHADOWBASE.Roll.Skill"}}</dt><dd>{{skillName}}</dd>{{/if}}
+    <dt>{{localize "SHADOWBASE.Roll.Target"}}</dt><dd><strong>{{target}}</strong>{{#if modifier}} <span class="sb-chat-card__muted">({{baseTarget}} {{modifierText}})</span>{{/if}}</dd>
+  </dl>
+  {{/unless}}
+  <ul class="sb-chat-card__shots">
+    {{#each results}}
+    <li class="sb-chat-card__shot{{#if this.success}} is-hit{{/if}}{{#if this.isMalfunction}} is-malfunction{{/if}}{{#if this.notRollable}} is-unrollable{{/if}}">
+      <span class="sb-chat-card__shot-label">{{this.label}}</span>
+      {{#if ../damage}}
+        <span class="sb-chat-card__shot-total"><strong>{{this.total}}</strong> <span class="sb-chat-card__dice">[{{this.diceText}}]</span> <span class="sb-chat-card__muted">{{this.websiteFormula}}</span></span>
+      {{else}}
+        <span class="sb-chat-card__shot-total">{{this.total}} <span class="sb-chat-card__muted">vs {{this.target}}</span> <span class="sb-chat-card__dice">[{{this.diceText}}]</span></span>
+        <span class="sb-chat-card__tag">{{this.tagText}}</span>
+      {{/if}}
+    </li>
+    {{/each}}
+  </ul>
+  {{#if halted}}<p class="sb-chat-card__muted">{{localize "SHADOWBASE.Roll.VolleyHalted"}}</p>{{/if}}
+  {{#if canRollDamage}}
+  <footer class="sb-chat-card__actions">
+    <button type="button" class="sb-btn sb-btn-destructive sb-btn-sm" data-action="roll-damage"><i class="fa-solid fa-burst"></i> {{localize "SHADOWBASE.Roll.RollDamage"}}</button>
+  </footer>
+  {{/if}}
+</div>

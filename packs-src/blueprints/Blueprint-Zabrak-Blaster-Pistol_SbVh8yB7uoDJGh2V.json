@@ -1,0 +1,42 @@
+{
+  "_id": "SbVh8yB7uoDJGh2V",
+  "_key": "!items!SbVh8yB7uoDJGh2V",
+  "name": "Blueprint: Zabrak Blaster Pistol",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "Cwowcy4l2Q3n79PK",
+  "sort": 47100000,
+  "system": {
+    "row": {
+      "id": "9ef0905b-8be8-4e6c-a48e-06c0b5482a99",
+      "name": "Blueprint: Zabrak Blaster Pistol",
+      "cost": 386,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Zabrak Blaster Pistol (Generation 0, proven, encoded, catalog design). Required to build Zabrak Blaster Pistol; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Zabrak Blaster Pistol",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 2115,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Standard Pistols|Zabrak Blaster Pistol"
+    }
+  }
+}

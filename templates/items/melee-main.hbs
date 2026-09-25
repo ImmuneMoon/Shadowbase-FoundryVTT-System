@@ -1,0 +1,35 @@
+{{!-- templates/items/melee-main.hbs - customized-melee-weapon-item.tsx Tactical Stats (:1351-1560): the damage modes,
+     Reach, Parry / ST, the ST landmarks, Durability, the unready gate, the Skill Check. Context: main (melee.mjs),
+     editable, owned, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--melee {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Target'}}"></i> {{localize "SHADOWBASE.Item.Weapon.TacticalStats"}}</h4>
+    {{> "shadowbase.item.tiles" tiles=main.tiles}}
+    <div class="sb-item-grid">
+      {{#if main.hasModes}}
+      <label class="sb-field sb-span-2"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Melee.DamageMode"}}</span>
+        <select class="sb-select" name="system.row.selectedDamageMode" data-dtype="Number" {{disabled (not editable)}}>{{#each main.modes}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}</select>
+      </label>
+      {{/if}}
+      {{#if main.hasCharges}}
+      <label class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.CurrentCharges"}}</span><input type="number" class="sb-input" name="system.row.currentCharges" value="{{main.currentCharges}}" data-dtype="Number" min="0" {{disabled (not editable)}}></label>
+      <div class="sb-field"><span class="sb-field__label">{{localize "SHADOWBASE.Item.Equipment.MaxCharges"}}</span><output class="sb-input sb-input--calc sb-mono">{{main.maxCharges}}</output></div>
+      {{/if}}
+    </div>
+    <div class="sb-hrow sb-hrow--tight sb-item__badges">
+      {{#if main.unbalanced}}<span class="sb-badge sb-badge-outline" title="{{localize "SHADOWBASE.Item.Melee.UnbalancedHint"}}">{{localize "SHADOWBASE.Sheet.Weapon.UnbalancedMark"}} {{localize "SHADOWBASE.Item.Melee.Unbalanced"}}</span>{{/if}}
+      {{#unless main.canParryWhileAttacking}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Item.Melee.NoParryWhileAttacking"}}</span>{{/unless}}
+      {{#if main.twoHanded}}<span class="sb-badge sb-badge-outline">2H</span>{{/if}}
+      {{#if main.attackedThisTurn}}<span class="sb-badge sb-badge-outline sb-text-amber">{{localize "SHADOWBASE.Item.Melee.AttackedThisTurn"}}</span>{{/if}}
+      {{#if main.isUnready}}<span class="sb-badge sb-badge-destructive">{{localize "SHADOWBASE.Status.Unready"}}</span><button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="ready-weapon" {{disabled (not editable)}}>{{localize "SHADOWBASE.Sheet.Weapon.Ready"}}</button>{{/if}}
+    </div>
+    {{#if main.handling.length}}<ul class="sb-item__notes-list">{{#each main.handling}}<li>{{this}}</li>{{/each}}</ul>{{/if}}
+    {{> "shadowbase.item.condition" main.condition editable=editable owned=owned blade="" label=(localize "SHADOWBASE.Item.Condition.Title")}}
+  </div>
+  <div class="sb-item-section sb-item-section--actions">
+    <span class="sb-text-xs">{{localize "SHADOWBASE.Item.Weapon.SkillCheck"}}: <b>{{main.skill.name}}</b> <b class="sb-mono">{{#if main.skill.target}}{{main.skill.target}}{{else}}—{{/if}}</b>{{#if main.skill.bonus}} <span class="sb-text-muted">({{main.skill.base}} {{main.skill.bonus}})</span>{{/if}}{{#if main.skill.note}} <span class="sb-text-muted">· {{main.skill.note}}</span>{{/if}}</span>
+    {{#if main.skill.blocked}}<span class="sb-badge sb-badge-destructive">{{main.skill.blocked}}</span>{{/if}}
+    <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="roll-attack" {{disabled (not main.canAttack)}}><i class="{{sbIcon 'roll'}}"></i> {{localize "SHADOWBASE.Sheet.Weapon.Attack"}}</button>
+    <button type="button" class="sb-btn sb-btn-destructive sb-btn-sm" data-action="roll-damage" {{disabled (not main.canDamage)}} title="{{main.damage}}"><i class="fa-solid fa-burst"></i> {{localize "SHADOWBASE.Sheet.Weapon.Damage"}}{{#if main.pendingHits}} <span class="sb-badge sb-badge-secondary sb-mono">{{main.pendingHits}}</span>{{/if}}</button>
+  </div>
+</section>

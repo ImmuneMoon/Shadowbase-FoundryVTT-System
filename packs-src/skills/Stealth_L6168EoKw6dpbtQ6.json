@@ -1,0 +1,34 @@
+{
+  "_id": "L6168EoKw6dpbtQ6",
+  "_key": "!items!L6168EoKw6dpbtQ6",
+  "name": "Stealth",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "mocT5kdmoKt5mOLU",
+  "sort": 13400000,
+  "system": {
+    "row": {
+      "name": "Stealth",
+      "level": "",
+      "points": null,
+      "relativeLevel": "DX/Average",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Stealth"
+    }
+  }
+}

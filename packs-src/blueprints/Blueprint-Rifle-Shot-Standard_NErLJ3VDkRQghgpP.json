@@ -1,0 +1,42 @@
+{
+  "_id": "NErLJ3VDkRQghgpP",
+  "_key": "!items!NErLJ3VDkRQghgpP",
+  "name": "Blueprint: Rifle Shot (Standard)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DvRG95q4QWZQnNFm",
+  "sort": 3300000,
+  "system": {
+    "row": {
+      "id": "51ce0bf9-d3b4-48f2-b74e-1d3282936266",
+      "name": "Blueprint: Rifle Shot (Standard)",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Rifle Shot (Standard) (Generation 0, proven, encoded, catalog design). Required to build Rifle Shot (Standard); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Rifle Shot (Standard)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3.7777777777777777,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Ammunition|Rifle Shot (Standard)"
+    }
+  }
+}

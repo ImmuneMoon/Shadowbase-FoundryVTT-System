@@ -1,0 +1,39 @@
+{
+  "_id": "VOI6qr5FlJRlTSmn",
+  "_key": "!items!VOI6qr5FlJRlTSmn",
+  "name": "Disc Head - Fixed (R-Series)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "QVHxjnveCs2gG8nK",
+  "sort": 1400000,
+  "system": {
+    "row": {
+      "id": "bbcea231-c88e-4c39-a1c3-e05bfd827491",
+      "name": "Disc Head - Fixed (R-Series)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Head",
+      "cost": 1300,
+      "weight": 8,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "r-series-fixed",
+      "description": "Restricted Arc"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "r-series-fixed"
+    }
+  }
+}

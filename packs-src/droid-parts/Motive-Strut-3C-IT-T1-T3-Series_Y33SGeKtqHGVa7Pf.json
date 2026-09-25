@@ -1,0 +1,39 @@
+{
+  "_id": "Y33SGeKtqHGVa7Pf",
+  "_key": "!items!Y33SGeKtqHGVa7Pf",
+  "name": "Motive Strut (3C, IT, T1, T3-Series)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "tBEyddz1IdjHzb5K",
+  "sort": 5700000,
+  "system": {
+    "row": {
+      "id": "e223ed05-7f3c-4080-b6ee-408de16ae57c",
+      "name": "Motive Strut (3C, IT, T1, T3-Series)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Motive Strut",
+      "cost": 2080,
+      "weight": 15,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "t3-leg",
+      "description": "Lifting ST +2"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "t3-leg"
+    }
+  }
+}

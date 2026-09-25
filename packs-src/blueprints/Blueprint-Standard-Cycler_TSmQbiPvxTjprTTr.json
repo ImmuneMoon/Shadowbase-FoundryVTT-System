@@ -1,0 +1,42 @@
+{
+  "_id": "TSmQbiPvxTjprTTr",
+  "_key": "!items!TSmQbiPvxTjprTTr",
+  "name": "Blueprint: Standard Cycler",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DvRG95q4QWZQnNFm",
+  "sort": 3600000,
+  "system": {
+    "row": {
+      "id": "8f48ccf8-09e9-4b4b-a09d-08b22bda8ed5",
+      "name": "Blueprint: Standard Cycler",
+      "cost": 176,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Standard Cycler (Generation 0, proven, encoded, catalog design). Required to build Standard Cycler; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Standard Cycler",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 18.88888888888889,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Ammunition|Standard Cycler"
+    }
+  }
+}

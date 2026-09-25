@@ -1,0 +1,45 @@
+{
+  "_id": "m17K0lWbWXObncko",
+  "_key": "!items!m17K0lWbWXObncko",
+  "name": "BioTech \"Manipul-Matic\"",
+  "type": "cyberneticLimb",
+  "img": "icons/svg/bones.svg",
+  "folder": "Ion0lHQozspiLAyd",
+  "sort": 300000,
+  "system": {
+    "row": {
+      "id": "6c2f09ab-e547-4ddc-9ca6-8b49c43136e6",
+      "name": "BioTech \"Manipul-Matic\"",
+      "location": "Right Hand",
+      "extent": "Partial",
+      "material": "Duraplast",
+      "cost": 884,
+      "weight": 1.48,
+      "dr": 5,
+      "currentDr": 5,
+      "effect": "Grants +1 Striking ST strictly for punching and crushing.",
+      "upgrades": [],
+      "hasSynthskin": false,
+      "installed": false,
+      "storageLocationId": null,
+      "quantity": 1,
+      "baselinePoints": 0,
+      "itemSizeModifier": 0
+    },
+    "source": "cybernetics",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-limbs"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-limbs",
+      "key": "Hand|BioTech \"Manipul-Matic\""
+    }
+  }
+}

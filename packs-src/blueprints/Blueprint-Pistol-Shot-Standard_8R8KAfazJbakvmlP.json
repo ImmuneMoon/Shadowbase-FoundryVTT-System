@@ -1,0 +1,42 @@
+{
+  "_id": "8R8KAfazJbakvmlP",
+  "_key": "!items!8R8KAfazJbakvmlP",
+  "name": "Blueprint: Pistol Shot (Standard)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DvRG95q4QWZQnNFm",
+  "sort": 2100000,
+  "system": {
+    "row": {
+      "id": "86b16229-4867-4f03-8ac4-af878118646d",
+      "name": "Blueprint: Pistol Shot (Standard)",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Pistol Shot (Standard) (Generation 0, proven, encoded, catalog design). Required to build Pistol Shot (Standard); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Pistol Shot (Standard)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3.7777777777777777,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Ammunition|Pistol Shot (Standard)"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "tl9YUMZpU3wkfWaB",
+  "_key": "!items!tl9YUMZpU3wkfWaB",
+  "name": "Telecommunication (Radio)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "b0AkEhPa45uoNffk",
+  "sort": 16500000,
+  "system": {
+    "row": {
+      "name": "Telecommunication (Radio)",
+      "points": 10,
+      "description": "An internal, subvocal radio transceiver.",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Telecommunication (Radio)"
+    }
+  }
+}

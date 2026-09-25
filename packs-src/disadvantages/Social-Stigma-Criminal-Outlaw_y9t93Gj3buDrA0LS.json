@@ -1,0 +1,34 @@
+{
+  "_id": "y9t93Gj3buDrA0LS",
+  "_key": "!items!y9t93Gj3buDrA0LS",
+  "name": "Social Stigma (Criminal/Outlaw)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "KbQ0mAMpcz5zmcEs",
+  "sort": 5200000,
+  "system": {
+    "row": {
+      "name": "Social Stigma (Criminal/Outlaw)",
+      "points": -5,
+      "level": null,
+      "description": "Your association with the underworld may lead to negative reactions from law-abiding citizens and legitimate organizations, making it hard to operate in \"respectable\" circles.",
+      "category": "Cultural / Background",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Social Stigma (Criminal/Outlaw)|Cultural / Background"
+    }
+  }
+}

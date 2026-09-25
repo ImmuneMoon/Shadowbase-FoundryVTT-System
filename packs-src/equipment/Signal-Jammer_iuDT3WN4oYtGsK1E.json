@@ -1,0 +1,54 @@
+{
+  "_id": "iuDT3WN4oYtGsK1E",
+  "_key": "!items!iuDT3WN4oYtGsK1E",
+  "name": "Signal Jammer",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "QVe7sZmgjcPk3HO6",
+  "sort": 10500000,
+  "system": {
+    "row": {
+      "name": "Signal Jammer",
+      "cost": 3240,
+      "skill": "Electronics Operation (Electronic Warfare)",
+      "description": "Radius 50y. Materials: Silicon: 2 lbs, Duraplast: 2.3 lbs, Power Cell: 0.7 lbs.",
+      "category": "Communication & Data",
+      "weight": 5,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Silicon",
+          "amount": 2
+        },
+        {
+          "name": "Duraplast",
+          "amount": 2.3
+        },
+        {
+          "name": "Power Cell",
+          "amount": 0.7
+        }
+      ],
+      "id": "d98c4778-fb4d-4d45-b28d-2cbce73a0aac",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Signal Jammer"
+    }
+  }
+}

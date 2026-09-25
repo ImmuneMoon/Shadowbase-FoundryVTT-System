@@ -1,0 +1,46 @@
+{
+  "_id": "A7ITQpOepPes8GHf",
+  "_key": "!items!A7ITQpOepPes8GHf",
+  "name": "Durasteel Sonic Chamber",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "aClHr8Ajc0gX0rPo",
+  "sort": 2900000,
+  "system": {
+    "row": {
+      "id": "770615ec-3215-4d8a-a0f9-9cadecd947e5",
+      "name": "Durasteel Sonic Chamber",
+      "category": "Ranged Receiver",
+      "cost": 50,
+      "weight": 0.98,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "sonic-chamber",
+      "materialId": "durasteel",
+      "notes": "Standard Sonic.",
+      "effect": "Standard Sonic.",
+      "energyResBonus": 0,
+      "volume": 0.002,
+      "density": 490,
+      "installedInMeleeId": null,
+      "installedInBlasterId": null,
+      "installedInSaberId": null
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "ranged-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-parts",
+      "key": "sonic-chamber"
+    }
+  }
+}

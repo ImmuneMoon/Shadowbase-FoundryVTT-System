@@ -1,0 +1,42 @@
+{
+  "_id": "i3ugoGr7WWa0hOeO",
+  "_key": "!items!i3ugoGr7WWa0hOeO",
+  "name": "Light Foot Shell (Scrap Metal)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 6200000,
+  "system": {
+    "row": {
+      "id": "7eac9646-256b-4657-903c-cd8d3aa71ad8",
+      "name": "Light Foot Shell (Scrap Metal)",
+      "category": "Armor Shell",
+      "cost": 15,
+      "weight": 0.75,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-light-feet-scrap-metal",
+      "materialId": "scrap-metal",
+      "notes": "Low quality, scavenged metals. Light and Medium tiers only -- scavenged stock will not hold at heavy gauge.",
+      "validSlots": [],
+      "drBonus": 1,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-light-feet-scrap-metal"
+    }
+  }
+}

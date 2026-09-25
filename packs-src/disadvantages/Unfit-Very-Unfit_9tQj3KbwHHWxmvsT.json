@@ -1,0 +1,34 @@
+{
+  "_id": "9tQj3KbwHHWxmvsT",
+  "_key": "!items!9tQj3KbwHHWxmvsT",
+  "name": "Unfit / Very Unfit",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "iBhK8LHSekCOv5gO",
+  "sort": 16200000,
+  "system": {
+    "row": {
+      "name": "Unfit / Very Unfit",
+      "points": -5,
+      "level": null,
+      "description": "You have poor physical conditioning. Unfit characters have 10% fewer Endurance Points. Very Unfit characters have 20% fewer EP and recover them more slowly. Range: -5 or -15 points.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Unfit / Very Unfit|Physical"
+    }
+  }
+}

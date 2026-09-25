@@ -1,0 +1,42 @@
+{
+  "_id": "ldNQKDsvVAZQ0ymH",
+  "_key": "!items!ldNQKDsvVAZQ0ymH",
+  "name": "Blueprint: Hurrikaine",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 35500000,
+  "system": {
+    "row": {
+      "id": "90a09b83-bd84-4317-8459-60984216a2f1",
+      "name": "Blueprint: Hurrikaine",
+      "cost": 841,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Hurrikaine (Generation 0, proven, encoded, catalog design). Required to build Hurrikaine; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Hurrikaine",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 6666.666666666666,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Hurrikaine"
+    }
+  }
+}

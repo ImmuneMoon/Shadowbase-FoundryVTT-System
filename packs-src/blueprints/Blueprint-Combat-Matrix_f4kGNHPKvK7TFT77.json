@@ -1,0 +1,42 @@
+{
+  "_id": "f4kGNHPKvK7TFT77",
+  "_key": "!items!f4kGNHPKvK7TFT77",
+  "name": "Blueprint: Combat Matrix",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JF5Ffca1GjopsdXr",
+  "sort": 27200000,
+  "system": {
+    "row": {
+      "id": "910d21e2-4d51-4ef9-9f41-bab0ab16e934",
+      "name": "Blueprint: Combat Matrix",
+      "cost": 850,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Combat Matrix (Generation 0, proven, encoded, catalog design). Required to build Combat Matrix; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Combat Matrix",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 6754,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Processor|Combat Matrix"
+    }
+  }
+}

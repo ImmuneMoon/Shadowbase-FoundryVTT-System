@@ -1,0 +1,166 @@
+{
+  "_id": "pFeZaAYf2KMFGImk",
+  "_key": "!items!pFeZaAYf2KMFGImk",
+  "name": "Echani Shield-Dagger",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "4CsMGh1aUgUENfEQ",
+  "sort": 1000000,
+  "system": {
+    "row": {
+      "id": "76c3ef55-c0bf-4dc0-b135-3040386f525b",
+      "customName": "Echani Shield-Dagger",
+      "baseType": "Echani Shield-Dagger",
+      "baseSkill": "Main-Gauche",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": null,
+      "maxCharges": null,
+      "condition": "Fine",
+      "baseReach": "C, 1",
+      "baseWeight": 2.76,
+      "finalWeight": 2.76,
+      "baseCost": 3148,
+      "finalCost": 6296,
+      "gripParts": [
+        {
+          "inventoryId": "b3a41871-6884-4ad1-86ab-6779d7f01ebb",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "8cd58418-9975-4f58-969c-ff0ccec2d485",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "guardParts": [
+        {
+          "inventoryId": "a9edd835-8523-4b1f-8f81-365965e9c790",
+          "materialId": "plasteel",
+          "quantity": 1
+        }
+      ],
+      "bladeHeadModId": "b27d8fbf-d105-4db1-ae4b-dd9239584564"
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "76c3ef55-c0bf-4dc0-b135-3040386f525b",
+        "customName": "Echani Shield-Dagger",
+        "baseType": "Echani Shield-Dagger",
+        "baseSkill": "Main-Gauche",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": null,
+        "maxCharges": null,
+        "condition": "Fine",
+        "baseReach": "C, 1",
+        "baseWeight": 2.76,
+        "finalWeight": 2.76,
+        "baseCost": 3148,
+        "finalCost": 6296,
+        "gripParts": [
+          {
+            "inventoryId": "b3a41871-6884-4ad1-86ab-6779d7f01ebb",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "8cd58418-9975-4f58-969c-ff0ccec2d485",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "guardParts": [
+          {
+            "inventoryId": "a9edd835-8523-4b1f-8f81-365965e9c790",
+            "materialId": "plasteel",
+            "quantity": 1
+          }
+        ],
+        "bladeHeadModId": "b27d8fbf-d105-4db1-ae4b-dd9239584564"
+      },
+      "parts": [
+        {
+          "id": "b3a41871-6884-4ad1-86ab-6779d7f01ebb",
+          "name": "Short Hilt",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 26,
+          "weight": 0.49,
+          "isInstalled": true,
+          "installedInMeleeId": "76c3ef55-c0bf-4dc0-b135-3040386f525b",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Knife/Smallsword. 1-handed.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "8cd58418-9975-4f58-969c-ff0ccec2d485",
+          "name": "Light Blade",
+          "category": "Melee Head",
+          "materialId": "durasteel",
+          "cost": 74,
+          "weight": 1.47,
+          "isInstalled": true,
+          "installedInMeleeId": "76c3ef55-c0bf-4dc0-b135-3040386f525b",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Balanced.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "a9edd835-8523-4b1f-8f81-365965e9c790",
+          "name": "Basket Guard",
+          "category": "Melee Guard",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInMeleeId": "76c3ef55-c0bf-4dc0-b135-3040386f525b",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Provides DR 4 to hand.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "b27d8fbf-d105-4db1-ae4b-dd9239584564",
+          "name": "Cortosis Weaved Blade",
+          "category": "bladeHeadMod",
+          "cost": 3000,
+          "weight": 0.2,
+          "isInstalled": true,
+          "installedInMeleeId": "76c3ef55-c0bf-4dc0-b135-3040386f525b",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Grants on strike/block vs lightsaber: roll 3d, if not crit fail, disrupts Lightsaber for 2d-2 sec, for a minimum of 2 sec. Blade is resistant to being destroyed by a lightsaber. +3 Dur to energy resistance. Requires Armstech (the weapon's specialty).",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Echani Shield-Dagger"
+    }
+  }
+}

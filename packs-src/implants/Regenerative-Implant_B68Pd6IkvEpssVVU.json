@@ -1,0 +1,41 @@
+{
+  "_id": "B68Pd6IkvEpssVVU",
+  "_key": "!items!B68Pd6IkvEpssVVU",
+  "name": "Regenerative Implant",
+  "type": "implant",
+  "img": "icons/svg/regen.svg",
+  "folder": "Xt5bv6RNBDGNU8uh",
+  "sort": 1300000,
+  "system": {
+    "row": {
+      "id": "d980ba61-c082-42d2-b13c-96d51dc121a9",
+      "name": "Regenerative Implant",
+      "cost": 5580,
+      "finalCp": 15,
+      "effect": "Grants Regeneration (1 HP / 12 hr) and Rapid Healing.",
+      "category": "Neural",
+      "pathways": [
+        "Cellular"
+      ],
+      "slotType": "Neural",
+      "installed": false,
+      "weight": 0.2,
+      "notes": "Trait Package: 15 CP of Advantages (Regeneration, Rapid Healing); Mandatory Flaws offset. Occupies Cellular pathway. Materials: Silicon: 0.2 lbs (10 cr)."
+    },
+    "source": "implants",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "implants"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "implants",
+      "key": "Neural|Regenerative Implant"
+    }
+  }
+}

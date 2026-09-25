@@ -1,0 +1,87 @@
+{
+  "_id": "HAh0B2XzWxDcU7rF",
+  "_key": "!items!HAh0B2XzWxDcU7rF",
+  "name": "Force Sight",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "lMudTveYN6LSWH7D",
+  "sort": 2700000,
+  "system": {
+    "row": {
+      "name": "Force Sight",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 2,
+      "effect": "You can perceive the world through the Force, bypassing blindness, illusions, and normal darkness within 50 feet.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Sense (Per/Average)",
+      "category": "Sense Powers",
+      "alignment": "Grey",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Force Sight",
+        "description": "Allows perception of the world through the Force, bypassing blindness, illusions, or even physical obstructions like smoke or darkness.",
+        "category": "Sense Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 2,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Apprentice",
+        "effect": "You can perceive the world through the Force, bypassing blindness, illusions, and normal darkness within 50 feet."
+      },
+      {
+        "name": "Force Sight",
+        "description": "Allows perception of the world through the Force, bypassing blindness, illusions, or even physical obstructions like smoke or darkness.",
+        "category": "Sense Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 1,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Adept",
+        "effect": "Range extends to 25 yards. You can detect living beings through thin objects within 5 yards. Gain +1 to Perception to detect hidden opponents."
+      },
+      {
+        "name": "Force Sight",
+        "description": "Allows perception of the world through the Force, bypassing blindness, illusions, or even physical obstructions like smoke or darkness.",
+        "category": "Sense Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 1,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Expert",
+        "effect": "Range extends to 33 yards. You can see through heavier objects within 10 yards. You gain 360-degree vision and +2 to defend against surprise attacks."
+      },
+      {
+        "name": "Force Sight",
+        "description": "Allows perception of the world through the Force, bypassing blindness, illusions, or even physical obstructions like smoke or darkness.",
+        "category": "Sense Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 1,
+        "alignment": "Grey",
+        "baseSkill": "Sense (Per/Average)",
+        "characterTier": "Master",
+        "effect": "Range is increased to 300 feet, and up to the horizon in a Force-rich environment. You can discern emotional states and immediate intentions within 100 feet. You can no longer be surprised."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Force Sight"
+    }
+  }
+}

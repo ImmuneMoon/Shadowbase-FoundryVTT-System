@@ -1,0 +1,87 @@
+{
+  "_id": "bGZIydE8HaE5sTaH",
+  "_key": "!items!bGZIydE8HaE5sTaH",
+  "name": "Force Stasis",
+  "type": "forcePower",
+  "img": "icons/svg/light.svg",
+  "folder": "PlGZu46M1spj53xV",
+  "sort": 2900000,
+  "system": {
+    "row": {
+      "name": "Force Stasis",
+      "level": 1,
+      "cpCost": 10,
+      "fpCost": 3,
+      "effect": "Target within 10 feet has their basic Move halved and suffers -4 to DX for 1 turn.",
+      "characterTier": "Apprentice",
+      "baseSkill": "Will vs. target's HT (contested roll)",
+      "category": "Alter Powers",
+      "alignment": "LS",
+      "baselinePoints": 0
+    },
+    "source": "forcePowers",
+    "family": null,
+    "kit": null,
+    "levels": [
+      {
+        "name": "Force Stasis",
+        "description": "A strictly pacifistic combat technique. The user surrounds a target in a localized field of Force energy, temporarily paralyzing them.",
+        "category": "Alter Powers",
+        "level": 1,
+        "cpCost": 10,
+        "fpCost": 3,
+        "alignment": "LS",
+        "baseSkill": "Will vs. target's HT (contested roll)",
+        "characterTier": "Apprentice",
+        "effect": "Target within 10 feet has their basic Move halved and suffers -4 to DX for 1 turn."
+      },
+      {
+        "name": "Force Stasis",
+        "description": "A strictly pacifistic combat technique. The user surrounds a target in a localized field of Force energy, temporarily paralyzing them.",
+        "category": "Alter Powers",
+        "level": 2,
+        "cpCost": 20,
+        "fpCost": 4,
+        "alignment": "LS",
+        "baseSkill": "Will vs. target's HT (contested roll)",
+        "characterTier": "Adept",
+        "effect": "Target within 20 feet is completely physically paralyzed for 1d turns."
+      },
+      {
+        "name": "Force Stasis",
+        "description": "A strictly pacifistic combat technique. The user surrounds a target in a localized field of Force energy, temporarily paralyzing them.",
+        "category": "Alter Powers",
+        "level": 3,
+        "cpCost": 35,
+        "fpCost": 6,
+        "alignment": "LS",
+        "baseSkill": "Will vs. target's HT (contested roll)",
+        "characterTier": "Expert",
+        "effect": "Paralyze a single target within 30 feet for 1d+2 turns, or target up to 3 closely grouped enemies for 1 turn."
+      },
+      {
+        "name": "Force Stasis",
+        "description": "A strictly pacifistic combat technique. The user surrounds a target in a localized field of Force energy, temporarily paralyzing them.",
+        "category": "Alter Powers",
+        "level": 4,
+        "cpCost": 55,
+        "fpCost": 8,
+        "alignment": "LS",
+        "baseSkill": "Will vs. target's HT (contested roll)",
+        "characterTier": "Master",
+        "effect": "Create a \"Stasis Field.\" All enemies within a 15-foot radius of a chosen point must roll HT-2 or be paralyzed for 1d+1 turns."
+      }
+    ],
+    "catalog": "force-powers"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "key": "Force Stasis"
+    }
+  }
+}

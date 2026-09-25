@@ -1,0 +1,34 @@
+{
+  "_id": "WgvsAwoLB3ImoU51",
+  "_key": "!items!WgvsAwoLB3ImoU51",
+  "name": "Force Perception",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "ZDeYWzANbrPJf7Qw",
+  "sort": 6700000,
+  "system": {
+    "row": {
+      "name": "Force Perception",
+      "points": 5,
+      "description": "+1 to Sense rolls.",
+      "category": "Force",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Force Perception"
+    }
+  }
+}

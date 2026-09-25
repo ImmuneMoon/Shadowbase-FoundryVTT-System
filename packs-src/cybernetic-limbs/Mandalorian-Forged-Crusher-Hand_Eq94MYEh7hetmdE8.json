@@ -1,0 +1,45 @@
+{
+  "_id": "Eq94MYEh7hetmdE8",
+  "_key": "!items!Eq94MYEh7hetmdE8",
+  "name": "Mandalorian-Forged \"Crusher\" Hand",
+  "type": "cyberneticLimb",
+  "img": "icons/svg/bones.svg",
+  "folder": "Ion0lHQozspiLAyd",
+  "sort": 500000,
+  "system": {
+    "row": {
+      "id": "64166269-76da-4c22-bfd0-4cefa7aac25a",
+      "name": "Mandalorian-Forged \"Crusher\" Hand",
+      "location": "Right Hand",
+      "extent": "Partial",
+      "material": "Beskar",
+      "cost": 31060,
+      "weight": 3.45,
+      "dr": 8,
+      "currentDr": 8,
+      "effect": "+5 to DR  vs energy (burn/ cr) damage. extreme durability.",
+      "upgrades": [],
+      "hasSynthskin": false,
+      "installed": false,
+      "storageLocationId": null,
+      "quantity": 1,
+      "baselinePoints": 0,
+      "itemSizeModifier": 0
+    },
+    "source": "cybernetics",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-limbs"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-limbs",
+      "key": "Hand|Mandalorian-Forged \"Crusher\" Hand"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "ntYUbO1A6XkMvnqv",
+  "_key": "!items!ntYUbO1A6XkMvnqv",
+  "name": "Doesn't Breathe/Eat/Sleep",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "GS8kUCPWatq78XxI",
+  "sort": 4100000,
+  "system": {
+    "row": {
+      "name": "Doesn't Breathe/Eat/Sleep",
+      "points": 20,
+      "description": "Doesn't Breathe",
+      "category": "Physical",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Doesn't Breathe/Eat/Sleep"
+    }
+  }
+}

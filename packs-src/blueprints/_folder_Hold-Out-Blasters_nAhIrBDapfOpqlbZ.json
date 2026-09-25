@@ -1,0 +1,20 @@
+{
+  "_id": "nAhIrBDapfOpqlbZ",
+  "_key": "!folders!nAhIrBDapfOpqlbZ",
+  "name": "Hold-Out Blasters",
+  "type": "Item",
+  "folder": "QMAUBR9U5YAyIYhg",
+  "sorting": "a",
+  "sort": 3800000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "path": [
+        "Ranged Weapons",
+        "Hold-Out Blasters"
+      ]
+    }
+  }
+}

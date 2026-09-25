@@ -1,0 +1,42 @@
+{
+  "_id": "p3FAFTU1ME7mebUh",
+  "_key": "!items!p3FAFTU1ME7mebUh",
+  "name": "Blueprint: Medium Repeating Blaster",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "7iaOzF8n1TqjrdaQ",
+  "sort": 32700000,
+  "system": {
+    "row": {
+      "id": "3732a660-beed-40b4-a696-bc7198ed4e0e",
+      "name": "Blueprint: Medium Repeating Blaster",
+      "cost": 901,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Medium Repeating Blaster (Generation 0, proven, encoded, catalog design). Required to build Medium Repeating Blaster; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Medium Repeating Blaster",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 7270,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Heavy Weapons|Medium Repeating Blaster"
+    }
+  }
+}

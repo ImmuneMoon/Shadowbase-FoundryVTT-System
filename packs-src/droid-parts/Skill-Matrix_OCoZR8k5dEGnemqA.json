@@ -1,0 +1,39 @@
+{
+  "_id": "OCoZR8k5dEGnemqA",
+  "_key": "!items!OCoZR8k5dEGnemqA",
+  "name": "Skill Matrix",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "VjgnV56H65xMb5QI",
+  "sort": 2500000,
+  "system": {
+    "row": {
+      "id": "ace213f8-1413-4f80-a44c-0ac08ab6070a",
+      "name": "Skill Matrix",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Processor",
+      "cost": 1650,
+      "weight": 0.15,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "skill-matrix",
+      "description": "Modular Ability (1 Slot) [6]"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "skill-matrix"
+    }
+  }
+}

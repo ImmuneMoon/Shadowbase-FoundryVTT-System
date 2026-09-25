@@ -1,0 +1,42 @@
+{
+  "_id": "h8wFvEfLK2pl5kDt",
+  "_key": "!items!h8wFvEfLK2pl5kDt",
+  "name": "Heavy Hand Shell (Durasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 5600000,
+  "system": {
+    "row": {
+      "id": "682c7b32-e153-4bd7-a8e4-d0a62f6844e3",
+      "name": "Heavy Hand Shell (Durasteel)",
+      "category": "Armor Shell",
+      "cost": 172,
+      "weight": 3.43,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-heavy-hands-durasteel",
+      "materialId": "durasteel",
+      "notes": "Standard building alloy. Baseline stats.",
+      "validSlots": [],
+      "drBonus": 7,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-heavy-hands-durasteel"
+    }
+  }
+}

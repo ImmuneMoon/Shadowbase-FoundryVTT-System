@@ -1,0 +1,42 @@
+{
+  "_id": "VGg4yXp19djweREZ",
+  "_key": "!items!VGg4yXp19djweREZ",
+  "name": "Blueprint: Zabrak Battle Cannon",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "561ndzf67gVgHZJr",
+  "sort": 12300000,
+  "system": {
+    "row": {
+      "id": "594d2892-8b8d-4da7-8cc3-90cc3ed761b2",
+      "name": "Blueprint: Zabrak Battle Cannon",
+      "cost": 863,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Zabrak Battle Cannon (Generation 0, proven, encoded, catalog design). Required to build Zabrak Battle Cannon; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Zabrak Battle Cannon",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 6890,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Blaster Rifles & Carbines|Zabrak Battle Cannon"
+    }
+  }
+}

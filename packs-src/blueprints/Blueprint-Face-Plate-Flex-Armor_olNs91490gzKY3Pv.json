@@ -1,0 +1,42 @@
+{
+  "_id": "olNs91490gzKY3Pv",
+  "_key": "!items!olNs91490gzKY3Pv",
+  "name": "Blueprint: Face Plate (Flex-Armor)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 6800000,
+  "system": {
+    "row": {
+      "id": "0db0bc15-248b-4613-8f9d-cfa2d2216879",
+      "name": "Blueprint: Face Plate (Flex-Armor)",
+      "cost": 180,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Face Plate (Flex-Armor) (Generation 0, proven, encoded, catalog design). Required to build Face Plate (Flex-Armor); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Face Plate (Flex-Armor)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 51,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Face Plate (Flex-Armor)"
+    }
+  }
+}

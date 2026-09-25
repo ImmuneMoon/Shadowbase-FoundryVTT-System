@@ -1,0 +1,42 @@
+{
+  "_id": "cHxoRzyMPE7Xg17A",
+  "_key": "!items!cHxoRzyMPE7Xg17A",
+  "name": "Blueprint: Mandalorian Wrist Flamer",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "oUXwxliXgRguKKvI",
+  "sort": 31300000,
+  "system": {
+    "row": {
+      "id": "3d849c51-75ad-4517-848b-4eeae07d931a",
+      "name": "Blueprint: Mandalorian Wrist Flamer",
+      "cost": 2667,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Mandalorian Wrist Flamer (Generation 0, proven, encoded, catalog design). Required to build Mandalorian Wrist Flamer; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Mandalorian Wrist Flamer",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 24928,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Gauntlet Weapons|Mandalorian Wrist Flamer"
+    }
+  }
+}

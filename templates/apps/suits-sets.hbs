@@ -1,0 +1,98 @@
+{{!-- templates/apps/suits-sets.hbs - Suits & Sets: the Ch13 set picker (preset-suit-dialog.tsx:336-553: filter, class
+     chips, the grouped list with the selected set's rows, the conflict / skipped notes, "Wear it straight away", Add)
+     over the outfits panel (gear-set-panel.tsx:154-292: every recognised / custom / worn set with its pieces and
+     Equip all / Unequip all / Customise / Delete). Context: SuitsAndSets#_prepareContext (`suits`, `sets`). --}}
+<section class="sb-app__body sb-suits" data-app="suits-sets">
+  <details class="sb-section" data-section="suit-picker" open>
+    <summary class="sb-section__summary"><span class="sb-section__title"><i class="fa-solid fa-shirt"></i> {{localize "SHADOWBASE.Apps.Suits.PickerTitle"}}</span><span class="sb-section__after"><i class="sb-section__chevron fa-solid fa-chevron-down"></i></span></summary>
+    <div class="sb-section__body">
+    {{#with suits}}
+      <p class="sb-muted-p">{{localize "SHADOWBASE.Apps.Suits.PickerHint"}}</p>
+      <div class="sb-suits__search"><i class="fa-solid fa-magnifying-glass"></i><input type="text" class="sb-input" name="suits.query" value="{{query}}" placeholder="{{localize 'SHADOWBASE.Apps.Suits.Filter'}}"></div>
+      <div class="sb-hrow sb-hrow--tight sb-suits__tiers">
+        <span class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Suits.Class"}}</span>
+        {{#each tiers}}<button type="button" class="sb-btn sb-btn-xs {{#if active}}sb-btn-secondary{{else}}sb-btn-outline{{/if}}" data-action="set-tier" data-tier="{{value}}">{{label}}{{#if count}} <span class="sb-text-muted">{{count}}</span>{{/if}}</button>{{/each}}
+        {{#if tierNote}}<span class="sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Suits.ClothingHidden"}}</span>{{/if}}
+      </div>
+      <div class="sb-suits__list">
+        {{#each groups}}
+        <div class="sb-suits__group">
+          <h5 class="sb-caps sb-text-10 sb-text-muted sb-suits__group-title">{{label}}</h5>
+          {{#each items}}
+          <div class="sb-suits__set{{#if selected}} is-selected{{/if}}" data-set-id="{{id}}">
+            <div class="sb-hrow sb-hrow--between">
+              <label class="sb-hrow sb-hrow--tight sb-suits__set-name">
+                <input type="radio" name="suits.selected" value="{{id}}" {{#if selected}}checked{{/if}} aria-label="{{name}}">
+                <button type="button" class="sb-suits__name sb-suits__pick" data-action="select-set" data-set-id="{{id}}">{{name}}</button>
+                {{#if tier}}<span class="sb-badge sb-badge-outline sb-suits__tier sb-suits__tier--{{tierClass}}">{{tier}}</span>{{/if}}
+              </label>
+              <span class="sb-hrow sb-hrow--tight sb-text-10 sb-text-mono sb-text-muted"><span>{{localize "SHADOWBASE.Apps.Suits.Pieces" n=pieces}}</span><span class="sb-suits__sep">|</span><span>{{weight}} lbs</span><span class="sb-suits__sep">|</span><span class="sb-suits__cr">{{cost}} cr</span></span>
+            </div>
+            {{#if selected}}
+            <div class="sb-suits__rows">
+              {{#each rows}}
+              <div class="sb-hrow sb-hrow--between sb-suits__row">
+                <span class="sb-hrow sb-hrow--tight"><span class="sb-badge sb-badge-secondary sb-suits__loc">{{location}}</span><span>{{name}}</span>{{#if many}}<span class="sb-badge sb-badge-outline sb-text-mono" data-row-quantity>×{{quantity}}</span>{{/if}}{{#if sealed}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Apps.Suits.Sealed"}}</span>{{/if}}{{#if sleeveless}}<span class="sb-badge sb-badge-outline">{{localize "SHADOWBASE.Apps.Suits.Sleeveless"}}</span>{{/if}}</span>
+                <span class="sb-hrow sb-hrow--tight sb-text-10 sb-text-mono sb-text-muted"><span class="sb-suits__dr">DR {{dr}}</span><span class="sb-suits__sep">|</span><span>{{weight}} lbs</span><span class="sb-suits__sep">|</span><span>{{cost}} cr</span>{{#if many}}<span>{{localize "SHADOWBASE.Apps.Suits.Each"}}</span>{{/if}}</span>
+              </div>
+              {{/each}}
+              {{#if unresolved}}<p class="sb-suits__warn">{{localize "SHADOWBASE.Apps.Suits.Unresolved" names=unresolved}}</p>{{/if}}
+              {{#if footnote}}<p class="sb-text-10 sb-text-muted sb-suits__footnote">{{footnote}}</p>{{/if}}
+            </div>
+            {{/if}}
+          </div>
+          {{/each}}
+        </div>
+        {{/each}}
+        {{#unless hasGroups}}<p class="sb-suits__empty">{{localize "SHADOWBASE.Apps.Suits.NoMatch" query=query}}</p>{{/unless}}
+      </div>
+      {{#if hasConflicts}}<p class="sb-notice sb-notice--warn"><i class="fa-solid fa-triangle-exclamation"></i> {{localize "SHADOWBASE.Apps.Suits.Conflicts" locations=conflicts}}</p>{{/if}}
+      {{#if hasSkipped}}<p class="sb-notice"><i class="fa-solid fa-triangle-exclamation"></i> {{#if skippedOne}}{{localize "SHADOWBASE.Apps.Suits.SkippedOne" names=skipped}}{{else}}{{localize "SHADOWBASE.Apps.Suits.SkippedMany" names=skipped}}{{/if}}</p>{{/if}}
+      <div class="sb-hrow sb-hrow--between sb-suits__footer">
+        <label class="sb-check-row"><input type="checkbox" name="suits.equipOnAdd" {{#if equipOnAdd}}checked{{/if}}> {{localize "SHADOWBASE.Apps.Suits.WearNow"}}</label>
+        <button type="button" class="sb-btn sb-btn-default sb-btn-sm" data-action="add-set" {{disabled (or (not selected) (not ../editable))}}>{{addLabel}}</button>
+      </div>
+    {{/with}}
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="gear-sets" open>
+    <summary class="sb-section__summary"><span class="sb-section__title"><i class="fa-solid fa-layer-group"></i> {{localize "SHADOWBASE.Apps.Suits.SetsTitle"}}</span><span class="sb-section__after"><i class="sb-section__chevron fa-solid fa-chevron-down"></i></span></summary>
+    <div class="sb-section__body">
+    {{#with sets}}
+      <div class="sb-hrow">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="new-set" {{disabled (not ../editable)}}><i class="fa-solid fa-plus"></i> {{localize "SHADOWBASE.Apps.Suits.NewSet"}}</button>
+        {{#unless hasSets}}<span class="sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Suits.NoSets"}}</span>{{/unless}}
+      </div>
+      {{#each list}}
+      <details class="sb-card sb-suits__gearset{{#if allWorn}} is-worn{{/if}}" data-set-id="{{id}}">
+        <summary class="sb-suits__gearset-head">
+          <span class="sb-hrow sb-hrow--tight"><i class="fa-solid fa-shirt"></i><span class="sb-suits__name">{{name}}</span><span class="sb-badge sb-badge-outline sb-text-10">{{kind}}</span>{{#if complete}}<span class="sb-badge sb-badge-secondary sb-text-10">{{localize "SHADOWBASE.Apps.Suits.Complete"}}</span>{{/if}}</span>
+          <span class="sb-hrow sb-hrow--tight sb-text-10 sb-text-mono sb-text-muted"><span>{{equippedCount}}/{{applicableCount}} {{localize "SHADOWBASE.Apps.Suits.WornCount"}}</span><span class="sb-suits__sep">|</span><span>{{weight}} lbs</span><span class="sb-suits__sep">|</span><span class="sb-suits__cr">{{cost}} cr</span><i class="sb-section__chevron fa-solid fa-chevron-down"></i></span>
+        </summary>
+        <div class="sb-card__content sb-suits__gearset-body">
+          {{#each pieces}}
+          <div class="sb-suits__piece{{#if notApplicable}} is-na{{/if}}{{#unless owned}} is-missing{{/unless}}">
+            <div class="sb-hrow sb-hrow--between">
+              <span class="sb-hrow sb-hrow--tight"><span class="sb-badge {{#if owned}}sb-badge-secondary{{else}}sb-badge-outline{{/if}} sb-suits__loc">{{slot}}</span><span class="sb-suits__piece-name">{{name}}</span>{{#if notApplicable}}<span class="sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Suits.NotApplicable"}}</span>{{/if}}{{#unless owned}}{{#unless notApplicable}}<span class="sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Suits.NotOwned"}}</span>{{/unless}}{{/unless}}</span>
+              {{#if owned}}<button type="button" class="sb-btn sb-btn-xs {{#if equipped}}sb-btn-secondary{{else}}sb-btn-ghost{{/if}}" data-action="toggle-piece" data-item-ids="{{itemIds}}" data-equipped="{{#if equipped}}true{{else}}false{{/if}}" {{disabled (not ../../../editable)}}><i class="{{#if equipped}}fa-solid fa-shield-heart{{else}}fa-solid fa-shield{{/if}}"></i> {{toggleLabel}}</button>{{/if}}
+            </div>
+            {{#each perLimb}}<div class="sb-hrow sb-hrow--between sb-suits__limb"><span class="sb-text-muted">{{label}}</span><button type="button" class="sb-btn sb-btn-xs {{#if worn}}sb-btn-secondary{{else}}sb-btn-ghost{{/if}}" data-action="toggle-item" data-item-id="{{id}}" {{disabled (not ../../../../editable)}}>{{toggleLabel}}</button></div>{{/each}}
+          </div>
+          {{/each}}
+          {{#if missing}}<p class="sb-suits__warn"><i class="fa-solid fa-triangle-exclamation"></i> {{#if missingOne}}{{localize "SHADOWBASE.Apps.Suits.MissingOne"}}{{else}}{{localize "SHADOWBASE.Apps.Suits.MissingMany" n=missing}}{{/if}}</p>{{/if}}
+          {{#each bonuses}}<p class="sb-suits__bonus"><i class="fa-solid fa-wand-magic-sparkles"></i> <b>{{localize "SHADOWBASE.Apps.Suits.BonusActive"}}</b> ({{reason}}): {{description}}</p>{{/each}}
+          {{#if note}}<p class="sb-text-10 sb-text-muted sb-suits__footnote">{{note}}</p>{{/if}}
+          <div class="sb-hrow sb-hrow--tight sb-suits__gearset-actions">
+            <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="equip-set" data-item-ids="{{memberIds}}" {{disabled (or (not canEquipAll) (not ../../editable))}}><i class="fa-solid fa-shield-heart"></i> {{localize "SHADOWBASE.Apps.Suits.EquipAll"}}</button>
+            <button type="button" class="sb-btn sb-btn-outline sb-btn-xs" data-action="unequip-set" data-item-ids="{{memberIds}}" {{disabled (or (not canUnequipAll) (not ../../editable))}}><i class="fa-solid fa-shield"></i> {{localize "SHADOWBASE.Apps.Suits.UnequipAll"}}</button>
+            <button type="button" class="sb-btn sb-btn-ghost sb-btn-xs" data-action="edit-set" data-set-id="{{id}}" {{disabled (not ../../editable)}}><i class="fa-solid fa-pencil"></i> {{editLabel}}</button>
+            {{#if stored}}<button type="button" class="sb-btn sb-btn-ghost sb-btn-xs is-destructive" data-action="delete-set" data-set-id="{{id}}" {{disabled (not ../../editable)}}><i class="fa-solid fa-trash-can"></i> {{localize "SHADOWBASE.Apps.Suits.Delete"}}</button>{{/if}}
+          </div>
+        </div>
+      </details>
+      {{/each}}
+    {{/with}}
+    </div>
+  </details>
+</section>

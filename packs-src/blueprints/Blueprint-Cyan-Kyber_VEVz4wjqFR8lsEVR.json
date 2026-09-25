@@ -1,0 +1,42 @@
+{
+  "_id": "VEVz4wjqFR8lsEVR",
+  "_key": "!items!VEVz4wjqFR8lsEVR",
+  "name": "Blueprint: Cyan Kyber",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "ACnPsz8VDpWaHhk8",
+  "sort": 34700000,
+  "system": {
+    "row": {
+      "id": "c1c68472-63e4-490d-90e1-1d046a31e82b",
+      "name": "Blueprint: Cyan Kyber",
+      "cost": 708,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Cyan Kyber (Generation 0, proven, encoded, catalog design). Required to build Cyan Kyber; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Cyan Kyber",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 5333.333333333334,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Lightsaber Primary Crystal|Cyan Kyber"
+    }
+  }
+}

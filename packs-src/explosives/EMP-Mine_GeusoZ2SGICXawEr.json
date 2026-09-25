@@ -1,0 +1,34 @@
+{
+  "_id": "GeusoZ2SGICXawEr",
+  "_key": "!items!GeusoZ2SGICXawEr",
+  "name": "EMP Mine",
+  "type": "explosive",
+  "img": "icons/svg/explosion.svg",
+  "folder": "koMvUxhn5oSa1YB4",
+  "sort": 400000,
+  "system": {
+    "row": {
+      "baseExplosiveName": "EMP Mine",
+      "quantity": 1,
+      "finalWeight": 2,
+      "finalCost": 906,
+      "preferredDefaultAttr": "DX",
+      "id": "9bad02f3-271a-43e2-b34d-0f6d9cb46d40"
+    },
+    "source": "customExplosives",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "explosives"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "explosives",
+      "key": "EMP Mine"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "fTEkgNx41zNq5usN",
+  "_key": "!items!fTEkgNx41zNq5usN",
+  "name": "Visor (Plasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "pemnqyPR360SzyYE",
+  "sort": 9300000,
+  "system": {
+    "row": {
+      "id": "176008cf-a679-4e94-a968-017e1d9b8ebb",
+      "name": "Visor (Plasteel)",
+      "category": "Armor Visor",
+      "cost": 84,
+      "weight": 1.05,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "visor-plasteel",
+      "materialId": "plasteel",
+      "notes": "Sealed Head Plates only. Face DR equals Head DR and the Piece carries a 1hr Vacuum seal.",
+      "validSlots": [],
+      "drBonus": null,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "visor-plasteel"
+    }
+  }
+}

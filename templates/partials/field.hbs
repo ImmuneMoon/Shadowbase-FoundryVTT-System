@@ -1,0 +1,8 @@
+{{!-- shadowbase.field - the website's FormRow (src/components/character-sheet/form-row.tsx):
+     a label over a control, `data-sheet-row` for the compact-rows preference.
+     Partial BLOCK: {{#> "shadowbase.field" id="..." label="<localized text>" cls=""}} control {{/shadowbase.field}}
+     Every param is required (strict mode): id, label, cls ('' when none). --}}
+<div class="sb-field {{cls}}" data-sheet-row>
+  <label class="sb-field__label" for="{{id}}">{{label}}</label>
+  {{> @partial-block}}
+</div>

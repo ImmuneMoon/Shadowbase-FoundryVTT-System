@@ -1,0 +1,47 @@
+{
+  "_id": "6l1wHozeihV4YQQO",
+  "_key": "!items!6l1wHozeihV4YQQO",
+  "name": "Ion Conversion Modulator",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "HItJMz9evrOuwm0U",
+  "sort": 1600000,
+  "system": {
+    "row": {
+      "name": "Ion Conversion Modulator",
+      "category": "Power Cell",
+      "cost": 480,
+      "weight": 0.5,
+      "notes": "Changes damage type to Ion/EMP.",
+      "damageTypeOverride": "ion",
+      "materials": [
+        {
+          "name": "Diatium",
+          "amount": 0.3
+        },
+        {
+          "name": "Silicon",
+          "amount": 0.2
+        }
+      ],
+      "id": "3f41851c-101a-4d36-bf04-3cd1a60d63bf",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Ion Conversion Modulator"
+    }
+  }
+}

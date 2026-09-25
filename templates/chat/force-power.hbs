@@ -1,0 +1,28 @@
+{{!-- templates/chat/force-power.hbs - a Force power or combat technique roll: the target-roll lines plus the
+     power line and its FP/EP costs with an Apply button (force-powers-section.tsx Apply Costs; the pools move
+     only through applyForcePowerCosts / applyTechniqueCosts). Context: module/rolls.mjs rollForcePower / rollTechnique. --}}
+<div class="shadowbase sb-chat-card sb-chat-card--power {{#if success}}is-success{{else}}is-failure{{/if}}{{#if critical}} is-critical{{/if}}" data-actor-id="{{actorId}}"{{#if itemId}} data-item-id="{{itemId}}"{{/if}}>
+  <header class="sb-chat-card__header">
+    <h3 class="sb-chat-card__title">{{title}}</h3>
+    {{#if power.alignment}}<span class="sb-badge sb-badge-outline sb-chat-card__badge">{{power.alignment}}</span>{{/if}}
+  </header>
+  <p class="sb-chat-card__power">{{power.name}}{{#if power.level}} &middot; {{localize "SHADOWBASE.Roll.Level" level=power.level}}{{/if}}{{#if power.baseSkill}} &middot; {{power.baseSkill}}{{/if}}</p>
+  <dl class="sb-chat-card__lines">
+    {{#if skillName}}<dt>{{localize "SHADOWBASE.Roll.Skill"}}</dt><dd>{{skillName}}{{#if resolution}} <span class="sb-chat-card__muted">({{resolution}})</span>{{/if}}</dd>{{/if}}
+    <dt>{{localize "SHADOWBASE.Roll.Target"}}</dt><dd><strong>{{target}}</strong>{{#if modifierText}} <span class="sb-chat-card__muted">({{baseTarget}} {{modifierText}})</span>{{/if}}</dd>
+    <dt>{{localize "SHADOWBASE.Roll.Rolled"}}</dt><dd><strong>{{total}}</strong> <span class="sb-chat-card__dice">[{{diceText}}]</span></dd>
+    <dt>{{localize "SHADOWBASE.Roll.Result"}}</dt>
+    <dd class="sb-chat-card__result">{{#each result.lines}}<span class="sb-chat-card__result-line">{{this}}</span>{{/each}}</dd>
+  </dl>
+  {{#if breakdown.length}}
+  <ul class="sb-chat-card__breakdown">
+    {{#each breakdown}}<li><span>{{this.label}}</span><span class="sb-chat-card__value">{{this.value}}</span></li>{{/each}}
+  </ul>
+  {{/if}}
+  {{#if power.effect}}<p class="sb-chat-card__effect">{{power.effect}}</p>{{/if}}
+  <footer class="sb-chat-card__actions">
+    <span class="sb-chat-card__costs">{{localize "SHADOWBASE.Roll.Costs"}}: {{costs.fp}} {{localize "SHADOWBASE.Roll.FP"}} &middot; {{costs.ep}} {{localize "SHADOWBASE.Roll.EP"}}</span>
+    <button type="button" class="sb-btn sb-btn-secondary sb-btn-sm" data-action="apply-costs"><i class="fa-solid fa-circle-minus"></i> {{localize "SHADOWBASE.Roll.ApplyCosts"}}</button>
+    {{#if technique}}{{#if weaponItemId}}<button type="button" class="sb-btn sb-btn-destructive sb-btn-sm" data-action="roll-technique-damage"><i class="fa-solid fa-burst"></i> {{localize "SHADOWBASE.Roll.RollDamage"}}{{#if power.damageBonus}} ({{power.damageBonus}}){{/if}}</button>{{/if}}{{/if}}
+  </footer>
+</div>

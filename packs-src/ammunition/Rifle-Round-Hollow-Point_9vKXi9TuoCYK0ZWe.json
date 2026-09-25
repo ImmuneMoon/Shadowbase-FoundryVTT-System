@@ -1,0 +1,70 @@
+{
+  "_id": "9vKXi9TuoCYK0ZWe",
+  "_key": "!items!9vKXi9TuoCYK0ZWe",
+  "name": "Rifle Round (Hollow Point)",
+  "type": "ammunition",
+  "img": "icons/svg/circle.svg",
+  "folder": "62SxWxECrgqvwXoo",
+  "sort": 1400000,
+  "system": {
+    "row": {
+      "name": "Rifle Round (Hollow Point)",
+      "craftingCategory": "Ammunition",
+      "projectileClass": "special",
+      "caliber": "Rifle",
+      "type": "Rounds",
+      "containerType": "Rounds",
+      "maxCharges": 1,
+      "cost": 6,
+      "weight": 0.098,
+      "formula": "4d+3",
+      "damageTypeOverride": "pi",
+      "notes": "Add 1d-2 cut to hit.",
+      "materials": [
+        {
+          "name": "Durasteel",
+          "amount": 0.018
+        },
+        {
+          "name": "Bronzium",
+          "amount": 0.04
+        },
+        {
+          "name": "Gunpowder",
+          "amount": 0.04
+        }
+      ],
+      "payloadRolls": [
+        {
+          "skill": "Machinist (Guns)",
+          "description": "Carving the hollow point."
+        }
+      ],
+      "id": "71875dcd-4a04-43e3-bea9-c34961e1b073",
+      "quantity": 1,
+      "currentCharges": 1,
+      "contents": [],
+      "isLibraryItem": true,
+      "baseCost": 6,
+      "baseWeight": 0.098,
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "ammunition",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "ammunition"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ammunition",
+      "key": "Rifle Round (Hollow Point)"
+    }
+  }
+}

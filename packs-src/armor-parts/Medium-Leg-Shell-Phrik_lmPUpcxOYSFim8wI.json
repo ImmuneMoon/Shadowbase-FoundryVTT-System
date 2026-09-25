@@ -1,0 +1,42 @@
+{
+  "_id": "lmPUpcxOYSFim8wI",
+  "_key": "!items!lmPUpcxOYSFim8wI",
+  "name": "Medium Leg Shell (Phrik)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 3900000,
+  "system": {
+    "row": {
+      "id": "d32e7c09-c88b-4eaf-84c2-e103113d1aea",
+      "name": "Medium Leg Shell (Phrik)",
+      "category": "Armor Shell",
+      "cost": 66015,
+      "weight": 7.34,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-medium-legs-phrik",
+      "materialId": "phrik",
+      "notes": "Nearly indestructible, highly lightsaber-resistant. Medium and Heavy tiers only -- it is not milled thin.",
+      "validSlots": [],
+      "drBonus": 11,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-medium-legs-phrik"
+    }
+  }
+}

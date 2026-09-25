@@ -1,0 +1,24 @@
+{{!-- templates/items/melee-build.hbs - customized-melee-weapon-item.tsx Structural Matrix (:1224-1320): the four Ch12
+     component LISTS with quantities, the Weapon Assembly strip, the Construction panel. Context: build (melee.mjs),
+     editable, owned, canToggleLibrary, libraryAccess, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--build {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  {{> "shadowbase.item.provenance" provenance=build.provenance editable=editable owned=owned canToggleLibrary=canToggleLibrary libraryAccess=libraryAccess crafting=crafting title=(localize "SHADOWBASE.Item.Build.WeaponAssembly")}}
+  {{#each build.slots}}
+  <div class="sb-item-section sb-melee-slot" data-slot="{{this.key}}">
+    <h4 class="sb-item-section__title">{{this.label}}{{#if this.required}} <span class="sb-slot__required">*</span>{{/if}}</h4>
+    {{#if this.empty}}<p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Melee.NoComponents"}}</p>{{/if}}
+    <div class="sb-slot-grid">
+      {{#each this.entries}}
+      <div class="sb-melee-entry">
+        {{> "shadowbase.item.slot" this editable=@root.editable prefix="entry" materialPrefix="entryMaterial" wrapPrefix="" qtyPrefix="entryQty"}}
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-btn-xs sb-danger" data-action="remove-entry" data-key="{{../key}}" data-index="{{this.index}}" title="{{localize "SHADOWBASE.Item.Melee.RemoveEntry"}}" {{disabled (not @root.editable)}} {{#if ../locked}}disabled{{/if}}><i class="{{sbIcon 'close'}}"></i></button>
+      </div>
+      {{/each}}
+    </div>
+    {{#if this.canAdd}}<button type="button" class="sb-btn sb-btn-outline sb-btn-xs sb-btn-dashed" data-action="add-entry" data-key="{{this.key}}" {{disabled (not @root.editable)}}><i class="{{sbIcon 'add'}}"></i> {{localize "SHADOWBASE.Item.Melee.AddEntry"}}</button>{{/if}}
+  </div>
+  {{/each}}
+  {{#if build.plan}}{{#if build.plan.show}}
+    {{> "shadowbase.item.plan" plan=build.plan phases=build.phases}}
+  {{/if}}{{/if}}
+</section>

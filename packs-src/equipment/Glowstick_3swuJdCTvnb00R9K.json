@@ -1,0 +1,50 @@
+{
+  "_id": "3swuJdCTvnb00R9K",
+  "_key": "!items!3swuJdCTvnb00R9K",
+  "name": "Glowstick",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "cK2OmLlfEjsr72q3",
+  "sort": 7100000,
+  "system": {
+    "row": {
+      "name": "Glowstick",
+      "cost": 18,
+      "description": "Chemical light source. Eliminates darkness penalties within a 2-yard radius (lasts 4 hours). Igniting a glowstick is a Free Action if already in hand.",
+      "category": "Tools & Electronics",
+      "subCategory": "Non-Consumable Tools",
+      "weight": 0.2,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Plastoid",
+          "amount": 0.1
+        },
+        {
+          "name": "Chemical Reactants",
+          "amount": 0.1
+        }
+      ],
+      "id": "272dbfe4-678d-46b9-814d-53a8b55bdba6",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Glowstick"
+    }
+  }
+}

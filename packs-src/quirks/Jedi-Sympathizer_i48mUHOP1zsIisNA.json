@@ -1,0 +1,32 @@
+{
+  "_id": "i48mUHOP1zsIisNA",
+  "_key": "!items!i48mUHOP1zsIisNA",
+  "name": "Jedi Sympathizer",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "J2wGZ0rpXlZB2j6l",
+  "sort": 2400000,
+  "system": {
+    "row": {
+      "name": "Jedi Sympathizer",
+      "points": -1,
+      "description": "You hold the Jedi Order in high regard, perhaps idealizing the tales of their wisdom and prowess. You are more likely to trust and help individuals you believe to be Jedi.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Jedi Sympathizer"
+    }
+  }
+}

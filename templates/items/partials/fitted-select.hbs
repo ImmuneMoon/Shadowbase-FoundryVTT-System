@@ -1,0 +1,18 @@
+{{!-- shadowbase.item.fitted - one finished-good slot (BlasterModifications.tsx:140-170, the saber InternalSelector):
+     the owned rows that fit, the catalog under Direct Library Access, the chosen template's printed price and effect.
+     Context: a builders.fittedView() object plus editable, prefix ('mod' | 'internal'). --}}
+<div class="sb-slot sb-slot--fitted {{#if required}}sb-slot--required{{/if}} {{#if chosenNotOwned}}sb-slot--unowned{{/if}}">
+  <label class="sb-slot__label" for="{{prefix}}-{{idField}}">{{label}}{{#if required}} <span class="sb-slot__required" title="{{localize "SHADOWBASE.Item.Slot.Required"}}">*</span>{{/if}}</label>
+  <select class="sb-select sb-slot__select" id="{{prefix}}-{{idField}}" name="{{prefix}}.{{idField}}" {{#if locked}}disabled{{/if}} {{#unless editable}}disabled{{/unless}}>
+    <option value="" {{#if select.isNone}}selected{{/if}}>{{localize "SHADOWBASE.Item.Slot.None"}}</option>
+    {{#each select.groups}}
+      <optgroup label="{{this.label}}">
+        {{#each this.options}}<option value="{{this.value}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+      </optgroup>
+    {{/each}}
+  </select>
+  <p class="sb-slot__caption">
+    {{#if chosenNotOwned}}<span class="sb-text-amber">{{localize "SHADOWBASE.Item.Slot.ChosenNotOwned"}}</span>{{#if template}}<span class="sb-text-muted"> · {{template.cost}} cr · {{template.weight}} lb</span>{{/if}}{{else if ownedName}}<span class="sb-text-green">{{localize "SHADOWBASE.Item.Slot.Owned" name=ownedName}}</span>{{else if emptyReason}}<span class="sb-text-muted">{{emptyReason}}</span>{{/if}}
+  </p>
+  {{#if template}}{{#if template.notes}}<p class="sb-slot__effect"><span class="sb-caps sb-text-accent">{{localize "SHADOWBASE.Item.Slot.Effect"}}</span> {{template.notes}}</p>{{/if}}{{/if}}
+</div>

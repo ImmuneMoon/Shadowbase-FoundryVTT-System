@@ -1,0 +1,225 @@
+{
+  "_id": "9haCVvRIFWZC23Dd",
+  "_key": "!items!9haCVvRIFWZC23Dd",
+  "name": "Bothan Needler",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "1M44MGu1wPr5xTR8",
+  "sort": 1300000,
+  "system": {
+    "row": {
+      "id": "dae954f1-8800-4965-bf0a-6438f3fd0b2a",
+      "customName": "Bothan Needler",
+      "baseType": "Bothan Needler",
+      "baseSkill": "Guns (Blaster Pistol)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 3.1,
+      "finalWeight": 3.1,
+      "baseCost": 333,
+      "finalCost": 1998,
+      "currentCharges": 50,
+      "maxCharges": 50,
+      "loadedAmmunitionId": "499e6f27-4b54-4a22-babf-3a8ea656d7ff",
+      "loadedAmmunitionData": {
+        "id": "499e6f27-4b54-4a22-babf-3a8ea656d7ff",
+        "name": "Standard Power Pack",
+        "type": "Power Packs",
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "cost": 0,
+        "weight": 0,
+        "baseCost": 0,
+        "baseWeight": 0,
+        "quantity": 1,
+        "contents": [],
+        "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+      },
+      "gripPart": {
+        "partId": "quick-draw-grip",
+        "inventoryId": "04f98b7d-ed69-4f07-81e1-a6d8b8f4f77b",
+        "materialId": "plasteel"
+      },
+      "receiverPart": {
+        "partId": "needler-receiver",
+        "inventoryId": "a3ab7c68-c824-4f5e-bc3b-5dc365ace6c1",
+        "materialId": "plasteel"
+      },
+      "barrelPart": {
+        "partId": "std-emitter",
+        "inventoryId": "9f9f806b-cccf-4640-8bbf-19c766939282",
+        "materialId": "plasteel"
+      },
+      "targetingPart": {
+        "partId": "advanced-targeting",
+        "inventoryId": "1172ad3f-63b6-44d5-9258-e1139e1de135"
+      },
+      "powerUnitPart": {
+        "partId": "standard-pwr-pack",
+        "inventoryId": "5a76c8ad-7288-4d8c-9692-3206813ed526"
+      },
+      "powerCellModId": "ce8df24b-020e-4837-9d53-3375a6a2a9dc",
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "dae954f1-8800-4965-bf0a-6438f3fd0b2a",
+        "customName": "Bothan Needler",
+        "baseType": "Bothan Needler",
+        "baseSkill": "Guns (Blaster Pistol)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 3.1,
+        "finalWeight": 3.1,
+        "baseCost": 333,
+        "finalCost": 1998,
+        "currentCharges": 50,
+        "maxCharges": 50,
+        "loadedAmmunitionId": "499e6f27-4b54-4a22-babf-3a8ea656d7ff",
+        "loadedAmmunitionData": {
+          "id": "499e6f27-4b54-4a22-babf-3a8ea656d7ff",
+          "name": "Standard Power Pack",
+          "type": "Power Packs",
+          "currentCharges": 50,
+          "maxCharges": 50,
+          "cost": 0,
+          "weight": 0,
+          "baseCost": 0,
+          "baseWeight": 0,
+          "quantity": 1,
+          "contents": [],
+          "notes": "The universal power source for pistols and other small arms. A gas top-up (15 CR) refills it to full; free electric recharging restores the cell only, never spent gas. Bundled with the weapon — its cost and weight are already in the weapon's own figures."
+        },
+        "gripPart": {
+          "partId": "quick-draw-grip",
+          "inventoryId": "04f98b7d-ed69-4f07-81e1-a6d8b8f4f77b",
+          "materialId": "plasteel"
+        },
+        "receiverPart": {
+          "partId": "needler-receiver",
+          "inventoryId": "a3ab7c68-c824-4f5e-bc3b-5dc365ace6c1",
+          "materialId": "plasteel"
+        },
+        "barrelPart": {
+          "partId": "std-emitter",
+          "inventoryId": "9f9f806b-cccf-4640-8bbf-19c766939282",
+          "materialId": "plasteel"
+        },
+        "targetingPart": {
+          "partId": "advanced-targeting",
+          "inventoryId": "1172ad3f-63b6-44d5-9258-e1139e1de135"
+        },
+        "powerUnitPart": {
+          "partId": "standard-pwr-pack",
+          "inventoryId": "5a76c8ad-7288-4d8c-9692-3206813ed526"
+        },
+        "powerCellModId": "ce8df24b-020e-4837-9d53-3375a6a2a9dc",
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "04f98b7d-ed69-4f07-81e1-a6d8b8f4f77b",
+          "name": "Quick-Draw Grip",
+          "partId": "quick-draw-grip",
+          "category": "Ranged Grip",
+          "materialId": "plasteel",
+          "cost": 36,
+          "weight": 0.45,
+          "isInstalled": true,
+          "installedInBlasterId": "dae954f1-8800-4965-bf0a-6438f3fd0b2a",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Streamlined for fast deployment."
+        },
+        {
+          "id": "a3ab7c68-c824-4f5e-bc3b-5dc365ace6c1",
+          "name": "Needler Receiver",
+          "partId": "needler-receiver",
+          "category": "Ranged Receiver",
+          "materialId": "plasteel",
+          "cost": 24,
+          "weight": 0.3,
+          "isInstalled": true,
+          "installedInBlasterId": "dae954f1-8800-4965-bf0a-6438f3fd0b2a",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "High-compression covert action."
+        },
+        {
+          "id": "9f9f806b-cccf-4640-8bbf-19c766939282",
+          "name": "Standard Emitter",
+          "partId": "std-emitter",
+          "category": "Ranged Barrel",
+          "materialId": "plasteel",
+          "cost": 48,
+          "weight": 0.6,
+          "isInstalled": true,
+          "installedInBlasterId": "dae954f1-8800-4965-bf0a-6438f3fd0b2a",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "1172ad3f-63b6-44d5-9258-e1139e1de135",
+          "name": "Advanced Targeting Module",
+          "partId": "advanced-targeting",
+          "category": "Ranged Targeting",
+          "cost": 70,
+          "weight": 0.9,
+          "isInstalled": true,
+          "installedInBlasterId": "dae954f1-8800-4965-bf0a-6438f3fd0b2a",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Military-grade tracking algorithms."
+        },
+        {
+          "id": "5a76c8ad-7288-4d8c-9692-3206813ed526",
+          "name": "Standard Power Pack",
+          "partId": "standard-pwr-pack",
+          "category": "Power Unit",
+          "cost": 105,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "dae954f1-8800-4965-bf0a-6438f3fd0b2a",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "ce8df24b-020e-4837-9d53-3375a6a2a9dc",
+          "name": "Stagger-Pulse Modulator",
+          "category": "Power Cell",
+          "cost": 50,
+          "weight": 0.3,
+          "isInstalled": true,
+          "installedInBlasterId": "dae954f1-8800-4965-bf0a-6438f3fd0b2a",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "On hit, target must make an HT roll or be physically Stunned for 1d sec."
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Bothan Needler"
+    }
+  }
+}

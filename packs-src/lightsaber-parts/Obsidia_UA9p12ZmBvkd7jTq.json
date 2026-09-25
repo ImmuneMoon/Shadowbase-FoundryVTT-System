@@ -1,0 +1,45 @@
+{
+  "_id": "UA9p12ZmBvkd7jTq",
+  "_key": "!items!UA9p12ZmBvkd7jTq",
+  "name": "Obsidia",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "CHP7xje9NHnZhKqb",
+  "sort": 8000000,
+  "system": {
+    "row": {
+      "id": "c01843b0-93b5-4809-ad2b-6b609889665d",
+      "name": "Obsidia",
+      "cost": 25000,
+      "weight": 0.2,
+      "damageAdds": 3,
+      "effect": "+3 damage, +1d damage vs Light Side users (Dark Side users only).",
+      "category": "Lightsaber Power Crystal",
+      "materials": [
+        {
+          "name": "Diatium",
+          "amount": 0.2
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "+3 damage, +1d damage vs Light Side users (Dark Side users only)."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:obsidia"
+    }
+  }
+}

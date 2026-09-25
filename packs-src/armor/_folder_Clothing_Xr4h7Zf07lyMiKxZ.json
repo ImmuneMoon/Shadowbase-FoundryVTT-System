@@ -1,0 +1,19 @@
+{
+  "_id": "Xr4h7Zf07lyMiKxZ",
+  "_key": "!folders!Xr4h7Zf07lyMiKxZ",
+  "name": "Clothing",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 0,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "armor",
+      "path": [
+        "Clothing"
+      ]
+    }
+  }
+}

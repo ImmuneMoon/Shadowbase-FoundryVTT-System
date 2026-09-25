@@ -1,0 +1,42 @@
+{
+  "_id": "BycZzfHWJMXhw5om",
+  "_key": "!items!BycZzfHWJMXhw5om",
+  "name": "Blueprint: Antidote Kit",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "57dSrgDssXtG4x1L",
+  "sort": 39500000,
+  "system": {
+    "row": {
+      "id": "1d39e0c1-b3d0-4352-acd5-71914238c920",
+      "name": "Blueprint: Antidote Kit",
+      "cost": 210,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Antidote Kit (Generation 0, proven, encoded, catalog design). Required to build Antidote Kit; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Antidote Kit",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 360,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Medical & Pharmaceuticals|Antidote Kit"
+    }
+  }
+}

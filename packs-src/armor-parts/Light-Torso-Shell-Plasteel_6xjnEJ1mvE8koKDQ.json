@@ -1,0 +1,42 @@
+{
+  "_id": "6xjnEJ1mvE8koKDQ",
+  "_key": "!items!6xjnEJ1mvE8koKDQ",
+  "name": "Light Torso Shell (Plasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 2000000,
+  "system": {
+    "row": {
+      "id": "00c38909-26c7-4276-9977-b958dec7f4bd",
+      "name": "Light Torso Shell (Plasteel)",
+      "category": "Armor Shell",
+      "cost": 240,
+      "weight": 3,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-light-torso-plasteel",
+      "materialId": "plasteel",
+      "notes": "Rigid, durable fusion of plastoid and steel.",
+      "validSlots": [],
+      "drBonus": 7,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-light-torso-plasteel"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "guP1RUrLPef7sxsW",
+  "_key": "!items!guP1RUrLPef7sxsW",
+  "name": "Blueprint: Venom-Tipped Dart",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "DvRG95q4QWZQnNFm",
+  "sort": 3900000,
+  "system": {
+    "row": {
+      "id": "e81e2e20-1b07-487f-8d83-198978f3c78b",
+      "name": "Blueprint: Venom-Tipped Dart",
+      "cost": 262,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Venom-Tipped Dart (Generation 0, proven, encoded, catalog design). Required to build Venom-Tipped Dart; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Venom-Tipped Dart",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 876.4444444444445,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Ammunition|Venom-Tipped Dart"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "rDGif8vaTB9h0NKc",
+  "_key": "!items!rDGif8vaTB9h0NKc",
+  "name": "Blueprint: Jedi Robes (Trousers)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "MnWmBWTvCSXsoxKg",
+  "sort": 16400000,
+  "system": {
+    "row": {
+      "id": "e78e5749-1893-458e-a2af-fae6ae20b901",
+      "name": "Blueprint: Jedi Robes (Trousers)",
+      "cost": 175,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Jedi Robes (Trousers) (Generation 0, proven, encoded, catalog design). Required to build Jedi Robes (Trousers); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Jedi Robes (Trousers)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 5,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Clothing|Jedi Robes (Trousers)"
+    }
+  }
+}

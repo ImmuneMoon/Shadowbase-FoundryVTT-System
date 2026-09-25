@@ -1,0 +1,34 @@
+{
+  "_id": "AIYLZIJz2EJVqyRt",
+  "_key": "!items!AIYLZIJz2EJVqyRt",
+  "name": "Extra Arms (Cybernetic)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "b0AkEhPa45uoNffk",
+  "sort": 6000000,
+  "system": {
+    "row": {
+      "name": "Extra Arms (Cybernetic)",
+      "points": 10,
+      "description": "1 extra arm",
+      "category": "Cybernetic",
+      "baselinePoints": 0,
+      "level": 1
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Extra Arms (Cybernetic)"
+    }
+  }
+}

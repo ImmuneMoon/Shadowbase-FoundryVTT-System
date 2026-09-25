@@ -1,0 +1,18 @@
+{{!-- templates/items/blaster-build.hbs - BlasterBaseInfo.tsx Structural Matrix (the five Ch11 slots :230-300, the
+     Weapon Assembly strip customized-blaster-item.tsx:504-550, the Construction panel :586-620). Context: build
+     (blaster.mjs), editable, owned, canToggleLibrary, libraryAccess, tab. --}}
+<section class="tab sb-item-tab sb-item-tab--build {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+  {{> "shadowbase.item.provenance" provenance=build.provenance editable=editable owned=owned canToggleLibrary=canToggleLibrary libraryAccess=libraryAccess crafting=crafting title=(localize "SHADOWBASE.Item.Build.WeaponAssembly")}}
+  <div class="sb-item-section">
+    <h4 class="sb-item-section__title"><i class="{{sbIcon 'Combine'}}"></i> {{localize "SHADOWBASE.Item.Blaster.StructuralMatrix"}}</h4>
+    <p class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Blaster.Classification" family=build.family category=build.category}}{{#if build.reclass}} · <span class="sb-text-amber">{{localize "SHADOWBASE.Item.Blaster.Reclassified" family=build.reclass.family skill=build.reclass.skill}}</span>{{/if}}</p>
+    <div class="sb-slot-grid">
+      {{#each build.slots}}
+        {{> "shadowbase.item.slot" this editable=@root.editable prefix="slot" materialPrefix="material" wrapPrefix="" qtyPrefix=""}}
+      {{/each}}
+    </div>
+  </div>
+  {{#if build.plan}}{{#if build.plan.show}}
+    {{> "shadowbase.item.plan" plan=build.plan phases=build.phases}}
+  {{/if}}{{/if}}
+</section>

@@ -1,0 +1,48 @@
+{
+  "_id": "Zif6qsr9pgUJPdPR",
+  "_key": "!items!Zif6qsr9pgUJPdPR",
+  "name": "Phobium Matrix",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "wdgF4I9g207o5qq5",
+  "sort": 4500000,
+  "system": {
+    "row": {
+      "id": "45807f6b-7d41-4796-9f57-0deb4715473b",
+      "name": "Phobium Matrix",
+      "cost": 2558,
+      "weight": 0.2,
+      "effect": "+2 to resist disarming/damage from energy.",
+      "category": "Lightsaber Emitter Matrix",
+      "materials": [
+        {
+          "name": "Cortosis",
+          "amount": 0.1
+        },
+        {
+          "name": "Durasteel",
+          "amount": 0.1
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "+2 to resist disarming/damage from energy."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:phobium-matrix"
+    }
+  }
+}

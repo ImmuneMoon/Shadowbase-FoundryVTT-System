@@ -1,0 +1,42 @@
+{
+  "_id": "Jzxo0KJEVjYsN3iC",
+  "_key": "!items!Jzxo0KJEVjYsN3iC",
+  "name": "Blueprint: Electronics Tool Kit",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "g7UVHPh3r2MYv5Oo",
+  "sort": 48000000,
+  "system": {
+    "row": {
+      "id": "4417dfef-12f0-4816-8ab1-f68f7ce0cd87",
+      "name": "Blueprint: Electronics Tool Kit",
+      "cost": 193,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Electronics Tool Kit (Generation 0, proven, encoded, catalog design). Required to build Electronics Tool Kit; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Electronics Tool Kit",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 190,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Tools & Electronics|Electronics Tool Kit"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "E4h2Xn4pTV0QLLdh",
+  "_key": "!folders!E4h2Xn4pTV0QLLdh",
+  "name": "Blaster Rifles & Carbines",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 400000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "path": [
+        "Blaster Rifles & Carbines"
+      ]
+    }
+  }
+}

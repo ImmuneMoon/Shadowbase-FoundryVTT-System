@@ -1,0 +1,42 @@
+{
+  "_id": "gv3Z8VmmSTho7CZl",
+  "_key": "!items!gv3Z8VmmSTho7CZl",
+  "name": "Blueprint: Load Bearing Vest",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "rp93cLA7jGuZj51F",
+  "sort": 13300000,
+  "system": {
+    "row": {
+      "id": "016448fd-1976-4517-a674-715a5bf068a9",
+      "name": "Blueprint: Load Bearing Vest",
+      "cost": 179,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Load Bearing Vest (Generation 0, proven, encoded, catalog design). Required to build Load Bearing Vest; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Load Bearing Vest",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 50,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Carry Frame|Load Bearing Vest"
+    }
+  }
+}

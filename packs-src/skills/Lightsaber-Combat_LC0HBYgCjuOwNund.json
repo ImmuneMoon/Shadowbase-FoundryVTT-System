@@ -1,0 +1,34 @@
+{
+  "_id": "LC0HBYgCjuOwNund",
+  "_key": "!items!LC0HBYgCjuOwNund",
+  "name": "Lightsaber Combat",
+  "type": "skill",
+  "img": "icons/svg/book.svg",
+  "folder": "TmHeseJfr7BHisdh",
+  "sort": 8000000,
+  "system": {
+    "row": {
+      "name": "Lightsaber Combat",
+      "level": "",
+      "points": null,
+      "relativeLevel": "DX/Hard",
+      "notes": "",
+      "baselinePoints": 0
+    },
+    "source": "skills",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "skills"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "key": "Lightsaber Combat"
+    }
+  }
+}

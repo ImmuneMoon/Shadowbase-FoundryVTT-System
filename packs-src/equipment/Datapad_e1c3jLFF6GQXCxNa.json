@@ -1,0 +1,59 @@
+{
+  "_id": "e1c3jLFF6GQXCxNa",
+  "_key": "!items!e1c3jLFF6GQXCxNa",
+  "name": "Datapad",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "QVe7sZmgjcPk3HO6",
+  "sort": 4300000,
+  "system": {
+    "row": {
+      "name": "Datapad",
+      "cost": 1470,
+      "skill": "Computer Operation or Research",
+      "description": "Portable device. 24hr charge. Materials: Silicon: 0.4 lbs, Durasteel: 0.4 lbs, Clari-crystalline: 0.2 lbs, Power Cell: 0.7 lbs.",
+      "category": "Communication & Data",
+      "weight": 1.7,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Silicon",
+          "amount": 0.4
+        },
+        {
+          "name": "Durasteel",
+          "amount": 0.4
+        },
+        {
+          "name": "Clari-crystalline",
+          "amount": 0.2
+        },
+        {
+          "name": "Power Cell",
+          "amount": 0.7
+        }
+      ],
+      "requiresSoftware": true,
+      "id": "9c15010b-dc63-457e-a720-1e8151d7e835",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Datapad"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "v92PrXa2ZHi7flEi",
+  "_key": "!items!v92PrXa2ZHi7flEi",
+  "name": "Duty (Corporate/Military)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "N9OA5FojtdIRbIeU",
+  "sort": 7600000,
+  "system": {
+    "row": {
+      "name": "Duty (Corporate/Military)",
+      "points": -1,
+      "level": null,
+      "description": "You owe your life and your hardware to an organization. Mandates highly dangerous assignments when summoned, with severe consequences for failure or AWOL. Range: -1 to -15 points.",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Duty (Corporate/Military)|Cybernetic"
+    }
+  }
+}

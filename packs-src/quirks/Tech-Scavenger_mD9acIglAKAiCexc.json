@@ -1,0 +1,32 @@
+{
+  "_id": "mD9acIglAKAiCexc",
+  "_key": "!items!mD9acIglAKAiCexc",
+  "name": "Tech Scavenger",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "J2wGZ0rpXlZB2j6l",
+  "sort": 4200000,
+  "system": {
+    "row": {
+      "name": "Tech Scavenger",
+      "points": -1,
+      "description": "You have a habit of compulsively stripping downed droids, broken equipment, or abandoned consoles for spare parts, convinced they might be useful later. You often have pockets full of random wires, power cells, and processors.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Tech Scavenger"
+    }
+  }
+}

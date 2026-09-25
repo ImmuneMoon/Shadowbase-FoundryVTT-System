@@ -1,0 +1,42 @@
+{
+  "_id": "gwzvY0Bd7xuhm4s5",
+  "_key": "!items!gwzvY0Bd7xuhm4s5",
+  "name": "Blueprint: Beskar'gam Boots",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 4600000,
+  "system": {
+    "row": {
+      "id": "d17405ce-f5e0-4645-b51e-50e171df3dc9",
+      "name": "Blueprint: Beskar'gam Boots",
+      "cost": 2282,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Beskar'gam Boots (Generation 0, proven, encoded, catalog design). Required to build Beskar'gam Boots; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Beskar'gam Boots",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 21078,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Beskar'gam Boots"
+    }
+  }
+}

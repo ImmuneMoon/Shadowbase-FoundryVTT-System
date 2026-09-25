@@ -1,0 +1,33 @@
+{
+  "_id": "UmGUmz4yOD7Fp52t",
+  "_key": "!items!UmGUmz4yOD7Fp52t",
+  "name": "Ambidexterity (Cybernetic)",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "b0AkEhPa45uoNffk",
+  "sort": 1200000,
+  "system": {
+    "row": {
+      "name": "Ambidexterity (Cybernetic)",
+      "points": 5,
+      "description": "Neural recalibration allows the user to operate dual cybernetic arms with perfect synchronicity, completely negating off-hand penalties in combat.",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Ambidexterity (Cybernetic)"
+    }
+  }
+}

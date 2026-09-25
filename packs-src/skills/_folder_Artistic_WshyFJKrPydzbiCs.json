@@ -1,0 +1,19 @@
+{
+  "_id": "WshyFJKrPydzbiCs",
+  "_key": "!folders!WshyFJKrPydzbiCs",
+  "name": "Artistic",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 500000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "skills",
+      "path": [
+        "Artistic"
+      ]
+    }
+  }
+}

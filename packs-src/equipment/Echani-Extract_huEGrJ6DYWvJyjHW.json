@@ -1,0 +1,42 @@
+{
+  "_id": "huEGrJ6DYWvJyjHW",
+  "_key": "!items!huEGrJ6DYWvJyjHW",
+  "name": "Echani Extract",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "dPDuGSsNw7ZoBS6M",
+  "sort": 5100000,
+  "system": {
+    "row": {
+      "name": "Echani Extract",
+      "rarity": "Ultra Rare",
+      "cost": 7500,
+      "density": 65,
+      "category": "Raw Materials",
+      "subCategory": "Pharma",
+      "weight": 1,
+      "quantity": 1,
+      "description": "An incredibly rare, highly concentrated combat stimulant derived from Echani martial traditions.",
+      "id": "4348a0a1-d262-4776-bfe5-d46b2a706f6d",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Echani Extract"
+    }
+  }
+}

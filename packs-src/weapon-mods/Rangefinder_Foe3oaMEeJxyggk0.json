@@ -1,0 +1,50 @@
+{
+  "_id": "Foe3oaMEeJxyggk0",
+  "_key": "!items!Foe3oaMEeJxyggk0",
+  "name": "Rangefinder",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "vlG1Oq0UHVNfXJGP",
+  "sort": 400000,
+  "system": {
+    "row": {
+      "name": "Rangefinder",
+      "category": "Sights/Optics",
+      "cost": 866,
+      "weight": 1,
+      "notes": "Negates all range penalties, but requires an Aim maneuver.",
+      "materials": [
+        {
+          "name": "Silicon",
+          "amount": 0.5
+        },
+        {
+          "name": "Clari-crystalline",
+          "amount": 0.3
+        },
+        {
+          "name": "Durasteel",
+          "amount": 0.2
+        }
+      ],
+      "id": "d9ba0701-c70b-4cbe-8e66-d95da3af03d1",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Rangefinder"
+    }
+  }
+}

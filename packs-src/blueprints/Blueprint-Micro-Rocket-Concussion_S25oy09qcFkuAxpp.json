@@ -1,0 +1,42 @@
+{
+  "_id": "S25oy09qcFkuAxpp",
+  "_key": "!items!S25oy09qcFkuAxpp",
+  "name": "Blueprint: Micro-Rocket (Concussion)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "a37dkIaxvg9p084m",
+  "sort": 30300000,
+  "system": {
+    "row": {
+      "id": "3b6f391d-355f-449a-92e8-65c8989df974",
+      "name": "Blueprint: Micro-Rocket (Concussion)",
+      "cost": 214,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Micro-Rocket (Concussion) (Generation 0, proven, encoded, catalog design). Required to build Micro-Rocket (Concussion); builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Micro-Rocket (Concussion)",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 396.6666666666667,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Explosives|Micro-Rocket (Concussion)"
+    }
+  }
+}

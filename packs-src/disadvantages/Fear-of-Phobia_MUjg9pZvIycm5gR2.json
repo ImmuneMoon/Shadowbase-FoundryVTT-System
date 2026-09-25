@@ -1,0 +1,34 @@
+{
+  "_id": "MUjg9pZvIycm5gR2",
+  "_key": "!items!MUjg9pZvIycm5gR2",
+  "name": "Fear of (Phobia)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 10100000,
+  "system": {
+    "row": {
+      "name": "Fear of (Phobia)",
+      "points": -5,
+      "level": null,
+      "description": "An irrational aversion to a specific thing or situation (e.g., Fear of Droids, Fear of Space Travel). This phobia can be used by enemies to incapacitate or control you. Range: -5 to -15 points.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Fear of (Phobia)|Mental"
+    }
+  }
+}

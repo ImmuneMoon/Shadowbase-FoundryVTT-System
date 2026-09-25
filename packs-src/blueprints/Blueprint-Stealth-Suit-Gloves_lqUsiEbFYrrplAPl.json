@@ -1,0 +1,42 @@
+{
+  "_id": "lqUsiEbFYrrplAPl",
+  "_key": "!items!lqUsiEbFYrrplAPl",
+  "name": "Blueprint: Stealth Suit Gloves",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 9700000,
+  "system": {
+    "row": {
+      "id": "0f5d659c-9807-4580-928b-5c9d17e1f194",
+      "name": "Blueprint: Stealth Suit Gloves",
+      "cost": 198,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Stealth Suit Gloves (Generation 0, proven, encoded, catalog design). Required to build Stealth Suit Gloves; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Stealth Suit Gloves",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 235,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Stealth Suit Gloves"
+    }
+  }
+}

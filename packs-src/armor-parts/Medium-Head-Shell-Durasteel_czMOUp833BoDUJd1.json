@@ -1,0 +1,42 @@
+{
+  "_id": "czMOUp833BoDUJd1",
+  "_key": "!items!czMOUp833BoDUJd1",
+  "name": "Medium Head Shell (Durasteel)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 700000,
+  "system": {
+    "row": {
+      "id": "bd199a9d-7d6d-4f53-a749-1a11f5422df3",
+      "name": "Medium Head Shell (Durasteel)",
+      "category": "Armor Shell",
+      "cost": 150,
+      "weight": 2.99,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-medium-head-durasteel",
+      "materialId": "durasteel",
+      "notes": "Standard building alloy. Baseline stats.",
+      "validSlots": [],
+      "drBonus": 5,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-medium-head-durasteel"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "UX2wyMeyBqd6qzkU",
+  "_key": "!items!UX2wyMeyBqd6qzkU",
+  "name": "Bipedal Chassis (Sentinel MK I-V)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "bppESUx5QjA1oXLP",
+  "sort": 300000,
+  "system": {
+    "row": {
+      "id": "fd7713ab-f1ea-4696-b3bb-bc4560b2abd2",
+      "name": "Bipedal Chassis (Sentinel MK I-V)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Chassis",
+      "cost": 6600,
+      "weight": 45,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "sentinel-bipedal",
+      "description": "Base ST 11, HP 11, DR 5; Torso 0.62 m"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "sentinel-bipedal"
+    }
+  }
+}

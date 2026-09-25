@@ -1,0 +1,19 @@
+{
+  "_id": "lMudTveYN6LSWH7D",
+  "_key": "!folders!lMudTveYN6LSWH7D",
+  "name": "Sense Powers",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 0,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "force-powers",
+      "path": [
+        "Sense Powers"
+      ]
+    }
+  }
+}

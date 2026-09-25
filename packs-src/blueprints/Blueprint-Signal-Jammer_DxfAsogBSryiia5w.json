@@ -1,0 +1,42 @@
+{
+  "_id": "DxfAsogBSryiia5w",
+  "_key": "!items!DxfAsogBSryiia5w",
+  "name": "Blueprint: Signal Jammer",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "muygUURylK1A9j1R",
+  "sort": 20100000,
+  "system": {
+    "row": {
+      "id": "140818c2-138e-4ee1-90bd-b3f8043b98b5",
+      "name": "Blueprint: Signal Jammer",
+      "cost": 444,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Signal Jammer (Generation 0, proven, encoded, catalog design). Required to build Signal Jammer; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Signal Jammer",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 2700,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Communication & Data|Signal Jammer"
+    }
+  }
+}

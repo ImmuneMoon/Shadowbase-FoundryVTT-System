@@ -1,0 +1,42 @@
+{
+  "_id": "a3p1aRHG9HlzFWm7",
+  "_key": "!items!a3p1aRHG9HlzFWm7",
+  "name": "Blueprint: Military-Grade Diatium",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "K45FlY41iVH89Btt",
+  "sort": 26700000,
+  "system": {
+    "row": {
+      "id": "044abbb7-b784-41c1-9ec0-0493be56603c",
+      "name": "Blueprint: Military-Grade Diatium",
+      "cost": 527,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Military-Grade Diatium (Generation 0, proven, encoded, catalog design). Required to build Military-Grade Diatium; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Military-Grade Diatium",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3525,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Droid Power|Military-Grade Diatium"
+    }
+  }
+}

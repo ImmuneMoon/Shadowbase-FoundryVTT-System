@@ -1,0 +1,99 @@
+{{!-- templates/actor/abilities.hbs - the Abilities tab (docs/STYLE-SPEC.md §3.3 Abilities: A1 Advantages & Perks, A2 Disadvantages,
+     A3 Quirks, A4 Skills, A6 Force Powers, A7 Combat Techniques, A8 Lightsaber Forms; A5 Languages is the Info tab's - U05).
+     Context: module/apps/actor-sheet-tabs.mjs abilitiesContext(actor) merged over the sheet's part context (`tab`). --}}
+<section class="tab sb-tab-panel sb-tab-abilities sb-sections {{tab.cssClass}}" data-tab="abilities" data-group="primary">
+
+  <details class="sb-section" data-section="advantages" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Abilities.Advantages") icon=(sbIcon "ShieldAlert") chip="traits-skills" chipTitle=(lookup chips "traits-skills") meta=(localize "SHADOWBASE.Sheet.Abilities.SectionPoints" n=points.advantages)}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#if advantages.length}}<ul class="sb-rows">{{#each advantages}}{{> "systems/shadowbase/templates/actor/parts/trait-row.hbs" this}}{{/each}}</ul>
+      {{else}}{{> "shadowbase.empty" icon=(sbIcon "ShieldAlert") title=(localize "SHADOWBASE.Sheet.Abilities.NoAdvantages") description=(localize "SHADOWBASE.Sheet.Abilities.NoAdvantagesHint") action=(localize "SHADOWBASE.Sheet.AddFromLibrary")}}{{/if}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.advantages}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button>
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="addRow" data-source="advantages" {{disabled (not editable)}}><i class="{{sbIcon 'Plus'}}"></i> {{localize "SHADOWBASE.Sheet.AddCustom"}}</button>
+      </div>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="disadvantages" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Abilities.Disadvantages") icon=(sbIcon "ShieldAlert") chip="traits-skills" chipTitle=(lookup chips "traits-skills") meta=(localize "SHADOWBASE.Sheet.Abilities.SectionPoints" n=points.disadvantages)}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#if disadvantages.length}}<ul class="sb-rows">{{#each disadvantages}}{{> "systems/shadowbase/templates/actor/parts/trait-row.hbs" this}}{{/each}}</ul>
+      {{else}}{{> "shadowbase.empty" icon=(sbIcon "ShieldAlert") title=(localize "SHADOWBASE.Sheet.Abilities.NoDisadvantages") description=(localize "SHADOWBASE.Sheet.Abilities.NoDisadvantagesHint") action=(localize "SHADOWBASE.Sheet.AddFromLibrary")}}{{/if}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.disadvantages}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button>
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="addRow" data-source="disadvantages" {{disabled (not editable)}}><i class="{{sbIcon 'Plus'}}"></i> {{localize "SHADOWBASE.Sheet.AddCustom"}}</button>
+      </div>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="quirks" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Abilities.Quirks") icon=(sbIcon "Info") chip="traits-skills" chipTitle=(lookup chips "traits-skills") meta=(localize "SHADOWBASE.Sheet.Abilities.SectionPoints" n=points.quirks)}}
+    <div class="sb-section__body" data-accordion-body>
+      <p class="sb-muted-p">{{localize "SHADOWBASE.Sheet.Abilities.QuirksHint" max=quirkLimit}}</p>
+      {{#if quirkLimitExceeded}}<p class="sb-notice sb-notice--warn">{{localize "SHADOWBASE.Drop.QuirkLimit" max=quirkLimit}}</p>{{/if}}
+      {{#if quirks.length}}<ul class="sb-rows">{{#each quirks}}{{> "systems/shadowbase/templates/actor/parts/trait-row.hbs" this}}{{/each}}</ul>
+      {{else}}{{> "shadowbase.empty" icon=(sbIcon "Info") title=(localize "SHADOWBASE.Sheet.Abilities.NoQuirks") description=(localize "SHADOWBASE.Sheet.Abilities.NoQuirksHint") action=(localize "SHADOWBASE.Sheet.AddFromLibrary")}}{{/if}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.quirks}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button>
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="addRow" data-source="quirks" {{disabled (not editable)}}><i class="{{sbIcon 'Plus'}}"></i> {{localize "SHADOWBASE.Sheet.AddCustom"}}</button>
+      </div>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="skills" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Abilities.Skills") icon=(sbIcon "GraduationCap") chip="traits-skills" chipTitle=(lookup chips "traits-skills") meta=(localize "SHADOWBASE.Sheet.Abilities.SectionPoints" n=points.skills)}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#if skills.length}}<ul class="sb-rows">{{#each skills}}{{> "systems/shadowbase/templates/actor/parts/skill-row.hbs" this}}{{/each}}</ul>
+      {{else}}{{> "shadowbase.empty" icon=(sbIcon "GraduationCap") title=(localize "SHADOWBASE.Sheet.Abilities.NoSkills") description=(localize "SHADOWBASE.Sheet.Abilities.NoSkillsHint") action=(localize "SHADOWBASE.Sheet.AddFromLibrary")}}{{/if}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.skills}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button>
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="addRow" data-source="skills" {{disabled (not editable)}}><i class="{{sbIcon 'Plus'}}"></i> {{localize "SHADOWBASE.Sheet.AddCustom"}}</button>
+      </div>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="force-powers" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Abilities.ForcePowers") icon=(sbIcon "Sparkles") chip="force-alignment-forms" chipTitle=(lookup chips "force-alignment-forms") meta=(localize "SHADOWBASE.Sheet.Abilities.PowersMeta" n=points.forcePowers alignment=forceAlignment)}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#if forcePowers.length}}<ul class="sb-rows">{{#each forcePowers}}{{> "systems/shadowbase/templates/actor/parts/power-row.hbs" this}}{{/each}}</ul>
+      {{else}}{{> "shadowbase.empty" icon=(sbIcon "Sparkles") title=(localize "SHADOWBASE.Sheet.Abilities.NoPowers") description=(localize "SHADOWBASE.Sheet.Abilities.NoPowersHint") action=(localize "SHADOWBASE.Sheet.AddFromLibrary")}}{{/if}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.forcePowers}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button>
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="addRow" data-source="forcePowers" {{disabled (not editable)}}><i class="{{sbIcon 'Plus'}}"></i> {{localize "SHADOWBASE.Sheet.AddCustom"}}</button>
+      </div>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="combat-techniques" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Abilities.CombatTechniques") icon=(sbIcon "Crosshair") chip="combat-damage" chipTitle=(lookup chips "combat-damage") meta=(localize "SHADOWBASE.Sheet.Abilities.SectionPoints" n=points.combatTechniques)}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#each techniqueGroups}}
+      <details class="sb-section sb-section--sub" data-section="techniques-{{this.category}}" open>
+        {{> "shadowbase.section" title=this.label icon="" chip="" chipTitle="" meta=this.hint}}
+        <div class="sb-section__body" data-accordion-body>
+          {{#if this.rows.length}}<ul class="sb-rows">{{#each this.rows}}{{> "systems/shadowbase/templates/actor/parts/technique-row.hbs" this}}{{/each}}</ul>
+          {{else}}<p class="sb-muted-p">{{localize "SHADOWBASE.Sheet.Abilities.NoTechniquesIn" category=this.label}}</p>{{/if}}
+        </div>
+      </details>
+      {{/each}}
+      {{#if techniqueStrays.length}}<ul class="sb-rows">{{#each techniqueStrays}}{{> "systems/shadowbase/templates/actor/parts/technique-row.hbs" this}}{{/each}}</ul>{{/if}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.combatTechniques}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button>
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="addRow" data-source="combatTechniques" {{disabled (not editable)}}><i class="{{sbIcon 'Plus'}}"></i> {{localize "SHADOWBASE.Sheet.AddCustom"}}</button>
+      </div>
+    </div>
+  </details>
+
+  <details class="sb-section" data-section="lightsaber-forms" open>
+    {{> "shadowbase.section" title=(localize "SHADOWBASE.Sheet.Abilities.LightsaberForms") icon=(sbIcon "CircleDashed") chip="force-alignment-forms" chipTitle=(lookup chips "force-alignment-forms") meta=formsMeta}}
+    <div class="sb-section__body" data-accordion-body>
+      {{#if lightsaberForms.length}}<ul class="sb-rows">{{#each lightsaberForms}}{{> "systems/shadowbase/templates/actor/parts/form-row.hbs" this}}{{/each}}</ul>
+      {{else}}{{> "shadowbase.empty" icon=(sbIcon "CircleDashed") title=(localize "SHADOWBASE.Sheet.Abilities.NoForms") description=(localize "SHADOWBASE.Sheet.Abilities.NoFormsHint") action=(localize "SHADOWBASE.Sheet.AddFromLibrary")}}{{/if}}
+      <div class="sb-actions">
+        <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="browseCompendium" data-pack="{{packs.lightsaberForms}}"><i class="{{sbIcon 'Library'}}"></i> {{localize "SHADOWBASE.Sheet.AddFromLibrary"}}</button>
+        <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="addRow" data-source="lightsaberForms" {{disabled (not editable)}}><i class="{{sbIcon 'Plus'}}"></i> {{localize "SHADOWBASE.Sheet.AddCustom"}}</button>
+      </div>
+    </div>
+  </details>
+</section>

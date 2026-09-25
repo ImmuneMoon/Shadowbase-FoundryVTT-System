@@ -1,0 +1,156 @@
+{
+  "_id": "nDIJvZnP9XLoUdYq",
+  "_key": "!items!nDIJvZnP9XLoUdYq",
+  "name": "Mandalorian \"Stinger\" Gauntlet",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "CoelHeDNsZOx1aGO",
+  "sort": 3100000,
+  "system": {
+    "row": {
+      "id": "43feb201-2871-496b-972d-5a99a68c3a34",
+      "customName": "Mandalorian \"Stinger\" Gauntlet",
+      "baseType": "Mandalorian \"Stinger\" Gauntlet",
+      "baseSkill": "Guns (Gauntlet)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 2.5,
+      "finalWeight": 2.5,
+      "baseCost": 3092,
+      "finalCost": 27828,
+      "gripPart": {
+        "partId": "vambrace-mount",
+        "inventoryId": "84bea63f-9dcd-43d0-bd39-f462f425d7e8",
+        "materialId": "beskar"
+      },
+      "receiverPart": {
+        "partId": "firing-mech",
+        "inventoryId": "f15f37b0-8cfb-4684-b3ee-67d5ce479453",
+        "materialId": "durasteel"
+      },
+      "barrelPart": {
+        "partId": "dart-tubes",
+        "inventoryId": "cc74d16c-8ee6-4e57-a381-bb0a4deb31f5",
+        "materialId": "durasteel"
+      },
+      "targetingPart": {
+        "partId": "basic-targeting",
+        "inventoryId": "54b63ec2-c59f-4bea-b54d-f88d95e47f0c"
+      },
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "43feb201-2871-496b-972d-5a99a68c3a34",
+        "customName": "Mandalorian \"Stinger\" Gauntlet",
+        "baseType": "Mandalorian \"Stinger\" Gauntlet",
+        "baseSkill": "Guns (Gauntlet)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 2.5,
+        "finalWeight": 2.5,
+        "baseCost": 3092,
+        "finalCost": 27828,
+        "gripPart": {
+          "partId": "vambrace-mount",
+          "inventoryId": "84bea63f-9dcd-43d0-bd39-f462f425d7e8",
+          "materialId": "beskar"
+        },
+        "receiverPart": {
+          "partId": "firing-mech",
+          "inventoryId": "f15f37b0-8cfb-4684-b3ee-67d5ce479453",
+          "materialId": "durasteel"
+        },
+        "barrelPart": {
+          "partId": "dart-tubes",
+          "inventoryId": "cc74d16c-8ee6-4e57-a381-bb0a4deb31f5",
+          "materialId": "durasteel"
+        },
+        "targetingPart": {
+          "partId": "basic-targeting",
+          "inventoryId": "54b63ec2-c59f-4bea-b54d-f88d95e47f0c"
+        },
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "84bea63f-9dcd-43d0-bd39-f462f425d7e8",
+          "name": "Vambrace Mount",
+          "partId": "vambrace-mount",
+          "category": "Ranged Grip",
+          "materialId": "beskar",
+          "cost": 3000,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInBlasterId": "43feb201-2871-496b-972d-5a99a68c3a34",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Wrist-mounted housing."
+        },
+        {
+          "id": "f15f37b0-8cfb-4684-b3ee-67d5ce479453",
+          "name": "Firing Mech",
+          "partId": "firing-mech",
+          "category": "Ranged Receiver",
+          "materialId": "durasteel",
+          "cost": 26,
+          "weight": 0.49,
+          "isInstalled": true,
+          "installedInBlasterId": "43feb201-2871-496b-972d-5a99a68c3a34",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Wrist delivery system."
+        },
+        {
+          "id": "cc74d16c-8ee6-4e57-a381-bb0a4deb31f5",
+          "name": "Dart Tubes",
+          "partId": "dart-tubes",
+          "category": "Ranged Barrel",
+          "materialId": "durasteel",
+          "cost": 26,
+          "weight": 0.49,
+          "isInstalled": true,
+          "installedInBlasterId": "43feb201-2871-496b-972d-5a99a68c3a34",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "54b63ec2-c59f-4bea-b54d-f88d95e47f0c",
+          "name": "Basic Targeting Module",
+          "partId": "basic-targeting",
+          "category": "Ranged Targeting",
+          "cost": 40,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "43feb201-2871-496b-972d-5a99a68c3a34",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard civilian uplink."
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Mandalorian \"Stinger\" Gauntlet"
+    }
+  }
+}

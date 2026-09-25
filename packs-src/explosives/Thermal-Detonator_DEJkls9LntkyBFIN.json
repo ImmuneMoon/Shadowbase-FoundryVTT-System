@@ -1,0 +1,34 @@
+{
+  "_id": "DEJkls9LntkyBFIN",
+  "_key": "!items!DEJkls9LntkyBFIN",
+  "name": "Thermal Detonator",
+  "type": "explosive",
+  "img": "icons/svg/explosion.svg",
+  "folder": "AStJ6TwJg1TlZvs5",
+  "sort": 1500000,
+  "system": {
+    "row": {
+      "baseExplosiveName": "Thermal Detonator",
+      "quantity": 1,
+      "finalWeight": 1,
+      "finalCost": 2040,
+      "preferredDefaultAttr": "DX",
+      "id": "eba2f4e8-78a9-45ef-90ef-f8714b2b9971"
+    },
+    "source": "customExplosives",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "explosives"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "explosives",
+      "key": "Thermal Detonator"
+    }
+  }
+}

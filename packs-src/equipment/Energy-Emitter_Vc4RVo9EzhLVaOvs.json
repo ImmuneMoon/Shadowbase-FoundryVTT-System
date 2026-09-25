@@ -1,0 +1,55 @@
+{
+  "_id": "Vc4RVo9EzhLVaOvs",
+  "_key": "!items!Vc4RVo9EzhLVaOvs",
+  "name": "Energy Emitter",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "7rGdcjDF69anM1Pj",
+  "sort": 5800000,
+  "system": {
+    "row": {
+      "name": "Energy Emitter",
+      "cost": 120,
+      "skill": "Electronics Operation or Electronics Repair",
+      "description": "An electronic component that produces warm or cold energy. Needs Computer Programming to function if constructed.",
+      "category": "Utility & Miscellaneous",
+      "weight": 1,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Silicon",
+          "amount": 0.4
+        },
+        {
+          "name": "Durasteel",
+          "amount": 0.4
+        },
+        {
+          "name": "Diatium",
+          "amount": 0.2
+        }
+      ],
+      "requiresSoftware": true,
+      "id": "0218f5a4-4898-467c-9616-0e337f3918f7",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Energy Emitter"
+    }
+  }
+}

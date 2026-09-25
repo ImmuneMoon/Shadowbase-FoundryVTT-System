@@ -1,0 +1,55 @@
+{{!-- templates/apps/dossier-importer.hbs - the GM roster importer (src/app/profile/page.tsx:734-810): the files read,
+     the one collision policy (Skip / Overwrite / Save as copy), the target folder, Plan (a dry run), Import, and the
+     per-file outcome with its reason. Fields bind `dossier.*`; the file input is wired by the app's _onRender.
+     Context: DossierImporter#_prepareContext (`dossier`). --}}
+<section class="sb-app__body sb-dossier" data-app="dossier-importer">
+{{#with dossier}}
+  {{#unless isGM}}<p class="sb-notice sb-notice--warn"><i class="fa-solid fa-triangle-exclamation"></i> {{localize "SHADOWBASE.Apps.Dossier.GmOnly"}}</p>{{/unless}}
+  <p class="sb-muted-p">{{localize "SHADOWBASE.Apps.Dossier.Hint"}}</p>
+  <div class="sb-dossier__files">
+    <label class="sb-dossier__drop"><i class="fa-solid fa-file-import"></i> <span>{{localize "SHADOWBASE.Apps.Dossier.ChooseFiles"}}</span><input type="file" accept=".json,application/json" multiple data-dossier-files></label>
+    {{#if hasFiles}}
+    <ul class="sb-dossier__list">
+      {{#each files}}<li class="sb-hrow sb-hrow--between"><span class="sb-text-mono sb-text-10">{{name}} <span class="sb-text-muted">({{size}} B)</span></span><button type="button" class="sb-btn sb-btn-ghost sb-btn-icon sb-btn-xs" data-action="remove-file" data-index="{{index}}" title="{{localize 'SHADOWBASE.Apps.Dossier.RemoveFile'}}"><i class="fa-solid fa-xmark"></i></button></li>{{/each}}
+    </ul>
+    <p class="sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Dossier.FilesRead" count=fileCount}}</p>
+    {{/if}}
+  </div>
+
+  <div class="sb-dossier__policy">
+    <p class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Dossier.PolicyTitle"}}</p>
+    {{#each policies}}<label class="sb-check-row sb-dossier__option"><input type="radio" name="dossier.policy" value="{{value}}" {{#if checked}}checked{{/if}}> <span><b>{{label}}</b> <span class="sb-text-10 sb-text-muted">{{hint}}</span></span></label>{{/each}}
+  </div>
+  {{#if hasFolders}}
+  <div class="sb-field" data-sheet-row><label class="sb-field__label" for="dossier-folder">{{localize "SHADOWBASE.Apps.Dossier.Folder"}}</label><select class="sb-select" id="dossier-folder" name="dossier.folder">{{#each folders}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select></div>
+  {{/if}}
+
+  <div class="sb-hrow sb-hrow--between sb-dossier__actions">
+    <button type="button" class="sb-btn sb-btn-ghost sb-btn-sm" data-action="clear" {{disabled (or busy (not hasFiles))}}><i class="fa-solid fa-eraser"></i> {{localize "SHADOWBASE.Apps.Dossier.Clear"}}</button>
+    <span class="sb-hrow sb-hrow--tight">
+      <button type="button" class="sb-btn sb-btn-outline sb-btn-sm" data-action="plan" {{disabled (or busy (not hasFiles))}}><i class="fa-solid fa-list-check"></i> {{localize "SHADOWBASE.Apps.Dossier.Plan"}}</button>
+      <button type="button" class="sb-btn sb-btn-default sb-btn-sm" data-action="import" {{disabled (not canImport)}}><i class="fa-solid fa-file-import"></i> {{localize "SHADOWBASE.Apps.Dossier.Import"}}</button>
+    </span>
+  </div>
+
+  {{#if plan}}
+  <div class="sb-dossier__plan">
+    <p class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Dossier.PlanTitle"}} — {{tally}}</p>
+    <div class="sb-table-wrap"><table class="sb-table sb-table--dense">
+      <thead><tr><th>{{localize "SHADOWBASE.Apps.Dossier.File"}}</th><th>{{localize "SHADOWBASE.Apps.Dossier.Character"}}</th><th>{{localize "SHADOWBASE.Apps.Dossier.ActionCol"}}</th><th>{{localize "SHADOWBASE.Apps.Dossier.Reason"}}</th></tr></thead>
+      <tbody>{{#each plan}}<tr class="is-{{tone}}"><td class="sb-text-mono sb-text-10">{{fileName}}</td><td>{{#if finalName}}{{finalName}}{{else}}{{characterName}}{{/if}}</td><td class="sb-caps sb-text-10">{{action}}</td><td class="sb-text-10 sb-text-muted">{{reason}}</td></tr>{{/each}}</tbody>
+    </table></div>
+  </div>
+  {{/if}}
+  {{#if results}}
+  <div class="sb-dossier__results">
+    <p class="sb-caps sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Dossier.ResultsTitle"}}</p>
+    <div class="sb-table-wrap"><table class="sb-table sb-table--dense">
+      <thead><tr><th>{{localize "SHADOWBASE.Apps.Dossier.File"}}</th><th>{{localize "SHADOWBASE.Apps.Dossier.Character"}}</th><th>{{localize "SHADOWBASE.Apps.Dossier.OutcomeCol"}}</th><th>{{localize "SHADOWBASE.Apps.Dossier.Reason"}}</th></tr></thead>
+      <tbody>{{#each results}}<tr class="is-{{tone}}"><td class="sb-text-mono sb-text-10">{{fileName}}</td><td>{{name}}</td><td class="sb-caps sb-text-10">{{outcome}}</td><td class="sb-text-10 sb-text-muted">{{reason}}{{#if notices}} {{notices}}{{/if}}</td></tr>{{/each}}</tbody>
+    </table></div>
+    <p class="sb-text-10 sb-text-muted">{{localize "SHADOWBASE.Apps.Dossier.HiddenNote"}}</p>
+  </div>
+  {{/if}}
+{{/with}}
+</section>

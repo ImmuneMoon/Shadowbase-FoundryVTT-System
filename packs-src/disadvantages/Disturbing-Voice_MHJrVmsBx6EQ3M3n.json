@@ -1,0 +1,34 @@
+{
+  "_id": "MHJrVmsBx6EQ3M3n",
+  "_key": "!items!MHJrVmsBx6EQ3M3n",
+  "name": "Disturbing Voice",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "iBhK8LHSekCOv5gO",
+  "sort": 15100000,
+  "system": {
+    "row": {
+      "name": "Disturbing Voice",
+      "points": -10,
+      "level": null,
+      "description": "Your voice is grating, unsettling, or otherwise unpleasant, causing a -2 reaction from anyone you speak to.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Disturbing Voice|Physical"
+    }
+  }
+}

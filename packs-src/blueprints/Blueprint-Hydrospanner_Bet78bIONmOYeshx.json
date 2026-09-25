@@ -1,0 +1,42 @@
+{
+  "_id": "Bet78bIONmOYeshx",
+  "_key": "!items!Bet78bIONmOYeshx",
+  "name": "Blueprint: Hydrospanner",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "g7UVHPh3r2MYv5Oo",
+  "sort": 48500000,
+  "system": {
+    "row": {
+      "id": "ff3e8356-41c7-4948-9a1b-fab16d38b685",
+      "name": "Blueprint: Hydrospanner",
+      "cost": 303,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Hydrospanner (Generation 0, proven, encoded, catalog design). Required to build Hydrospanner; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Hydrospanner",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 1290,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Tools & Electronics|Hydrospanner"
+    }
+  }
+}

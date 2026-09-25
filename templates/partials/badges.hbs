@@ -1,0 +1,5 @@
+{{!-- shadowbase.badges - a modifier bag as per-channel badges ('+2 DX', 'FRIGHT IMMUNE', '×0.5 MOVE'; green bonus,
+     red penalty - the website's Active Effects hub display parity). Param: badges = the sbChannel helper's list. --}}
+<span class="sb-hrow sb-hrow--tight">
+  {{#each badges}}<span class="sb-badge sb-badge-outline sb-badge--effect {{#if positive}}sb-badge--pos{{else}}sb-badge--neg{{/if}}">{{text}}</span>{{/each}}
+</span>

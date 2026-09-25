@@ -1,0 +1,6 @@
+{{!-- shadowbase.roll-btn - the RollButton trigger (src/components/character-sheet/components/roll-button.tsx:
+     an outline icon button with the dice glyph; the popover is module/apps/roll-dialog.mjs).
+     Params: action ('roll-attribute' | 'roll-characteristic' | 'roll-skill'), key (data-key or ''), name (data-name or ''),
+     title (tooltip text), label (aria text), disabled (bool). --}}
+<button type="button" class="sb-btn sb-btn-outline sb-btn-icon sb-roll" data-action="{{action}}" {{#if key}}data-key="{{key}}"{{/if}} {{#if name}}data-name="{{name}}"{{/if}}
+  title="{{title}}" aria-label="{{label}}" {{#if disabled}}disabled{{/if}}><i class="{{sbIcon 'roll'}}"></i></button>

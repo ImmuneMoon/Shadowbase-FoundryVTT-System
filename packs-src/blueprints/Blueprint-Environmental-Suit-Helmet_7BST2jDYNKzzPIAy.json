@@ -1,0 +1,42 @@
+{
+  "_id": "7BST2jDYNKzzPIAy",
+  "_key": "!items!7BST2jDYNKzzPIAy",
+  "name": "Blueprint: Environmental Suit Helmet",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 6600000,
+  "system": {
+    "row": {
+      "id": "6dfacf5a-6527-4dcc-953e-8aaad6f7c3e9",
+      "name": "Blueprint: Environmental Suit Helmet",
+      "cost": 183,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Environmental Suit Helmet (Generation 0, proven, encoded, catalog design). Required to build Environmental Suit Helmet; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Environmental Suit Helmet",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 85.5,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Environmental Suit Helmet"
+    }
+  }
+}

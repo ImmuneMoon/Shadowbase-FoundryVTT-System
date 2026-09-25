@@ -1,0 +1,156 @@
+{
+  "_id": "V0HHRrTO1HmEqZMd",
+  "_key": "!items!V0HHRrTO1HmEqZMd",
+  "name": "Mandalorian Rocket Launching Gauntlet",
+  "type": "blaster",
+  "img": "icons/svg/target.svg",
+  "folder": "CoelHeDNsZOx1aGO",
+  "sort": 3700000,
+  "system": {
+    "row": {
+      "id": "291acd1a-c151-47e6-9eea-ad76054a02d6",
+      "customName": "Mandalorian Rocket Launching Gauntlet",
+      "baseType": "Mandalorian Rocket Launching Gauntlet",
+      "baseSkill": "Guns (Gauntlet)",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "baseWeight": 2.7,
+      "finalWeight": 2.7,
+      "baseCost": 178,
+      "finalCost": 1602,
+      "gripPart": {
+        "partId": "vambrace-mount",
+        "inventoryId": "6c6e7447-22f3-416a-8507-6446b6f3dbfa",
+        "materialId": "duraplast"
+      },
+      "receiverPart": {
+        "partId": "firing-mech",
+        "inventoryId": "c540fe15-06ba-48aa-9aaf-b3578ce66d8a",
+        "materialId": "durasteel"
+      },
+      "barrelPart": {
+        "partId": "micro-rocket-tube",
+        "inventoryId": "b9d28b51-32e6-4a51-85a6-5eece9dc0d3e",
+        "materialId": "durasteel"
+      },
+      "targetingPart": {
+        "partId": "basic-targeting",
+        "inventoryId": "fb7f1f73-9dd7-4357-9f94-f04b6ed64d6f"
+      },
+      "condition": "Fine",
+      "malfunction": 17,
+      "durability": null
+    },
+    "source": "customBlasters",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "291acd1a-c151-47e6-9eea-ad76054a02d6",
+        "customName": "Mandalorian Rocket Launching Gauntlet",
+        "baseType": "Mandalorian Rocket Launching Gauntlet",
+        "baseSkill": "Guns (Gauntlet)",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "baseWeight": 2.7,
+        "finalWeight": 2.7,
+        "baseCost": 178,
+        "finalCost": 1602,
+        "gripPart": {
+          "partId": "vambrace-mount",
+          "inventoryId": "6c6e7447-22f3-416a-8507-6446b6f3dbfa",
+          "materialId": "duraplast"
+        },
+        "receiverPart": {
+          "partId": "firing-mech",
+          "inventoryId": "c540fe15-06ba-48aa-9aaf-b3578ce66d8a",
+          "materialId": "durasteel"
+        },
+        "barrelPart": {
+          "partId": "micro-rocket-tube",
+          "inventoryId": "b9d28b51-32e6-4a51-85a6-5eece9dc0d3e",
+          "materialId": "durasteel"
+        },
+        "targetingPart": {
+          "partId": "basic-targeting",
+          "inventoryId": "fb7f1f73-9dd7-4357-9f94-f04b6ed64d6f"
+        },
+        "condition": "Fine",
+        "malfunction": 17,
+        "durability": null
+      },
+      "parts": [
+        {
+          "id": "6c6e7447-22f3-416a-8507-6446b6f3dbfa",
+          "name": "Vambrace Mount",
+          "partId": "vambrace-mount",
+          "category": "Ranged Grip",
+          "materialId": "duraplast",
+          "cost": 38,
+          "weight": 0.19,
+          "isInstalled": true,
+          "installedInBlasterId": "291acd1a-c151-47e6-9eea-ad76054a02d6",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Wrist-mounted housing."
+        },
+        {
+          "id": "c540fe15-06ba-48aa-9aaf-b3578ce66d8a",
+          "name": "Firing Mech",
+          "partId": "firing-mech",
+          "category": "Ranged Receiver",
+          "materialId": "durasteel",
+          "cost": 26,
+          "weight": 0.49,
+          "isInstalled": true,
+          "installedInBlasterId": "291acd1a-c151-47e6-9eea-ad76054a02d6",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Wrist delivery system."
+        },
+        {
+          "id": "b9d28b51-32e6-4a51-85a6-5eece9dc0d3e",
+          "name": "Micro-Rocket Launch Tube",
+          "partId": "micro-rocket-tube",
+          "category": "Ranged Barrel",
+          "materialId": "durasteel",
+          "cost": 74,
+          "weight": 1.47,
+          "isInstalled": true,
+          "installedInBlasterId": "291acd1a-c151-47e6-9eea-ad76054a02d6",
+          "equipped": true,
+          "quantity": 1,
+          "notes": ""
+        },
+        {
+          "id": "fb7f1f73-9dd7-4357-9f94-f04b6ed64d6f",
+          "name": "Basic Targeting Module",
+          "partId": "basic-targeting",
+          "category": "Ranged Targeting",
+          "cost": 40,
+          "weight": 0.5,
+          "isInstalled": true,
+          "installedInBlasterId": "291acd1a-c151-47e6-9eea-ad76054a02d6",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Standard civilian uplink."
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "ranged-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "ranged-weapons",
+      "key": "Mandalorian Rocket Launching Gauntlet"
+    }
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "_id": "y62GYheY2f5qxanO",
+  "_key": "!items!y62GYheY2f5qxanO",
+  "name": "Electro-staff",
+  "type": "meleeWeapon",
+  "img": "icons/svg/sword.svg",
+  "folder": "kxieIU4MbxPmhTK2",
+  "sort": 1200000,
+  "system": {
+    "row": {
+      "id": "40c1080d-488f-4230-84ea-2f391cc54bbf",
+      "customName": "Electro-staff",
+      "baseType": "Electro-staff",
+      "baseSkill": "Staff",
+      "isConstructed": true,
+      "equipped": false,
+      "quantity": 1,
+      "selectedDamageMode": 0,
+      "currentCharges": 100,
+      "maxCharges": 100,
+      "condition": "Fine",
+      "baseReach": "2, 3",
+      "baseWeight": 8.58,
+      "finalWeight": 8.58,
+      "baseCost": 902,
+      "finalCost": 5412,
+      "gripParts": [
+        {
+          "inventoryId": "48fcbf28-e888-42f6-a3c2-b0fe6af849d1",
+          "materialId": "durasteel",
+          "quantity": 1
+        }
+      ],
+      "headParts": [
+        {
+          "inventoryId": "ab5c5377-8222-4a87-a4cf-9af4dbb32223",
+          "materialId": "durasteel",
+          "quantity": 2
+        }
+      ],
+      "utilityParts": [
+        {
+          "inventoryId": "0108e060-4db2-42de-bca3-cd4e861421ca",
+          "materialId": null,
+          "quantity": 2
+        },
+        {
+          "inventoryId": "11131263-a5df-42e6-94fb-af731523d2bc",
+          "materialId": null,
+          "quantity": 1
+        }
+      ]
+    },
+    "source": "customMeleeWeapons",
+    "family": null,
+    "kit": {
+      "weapon": {
+        "id": "40c1080d-488f-4230-84ea-2f391cc54bbf",
+        "customName": "Electro-staff",
+        "baseType": "Electro-staff",
+        "baseSkill": "Staff",
+        "isConstructed": true,
+        "equipped": false,
+        "quantity": 1,
+        "selectedDamageMode": 0,
+        "currentCharges": 100,
+        "maxCharges": 100,
+        "condition": "Fine",
+        "baseReach": "2, 3",
+        "baseWeight": 8.58,
+        "finalWeight": 8.58,
+        "baseCost": 902,
+        "finalCost": 5412,
+        "gripParts": [
+          {
+            "inventoryId": "48fcbf28-e888-42f6-a3c2-b0fe6af849d1",
+            "materialId": "durasteel",
+            "quantity": 1
+          }
+        ],
+        "headParts": [
+          {
+            "inventoryId": "ab5c5377-8222-4a87-a4cf-9af4dbb32223",
+            "materialId": "durasteel",
+            "quantity": 2
+          }
+        ],
+        "utilityParts": [
+          {
+            "inventoryId": "0108e060-4db2-42de-bca3-cd4e861421ca",
+            "materialId": null,
+            "quantity": 2
+          },
+          {
+            "inventoryId": "11131263-a5df-42e6-94fb-af731523d2bc",
+            "materialId": null,
+            "quantity": 1
+          }
+        ]
+      },
+      "parts": [
+        {
+          "id": "48fcbf28-e888-42f6-a3c2-b0fe6af849d1",
+          "name": "Long Shaft",
+          "category": "Melee Grip",
+          "materialId": "durasteel",
+          "cost": 196,
+          "weight": 3.92,
+          "isInstalled": true,
+          "installedInMeleeId": "40c1080d-488f-4230-84ea-2f391cc54bbf",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Polearm/Staff/Spear. 2-handed. (+2 Parry with Staff skill).",
+          "energyResBonus": 0
+        },
+        {
+          "id": "ab5c5377-8222-4a87-a4cf-9af4dbb32223",
+          "name": "Weighted End",
+          "category": "Melee Head",
+          "materialId": "durasteel",
+          "cost": 50,
+          "weight": 0.98,
+          "isInstalled": true,
+          "installedInMeleeId": "40c1080d-488f-4230-84ea-2f391cc54bbf",
+          "equipped": true,
+          "quantity": 2,
+          "notes": "Balanced.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "0108e060-4db2-42de-bca3-cd4e861421ca",
+          "name": "Shock Emitter",
+          "category": "Melee Power Unit",
+          "cost": 198,
+          "weight": 1,
+          "isInstalled": true,
+          "installedInMeleeId": "40c1080d-488f-4230-84ea-2f391cc54bbf",
+          "equipped": true,
+          "quantity": 2,
+          "notes": "Adds +1d-2 (min 1) shock follow-up. Target rolls HT or is Stunned.",
+          "energyResBonus": 0
+        },
+        {
+          "id": "11131263-a5df-42e6-94fb-af731523d2bc",
+          "name": "Power Cell",
+          "category": "Melee Power Unit",
+          "cost": 210,
+          "weight": 0.7,
+          "isInstalled": true,
+          "installedInMeleeId": "40c1080d-488f-4230-84ea-2f391cc54bbf",
+          "equipped": true,
+          "quantity": 1,
+          "notes": "Provides baseline power for attached emitters/generators.",
+          "energyResBonus": 0
+        }
+      ],
+      "ammunition": [],
+      "equipment": []
+    },
+    "levels": [],
+    "catalog": "melee-weapons"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-weapons",
+      "key": "Electro-staff"
+    }
+  }
+}

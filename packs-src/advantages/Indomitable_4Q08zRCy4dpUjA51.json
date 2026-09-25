@@ -1,0 +1,33 @@
+{
+  "_id": "4Q08zRCy4dpUjA51",
+  "_key": "!items!4Q08zRCy4dpUjA51",
+  "name": "Indomitable",
+  "type": "advantage",
+  "img": "icons/svg/upgrade.svg",
+  "folder": "7AGNJYNb9nbYtvwO",
+  "sort": 8600000,
+  "system": {
+    "row": {
+      "name": "Indomitable",
+      "points": 15,
+      "description": "You have an unbreakable will, gaining a bonus to resist mental attacks and persuasion. Essential for resisting Jedi mind tricks, Sith temptations, or cunning political manipulation, allowing you to maintain your chosen path, whatever it may be.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "advantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "advantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "advantages",
+      "key": "Indomitable"
+    }
+  }
+}

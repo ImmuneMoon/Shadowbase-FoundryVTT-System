@@ -1,0 +1,55 @@
+{
+  "_id": "InooX3gpQh3gcF3W",
+  "_key": "!items!InooX3gpQh3gcF3W",
+  "name": "Fusion Cutter",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "cK2OmLlfEjsr72q3",
+  "sort": 6600000,
+  "system": {
+    "row": {
+      "name": "Fusion Cutter",
+      "cost": 680,
+      "skill": "Forced Entry or Professional Skill (Welder)",
+      "description": "A handheld torch. Inflicts 3d burning damage per second to stationary objects and has an armor divisor of (2) against bulkheads and doors. Useless in melee combat unless the target is completely immobilized. Power cell lasts for 15 minutes of continuous cutting.",
+      "category": "Tools & Electronics",
+      "subCategory": "Non-Consumable Tools",
+      "weight": 5,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Diatium",
+          "amount": 0.3
+        },
+        {
+          "name": "Durasteel",
+          "amount": 4
+        },
+        {
+          "name": "Power Cell",
+          "amount": 0.7
+        }
+      ],
+      "id": "706834fb-52c2-48f1-8497-5879ff0d8a7e",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Fusion Cutter"
+    }
+  }
+}

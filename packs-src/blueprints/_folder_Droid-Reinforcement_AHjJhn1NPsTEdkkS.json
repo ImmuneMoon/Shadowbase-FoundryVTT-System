@@ -1,0 +1,20 @@
+{
+  "_id": "AHjJhn1NPsTEdkkS",
+  "_key": "!folders!AHjJhn1NPsTEdkkS",
+  "name": "Droid Reinforcement",
+  "type": "Item",
+  "folder": "AHUgnqohVTlbyS6h",
+  "sorting": "a",
+  "sort": 2600000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "path": [
+        "Droid Parts",
+        "Droid Reinforcement"
+      ]
+    }
+  }
+}

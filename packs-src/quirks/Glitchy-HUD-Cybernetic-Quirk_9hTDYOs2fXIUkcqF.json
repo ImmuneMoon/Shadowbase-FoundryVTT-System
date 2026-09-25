@@ -1,0 +1,32 @@
+{
+  "_id": "9hTDYOs2fXIUkcqF",
+  "_key": "!items!9hTDYOs2fXIUkcqF",
+  "name": "Glitchy HUD (Cybernetic Quirk)",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "J2wGZ0rpXlZB2j6l",
+  "sort": 1900000,
+  "system": {
+    "row": {
+      "name": "Glitchy HUD (Cybernetic Quirk)",
+      "points": -1,
+      "description": "Your sensory optical overlay occasionally shows flickering pixels or obsolete warning signs, which you stubbornly refuse to calibrate.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Glitchy HUD (Cybernetic Quirk)"
+    }
+  }
+}

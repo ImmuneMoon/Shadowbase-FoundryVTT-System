@@ -1,0 +1,42 @@
+{
+  "_id": "2jipXEWgoklJRbIw",
+  "_key": "!items!2jipXEWgoklJRbIw",
+  "name": "Neural-Linked Actuator",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "Hi0SNsuto8300vVQ",
+  "sort": 4100000,
+  "system": {
+    "row": {
+      "name": "Neural-Linked Actuator",
+      "category": "Deployment Mechanism",
+      "cost": 410,
+      "weight": 0.1,
+      "notes": "Deploys via thought. Fast-Draw automatically succeeds as Free Action.",
+      "materials": [
+        {
+          "name": "Silicon",
+          "amount": 0.1
+        }
+      ],
+      "id": "cbeefc45-5685-4991-aea3-0ccef785d5d3",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Neural-Linked Actuator"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "QCFdv9PrPDJ1nETw",
+  "_key": "!items!QCFdv9PrPDJ1nETw",
+  "name": "Integrated Head (MK II Assault)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "QVHxjnveCs2gG8nK",
+  "sort": 1700000,
+  "system": {
+    "row": {
+      "id": "2a7de707-0cde-4aa2-9a7f-cf4065687434",
+      "name": "Integrated Head (MK II Assault)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Head",
+      "cost": 4240,
+      "weight": 15,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "integrated-mk2",
+      "description": "DR 5 (Skull), +1 to Hit Location penalty"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "integrated-mk2"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "Tcg3BwDkDliYjiLa",
+  "_key": "!items!Tcg3BwDkDliYjiLa",
+  "name": "Heavy Torso Shell (Duraplast)",
+  "type": "armorPart",
+  "img": "icons/svg/mage-shield.svg",
+  "folder": "897q1eW6sX76xG0g",
+  "sort": 2800000,
+  "system": {
+    "row": {
+      "id": "27fe770a-2b10-46e1-a799-2389c6ec3668",
+      "name": "Heavy Torso Shell (Duraplast)",
+      "category": "Armor Shell",
+      "cost": 950,
+      "weight": 4.75,
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "partId": "shell-heavy-torso-duraplast",
+      "materialId": "duraplast",
+      "notes": "Lightweight ceramic/plastic hybrid used in armor. Heavy tier only.",
+      "validSlots": [],
+      "drBonus": 23,
+      "installedInArmorId": null
+    },
+    "source": "armorModifications",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "armor-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "armor-parts",
+      "key": "shell-heavy-torso-duraplast"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "_id": "Oljsk71A7oD2GP5l",
+  "_key": "!items!Oljsk71A7oD2GP5l",
+  "name": "Scrap-Tech Reassembled Foot",
+  "type": "cyberneticLimb",
+  "img": "icons/svg/bones.svg",
+  "folder": "XY3P8r89fv7qHBeH",
+  "sort": 1100000,
+  "system": {
+    "row": {
+      "id": "3e611d72-ebf2-4d2a-b31f-b8b77f2ea950",
+      "name": "Scrap-Tech Reassembled Foot",
+      "location": "Right Foot",
+      "extent": "Partial",
+      "material": "Scrap Metal",
+      "cost": 584,
+      "weight": 2.43,
+      "dr": 2,
+      "currentDr": 2,
+      "effect": "Imposes a -1 penalty to Jumping and Acrobatics rolls.",
+      "upgrades": [],
+      "hasSynthskin": false,
+      "installed": false,
+      "storageLocationId": null,
+      "quantity": 1,
+      "baselinePoints": 0,
+      "itemSizeModifier": 0
+    },
+    "source": "cybernetics",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "cybernetic-limbs"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "cybernetic-limbs",
+      "key": "Foot|Scrap-Tech Reassembled Foot"
+    }
+  }
+}

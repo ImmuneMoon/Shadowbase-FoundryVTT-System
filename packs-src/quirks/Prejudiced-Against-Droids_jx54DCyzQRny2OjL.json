@@ -1,0 +1,32 @@
+{
+  "_id": "jx54DCyzQRny2OjL",
+  "_key": "!items!jx54DCyzQRny2OjL",
+  "name": "Prejudiced Against Droids",
+  "type": "quirk",
+  "img": "icons/svg/aura.svg",
+  "folder": "J2wGZ0rpXlZB2j6l",
+  "sort": 3200000,
+  "system": {
+    "row": {
+      "name": "Prejudiced Against Droids",
+      "points": -1,
+      "description": "You view droids not just with dislike, but as inferior objects. You might call them \"clankers\" or \"tin cans\" and refuse to acknowledge them as anything more than tools.",
+      "baselinePoints": 0
+    },
+    "source": "quirks",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "quirks"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "quirks",
+      "key": "Prejudiced Against Droids"
+    }
+  }
+}

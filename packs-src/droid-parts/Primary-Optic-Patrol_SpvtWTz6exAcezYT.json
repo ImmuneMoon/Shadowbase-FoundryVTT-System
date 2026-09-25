@@ -1,0 +1,39 @@
+{
+  "_id": "SpvtWTz6exAcezYT",
+  "_key": "!items!SpvtWTz6exAcezYT",
+  "name": "Primary Optic (Patrol)",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "oqIU8n2TNn1530V9",
+  "sort": 3200000,
+  "system": {
+    "row": {
+      "id": "03858629-0042-4dc2-ad91-f426a14b2940",
+      "name": "Primary Optic (Patrol)",
+      "category": "Utility & Miscellaneous",
+      "subCategory": "Droid Sensor",
+      "cost": 452,
+      "weight": 1,
+      "quantity": 1,
+      "isInstalled": false,
+      "condition": "Fine",
+      "partId": "optic-patrol",
+      "description": "Acute Vision 2"
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "droid-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "droid-parts",
+      "key": "optic-patrol"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_id": "O15U6j95W3mJgDXt",
+  "_key": "!folders!O15U6j95W3mJgDXt",
+  "name": "Unarmed",
+  "type": "Item",
+  "folder": null,
+  "sorting": "a",
+  "sort": 100000,
+  "color": null,
+  "description": "",
+  "flags": {
+    "shadowbase": {
+      "pack": "combat-techniques",
+      "path": [
+        "Unarmed"
+      ]
+    }
+  }
+}

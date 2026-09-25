@@ -1,0 +1,34 @@
+{
+  "_id": "ujdBnjLU5X9rtpPa",
+  "_key": "!items!ujdBnjLU5X9rtpPa",
+  "name": "One Foot",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "iBhK8LHSekCOv5gO",
+  "sort": 15800000,
+  "system": {
+    "row": {
+      "name": "One Foot",
+      "points": -10,
+      "level": null,
+      "description": "You are missing a foot (or have a non-functional prosthetic). Your Basic Move is halved, rounded to the nearest yard (Ch2); jump distance follows Move and drops with it (Ch3). Less limiting than One Hand, which is why it costs less - you can still fight, carry and climb.",
+      "category": "Physical",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "One Foot|Physical"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "dnl1a3j9U4RY4dPz",
+  "_key": "!items!dnl1a3j9U4RY4dPz",
+  "name": "Blueprint: Onderon Cavalry Saber",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "GBpEJsjmaRUWq38u",
+  "sort": 42500000,
+  "system": {
+    "row": {
+      "id": "4cd961b1-575a-49ab-b79b-88f3c83f66ce",
+      "name": "Blueprint: Onderon Cavalry Saber",
+      "cost": 187,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Onderon Cavalry Saber (Generation 0, proven, encoded, catalog design). Required to build Onderon Cavalry Saber; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Onderon Cavalry Saber",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 124,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Melee Weapons|Onderon Cavalry Saber"
+    }
+  }
+}

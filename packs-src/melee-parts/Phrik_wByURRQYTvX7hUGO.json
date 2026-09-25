@@ -1,0 +1,42 @@
+{
+  "_id": "wByURRQYTvX7hUGO",
+  "_key": "!items!wByURRQYTvX7hUGO",
+  "name": "Phrik",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "VqX65UQVOs2JpxDL",
+  "sort": 2900000,
+  "system": {
+    "row": {
+      "name": "Phrik",
+      "rarity": "Ultra Rare",
+      "cost": 4500,
+      "density": 450,
+      "category": "Raw Materials",
+      "subCategory": "Precious",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A nearly indestructible metallic compound, highly lightsaber-resistant.",
+      "id": "c5cb6b54-c95b-4057-8587-4033f7b3f21a",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "melee-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "melee-parts",
+      "key": "material:Phrik"
+    }
+  }
+}

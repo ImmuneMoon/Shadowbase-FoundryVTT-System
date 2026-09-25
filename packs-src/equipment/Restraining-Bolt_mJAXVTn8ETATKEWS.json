@@ -1,0 +1,55 @@
+{
+  "_id": "mJAXVTn8ETATKEWS",
+  "_key": "!items!mJAXVTn8ETATKEWS",
+  "name": "Restraining Bolt",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "rzx9eWpiaGSn8iri",
+  "sort": 9700000,
+  "system": {
+    "row": {
+      "name": "Restraining Bolt",
+      "cost": 348,
+      "skill": "Mechanic or Engineer (Droids)",
+      "description": "A device for making droids subservient. Requires a successful Mechanic or Engineer (Droids) roll to affix (takes 1 minute). If the droid resists, this is an opposed roll against the droid's DX or Dodge. Once affixed, the droid must make an opposed Will vs. Will roll (with the droid at -5) to disobey a direct order from the control caller. Needs Computer Programming to function if constructed.",
+      "category": "Restraints & Security",
+      "weight": 0.7,
+      "quantity": 1,
+      "materials": [
+        {
+          "name": "Duraplast",
+          "amount": 0.25
+        },
+        {
+          "name": "Silicon",
+          "amount": 0.25
+        },
+        {
+          "name": "Diatium",
+          "amount": 0.2
+        }
+      ],
+      "requiresSoftware": true,
+      "id": "4466eec2-ad10-4cd2-ae89-424c17da5dfc",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Restraining Bolt"
+    }
+  }
+}

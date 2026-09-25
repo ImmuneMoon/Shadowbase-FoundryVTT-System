@@ -1,0 +1,34 @@
+{
+  "_id": "FBIYX0nUrb8cA15m",
+  "_key": "!items!FBIYX0nUrb8cA15m",
+  "name": "Debt (Cybernetic)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "N9OA5FojtdIRbIeU",
+  "sort": 7500000,
+  "system": {
+    "row": {
+      "name": "Debt (Cybernetic)",
+      "points": -1,
+      "level": null,
+      "description": "Deeply in debt to a megacorporation (such as Czerka) or loan shark for your hardware. Failure to pay will result in collection agents reclaiming their property. (Varies: -1 point per level of wealth owed).",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Debt (Cybernetic)|Cybernetic"
+    }
+  }
+}

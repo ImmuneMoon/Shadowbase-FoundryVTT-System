@@ -1,0 +1,42 @@
+{
+  "_id": "4jzEqBgvmYsFxzeY",
+  "_key": "!items!4jzEqBgvmYsFxzeY",
+  "name": "Durasteel Standard Emitter",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "HPvGI1yd8rkc4YJ9",
+  "sort": 500000,
+  "system": {
+    "row": {
+      "name": "Durasteel Standard Emitter",
+      "category": "Emitter Part",
+      "effect": "Reach 1. Standard containment field.",
+      "weight": 0.245,
+      "cost": 7,
+      "id": "adbd2b23-b2f0-4417-8272-bb09348c31f6",
+      "partId": "std-emitter",
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "materialId": "durasteel",
+      "wrapId": null,
+      "volume": 0.0005,
+      "density": 490
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "hilt:std-emitter"
+    }
+  }
+}

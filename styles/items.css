@@ -1,0 +1,137 @@
+/* styles/items.css - the item sheets (module/apps/item-sheets/*, templates/items/**; docs/ARCHITECTURE.md §6.4,
+   unit U08). Plain CSS, scoped under .shadowbase, tokens from styles/variables.css by the website's names, the
+   component recipes from styles/components.css (sb-card, sb-badge, sb-btn, sb-input, sb-select, sb-stat-tile,
+   sb-table). What is added here is the item card's own geometry: the header strip (customized-blaster-item.tsx
+   :430-480 - the `p-4` header of a `bg-black/10 shadow-md` card), the two-column field grids (`grid-cols-1
+   md:grid-cols-2 gap-4`), the slot selectors (BlasterBaseInfo.tsx:230-300: a label, a select, the material below,
+   a caption), the Weapon Assembly strip (:504-550) and the Construction panel (:586-620). */
+
+/* ---- the window ------------------------------------------------------------------------------------------- */
+.shadowbase.sb-item-sheet .window-content { display: flex; flex-direction: column; gap: 0; padding: 0; overflow: hidden; }
+.shadowbase.sb-item-sheet form { display: flex; flex-direction: column; min-height: 0; height: 100%; }
+.shadowbase .sb-item-tab { flex: 1 1 auto; min-height: 0; overflow-y: auto; padding: 0.75rem 1rem 1rem; }
+.shadowbase .sb-item-tab:not(.active) { display: none; }
+
+/* ---- header (the card header + the figures strip) ------------------------------------------------------------ */
+.shadowbase .sb-item__header { display: flex; flex-direction: column; gap: 0.5rem; padding: 0.75rem 1rem 0.5rem; background: rgb(0 0 0 / 0.1); border-bottom: 1px solid hsl(var(--border)); }
+.shadowbase .sb-item__identity { display: flex; align-items: center; gap: 0.75rem; min-width: 0; }
+.shadowbase .sb-item__img { width: 3rem; height: 3rem; flex: 0 0 auto; border: 1px solid hsl(var(--border)); border-radius: var(--radius); background: hsl(var(--background)); object-fit: cover; }
+.shadowbase .sb-item__name { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; flex: 1 1 auto; }
+.shadowbase .sb-item__name-input { font-size: 1.125rem; font-weight: 700; font-family: var(--font-headline); height: 2.25rem; }
+.shadowbase .sb-item__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.375rem; min-width: 0; }
+.shadowbase .sb-item__figures { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; }
+.shadowbase .sb-item__figure { display: inline-flex; align-items: center; gap: 0.25rem; }
+.shadowbase .sb-item__figure-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: hsl(var(--muted-foreground)); }
+.shadowbase .sb-item__figure .sb-input { width: 5.5rem; height: 1.75rem; padding: 0 0.5rem; font-size: 0.75rem; }
+.shadowbase .sb-item__figure .sb-input--tiny { width: 3.5rem; }
+.shadowbase .sb-item__figure .sb-select { height: 1.75rem; padding: 0 0.5rem; font-size: 0.75rem; min-width: 8rem; }
+.shadowbase .sb-item__controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.375rem; }
+.shadowbase .sb-item__controls .sb-item__figure { margin-right: auto; }
+.shadowbase .sb-item__tabs { padding: 0 1rem; border-bottom: 1px solid hsl(var(--border)); background: hsl(var(--card) / 0.95); }
+.shadowbase .sb-item__tabs .sb-tabs { padding-left: var(--tab-cut-size, 1rem); min-height: 2.25rem; }
+.shadowbase .sb-item__tabs .sb-tab { min-width: 6.5rem; height: 2.25rem; font-size: 0.75rem; }
+
+/* ---- sections and grids ------------------------------------------------------------------------------------- */
+.shadowbase .sb-item-section { padding: 0.5rem 0 0.75rem; border-bottom: 1px solid hsl(var(--border) / 0.6); }
+.shadowbase .sb-item-section:last-child { border-bottom: 0; }
+.shadowbase .sb-item-section__title { margin: 0 0 0.5rem; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: hsl(var(--accent)); display: flex; align-items: center; gap: 0.5rem; }
+.shadowbase .sb-item-section--callout { padding: 0.625rem 0.75rem; margin: 0.5rem 0; border: 1px solid hsl(var(--accent) / 0.25); border-radius: var(--radius); background: hsl(var(--accent) / 0.05); }
+.shadowbase .sb-item-section--actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.shadowbase .sb-item-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem 1rem; }
+.shadowbase .sb-item-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.shadowbase .sb-item-grid .sb-span-2 { grid-column: span 2; }
+.shadowbase .sb-item-grid .sb-field { gap: 0.125rem; }
+.shadowbase .sb-item-grid .sb-input, .shadowbase .sb-item-grid .sb-select { height: 2rem; font-size: 0.8125rem; }
+.shadowbase .sb-item-grid .sb-input--calc { display: inline-flex; align-items: center; justify-content: center; }
+.shadowbase .sb-item__badges { margin: 0.5rem 0 0; }
+.shadowbase .sb-item__tiles { margin-bottom: 0.5rem; }
+.shadowbase .sb-item__tiles .sb-stat-tile { padding: 0.5rem 0.375rem; }
+.shadowbase .sb-item__tiles .sb-stat-tile__value { font-size: 1.125rem; }
+.shadowbase .sb-item__tiles .sb-stat-tile--warn .sb-stat-tile__value { color: var(--sb-amber-500); }
+.shadowbase .sb-item__tiles .sb-stat-tile--empty .sb-stat-tile__value { color: hsl(var(--muted-foreground)); }
+.shadowbase .sb-item__notes-list { margin: 0.25rem 0 0; padding-left: 1.125rem; font-size: 0.75rem; color: hsl(var(--muted-foreground)); }
+.shadowbase .sb-item__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.8125rem; }
+.shadowbase .sb-item__list > li { display: flex; flex-wrap: wrap; align-items: center; gap: 0.375rem; }
+.shadowbase .sb-item-tab .sb-notice { margin: 0.375rem 0; padding: 0.375rem 0.625rem; border-radius: calc(var(--radius) - 2px); font-size: 0.75rem; border: 1px solid hsl(var(--border)); }
+.shadowbase .sb-item-tab .sb-notice--warn { border-color: var(--sb-amber-500); color: var(--sb-amber-500); background: rgb(245 158 11 / 0.06); }
+.shadowbase .sb-item-tab .sb-notice--error { border-color: hsl(var(--destructive)); color: hsl(var(--destructive)); background: hsl(var(--destructive) / 0.06); }
+.shadowbase .sb-item-tab .sb-dossier { font-size: 0.8125rem; line-height: 1.5; color: hsl(var(--foreground) / 0.9); }
+.shadowbase .sb-item-tab .sb-pre { white-space: pre-wrap; }
+.shadowbase .sb-item-tab .sb-tag { display: inline-block; margin: 0 0.25rem 0.125rem 0; padding: 0 0.375rem; border-radius: 9999px; border: 1px solid hsl(var(--border)); font-size: 10px; }
+.shadowbase .sb-item-tab .sb-tag--accent { border-color: hsl(var(--accent) / 0.4); color: hsl(var(--accent)); }
+.shadowbase .sb-item-tab .sb-badge-accent { border-color: hsl(var(--accent) / 0.4); color: hsl(var(--accent)); }
+.shadowbase .sb-item-tab .sb-check-row--tiny { font-size: 0.75rem; }
+.shadowbase .sb-item-tab .sb-caps { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ---- slots (BlasterBaseInfo.tsx:230-300) ----------------------------------------------------------------------- */
+.shadowbase .sb-slot-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem 1rem; }
+.shadowbase .sb-slot { display: flex; flex-direction: column; gap: 0.25rem; padding: 0.5rem; border: 1px solid hsl(var(--border) / 0.6); border-radius: var(--radius); background: hsl(var(--background) / 0.4); min-width: 0; }
+.shadowbase .sb-slot--required { border-color: hsl(var(--accent) / 0.35); }
+.shadowbase .sb-slot--unowned { border-style: dashed; }
+.shadowbase .sb-slot__label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: hsl(var(--accent)); }
+.shadowbase .sb-slot__required { color: var(--sb-amber-500); }
+.shadowbase .sb-slot__select, .shadowbase .sb-slot__material, .shadowbase .sb-slot__wrap { height: 2rem; font-size: 0.75rem; }
+.shadowbase .sb-slot__qty { display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; }
+.shadowbase .sb-slot__qty .sb-input { width: 3.5rem; height: 1.75rem; }
+.shadowbase .sb-slot__caption { margin: 0; font-size: 10px; min-height: 0.875rem; }
+.shadowbase .sb-slot__effect { margin: 0.125rem 0 0; font-size: 11px; color: hsl(var(--muted-foreground)); line-height: 1.4; }
+.shadowbase .sb-melee-slot .sb-slot-grid { margin-bottom: 0.375rem; }
+.shadowbase .sb-melee-entry { position: relative; }
+.shadowbase .sb-melee-entry > .sb-btn { position: absolute; top: 0.25rem; right: 0.25rem; }
+.shadowbase .sb-hilt-slot--staff .sb-slot { border-color: hsl(var(--accent) / 0.2); }
+
+/* ---- provenance strip (customized-blaster-item.tsx:504-550) and the plan (:586-620) ---------------------------- */
+.shadowbase .sb-provenance { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; padding: 0.625rem 0.75rem; margin: 0.25rem 0 0.5rem; border: 1px solid hsl(var(--border)); border-radius: var(--radius); background: rgb(0 0 0 / 0.15); }
+.shadowbase .sb-provenance--locked { border-color: var(--sb-green-500); }
+.shadowbase .sb-provenance__state { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; }
+.shadowbase .sb-provenance__title { font-size: 1rem; font-weight: 700; }
+.shadowbase .sb-provenance__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.375rem; }
+.shadowbase .sb-provenance__library { display: inline-flex; align-items: center; gap: 0.375rem; padding-left: 0.5rem; border-left: 1px solid hsl(var(--border)); }
+.shadowbase .sb-provenance > p { flex-basis: 100%; margin: 0; }
+.shadowbase .sb-plan { padding: 0.625rem 0.75rem; margin: 0.5rem 0; border: 1px solid hsl(var(--border)); border-radius: var(--radius); background: hsl(var(--background) / 0.3); }
+.shadowbase .sb-plan--ready { border-color: var(--sb-green-500); }
+.shadowbase .sb-plan--blocked { border-color: hsl(var(--destructive) / 0.5); }
+.shadowbase .sb-plan__head { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.375rem; }
+.shadowbase .sb-plan__blocked { margin: 0.25rem 0; padding-left: 1.125rem; font-size: 0.75rem; color: hsl(var(--destructive)); }
+.shadowbase .sb-plan__shopping { font-size: 0.75rem; }
+.shadowbase .sb-plan__shopping th, .shadowbase .sb-plan__shopping td { padding: 0.25rem 0.5rem; }
+
+/* ---- condition / durability (BlasterFinalStats.tsx:440-460, :553-580) ---------------------------------------- */
+.shadowbase .sb-condition { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; padding: 0.375rem 0; }
+.shadowbase .sb-condition--damaged .sb-badge { color: var(--sb-amber-500); border-color: var(--sb-amber-500); }
+.shadowbase .sb-condition--broken .sb-badge { color: var(--sb-red-400); border-color: var(--sb-red-400); }
+.shadowbase .sb-condition__track { display: inline-flex; align-items: center; gap: 0.25rem; }
+.shadowbase .sb-condition__track .sb-input { width: 3.5rem; height: 1.75rem; }
+
+/* ---- tables: DR by location, ship systems ------------------------------------------------------------------- */
+.shadowbase .sb-dr-table { font-size: 0.8125rem; }
+.shadowbase .sb-dr-table .sb-input--tiny { width: 3.5rem; height: 1.75rem; }
+.shadowbase .sb-dr-table tr.is-degraded td { color: var(--sb-amber-500); }
+.shadowbase .sb-item-tab .sb-ship-systems { font-size: 0.8125rem; }
+.shadowbase .sb-item-tab .sb-ship-systems .sb-input--tiny { width: 3.5rem; height: 1.75rem; }
+.shadowbase .sb-item-tab .sb-ship-system.is-warn td:first-child { color: var(--sb-amber-500); }
+.shadowbase .sb-item-tab .sb-ship-system.is-bad td:first-child { color: var(--sb-red-400); }
+.shadowbase .sb-item-tab .sb-num { text-align: right; }
+.shadowbase .sb-item-tab .sb-armaments { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.8125rem; }
+.shadowbase .sb-item-tab .sb-armaments > li { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.shadowbase .sb-item-tab .sb-armament__name { font-weight: 600; }
+.shadowbase .sb-ammo-contents { list-style: none; margin: 0.25rem 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem; }
+
+/* ---- utilities the templates use ----------------------------------------------------------------------------- */
+.shadowbase .sb-item-tab .sb-mono { font-family: var(--font-mono); }
+.shadowbase .sb-item-tab .sb-text-green { color: var(--sb-green-400); }
+.shadowbase .sb-item-tab .sb-text-red { color: var(--sb-red-400); }
+.shadowbase .sb-item-tab .sb-text-amber { color: var(--sb-amber-500); }
+.shadowbase .sb-item-tab .sb-text-blue { color: var(--sb-blue-400); }
+.shadowbase .sb-item-tab .sb-btn-xs { height: 1.5rem; padding: 0 0.5rem; font-size: 10px; text-transform: uppercase; font-weight: 700; }
+.shadowbase .sb-item-tab .sb-btn-dashed { border-style: dashed; }
+.shadowbase .sb-item-tab .sb-danger { color: hsl(var(--destructive)); }
+.shadowbase .sb-item-tab .sb-field__hint { font-size: 10px; color: hsl(var(--muted-foreground)); }
+.shadowbase .sb-item-tab .sb-input--tiny { width: 4rem; }
+.shadowbase .sb-item-tab .sb-input--sm { width: 6rem; }
+.shadowbase .sb-item-tab .sb-table-wrap { overflow-x: auto; }
+
+@media (max-width: 640px) {
+  .shadowbase .sb-item-grid, .shadowbase .sb-slot-grid, .shadowbase .sb-item-grid--4 { grid-template-columns: minmax(0, 1fr); }
+  .shadowbase .sb-item-grid .sb-span-2 { grid-column: span 1; }
+}

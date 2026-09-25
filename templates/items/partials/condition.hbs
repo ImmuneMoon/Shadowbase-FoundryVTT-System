@@ -1,0 +1,20 @@
+{{!-- shadowbase.item.condition - a weapon's condition badge and Durability track with Apply Stress and Field Repair
+     (BlasterFinalStats.tsx:440-460 + :553-580, customized-melee-weapon-item.tsx:1370-1390 + :1484-1500,
+     lightsaber-item.tsx:1689-1765 + :1904-1930). Context: a builders.conditionView() object plus editable, owned,
+     blade ('' or '2'), label (localized). --}}
+<div class="sb-condition {{#if damaged}}sb-condition--damaged{{/if}} {{#if broken}}sb-condition--broken{{/if}}">
+  <span class="sb-caps sb-text-accent">{{label}}</span>
+  <span class="sb-badge {{#if fine}}sb-badge-outline{{else}}sb-badge-destructive{{/if}}">{{conditionLabel}}</span>
+  {{#if measured}}
+    <label class="sb-condition__track" title="{{localize "SHADOWBASE.Item.Condition.DurabilityHint"}}">
+      <span class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Condition.Durability"}}</span>
+      <input type="number" class="sb-input sb-input--tiny" name="system.row.{{key}}" value="{{current}}" data-dtype="Number" min="-1" max="{{max}}" step="1" {{#unless editable}}disabled{{/unless}} {{#unless editable}}readonly{{/unless}}>
+      <span class="sb-text-muted sb-mono">/ {{max}}</span>
+    </label>
+    {{#if energyRes}}<span class="sb-badge sb-badge-outline sb-mono" title="{{localize "SHADOWBASE.Item.Condition.EnergyResHint"}}">{{localize "SHADOWBASE.Item.Condition.EnergyRes" n=energyRes}}</span>{{/if}}
+    {{#if canStress}}<button type="button" class="sb-btn sb-btn-outline sb-btn-xs sb-text-red" data-action="apply-stress" data-blade="{{blade}}" {{disabled (not editable)}} title="{{localize "SHADOWBASE.Item.Condition.StressHint"}}"><i class="fa-solid fa-burst"></i> {{localize "SHADOWBASE.Item.Condition.Stress"}}</button>{{/if}}
+    {{#if canRepair}}<button type="button" class="sb-btn sb-btn-outline sb-btn-xs sb-text-green" data-action="field-repair" data-blade="{{blade}}" {{disabled (not editable)}} title="{{localize "SHADOWBASE.Item.Condition.RepairHint"}}"><i class="fa-solid fa-wrench"></i> {{localize "SHADOWBASE.Item.Condition.Repair"}}</button>{{/if}}
+  {{else}}
+    <span class="sb-text-muted sb-text-xs">{{localize "SHADOWBASE.Item.Condition.Unmeasured"}}</span>
+  {{/if}}
+</div>

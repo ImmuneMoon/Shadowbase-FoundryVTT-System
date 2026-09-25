@@ -1,0 +1,42 @@
+{
+  "_id": "xMekHiLF8gcjnjpE",
+  "_key": "!items!xMekHiLF8gcjnjpE",
+  "name": "Blueprint: Mandalorian Recon Gauntlets",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "JJdfrGKGbSodqKtZ",
+  "sort": 7600000,
+  "system": {
+    "row": {
+      "id": "92fd0573-4020-4d95-b99d-a379e009ce93",
+      "name": "Blueprint: Mandalorian Recon Gauntlets",
+      "cost": 555,
+      "weight": 0.28,
+      "quantity": 1,
+      "category": "Communication & Data",
+      "description": "Blueprint of Mandalorian Recon Gauntlets (Generation 0, proven, encoded, catalog design). Required to build Mandalorian Recon Gauntlets; builds at the baseline (0) (Chapter 10: Blueprints).",
+      "blueprintOf": "Mandalorian Recon Gauntlets",
+      "blueprintGeneration": 0,
+      "blueprintProven": true,
+      "blueprintLocked": true,
+      "blueprintOrigin": "catalog",
+      "blueprintMarkup": 3801,
+      "blueprintFamily": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "blueprints"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "blueprints",
+      "key": "Armor|Mandalorian Recon Gauntlets"
+    }
+  }
+}

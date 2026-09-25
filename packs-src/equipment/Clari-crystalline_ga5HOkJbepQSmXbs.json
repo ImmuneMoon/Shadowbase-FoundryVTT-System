@@ -1,0 +1,42 @@
+{
+  "_id": "ga5HOkJbepQSmXbs",
+  "_key": "!items!ga5HOkJbepQSmXbs",
+  "name": "Clari-crystalline",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "folder": "QekXUoESoZbElDFi",
+  "sort": 3600000,
+  "system": {
+    "row": {
+      "name": "Clari-crystalline",
+      "rarity": "Common",
+      "cost": 25,
+      "density": 160,
+      "category": "Raw Materials",
+      "subCategory": "Optics",
+      "weight": 1,
+      "quantity": 1,
+      "description": "A highly refined, durable transparent crystalline compound utilized heavily for optics, lenses, and civilian data screens.",
+      "id": "9bc55789-688b-445f-9e01-37b8f31a78e4",
+      "condition": "Fine",
+      "isInstalled": false,
+      "installedInDroidId": null,
+      "storageLocationId": null
+    },
+    "source": "equipment",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "equipment"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "equipment",
+      "key": "Clari-crystalline"
+    }
+  }
+}

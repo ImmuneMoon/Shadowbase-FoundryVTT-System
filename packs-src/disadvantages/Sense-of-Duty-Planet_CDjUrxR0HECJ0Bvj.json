@@ -1,0 +1,34 @@
+{
+  "_id": "CDjUrxR0HECJ0Bvj",
+  "_key": "!items!CDjUrxR0HECJ0Bvj",
+  "name": "Sense of Duty (Planet)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "QdWbP3PunGyoJeht",
+  "sort": 18000000,
+  "system": {
+    "row": {
+      "name": "Sense of Duty (Planet)",
+      "points": -25,
+      "level": null,
+      "description": "You feel a strong obligation to members of a particular planet.",
+      "category": "Social",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Sense of Duty (Planet)|Social"
+    }
+  }
+}

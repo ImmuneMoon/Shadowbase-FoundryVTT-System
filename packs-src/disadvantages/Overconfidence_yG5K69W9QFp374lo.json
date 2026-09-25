@@ -1,0 +1,34 @@
+{
+  "_id": "yG5K69W9QFp374lo",
+  "_key": "!items!yG5K69W9QFp374lo",
+  "name": "Overconfidence",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 12400000,
+  "system": {
+    "row": {
+      "name": "Overconfidence",
+      "points": -5,
+      "level": null,
+      "description": "The character believes themselves to be more capable or resilient than they truly are, leading them to take unnecessary risks. This hubris can be easily exploited by cunning opponents who set up situations designed to highlight your flaws.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Overconfidence|Mental"
+    }
+  }
+}

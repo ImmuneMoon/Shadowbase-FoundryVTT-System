@@ -1,0 +1,49 @@
+{
+  "_id": "7yGlmjY1AH4ignAD",
+  "_key": "!items!7yGlmjY1AH4ignAD",
+  "name": "Corusca Gem Cell",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "SjjeLxAEjZ4g5Y21",
+  "sort": 3800000,
+  "system": {
+    "row": {
+      "id": "dfd14d71-ed40-4f55-873b-55ae919e1889",
+      "name": "Corusca Gem Cell",
+      "cost": 3720,
+      "weight": 0.5,
+      "hits": 15000,
+      "effect": "Force Attuned. +1 to Force rolls while ignited. 15,000 \"hits\".",
+      "category": "Lightsaber Power Cell",
+      "materials": [
+        {
+          "name": "Diatium",
+          "amount": 0.4
+        },
+        {
+          "name": "Aurodium",
+          "amount": 0.1
+        }
+      ],
+      "quantity": 1,
+      "equipped": false,
+      "isInstalled": false,
+      "notes": "Force Attuned. +1 to Force rolls while ignited. 15,000 \"hits\"."
+    },
+    "source": "lightsaberModifications",
+    "family": "lightsaber",
+    "kit": null,
+    "levels": [],
+    "catalog": "lightsaber-parts"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "lightsaber-parts",
+      "key": "internal:corusca-cell"
+    }
+  }
+}

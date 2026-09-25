@@ -1,0 +1,34 @@
+{
+  "_id": "3kwQPdq19fLL0W2X",
+  "_key": "!items!3kwQPdq19fLL0W2X",
+  "name": "Odious Personal Habits",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "46Kt1HjiLZoD221l",
+  "sort": 12200000,
+  "system": {
+    "row": {
+      "name": "Odious Personal Habits",
+      "points": -5,
+      "level": null,
+      "description": "You have a habit that others find annoying or disgusting (e.g., constant humming, terrible hygiene, chewing loudly), resulting in a negative reaction modifier. Range: -5 to -15 points.",
+      "category": "Mental",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Odious Personal Habits|Mental"
+    }
+  }
+}

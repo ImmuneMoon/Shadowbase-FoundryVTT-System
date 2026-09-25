@@ -1,0 +1,43 @@
+{
+  "_id": "TC50yJA62Y5NsXrC",
+  "_key": "!items!TC50yJA62Y5NsXrC",
+  "name": "Cortosis Weave Grip",
+  "type": "weaponPart",
+  "img": "icons/svg/clockwork.svg",
+  "folder": "x7rcCQyoZMQHEjYu",
+  "sort": 4500000,
+  "system": {
+    "row": {
+      "name": "Cortosis Weave Grip",
+      "category": "hiltGripMod",
+      "cost": 3000,
+      "weight": 0.2,
+      "energyResBonus": 3,
+      "notes": "Grants vs lightsaber strike: roll 3d, if not crit fail, disrupts Lightsaber for 2d-2 sec, for a minimum of 2 sec. Hilt is resistant to being destroyed by a lightsaber, or blaster strike. +3 Dur to energy resistance. Requires Armstech (the weapon's specialty).",
+      "materials": [
+        {
+          "name": "Cortosis",
+          "amount": 0.2
+        }
+      ],
+      "id": "477c7682-adfa-48e2-95fc-29bccfa26a11",
+      "quantity": 1,
+      "equipped": false
+    },
+    "source": "weaponModifications",
+    "family": "weapon",
+    "kit": null,
+    "levels": [],
+    "catalog": "weapon-mods"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "weapon-mods",
+      "key": "Cortosis Weave Grip"
+    }
+  }
+}

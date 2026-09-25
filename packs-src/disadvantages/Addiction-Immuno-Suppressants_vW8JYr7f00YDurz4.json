@@ -1,0 +1,34 @@
+{
+  "_id": "vW8JYr7f00YDurz4",
+  "_key": "!items!vW8JYr7f00YDurz4",
+  "name": "Addiction (Immuno-Suppressants)",
+  "type": "disadvantage",
+  "img": "icons/svg/downgrade.svg",
+  "folder": "N9OA5FojtdIRbIeU",
+  "sort": 7100000,
+  "system": {
+    "row": {
+      "name": "Addiction (Immuno-Suppressants)",
+      "points": -5,
+      "level": null,
+      "description": "The biological host body continuously attempts to reject the artificial implants. The character must regularly consume immuno-suppressant drugs or suffer severe physical deterioration. Range: -5 to -20 points.",
+      "category": "Cybernetic",
+      "baselinePoints": 0
+    },
+    "source": "disadvantages",
+    "family": null,
+    "kit": null,
+    "levels": [],
+    "catalog": "disadvantages"
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "disadvantages",
+      "key": "Addiction (Immuno-Suppressants)|Cybernetic"
+    }
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "_id": "odVOlem1vQRERAE9",
+  "_key": "!journal!odVOlem1vQRERAE9",
+  "name": "Chapter 16: Vehicle & Starship Combat",
+  "pages": [
+    {
+      "_id": "HoxaRTWEzaOUTQpv",
+      "_key": "!journal.pages!odVOlem1vQRERAE9.HoxaRTWEzaOUTQpv",
+      "name": "Overview",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>This chapter details the rules for resolving combat between vehicles, from atmospheric speeder chases to desperate starfighter dogfights. These rules build upon core GURPS mechanics and use the vehicle statistics found in @UUID[Compendium.shadowbase.handbook.JournalEntry.Wy3wpq7gjpjqMifX]{Chapter 15}.</p>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 100000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch16-vehicle-combat",
+            "heading": null,
+            "overview": true,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "WmULi63LdGPdXLMA",
+      "_key": "!journal.pages!odVOlem1vQRERAE9.WmULi63LdGPdXLMA",
+      "name": "The Vehicle Combat Round",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>Vehicle combat proceeds in rounds, similar to personal combat.</p>\n<ul><li><strong>Initiative:</strong> Order of action is fixed, exactly as in personal combat (@UUID[Compendium.shadowbase.handbook.JournalEntry.JJ04T5LHImjlILs1]{Chapter 7}): vehicles act in order of their pilot’s Basic Speed, with the higher vehicle Handling breaking ties. The order is set at the start of combat and never re-rolled.</li><li><strong>Crew Actions:</strong> Each crew member on a vehicle can take one maneuver or action per round.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 200000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch16-vehicle-combat",
+            "heading": "The Vehicle Combat Round",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "Z9uKGC0ZTgupHf5X",
+      "_key": "!journal.pages!odVOlem1vQRERAE9.Z9uKGC0ZTgupHf5X",
+      "name": "Crew Positions and Actions",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>While a small starfighter might be operated by a single pilot, larger vessels rely on a coordinated crew, with each member performing specialized tasks. Each crew member can take one action per round, relevant to their station. The efficiency of the crew can be the deciding factor between victory and a catastrophic hull breach.</p>\n<p>Below are the primary crew positions found on most multi-crew vessels. A character’s effectiveness in a role is determined by their relevant skills.</p>\n<h3 id=\"pilot\">Pilot</h3>\n<p>The pilot is responsible for the vessel’s movement, positioning, and often, its primary fixed weaponry. This is a high-pressure role that dictates the flow of battle for their ship.</p>\n<ul><li><strong>Primary Skills:</strong> Piloting (Starfighter) (DX/Average), Gunner (Starship) (DX/Easy).</li><li><strong>Role:</strong> Controls the ship’s trajectory, speed, and orientation. A skilled pilot makes the ship a difficult target while putting its gunners in the best possible position to fire.</li><li><strong>Available Actions:</strong></li><li><strong>Perform Maneuver:</strong> Choose one of the available maneuvers (Standard, Attack Run, Evasive, Tailing, Stunt) and make the appropriate Piloting roll. This is the pilot’s primary action each round.</li><li><strong>Fire Forward-Fixed Weapons:</strong> If the pilot also controls the primary guns (common on fighters and small freighters), they may fire them as their action instead of performing a special maneuver. This is a standard Gunner (Starship) roll.</li></ul>\n<h3 id=\"gunner\">Gunner</h3>\n<p>The gunner operates the ship’s turreted and specialized weapon systems. On larger ships, there may be multiple gunners, each assigned to a specific weapon bank or turret.</p>\n<ul><li><strong>Primary Skills:</strong> Gunner (DX/Easy) with specialties (e.g., Beams, Cannon, Missiles, Turrets), Electronics Operation (Weapon Systems) (IQ/Average).</li><li><strong>Role:</strong> The gunner’s sole focus is bringing the ship’s offensive power to bear on the enemy. They track targets, manage weapon power, and are responsible for all non-pilot-controlled attacks.</li><li><strong>Available Actions:</strong></li><li><strong>Fire Weapons:</strong> Make a Gunner skill roll to attack a target. This roll is modified by range, target size, and the maneuvers of both your ship and the target.</li><li><strong>Target Lock (Takes 1 second):</strong> Make an Electronics Operation (Weapon Systems) or Gunner roll. Success grants a <strong>+2 bonus</strong> to a subsequent attack roll against that specific target. This bonus is lost if the target breaks line of sight or successfully performs an Evasive Maneuver.</li><li><strong>Called Shot:</strong> Declare an attempt to hit a specific part of the enemy vessel, taking the penalties outlined in the Targeting Specific Parts table of <strong>@UUID[Compendium.shadowbase.handbook.JournalEntry.odVOlem1vQRERAE9]{Chapter 16}</strong>.</li><li><strong>Suppressing Fire:</strong> Instead of targeting a specific ship, you can lay down fire in a specified area of space to discourage enemy movement. Any enemy pilot attempting to fly through this area must make a Piloting roll at <strong>-2</strong> or have their own maneuver for the round completely negated.</li></ul>\n<h3 id=\"engineer\">Engineer</h3>\n<p>The engineer is the heart of the ship’s longevity in combat, responsible for managing power, reinforcing systems, and frantically repairing damage as it occurs.</p>\n<ul><li><strong>Primary Skills:</strong> Engineer (Starship) (IQ/Hard), Electronics Repair (Starship Systems) (IQ/Average), Mechanic (Hyperdrive, Power Core, etc.) (IQ/Average).</li><li><strong>Role:</strong> Monitors the ship’s status, diverts power to where it’s needed most, and leads damage control efforts to keep the vessel functional.</li><li><strong>Available Actions:</strong></li><li><strong>Damage Control:</strong> When a system is damaged or the ship loses HP, the engineer can attempt a repair. This requires an Engineer or Electronics Repair roll, often at a penalty depending on the severity of the damage. Success can restore <strong>1d HP</strong> or negate a critical system damage effect. This may take multiple rounds for severe damage.</li><li><strong>Boost System:</strong> Make an Engineer roll to overcharge a specific system. Success grants a temporary bonus until the start of your next turn. Examples include:</li><li><strong>Engines:</strong> +10% to Top Speed.</li><li><strong>Shields:</strong> Add +1 DR to one shield facing.</li><li><strong>Weapons:</strong> Add +1 per die to damage for one weapon bank. However, a failure on this roll causes the targeted system to go offline for one round. On a critical failure, it suffers a critical hit.</li><li><strong>System Diagnosis:</strong> Make an Engineer roll to get a detailed report on a damaged system, identifying the exact nature of the problem and any penalties to repair it.</li></ul>\n<h3 id=\"systems-operator\">Systems Operator</h3>\n<p>This crew member’s role focuses on information and movement on a macro scale. They manage the ship’s sensors, communications, and plot navigation courses both in and out of combat.</p>\n<ul><li><strong>Primary Skills:</strong> Navigation (Astrogation) (IQ/Hard), Electronics Operation (Sensors, Comms) (IQ/Average), Computer Operation (IQ/Easy).</li><li><strong>Role:</strong> In combat, the Systems Operator is the crew’s eyes and ears, scanning enemies and coordinating with allies. Out of combat, the Navigator plots the ship’s course through the galaxy.</li><li><strong>Available Actions:</strong></li><li><strong>Scan Target:</strong> Make a Quick Contest of your <strong>Electronics Operation (Sensors)</strong> vs. the target’s <strong>Piloting</strong> skill or <strong>Stealth</strong> (if applicable). If you win, you learn key details about the target ship, such as its current shield strength, weapon loadout, or existing critical damage. The GM reveals information based on your margin of victory.</li><li><strong>Electronic Warfare (Jamming):</strong> Attempt to jam an enemy’s systems. Make a Quick Contest of your <strong>Electronics Operation (Sensors or Comms)</strong> vs. the target’s. If you win, you impose a <strong>-2 penalty</strong> on their targeting, piloting, or communication rolls for one round.</li><li><strong>Plot Hyperspace Jump (Takes 10+ seconds):</strong> Out of combat, make a <strong>Navigation (Astrogation)</strong> roll to calculate a safe jump to hyperspace. A failed roll could result in arriving off-course, late, or in a dangerous location (like inside a star’s gravity well).</li><li><strong>Provide Targeting Solution:</strong> Work with a gunner to improve their odds. A successful <strong>Electronics Operation (Sensors)</strong> roll grants the gunner a <strong>+1 bonus</strong> on their next attack roll against a single target.</li></ul>\n<h3 id=\"ship-s-hand\">Ship’s Hand</h3>\n<p>A Ship’s Hand is a jack-of-all-trades apprentice or aide. They don’t have the deep training of a specialist but are familiar with the basic functions of their specific ship. This is an excellent role for less experienced characters or NPCs.</p>\n<ul><li><strong>Primary Skill:</strong> Crewman (Ship Type) (IQ/Easy). This skill covers general duties on one specific class of vessel (e.g., Crewman (Dynamic-class Freighter)). It does not transfer to other ships without learning the skill for that new class.</li><li><strong>Role:</strong> A Ship’s Hand assists other crew members, fills in at unmanned stations in an emergency, and handles minor tasks that don’t require an expert.</li><li><strong>Available Actions:</strong></li><li><strong>Assist Task:</strong> The Hand can aid another crew member. Make a Crewman roll. If successful, the specialist you are helping gets a <strong>+1 bonus</strong> on their skill roll (or <strong>+2</strong> on a critical success). A failure means you provide no help, while a critical failure means you impose a <strong>-2 penalty</strong> as you get in the way.</li><li><strong>Basic Damage Control:</strong> A Hand can attempt minor repairs. Make a Crewman roll at <strong>-2</strong> to restore <strong>1 HP</strong> to the hull. A Hand cannot repair critically damaged systems.</li><li><strong>Man a Vacant Station:</strong> If a primary crew member is incapacitated, the Hand can take over their station. However, they must use the base default for the required skill (e.g., Gunner defaults to IQ-5 or DX-4, Piloting defaults to DX-5). Their Crewman skill does not help here, reflecting their lack of specialized training.</li></ul>\n<h3 id=\"captain\">Captain</h3>\n<p>The captain is the ship’s commander, responsible for the overall strategy and the performance of the crew. They are the final authority on board. A captain may hold another position simultaneously (e.g., a Pilot/Captain), or they may be a dedicated commander who focuses solely on leadership. The ship’s owner is often, but not always, the captain. In the absence of a designated or elected captain, the <strong>Pilot</strong> is considered the default commander.</p>\n<ul><li><strong>Primary Skills:</strong> Leadership (IQ/Average), Tactics (IQ/Hard).</li><li><strong>Role:</strong> To make command decisions, coordinate crew actions, and maintain morale. A good captain is a force multiplier, turning a group of skilled individuals into a seamless and effective team.</li><li><strong>Available Actions:</strong> A captain who is not actively performing the duties of another role (like piloting or gunnery) may choose one of the following actions.</li><li><strong>Coordinate Action:</strong> Target one crew member and make a <strong>Leadership</strong> or <strong>Tactics</strong> roll. If successful, that crew member receives a <strong>+1 bonus</strong> to their primary skill roll this round. On a critical success, the bonus is <strong>+2</strong>. This represents the captain giving a timely order or a piece of tactical advice.</li><li><strong>Rally the Crew:</strong> Make a <strong>Leadership</strong> roll. If successful, all crew members who are suffering from panic, mental stun, or other morale-based penalties may immediately make another roll to snap out of it. This can also be used to grant a temporary <strong>+1</strong> to Will rolls to resist such effects for one round.</li><li><strong>Assess the Situation:</strong> Make a <strong>Tactics</strong> roll to analyze the flow of battle. If successful, the GM gives you a piece of valuable tactical information (e.g., “Their port shields seem to be weakening,” “That fighter is setting up for a strafing run,” or “They seem to be protecting their engines”). This provides insight that might not be obvious from raw sensor data.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 300000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch16-vehicle-combat",
+            "heading": "Crew Positions and Actions",
+            "overview": false,
+            "anchors": [
+              "pilot",
+              "gunner",
+              "engineer",
+              "systems-operator",
+              "ship-s-hand",
+              "captain"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "_id": "vySqaPFrzSIYYO0r",
+      "_key": "!journal.pages!odVOlem1vQRERAE9.vySqaPFrzSIYYO0r",
+      "name": "Ship Stations and Onboard Actions",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>A character’s effectiveness is not just about their role, but also their physical location on the ship. The same Engineer might be able to perform different actions from the safety of a bridge console versus being elbow-deep in the engine room’s plasma conduits. Each station provides access to specific controls and equipment, offering unique actions or modifiers to existing ones.</p>\n<h3 id=\"cockpit-bridge\">Cockpit / Bridge</h3>\n<p>This is the central command and control center of the vessel. It’s typically the most heavily armored and protected part of the ship, offering a comprehensive but sometimes indirect overview of the ship’s functions.</p>\n<ul><li><strong>Primary Crew Roles:</strong> Pilot, Navigator, Systems Operator, Ship’s Captain/Commander. An Engineer might also have a console here.</li><li><strong>Description:</strong> The bridge is a hub of activity, dominated by the main viewscreen, pilot’s yoke, navigation console, and tactical displays. From here, the command crew directs the ship’s every action.</li><li><strong>Available Actions &amp; Modifiers:</strong></li><li><strong>Piloting:</strong> All pilot maneuvers are performed from this station. It is impossible to fly the ship from anywhere else.</li><li><strong>Navigation &amp; Astrogation:</strong> All actions related to course plotting and hyperspace jumps are initiated here at the navcomputer.</li><li><strong>Remote System Control:</strong> Most ship systems can be accessed from bridge consoles. However, performing complex tasks remotely is less effective than being physically present. Any Engineer or Gunner rolls made from a bridge console to control a system located elsewhere on the ship (like a specific turret or the hyperdrive motivator) are made at a <strong>-2 penalty</strong>.</li><li><strong>Command &amp; Coordination:</strong> A captain can use the bridge’s communication systems to effectively lead the crew. A successful Leadership or Tactics roll from the bridge can grant a +1 bonus to a single crew member’s skill roll for that round.</li></ul>\n<h3 id=\"weapon-stations-turrets\">Weapon Stations (Turrets)</h3>\n<p>These are dedicated stations, often in blister turrets or specific gunnery wells, designed for operating a particular set of weapons.</p>\n<ul><li><strong>Primary Crew Role:</strong> Gunner.</li><li><strong>Description:</strong> Often a cramped, single-person station with a targeting computer, manual controls, and a viewport or screen offering a direct line of sight to the weapon’s firing arc.</li><li><strong>Available Actions &amp; Modifiers:</strong></li><li><strong>Direct Gunnery Control:</strong> Firing a weapon from its dedicated station allows the Gunner to use their full skill without the penalties for remote operation.</li><li><strong>Targeting Focus:</strong> Using the dedicated targeting sensors in a turret provides a <strong>+1 bonus</strong> to Electronics Operation (Weapon Systems) rolls to achieve a Target Lock.</li><li><strong>Vulnerability:</strong> Turrets are often less armored than the main hull (GM discretion, typically -2 DR compared to the ship’s main DR). A “Called Shot” to a weapon system may inflict damage directly on the gunner inside if the hit penetrates the turret’s armor.</li></ul>\n<h3 id=\"engine-room-engineering-bay\">Engine Room / Engineering Bay</h3>\n<p>The heart of the ship, containing the power core, shield generator, hyperdrive, and primary propulsion systems. It is often a noisy, hot, and dangerous environment.</p>\n<ul><li><strong>Primary Crew Roles:</strong> Engineer, Ship’s Hand.</li><li><strong>Description:</strong> A maze of conduits, control panels, and heavy machinery. The engine room is where the raw power of the ship is generated and controlled.</li><li><strong>Available Actions &amp; Modifiers:</strong></li><li><strong>Hands-On Repair:</strong> Being physically present at the damaged system is far more effective. Any Engineer or Electronics Repair roll made in the Engine Room to fix the engines, power core, or hyperdrive gains a <strong>+2 bonus</strong>.</li><li><strong>Manual Power Shunt:</strong> An engineer in the Engine Room can physically reroute power. This is required for the <strong>Boost System</strong> action; it cannot be done remotely from the bridge.</li><li><strong>Hazardous Area:</strong> If the Engines or Power Core suffer a critical hit, anyone inside the Engine Room must make a HT roll. On a failure, they take 2d burning damage from plasma discharge or explosions.</li></ul>\n<h3 id=\"sensor-communications-suite\">Sensor &amp; Communications Suite</h3>\n<p>While basic sensor and comms functions are on the bridge, a dedicated station exists on larger ships for advanced operations and electronic warfare.</p>\n<ul><li><strong>Primary Crew Role:</strong> Systems Operator.</li><li><strong>Description:</strong> A darkened room filled with humming servers and detailed holographic displays, tuned to analyze incoming sensor data and manage outgoing signals.</li><li><strong>Available Actions &amp; Modifiers:</strong></li><li><strong>Advanced Scanning:</strong> Performing the <strong>Scan Target</strong> action from this station grants a <strong>+2 bonus</strong> to the Electronics Operation (Sensors) roll, yielding more detailed information on a success.</li><li><strong>Dedicated EW Suite:</strong> All <strong>Electronic Warfare (Jamming)</strong> attempts made from this station gain a <strong>+2 bonus</strong>.</li><li><strong>Signal Interception:</strong> A character can use the Slicing skill here to attempt to intercept and decrypt enemy communications during combat.</li></ul>\n<h3 id=\"medical-bay\">Medical Bay</h3>\n<p>The ship’s infirmary, equipped for treating wounded crew members.</p>\n<ul><li><strong>Primary Crew Role:</strong> Any character with medical skills (e.g., First Aid, Physician, Surgery).</li><li><strong>Description:</strong> A clean, sterile environment containing one or more bio-beds, advanced diagnostic scanners, and a stock of medical supplies.</li><li><strong>Available Actions &amp; Modifiers:</strong></li><li><strong>Advanced Medical Care:</strong> Using any medical skill in the Med Bay grants a <strong>+2 bonus</strong> thanks to the specialized equipment.</li><li><strong>Stabilize Critically Wounded:</strong> A character who has been reduced to 0 HP or below can be stabilized in a Med Bay bio-bed. This automatically stops them from losing further HP each second, though they will not recover without a successful Physician roll.</li><li><strong>Life Support Link:</strong> The Med Bay is directly tied to the ship’s life support systems. If life support is hit, patients in the Med Bay may require an immediate Physician roll to keep them alive.</li></ul>\n<h3 id=\"cargo-hold-troop-bay\">Cargo Hold / Troop Bay</h3>\n<p>The largest open area on most ships, designed for hauling goods or transporting personnel.</p>\n<ul><li><strong>Primary Crew Roles:</strong> Any/All (not an operational station).</li><li><strong>Description:</strong> A cavernous, utilitarian space, often with magnetic clamps on the floor and a large external ramp or door.</li><li><strong>Available Actions &amp; Modifiers:</strong></li><li><strong>Boarding/Repelling Boarders:</strong> This is the primary battleground for any boarding actions.</li><li><strong>Makeshift Workshop:</strong> An engineer can attempt to jury-rig repairs using scavenged parts from the cargo. This allows a Mechanic skill roll (at a penalty set by the GM) to create a temporary patch for a damaged system.</li><li><strong>Extreme Vulnerability:</strong> As noted in the Called Shots table, the cargo hold is a prime target. A successful hit that penetrates the hull will inflict damage directly on anyone and anything inside. A hull breach here will vent the atmosphere of this room immediately.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 400000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch16-vehicle-combat",
+            "heading": "Ship Stations and Onboard Actions",
+            "overview": false,
+            "anchors": [
+              "cockpit-bridge",
+              "weapon-stations-turrets",
+              "engine-room-engineering-bay",
+              "sensor-communications-suite",
+              "medical-bay",
+              "cargo-hold-troop-bay"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "_id": "oxopl9o5t4uOZjlx",
+      "_key": "!journal.pages!odVOlem1vQRERAE9.oxopl9o5t4uOZjlx",
+      "name": "Damage, DR, and Systems Failure",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>When an attack hits, it must penetrate the vehicle’s armor (DR) to do damage to its Hull Points (HP).</p>\n<ul><li><strong>Disabled and Destroyed:</strong> A vehicle is disabled at 0 HP and destroyed at -1xHP.</li><li><strong>Critical System Damage:</strong> A critical hit occurs on a critical success, or when a single attack’s penetrating damage (after DR) equals or exceeds half the vehicle’s HP. When this happens, roll 1d6 on the table below in addition to normal damage.</li></ul>\n<div class=\"sb-handbook-table\" data-table-id=\"ch16-vehicle-combat_table_0\"><table><caption>Damage, DR, and Systems Failure</caption><thead><tr><th>1d6 Roll</th><th>System Damaged</th><th>Effect</th></tr></thead><tbody><tr><td>1-2</td><td>Engines/Propulsion</td><td>The vehicle’s Top Speed and Acceleration are halved. A second hit disables it completely.</td></tr><tr><td>3</td><td>Weapons</td><td>One randomly determined weapon system is knocked offline.</td></tr><tr><td>4</td><td>Cockpit/Bridge</td><td>An explosion rocks the command center. All crew must make a HT roll or be stunned for one round and take 1d-3 damage.</td></tr><tr><td>5</td><td>Sensors/Targeting</td><td>The vehicle’s sensors are damaged. All crew suffer a -3 penalty to targeting rolls.</td></tr><tr><td>6</td><td>Power Core</td><td>A catastrophic hit. The vehicle immediately takes an additional 3d burning damage that bypasses DR.</td></tr></tbody></table></div>\n<ul><li><strong>Repairing Systems:</strong> Damaged systems can be repaired in combat with a successful Engineer or Electronics Repair skill roll.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 500000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch16-vehicle-combat",
+            "heading": "Damage, DR, and Systems Failure",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "Yf5JAhzbkoDVz9lM",
+      "_key": "!journal.pages!odVOlem1vQRERAE9.Yf5JAhzbkoDVz9lM",
+      "name": "Vehicle-Scale Blast (Collateral) Damage",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<ul><li>Weapons marked cr ex at vehicle scale (Light Turbolaser, Proton Torpedo Launcher, Concussion Missile Launcher, and similar) follow the same blast mechanic as @UUID[Compendium.shadowbase.handbook.JournalEntry.JJ04T5LHImjlILs1]{Chapter 7}'s personal-scale explosions, scaled up by a scale multiplier. A bracketed value like 8d(5) is an Armor Divisor (@UUID[Compendium.shadowbase.handbook.JournalEntry.Wy3wpq7gjpjqMifX]{Chapter 15}) — it divides the target's DR; it never multiplies damage. Starship-scale explosive weapons (turbolasers, torpedo and missile warheads) use a ×6 scale multiplier in the blast formulas below; vehicle-scale weapons use ×1.</li><li><strong>Safe Distance:</strong> 2 × dice × scale multiplier, in yards. A Light Turbolaser (8d cr ex, starship scale) has a Safe Distance of 2 × 8 × 6 = 96 yards.</li><li><strong>Within Safe Distance:</strong> roll the full damage (dice × multiplier), then divide by (3 × distance in yards), rounding down -- exactly as @UUID[Compendium.shadowbase.handbook.JournalEntry.JJ04T5LHImjlILs1]{Chapter 7}'s personal-scale formula. Vacuum (÷ 10 × distance) and Underwater (÷ distance alone) modifiers apply identically.</li><li><strong>Fragmentation:</strong> a vehicle-scale weapon with listed fragmentation dice throws scaled shrapnel and debris exactly as @UUID[Compendium.shadowbase.handbook.JournalEntry.JJ04T5LHImjlILs1]{Chapter 7}'s fragmentation rule, with Range = 5 × frag dice × scale multiplier. A bracketed value (like the Proton Torpedo's 8d(5) cr ex) is an Armor Divisor, not fragmentation.</li><li><strong>Cross-Scale Hits:</strong> a vehicle-scale blast that reaches personal-scale targets (infantry, unshielded characters, small craft) applies its full rolled damage against them using the same distance-reduction formula above -- there is no separate, weaker version for personal-scale targets. Characters caught in the blast radius of capital-scale weapons should expect this to be lethal barring hard cover or extreme range.</li></ul>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 600000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch16-vehicle-combat",
+            "heading": "Vehicle-Scale Blast (Collateral) Damage",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    },
+    {
+      "_id": "AtKcCVsk6tg66eee",
+      "_key": "!journal.pages!odVOlem1vQRERAE9.AtKcCVsk6tg66eee",
+      "name": "Targeting Specific Parts (Called Shots)",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>A gunner can declare a “Called Shot” to a specific system by taking a penalty to their attack roll. If the attack is a critical hit, the effect for the targeted system occurs.</p>\n<div class=\"sb-handbook-table\" data-table-id=\"ch16-vehicle-combat_table_1\"><table><caption>Targeting Specific Parts (Called Shots)</caption><thead><tr><th>Targeted System</th><th>Penalty to Attack Roll</th><th>Effect on Critical Hit (in addition to normal damage)</th></tr></thead><tbody><tr><td>Engines/Propulsion</td><td>-4</td><td>Speed/Accel is halved. Second hit to the same engine disables it completely.</td></tr><tr><td>Weapon System (Specific)</td><td>-3</td><td>The chosen weapon system is knocked offline.</td></tr><tr><td>Cockpit/Bridge</td><td>-5</td><td>Crew must roll vs. HT or be stunned and take damage.</td></tr><tr><td>Sensors/Targeting Array</td><td>-3</td><td>All crew suffer a -3 penalty to targeting and sensor rolls.</td></tr><tr><td>Power Core/Reactor</td><td>-7</td><td>Vehicle takes an additional 3d burning damage that bypasses DR and may trigger a leak or explosion.</td></tr><tr><td>Shield Generator</td><td>-4 (if visible)</td><td>Reduces shield strength by half. A second hit disables them.</td></tr><tr><td>Hyperdrive (Starships)</td><td>-6</td><td>The hyperdrive is disabled and cannot be engaged.</td></tr><tr><td>Life Support (Starships)</td><td>-5</td><td>The life support system is compromised, causing damage to the crew over time.</td></tr><tr><td>Cargo Hold/Troop Bay</td><td>-2</td><td>Damage is inflicted directly to any cargo or troops within.</td></tr></tbody></table></div>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 700000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch16-vehicle-combat",
+            "heading": "Targeting Specific Parts (Called Shots)",
+            "overview": false,
+            "anchors": []
+          }
+        }
+      }
+    }
+  ],
+  "categories": [],
+  "folder": null,
+  "sort": 1600000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "handbook",
+      "key": "ch16-vehicle-combat",
+      "handbook": {
+        "chapterId": "ch16-vehicle-combat",
+        "generatedAt": "2026-09-19T09:02:30.342Z",
+        "headings": 18,
+        "tables": 2
+      }
+    }
+  }
+}

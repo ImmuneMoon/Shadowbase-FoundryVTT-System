@@ -1,0 +1,621 @@
+{
+  "_id": "srHclltMwv9fthOz",
+  "_key": "!actors!srHclltMwv9fthOz",
+  "name": "GE3 Protocol Droid",
+  "type": "character",
+  "img": "icons/svg/mystery-man.svg",
+  "folder": "vQod5iBtogydF5Dh",
+  "sort": 5700000,
+  "system": {
+    "legacy": {},
+    "playerName": "",
+    "species": "Droid (Protocol)",
+    "homeworld": "Coruscant (Cybot Galactica)",
+    "characterPortrait": null,
+    "campaign": "Shadows of the Mandalorian Wars",
+    "pointTotal": 150,
+    "turnCounter": 0,
+    "facing": 0,
+    "incomingBearing": 0,
+    "threatEngaged": false,
+    "incomingArc": null,
+    "facingChangeUsed": false,
+    "posture": "standing",
+    "elevation": 0,
+    "parriesThisTurn": 0,
+    "height": "1.70 m",
+    "weight": "58 kg / 128 lb",
+    "sizeModifier": 0,
+    "age": 0,
+    "appearance": "",
+    "techLevel": "",
+    "isDroid": true,
+    "powerPoints": 100,
+    "lightSidePoints": 0,
+    "darkSidePoints": 0,
+    "trackDigital": false,
+    "trackPhysical": false,
+    "totalCredits": 7000,
+    "forceAlignment": 0,
+    "isStartingPointsMode": true,
+    "isConstructed": true,
+    "cpBaseline": 0,
+    "stBaseline": 10,
+    "dxBaseline": 10,
+    "iqBaseline": 10,
+    "htBaseline": 10,
+    "hitPointsBaseline": 0,
+    "endurancePointsBaseline": 0,
+    "forcePointsBaseline": 0,
+    "willBaseline": 0,
+    "perceptionBaseline": 0,
+    "frightCheckBaseline": 0,
+    "basicSpeedBaseline": 0,
+    "basicMoveBaseline": 0,
+    "visionBaseline": 0,
+    "hearingBaseline": 0,
+    "tasteAndSmellBaseline": 0,
+    "touchBaseline": 0,
+    "languagesBaseline": 0,
+    "culturalFamiliaritiesBaseline": 0,
+    "literacyBaseline": 0,
+    "languageEntries": [
+      {
+        "id": "b5c42cc8-c858-4e22-a77b-7e13700b07b1",
+        "tongue": "Droidspeak",
+        "tier": "native",
+        "notes": "binary"
+      },
+      {
+        "id": "6dcb55d2-841a-4f70-b0da-7830807ce659",
+        "tongue": "Basic",
+        "tier": "native"
+      }
+    ],
+    "republicRaised": false,
+    "frightCheck": null,
+    "basicSpeed": null,
+    "basicMove": null,
+    "selectedParrySkill": null,
+    "selectedBlockSkill": null,
+    "activeLightsaberForm": null,
+    "hitLocations": [
+      {
+        "name": "Head",
+        "type": "Head",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 2,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 3,
+        "installedHardwareIds": [],
+        "id": "d1664639-1752-40b8-9687-861c2f89c216"
+      },
+      {
+        "name": "Face",
+        "type": "Face",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 5,
+        "installedHardwareIds": [],
+        "id": "a0e1f37e-f0b3-4cb8-9c55-6a3ff82a8669"
+      },
+      {
+        "name": "Upper Torso",
+        "type": "Vitals",
+        "side": "Center",
+        "relativeSM": -3,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 17,
+        "installedHardwareIds": [],
+        "id": "3ba74bba-c287-4a48-b26b-dec81450f17b"
+      },
+      {
+        "name": "Torso",
+        "type": "Torso",
+        "side": "Center",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 10,
+        "installedHardwareIds": [],
+        "id": "0a09f256-84a7-4e3c-bcea-4fa6760b8c7b"
+      },
+      {
+        "name": "Right Arm",
+        "type": "Arm",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 7,
+        "installedHardwareIds": [],
+        "id": "beaa4ca2-c241-4592-a91c-e1343b31d369"
+      },
+      {
+        "name": "Right Hand",
+        "type": "Hand",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "4ce34a6a-fdc0-42c8-8511-3fbf146a759c"
+      },
+      {
+        "name": "Left Arm",
+        "type": "Arm",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 8,
+        "installedHardwareIds": [],
+        "id": "64231a46-9833-4219-8385-f47c9969c5a8"
+      },
+      {
+        "name": "Left Hand",
+        "type": "Hand",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 15,
+        "installedHardwareIds": [],
+        "id": "b48c5926-374f-499d-b8b5-99fe315fde25"
+      },
+      {
+        "name": "Right Leg",
+        "type": "Leg",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "a041740d-ea41-426f-99b1-c4114d9d18ad"
+      },
+      {
+        "name": "Right Foot",
+        "type": "Foot",
+        "side": "Right",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "536022ec-b172-4fd7-8382-62333b4cadb0"
+      },
+      {
+        "name": "Left Leg",
+        "type": "Leg",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 12,
+        "installedHardwareIds": [],
+        "id": "ceb1158d-db9c-455f-9a2b-4563a8d62c27"
+      },
+      {
+        "name": "Left Foot",
+        "type": "Foot",
+        "side": "Left",
+        "relativeSM": 0,
+        "isOrganic": true,
+        "innateDR": 0,
+        "currentDegradation": 0,
+        "status": "Healthy",
+        "isAmputated": false,
+        "parentRoll": 13,
+        "installedHardwareIds": [],
+        "id": "b31de990-3466-45e7-a42d-be7101439422"
+      }
+    ],
+    "languages": "Droidspeak (Native); Basic (Native); Numerous Translation Databases [8]",
+    "culturalFamiliarities": "",
+    "literacy": "",
+    "description": "",
+    "background": "",
+    "notes": "",
+    "pointsAttributes": 0,
+    "pointsAdvantages": 0,
+    "pointsDisadvantages": 0,
+    "pointsOther": 0,
+    "cpTradedForCredits": 0,
+    "cpCreditsForm": "digital",
+    "currentHitPoints": 10,
+    "currentEndurancePoints": 0,
+    "currentForcePoints": 0,
+    "strength": null,
+    "dexterity": null,
+    "iq": null,
+    "health": null,
+    "hitPoints": null,
+    "will": null,
+    "perception": null,
+    "vision": null,
+    "hearing": null,
+    "tasteAndSmell": null,
+    "touch": null,
+    "endurancePoints": null,
+    "forcePoints": null,
+    "shipPosition": null,
+    "assignedStation": null,
+    "storageBoxes": [],
+    "droidBuild": {
+      "chassisId": "ge3-bipedal",
+      "powerCoreId": "std-core",
+      "head": {
+        "componentId": "ge3-head",
+        "processorId": "cognitive",
+        "memoryCoreId": null,
+        "sensorIds": [
+          "optic-ge3"
+        ],
+        "externalModId": null
+      },
+      "arms": [
+        {
+          "id": "d0767c08-2965-4947-8094-9bc19aa56256",
+          "componentId": "ge3-arm",
+          "side": "Right",
+          "manipulatorId": "ge3-hand"
+        },
+        {
+          "id": "21c7d00e-d1cc-41a6-bfa3-63589b1a9299",
+          "componentId": "ge3-arm",
+          "side": "Left",
+          "manipulatorId": "ge3-hand"
+        }
+      ],
+      "legs": [
+        {
+          "id": "e0054090-f727-42b9-9cf5-c015ca7aa98f",
+          "componentId": "ge3-leg",
+          "side": "Right",
+          "motiveMountId": "std-foot"
+        },
+        {
+          "id": "0408ad34-0d83-4a42-ad7b-b0f605f2709c",
+          "componentId": "ge3-leg",
+          "side": "Left",
+          "motiveMountId": "std-foot"
+        }
+      ],
+      "chassisMods": {
+        "internalIds": [],
+        "externalIds": [],
+        "utilityIds": [],
+        "auxiliaryIds": [],
+        "motiveMountIds": [],
+        "reinforcementId": null,
+        "armorId": null,
+        "motivatorId": null,
+        "actuatorId": null,
+        "wiringId": null
+      }
+    },
+    "pinnedNotifications": [],
+    "useLiftingST": true,
+    "useStrikingST": true,
+    "useArmST": true
+  },
+  "prototypeToken": {
+    "name": "GE3 Protocol Droid",
+    "actorLink": true,
+    "displayName": 30,
+    "displayBars": 40,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "resources.hp"
+    },
+    "bar2": {
+      "attribute": "resources.ep"
+    }
+  },
+  "items": [
+    {
+      "_id": "9nNfJ6t5pfIaBlbQ",
+      "_key": "!actors.items!srHclltMwv9fthOz.9nNfJ6t5pfIaBlbQ",
+      "name": "Machine",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Machine",
+          "points": 25,
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "ADAh3bihSdNtBCak",
+      "_key": "!actors.items!srHclltMwv9fthOz.ADAh3bihSdNtBCak",
+      "name": "Injury Tolerance (Unliving)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Injury Tolerance (Unliving)",
+          "points": 20,
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "D76NX0fkt3wZmR0u",
+      "_key": "!actors.items!srHclltMwv9fthOz.D76NX0fkt3wZmR0u",
+      "name": "Digital Mind",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Digital Mind",
+          "points": 5,
+          "baselinePoints": 0
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "CahKtPAzHdClHVlG",
+      "_key": "!actors.items!srHclltMwv9fthOz.CahKtPAzHdClHVlG",
+      "name": "Eidetic Memory",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Eidetic Memory",
+          "points": 10,
+          "baselinePoints": 10
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "b9UsrOWv1xoyPJIJ",
+      "_key": "!actors.items!srHclltMwv9fthOz.b9UsrOWv1xoyPJIJ",
+      "name": "Language Talent",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Language Talent",
+          "points": 10,
+          "baselinePoints": 10
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "f3YZ5dvqw706urmJ",
+      "_key": "!actors.items!srHclltMwv9fthOz.f3YZ5dvqw706urmJ",
+      "name": "Unhealing (Total)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Unhealing (Total)",
+          "points": -30,
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "gIzzgxaAuimrPOv2",
+      "_key": "!actors.items!srHclltMwv9fthOz.gIzzgxaAuimrPOv2",
+      "name": "Electrical",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Electrical",
+          "points": -20,
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "RzkLysaXfxMsuAPD",
+      "_key": "!actors.items!srHclltMwv9fthOz.RzkLysaXfxMsuAPD",
+      "name": "Social Stigma (Valuable Property)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Social Stigma (Valuable Property)",
+          "points": -10,
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "9Epr8oGoyVRy2C7i",
+      "_key": "!actors.items!srHclltMwv9fthOz.9Epr8oGoyVRy2C7i",
+      "name": "Pacifism (Cannot Kill)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Pacifism (Cannot Kill)",
+          "points": -15,
+          "baselinePoints": 0
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "wiTPaXmodTGETxpg",
+      "_key": "!actors.items!srHclltMwv9fthOz.wiTPaXmodTGETxpg",
+      "name": "Diplomacy",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Diplomacy",
+          "relativeLevel": "IQ/H",
+          "level": "11",
+          "points": 4,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "ZM5Wr0JGk8RFrXWv",
+      "_key": "!actors.items!srHclltMwv9fthOz.ZM5Wr0JGk8RFrXWv",
+      "name": "Fast-Talk",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Fast-Talk",
+          "relativeLevel": "IQ/A",
+          "level": "11",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "iaIM4VyT9mMkgIrI",
+      "_key": "!actors.items!srHclltMwv9fthOz.iaIM4VyT9mMkgIrI",
+      "name": "Savoir-Faire (High Society)",
+      "type": "skill",
+      "img": "icons/svg/book.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Savoir-Faire (High Society)",
+          "relativeLevel": "IQ/E",
+          "level": "12",
+          "points": 2,
+          "baselinePoints": 0
+        },
+        "source": "skills"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "LNkGfqtTUDiPXHIZ",
+      "_key": "!actors.items!srHclltMwv9fthOz.LNkGfqtTUDiPXHIZ",
+      "name": "Credit Chip",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "id": "d8968c93-e230-477b-8e6e-339b156d1bdf",
+          "name": "Credit Chip",
+          "category": "Currencies",
+          "weight": 0.28,
+          "quantity": 1,
+          "storedValue": 7000,
+          "cost": 0,
+          "description": "Standardized storage for carrying digital Galactic Credits. Reading requires a datapad or terminal.",
+          "condition": "Fine"
+        },
+        "source": "equipment"
+      },
+      "effects": [],
+      "flags": {}
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "shadowbase": {
+      "pack": "templates",
+      "key": "protocolDroid",
+      "template": {
+        "key": "protocolDroid",
+        "category": "Droids",
+        "description": "Etiquette and translation unit preloaded with a GE3 construction profile. (Cost: 16 CP)",
+        "migrated": true,
+        "notices": [
+          "language-entries"
+        ]
+      }
+    }
+  }
+}
