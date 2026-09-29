@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -332,7 +333,8 @@
           "description": "Graceful in water. You move naturally and comfortably in aquatic environments.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 10
+          "baselinePoints": 10,
+          "fromSpecies": "Selkath"
         },
         "source": "advantages"
       },
@@ -353,7 +355,8 @@
           "level": 1,
           "description": "DR 1",
           "category": "Cybernetic",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Selkath"
         },
         "source": "advantages"
       },
@@ -363,18 +366,19 @@
     {
       "_id": "skoR08h8mgvpGFzt",
       "_key": "!actors.items!C0zTRre3WF7tSXii.skoR08h8mgvpGFzt",
-      "name": "Striker (Venomous Claws)",
+      "name": "Sharp Claws",
       "type": "advantage",
       "img": "icons/svg/upgrade.svg",
       "sort": 300000,
       "system": {
         "row": {
-          "name": "Striker (Venomous Claws)",
-          "points": 5,
-          "description": "Natural claw attack tipped with venom.",
+          "name": "Sharp Claws",
+          "points": 3,
+          "description": "Venomous.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 5
+          "baselinePoints": 3,
+          "fromSpecies": "Selkath"
         },
         "source": "advantages"
       },
@@ -395,7 +399,8 @@
           "description": "You are unusually robust and healthy, granting bonuses to Endurance Point (EP) recovery and resistance to illness. Ensures you can endure long campaigns, torture, or the rigors of galactic travel, serving any master or cause.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Selkath"
         },
         "source": "advantages"
       },
@@ -416,7 +421,8 @@
           "description": "Non-aligned. You rigidly refuse to take sides in conflicts, which can isolate you or force inaction during critical moments.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Selkath"
         },
         "source": "disadvantages"
       },
@@ -437,7 +443,8 @@
           "description": "Requires regular immersion in water.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Selkath"
         },
         "source": "disadvantages"
       },

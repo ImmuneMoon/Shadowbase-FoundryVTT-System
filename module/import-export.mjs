@@ -310,7 +310,7 @@ export async function bulkImportFiles(files, policy = 'skip', { folder = null, d
     const source = prepared[i];
     if (entry.action === 'skip' || entry.action === 'invalid') { results.push({ ...entry, ok: entry.action === 'skip', actorId: null }); continue; }
     try {
-      const migrated = engine.applyLoadMigrations({ ...engine.blank(), ...source.sheet }, engine.blankSheetData);
+      const migrated = engine.loadIncomingSheet(source.sheet);
       if (entry.action === 'overwrite') {
         const existing = index.get(entry.id);
         if (!existing) throw new Error(`no actor to overwrite for ${entry.id}`);

@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Bothan"
         },
         "source": "advantages"
       },
@@ -380,7 +382,8 @@
           "description": "Network of informants providing highly accurate and detailed intelligence across the galaxy.",
           "level": null,
           "category": "Social/Wealth",
-          "baselinePoints": 12
+          "baselinePoints": 12,
+          "fromSpecies": "Bothan"
         },
         "source": "advantages"
       },
@@ -401,7 +404,8 @@
           "level": 1,
           "description": "+1 to reactions.",
           "category": "Social/Wealth",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Bothan"
         },
         "source": "advantages"
       },
@@ -422,7 +426,8 @@
           "description": "You have an ear for language. Every language you buy with points is spoken one fluency step higher than the level you paid for (Broken speaks as Accented, Accented as Fluent). Languages granted free - a native tongue, Bilingual, Polyglot - are unaffected. Facilitates espionage, trade, or communication with obscure factions across the diverse galaxy.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 10
+          "baselinePoints": 10,
+          "fromSpecies": "Bothan"
         },
         "source": "advantages"
       },
@@ -470,7 +475,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Bothan"
         },
         "source": "disadvantages"
       },
@@ -480,18 +486,19 @@
     {
       "_id": "65h2CM8l8EPLenOP",
       "_key": "!actors.items!GvC9zQGr4NmM5dDx.65h2CM8l8EPLenOP",
-      "name": "Reputation -1 (Untrustworthy)",
+      "name": "Reputation -2 (Manipulative Spies)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
       "sort": 200000,
       "system": {
         "row": {
-          "name": "Reputation -1 (Untrustworthy)",
-          "points": -5,
-          "description": "Viewed with suspicion. You are generally assumed to be deceitful or acting in bad faith.",
+          "name": "Reputation -2 (Manipulative Spies)",
+          "points": -10,
+          "description": "Known as manipulative spies, to all non-Bothans, all the time.",
           "level": null,
           "category": "Social",
-          "baselinePoints": -5
+          "baselinePoints": -10,
+          "fromSpecies": "Bothan"
         },
         "source": "disadvantages"
       },
@@ -512,7 +519,8 @@
           "description": "The character suffers from irrational distrust and suspicion of others. This can lead to misjudgments, strained alliances, and an inability to trust even legitimate offers of help, making you isolated.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Bothan"
         },
         "source": "disadvantages"
       },
@@ -533,7 +541,8 @@
           "description": "Involved in espionage.",
           "level": null,
           "category": "Social",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Bothan"
         },
         "source": "disadvantages"
       },

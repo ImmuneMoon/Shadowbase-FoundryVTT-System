@@ -112,7 +112,11 @@ const settle = () => new Promise((r) => setTimeout(r, 0));
 const OWNED_AREAS = ['SHADOWBASE.Roll.', 'SHADOWBASE.Combat.', 'SHADOWBASE.Damage.'];
 const ownedKeys = Object.keys(translations).filter((k) => OWNED_AREAS.some((p) => k.startsWith(p)));
 ok('lang/en.json carries the Roll / Combat / Damage areas (denominator)', ownedKeys.length >= 60, `${ownedKeys.length} keys`);
-ok('docs/REQUESTS.md no longer carries a u04-i18n block (the keys live in lang/en.json)', !/```json u04-i18n/.test(readFileSync(join(ROOT, 'docs', 'REQUESTS.md'), 'utf8')));
+// docs/REQUESTS.md is a local working file (gitignored since 2026-09-28); a checkout without it carries no block.
+{
+  const requestsPath = join(ROOT, 'docs', 'REQUESTS.md');
+  ok('docs/REQUESTS.md no longer carries a u04-i18n block (the keys live in lang/en.json)', !/```json u04-i18n/.test(existsSync(requestsPath) ? readFileSync(requestsPath, 'utf8') : ''));
+}
 
 // ---- a Handlebars renderer standing in for foundry.applications.handlebars.renderTemplate ------------------
 const require = createRequire(import.meta.url);

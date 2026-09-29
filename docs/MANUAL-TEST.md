@@ -83,7 +83,7 @@ fix in `tools/foundry-shim*.mjs` as much as a bug.
 | Open several of the 65 template Actors (Compendia › Character Templates) | each loads with its inline embedded Items (and effects) intact — no missing rows, no duplicates, no console error from the nested `!actors.items!` / `!actors.effects!` `_key` fields the pack build stamps on the embedded docs | |
 | Drop a `.json` character file on a sheet | import with the figures of §1 | |
 | Catalog / template drop routing | a compendium Item / template Actor dropped on the character sheet is handled by the sheet's own v13 `_onDropItem` / `_onDropActor` → `compendium-drop.mjs` (there is NO `dropActorSheetData` hook — it is Application-V1 only and never fires for an ActorSheetV2); a non-catalog world Item still takes Foundry's default drop | |
-| Open a handbook entry (Compendia › Rules › Handbook) | 24 entries / **169** pages; tables render inside `.sb-handbook-table` (wide ones scroll); "Chapter N" mentions are live `@UUID` links to the other entries | |
+| Open a handbook entry (Compendia › Rules › Handbook) | 24 entries / **171** pages; tables render inside `.sb-handbook-table` (wide ones scroll); "Chapter N" mentions are live `@UUID` links to the other entries | |
 | HUD › Handbook › a hit › Open in Journal | the entry opens at that page scrolled to the heading (UNVERIFIED: Foundry uses the heading's `id` as its TOC anchor; if it slugifies the text instead, regenerate `handbook/handbook-map.json`'s anchors with Foundry's `slugify`) | |
 
 ## 4. Chat cards and rolls
@@ -183,3 +183,15 @@ fix in `tools/foundry-shim*.mjs` as much as a bug.
 | Export Sahrhie after §1 | a file the website imports without notices; `points.spent` 245; `characteristics.damage.thrust` present (filled from live stats) | |
 | Export after a crash advance | `statusEffects[].modifiers.endurancePoints` is 0 on the advanced row | |
 | Export a droid | `droidBuild` keeps its sparse arrays (nulls in the JSON); the website reloads it with the same CP | |
+
+## 12. The one-time world update (2026-09-28, species-package revision 2)
+
+`module/world-update.mjs`, held headlessly by `check:world-update` (184 world actors at revisions 0 / 1 / 2, plus one that fails part-way and two with unreadable sheets). What only a live world shows: the ready hook firing, the whisper, and the update surviving a reload.
+
+| step | expected | result |
+|---|---|---|
+| Reload a world whose actors predate 2026-09-28 (e.g. the "Test" world), as the GM | once, after `shadowbase \| ready`: a notification "ShadowBase: N actor(s) updated to species-package revision 2", and ONE chat card whispered to the GM titled "World update to species-package revision 2", listing each actor whose species package changed (added / removed traits) and counting the ones only marked | |
+| Open an actor made from a species template before today (e.g. a Wookiee) | its racial traits are the same rows as before (same Items, nothing recreated), now marked as the species' own; points spent unchanged | |
+| Change that actor's species to Human | every Wookiee racial trait comes off (Rokarr: all 11), bought traits stay; Total Spent moves only by the size change (Rokarr 153 → 156) | |
+| Reload the world again | no notification, no card: every actor is at revision 2 | |
+| Log in as a player (second browser) during a GM's first load | the player's client writes nothing (no permission errors in its console) | |

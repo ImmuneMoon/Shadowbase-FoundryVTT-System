@@ -65,10 +65,18 @@ const SRC = join(ROOT, 'packs-src');
 if (!existsSync(join(SRC, 'MANIFEST.json'))) fail('packs-src/MANIFEST.json missing - run npm run build:packs');
 const manifest = JSON.parse(readFileSync(join(SRC, 'MANIFEST.json'), 'utf8'));
 
-/** ARCHITECTURE §7's per-pack figures (a declaration of the architecture, not of the catalogs). */
+/**
+ * ARCHITECTURE §7's per-pack figures (a declaration of the architecture, not of the catalogs).
+ * 2026-09-28: equipment 128 -> 133 and blueprints 491 -> 495 - the website's 2026-09-21 food round (commit 37c7858):
+ * Hot Meal Pack, Caf Ration, Spiced Portions, Field Feast Kit (+4 rows, +4 blueprints) and Caf Concentrate (+1 material
+ * row, no blueprint); the website's own check:fabrication-reach moved 491 -> 495 in the same round.
+ * 2026-09-28 (b): advantages 183 -> 185 and disadvantages 191 -> 193 - the website's species-package revision
+ * (uncommitted on 63eedd3, built dirty): Telecommunication (Smell/Taste), Tinker's Ingenuity; Appearance (Unattractive),
+ * Reputation -2 (Manipulative Spies) - racial traits the revised Ch18 packages name, now catalog rows.
+ */
 const EXPECTED_COUNTS = {
-  advantages: 183, disadvantages: 191, quirks: 45, skills: 153, 'force-powers': 48, 'combat-techniques': 14, 'lightsaber-forms': 7,
-  equipment: 128, blueprints: 491, armor: 152, 'armor-pieces': 75, 'armor-parts': 101, 'armor-mods': 33, 'ranged-weapons': 51,
+  advantages: 185, disadvantages: 193, quirks: 45, skills: 153, 'force-powers': 48, 'combat-techniques': 14, 'lightsaber-forms': 7,
+  equipment: 133, blueprints: 495, armor: 152, 'armor-pieces': 75, 'armor-parts': 101, 'armor-mods': 33, 'ranged-weapons': 51,
   'ranged-parts': 64, 'weapon-mods': 53, ammunition: 43, explosives: 15, 'melee-weapons': 37, 'melee-parts': 22 + 20, lightsabers: 11,
   'lightsaber-parts': 20 + 3 + 13 + 58, implants: 23, 'cybernetic-limbs': 20, 'cybernetic-upgrades': 4 + 3, starships: 6, 'starship-mods': 17,
   'starship-weapons': 9, vehicles: 9, 'droid-parts': 98, templates: 65,

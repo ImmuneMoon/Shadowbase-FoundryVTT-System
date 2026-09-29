@@ -149,7 +149,7 @@
         "level": 1
       },
       "text": {
-        "content": "<p>Two hazards come up often enough to need a standing rule rather than a fresh ruling each time. Both resolve with machinery already described above -- Endurance Points for going without, an HT roll for infection -- and both are what several pieces of gear in @UUID[Compendium.shadowbase.handbook.JournalEntry.Skjt6Gqhhw8BiF1Y]{Chapter 10} exist to prevent.</p>\n<h3 id=\"going-without-food-or-water\">Going Without Food or Water</h3>\n<p>A character who does not eat within a 24-hour period loses 1 EP, and 1 more for each further day without food. A character who does not drink loses 1 EP per 12 hours. EP lost this way cannot be recovered by rest until the character eats or drinks: the usual 1 EP per 10 minutes does not touch it, and a full night’s sleep restores them to that lowered ceiling rather than to full. Everything above about low and negative EP still applies, so a character who goes long enough without water will begin losing ST, DX and IQ and will eventually fall unconscious.</p>\n<p>One pack of Field Rations (@UUID[Compendium.shadowbase.handbook.JournalEntry.Skjt6Gqhhw8BiF1Y]{Chapter 10}) covers a day’s food, as does a successful Survival roll for the terrain. Water must come from a safe source, or be made safe with a Water Purifier.</p>\n<h3 id=\"disease-infection\">Disease &amp; Infection</h3>\n<p>Disease is resolved the way poison is -- see the toxin entries in @UUID[Compendium.shadowbase.handbook.JournalEntry.Skjt6Gqhhw8BiF1Y]{Chapter 10} -- as an HT roll at a penalty set by severity; any disease-resistance trait a character has adds its bonus to that roll. Exposure means contaminated food or water, a wound left untreated in the field, a parasite, or close quarters with someone already sick, and calls for one roll. Success: no effect. Failure: the character contracts it, and symptoms begin after the incubation below. Critical failure: as failure, one severity step worse.</p>\n<p>Severity sets the penalty and the effect. Mild is HT-1 and leaves the character Nauseated (-2 to all attributes and skills). Serious is HT-3, Nauseated, and EP does not restore on rest. Severe is HT-5, Nauseated, no EP restoration, and 1 HP lost per day. Incubation is 1d hours for Mild and 1d days for Serious or Severe. A disease outside these three states its own penalty and effect the way a toxin does.</p>\n<p>Shaking it off: a sick character rolls HT once per day at the same penalty. One success ends a Mild case; Serious and Severe need two consecutive successes. A critical failure worsens the case by one step. An Antidote Kit, or a successful Physician roll, grants +2 to these rolls.</p>\n<p>A Water Purifier removes the roll entirely for anything waterborne -- that is what it is for. Every bonus that names disease adds to all of the rolls above: the Body Glove and Thermal Cloak’s +1 (@UUID[Compendium.shadowbase.handbook.JournalEntry.sM4JaeipflPpOZgw]{Chapter 13}), a species’ Resistant to Disease (@UUID[Compendium.shadowbase.handbook.JournalEntry.ZDm9XH32h0ghbSSm]{Chapter 18}), and the Immunity Implant’s +8 (@UUID[Compendium.shadowbase.handbook.JournalEntry.o2ZbGiux36xwNCw0]{Chapter 14}). A droid, immune to metabolic hazards, never rolls at all.</p>",
+        "content": "<p>Two hazards come up often enough to need a standing rule rather than a fresh ruling each time. Both resolve with machinery already described above -- Endurance Points for going without, an HT roll for infection -- and both are what several pieces of gear in @UUID[Compendium.shadowbase.handbook.JournalEntry.Skjt6Gqhhw8BiF1Y]{Chapter 10} exist to prevent.</p>\n<h3 id=\"going-without-food-or-water\">Going Without Food or Water</h3>\n<p>A character who does not eat within a 24-hour period loses 1 EP, and 1 more for each further day without food. A character who does not drink loses 1 EP per 12 hours. EP lost this way cannot be recovered by rest until the character eats or drinks: the usual 1 EP per 10 minutes does not touch it, and a full night’s sleep restores them to that lowered ceiling rather than to full. Everything above about low and negative EP still applies, so a character who goes long enough without water will begin losing ST, DX and IQ and will eventually fall unconscious.</p>\n<p>One pack of Field Rations (@UUID[Compendium.shadowbase.handbook.JournalEntry.Skjt6Gqhhw8BiF1Y]{Chapter 10}) covers a day’s food, as does a successful Survival roll for the terrain. Water must come from a safe source, or be made safe with a Water Purifier.</p>\n<h3 id=\"eating-well\">Eating Well</h3>\n<p>The other side of going without is eating well. A character who eats a proper prepared meal -- one cooked fresh with a Cooking roll, or a quality meal bought for the purpose -- becomes Well-Fed until their next meal, roughly a day. Only the best meal of a day counts, and being Well-Fed does not stack with itself or with the boosts of a battle stimulant.</p>\n<p>How much good it does depends on the Cooking roll and the ingredients. A simple hot meal -- any successful Cooking roll, or a self-heating Hot Meal Pack (@UUID[Compendium.shadowbase.handbook.JournalEntry.Skjt6Gqhhw8BiF1Y]{Chapter 10}) -- leaves the eater Well-Fed and recovering Endurance Points from rest twice as fast, 1 EP every 5 minutes rather than 10. A good meal, cooked by 3 or more or made with fine ingredients, does that and adds +1 to Fright Checks and to any roll to resist fatigue until the next meal. A feast -- a Cooking critical success, a roll made by 3 or more with fine ingredients, or a Field Feast Kit (@UUID[Compendium.shadowbase.handbook.JournalEntry.Skjt6Gqhhw8BiF1Y]{Chapter 10}), and enough for the whole group -- does all of that, and each person who eats recovers 1 EP at once and takes +1 to their next Fright Check.</p>\n<p>Ingredients set the ceiling. Rough fare, such as plain ration paste or foraged scraps, never rises above a simple meal however skilled the cook; ordinary ingredients reach a good meal; and only fine ingredients -- a named regional delicacy (@UUID[Compendium.shadowbase.handbook.JournalEntry.WoKoilSuw4eubRUd]{Chapter 19}), or a Field Feast Kit -- allow a feast.</p>\n<p>A character with Survival can live off the land. One Survival roll for the terrain, once a day, feeds the forager and one more person for every 2 points the roll is made by, and yields fresh ingredients of ordinary quality -- rough in a barren waste, at the Gamemaster’s call. Water is found the same way, or made safe with a Water Purifier.</p>\n<p>Fresh food, foraged or bought unpreserved, keeps about two days before it spoils -- less in jungle heat, longer in the cold. Cooking preserves it: the Rations &amp; Preserved Food prepared with Cooking (@UUID[Compendium.shadowbase.handbook.JournalEntry.Skjt6Gqhhw8BiF1Y]{Chapter 10}) keep in the field indefinitely. Spoiled food feeds no one.</p>\n<h3 id=\"disease-infection\">Disease &amp; Infection</h3>\n<p>Disease is resolved the way poison is -- see the toxin entries in @UUID[Compendium.shadowbase.handbook.JournalEntry.Skjt6Gqhhw8BiF1Y]{Chapter 10} -- as an HT roll at a penalty set by severity; any disease-resistance trait a character has adds its bonus to that roll. Exposure means contaminated food or water, a wound left untreated in the field, a parasite, or close quarters with someone already sick, and calls for one roll. Success: no effect. Failure: the character contracts it, and symptoms begin after the incubation below. Critical failure: as failure, one severity step worse.</p>\n<p>Severity sets the penalty and the effect. Mild is HT-1 and leaves the character Nauseated (-2 to all attributes and skills). Serious is HT-3, Nauseated, and EP does not restore on rest. Severe is HT-5, Nauseated, no EP restoration, and 1 HP lost per day. Incubation is 1d hours for Mild and 1d days for Serious or Severe. A disease outside these three states its own penalty and effect the way a toxin does.</p>\n<p>Shaking it off: a sick character rolls HT once per day at the same penalty. One success ends a Mild case; Serious and Severe need two consecutive successes. A critical failure worsens the case by one step. An Antidote Kit, or a successful Physician roll, grants +2 to these rolls.</p>\n<p>A Water Purifier removes the roll entirely for anything waterborne -- that is what it is for. Every bonus that names disease adds to all of the rolls above: the Body Glove and Thermal Cloak’s +1 (@UUID[Compendium.shadowbase.handbook.JournalEntry.sM4JaeipflPpOZgw]{Chapter 13}), a species’ Resistant to Disease (@UUID[Compendium.shadowbase.handbook.JournalEntry.ZDm9XH32h0ghbSSm]{Chapter 18}), and the Immunity Implant’s +8 (@UUID[Compendium.shadowbase.handbook.JournalEntry.o2ZbGiux36xwNCw0]{Chapter 14}). A droid, immune to metabolic hazards, never rolls at all.</p>",
         "format": 1,
         "markdown": ""
       },
@@ -170,7 +170,45 @@
             "overview": false,
             "anchors": [
               "going-without-food-or-water",
+              "eating-well",
               "disease-infection"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "_id": "ZcCbAY1ZBnGFKsUg",
+      "_key": "!journal.pages!QD9SOsp2PLsi7llq.ZcCbAY1ZBnGFKsUg",
+      "name": "Time",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>One ladder of time runs the game, from the split second of a blaster exchange to the years of galactic history. A combat turn is one second (@UUID[Compendium.shadowbase.handbook.JournalEntry.JJ04T5LHImjlILs1]{Chapter 7}); rest and short tasks run in minutes; the food, water, and air clocks in hours; and most of ordinary life -- meals, travel, healing, and work -- in days. A standard day is 24 standard hours, the galaxy’s chronometer day, and it is the unit the out-of-combat rules count in. Five days make a week, and the wider calendar is laid out for the Gamemaster in @UUID[Compendium.shadowbase.handbook.JournalEntry.SQjNPFSBwLhhCFQ2]{Chapter 20}.</p>\n<h3 id=\"day-night-and-watches\">Day, Night, and Watches</h3>\n<p>A standard day splits into daylight and night. A world’s own cycle may be shorter or longer, but that is worldbuilding (@UUID[Compendium.shadowbase.handbook.JournalEntry.SQjNPFSBwLhhCFQ2]{Chapter 20}); the rules count standard days. A party that must post a guard divides the night into as many watches as it has sentries, and a character who stands a watch gets that much less rest.</p>\n<h3 id=\"rest-and-recovery\">Rest and Recovery</h3>\n<p>A character recovers 1 EP and 1 FP for every 10 minutes of quiet rest, and a full night’s sleep restores both to full. Hit Points return more slowly: a wounded character who rests a full day rolls against HT at day’s end, recovering 1 HP on a success, or 3 with a Physician’s care or a medpac (@UUID[Compendium.shadowbase.handbook.JournalEntry.Skjt6Gqhhw8BiF1Y]{Chapter 10}), and simply holds steady on a failure.</p>\n<p>A character who misses a full night -- standing watch, marching hard, or going hungry or thirsty -- restores EP and FP only in part, at the Gamemaster’s call, and heals no HP that day. A Caf Ration (@UUID[Compendium.shadowbase.handbook.JournalEntry.Skjt6Gqhhw8BiF1Y]{Chapter 10}) can take the edge off a short night.</p>",
+        "format": 1,
+        "markdown": ""
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "category": null,
+      "sort": 600000,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "shadowbase": {
+          "handbook": {
+            "chapterId": "ch01-core-mechanics",
+            "heading": "Time",
+            "overview": false,
+            "anchors": [
+              "day-night-and-watches",
+              "rest-and-recovery"
             ]
           }
         }
@@ -189,8 +227,8 @@
       "key": "ch01-core-mechanics",
       "handbook": {
         "chapterId": "ch01-core-mechanics",
-        "generatedAt": "2026-09-19T09:02:30.342Z",
-        "headings": 6,
+        "generatedAt": "2026-09-28T21:12:02.351Z",
+        "headings": 10,
         "tables": 0
       }
     }

@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -245,7 +246,7 @@
       }
     ],
     "languages": "Ryl (Native)",
-    "culturalFamiliarities": "Twi'lek Clans [0]",
+    "culturalFamiliarities": "Twi'lek Culture [0]",
     "literacy": "Native Literacy [0]",
     "description": "",
     "background": "",
@@ -333,7 +334,8 @@
           "level": 1,
           "description": "Attractive (+1 to reactions).",
           "category": "Physical",
-          "baselinePoints": 4
+          "baselinePoints": 4,
+          "fromSpecies": "Twi'lek"
         },
         "source": "advantages"
       },
@@ -354,7 +356,8 @@
           "level": 1,
           "description": "Level 1 Longevity.",
           "category": "Physical",
-          "baselinePoints": 2
+          "baselinePoints": 2,
+          "fromSpecies": "Twi'lek"
         },
         "source": "advantages"
       },
@@ -375,7 +378,8 @@
           "description": "Twi'leks can communicate subtly through precise movements of their lekku (head-tails). This allows for silent, private communication between Twi'leks (or those trained to understand) and can grant a +1 bonus to Fast-Talk or Diplomacy rolls when dealing with other Twi'leks. A powerful tool for covert operations, silent signals, or maintaining secrecy within a group.",
           "level": null,
           "category": "Racial",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Twi'lek"
         },
         "source": "advantages"
       },
@@ -396,7 +400,8 @@
           "description": "Many Twi'leks have innate grace and flexibility. They gain a +1 bonus to Dancing (DX/Average) skill. Can be used for entertainment, distraction, or as a cover for more illicit activities.",
           "level": null,
           "category": "Racial",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Twi'lek"
         },
         "source": "advantages"
       },
@@ -406,27 +411,6 @@
     {
       "_id": "HakJobHb26LqaUYA",
       "_key": "!actors.items!1Bc4qENXfeSJdbYL.HakJobHb26LqaUYA",
-      "name": "Claim to Hospitality",
-      "type": "advantage",
-      "img": "icons/svg/upgrade.svg",
-      "sort": 500000,
-      "system": {
-        "row": {
-          "name": "Claim to Hospitality",
-          "points": 5,
-          "level": 1,
-          "description": "Broad group",
-          "category": "Social/Wealth",
-          "baselinePoints": 5
-        },
-        "source": "advantages"
-      },
-      "effects": [],
-      "flags": {}
-    },
-    {
-      "_id": "PHhrBBHrKJTwgREr",
-      "_key": "!actors.items!1Bc4qENXfeSJdbYL.PHhrBBHrKJTwgREr",
       "name": "Vulnerability (Lekku)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -438,7 +422,8 @@
           "description": "A Twi'lek's lekku are sensitive and can be used to control them. Damage to the lekku is extremely painful, and sufficient injury or manipulation can render them helpless or unconscious. This physical vulnerability can be exploited by captors or torturers.",
           "level": null,
           "category": "Racial",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Twi'lek"
         },
         "source": "disadvantages"
       },
@@ -446,8 +431,8 @@
       "flags": {}
     },
     {
-      "_id": "putLqTDyICjxOEzd",
-      "_key": "!actors.items!1Bc4qENXfeSJdbYL.putLqTDyICjxOEzd",
+      "_id": "PHhrBBHrKJTwgREr",
+      "_key": "!actors.items!1Bc4qENXfeSJdbYL.PHhrBBHrKJTwgREr",
       "name": "Distinctive Features (Lekku)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -459,7 +444,8 @@
           "description": "Their prominent lekku make Twi'leks easily identifiable and can sometimes lead to prejudice or unwanted attention in certain parts of the galaxy, making it harder for them to blend in.",
           "level": null,
           "category": "Racial",
-          "baselinePoints": -1
+          "baselinePoints": -1,
+          "fromSpecies": "Twi'lek"
         },
         "source": "disadvantages"
       },
@@ -467,8 +453,8 @@
       "flags": {}
     },
     {
-      "_id": "eBBXnzs9UN1d73ed",
-      "_key": "!actors.items!1Bc4qENXfeSJdbYL.eBBXnzs9UN1d73ed",
+      "_id": "putLqTDyICjxOEzd",
+      "_key": "!actors.items!1Bc4qENXfeSJdbYL.putLqTDyICjxOEzd",
       "name": "Credit Chip",
       "type": "equipment",
       "img": "icons/svg/item-bag.svg",

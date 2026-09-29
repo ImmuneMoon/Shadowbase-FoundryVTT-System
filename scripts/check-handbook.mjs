@@ -9,21 +9,30 @@
 //   1. the 25 JSON files under handbook/ are byte-identical to the website's;
 //   2. 24 entries, one per chapter, in chapter order, deterministic ids;
 //   3. layout B: per chapter, pages = h2 count + 1 Overview when prose precedes the
-//      first h2 (169 today: 147 h2 + 22 overviews; Ch7 and Ch19 open on an h2);
+//      first h2 (171 today: 149 h2 + 22 overviews; Ch7 and Ch19 open on an h2);
 //      page names are the h2 headings in order; every page carries its LevelDB key;
-//   4. every heading the index lists (1459) is in handbook-map.json for its chapter,
+//   4. every heading the index lists (1466) is in handbook-map.json for its chapter,
 //      in order, pointing at a page of that entry, with an in-page anchor that exists
 //      as an `id` in that page's HTML (h2 pages resolve to the page itself);
-//   5. every sidecar table (278) is rendered exactly once, at its marker;
+//   5. every sidecar table (279) is rendered exactly once, at its marker;
 //   6. every HANDBOOK_CHIP_TARGETS target (the sheet's chips) resolves through the map;
 //   7. the era guard is clean over every rendered page - AND the naive grep without
 //      the allow-list is NOT clean (the allow-list is load-bearing; a guard whose
-//      positive control finds nothing has no denominator);
+//      positive control finds nothing has no denominator); every ERA_ALLOWED_SENTENCES
+//      entry is in the rendered book and load-bearing there (removing it surfaces a
+//      hit), and bare "the Empire" / "the old Empire" controls still fail;
 //   8. every @UUID link names an entry of this pack; no `**` survives rendering;
-//   9. the compiled packs/handbook LevelDB holds 24 + 169 keys and reads back.
+//   9. the compiled packs/handbook LevelDB holds 24 + 171 keys and reads back.
+//
+// The fixed totals (171 / 1466 / 279) moved on 2026-09-28 from 169 / 1459 / 278:
+// the first build since the 2026-09-19 (b) Sighting heading (Ch7) and the
+// 2026-09-21 Food + Time round (Ch1 "Time" and Ch20 "Time, the Calendar, and
+// Downtime" pages, Ch1 "Eating Well" / "Day, Night, and Watches" / "Rest and
+// Recovery", Ch19 "Regional Fare" and its table), each traced to its fix-log
+// addendum. The per-chapter measured pins above held throughout.
 //
 // THE REJECTED ALTERNATIVE, against the app's own code path: one page per
-// chapter (layout A). Ch19 is 366 headings and 894 sections; a 169-page
+// chapter (layout A). Ch19 is 367 headings and 921 sections; a 171-page
 // layout is what lets `page.parent.sheet.render(true, { pageId, anchor })`
 // land on a section. The pin holds the page count to the h2 rule, so a
 // builder that fell back to one page per chapter (24) is red.
@@ -34,7 +43,15 @@
 //   - handbook/handbook-map.json: "Hit Locations" anchor -> "hit-location" -> anchor-exists pin (52/53 resolve)
 //   - packs-src/handbook/ch01-*.json: "<p>the Rebellion regrouped</p>" appended to a page -> era guard pin
 //   - (the builder's own guard) build-handbook-pack.mjs ERA_ALLOWED_SENTENCES emptied -> the BUILD exits 1 with the
-//     five bare "the Empire" sentences listed; restored and rebuilt clean
+//     five bare sentences listed (re-fired 2026-09-28: four "the Empire", one "the old Empire"); restored and rebuilt clean
+//   2026-09-28, each against tools/build-handbook-pack.mjs, restored byte-identical and rebuilt clean:
+//   - the Ch19 'Sith of the old Empire tried to weaponize it' entry dropped -> the BUILD exits 1 naming the Blackwing
+//     Lore line; here "era guard clean"
+//   - the retired Darth Drear entry kept -> "occurs in a rendered page" + "load-bearing"
+//   - 'in the days of the old Sith Empire' added (in the book, but its term is phrase-masked) -> "load-bearing" only
+//   - 'the Empire' added to ERA_ALLOWED_PHRASES -> "bare ... still fail" + "load-bearing" (the four "the Empire" entries)
+//   - 'old Empire' added to ERA_ALLOWED_PHRASES (the rejected alternative) -> "bare ... still fail" + "load-bearing"
+//   - 'see Chapter 3' added -> "quotes a Chapter N link" (+ stale, load-bearing)
 //
 //   node scripts/check-handbook.mjs
 
@@ -83,6 +100,8 @@ let pagesTotal = 0; let h2Total = 0; let overviews = 0; let tablesTotal = 0; let
 const entryIds = new Set(entries.map((e) => e._id));
 const NAIVE = /\b(Empire|Rebellion|Bespin|Cloud City)\b/g;
 let naiveHits = 0; let eraProblems = []; let suspect = 0; let doubleStar = 0;
+const allowedSeen = new Set();
+const renderedTexts = [];
 for (const c of index.chapters) {
   const chapter = JSON.parse(readFileSync(join(WEB_HB, `${c.id}.json`), 'utf8'));
   const e = byChapter.get(c.id);
@@ -130,17 +149,19 @@ for (const c of index.chapters) {
     eraProblems.push(...B.eraHits(text).map((h) => `${c.id} / ${p.name}: ${h.term} ...${h.context}...`));
     suspect += B.eraHits(text, B.ERA_SUSPECT).length;
     naiveHits += (text.match(NAIVE) ?? []).length;
+    for (const s of B.ERA_ALLOWED_SENTENCES) if (text.includes(s)) allowedSeen.add(s);
+    renderedTexts.push(text);
   }
   tablesRendered += [...rendered.values()].reduce((a, b) => a + b, 0);
   ok(`${c.id}: every sidecar table rendered exactly once at its marker (${chapter.tables.length})`, chapter.tables.every((t) => rendered.get(String(t.id)) === 1) && rendered.size === chapter.tables.length, `${rendered.size} rendered`);
 }
-ok('169 pages = 147 h2 + 22 overviews (measured)', pagesTotal === h2Total + overviews, `${pagesTotal} pages, ${h2Total} h2, ${overviews} overviews`);
-ok('page total equals ARCHITECTURE §8\'s 169', pagesTotal === 169, `${pagesTotal}`);
+ok('pages = h2 + overviews (measured; 171 = 149 + 22)', pagesTotal === h2Total + overviews, `${pagesTotal} pages, ${h2Total} h2, ${overviews} overviews`);
+ok('page total equals ARCHITECTURE §8\'s 171', pagesTotal === 171, `${pagesTotal}`);
 const indexHeadings = index.chapters.reduce((n, c) => n + c.headings.length, 0);
 const mappedHeadings = Object.values(map.chapters).reduce((n, m) => n + m.headings.length, 0);
 ok(`headings mapped equals the index total (${indexHeadings})`, mappedHeadings === indexHeadings, `${mappedHeadings}`);
-ok('1459 headings mapped (ARCHITECTURE §8)', mappedHeadings === 1459);
-ok('278 tables rendered (ARCHITECTURE §8)', tablesRendered === 278 && tablesTotal === 278, `${tablesRendered} rendered of ${tablesTotal}`);
+ok('1466 headings mapped (ARCHITECTURE §9)', mappedHeadings === 1466, `${mappedHeadings}`);
+ok('279 tables rendered (ARCHITECTURE §9)', tablesRendered === 279 && tablesTotal === 279, `${tablesRendered} rendered of ${tablesTotal}`);
 ok('no `**` markup survives rendering', doubleStar === 0, `${doubleStar} pages`);
 ok('chapter links present and every one names an entry', linksTotal > 400, `${linksTotal}`);
 
@@ -158,6 +179,26 @@ ok('era guard clean over every rendered page (allow-list applied)', eraProblems.
 ok('the naive grep WITHOUT the allow-list is NOT clean (the allow-list is load-bearing)', naiveHits > 0, `${naiveHits}`);
 ok('the guard has teeth on a control string', B.eraHits('the Rebellion regrouped at Bespin').length === 2);
 ok('the allow-list masks exactly its phrases (Sith Empire passes, bare Empire fails)', B.eraHits('the Sith Empire').length === 0 && B.eraHits('the Galactic Empire').length === 1);
+// A bare article + Empire is exactly what the phrase list must never excuse: 'the Empire' slipped into
+// ERA_ALLOWED_PHRASES would pass every leg above (their controls hold no bare "the Empire"). The 2026-09-28
+// review excused one whole Ch19 fragment, not the phrase "the old Empire".
+ok('bare "the Empire" and "the old Empire" still fail outside a reviewed fragment', B.eraHits('the Empire struck').length === 1 && B.eraHits('the old Empire returned').length === 1);
+// The sentence list is a list of reviewed exceptions, so it must not outlive the text it excuses. Stale: the
+// rendered book no longer contains the entry (it would silently excuse a future sentence that happens to match).
+// Load-bearing: over the real rendered pages, the builder's own eraHits with that one entry removed surfaces a hit -
+// which also rejects an entry with no forbidden term, and one whose term a phrase already masks.
+{
+  const stale = B.ERA_ALLOWED_SENTENCES.filter((s) => !allowedSeen.has(s));
+  ok(`every ERA_ALLOWED_SENTENCES entry occurs in a rendered page (${B.ERA_ALLOWED_SENTENCES.length}; no stale exception)`, stale.length === 0, stale.join(' | '));
+  const idle = B.ERA_ALLOWED_SENTENCES.filter((s) => {
+    const sentences = B.ERA_ALLOWED_SENTENCES.filter((x) => x !== s);
+    return !renderedTexts.some((t) => B.eraHits(t, B.ERA_FORBIDDEN, { sentences }).length > 0);
+  });
+  ok('every ERA_ALLOWED_SENTENCES entry is load-bearing over the rendered book (removing it surfaces a hit)', idle.length === 0, idle.join(' | '));
+  // The builder greps the page BEFORE enrichChapterLinks, this check AFTER; an entry quoting "Chapter N" would
+  // mask in the build and not here.
+  ok('no ERA_ALLOWED_SENTENCES entry quotes a "Chapter N" link (builder and check grep the same text)', B.ERA_ALLOWED_SENTENCES.every((s) => !/\bChapter \d/.test(s)));
+}
 console.log(`check:handbook: ${suspect} Galactic-Civil-War term(s) in the book itself reported by the builder (not failures; docs/REQUESTS.md)`);
 
 // ---- 9. compiled pack reads back -----------------------------------------------------------------------------------
@@ -169,7 +210,7 @@ if (ok('packs/handbook compiled (run npm run build:handbook)', existsSync(join(p
   const keys = await db.keys().all();
   const journal = keys.filter((k) => k.startsWith('!journal!'));
   const pages = keys.filter((k) => k.startsWith('!journal.pages!'));
-  ok('LevelDB holds 24 entries and 169 pages', journal.length === 24 && pages.length === 169, `${journal.length} entries, ${pages.length} pages, ${keys.length} keys`);
+  ok('LevelDB holds 24 entries and 171 pages', journal.length === 24 && pages.length === 171, `${journal.length} entries, ${pages.length} pages, ${keys.length} keys`);
   const first = await db.get(journal[0]);
   ok('a stored entry lists its page ids and carries no _key', Array.isArray(first.pages) && first.pages.every((p) => typeof p === 'string') && !('_key' in first));
   await db.close();

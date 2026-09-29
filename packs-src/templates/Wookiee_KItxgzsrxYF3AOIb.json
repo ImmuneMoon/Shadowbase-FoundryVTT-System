@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Wookiee"
         },
         "source": "advantages"
       },
@@ -380,7 +382,8 @@
           "level": 1,
           "description": "DR 1",
           "category": "Cybernetic",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Wookiee"
         },
         "source": "advantages"
       },
@@ -390,18 +393,19 @@
     {
       "_id": "UT3ZPmcaDBV9no2r",
       "_key": "!actors.items!KItxgzsrxYF3AOIb.UT3ZPmcaDBV9no2r",
-      "name": "Fit",
+      "name": "Sharp Claws",
       "type": "advantage",
       "img": "icons/svg/upgrade.svg",
       "sort": 300000,
       "system": {
         "row": {
-          "name": "Fit",
-          "points": 5,
-          "description": "You are unusually robust and healthy, granting bonuses to Endurance Point (EP) recovery and resistance to illness. Ensures you can endure long campaigns, torture, or the rigors of galactic travel, serving any master or cause.",
+          "name": "Sharp Claws",
+          "points": 3,
+          "description": "Bony spurs or hardened claws providing enhanced unarmed slashing and impaling damage.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 5
+          "baselinePoints": 3,
+          "fromSpecies": "Wookiee"
         },
         "source": "advantages"
       },
@@ -411,18 +415,19 @@
     {
       "_id": "lGH5enlWr9Su0xTA",
       "_key": "!actors.items!KItxgzsrxYF3AOIb.lGH5enlWr9Su0xTA",
-      "name": "High Pain Threshold",
+      "name": "Temperature Tolerance",
       "type": "advantage",
       "img": "icons/svg/upgrade.svg",
       "sort": 400000,
       "system": {
         "row": {
-          "name": "High Pain Threshold",
-          "points": 10,
-          "description": "You are unusually resistant to the effects of pain, suffering fewer penalties from injury. Allows you to endure torture or continue fighting effectively even when severely wounded, a vital trait for a survivor in a brutal war.",
-          "level": null,
-          "category": "Mental",
-          "baselinePoints": 10
+          "name": "Temperature Tolerance",
+          "points": 1,
+          "level": 1,
+          "description": "Level 1",
+          "category": "Physical",
+          "baselinePoints": 1,
+          "fromSpecies": "Wookiee"
         },
         "source": "advantages"
       },
@@ -432,6 +437,50 @@
     {
       "_id": "mP1KNUaHWW5CirGF",
       "_key": "!actors.items!KItxgzsrxYF3AOIb.mP1KNUaHWW5CirGF",
+      "name": "Fit",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Fit",
+          "points": 5,
+          "description": "You are unusually robust and healthy, granting bonuses to Endurance Point (EP) recovery and resistance to illness. Ensures you can endure long campaigns, torture, or the rigors of galactic travel, serving any master or cause.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": 5,
+          "fromSpecies": "Wookiee"
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "elByP0LTvTp3oiv1",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.elByP0LTvTp3oiv1",
+      "name": "High Pain Threshold",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 600000,
+      "system": {
+        "row": {
+          "name": "High Pain Threshold",
+          "points": 10,
+          "description": "You are unusually resistant to the effects of pain, suffering fewer penalties from injury. Allows you to endure torture or continue fighting effectively even when severely wounded, a vital trait for a survivor in a brutal war.",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": 10,
+          "fromSpecies": "Wookiee"
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "xGf3ccDcZutlEj6Z",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.xGf3ccDcZutlEj6Z",
       "name": "IQ -2 (Racial)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -470,7 +519,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Wookiee"
         },
         "source": "disadvantages"
       },
@@ -478,8 +528,8 @@
       "flags": {}
     },
     {
-      "_id": "elByP0LTvTp3oiv1",
-      "_key": "!actors.items!KItxgzsrxYF3AOIb.elByP0LTvTp3oiv1",
+      "_id": "NyGZRYCyWetrbhNe",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.NyGZRYCyWetrbhNe",
       "name": "Bad Temper",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -491,7 +541,8 @@
           "description": "You are prone to anger and easily provoked, often leading to rash decisions or confrontations.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Wookiee"
         },
         "source": "disadvantages"
       },
@@ -499,8 +550,8 @@
       "flags": {}
     },
     {
-      "_id": "xGf3ccDcZutlEj6Z",
-      "_key": "!actors.items!KItxgzsrxYF3AOIb.xGf3ccDcZutlEj6Z",
+      "_id": "tems07Bh01kwduUk",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.tems07Bh01kwduUk",
       "name": "Code of Honor (Wookiee)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -512,7 +563,8 @@
           "description": "You live by the honor code of Kashyyyk: loyalty to family and clan above self, courage in the face of any enemy, hospitality to guests, and the duty to repay a debt in full. A life debt is one expression of this code - a Wookiee whose life is saved is bound to protect their rescuer, and their family, for as long as it takes. Breaking the code brings shame before all Wookiees, and a Wookiee who turns their claws on another in anger is cast out. Like any Code of Honor, it can be used to steer you into actions you would rather refuse, or to hold you to a promise.",
           "level": null,
           "category": "Cultural / Background",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Wookiee"
         },
         "source": "disadvantages"
       },
@@ -520,8 +572,8 @@
       "flags": {}
     },
     {
-      "_id": "NyGZRYCyWetrbhNe",
-      "_key": "!actors.items!KItxgzsrxYF3AOIb.NyGZRYCyWetrbhNe",
+      "_id": "lTU289T3MIEdpbec",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.lTU289T3MIEdpbec",
       "name": "Distinctive Features (8ft tall)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -533,7 +585,8 @@
           "description": "Immense stature. You stand out in any normal-sized crowd and struggle to use standard-sized facilities.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": -1
+          "baselinePoints": -1,
+          "fromSpecies": "Wookiee"
         },
         "source": "disadvantages"
       },
@@ -541,8 +594,8 @@
       "flags": {}
     },
     {
-      "_id": "tems07Bh01kwduUk",
-      "_key": "!actors.items!KItxgzsrxYF3AOIb.tems07Bh01kwduUk",
+      "_id": "AyHd3bcsT311xZ0C",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.AyHd3bcsT311xZ0C",
       "name": "Roars when angered",
       "type": "quirk",
       "img": "icons/svg/aura.svg",
@@ -552,7 +605,8 @@
           "name": "Roars when angered",
           "description": "Frustration or anger comes out as a full-throated Wookiee roar before it comes out as words. Impressive in a fight, inconvenient during negotiations or while hiding.",
           "points": -1,
-          "baselinePoints": -1
+          "baselinePoints": -1,
+          "fromSpecies": "Wookiee"
         },
         "source": "quirks"
       },
@@ -560,8 +614,8 @@
       "flags": {}
     },
     {
-      "_id": "lTU289T3MIEdpbec",
-      "_key": "!actors.items!KItxgzsrxYF3AOIb.lTU289T3MIEdpbec",
+      "_id": "flIXsJyXHDRL9Q3z",
+      "_key": "!actors.items!KItxgzsrxYF3AOIb.flIXsJyXHDRL9Q3z",
       "name": "Credit Chip",
       "type": "equipment",
       "img": "icons/svg/item-bag.svg",

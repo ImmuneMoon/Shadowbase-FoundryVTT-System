@@ -41,6 +41,7 @@ import { ShadowBaseItem } from './documents/item.mjs';
 import { ShadowBaseActiveEffect } from './documents/active-effect.mjs';
 // Wave 5 (U10 owns this file): the world / client settings and the facing <-> token rotation mirror.
 import { settings, registerSettings, registerSettingsHooks } from './settings.mjs';
+import { runWorldUpdate } from './world-update.mjs';
 
 export const SYSTEM_ID = 'shadowbase';
 
@@ -242,5 +243,8 @@ Hooks.once('ready', () => {
   if (missing.length) {
     ui.notifications.warn(game.i18n.format('SHADOWBASE.Engine.MissingExport', { names: missing.join(', ') }), { permanent: false });
   }
+  // The one-time world update (module/world-update.mjs): the active GM's client brings every world actor below
+  // the current species-package revision to what the website's load gives its sheet. A no-op everywhere else.
+  runWorldUpdate().catch((err) => console.error(`${SYSTEM_ID} | world update`, err));
   console.log(`${SYSTEM_ID} | ready`);
 });

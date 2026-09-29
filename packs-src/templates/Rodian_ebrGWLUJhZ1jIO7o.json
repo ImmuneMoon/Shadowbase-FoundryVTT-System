@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Rodian"
         },
         "source": "advantages"
       },
@@ -407,7 +409,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 15
+          "baselinePoints": 15,
+          "fromSpecies": "Rodian"
         },
         "source": "advantages"
       },
@@ -428,7 +431,8 @@
           "description": "You are unusually robust and healthy, granting bonuses to Endurance Point (EP) recovery and resistance to illness. Ensures you can endure long campaigns, torture, or the rigors of galactic travel, serving any master or cause.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Rodian"
         },
         "source": "advantages"
       },
@@ -449,7 +453,8 @@
           "description": "You act on sudden urges without considering consequences, often leading to trouble. This rashness can be anticipated and triggered by enemies.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Rodian"
         },
         "source": "disadvantages"
       },
@@ -470,7 +475,8 @@
           "description": "You have an excessive desire for wealth or possessions, often leading you to act selfishly or unethically. This makes you easily bribed or lured into dangerous schemes with promises of riches.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -15
+          "baselinePoints": -15,
+          "fromSpecies": "Rodian"
         },
         "source": "disadvantages"
       },
@@ -491,7 +497,8 @@
           "description": "Viewed with suspicion. You are generally assumed to be deceitful or acting in bad faith.",
           "level": null,
           "category": "Social",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Rodian"
         },
         "source": "disadvantages"
       },
@@ -501,6 +508,28 @@
     {
       "_id": "8qbjhucQs9nJK9tU",
       "_key": "!actors.items!ebrGWLUJhZ1jIO7o.8qbjhucQs9nJK9tU",
+      "name": "Appearance (Unattractive)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Appearance (Unattractive)",
+          "points": -4,
+          "description": "You are unpleasant to look at by the standards of most of the galaxy. This is the mirror of Appearance (Attractive) in Chapter 4: -1 to reaction, and it applies only where you can be seen. Several species carry it as part of their racial package in Chapter 18.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": -4,
+          "fromSpecies": "Rodian"
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "1IkF3sb46XxyWBf5",
+      "_key": "!actors.items!ebrGWLUJhZ1jIO7o.1IkF3sb46XxyWBf5",
       "name": "Credit Chip",
       "type": "equipment",
       "img": "icons/svg/item-bag.svg",

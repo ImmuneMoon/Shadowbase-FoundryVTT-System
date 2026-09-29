@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Trandoshan"
         },
         "source": "advantages"
       },
@@ -407,7 +409,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Trandoshan"
         },
         "source": "advantages"
       },
@@ -428,7 +431,8 @@
           "level": 1,
           "description": "Rapid Healing: +5 to health recovery rolls.",
           "category": "Physical",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Trandoshan"
         },
         "source": "advantages"
       },
@@ -449,7 +453,8 @@
           "description": "You are unusually robust and healthy, granting bonuses to Endurance Point (EP) recovery and resistance to illness. Ensures you can endure long campaigns, torture, or the rigors of galactic travel, serving any master or cause.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Trandoshan"
         },
         "source": "advantages"
       },
@@ -470,7 +475,8 @@
           "description": "You are unusually resistant to the effects of pain, suffering fewer penalties from injury. Allows you to endure torture or continue fighting effectively even when severely wounded, a vital trait for a survivor in a brutal war.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 10
+          "baselinePoints": 10,
+          "fromSpecies": "Trandoshan"
         },
         "source": "advantages"
       },
@@ -518,7 +524,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Trandoshan"
         },
         "source": "disadvantages"
       },
@@ -539,7 +546,8 @@
           "description": "You have a compulsive urge to kill or inflict grievous harm in combat.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Trandoshan"
         },
         "source": "disadvantages"
       },
@@ -560,7 +568,8 @@
           "description": "Viewed as primitive and uneducated by core world standards.",
           "level": null,
           "category": "Social",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Trandoshan"
         },
         "source": "disadvantages"
       },
@@ -581,7 +590,8 @@
           "description": "Sluggish in cold. You suffer penalties to your physical attributes and reaction times in low-temperature environments.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Trandoshan"
         },
         "source": "disadvantages"
       },
@@ -602,7 +612,8 @@
           "description": "Hisses when agitated.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Trandoshan"
         },
         "source": "disadvantages"
       },
@@ -623,7 +634,8 @@
           "description": "Scaly appearance making it difficult to disguise yourself.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": -1
+          "baselinePoints": -1,
+          "fromSpecies": "Trandoshan"
         },
         "source": "disadvantages"
       },
@@ -642,7 +654,8 @@
           "name": "Collects trophies",
           "description": "Honors the Scorekeeper. You take mementos from your defeated foes or significant accomplishments.",
           "points": -1,
-          "baselinePoints": -1
+          "baselinePoints": -1,
+          "fromSpecies": "Trandoshan"
         },
         "source": "quirks"
       },

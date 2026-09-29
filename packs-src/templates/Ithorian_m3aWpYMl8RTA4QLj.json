@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Ithorian"
         },
         "source": "advantages"
       },
@@ -407,7 +409,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Ithorian"
         },
         "source": "advantages"
       },
@@ -428,7 +431,8 @@
           "description": "Your Empathy is limited to plant life. You sense the health, stress and vitality of the flora around you - a blighted grove, a poisoned field, a forest under threat - with a successful Per roll, and gain insight into what ails it. It gives no read on the emotions or sincerity of people or animals.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Ithorian"
         },
         "source": "advantages"
       },
@@ -449,7 +453,8 @@
           "description": "2d crushing cone attack generated naturally.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 10
+          "baselinePoints": 10,
+          "fromSpecies": "Ithorian"
         },
         "source": "advantages"
       },
@@ -470,7 +475,8 @@
           "level": 1,
           "description": "Level 1 Longevity.",
           "category": "Physical",
-          "baselinePoints": 2
+          "baselinePoints": 2,
+          "fromSpecies": "Ithorian"
         },
         "source": "advantages"
       },
@@ -518,7 +524,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Ithorian"
         },
         "source": "disadvantages"
       },
@@ -539,7 +546,8 @@
           "description": "Self-Defense Only.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Ithorian"
         },
         "source": "disadvantages"
       },
@@ -560,7 +568,8 @@
           "description": "Protect nature.",
           "level": null,
           "category": "Social",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Ithorian"
         },
         "source": "disadvantages"
       },

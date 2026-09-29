@@ -97,8 +97,9 @@ export class ShadowBaseActor extends BaseActor {
   /**
    * Replace this actor's data from a website character JSON (or an already
    * converted sheet) through the website's own load path: convertJsonToSheet,
-   * spread over the blank sheet, applyLoadMigrations (unit U01 - a clear error
-   * until it lands), then sheetToActorData.
+   * then engine.loadIncomingSheet (applyLoadMigrations, which spreads the blank
+   * sheet itself AFTER reading the save's speciesPackageRevision - the sheet
+   * must reach it unspread), then sheetToActorData.
    * @param {object|string} jsonOrSheet a character file (parsed or text) or a CharacterFormValues
    * @param {{ mode?: 'replace', keepName?: boolean }} [options]
    * @returns {Promise<{ notices: string[] }>}
@@ -114,8 +115,7 @@ export class ShadowBaseActor extends BaseActor {
     // applyLoadMigrations mutates nested rows of what it is given (it came from the
     // website's load hook); a caller's sheet object must survive, so it gets a clone.
     const converted = isCharacterFile ? engine.convertJsonToSheet(input) : foundry.utils.deepClone(input);
-    const applyLoadMigrations = engine.requireExport('applyLoadMigrations');
-    const { data, notices = [] } = applyLoadMigrations({ ...engine.blank(), ...converted }, engine.blankSheetData);
+    const { data, notices = [] } = engine.loadIncomingSheet(converted);
     const actorData = sheetToActorData(data, { actorName: keepName ? this.name : undefined });
     await this.deleteEmbeddedDocuments('Item', this.items.map((i) => i.id));
     await this.deleteEmbeddedDocuments('ActiveEffect', this.effects.map((e) => e.id));

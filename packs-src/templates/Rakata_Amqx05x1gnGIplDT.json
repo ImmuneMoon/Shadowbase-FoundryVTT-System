@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Rakata"
         },
         "source": "advantages"
       },
@@ -380,7 +382,8 @@
           "description": "You have a 360-degree field of vision, making it impossible to surprise you from behind. This is common for species with eyestalks or unusual eye placement.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 15
+          "baselinePoints": 15,
+          "fromSpecies": "Rakata"
         },
         "source": "advantages"
       },
@@ -401,7 +404,8 @@
           "level": 1,
           "description": "Level 1 Longevity.",
           "category": "Physical",
-          "baselinePoints": 2
+          "baselinePoints": 2,
+          "fromSpecies": "Rakata"
         },
         "source": "advantages"
       },
@@ -422,7 +426,8 @@
           "level": 1,
           "description": "+1 to tasks requiring fine motor skills.",
           "category": "Physical",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Rakata"
         },
         "source": "advantages"
       },
@@ -470,7 +475,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Rakata"
         },
         "source": "disadvantages"
       },
@@ -491,7 +497,8 @@
           "description": "Feared and hated. You are viewed as a remnant of a dark time or a threat to civilized society.",
           "level": null,
           "category": "Social",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Rakata"
         },
         "source": "disadvantages"
       },
@@ -512,7 +519,8 @@
           "description": "You are merciless, if not cruel. You decipher others’ emotions, but only to manipulate them. You do not care about feelings, or pain. Gives you -3 on all Teaching rolls, on Psychology rolls made to help others (as opposed to deduce weakness or conduct scientific research), and on any roll made to interact with those who have suffered the consequences of your callousness in the past (GM decision). As well, past victims, and anyone with Empathy, will react to you at -1. You get an extra +1 to Interrogation and Intimidation rolls when you use threats or torture.",
           "level": null,
           "category": "Social",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Rakata"
         },
         "source": "disadvantages"
       },
@@ -533,7 +541,8 @@
           "description": "You believe you are a superman, that you have been chosen for some great task, or that you are destined to conquer.  Even if you are a superhuman, this represents a single-minded pursuit of some fantastic goal, treating ordinary humans with contempt, or regarding yourself as a god.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Rakata"
         },
         "source": "disadvantages"
       },

@@ -30,10 +30,10 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, wri
 import { createHash } from 'node:crypto';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { WEB } from './website-path.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(HERE, '..');
-const WEB = resolve(process.env.SHADOWBASE_WEBSITE ?? join(ROOT, '..', 'ShadowBase Website'));
 const ENGINE = resolve(process.env.ENGINE_BUNDLE ?? join(ROOT, 'engine', 'shadowbase-engine.mjs'));
 const BUILD_INFO = join(dirname(ENGINE), 'BUILD-INFO.json');
 export const SRC_ROOT = join(ROOT, 'packs-src');

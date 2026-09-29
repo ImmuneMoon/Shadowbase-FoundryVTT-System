@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Cathar"
         },
         "source": "advantages"
       },
@@ -407,7 +409,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Cathar"
         },
         "source": "advantages"
       },
@@ -428,7 +431,8 @@
           "description": "You have an extraordinary sense of balance, making you very difficult to knock down or unbalance. Enables acrobatic feats in combat or traversing treacherous terrain, valuable for both daring escapes and precise infiltration. Prerequisite: Force Sensitive (if taken as a Force-related advantage, indicating Force-enhanced proprioception).",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 15
+          "baselinePoints": 15,
+          "fromSpecies": "Cathar"
         },
         "source": "advantages"
       },
@@ -476,7 +480,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 2
+          "baselinePoints": 2,
+          "fromSpecies": "Cathar"
         },
         "source": "advantages"
       },
@@ -497,7 +502,8 @@
           "description": "You are unusually robust and healthy, granting bonuses to Endurance Point (EP) recovery and resistance to illness. Ensures you can endure long campaigns, torture, or the rigors of galactic travel, serving any master or cause.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Cathar"
         },
         "source": "advantages"
       },
@@ -545,7 +551,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Cathar"
         },
         "source": "disadvantages"
       },
@@ -566,7 +573,8 @@
           "description": "You are prone to anger and easily provoked, often leading to rash decisions or confrontations.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Cathar"
         },
         "source": "disadvantages"
       },
@@ -587,7 +595,8 @@
           "description": "You act on sudden urges without considering consequences, often leading to trouble. This rashness can be anticipated and triggered by enemies.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Cathar"
         },
         "source": "disadvantages"
       },
@@ -608,7 +617,8 @@
           "description": "Displaced by war. You are often treated as an unwanted burden by established societies.",
           "level": null,
           "category": "Social",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Cathar"
         },
         "source": "disadvantages"
       },
@@ -629,7 +639,8 @@
           "description": "Animalistic traits making it difficult to blend in.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": -1
+          "baselinePoints": -1,
+          "fromSpecies": "Cathar"
         },
         "source": "disadvantages"
       },

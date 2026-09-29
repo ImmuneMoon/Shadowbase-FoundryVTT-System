@@ -543,7 +543,7 @@ for (const [name, spec] of Object.entries(preview.APPS)) {
 // ---- 10. Dossier Importer -------------------------------------------------------------------------------------------
 {
   const vex = engine.characterTemplateStore.vexKorta;
-  const vexSheet = engine.applyLoadMigrations({ ...engine.blank(), ...structuredClone(vex.data) }, engine.blankSheetData).data;
+  const vexSheet = engine.loadIncomingSheet(structuredClone(vex.data)).data;
   const file = { name: 'vex.json', text: JSON.stringify(engine.convertSheetToJson(vexSheet, engine.getCalculatedStats(vexSheet))) };
   const broken = { name: 'broken.json', text: '{ not json' };
   for (const a of [...game.actors.values()]) if (a.name === 'Vex Korta' || a.name.startsWith('Vex Korta (')) game.actors.delete(a.id);

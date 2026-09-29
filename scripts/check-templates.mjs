@@ -140,7 +140,7 @@ for (const key of TEMPLATE_KEYS) {
   ok(`characterTemplateStore.${key} exists`, !!t);
   if (!t) continue;
   let sheet = typeof t.data === 'function' ? t.data() : (t.data ?? t);
-  sheet = engine.applyLoadMigrations({ ...engine.blank(), ...structuredClone(sheet) }, engine.blankSheetData).data;
+  sheet = engine.loadIncomingSheet(structuredClone(sheet)).data;
   corpus.push({ name: `template:${key}`, sheet, actorName: t.name });
 }
 for (const entry of loadCorpus(engine, { templates: false, coverage: false })) if (/^export-/.test(entry.file)) corpus.push({ name: entry.name, sheet: entry.sheet, actorName: entry.sheet.characterName });
@@ -197,7 +197,7 @@ ok('every corpus entry rendered (denominator)', rendered === corpus.length, `${r
 // ---- the form pipeline over a rendered actor (the blank -> null rule, the item extraction) ----------------------------
 {
   const t = engine.characterTemplateStore.vexKorta;
-  const sheet = engine.applyLoadMigrations({ ...engine.blank(), ...structuredClone(t.data) }, engine.blankSheetData).data;
+  const sheet = engine.loadIncomingSheet(structuredClone(t.data)).data;
   const actor = shim.buildActor(adapter.sheetToActorData(sheet, { actorName: t.name }));
   globalThis.game.actors.set(actor.id, actor);
   const app = new ShadowBaseActorSheet({ document: actor });

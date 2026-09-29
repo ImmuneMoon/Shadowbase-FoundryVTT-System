@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Yoda's Species (Tridactyls)"
         },
         "source": "advantages"
       },
@@ -407,7 +409,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Yoda's Species (Tridactyls)"
         },
         "source": "advantages"
       },
@@ -428,7 +431,8 @@
           "level": 1,
           "description": "+1 to tasks requiring fine motor skills.",
           "category": "Physical",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Yoda's Species (Tridactyls)"
         },
         "source": "advantages"
       },
@@ -449,7 +453,8 @@
           "description": "You can feel the Force. Purchasing this advantage is the prerequisite for learning all Apprentice-tier Force Powers. You must purchase this advantage before buying anything else related to the Force (Force Powers, Force Training, Force Talents, Force skills, and other Force Advantages). You can only take this advantage at character creation – your character is either Force Sensitive or not. Taking this advantage does not necessarily mean your character is aware of their abilities. This advantage also grants access to more exotic advantages normally only available in racial templates; these are subject to the \"-Force\" limitation, costing 10% less than normal. This is the foundational ability to tap into the galaxy's ultimate power, which can be bent to any will.",
           "level": null,
           "category": "Force",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Yoda's Species (Tridactyls)"
         },
         "source": "advantages"
       },
@@ -459,6 +464,50 @@
     {
       "_id": "aB31tYyc4NIe5Jxb",
       "_key": "!actors.items!LriEa2HLPSBWS0Bf.aB31tYyc4NIe5Jxb",
+      "name": "Longevity",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Longevity",
+          "points": 6,
+          "level": 3,
+          "description": "Level 3 Longevity.",
+          "category": "Physical",
+          "baselinePoints": 6,
+          "fromSpecies": "Yoda's Species (Tridactyls)"
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "M70C5x9WDR9CRDRt",
+      "_key": "!actors.items!LriEa2HLPSBWS0Bf.M70C5x9WDR9CRDRt",
+      "name": "Force Training",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 600000,
+      "system": {
+        "row": {
+          "name": "Force Training",
+          "points": 45,
+          "level": 3,
+          "description": "Force Training 3 (Master). Prerequisite: Force Training 2. Benefit: You unlock the ability to learn Master tier Force Powers. You gain an additional permanent +2 bonus to your maximum FP (for a total of +4 from Force Training).",
+          "category": "Force",
+          "baselinePoints": 45,
+          "fromSpecies": "Yoda's Species (Tridactyls)"
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "9rv8QU2sFgsH2KrA",
+      "_key": "!actors.items!LriEa2HLPSBWS0Bf.9rv8QU2sFgsH2KrA",
       "name": "ST -3 (Racial)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -497,49 +546,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
-        },
-        "source": "disadvantages"
-      },
-      "effects": [],
-      "flags": {}
-    },
-    {
-      "_id": "M70C5x9WDR9CRDRt",
-      "_key": "!actors.items!LriEa2HLPSBWS0Bf.M70C5x9WDR9CRDRt",
-      "name": "Social Stigma (Minority)",
-      "type": "disadvantage",
-      "img": "icons/svg/downgrade.svg",
-      "sort": 200000,
-      "system": {
-        "row": {
-          "name": "Social Stigma (Minority)",
-          "points": -10,
-          "description": "Rarely seen or understood, making socialization and trust-building more difficult.",
-          "level": null,
-          "category": "Social",
-          "baselinePoints": -10
-        },
-        "source": "disadvantages"
-      },
-      "effects": [],
-      "flags": {}
-    },
-    {
-      "_id": "9rv8QU2sFgsH2KrA",
-      "_key": "!actors.items!LriEa2HLPSBWS0Bf.9rv8QU2sFgsH2KrA",
-      "name": "Pacifism",
-      "type": "disadvantage",
-      "img": "icons/svg/downgrade.svg",
-      "sort": 300000,
-      "system": {
-        "row": {
-          "name": "Pacifism",
-          "points": -10,
-          "description": "Self-Defense Only.",
-          "level": null,
-          "category": "Mental",
-          "baselinePoints": -10
+          "baselinePoints": 0,
+          "fromSpecies": "Yoda's Species (Tridactyls)"
         },
         "source": "disadvantages"
       },
@@ -549,6 +557,72 @@
     {
       "_id": "qUMbVxklW7KhIcZ3",
       "_key": "!actors.items!LriEa2HLPSBWS0Bf.qUMbVxklW7KhIcZ3",
+      "name": "Appearance (Unattractive)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Appearance (Unattractive)",
+          "points": -4,
+          "description": "You are unpleasant to look at by the standards of most of the galaxy. This is the mirror of Appearance (Attractive) in Chapter 4: -1 to reaction, and it applies only where you can be seen. Several species carry it as part of their racial package in Chapter 18.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": -4,
+          "fromSpecies": "Yoda's Species (Tridactyls)"
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "DUBXs5OLLc1sJAON",
+      "_key": "!actors.items!LriEa2HLPSBWS0Bf.DUBXs5OLLc1sJAON",
+      "name": "Social Stigma (Minority)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Social Stigma (Minority)",
+          "points": -10,
+          "description": "Rarely seen or understood, making socialization and trust-building more difficult.",
+          "level": null,
+          "category": "Social",
+          "baselinePoints": -10,
+          "fromSpecies": "Yoda's Species (Tridactyls)"
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "NC14OFHLSfS67RXy",
+      "_key": "!actors.items!LriEa2HLPSBWS0Bf.NC14OFHLSfS67RXy",
+      "name": "Pacifism",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Pacifism",
+          "points": -10,
+          "description": "Self-Defense Only.",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": -10,
+          "fromSpecies": "Yoda's Species (Tridactyls)"
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "4wfyMO8t97embvHb",
+      "_key": "!actors.items!LriEa2HLPSBWS0Bf.4wfyMO8t97embvHb",
       "name": "Credit Chip",
       "type": "equipment",
       "img": "icons/svg/item-bag.svg",

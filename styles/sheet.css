@@ -27,7 +27,7 @@
   height: 100%;
   min-height: 0;
 }
-/* every tab body scrolls on its own; the header and the strip stay put */
+/* the base tab layout; on the live actor sheet the ONE SCROLLER block below makes the whole window scroll instead */
 .shadowbase .sb-sheet .tab {
   flex: 1 1 auto;
   min-height: 0;
@@ -40,8 +40,8 @@
 
 /* ---- the persistent combat dashboard above the tabs (templates/actor/dashboard.hbs) ----
    Mirrors shadow-base.com, where Resource Pools / Combat State + Facing / Force Alignment
-   sit above the tabs, always visible. Fixed in the sheet's flex column (never scrolls away
-   with a tab), capped so it can never crowd the tab body out; the 1.5rem horizontal padding
+   sit above the tabs. The rules here are the base layout; on the live actor sheet the ONE
+   SCROLLER block below lets it scroll away with the header. The 1.5rem horizontal padding
    matches the tabs so the sticky section-header -0.5rem bleed lands cleanly. */
 .shadowbase .sb-sheet .sb-dashboard {
   flex: 0 0 auto;

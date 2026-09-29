@@ -5,7 +5,7 @@
 // tokens of styles/variables.css against the website's, and every var() the
 // stylesheets use.
 //
-//   1. every `:root` token of ../ShadowBase Website/src/app/globals.css exists in
+//   1. every `:root` token of the website's src/app/globals.css exists in
 //      styles/variables.css under `.shadowbase, .application.shadowbase` with the
 //      SAME name and the SAME value (the website file is read, not remembered);
 //   2. every `var(--x)` used anywhere under styles/ (comments stripped) is DEFINED in

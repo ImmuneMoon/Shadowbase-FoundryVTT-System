@@ -2,10 +2,10 @@
   "packs": {
     "advantages": {
       "type": "Item",
-      "count": 183,
+      "count": 185,
       "folders": 6,
-      "idsHash": "cc45e8914c1e15c243ee03f64c0c0d4b354ef519720926f6b95db14565e2db5e",
-      "contentHash": "40000a5a4e6587e930f8677daaa5c5db9c575aec9adea83dd761f5f0bfdb8d10"
+      "idsHash": "dade18a98aace53c071dbbdedf765fb17b19b3619288d52bc19c1acdac8285dc",
+      "contentHash": "a0c610d3131ff859fe56aff271ce8be6ad5f991236a410bf89e64c50db0fefc2"
     },
     "ammunition": {
       "type": "Item",
@@ -44,10 +44,10 @@
     },
     "blueprints": {
       "type": "Item",
-      "count": 491,
+      "count": 495,
       "folders": 56,
-      "idsHash": "acd7877b8235eb80ccd3efcc647ee4d1986824c09403e8b89386cd4d35925d6f",
-      "contentHash": "75a01d05c8ceb9e75981d7d9910409040e8fc3e8121baa6fe6bae853ef703fb7"
+      "idsHash": "2f60eb30fe4701b8c424ac03111b374938f070da3b9663272d78e99372a1a453",
+      "contentHash": "40d2fe2bdbb8a898c5371a7b880428c261795ef270aaab0cdea5331ca4e71e43"
     },
     "combat-techniques": {
       "type": "Item",
@@ -72,10 +72,10 @@
     },
     "disadvantages": {
       "type": "Item",
-      "count": 191,
+      "count": 193,
       "folders": 7,
-      "idsHash": "15a38f932962c26d5a72a17709eeca7511cff86de8dbde66178d2e156038e560",
-      "contentHash": "bbd00f072a885c2e20beea0d92455137459b2a42b5cae4926124bf366ee11c9c"
+      "idsHash": "29e0aec660300020c6fe5a0a2efb1736837ebe3d1fd9caa17b3877b423a34ee5",
+      "contentHash": "374e93bcb8863be5eab71b38ba31f929eeb04972debd3c9e7268488ee772db33"
     },
     "droid-parts": {
       "type": "Item",
@@ -86,10 +86,10 @@
     },
     "equipment": {
       "type": "Item",
-      "count": 128,
+      "count": 133,
       "folders": 30,
-      "idsHash": "4ba640bdf8131220746d7dda13eab76eeedc2179cfa308c69ac6054b20635e3e",
-      "contentHash": "7800f70cec12a90a1001a85d2762b19b5d0876ca160b29bc7f0c7b8cf5fba981"
+      "idsHash": "e77b76cb5e4d4fb88415a70cafd77e1ca61c66e8f99e07d66ce31d1119c6c532",
+      "contentHash": "33ff473a7304d3a1820751a0c466918af7a2cf6fbda40b8e6f08ab7546ae35d4"
     },
     "explosives": {
       "type": "Item",
@@ -110,7 +110,7 @@
       "count": 24,
       "folders": 0,
       "idsHash": "3e7b878031356a4ac5ca0d5ca0f43f87c796f85d60a96e143a01c1d3b132f54a",
-      "contentHash": "84c87e00079a5eb3240e2529a041166e00e3903805a18e7f724321f2d28fc48f"
+      "contentHash": "305f5f6fe56d56e3504142501fad06497fa8b0fc7b3d78b7d1ec241371a2ebfc"
     },
     "implants": {
       "type": "Item",
@@ -208,7 +208,7 @@
       "count": 65,
       "folders": 4,
       "idsHash": "5b888ac83b0a4f91343f1845dd18b9c9b66c76c34a248275fd1667200a610e3a",
-      "contentHash": "ce0ff8bb4636c6a4defc070012ffd220174f31cc71616fc6e2d840b54cf61106"
+      "contentHash": "e91c4a108f950ddfb87159c2380095a97410b3614f3ab12c3fbcd884c5c283a5"
     },
     "vehicles": {
       "type": "Item",
@@ -225,11 +225,11 @@
       "contentHash": "5c9b999cc9d53d2c35b866b86a28ad75709fbb5e7bcded3479660285478835be"
     }
   },
-  "generatedAt": "2026-09-19T10:14:20.085Z",
+  "generatedAt": "2026-09-29T00:41:00.750Z",
   "bundle": {
-    "websiteCommit": null,
-    "websiteDirty": null,
-    "bundleGeneratedAt": "2026-09-19T10:14:18.211Z",
-    "bytes": 2267056
+    "websiteCommit": "3f3072b",
+    "websiteDirty": false,
+    "bundleGeneratedAt": "2026-09-29T00:40:57.276Z",
+    "bytes": 2294866
   }
 }

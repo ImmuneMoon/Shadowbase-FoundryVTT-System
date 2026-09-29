@@ -3,7 +3,7 @@
 Status: the checklist every UI unit builds to (U05 wrote it 2026-09-10 from the
 website source; U06/U07/U08/U09 read it). The phase-1 `ui-style.md` was lost
 with the scratchpad; every figure below was read from the file it cites, not
-remembered. Paths are relative to `../ShadowBase Website/`.
+remembered. Paths are relative to the website repo root (`tools/website-path.mjs`; `../ShadowBase Website/` when this was written).
 
 Where the Foundry side adopts something the website does NOT do (angular sheet
 tabs, `<details>` accordions, Font Awesome instead of lucide), the row says so

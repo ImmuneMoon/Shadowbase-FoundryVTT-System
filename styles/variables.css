@@ -1,6 +1,6 @@
 /* styles/variables.css - the website's design tokens (docs/STYLE-SPEC.md §1).
  *
- * Every token of ../ShadowBase Website/src/app/globals.css `:root` is declared
+ * Every token of the website's src/app/globals.css `:root` is declared
  * here under `.shadowbase` and `.application.shadowbase` with the SAME name and
  * the SAME HSL triplet (check:css-tokens reads the website file and pins each
  * one; a value edited here alone fails the check). Dark is the only theme, as
@@ -97,7 +97,11 @@
   --sb-spectrum-light: hsl(213 94% 74%);
   --sb-spectrum-light-deep: hsl(217 91% 58%);
 
-  /* ---- sticky offsets the website measures at runtime (use-sticky-offset.ts); fixed here ---- */
+  /* ---- sticky offsets the website measures at runtime (use-sticky-offset.ts); fixed here ----
+     On the website the page scrolls and the tab bar sits in that same scroller, so its section headers park 2.75rem
+     down. In Foundry a sticky offset counts from the header's OWN scroller, so the default is flush (0); only the
+     actor sheet's tab bodies, which share the window's scroller with the stuck tab strip, set the strip's height
+     (styles/sheet.css ONE SCROLLER). */
   --sheet-sticky-top: 0px;
-  --sheet-section-sticky-top: 2.75rem;
+  --sheet-section-sticky-top: 0px;
 }

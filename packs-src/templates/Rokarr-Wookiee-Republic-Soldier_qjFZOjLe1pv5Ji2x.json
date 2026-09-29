@@ -39,6 +39,7 @@
     "forceAlignment": 20,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 153,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -366,7 +367,8 @@
             "jumpDistance": 0,
             "frightImmune": false,
             "moveMultiplier": 1
-          }
+          },
+          "fromSpecies": "Wookiee"
         },
         "source": "advantages"
       },
@@ -387,7 +389,8 @@
           "level": 1,
           "description": "DR 1 (Fur).",
           "category": "Cybernetic",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Wookiee"
         },
         "source": "advantages"
       },
@@ -408,7 +411,8 @@
           "description": "Bony spurs or hardened claws providing enhanced unarmed slashing and impaling damage.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Wookiee"
         },
         "source": "advantages"
       },
@@ -429,7 +433,8 @@
           "level": 1,
           "description": "Level 1",
           "category": "Physical",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Wookiee"
         },
         "source": "advantages"
       },
@@ -450,7 +455,8 @@
           "description": "You are unusually robust and healthy, granting bonuses to Endurance Point (EP) recovery and resistance to illness. Ensures you can endure long campaigns, torture, or the rigors of galactic travel, serving any master or cause.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Wookiee"
         },
         "source": "advantages"
       },
@@ -471,7 +477,8 @@
           "description": "You are unusually resistant to the effects of pain, suffering fewer penalties from injury. Allows you to endure torture or continue fighting effectively even when severely wounded, a vital trait for a survivor in a brutal war.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Wookiee"
         },
         "source": "advantages"
       },
@@ -587,7 +594,8 @@
             "jumpDistance": 0,
             "frightImmune": false,
             "moveMultiplier": 1
-          }
+          },
+          "fromSpecies": "Wookiee"
         },
         "source": "disadvantages"
       },
@@ -608,7 +616,8 @@
           "description": "You are prone to anger and easily provoked, often leading to rash decisions or confrontations.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Wookiee"
         },
         "source": "disadvantages"
       },
@@ -629,7 +638,8 @@
           "description": "Code of Honor (Wookiee) - includes the life debt owed to the human officer who freed him.",
           "level": null,
           "category": "Cultural / Background",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Wookiee"
         },
         "source": "disadvantages"
       },
@@ -650,7 +660,8 @@
           "description": "Immense stature. You stand out in any normal-sized crowd and struggle to use standard-sized facilities.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Wookiee"
         },
         "source": "disadvantages"
       },
@@ -711,7 +722,8 @@
           "name": "Roars when angered",
           "description": "Frustration or anger comes out as a full-throated Wookiee roar before it comes out as words. Impressive in a fight, inconvenient during negotiations or while hiding.",
           "points": -1,
-          "baselinePoints": -1
+          "baselinePoints": -1,
+          "fromSpecies": "Wookiee"
         },
         "source": "quirks"
       },

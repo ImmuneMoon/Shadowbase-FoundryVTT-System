@@ -39,6 +39,7 @@
     "forceAlignment": -5,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 94,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -371,7 +372,8 @@
             "jumpDistance": 0,
             "frightImmune": false,
             "moveMultiplier": 1
-          }
+          },
+          "fromSpecies": "Arkanian"
         },
         "source": "advantages"
       },
@@ -418,7 +420,8 @@
             "jumpDistance": 0,
             "frightImmune": false,
             "moveMultiplier": 1
-          }
+          },
+          "fromSpecies": "Arkanian"
         },
         "source": "advantages"
       },
@@ -439,7 +442,8 @@
           "description": "Numbers and equations come naturally to you. You gain a +2 bonus to all Mathematics rolls, and to any skill roll where the GM judges rapid mental calculation to be a significant factor (such as Astrogation-style Navigation or targeting solutions).",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Arkanian"
         },
         "source": "advantages"
       },
@@ -460,7 +464,8 @@
           "level": 1,
           "description": "+1 to reactions.",
           "category": "Social/Wealth",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Arkanian"
         },
         "source": "advantages"
       },
@@ -565,7 +570,8 @@
           "description": "The character believes themselves to be more capable or resilient than they truly are, leading them to take unnecessary risks. This hubris can be easily exploited by cunning opponents who set up situations designed to highlight your flaws.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Arkanian"
         },
         "source": "disadvantages"
       },
@@ -607,7 +613,8 @@
           "description": "You find it difficult to lie or omit facts, even when it might be beneficial. This makes you transparent and potentially exploitable in negotiations or when dealing with deceitful adversaries.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Arkanian"
         },
         "source": "disadvantages"
       },
@@ -628,7 +635,8 @@
           "description": "Solid white eyes that mark you out in a crowd.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Arkanian"
         },
         "source": "disadvantages"
       },

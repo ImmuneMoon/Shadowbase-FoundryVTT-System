@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Quarren"
         },
         "source": "advantages"
       },
@@ -380,7 +382,8 @@
           "description": "Graceful in water. You move naturally and comfortably in aquatic environments.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 10
+          "baselinePoints": 10,
+          "fromSpecies": "Quarren"
         },
         "source": "advantages"
       },
@@ -401,7 +404,8 @@
           "description": "Breathe underwater using gills. Allows you to survive indefinitely in aquatic environments without air.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 20
+          "baselinePoints": 20,
+          "fromSpecies": "Quarren"
         },
         "source": "advantages"
       },
@@ -422,7 +426,8 @@
           "level": 1,
           "description": "DR 1",
           "category": "Cybernetic",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Quarren"
         },
         "source": "advantages"
       },
@@ -443,7 +448,8 @@
           "description": "You are prone to anger and easily provoked, often leading to rash decisions or confrontations.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Quarren"
         },
         "source": "disadvantages"
       },
@@ -464,7 +470,8 @@
           "description": "Distrust of land-livers. You harbor a cultural or personal prejudice against those who live on the surface of planets.",
           "level": null,
           "category": "Cultural / Background",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Quarren"
         },
         "source": "disadvantages"
       },
@@ -485,7 +492,8 @@
           "description": "The character is unusually resistant to changing their mind or admitting they are wrong, even in the face of overwhelming evidence. This can lead to missed opportunities or continued pursuit of flawed plans despite clear warning signs.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Quarren"
         },
         "source": "disadvantages"
       },
@@ -495,6 +503,28 @@
     {
       "_id": "TpuCHRwdPe6xQcwL",
       "_key": "!actors.items!S5pVEi7rld357Vaw.TpuCHRwdPe6xQcwL",
+      "name": "Appearance (Unattractive)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Appearance (Unattractive)",
+          "points": -4,
+          "description": "You are unpleasant to look at by the standards of most of the galaxy. This is the mirror of Appearance (Attractive) in Chapter 4: -1 to reaction, and it applies only where you can be seen. Several species carry it as part of their racial package in Chapter 18.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": -4,
+          "fromSpecies": "Quarren"
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "yRW6kItJIOYV5xsg",
+      "_key": "!actors.items!S5pVEi7rld357Vaw.yRW6kItJIOYV5xsg",
       "name": "Credit Chip",
       "type": "equipment",
       "img": "icons/svg/item-bag.svg",

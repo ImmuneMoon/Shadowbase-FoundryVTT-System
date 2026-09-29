@@ -4,7 +4,7 @@
 // SUBJECT: the character JSON boundary (docs/ARCHITECTURE.md §9 "json-contract",
 // §6.1 Import / Export): module/import-export.mjs over the data layer's
 // ShadowBaseActor#importSheet / #exportSheet, against the website's own
-// contract, ../ShadowBase Website/docs/CHARACTER_JSON_FORMAT.md.
+// contract, the website's docs/CHARACTER_JSON_FORMAT.md.
 //
 // Pinned:
 //   - every key the contract doc quotes (`"key"` in its section-2 tables and

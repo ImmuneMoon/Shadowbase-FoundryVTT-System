@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 20,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -332,7 +333,8 @@
           "description": "Versatility grants Humans 20 bonus Character Points to spend on anything (attributes, secondary characteristics, skills, or advantages), representing human adaptability. These points are granted free as part of the Human racial package. Humans are equally capable of soaring heroism or profound villainy, able to master any skill or ideology.",
           "level": null,
           "category": "Racial",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Human"
         },
         "source": "advantages"
       },

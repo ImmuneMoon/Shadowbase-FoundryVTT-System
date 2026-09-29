@@ -199,7 +199,7 @@ ok('renderInline == build-handbook-pack inline over every heading/paragraph/list
 // The corpus carries no single-asterisk italics, so the italic branch needs its own probe (with the escaping the tool applies first).
 const INLINE_PROBES = ['plain', 'a **bold** run-in', 'an *italic* word', '**bold** & *italic* <both>', 'a * lone asterisk', '**Label:** text with "quotes"'];
 ok('renderInline == build-handbook-pack inline on the bold / italic / escaping probes', INLINE_PROBES.every((p) => hbMod.renderInline(p) === tool.inline(p)), INLINE_PROBES.filter((p) => hbMod.renderInline(p) !== tool.inline(p)).join(' | '));
-ok('renderTable == build-handbook-pack renderTable over every table (278)', tablesBad === 0 && tablesChecked >= 270, `${tablesBad} of ${tablesChecked} differ`);
+ok('renderTable == build-handbook-pack renderTable over every table (279)', tablesBad === 0 && tablesChecked >= 270, `${tablesBad} of ${tablesChecked} differ`);
 ok('renderSections resolves a table marker to the sidecar table and skips headings', (() => {
   const ch = JSON.parse(readFileSync(join(ROOT, 'handbook', 'ch07-combat.json'), 'utf8'));
   const byId = new Map(ch.tables.map((t) => [t.id, t]));

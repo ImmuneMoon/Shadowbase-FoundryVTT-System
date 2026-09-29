@@ -38,10 +38,10 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { existsSync, readFileSync, statSync, readdirSync } from 'node:fs';
 import { webcrypto } from 'node:crypto';
+import { WEB } from '../tools/website-path.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(HERE, '..');
-const WEB = resolve(process.env.SHADOWBASE_WEBSITE ?? join(ROOT, '..', 'ShadowBase Website'));
 const ENGINE = resolve(process.env.ENGINE_BUNDLE ?? join(ROOT, 'engine', 'shadowbase-engine.mjs'));
 const BUILD_INFO = join(dirname(ENGINE), 'BUILD-INFO.json');
 if (!globalThis.crypto) Object.defineProperty(globalThis, 'crypto', { value: webcrypto, configurable: true });
@@ -89,10 +89,12 @@ ok('bundle is newer than every website source file (stale build)', bundleMtime >
 const ENTRY = join(ROOT, 'tools', 'engine-entry.ts');
 if (existsSync(BUILD_INFO)) {
   const info = JSON.parse(readFileSync(BUILD_INFO, 'utf8'));
-  ok('BUILD-INFO names the website path', typeof info.website === 'string');
+  // BUILD-INFO is tracked: a machine's absolute path (a drive letter or a leading slash) must never be written into it.
+  const machinePath = (p) => typeof p === 'string' && (/^[A-Za-z]:[\\/]/.test(p) || p.startsWith('/') || p.startsWith('\\'));
+  ok('BUILD-INFO names the website (its repository, never a machine path)', typeof info.website === 'string' && !machinePath(info.website), info.website);
   ok('BUILD-INFO records the package allow-list only', (info.packages ?? []).every((p) => ['zod', 'clsx', 'tailwind-merge'].includes(p)), `packages: ${(info.packages ?? []).join(', ')}`);
   // The entry: this repo's tools/engine-entry.ts, not a variant (review m9).
-  ok('BUILD-INFO.entry resolves to tools/engine-entry.ts (not a scratchpad / variant entry)', typeof info.entry === 'string' && resolve(info.entry) === resolve(ENTRY), `entry: ${info.entry}`);
+  ok('BUILD-INFO.entry resolves to tools/engine-entry.ts (not a scratchpad / variant entry)', typeof info.entry === 'string' && !machinePath(info.entry) && resolve(ROOT, info.entry) === resolve(ENTRY), `entry: ${info.entry}`);
   const entryExportsNow = (readFileSync(ENTRY, 'utf8').match(/^export /gm) ?? []).length;
   ok(`BUILD-INFO.entryExports (${info.entryExports}) equals the export count of tools/engine-entry.ts today (${entryExportsNow}) - an edited entry needs a rebuild`, info.entryExports === entryExportsNow);
   ok('the bundle is newer than tools/engine-entry.ts', bundleMtime >= statSync(ENTRY).mtimeMs, `bundle ${new Date(bundleMtime).toISOString()} < entry ${new Date(statSync(ENTRY).mtimeMs).toISOString()} - run npm run build:engine`);

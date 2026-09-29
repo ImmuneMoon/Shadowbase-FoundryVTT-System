@@ -133,6 +133,8 @@ export * as creditTracking from '@/lib/credit-tracking';
 export * as equippedDiscount from '@/lib/equipped-discount';
 export * as shieldRules from '@/lib/shield-rules';
 export * as speciesSwap from '@/lib/species-swap';
+// SPECIES_PACKAGE_REVISION: the gate module/world-update.mjs compares a world actor against (2026-09-28).
+export * as speciesPackageRevision from '@/lib/species-package-revision';
 export * as missingSkills from '@/lib/missing-skills';
 export * as learningGates from '@/lib/learning-gates';
 export * as customTiers from '@/lib/custom-tiers';

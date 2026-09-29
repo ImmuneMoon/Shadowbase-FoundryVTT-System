@@ -11,7 +11,7 @@
 //   node tools/fold-i18n-requests.mjs            # fold and rewrite both files
 //   node tools/fold-i18n-requests.mjs --dry-run  # report only
 
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -35,6 +35,8 @@ export function mergeKeys(target, source, path = '', stats = { added: 0, kept: 0
 
 export function foldRequests({ dryRun = DRY, date = new Date().toISOString().slice(0, 10) } = {}) {
   const en = JSON.parse(readFileSync(enPath, 'utf8'));
+  // docs/REQUESTS.md is a local working file (gitignored since 2026-09-28): a checkout without it has nothing to fold.
+  if (!existsSync(reqPath)) return { folded: [], added: 0, kept: 0, conflicts: [] };
   let requests = readFileSync(reqPath, 'utf8');
   const stats = { added: 0, kept: 0, conflicts: [] };
   const folded = [];

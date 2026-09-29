@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Arkanian"
         },
         "source": "advantages"
       },
@@ -407,7 +409,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Arkanian"
         },
         "source": "advantages"
       },
@@ -428,7 +431,8 @@
           "description": "Numbers and equations come naturally to you. You gain a +2 bonus to all Mathematics rolls, and to any skill roll where the GM judges rapid mental calculation to be a significant factor (such as Astrogation-style Navigation or targeting solutions).",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 10
+          "baselinePoints": 10,
+          "fromSpecies": "Arkanian"
         },
         "source": "advantages"
       },
@@ -449,7 +453,8 @@
           "level": 1,
           "description": "+1 to reactions.",
           "category": "Social/Wealth",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Arkanian"
         },
         "source": "advantages"
       },
@@ -470,7 +475,8 @@
           "description": "The character believes themselves to be more capable or resilient than they truly are, leading them to take unnecessary risks. This hubris can be easily exploited by cunning opponents who set up situations designed to highlight your flaws.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Arkanian"
         },
         "source": "disadvantages"
       },
@@ -480,18 +486,19 @@
     {
       "_id": "3DMJskNiNt1eHrJ2",
       "_key": "!actors.items!7vVZDRRYQYgs34yt.3DMJskNiNt1eHrJ2",
-      "name": "Curiosity",
+      "name": "Truthfulness",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
       "sort": 200000,
       "system": {
         "row": {
-          "name": "Curiosity",
+          "name": "Truthfulness",
           "points": -5,
-          "description": "The character has an uncontrollable urge to investigate mysteries or novelties, often leading them into dangerous situations that can be set up by adversaries. Severity varies by points (-5 to -15 points).",
+          "description": "You find it difficult to lie or omit facts, even when it might be beneficial. This makes you transparent and potentially exploitable in negotiations or when dealing with deceitful adversaries.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Arkanian"
         },
         "source": "disadvantages"
       },
@@ -501,18 +508,19 @@
     {
       "_id": "6puMwDi65iQ2WBod",
       "_key": "!actors.items!7vVZDRRYQYgs34yt.6puMwDi65iQ2WBod",
-      "name": "Truthfulness",
+      "name": "Distinctive Features (White Eyes)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
       "sort": 300000,
       "system": {
         "row": {
-          "name": "Truthfulness",
-          "points": -5,
-          "description": "You find it difficult to lie or omit facts, even when it might be beneficial. This makes you transparent and potentially exploitable in negotiations or when dealing with deceitful adversaries.",
+          "name": "Distinctive Features (White Eyes)",
+          "points": -1,
+          "description": "Solid white eyes that mark you out in a crowd.",
           "level": null,
-          "category": "Mental",
-          "baselinePoints": -5
+          "category": "Physical",
+          "baselinePoints": -1,
+          "fromSpecies": "Arkanian"
         },
         "source": "disadvantages"
       },
@@ -522,20 +530,19 @@
     {
       "_id": "9kUO9JIL78Esa41F",
       "_key": "!actors.items!7vVZDRRYQYgs34yt.9kUO9JIL78Esa41F",
-      "name": "Distinctive Features (White Eyes)",
-      "type": "disadvantage",
-      "img": "icons/svg/downgrade.svg",
-      "sort": 400000,
+      "name": "Curious",
+      "type": "quirk",
+      "img": "icons/svg/aura.svg",
+      "sort": 100000,
       "system": {
         "row": {
-          "name": "Distinctive Features (White Eyes)",
+          "name": "Curious",
+          "description": "You have a strong desire to know things, sometimes to your detriment. You might poke your nose into places it doesn't belong or ask too many questions.",
           "points": -1,
-          "description": "Solid white eyes that mark you out in a crowd.",
-          "level": null,
-          "category": "Physical",
-          "baselinePoints": -1
+          "baselinePoints": -1,
+          "fromSpecies": "Arkanian"
         },
-        "source": "disadvantages"
+        "source": "quirks"
       },
       "effects": [],
       "flags": {}

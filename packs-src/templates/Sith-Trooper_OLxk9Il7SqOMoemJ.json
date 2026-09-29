@@ -39,6 +39,7 @@
     "forceAlignment": -10,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -379,7 +380,7 @@
         "row": {
           "name": "Fanaticism",
           "points": -15,
-          "description": "Devotion to Empire."
+          "description": "Devotion to the Sith Empire."
         },
         "source": "disadvantages"
       },

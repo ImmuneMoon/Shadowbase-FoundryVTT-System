@@ -35,10 +35,11 @@
     "darkSidePoints": 0,
     "trackDigital": false,
     "trackPhysical": false,
-    "totalCredits": 1900,
+    "totalCredits": 7000,
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -360,7 +361,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Jawa"
         },
         "source": "advantages"
       },
@@ -408,7 +410,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Jawa"
         },
         "source": "advantages"
       },
@@ -429,7 +432,8 @@
           "level": 5,
           "description": "Level 5",
           "category": "Physical",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Jawa"
         },
         "source": "advantages"
       },
@@ -439,18 +443,19 @@
     {
       "_id": "iOiXUwRF1petn7zK",
       "_key": "!actors.items!3gteeJMOPs0gGkV2.iOiXUwRF1petn7zK",
-      "name": "High Manual Dexterity",
+      "name": "Resistant",
       "type": "advantage",
       "img": "icons/svg/upgrade.svg",
       "sort": 400000,
       "system": {
         "row": {
-          "name": "High Manual Dexterity",
+          "name": "Resistant",
           "points": 5,
           "level": 1,
-          "description": "+1 to tasks requiring fine motor skills.",
+          "description": "Disease: +3 to resist.",
           "category": "Physical",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Jawa"
         },
         "source": "advantages"
       },
@@ -460,6 +465,28 @@
     {
       "_id": "SQdqwldWb0OZXRVG",
       "_key": "!actors.items!3gteeJMOPs0gGkV2.SQdqwldWb0OZXRVG",
+      "name": "High Manual Dexterity",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "High Manual Dexterity",
+          "points": 5,
+          "level": 1,
+          "description": "+1 to tasks requiring fine motor skills.",
+          "category": "Physical",
+          "baselinePoints": 5,
+          "fromSpecies": "Jawa"
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "XRFifXXfjHT6w7Tx",
+      "_key": "!actors.items!3gteeJMOPs0gGkV2.XRFifXXfjHT6w7Tx",
       "name": "ST -2 (Racial)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -498,7 +525,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Jawa"
         },
         "source": "disadvantages"
       },
@@ -506,8 +534,8 @@
       "flags": {}
     },
     {
-      "_id": "XRFifXXfjHT6w7Tx",
-      "_key": "!actors.items!3gteeJMOPs0gGkV2.XRFifXXfjHT6w7Tx",
+      "_id": "1n8y1aANB50jfgB5",
+      "_key": "!actors.items!3gteeJMOPs0gGkV2.1n8y1aANB50jfgB5",
       "name": "Social Stigma (Scavenger)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -519,28 +547,8 @@
           "description": "Viewed with suspicion and often assumed to be a thief or drifter.",
           "level": null,
           "category": "Social",
-          "baselinePoints": -10
-        },
-        "source": "disadvantages"
-      },
-      "effects": [],
-      "flags": {}
-    },
-    {
-      "_id": "1n8y1aANB50jfgB5",
-      "_key": "!actors.items!3gteeJMOPs0gGkV2.1n8y1aANB50jfgB5",
-      "name": "Wealth (Lower)",
-      "type": "disadvantage",
-      "img": "icons/svg/downgrade.svg",
-      "sort": 300000,
-      "system": {
-        "row": {
-          "name": "Wealth (Lower)",
-          "points": -10,
-          "level": 1,
-          "description": "Struggling: 1,900 CR, Status -1",
-          "category": "Social",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Jawa"
         },
         "source": "disadvantages"
       },
@@ -550,6 +558,28 @@
     {
       "_id": "i57KRgvld8Oer0xE",
       "_key": "!actors.items!3gteeJMOPs0gGkV2.i57KRgvld8Oer0xE",
+      "name": "Appearance (Unattractive)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Appearance (Unattractive)",
+          "points": -4,
+          "description": "You are unpleasant to look at by the standards of most of the galaxy. This is the mirror of Appearance (Attractive) in Chapter 4: -1 to reaction, and it applies only where you can be seen. Several species carry it as part of their racial package in Chapter 18.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": -4,
+          "fromSpecies": "Jawa"
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "5zkgpLPdmIdv6ohy",
+      "_key": "!actors.items!3gteeJMOPs0gGkV2.5zkgpLPdmIdv6ohy",
       "name": "Obsessive about trading/tech",
       "type": "quirk",
       "img": "icons/svg/aura.svg",
@@ -559,7 +589,8 @@
           "name": "Obsessive about trading/tech",
           "description": "You have an intense, almost unhealthy focus on acquiring, modifying, or discussing technology and trade deals.",
           "points": -1,
-          "baselinePoints": -1
+          "baselinePoints": -1,
+          "fromSpecies": "Jawa"
         },
         "source": "quirks"
       },
@@ -567,8 +598,8 @@
       "flags": {}
     },
     {
-      "_id": "5zkgpLPdmIdv6ohy",
-      "_key": "!actors.items!3gteeJMOPs0gGkV2.5zkgpLPdmIdv6ohy",
+      "_id": "txDP4DL4kOpp9Hsp",
+      "_key": "!actors.items!3gteeJMOPs0gGkV2.txDP4DL4kOpp9Hsp",
       "name": "Credit Chip",
       "type": "equipment",
       "img": "icons/svg/item-bag.svg",

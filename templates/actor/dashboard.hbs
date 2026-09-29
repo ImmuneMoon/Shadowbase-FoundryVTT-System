@@ -140,7 +140,7 @@
               <p class="sb-alignment__tiny">{{localize "SHADOWBASE.Sheet.Align.ReactionWhat"}}</p>
               {{#if info.alignment.reaction.hasSources}}<p class="sb-alignment__note"><span class="sb-text-muted">{{localize "SHADOWBASE.Sheet.Align.From"}} </span>{{info.alignment.reaction.sources}}</p>{{/if}}
               {{#each info.alignment.reaction.spheres}}<p class="sb-alignment__note">{{localize "SHADOWBASE.Sheet.Align.Within"}} <b>{{name}}</b>: {{net}}</p>{{/each}}
-              {{#if info.alignment.reaction.perception}}<p class="sb-alignment__note">{{localize "SHADOWBASE.Sheet.Align.Perception" heard=info.alignment.reaction.heardOnly seen=info.alignment.reaction.seenOnly}}</p>{{/if}}
+              {{#if info.alignment.reaction.perception}}<p class="sb-alignment__note">{{localize "SHADOWBASE.Sheet.Align.Perception" comlink=info.alignment.reaction.overComlink writing=info.alignment.reaction.inWriting}}</p>{{/if}}
               {{#if info.alignment.reaction.hasUnresolved}}<p class="sb-alignment__note sb-alignment__note--italic">{{localize "SHADOWBASE.Sheet.Align.NotCounted" list=info.alignment.reaction.unresolved}}</p>{{/if}}
               <p class="sb-alignment__tiny sb-italic">{{localize "SHADOWBASE.Sheet.Align.NotApplied"}}</p>
             </div>

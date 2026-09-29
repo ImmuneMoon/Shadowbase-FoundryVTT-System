@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Nautolan"
         },
         "source": "advantages"
       },
@@ -380,7 +382,8 @@
           "description": "Graceful in water. You move naturally and comfortably in aquatic environments.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 10
+          "baselinePoints": 10,
+          "fromSpecies": "Nautolan"
         },
         "source": "advantages"
       },
@@ -401,7 +404,8 @@
           "description": "Breathe underwater using gills. Allows you to survive indefinitely in aquatic environments without air.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 20
+          "baselinePoints": 20,
+          "fromSpecies": "Nautolan"
         },
         "source": "advantages"
       },
@@ -422,7 +426,8 @@
           "description": "You have a 360-degree field of vision, making it impossible to surprise you from behind. This is common for species with eyestalks or unusual eye placement.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 15
+          "baselinePoints": 15,
+          "fromSpecies": "Nautolan"
         },
         "source": "advantages"
       },
@@ -443,7 +448,8 @@
           "description": "Allows you to sense emotional changes in others through scent and pheromones.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Nautolan"
         },
         "source": "advantages"
       },
@@ -464,7 +470,8 @@
           "description": "Requires regular immersion in water.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Nautolan"
         },
         "source": "disadvantages"
       },
@@ -474,6 +481,28 @@
     {
       "_id": "6x3Jk0k9rWlWCa9J",
       "_key": "!actors.items!kvZgrt9MaVbraF8y.6x3Jk0k9rWlWCa9J",
+      "name": "Appearance (Unattractive)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Appearance (Unattractive)",
+          "points": -4,
+          "description": "Unattractive to standard humanoids due to large black eyes.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": -4,
+          "fromSpecies": "Nautolan"
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "rGBCk8Q8qZ8EWrEF",
+      "_key": "!actors.items!kvZgrt9MaVbraF8y.rGBCk8Q8qZ8EWrEF",
       "name": "Credit Chip",
       "type": "equipment",
       "img": "icons/svg/item-bag.svg",

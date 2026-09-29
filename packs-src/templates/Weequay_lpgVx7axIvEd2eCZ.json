@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Weequay"
         },
         "source": "advantages"
       },
@@ -407,7 +409,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Weequay"
         },
         "source": "advantages"
       },
@@ -428,7 +431,8 @@
           "level": 1,
           "description": "DR 1",
           "category": "Cybernetic",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Weequay"
         },
         "source": "advantages"
       },
@@ -449,7 +453,8 @@
           "description": "You are unusually resistant to the effects of pain, suffering fewer penalties from injury. Allows you to endure torture or continue fighting effectively even when severely wounded, a vital trait for a survivor in a brutal war.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 10
+          "baselinePoints": 10,
+          "fromSpecies": "Weequay"
         },
         "source": "advantages"
       },
@@ -459,20 +464,21 @@
     {
       "_id": "m7CAwtBUGVRxdZMf",
       "_key": "!actors.items!lpgVx7axIvEd2eCZ.m7CAwtBUGVRxdZMf",
-      "name": "Vow",
-      "type": "disadvantage",
-      "img": "icons/svg/downgrade.svg",
-      "sort": 100000,
+      "name": "Telecommunication (Smell/Taste)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
       "system": {
         "row": {
-          "name": "Vow",
-          "points": -5,
-          "description": "Obey the Quay (clan spiritual authority).",
+          "name": "Telecommunication (Smell/Taste)",
+          "points": 0,
+          "description": "Weequays communicate complex ideas silently among their own kind using specialized pheromones. It reaches only other Weequays, and no other species can read it. This is a racial trait and does not cost Character Points.",
           "level": null,
-          "category": "Social",
-          "baselinePoints": -5
+          "category": "Racial",
+          "baselinePoints": 0,
+          "fromSpecies": "Weequay"
         },
-        "source": "disadvantages"
+        "source": "advantages"
       },
       "effects": [],
       "flags": {}
@@ -480,6 +486,72 @@
     {
       "_id": "yE3ivlMrZTGbWBRd",
       "_key": "!actors.items!lpgVx7axIvEd2eCZ.yE3ivlMrZTGbWBRd",
+      "name": "Appearance (Unattractive)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 100000,
+      "system": {
+        "row": {
+          "name": "Appearance (Unattractive)",
+          "points": -4,
+          "description": "You are unpleasant to look at by the standards of most of the galaxy. This is the mirror of Appearance (Attractive) in Chapter 4: -1 to reaction, and it applies only where you can be seen. Several species carry it as part of their racial package in Chapter 18.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": -4,
+          "fromSpecies": "Weequay"
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "WaXWN1qZCs4fDxdJ",
+      "_key": "!actors.items!lpgVx7axIvEd2eCZ.WaXWN1qZCs4fDxdJ",
+      "name": "Stubbornness",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Stubbornness",
+          "points": -5,
+          "description": "The character is unusually resistant to changing their mind or admitting they are wrong, even in the face of overwhelming evidence. This can lead to missed opportunities or continued pursuit of flawed plans despite clear warning signs.",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": -5,
+          "fromSpecies": "Weequay"
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "N9YpiN3KBqvaiSUg",
+      "_key": "!actors.items!lpgVx7axIvEd2eCZ.N9YpiN3KBqvaiSUg",
+      "name": "Vow",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Vow",
+          "points": -5,
+          "description": "Obey the Quay (clan spiritual authority).",
+          "level": null,
+          "category": "Social",
+          "baselinePoints": -5,
+          "fromSpecies": "Weequay"
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "DCWT4CGTuoTWdurI",
+      "_key": "!actors.items!lpgVx7axIvEd2eCZ.DCWT4CGTuoTWdurI",
       "name": "Credit Chip",
       "type": "equipment",
       "img": "icons/svg/item-bag.svg",

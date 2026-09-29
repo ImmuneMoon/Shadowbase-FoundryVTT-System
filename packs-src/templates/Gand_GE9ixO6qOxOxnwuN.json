@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Gand"
         },
         "source": "advantages"
       },
@@ -407,7 +409,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Gand"
         },
         "source": "advantages"
       },
@@ -428,7 +431,8 @@
           "level": 2,
           "description": "DR 2",
           "category": "Cybernetic",
-          "baselinePoints": 10
+          "baselinePoints": 10,
+          "fromSpecies": "Gand"
         },
         "source": "advantages"
       },
@@ -438,18 +442,19 @@
     {
       "_id": "pB2Gduvn0pAL9UEt",
       "_key": "!actors.items!GE9ixO6qOxOxnwuN.pB2Gduvn0pAL9UEt",
-      "name": "Infravision",
+      "name": "Less Sleep",
       "type": "advantage",
       "img": "icons/svg/upgrade.svg",
       "sort": 400000,
       "system": {
         "row": {
-          "name": "Infravision",
-          "points": 10,
-          "description": "See heat signatures. Natural biological thermal sight.",
-          "level": null,
+          "name": "Less Sleep",
+          "points": 4,
+          "level": 2,
+          "description": "Two hours less sleep per day.",
           "category": "Physical",
-          "baselinePoints": 10
+          "baselinePoints": 4,
+          "fromSpecies": "Gand"
         },
         "source": "advantages"
       },
@@ -459,6 +464,28 @@
     {
       "_id": "X4StHnzp22Hc9go8",
       "_key": "!actors.items!GE9ixO6qOxOxnwuN.X4StHnzp22Hc9go8",
+      "name": "Infravision",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Infravision",
+          "points": 10,
+          "description": "See heat signatures. Natural biological thermal sight.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": 10,
+          "fromSpecies": "Gand"
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "tObR5DVI9SCrNWFr",
+      "_key": "!actors.items!GE9ixO6qOxOxnwuN.tObR5DVI9SCrNWFr",
       "name": "Dependency (Ammonia)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -470,7 +497,8 @@
           "description": "Requires breather mask in oxygen. Your biology needs a specific gas mixture to survive outside of your native environment.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Gand"
         },
         "source": "disadvantages"
       },
@@ -478,8 +506,8 @@
       "flags": {}
     },
     {
-      "_id": "tObR5DVI9SCrNWFr",
-      "_key": "!actors.items!GE9ixO6qOxOxnwuN.tObR5DVI9SCrNWFr",
+      "_id": "aIyB9UoiPGZUGavK",
+      "_key": "!actors.items!GE9ixO6qOxOxnwuN.aIyB9UoiPGZUGavK",
       "name": "Odious Personal Habit (Refers to self in third person)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -491,7 +519,8 @@
           "description": "Cultural naming rite or personal quirk that annoys others in standard conversation.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Gand"
         },
         "source": "disadvantages"
       },
@@ -499,8 +528,8 @@
       "flags": {}
     },
     {
-      "_id": "aIyB9UoiPGZUGavK",
-      "_key": "!actors.items!GE9ixO6qOxOxnwuN.aIyB9UoiPGZUGavK",
+      "_id": "kqVskyFmXBXpV92X",
+      "_key": "!actors.items!GE9ixO6qOxOxnwuN.kqVskyFmXBXpV92X",
       "name": "Credit Chip",
       "type": "equipment",
       "img": "icons/svg/item-bag.svg",

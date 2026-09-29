@@ -39,6 +39,7 @@
     "forceAlignment": 45,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 140,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -342,10 +343,11 @@
         "row": {
           "name": "Danger Sense",
           "points": 0,
-          "description": "You possess an instinctive ability to detect impending threats or danger. The GM will secretly roll against your Perception in situations involving ambushes, disasters, or similar hazards. On a success, you receive enough warning to take action. A roll of 3 or 4 provides additional detail about the danger. This early warning system primarily serves self-preservation, allowing you to react quickly whether to save allies or simply escape a trap. (Refer to GURPS Basic Set: Characters for full details.) Note: While a general advantage, for Force-sensitives, this often manifests as a subtle Force premonition. Prerequisite: Force Sensitive (if taken as a Force-related advantage, representing a Force-user's sensitivity to danger through the Force).",
+          "description": "You possess an instinctive ability to detect impending threats or danger. The GM will secretly roll against your Perception in situations involving ambushes, disasters, or similar hazards. On a success, you receive enough warning to take action. A roll of 3 or 4 provides additional detail about the danger. This early warning system primarily serves self-preservation, allowing you to react quickly whether to save allies or simply escape a trap. (See Chapter 4: Advantages in the handbook for full details.) Note: While a general advantage, for Force-sensitives, this often manifests as a subtle Force premonition. Prerequisite: Force Sensitive (if taken as a Force-related advantage, representing a Force-user's sensitivity to danger through the Force).",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Miraluka"
         },
         "source": "advantages"
       },
@@ -366,7 +368,8 @@
           "description": "Miraluka's intrinsic connection to the Force grants them an exceptional ability to perceive, analyze, and interact with energy fields. When a Miraluka character attempts a skill check to perceive, analyze, or interact with an energy field, their Field Detection ability grants them a significant mechanical advantage. Grant a +3 to +5 bonus to the Miraluka's relevant skill roll (e.g., Perception, Electronics Operation, Energy Weapon (Beam), or a specialized Force-related skill) when they are actively using Field Detection in an appropriate scenario. The specific bonus can be adjusted by the GM based on the complexity of the task or the Miraluka's Force sensitivity. This ability makes them expert saboteurs, security bypassers, or mechanics, capable of manipulating energy systems for various ends. Cost range: 5 points (Basic).",
           "level": null,
           "category": "Racial",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Miraluka"
         },
         "source": "advantages"
       },
@@ -387,7 +390,8 @@
           "description": "Some species are naturally attuned to the Force.",
           "level": null,
           "category": "Racial",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Miraluka"
         },
         "source": "advantages"
       },
@@ -408,7 +412,8 @@
           "description": "Miraluka do not perceive light, but instead \"see\" via their connection to the Force. This unique form of perception allows them to bypass many conventional visual obstructions such as darkness, smoke, and even some non-Force-resistant solid objects at close range (at the GM's discretion, based on the Miraluka's Force sensitivity). Effect for Miraluka: Miraluka characters possess an inherent and passive form of Force Sight as a racial trait. They always perceive the world through the Force and intrinsically possess 360-degree vision. For Miraluka, using their Force Sight does not cost Force Points (FP). Purchasing levels in the Force Sight Power (as detailed in Chapter 8: Force Powers) for a Miraluka primarily enhances the range and specific Force-related perceptive abilities of their natural Force Sight, rather than granting the basic ability to \"see\" through the Force. This unique vision allows for unparalleled situational awareness, making them superb scouts, spies, or tactical commanders, regardless of loyalty.",
           "level": null,
           "category": "Racial",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Miraluka"
         },
         "source": "advantages"
       },
@@ -456,7 +461,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Miraluka"
         },
         "source": "advantages"
       },
@@ -540,7 +546,8 @@
           "description": "While Miraluka do not possess physical eyes and perceive the world through the Force, they are still considered \"blind\" in the conventional sense. This means they cannot see by means of light. They rely entirely on their Force Sight for perception. In areas where the Force is significantly diminished or nullified (e.g., a ysalimiri void), a Miraluka would be truly blind and severely impaired, relying on other senses or technological aids. This is typically a 0-point racial disadvantage because their Force Sight largely compensates for it, but the vulnerability remains.",
           "level": null,
           "category": "Racial",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Miraluka"
         },
         "source": "disadvantages"
       },
@@ -867,7 +874,8 @@
           "characterTier": "Apprentice",
           "requirements": "Required Advantage: Force Sight (Miraluka Specialized Vision)",
           "effect": "You can perceive the world through the Force in 360 vision, bypassing blindness, illusions, and normal darkness within 50 feet.",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Miraluka"
         },
         "source": "forcePowers"
       },

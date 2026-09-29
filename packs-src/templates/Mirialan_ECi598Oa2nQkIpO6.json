@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Mirialan"
         },
         "source": "advantages"
       },
@@ -380,7 +382,8 @@
           "description": "Inherent wisdom. The GM will warn you if you are about to do something foolish or dangerous. Helps you avoid unnecessary risks, allowing for more calculated and effective strategic decisions in morally complex situations.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 10
+          "baselinePoints": 10,
+          "fromSpecies": "Mirialan"
         },
         "source": "advantages"
       },
@@ -401,7 +404,8 @@
           "description": "You are unusually robust and healthy, granting bonuses to Endurance Point (EP) recovery and resistance to illness. Ensures you can endure long campaigns, torture, or the rigors of galactic travel, serving any master or cause.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Mirialan"
         },
         "source": "advantages"
       },
@@ -422,7 +426,8 @@
           "description": "You quickly learn and adapt to new cultures and social norms, reducing penalties for cultural unfamiliarity. Essential for operating undercover, navigating diverse alliances, or exploiting cultural nuances for personal or factional gain.",
           "level": null,
           "category": "Social/Wealth",
-          "baselinePoints": 10
+          "baselinePoints": 10,
+          "fromSpecies": "Mirialan"
         },
         "source": "advantages"
       },
@@ -432,18 +437,19 @@
     {
       "_id": "uxxMSfouoOehZ4Gy",
       "_key": "!actors.items!ECi598Oa2nQkIpO6.uxxMSfouoOehZ4Gy",
-      "name": "Disciplines of Faith (Ritualism)",
+      "name": "Vow",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
       "sort": 100000,
       "system": {
         "row": {
-          "name": "Disciplines of Faith (Ritualism)",
+          "name": "Vow",
           "points": -5,
-          "description": "Spiritual observations. You are bound by strict daily rituals or religious observations that take time and focus.",
+          "description": "Ritual Observance.",
           "level": null,
-          "category": "Mental",
-          "baselinePoints": -5
+          "category": "Social",
+          "baselinePoints": -5,
+          "fromSpecies": "Mirialan"
         },
         "source": "disadvantages"
       },
@@ -464,7 +470,8 @@
           "description": "You feel a strong obligation to members of a race.",
           "level": null,
           "category": "Social",
-          "baselinePoints": -20
+          "baselinePoints": -20,
+          "fromSpecies": "Mirialan"
         },
         "source": "disadvantages"
       },
@@ -485,7 +492,8 @@
           "description": "You find it difficult to lie or omit facts, even when it might be beneficial. This makes you transparent and potentially exploitable in negotiations or when dealing with deceitful adversaries.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Mirialan"
         },
         "source": "disadvantages"
       },
@@ -506,7 +514,8 @@
           "description": "Indicators of achievement or cultural belonging that make you easily identifiable.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": -1
+          "baselinePoints": -1,
+          "fromSpecies": "Mirialan"
         },
         "source": "disadvantages"
       },

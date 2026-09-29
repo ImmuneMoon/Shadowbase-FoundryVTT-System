@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T09:02:30.342Z",
+  "generatedAt": "2026-09-28T21:12:02.351Z",
   "pack": "handbook",
   "system": "shadowbase",
   "chapters": {
@@ -30,6 +30,11 @@
         {
           "pageId": "A9Qk7d5DLkANda8K",
           "name": "Hazards: Hunger, Thirst, and Disease",
+          "overview": false
+        },
+        {
+          "pageId": "ZcCbAY1ZBnGFKsUg",
+          "name": "Time",
           "overview": false
         }
       ],
@@ -70,11 +75,39 @@
           "anchor": "going-without-food-or-water"
         },
         {
+          "heading": "Eating Well",
+          "level": 3,
+          "entryId": "QD9SOsp2PLsi7llq",
+          "pageId": "A9Qk7d5DLkANda8K",
+          "anchor": "eating-well"
+        },
+        {
           "heading": "Disease & Infection",
           "level": 3,
           "entryId": "QD9SOsp2PLsi7llq",
           "pageId": "A9Qk7d5DLkANda8K",
           "anchor": "disease-infection"
+        },
+        {
+          "heading": "Time",
+          "level": 2,
+          "entryId": "QD9SOsp2PLsi7llq",
+          "pageId": "ZcCbAY1ZBnGFKsUg",
+          "anchor": null
+        },
+        {
+          "heading": "Day, Night, and Watches",
+          "level": 3,
+          "entryId": "QD9SOsp2PLsi7llq",
+          "pageId": "ZcCbAY1ZBnGFKsUg",
+          "anchor": "day-night-and-watches"
+        },
+        {
+          "heading": "Rest and Recovery",
+          "level": 3,
+          "entryId": "QD9SOsp2PLsi7llq",
+          "pageId": "ZcCbAY1ZBnGFKsUg",
+          "anchor": "rest-and-recovery"
         }
       ],
       "byHeading": {
@@ -113,12 +146,40 @@
           "pageId": "A9Qk7d5DLkANda8K",
           "anchor": "going-without-food-or-water"
         },
+        "Eating Well": {
+          "heading": "Eating Well",
+          "level": 3,
+          "entryId": "QD9SOsp2PLsi7llq",
+          "pageId": "A9Qk7d5DLkANda8K",
+          "anchor": "eating-well"
+        },
         "Disease & Infection": {
           "heading": "Disease & Infection",
           "level": 3,
           "entryId": "QD9SOsp2PLsi7llq",
           "pageId": "A9Qk7d5DLkANda8K",
           "anchor": "disease-infection"
+        },
+        "Time": {
+          "heading": "Time",
+          "level": 2,
+          "entryId": "QD9SOsp2PLsi7llq",
+          "pageId": "ZcCbAY1ZBnGFKsUg",
+          "anchor": null
+        },
+        "Day, Night, and Watches": {
+          "heading": "Day, Night, and Watches",
+          "level": 3,
+          "entryId": "QD9SOsp2PLsi7llq",
+          "pageId": "ZcCbAY1ZBnGFKsUg",
+          "anchor": "day-night-and-watches"
+        },
+        "Rest and Recovery": {
+          "heading": "Rest and Recovery",
+          "level": 3,
+          "entryId": "QD9SOsp2PLsi7llq",
+          "pageId": "ZcCbAY1ZBnGFKsUg",
+          "anchor": "rest-and-recovery"
         }
       }
     },
@@ -3624,6 +3685,13 @@
           "anchor": "environmental-situational-attack-modifiers"
         },
         {
+          "heading": "Sighting: Range, Line of Sight & Elevation",
+          "level": 3,
+          "entryId": "JJ04T5LHImjlILs1",
+          "pageId": "lK2S5O94GA22CBcN",
+          "anchor": "sighting-range-line-of-sight-elevation"
+        },
+        {
           "heading": "Applying Damage",
           "level": 4,
           "entryId": "JJ04T5LHImjlILs1",
@@ -3995,6 +4063,13 @@
           "entryId": "JJ04T5LHImjlILs1",
           "pageId": "lK2S5O94GA22CBcN",
           "anchor": "environmental-situational-attack-modifiers"
+        },
+        "Sighting: Range, Line of Sight & Elevation": {
+          "heading": "Sighting: Range, Line of Sight & Elevation",
+          "level": 3,
+          "entryId": "JJ04T5LHImjlILs1",
+          "pageId": "lK2S5O94GA22CBcN",
+          "anchor": "sighting-range-line-of-sight-elevation"
         },
         "Applying Damage": {
           "heading": "Applying Damage",
@@ -17971,6 +18046,13 @@
           "entryId": "WoKoilSuw4eubRUd",
           "pageId": "ZJ8Lr15YYYXR2C3A",
           "anchor": "the-unknown-regions"
+        },
+        {
+          "heading": "Regional Fare",
+          "level": 3,
+          "entryId": "WoKoilSuw4eubRUd",
+          "pageId": "ZJ8Lr15YYYXR2C3A",
+          "anchor": "regional-fare"
         }
       ],
       "byHeading": {
@@ -18890,6 +18972,13 @@
           "entryId": "WoKoilSuw4eubRUd",
           "pageId": "ZJ8Lr15YYYXR2C3A",
           "anchor": "the-unknown-regions"
+        },
+        "Regional Fare": {
+          "heading": "Regional Fare",
+          "level": 3,
+          "entryId": "WoKoilSuw4eubRUd",
+          "pageId": "ZJ8Lr15YYYXR2C3A",
+          "anchor": "regional-fare"
         }
       }
     },
@@ -18934,11 +19023,16 @@
         },
         {
           "pageId": "i8U1fECwFemdbl4A",
-          "name": "Maintaining the Gritty Tone",
+          "name": "Time, the Calendar, and Downtime",
           "overview": false
         },
         {
           "pageId": "35KqI9z3TvPlea6y",
+          "name": "Maintaining the Gritty Tone",
+          "overview": false
+        },
+        {
+          "pageId": "l3ujhOwturq1t12K",
           "name": "Session Zero Advice",
           "overview": false
         }
@@ -18987,17 +19081,24 @@
           "anchor": null
         },
         {
-          "heading": "Maintaining the Gritty Tone",
+          "heading": "Time, the Calendar, and Downtime",
           "level": 2,
           "entryId": "SQjNPFSBwLhhCFQ2",
           "pageId": "i8U1fECwFemdbl4A",
           "anchor": null
         },
         {
-          "heading": "Session Zero Advice",
+          "heading": "Maintaining the Gritty Tone",
           "level": 2,
           "entryId": "SQjNPFSBwLhhCFQ2",
           "pageId": "35KqI9z3TvPlea6y",
+          "anchor": null
+        },
+        {
+          "heading": "Session Zero Advice",
+          "level": 2,
+          "entryId": "SQjNPFSBwLhhCFQ2",
+          "pageId": "l3ujhOwturq1t12K",
           "anchor": null
         }
       ],
@@ -19044,18 +19145,25 @@
           "pageId": "4ldDPdK37OfOke9f",
           "anchor": null
         },
+        "Time, the Calendar, and Downtime": {
+          "heading": "Time, the Calendar, and Downtime",
+          "level": 2,
+          "entryId": "SQjNPFSBwLhhCFQ2",
+          "pageId": "i8U1fECwFemdbl4A",
+          "anchor": null
+        },
         "Maintaining the Gritty Tone": {
           "heading": "Maintaining the Gritty Tone",
           "level": 2,
           "entryId": "SQjNPFSBwLhhCFQ2",
-          "pageId": "i8U1fECwFemdbl4A",
+          "pageId": "35KqI9z3TvPlea6y",
           "anchor": null
         },
         "Session Zero Advice": {
           "heading": "Session Zero Advice",
           "level": 2,
           "entryId": "SQjNPFSBwLhhCFQ2",
-          "pageId": "35KqI9z3TvPlea6y",
+          "pageId": "l3ujhOwturq1t12K",
           "anchor": null
         }
       }

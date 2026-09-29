@@ -1052,9 +1052,13 @@ export function infoContext(actor, system, stats, sheet, prefs, isDroid) {
   const disRows = sheet?.disadvantages ?? [];
   const found = sr.reactionSourcesFor(advRows, disRows);
   const unresolved = sr.unresolvedReactionRows(advRows, disRows);
-  const faceToFace = sr.netReactionModifier(found);
-  const heardOnly = sr.netReactionModifier(found, ['heard', 'known']);
-  const seenOnly = sr.netReactionModifier(found, ['seen', 'known']);
+  // Which senses each medium leaves the other party is social-rolls.ts's to say (REACTION_MEDIA, 2026-09-28),
+  // never a list typed here: this line used to type "in writing" as ['seen', 'known'], the website's own old
+  // mistake - a trait that has to be seen does nothing in writing (Ch4).
+  const media = sr.REACTION_MEDIA;
+  const faceToFace = sr.netReactionModifier(found, media.faceToFace);
+  const overComlink = sr.netReactionModifier(found, media.comlink);
+  const inWriting = sr.netReactionModifier(found, media.writing);
   const spheres = sr.reactionSpheres(found).map((s) => ({ name: s, net: sign(sr.netReactionModifier(found, undefined, [s])) }));
   const alignment = {
     value: alignmentValue,
@@ -1071,8 +1075,8 @@ export function infoContext(actor, system, stats, sheet, prefs, isDroid) {
       sources: found.map((s) => `${s.trait}: ${sign(s.figure)}`).join(', '),
       hasSources: found.length > 0,
       spheres,
-      perception: heardOnly !== faceToFace || seenOnly !== faceToFace,
-      heardOnly: sign(heardOnly), seenOnly: sign(seenOnly),
+      perception: overComlink !== faceToFace || inWriting !== faceToFace,
+      overComlink: sign(overComlink), inWriting: sign(inWriting),
       unresolved: unresolved.map((u) => `${u.trait} (${u.why})`).join('; '),
       hasUnresolved: unresolved.length > 0,
     },
@@ -1204,7 +1208,11 @@ function mergeLanguageEntries(stored, edited) {
  * name (announced), the swap comes from swapSpecies, bought skills carry their
  * relative level across the attribute change (carrySkillLevels through
  * getCalculatedStats on both sides), languages are entry surgery
- * (swapNativeLanguageEntries), and NO credits move (ruled 2026-08-28).
+ * (swapNativeLanguageEntries), and NO credits move (ruled 2026-08-28). A species
+ * can be born with a Force power (Ch18: the Miraluka's Force Sight); swapSpecies
+ * hands back `forcePowers` with it granted or stripped by its `fromSpecies`
+ * marker, and it is reconciled like the trait arrays (species-field.tsx,
+ * 2026-09-28).
  */
 export async function applySpeciesSwap(actor, rawNext) {
   const ss = engine.speciesSwap;
@@ -1214,7 +1222,7 @@ export async function applySpeciesSwap(actor, rawNext) {
   const next = viaAlias ?? rawNext;
   if (viaAlias) notify('info', fmt('SHADOWBASE.Sheet.Species.Alias', { typed: rawNext, head: viaAlias }));
   if ((sheet.species ?? '') === next) return null;
-  const values = { ...sheet, advantages: rowsRef(actor, 'advantages'), disadvantages: rowsRef(actor, 'disadvantages'), quirks: rowsRef(actor, 'quirks'), skills: rowsRef(actor, 'skills') };
+  const values = { ...sheet, advantages: rowsRef(actor, 'advantages'), disadvantages: rowsRef(actor, 'disadvantages'), quirks: rowsRef(actor, 'quirks'), skills: rowsRef(actor, 'skills'), forcePowers: rowsRef(actor, 'forcePowers') };
   const swap = ss.swapSpecies(values, next);
   const pricingBefore = engine.getCalculatedStats(values).skillPricingAttributes;
   const pricingAfter = engine.getCalculatedStats({ ...values, species: next, advantages: swap.advantages, disadvantages: swap.disadvantages, quirks: swap.quirks }).skillPricingAttributes;
@@ -1236,6 +1244,7 @@ export async function applySpeciesSwap(actor, rawNext) {
   await reconcileRows(actor, 'advantages', swap.advantages);
   await reconcileRows(actor, 'disadvantages', swap.disadvantages);
   await reconcileRows(actor, 'quirks', swap.quirks);
+  await reconcileRows(actor, 'forcePowers', swap.forcePowers);
   if (carried !== values.skills) await reconcileRows(actor, 'skills', carried);
   return swap;
 }

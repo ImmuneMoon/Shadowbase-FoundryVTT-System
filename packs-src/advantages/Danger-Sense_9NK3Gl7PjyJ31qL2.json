@@ -10,7 +10,7 @@
     "row": {
       "name": "Danger Sense",
       "points": 15,
-      "description": "You possess an instinctive ability to detect impending threats or danger. The GM will secretly roll against your Perception in situations involving ambushes, disasters, or similar hazards. On a success, you receive enough warning to take action. A roll of 3 or 4 provides additional detail about the danger. This early warning system primarily serves self-preservation, allowing you to react quickly whether to save allies or simply escape a trap. (Refer to GURPS Basic Set: Characters for full details.) Note: While a general advantage, for Force-sensitives, this often manifests as a subtle Force premonition. Prerequisite: Force Sensitive (if taken as a Force-related advantage, representing a Force-user's sensitivity to danger through the Force).",
+      "description": "You possess an instinctive ability to detect impending threats or danger. The GM will secretly roll against your Perception in situations involving ambushes, disasters, or similar hazards. On a success, you receive enough warning to take action. A roll of 3 or 4 provides additional detail about the danger. This early warning system primarily serves self-preservation, allowing you to react quickly whether to save allies or simply escape a trap. (See Chapter 4: Advantages in the handbook for full details.) Note: While a general advantage, for Force-sensitives, this often manifests as a subtle Force premonition. Prerequisite: Force Sensitive (if taken as a Force-related advantage, representing a Force-user's sensitivity to danger through the Force).",
       "category": "Mental",
       "baselinePoints": 0
     },

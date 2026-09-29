@@ -174,7 +174,7 @@ export async function main() {
   if (actorKey) entries = [{ key: actorKey, name: `template:${actorKey}`, sheet: harness.unwrap(engine.characterTemplateStore[actorKey]) }];
   if (fixture) {
     const raw = JSON.parse(readFileSync(join(ROOT, 'fixtures', `${fixture.replace(/\.json$/, '')}.json`), 'utf8'));
-    const loaded = engine.applyLoadMigrations({ ...engine.blankSheetData, ...engine.convertJsonToSheet(raw) }, engine.blankSheetData);
+    const loaded = engine.loadIncomingSheet(engine.convertJsonToSheet(raw));
     entries = [{ key: basename(fixture, '.json'), name: `export:${fixture}`, sheet: loaded.data }];
   }
   mkdirSync(outDir, { recursive: true });

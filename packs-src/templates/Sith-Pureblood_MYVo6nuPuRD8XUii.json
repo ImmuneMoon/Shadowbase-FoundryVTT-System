@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Sith Pureblood"
         },
         "source": "advantages"
       },
@@ -407,7 +409,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Sith Pureblood"
         },
         "source": "advantages"
       },
@@ -428,7 +431,8 @@
           "description": "Bony spurs or hardened claws providing enhanced unarmed slashing and impaling damage.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 3
+          "baselinePoints": 3,
+          "fromSpecies": "Sith Pureblood"
         },
         "source": "advantages"
       },
@@ -449,7 +453,8 @@
           "description": "Some species are naturally attuned to the Force.",
           "level": null,
           "category": "Racial",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Sith Pureblood"
         },
         "source": "advantages"
       },
@@ -470,7 +475,8 @@
           "description": "You are unusually resistant to the effects of pain, suffering fewer penalties from injury. Allows you to endure torture or continue fighting effectively even when severely wounded, a vital trait for a survivor in a brutal war.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 10
+          "baselinePoints": 10,
+          "fromSpecies": "Sith Pureblood"
         },
         "source": "advantages"
       },
@@ -491,7 +497,8 @@
           "description": "You are prone to anger and easily provoked, often leading to rash decisions or confrontations.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Sith Pureblood"
         },
         "source": "disadvantages"
       },
@@ -512,7 +519,8 @@
           "description": "Enemy alignment. Your affiliation causes immediate distrust and hostility from Republic citizens.",
           "level": null,
           "category": "Social",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Sith Pureblood"
         },
         "source": "disadvantages"
       },
@@ -531,7 +539,8 @@
           "name": "Proud",
           "description": "You have a strong sense of self-worth and dignity and will react poorly to insults or challenges to your honor.",
           "points": -1,
-          "baselinePoints": -1
+          "baselinePoints": -1,
+          "fromSpecies": "Sith Pureblood"
         },
         "source": "quirks"
       },

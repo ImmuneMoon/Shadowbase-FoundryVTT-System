@@ -5,8 +5,9 @@
 // B of the phase-1 handbook-journal report): one JournalEntry per chapter,
 // one text page per top-level h2 plus an "Overview" page for the prose that
 // precedes the first h2 (a chapter that opens on an h2 - Ch7, Ch19 - has no
-// Overview page). 24 entries; 147 h2 + 22 overviews = 169 pages, measured
-// from the website's public/handbook at build time and printed.
+// Overview page). 24 entries; 149 h2 + 22 overviews = 171 pages (2026-09-28;
+// 169 before the 2026-09-21 Time sections), measured from the website's
+// public/handbook at build time and printed.
 //
 //   node tools/build-handbook-pack.mjs              # copy JSON, render, write packs-src/handbook, compile packs/handbook
 //   node tools/build-handbook-pack.mjs --no-compile
@@ -35,15 +36,17 @@
 // ERA GUARD. The book is 3964 BBY and must never drift into the Galactic
 // Civil War; the rendered pages are grepped for its vocabulary and a hit
 // fails the build. The naive grep (Empire|Rebellion|Bespin|Cloud City) fails
-// on the book itself 32 times, all of them "Sith Empire", "Infinite Empire",
-// "Rakata Empire", "Fallen Empire" or a bare "the Empire" that means the Sith
-// Empire in its sentence - so the guard masks a DECLARED allow-list first:
+// on the book itself 33 times (2026-09-28), all of them "Sith Empire",
+// "Infinite Empire", "Rakata Empire", "Fallen Empire" or a bare "the Empire" /
+// "the old Empire" that means the Sith Empire in its passage - so the guard
+// masks a DECLARED allow-list first:
 // ERA_ALLOWED_PHRASES (qualified empires) and ERA_ALLOWED_SENTENCES (the five
-// bare uses, verbatim fragments). A sixth bare "the Empire" - or any
-// Rebellion/Bespin/Death Star - is a build failure that a human reviews.
+// bare uses, verbatim fragments - four "the Empire", one "the old Empire").
+// A sixth bare use - or any Rebellion/Bespin/Cloud City - is a build failure
+// that a human reviews.
 //
 // handbook/handbook-map.json: chapterId + heading -> { entryId, pageId,
-// anchor, level } for every heading (1459), first occurrence per name kept
+// anchor, level } for every heading (1466), first occurrence per name kept
 // in `byHeading`, every occurrence in `headings`; the HUD's chips resolve
 // through it (handbookRegistry.HANDBOOK_CHIP_TARGETS) and check:handbook pins
 // every chip target.
@@ -51,10 +54,10 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync, copyFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { WEB } from './website-path.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(HERE, '..');
-const WEB = resolve(process.env.SHADOWBASE_WEBSITE ?? join(ROOT, '..', 'ShadowBase Website'));
 const WEB_HANDBOOK = join(WEB, 'public', 'handbook');
 export const HANDBOOK_DIR = join(ROOT, 'handbook');
 export const PACK_NAME = 'handbook';
@@ -72,30 +75,46 @@ const die = (msg) => { console.error(`build-handbook-pack: ${msg}`); process.exi
 export const ERA_ALLOWED_PHRASES = Object.freeze([
   'Sith Empire', 'Sith-Empire', 'Infinite Empire', 'Rakata Empire', 'Fallen Empire',
 ]);
-/** Bare "the Empire" that the book uses for the Sith Empire, verbatim fragments (a sixth is a review). */
+/**
+ * Bare "the Empire" / "the old Empire" that the book uses for the Sith Empire, verbatim fragments
+ * (a sixth is a review).
+ * 2026-09-28: Ch19's Blackwing Virus Lore line, "Sith of the old Empire". Fulllion approved either
+ * rewording the book ("Sith of the old Sith Empire") or listing it here; listing was chosen, which
+ * leaves the book and the website untouched. The line points back at the Origin line just above it
+ * ("in the days of the old Sith Empire"), the fallen Sith Empire of 3964 BBY. The same day, the
+ * Darth Drear fragment ("Created 4,000 years before the Empire...") was dropped: the 2026-09-19 book
+ * pass rewrote it to "the old Sith Empire", which ERA_ALLOWED_PHRASES already masks.
+ * check:handbook requires every entry to be load-bearing over the rendered book (removing it must
+ * surface a hit), so this list cannot outlive the text it excuses.
+ */
 export const ERA_ALLOWED_SENTENCES = Object.freeze([
   'A Sith Master or the Empire provides you with training',
   'As a gift from your Master or the Empire',
-  'Created 4,000 years before the Empire by Sith Lord Darth Drear',
   'resources are a secret of the Empire',
   'something the Empire will kill to keep buried',
+  'Sith of the old Empire tried to weaponize it',
 ]);
 /** The era guard proper: a hit outside the allow-list FAILS the build. */
 export const ERA_FORBIDDEN = /\b(Empire|Rebellion|Bespin|Cloud City)\b/g;
 /**
  * Wider Galactic-Civil-War vocabulary, REPORTED not failing: the shipped book
- * carries seven of these itself (Ch19's creature lore names Darth Vader, the
- * Death Star, Luke Skywalker and Palpatine; Ch3 and Ch10 say "Imperial"), and
- * the rulebook is Fulllion's to edit, not this repo's. The build prints them
- * so the drift is visible on every run; docs/REQUESTS.md carries the list.
+ * carries two of these itself (2026-09-28), both the Sith language's name
+ * "Sith, Imperial" (Ch3 Languages, Ch19 Planets); the Ch19 creature-lore and
+ * Ch10 "Imperial underworld" terms were rewritten book-side on 2026-09-19. The
+ * rulebook is Fulllion's to edit, not this repo's. The build prints them so
+ * the drift is visible on every run; docs/REQUESTS.md carries the list.
  */
 export const ERA_SUSPECT = /\b(Imperial|Rebel Alliance|Death Star|Stormtrooper|Palpatine|Skywalker|Vader)\b/g;
 
-/** Every era hit in a rendered text after the allow-list is masked. */
-export function eraHits(text, pattern = ERA_FORBIDDEN) {
+/**
+ * Every era hit in a rendered text after the allow-list is masked. `allow` lets check:handbook trial a
+ * list with one entry removed (is each entry load-bearing?); the build always uses the declared lists.
+ */
+export function eraHits(text, pattern = ERA_FORBIDDEN, allow = {}) {
+  const { phrases = ERA_ALLOWED_PHRASES, sentences = ERA_ALLOWED_SENTENCES } = allow;
   let masked = text;
-  for (const p of ERA_ALLOWED_PHRASES) masked = masked.split(p).join('#'.repeat(p.length));
-  for (const s of ERA_ALLOWED_SENTENCES) masked = masked.split(s).join('#'.repeat(s.length));
+  for (const p of phrases) masked = masked.split(p).join('#'.repeat(p.length));
+  for (const s of sentences) masked = masked.split(s).join('#'.repeat(s.length));
   const hits = [];
   for (const m of masked.matchAll(pattern)) {
     hits.push({ term: m[1], at: m.index, context: text.slice(Math.max(0, m.index - 60), m.index + m[1].length + 40).replace(/\s+/g, ' ') });

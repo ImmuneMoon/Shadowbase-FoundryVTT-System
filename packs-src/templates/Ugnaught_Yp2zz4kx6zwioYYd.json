@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -244,7 +245,7 @@
       }
     ],
     "languages": "Ugnaught (Native)",
-    "culturalFamiliarities": "Gentes / Cloud City [0]",
+    "culturalFamiliarities": "Gentes [0]",
     "literacy": "Native Literacy [0]",
     "description": "",
     "background": "",
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Ugnaught"
         },
         "source": "advantages"
       },
@@ -407,7 +409,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Ugnaught"
         },
         "source": "advantages"
       },
@@ -417,18 +420,19 @@
     {
       "_id": "s93Q0VeU0NXwa34x",
       "_key": "!actors.items!Yp2zz4kx6zwioYYd.s93Q0VeU0NXwa34x",
-      "name": "Versatile",
+      "name": "Tinker's Ingenuity",
       "type": "advantage",
       "img": "icons/svg/upgrade.svg",
       "sort": 300000,
       "system": {
         "row": {
-          "name": "Versatile",
-          "points": 5,
-          "description": "Resourceful and adaptable. You are naturally good at figuring out solutions to unusual problems.",
+          "name": "Tinker's Ingenuity",
+          "points": -10,
+          "description": "Tinker's Ingenuity grants Ugnaughts 10 bonus Character Points restricted to repair, technical, and craft skills, representing their exceptional work ethic and mechanical aptitude. These points are granted free as part of the Ugnaught racial package.",
           "level": null,
-          "category": "Mental",
-          "baselinePoints": 5
+          "category": "Racial",
+          "baselinePoints": 0,
+          "fromSpecies": "Ugnaught"
         },
         "source": "advantages"
       },
@@ -438,6 +442,50 @@
     {
       "_id": "oG3gxN1FeTob3Gfp",
       "_key": "!actors.items!Yp2zz4kx6zwioYYd.oG3gxN1FeTob3Gfp",
+      "name": "Temperature Tolerance",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Temperature Tolerance",
+          "points": 2,
+          "level": 2,
+          "description": "Level 2",
+          "category": "Physical",
+          "baselinePoints": 2,
+          "fromSpecies": "Ugnaught"
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "y6mu5VygZX08PtTT",
+      "_key": "!actors.items!Yp2zz4kx6zwioYYd.y6mu5VygZX08PtTT",
+      "name": "Resistant",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Resistant",
+          "points": 5,
+          "level": 1,
+          "description": "Disease: +3 to resist.",
+          "category": "Physical",
+          "baselinePoints": 5,
+          "fromSpecies": "Ugnaught"
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "Yu2MklhBqlldafkJ",
+      "_key": "!actors.items!Yp2zz4kx6zwioYYd.Yu2MklhBqlldafkJ",
       "name": "ST -1 (Racial)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -476,7 +524,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Ugnaught"
         },
         "source": "disadvantages"
       },
@@ -484,8 +533,8 @@
       "flags": {}
     },
     {
-      "_id": "y6mu5VygZX08PtTT",
-      "_key": "!actors.items!Yp2zz4kx6zwioYYd.y6mu5VygZX08PtTT",
+      "_id": "nYUeSWNG9ooml95h",
+      "_key": "!actors.items!Yp2zz4kx6zwioYYd.nYUeSWNG9ooml95h",
       "name": "Social Stigma (Second-Class Citizen)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -497,7 +546,8 @@
           "description": "Often marginalized or legally restricted within mainstream society.",
           "level": null,
           "category": "Social",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Ugnaught"
         },
         "source": "disadvantages"
       },
@@ -505,12 +555,34 @@
       "flags": {}
     },
     {
-      "_id": "Yu2MklhBqlldafkJ",
-      "_key": "!actors.items!Yp2zz4kx6zwioYYd.Yu2MklhBqlldafkJ",
-      "name": "Stubbornness",
+      "_id": "hLD6vd8VxOSsUmRC",
+      "_key": "!actors.items!Yp2zz4kx6zwioYYd.hLD6vd8VxOSsUmRC",
+      "name": "Appearance (Unattractive)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
       "sort": 300000,
+      "system": {
+        "row": {
+          "name": "Appearance (Unattractive)",
+          "points": -4,
+          "description": "You are unpleasant to look at by the standards of most of the galaxy. This is the mirror of Appearance (Attractive) in Chapter 4: -1 to reaction, and it applies only where you can be seen. Several species carry it as part of their racial package in Chapter 18.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": -4,
+          "fromSpecies": "Ugnaught"
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "NZZSVphUYEnWHGR5",
+      "_key": "!actors.items!Yp2zz4kx6zwioYYd.NZZSVphUYEnWHGR5",
+      "name": "Stubbornness",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 400000,
       "system": {
         "row": {
           "name": "Stubbornness",
@@ -518,7 +590,8 @@
           "description": "The character is unusually resistant to changing their mind or admitting they are wrong, even in the face of overwhelming evidence. This can lead to missed opportunities or continued pursuit of flawed plans despite clear warning signs.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Ugnaught"
         },
         "source": "disadvantages"
       },
@@ -526,8 +599,8 @@
       "flags": {}
     },
     {
-      "_id": "nYUeSWNG9ooml95h",
-      "_key": "!actors.items!Yp2zz4kx6zwioYYd.nYUeSWNG9ooml95h",
+      "_id": "hFS0akn9Y7R9Mt4h",
+      "_key": "!actors.items!Yp2zz4kx6zwioYYd.hFS0akn9Y7R9Mt4h",
       "name": "Credit Chip",
       "type": "equipment",
       "img": "icons/svg/item-bag.svg",

@@ -5125,8 +5125,8 @@ function accumulateModifiers(accumulator, modifiers) {
   }
   return accumulator;
 }
-function formatModifierChannel(channel, value, label) {
-  const name = label ?? channel.toUpperCase();
+function formatModifierChannel(channel, value, label2) {
+  const name = label2 ?? channel.toUpperCase();
   if (isMultiplierChannel(channel)) {
     const numeric = Number(value);
     if (!Number.isFinite(numeric) || numeric === MULTIPLIER_IDENTITY) return null;
@@ -5420,6 +5420,30 @@ var advantagesLibrary = [
     points: 5,
     description: "Their disciplined training and innate grace make Echani exceptionally difficult to hit. They gain a +1 bonus to their Dodge score. Survival through superior defense is a key tenet, regardless of the morality of the conflict.",
     modifiers: { dodge: 1 }
+  },
+  {
+    /*
+      Ch4's Ugnaught racial trait (2026-09-28). The 2026-08-24 ruling renamed
+      the Ugnaught grant so Versatility stays uniquely Human, and Ch18 had
+      carried it inline ever since; the app's package held a generic
+      "Versatile" [5] that granted nothing. Same shape as Versatility: a row
+      that PAYS is stored at -10 on the sheet (see human-template.ts) and
+      grantsBudget is what the ledger display adds back. The restriction to
+      repair, technical and craft skills is the player's and GM's to honour -
+      the ledger has one budget and cannot ring-fence part of it.
+    */
+    name: "Tinker's Ingenuity",
+    category: "Racial",
+    points: 10,
+    grantsBudget: 10,
+    description: "Tinker's Ingenuity grants Ugnaughts 10 bonus Character Points restricted to repair, technical, and craft skills, representing their exceptional work ethic and mechanical aptitude. These points are granted free as part of the Ugnaught racial package."
+  },
+  {
+    // Ch4's Weequay racial trait (2026-09-28), which Ch18 had named with no entry behind it.
+    name: "Telecommunication (Smell/Taste)",
+    category: "Racial",
+    points: 0,
+    description: "Weequays communicate complex ideas silently among their own kind using specialized pheromones. It reaches only other Weequays, and no other species can read it. This is a racial trait and does not cost Character Points."
   },
   // --- Cultural / Training Advantages ---
   /*
@@ -6032,7 +6056,7 @@ var advantagesLibrary = [
     name: "Danger Sense",
     category: "Mental",
     points: 15,
-    description: "You possess an instinctive ability to detect impending threats or danger. The GM will secretly roll against your Perception in situations involving ambushes, disasters, or similar hazards. On a success, you receive enough warning to take action. A roll of 3 or 4 provides additional detail about the danger. This early warning system primarily serves self-preservation, allowing you to react quickly whether to save allies or simply escape a trap. (Refer to GURPS Basic Set: Characters for full details.) Note: While a general advantage, for Force-sensitives, this often manifests as a subtle Force premonition. Prerequisite: Force Sensitive (if taken as a Force-related advantage, representing a Force-user's sensitivity to danger through the Force)."
+    description: "You possess an instinctive ability to detect impending threats or danger. The GM will secretly roll against your Perception in situations involving ambushes, disasters, or similar hazards. On a success, you receive enough warning to take action. A roll of 3 or 4 provides additional detail about the danger. This early warning system primarily serves self-preservation, allowing you to react quickly whether to save allies or simply escape a trap. (See Chapter 4: Advantages in the handbook for full details.) Note: While a general advantage, for Force-sensitives, this often manifests as a subtle Force premonition. Prerequisite: Force Sensitive (if taken as a Force-related advantage, representing a Force-user's sensitivity to danger through the Force)."
   },
   {
     name: "Detect",
@@ -6224,7 +6248,9 @@ var advantagesLibrary = [
     name: "Appearance",
     category: "Physical",
     points: 4,
-    description: "Your physical attractiveness. Options range from Attractive (4 points) to Stunning (20 points). Can be a powerful tool for persuasion, manipulation, or gaining access in social circles, often irrespective of genuine trustworthiness or intent. Cost range: Varies (4-20 points).",
+    // Ch4 printed only the two ends of this ladder until 2026-09-28, when it
+    // took these four tiers and figures; social-rolls.ts reads the tier.
+    description: "Your physical attractiveness, in four tiers: Attractive (4 points) is +1 to reaction, Handsome or Beautiful (12 points) +2, Very Handsome or Very Beautiful (16 points) +3, and Stunning (20 points) +4. The figure belongs to the tier and applies only where you can be seen. Its mirror, Appearance (Unattractive), is in Chapter 5. Can be a powerful tool for persuasion, manipulation, or gaining access in social circles, often irrespective of genuine trustworthiness or intent. Cost range: Varies (4-20 points).",
     levels: [
       { level: 1, points: 4, description: "Attractive (+1 to reactions)." },
       { level: 2, points: 12, description: "Handsome/Beautiful (+2 to reactions)." },
@@ -6329,9 +6355,13 @@ var advantagesLibrary = [
     name: "Longevity",
     category: "Physical",
     description: "You age more slowly than others of your species. Grants more time to achieve goals, accumulate power, or witness the long-term consequences of galactic events. Prerequisite: Force Sensitive (if taken as a Force-related advantage, suggesting the Force can extend lifespan). Cost range: 2 points/level (max 20 points).",
-    levels: [
-      { level: 1, points: 2, description: "Level 1 Longevity." }
-    ]
+    // Ch4: "2 points/level, max 20 points", so the ladder runs to 10. It
+    // stopped at 1 until Ch18's "Longevity 3" had nothing to resolve to.
+    levels: Array.from({ length: 10 }, (_, i) => ({
+      level: i + 1,
+      points: (i + 1) * 2,
+      description: `Level ${i + 1} Longevity.`
+    }))
   },
   {
     name: "Night Vision",
@@ -7248,7 +7278,7 @@ var disadvantagesLibrary = [
     name: "Compulsive Behavior",
     category: "Mental",
     points: -5,
-    description: "The character is driven to perform certain actions, even when it's not in their best interest. This can be exploited by others who understand your compulsion. Examples: Compulsive Generosity (-5 to -15 points); Compulsive Gambling (-5 to -15 points). (Refer to GURPS Basic Set: Characters for full details)."
+    description: "The character is driven to perform certain actions, even when it's not in their best interest. This can be exploited by others who understand your compulsion. Examples: Compulsive Generosity (-5 to -15 points); Compulsive Gambling (-5 to -15 points). (See Chapter 5: Disadvantages in the handbook for full details)."
   },
   {
     name: "Cowardice",
@@ -7504,6 +7534,20 @@ var disadvantagesLibrary = [
   },
   // --- Physical Disadvantages ---
   {
+    /*
+      Ch5 (2026-09-28). Ch18 lists it on eight species and no chapter defined
+      it; Fulllion ruled it the mirror of Ch4's Appearance (Attractive), -4
+      points and -1 to reaction. A social-rolls source, by a second ruling
+      the same day that put Appearance on Ch4's Reaction Modifiers list in
+      BOTH directions. The figure is the tier's, never cost / 5: the rate
+      reads -4 points as nothing (see APPEARANCE_TIERS in social-rolls.ts).
+    */
+    name: "Appearance (Unattractive)",
+    category: "Physical",
+    points: -4,
+    description: "You are unpleasant to look at by the standards of most of the galaxy. This is the mirror of Appearance (Attractive) in Chapter 4: -1 to reaction, and it applies only where you can be seen. Several species carry it as part of their racial package in Chapter 18."
+  },
+  {
     name: "Bad Sight",
     category: "Physical",
     points: -10,
@@ -7739,6 +7783,19 @@ var disadvantagesLibrary = [
     category: "Social",
     points: -5,
     description: "Viewed with suspicion. You are generally assumed to be deceitful or acting in bad faith."
+  },
+  {
+    /*
+      Ch18's Bothan entry: "Reputation -2 (As manipulative spies; All
+      non-Bothans; All the time)". The Bothan package carried the Rodian's -1
+      row. Everyone but Bothans, always, prices at the full rate: -10. The
+      figure sits in the name because that is where social-rolls reads a
+      Reputation's figure from.
+    */
+    name: "Reputation -2 (Manipulative Spies)",
+    category: "Social",
+    points: -10,
+    description: "Known as manipulative spies, to all non-Bothans, all the time."
   },
   /*
     The general form, which Ch5 added alongside the fixed -1 entry above. Left
@@ -10139,6 +10196,7 @@ var fallbackThemeArr = [];
 var fromTheme = (key) => {
   const themeGetter = (theme) => theme[key] || fallbackThemeArr;
   themeGetter.isThemeGetter = true;
+  themeGetter.themeKey = key;
   return themeGetter;
 };
 var arbitraryValueRegex = /^\[(?:(\w[\w-]*):)?(.+)\]$/i;
@@ -10146,7 +10204,7 @@ var arbitraryVariableRegex = /^\((?:(\w[\w-]*):)?(.+)\)$/i;
 var fractionRegex = /^\d+(?:\.\d+)?\/\d+(?:\.\d+)?$/;
 var tshirtUnitRegex = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/;
 var lengthUnitRegex = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/;
-var colorFunctionRegex = /^(rgba?|hsla?|hwb|(ok)?(lab|lch)|color-mix)\(.+\)$/;
+var colorFunctionRegex = /^(rgba?|hsla?|hwb|(ok)?(lab|lch)|color-mix|color|light-dark)\(.+\)$/;
 var shadowRegex = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/;
 var imageRegex = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/;
 var isFraction = (value) => fractionRegex.test(value);
@@ -10203,14 +10261,14 @@ var getIsArbitraryVariable = (value, testLabel, shouldMatchNoLabel = false) => {
   }
   return false;
 };
-var isLabelPosition = (label) => label === "position" || label === "percentage";
-var isLabelImage = (label) => label === "image" || label === "url";
-var isLabelSize = (label) => label === "length" || label === "size" || label === "bg-size";
-var isLabelLength = (label) => label === "length";
-var isLabelNumber = (label) => label === "number";
-var isLabelFamilyName = (label) => label === "family-name";
-var isLabelWeight = (label) => label === "number" || label === "weight";
-var isLabelShadow = (label) => label === "shadow";
+var isLabelPosition = (label2) => label2 === "position" || label2 === "percentage";
+var isLabelImage = (label2) => label2 === "image" || label2 === "url";
+var isLabelSize = (label2) => label2 === "length" || label2 === "size" || label2 === "bg-size";
+var isLabelLength = (label2) => label2 === "length";
+var isLabelNumber = (label2) => label2 === "number";
+var isLabelFamilyName = (label2) => label2 === "family-name";
+var isLabelWeight = (label2) => label2 === "number" || label2 === "weight";
+var isLabelShadow = (label2) => label2 === "shadow";
 var getDefaultConfig = () => {
   const themeColor = fromTheme("color");
   const themeFont = fromTheme("font");
@@ -10266,7 +10324,7 @@ var getDefaultConfig = () => {
   const scaleAlignSecondaryAxis = () => ["start", "end", "center", "stretch", "center-safe", "end-safe"];
   const scaleMargin = () => ["auto", ...scaleUnambiguousSpacing()];
   const scaleSizing = () => [isFraction, "auto", "full", "dvw", "dvh", "lvw", "lvh", "svw", "svh", "min", "max", "fit", ...scaleUnambiguousSpacing()];
-  const scaleSizingInline = () => [isFraction, "screen", "full", "dvw", "lvw", "svw", "min", "max", "fit", ...scaleUnambiguousSpacing()];
+  const scaleSizingInline = () => [themeContainer, isFraction, "screen", "full", "dvw", "lvw", "svw", "min", "max", "fit", ...scaleUnambiguousSpacing()];
   const scaleSizingBlock = () => [isFraction, "screen", "full", "lh", "dvh", "lvh", "svh", "min", "max", "fit", ...scaleUnambiguousSpacing()];
   const scaleColor = () => [themeColor, isArbitraryVariable, isArbitraryValue];
   const scaleBgPosition = () => [...scalePosition(), isArbitraryVariablePosition, isArbitraryPosition, {
@@ -10361,7 +10419,7 @@ var getDefaultConfig = () => {
        * @see https://tailwindcss.com/docs/columns
        */
       columns: [{
-        columns: [isNumber, isArbitraryValue, isArbitraryVariable, themeContainer]
+        columns: [isNumber, "auto", isArbitraryValue, isArbitraryVariable, themeContainer]
       }],
       /**
        * Break After
@@ -10997,42 +11055,42 @@ var getDefaultConfig = () => {
       }],
       /**
        * Inline Size
-       * @see https://tailwindcss.com/docs/width
+       * @see https://tailwindcss.com/docs/inline-size
        */
       "inline-size": [{
         inline: ["auto", ...scaleSizingInline()]
       }],
       /**
        * Min-Inline Size
-       * @see https://tailwindcss.com/docs/min-width
+       * @see https://tailwindcss.com/docs/min-inline-size
        */
       "min-inline-size": [{
         "min-inline": ["auto", ...scaleSizingInline()]
       }],
       /**
        * Max-Inline Size
-       * @see https://tailwindcss.com/docs/max-width
+       * @see https://tailwindcss.com/docs/max-inline-size
        */
       "max-inline-size": [{
         "max-inline": ["none", ...scaleSizingInline()]
       }],
       /**
        * Block Size
-       * @see https://tailwindcss.com/docs/height
+       * @see https://tailwindcss.com/docs/block-size
        */
       "block-size": [{
         block: ["auto", ...scaleSizingBlock()]
       }],
       /**
        * Min-Block Size
-       * @see https://tailwindcss.com/docs/min-height
+       * @see https://tailwindcss.com/docs/min-block-size
        */
       "min-block-size": [{
         "min-block": ["auto", ...scaleSizingBlock()]
       }],
       /**
        * Max-Block Size
-       * @see https://tailwindcss.com/docs/max-height
+       * @see https://tailwindcss.com/docs/max-block-size
        */
       "max-block-size": [{
         "max-block": ["none", ...scaleSizingBlock()]
@@ -11094,7 +11152,7 @@ var getDefaultConfig = () => {
        * @see https://tailwindcss.com/docs/max-height
        */
       "max-h": [{
-        "max-h": ["screen", "lh", ...scaleSizing()]
+        "max-h": ["screen", "lh", "none", ...scaleSizing()]
       }],
       // ------------------
       // --- Typography ---
@@ -11194,6 +11252,7 @@ var getDefaultConfig = () => {
        */
       leading: [{
         leading: [
+          "none",
           /** Deprecated since Tailwind CSS v4.0.0. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
           themeLeading,
           ...scaleUnambiguousSpacing()
@@ -11403,7 +11462,7 @@ var getDefaultConfig = () => {
             to: ["t", "tr", "r", "br", "b", "bl", "l", "tl"]
           }, isInteger, isArbitraryVariable, isArbitraryValue],
           radial: ["", isArbitraryVariable, isArbitraryValue],
-          conic: [isInteger, isArbitraryVariable, isArbitraryValue]
+          conic: ["", isInteger, isArbitraryVariable, isArbitraryValue]
         }, isArbitraryVariableImage, isArbitraryImage]
       }],
       /**
@@ -11801,6 +11860,8 @@ var getDefaultConfig = () => {
         shadow: [
           // Deprecated since Tailwind CSS v4.0.0
           "",
+          // Deprecated since Tailwind CSS v4.0.0
+          "inner",
           "none",
           themeShadow,
           isArbitraryVariableShadow,
@@ -12894,16 +12955,16 @@ var getDefaultConfig = () => {
       overflow: ["overflow-x", "overflow-y"],
       overscroll: ["overscroll-x", "overscroll-y"],
       inset: ["inset-x", "inset-y", "inset-bs", "inset-be", "start", "end", "top", "right", "bottom", "left"],
-      "inset-x": ["right", "left"],
-      "inset-y": ["top", "bottom"],
+      "inset-x": ["start", "end", "right", "left"],
+      "inset-y": ["inset-bs", "inset-be", "top", "bottom"],
       flex: ["basis", "grow", "shrink"],
       gap: ["gap-x", "gap-y"],
       p: ["px", "py", "ps", "pe", "pbs", "pbe", "pt", "pr", "pb", "pl"],
-      px: ["pr", "pl"],
-      py: ["pt", "pb"],
+      px: ["ps", "pe", "pr", "pl"],
+      py: ["pbs", "pbe", "pt", "pb"],
       m: ["mx", "my", "ms", "me", "mbs", "mbe", "mt", "mr", "mb", "ml"],
-      mx: ["mr", "ml"],
-      my: ["mt", "mb"],
+      mx: ["ms", "me", "mr", "ml"],
+      my: ["mbs", "mbe", "mt", "mb"],
       size: ["w", "h"],
       "font-size": ["leading"],
       "fvn-normal": ["fvn-ordinal", "fvn-slashed-zero", "fvn-figure", "fvn-spacing", "fvn-fraction"],
@@ -12922,19 +12983,19 @@ var getDefaultConfig = () => {
       "rounded-l": ["rounded-tl", "rounded-bl"],
       "border-spacing": ["border-spacing-x", "border-spacing-y"],
       "border-w": ["border-w-x", "border-w-y", "border-w-s", "border-w-e", "border-w-bs", "border-w-be", "border-w-t", "border-w-r", "border-w-b", "border-w-l"],
-      "border-w-x": ["border-w-r", "border-w-l"],
-      "border-w-y": ["border-w-t", "border-w-b"],
+      "border-w-x": ["border-w-s", "border-w-e", "border-w-r", "border-w-l"],
+      "border-w-y": ["border-w-bs", "border-w-be", "border-w-t", "border-w-b"],
       "border-color": ["border-color-x", "border-color-y", "border-color-s", "border-color-e", "border-color-bs", "border-color-be", "border-color-t", "border-color-r", "border-color-b", "border-color-l"],
-      "border-color-x": ["border-color-r", "border-color-l"],
-      "border-color-y": ["border-color-t", "border-color-b"],
+      "border-color-x": ["border-color-s", "border-color-e", "border-color-r", "border-color-l"],
+      "border-color-y": ["border-color-bs", "border-color-be", "border-color-t", "border-color-b"],
       translate: ["translate-x", "translate-y", "translate-none"],
       "translate-none": ["translate", "translate-x", "translate-y", "translate-z"],
       "scroll-m": ["scroll-mx", "scroll-my", "scroll-ms", "scroll-me", "scroll-mbs", "scroll-mbe", "scroll-mt", "scroll-mr", "scroll-mb", "scroll-ml"],
-      "scroll-mx": ["scroll-mr", "scroll-ml"],
-      "scroll-my": ["scroll-mt", "scroll-mb"],
+      "scroll-mx": ["scroll-ms", "scroll-me", "scroll-mr", "scroll-ml"],
+      "scroll-my": ["scroll-mbs", "scroll-mbe", "scroll-mt", "scroll-mb"],
       "scroll-p": ["scroll-px", "scroll-py", "scroll-ps", "scroll-pe", "scroll-pbs", "scroll-pbe", "scroll-pt", "scroll-pr", "scroll-pb", "scroll-pl"],
-      "scroll-px": ["scroll-pr", "scroll-pl"],
-      "scroll-py": ["scroll-pt", "scroll-pb"],
+      "scroll-px": ["scroll-ps", "scroll-pe", "scroll-pr", "scroll-pl"],
+      "scroll-py": ["scroll-pbs", "scroll-pbe", "scroll-pt", "scroll-pb"],
       touch: ["touch-x", "touch-y", "touch-pz"],
       "touch-x": ["touch"],
       "touch-y": ["touch"],
@@ -16723,6 +16784,17 @@ var rawMaterials = [
     description: "Exceptionally dense wood; structurally as strong as metal. Can be used as a melee weapon or lightsaber hilt without suffering the normal breakage penalties of wooden weapons."
   },
   {
+    name: "Caf Concentrate",
+    rarity: "Very Common",
+    cost: 8,
+    density: 62,
+    category: "Raw Materials",
+    subCategory: "Medical",
+    weight: 1,
+    quantity: 1,
+    description: "Concentrated caf - the galaxy's ubiquitous stimulant beverage, brewed strong and served hot."
+  },
+  {
     name: "Carbon Substrate",
     rarity: "Very Common",
     cost: 10,
@@ -16852,7 +16924,7 @@ var rawMaterials = [
     subCategory: "Chemical",
     weight: 1,
     quantity: 1,
-    description: "A deadly, fast-acting nerve gas favored by the Imperial underworld and elite bounty hunters. Ideal for aerosol payloads in gas grenades or proximity traps. Usually dispensed into a Chemical Storage Vessel. If the carrying container is breached, or it is dispensed without one: Deals 1d toxic damage to all targets in the immediate vicinity. If not deployed via a tailored explosive or aerosol device, the gas cloud expands unevenly, increasing its radius by 5 feet per second. Exposure: Targets must make an HT-3 (or Poison Resistance-3) roll. Failure: The victim suffers 1d-2 (minimum 1) toxic damage per second for 5 minutes. This effect can only be halted by an Antidote Kit."
+    description: "A deadly, fast-acting nerve gas favored by the criminal underworld and elite bounty hunters. Ideal for aerosol payloads in gas grenades or proximity traps. Usually dispensed into a Chemical Storage Vessel. If the carrying container is breached, or it is dispensed without one: Deals 1d toxic damage to all targets in the immediate vicinity. If not deployed via a tailored explosive or aerosol device, the gas cloud expands unevenly, increasing its radius by 5 feet per second. Exposure: Targets must make an HT-3 (or Poison Resistance-3) roll. Failure: The victim suffers 1d-2 (minimum 1) toxic damage per second for 5 minutes. This effect can only be halted by an Antidote Kit."
   },
   {
     name: "Fibercord",
@@ -17530,7 +17602,7 @@ function resolveTypedDR(base, typed, attack) {
   return { dr: base + applied.reduce((sum, t) => sum + t.bonus, 0), applied };
 }
 
-// ../Shadowbase-FoundryVTT-System/tools/stubs/firebase.js
+// ../../Claude Code/ShadowBase/Shadowbase-FoundryVTT-System/tools/stubs/firebase.js
 var FieldValue = class {
 };
 var never = (name) => () => {
@@ -18965,6 +19037,7 @@ function convertJsonToSheet(savedData) {
   sheetData.useLiftingST = inv.useLiftingST ?? true;
   sheetData.useStrikingST = inv.useStrikingST ?? true;
   sheetData.useArmST = inv.useArmST ?? true;
+  sheetData.speciesPackageRevision = inv.speciesPackageRevision ?? 0;
   sheetData.cpBaseline = inv.cpBaseline ?? 0;
   sheetData.stBaseline = inv.stBaseline ?? 10;
   sheetData.dxBaseline = inv.dxBaseline ?? 10;
@@ -19183,6 +19256,10 @@ function convertSheetToJson(sheetData, calculatedStats) {
       useLiftingST: sheetData.useLiftingST,
       useStrikingST: sheetData.useStrikingST,
       useArmST: sheetData.useArmST,
+      // Without it the importer reads 0 and the species package is
+      // brought up to date a second time, handing back any granted row
+      // the player has since removed.
+      speciesPackageRevision: sheetData.speciesPackageRevision,
       cpBaseline: sheetData.cpBaseline,
       stBaseline: sheetData.stBaseline,
       dxBaseline: sheetData.dxBaseline,
@@ -21361,13 +21438,13 @@ var calculateCombatStats = (formValues, primaryAttributes, globalModifiers = {})
   const hasDangerSense = advantages16.some((a) => a.name?.toLowerCase().includes("danger sense"));
   const parryOptions = [];
   const blockOptions = [];
-  const levelOf2 = (skill) => {
+  const levelOf3 = (skill) => {
     if (!skill.name || !skill.level) return null;
     const level = parseInt(skill.level, 10);
     return isNaN(level) ? null : level;
   };
   skills17.forEach((skill) => {
-    const level = levelOf2(skill);
+    const level = levelOf3(skill);
     if (level === null) return;
     if (canParryWith(skill.name)) {
       const barehanded = barehandedParryPenalty(skill.name);
@@ -22969,6 +23046,75 @@ var survivalGear = [
       { name: "Plastoid", amount: 0.05 }
     ]
   },
+  /*
+    Ch10's four cooked-food consumables (added 2026-09-21 with the Eating Well
+    system). Priced like Field Rations: each component's CR/lb rounded up,
+    summed, x1.5, ceil; weight is the exact component sum. Their Well-Fed
+    benefits are described here but NOT yet mechanized (the buff state is a
+    deferred sheet feature) - eating one is flavour text until then.
+  */
+  {
+    name: "Hot Meal Pack",
+    craftingCategory: "Rations & Preserved Food",
+    cost: 18,
+    description: "A self-heating field meal - no fire or Cooking roll needed. Eating it leaves you Well-Fed at the simple tier (Ch1: Eating Well). Materials: Nutrient Paste: 0.9 lbs, Chemical Reactants: 0.2 lbs, Plastoid: 0.1 lbs.",
+    category: "Survival Gear",
+    weight: 1.2,
+    quantity: 1,
+    materials: [
+      { name: "Nutrient Paste", amount: 0.9 },
+      { name: "Chemical Reactants", amount: 0.2 },
+      { name: "Plastoid", amount: 0.1 }
+    ]
+  },
+  {
+    name: "Caf Ration",
+    craftingCategory: "Rations & Preserved Food",
+    cost: 8,
+    description: "A stimulating hot caf beverage. Grants +1 to rolls to stay alert or resist drowsiness for one hour, and helps offset a watch-shortened night (Ch1). Materials: Caf Concentrate: 0.2 lbs, Nutrient Paste: 0.1 lbs, Plastoid: 0.05 lbs.",
+    category: "Survival Gear",
+    weight: 0.35,
+    quantity: 1,
+    materials: [
+      { name: "Caf Concentrate", amount: 0.2 },
+      { name: "Nutrient Paste", amount: 0.1 },
+      { name: "Plastoid", amount: 0.05 }
+    ]
+  },
+  {
+    name: "Spiced Portions",
+    craftingCategory: "Rations & Preserved Food",
+    cost: 15,
+    // The Fright-Check morale bonus is part of Ch1's Eating Well system, not an
+    // applied item modifier - kept out of the description until the Well-Fed
+    // buff is built, so the app never claims a mechanic it does not apply
+    // (check:fright-check sweeps descriptions for exactly that).
+    description: "Ryll-seasoned field fare, a welcome change from ration paste. A morale treat that leaves you Well-Fed at the simple tier (Ch1: Eating Well). Materials: Nutrient Paste: 0.8 lbs, Ryll Spice: 0.01 lbs, Plastoid: 0.05 lbs.",
+    category: "Survival Gear",
+    weight: 0.86,
+    quantity: 1,
+    materials: [
+      { name: "Nutrient Paste", amount: 0.8 },
+      { name: "Ryll Spice", amount: 0.01 },
+      { name: "Plastoid", amount: 0.05 }
+    ]
+  },
+  {
+    name: "Field Feast Kit",
+    craftingCategory: "Rations & Preserved Food",
+    cost: 77,
+    skill: "Cooking",
+    description: "Fine ingredients and field cookware for one lavish group meal - enough for up to six. Counts as fine ingredients and lets a cook reach the feast tier away from a kitchen (Ch1: Eating Well). One use. Materials: Nutrient Paste: 3 lbs, Ryll Spice: 0.05 lbs, Chemical Reactants: 0.3 lbs, Plastoid: 0.3 lbs.",
+    category: "Survival Gear",
+    weight: 3.65,
+    quantity: 1,
+    materials: [
+      { name: "Nutrient Paste", amount: 3 },
+      { name: "Ryll Spice", amount: 0.05 },
+      { name: "Chemical Reactants", amount: 0.3 },
+      { name: "Plastoid", amount: 0.3 }
+    ]
+  },
   {
     name: "Flares",
     craftingCategory: "Chemical Charges",
@@ -24390,6 +24536,18 @@ function diceCountOf(damage) {
 function karateUnarmedDamageBonus(thrust, relativeToDx) {
   return karatePerDieBonus(relativeToDx) * diceCountOf(thrust);
 }
+
+// src/lib/budget-grants.ts
+function budgetGrantsOf(advantages16) {
+  const grants = [];
+  for (const row2 of advantages16 ?? []) {
+    const trait = String(row2?.name ?? "");
+    const points = advantagesLibrary.find((a) => a.name === trait)?.grantsBudget ?? 0;
+    if (points > 0) grants.push({ trait, label: trait.replace(/\s*\([^)]*\)\s*$/, ""), points });
+  }
+  return grants;
+}
+var totalBudgetGrant = (advantages16) => budgetGrantsOf(advantages16).reduce((sum, grant) => sum + grant.points, 0);
 
 // src/lib/fitted-goods.ts
 var fitted_goods_exports = {};
@@ -26039,7 +26197,7 @@ var getCalculatedStats = (values, options = {}) => {
       if (saber.storageLocationId) return;
       const isStaff = isStaffHilt(saber);
       const components = [
-        ...ownedInternalRows(saber, values.lightsaberModifications, isStaff).map(({ row: row2, label }) => ({ id: String(row2.id), label })),
+        ...ownedInternalRows(saber, values.lightsaberModifications, isStaff).map(({ row: row2, label: label2 }) => ({ id: String(row2.id), label: label2 })),
         { id: saber.emitter?.inventoryId, label: "Emitter", structural: true },
         { id: saber.switch?.inventoryId, label: "Switch", structural: true },
         { id: saber.sleeve?.inventoryId, label: "Sleeve", structural: true },
@@ -26489,10 +26647,7 @@ var getCalculatedStats = (values, options = {}) => {
   const specialAbilityResults = calculateSpecialAbilityPoints(values);
   const rawSpentTotal = attributesPoints + traitResults.totalPurchased + skillResults.total + specialAbilityResults.other + specialAbilityResults.forcePowers + specialAbilityResults.combatTechniques + specialAbilityResults.lightsaberForms + droidHardwarePoints;
   const finalSpent = Math.round(rawSpentTotal);
-  const racialBudgetBonus = (values.advantages ?? []).reduce((sum, row2) => {
-    const lib = advantagesLibrary.find((a) => a.name === row2?.name);
-    return sum + (lib?.grantsBudget ?? 0);
-  }, 0);
+  const racialBudgetBonus = totalBudgetGrant(values.advantages);
   const combatStats = calculateCombatStats(values, primaryAttributes, globalModifiers);
   const encumbrance = calculateEncumbranceDetails(
     totalEquipmentWeight,
@@ -27266,7 +27421,7 @@ __export(species_name_migration_exports, {
 var SPECIES_RENAMES = {
   Tridactyl: "Yoda's Species (Tridactyls)"
 };
-var MARKED_LISTS = ["advantages", "disadvantages", "quirks"];
+var MARKED_LISTS = ["advantages", "disadvantages", "quirks", "forcePowers"];
 function migrateSpeciesNames(data) {
   if (!data) return [];
   const changed = [];
@@ -27325,2693 +27480,165 @@ function migrateRacialTraitNames(data) {
   return renamed;
 }
 
-// src/lib/enhanced-defenses-migration.ts
-var enhanced_defenses_migration_exports = {};
-__export(enhanced_defenses_migration_exports, {
-  migrateEnhancedDefenses: () => migrateEnhancedDefenses
-});
-var OLD_UMBRELLA = "Enhanced Defenses";
-var OLD_ECHANI_RACIAL = "Enhanced Defense (Echani)";
-var OLD_EITHER_OR_DEFAULT = "+1 to Enhanced Block, or +1 to Enhanced Parry narrowed to a single weapon or skill \u2014 record the choice in this row's description; the narrowed bonus applies only to that weapon's Parry.";
-function migrateEnhancedDefenses(data) {
-  if (!data || typeof data !== "object") return 0;
-  let rewritten = 0;
-  for (const key of ["advantages", "disadvantages"]) {
-    const rows = data[key];
-    if (!Array.isArray(rows)) continue;
-    for (const row2 of rows) {
-      if (!row2 || typeof row2 !== "object") continue;
-      const name = String(row2.name ?? "").trim();
-      if (name === OLD_ECHANI_RACIAL) {
-        row2.name = ECHANI_REFLEXES;
-        rewritten += 1;
-        continue;
-      }
-      if (name !== OLD_UMBRELLA) continue;
-      const level = Number(row2.level);
-      if (level === 3 && (row2.baselinePoints ?? 0) > 0) {
-        const paid = Math.max(0, (row2.points ?? 15) - (row2.baselinePoints ?? 0));
-        row2.name = ECHANI_REFLEXES;
-        row2.level = null;
-        row2.points = 5 + paid;
-        row2.baselinePoints = 5;
-        row2.modifiers = { ...NO_MODIFIERS, dodge: 1 };
-        if (!String(row2.description ?? "").trim()) row2.description = "+1 to Dodge.";
-      } else if (level === 3) {
-        row2.name = ENHANCED_DODGE;
-        row2.level = 1;
-      } else if (level === 2) {
-        row2.name = ENHANCED_PARRY;
-        row2.level = 1;
-      } else {
-        const description = String(row2.description ?? "");
-        const isUnedited = description.trim() === OLD_EITHER_OR_DEFAULT;
-        if (!isUnedited && /block/i.test(description) && !/parry/i.test(description)) {
-          row2.name = ENHANCED_BLOCK;
-          row2.level = 1;
-        } else {
-          row2.name = ENHANCED_PARRY_NARROWED;
-          row2.level = 1;
-          if (isUnedited) row2.description = NARROWED_PARRY_NOTE;
-        }
-      }
-      rewritten += 1;
-    }
-  }
-  return rewritten;
-}
-
-// src/lib/language-migration.ts
-var language_migration_exports = {};
-__export(language_migration_exports, {
-  NATIVE_RENAMES: () => NATIVE_RENAMES,
-  migrateLanguages: () => migrateLanguages
-});
-var DROIDSPEAK_ROW = "Droidspeak (Native, binary) [0]";
-var splitEntries2 = (field) => String(field ?? "").split(";").map((e) => e.trim()).filter(Boolean);
-var FLOOR_ENTRIES = /* @__PURE__ */ new Set([
-  "Basic (Broken) [0]",
-  "Basic (Accented) [0]",
-  "Basic (Fluent) [0]",
-  "Galactic Basic (Broken) [0]",
-  "Galactic Basic (Accented) [0]",
-  "Galactic Basic (Fluent) [0]"
-]);
-var FLOOR_OFFSET_ENTRY = "Galactic Basic (Accented) [4]";
-var NATIVE_RENAMES = {
-  "Weequay": [{ from: "Weequay (Native) [0]", to: "Sriluurian (Native) [0]" }],
-  "Bothan": [{ from: "Bothan (Native) [0]", to: "Bothese (Native) [0]" }],
-  "Zabrak": [{ from: "Zabrak (Native) [0]", to: "Zabraki (Native) [0]" }],
-  "Sith Pureblood": [{ from: "Sith (Native) [0]", to: "Sith, Ancient (Native) [0]" }],
-  "Dowutin": [{ from: "Dowutin (Native) [0]", to: "Dowuta (Native) [0]" }],
-  // Ch23 ruled the invented dialect out: no attested tongue, Basic is native.
-  "Yoda's Species (Tridactyls)": [{ from: "Ancient Dialect (Native) [0]", to: "Basic (Native) [0]" }],
-  "Echani": [{ from: "Echani (Native) [0]", to: "The Echani tongue (Native) [0]" }],
-  // Ch23 folds the lekku channel into Ryl itself; the separate row goes below.
-  "Twi'lek": [{ from: "Ryl (Native) [0]", to: "Ryl (Native, with silent lekku sign-channel) [0]" }]
+// src/lib/cultural-familiarity-migration.ts
+var CULTURAL_FAMILIARITY_RENAMES = {
+  Ugnaught: [{ from: "Gentes / Cloud City [0]", to: "Gentes [0]" }],
+  // Ch18 prints "Cultural Familiarity (Twi'lek Culture)" - the one species
+  // entry that names a familiarity, so the package took its wording.
+  "Twi'lek": [{ from: "Twi'lek Clans [0]", to: "Twi'lek Culture [0]" }]
 };
-var BINARY_ONLY_DROIDS = /* @__PURE__ */ new Set([
-  "Droid (Astromech)",
-  "Droid (Utility)",
-  "Droid (Hybrid)",
-  "Droid (Assault)",
-  "Droid (Heavy Assault)",
-  "Droid (Elite Assault)"
-]);
-function migrateLanguages(data) {
-  const applied = [];
-  const species6 = String(data?.species ?? "").trim();
-  const isDroid = data?.isDroid === true || species6.startsWith("Droid");
-  let entries = splitEntries2(data?.languages);
-  const originalField = entries.join("; ");
-  if (isDroid) {
-    const quirks2 = Array.isArray(data?.quirks) ? data.quirks : [];
-    const kept = quirks2.filter((q) => String(q?.name ?? "").trim() !== "Droidspeak");
-    if (kept.length !== quirks2.length) {
-      data.quirks = kept;
-      applied.push("Droidspeak quirk removed - it is a Language now (+1 CP, unspent)");
-    }
-    entries = entries.map((e) => e === "Binary (Native) [0]" ? DROIDSPEAK_ROW : e).filter((e) => e !== "communicates in binary tones and direct system interfaces");
-    if (BINARY_ONLY_DROIDS.has(species6)) {
-      entries = entries.map((e) => e === "Basic (Native) [0]" || e === "Basic (comprehension only) [0]" ? "Basic (Comprehension-only) [0]" : e);
-    }
-    if (!entries.some((e) => e.startsWith("Droidspeak"))) entries.unshift(DROIDSPEAK_ROW);
-  } else {
-    const info = speciesLanguageInfo(species6);
-    if (info) {
-      for (const rename of NATIVE_RENAMES[species6] ?? []) {
-        entries = entries.map((e) => e === rename.from ? rename.to : e);
-      }
-      if (species6 === "Twi'lek" && entries.some((e) => e.startsWith("Ryl (Native"))) {
-        entries = entries.filter((e) => e !== "Lekku Sign Language [0]");
-      }
-      const dropFloors = !info.basicNative || entries.includes("Basic (Native) [0]");
-      if (dropFloors) {
-        const before = entries.length;
-        entries = entries.filter((e) => e !== FLOOR_OFFSET_ENTRY && !FLOOR_ENTRIES.has(e));
-        if (entries.length !== before && Number(data?.languagesBaseline ?? 0) >= 4) {
-          if (originalField.includes(FLOOR_OFFSET_ENTRY)) {
-            data.languagesBaseline = Number(data.languagesBaseline) - 4;
-          }
-        }
-      }
-      if (info.cannotSpeakBasic) {
-        const entryIdx = entries.indexOf("Basic, Comprehension-only [0]");
-        const row2 = (data?.skills ?? []).find((s) => String(s?.name ?? "").trim() === "Language (Basic, Comprehension-only)" && Number(s?.points ?? 0) === 0 && Number(s?.baselinePoints ?? 0) === 2);
-        if (row2) {
-          row2.points = 2;
-          row2.baselinePoints = 0;
-          row2.notes = "Fluent comprehension, bought - a Wookiee cannot physically speak Basic (Ch3, Wookiees).";
-          applied.push("comprehension-only Basic is bought now (+2 CP in Skills)");
-        }
-        if (entryIdx >= 0) {
-          entries[entryIdx] = "Basic (Comprehension-only) [2]";
-          if (row2) {
-            data.languagesBaseline = Number(data?.languagesBaseline ?? 0) + 2;
-          } else {
-            applied.push("comprehension-only Basic is bought now (+2 CP)");
-          }
-        }
-      }
-      if (!info.basicNative) {
-        for (const s of data?.skills ?? []) {
-          if (String(s?.name ?? "").trim() !== "Language (Basic)") continue;
-          if (Number(s?.points ?? 0) !== 0 || Number(s?.baselinePoints ?? 0) !== 3) continue;
-          const notes = String(s?.notes ?? "");
-          if (!/native/i.test(notes) || /bilingual/i.test(notes)) continue;
-          s.name = `Language (${info.tongue})`;
-          s.notes = "Native, Fluent - free (Ch3).";
-          applied.push(`free-Basic row became the native tongue: Language (${info.tongue})`);
-        }
-      }
-    }
-  }
-  const nextField = entries.join("; ");
-  if (nextField !== originalField) {
-    data.languages = nextField;
-    applied.push(`languages: "${originalField}" -> "${nextField}"`);
-  }
-  return applied;
-}
-
-// src/lib/sanitizer-null-migration.ts
-var sanitizer_null_migration_exports = {};
-__export(sanitizer_null_migration_exports, {
-  migrateSanitizerNulls: () => migrateSanitizerNulls
-});
-
-// src/components/character-sheet/schemas/character-form-schema.ts
-var character_form_schema_exports = {};
-__export(character_form_schema_exports, {
-  BASE_ATTRIBUTE_VALUE: () => BASE_ATTRIBUTE_VALUE,
-  CHARACTER_FORM_ARRAY_KEYS: () => CHARACTER_FORM_ARRAY_KEYS,
-  HIT_LOCATION_TYPES: () => HIT_LOCATION_TYPES,
-  POINT_COSTS_PRIMARY: () => POINT_COSTS_PRIMARY,
-  POINT_COSTS_SECONDARY: () => POINT_COSTS_SECONDARY,
-  advantageDataSchema: () => advantageDataSchema,
-  ammunitionSchema: () => ammunitionSchema,
-  armorItemSchema: () => armorItemSchema,
-  armorModificationSchema: () => armorModificationSchema,
-  characterSheetSchema: () => characterSheetSchema,
-  customStarshipSchema: () => customStarshipSchema,
-  cyberneticLimbSchema: () => cyberneticLimbSchema,
-  cyberneticUpgradeSchema: () => cyberneticUpgradeSchema,
-  disadvantageDataSchema: () => disadvantageDataSchema,
-  gearSetSchema: () => gearSetSchema,
-  generalEquipmentItemSchema: () => generalEquipmentItemSchema,
-  getCostForAttributeLevelFromBaseline: () => getCostForAttributeLevelFromBaseline,
-  getDamageString: () => getDamageString,
-  hitLocationEntrySchema: () => hitLocationEntrySchema,
-  knownLightsaberFormSchema: () => knownLightsaberFormSchema,
-  levelSchema: () => levelSchema,
-  lightsaberModificationSchema: () => lightsaberModificationSchema,
-  lightsaberSchema: () => lightsaberSchema,
-  neuralImplantSchema: () => neuralImplantSchema,
-  pinnedNotificationSchema: () => pinnedNotificationSchema,
-  starshipArmamentSchema: () => starshipArmamentSchema,
-  starshipSystemSchema: () => starshipSystemSchema,
-  statusEffectPhaseSchema: () => statusEffectPhaseSchema,
-  statusEffectSchema: () => statusEffectSchema,
-  vehicleSchema: () => vehicleSchema,
-  weaponModificationSchema: () => weaponModificationSchema
-});
-
-// src/components/character-sheet/schemas/skills-techniques-powers.ts
-var skills_techniques_powers_exports = {};
-__export(skills_techniques_powers_exports, {
-  combatTechniqueSchema: () => combatTechniqueSchema,
-  forcePowerSchema: () => forcePowerSchema,
-  knownLightsaberFormSchema: () => knownLightsaberFormSchema,
-  skillSchema: () => skillSchema
-});
-var skillSchema = external_exports.object({
-  id: external_exports.string().uuid().optional(),
-  name: external_exports.string().optional().nullable(),
-  level: external_exports.string().optional().nullable(),
-  points: external_exports.number().optional().nullable(),
-  relativeLevel: external_exports.string().optional().nullable(),
-  notes: external_exports.string().optional().nullable(),
-  baselinePoints: external_exports.number().optional().nullable()
-  // For template mode
-});
-var ForcePowerAlignmentEnum = external_exports.enum(["LS", "Grey", "DS"]);
-var forcePowerSchema = external_exports.object({
-  id: external_exports.string().uuid().optional(),
-  name: external_exports.string().optional().nullable(),
-  description: external_exports.string().optional().nullable(),
-  category: external_exports.string().optional().nullable(),
-  level: external_exports.coerce.number().int().min(1).optional().nullable(),
-  cpCost: external_exports.coerce.number().int().optional().nullable(),
-  fpCost: external_exports.coerce.number().int().optional().nullable(),
-  epCost: external_exports.coerce.number().int().optional(),
-  effect: external_exports.string().optional().nullable(),
-  characterTier: external_exports.string().optional().nullable(),
-  baseSkill: external_exports.string().optional().nullable(),
-  alignment: ForcePowerAlignmentEnum.optional().nullable(),
-  requirements: external_exports.string().optional().nullable(),
-  /*
-      A row the player authored rather than took from a catalog.
-  
-      Additive and optional, so every saved sheet predating it reads falsy and
-      behaves exactly as before - no migration. It exists because a blank row and
-      a catalog row awaiting selection are otherwise indistinguishable, and the
-      controls have to differ: a custom entry needs a free-text name and the full
-      tier range, where a catalog entry needs the catalog's own options.
-    */
-  custom: external_exports.boolean().optional(),
-  /*
-      Per-tier effects for a player-authored ability, and which face to show.
-  
-      `effect` remains the live field every consumer reads; tierEffects is the
-      source it resolves from when the tier changes, mirroring what
-      handleLevelSelection does for a catalog row. `confirmed` is presentation
-      only - a custom row reads as a form while being authored and as prose
-      afterwards, and can be reopened. See lib/custom-tiers.ts.
-  
-      Both optional and additive, so every saved sheet predating them loads
-      unchanged and no migration is needed.
-    */
-  tierEffects: external_exports.array(external_exports.object({
-    level: external_exports.coerce.number().int(),
-    effect: external_exports.string().default("")
-  })).optional(),
-  confirmed: external_exports.boolean().optional(),
-  baselinePoints: external_exports.number().optional().nullable()
-  // For template mode
-});
-var combatTechniqueSchema = external_exports.object({
-  id: external_exports.string().uuid().optional(),
-  name: external_exports.string().optional().nullable(),
-  level: external_exports.coerce.number().int().min(1).optional().nullable(),
-  cpCost: external_exports.coerce.number().int().optional().nullable(),
-  fpCost: external_exports.coerce.number().int().optional().nullable(),
-  epCost: external_exports.coerce.number().int().optional().nullable(),
-  effect: external_exports.string().optional().nullable(),
-  characterTier: external_exports.string().optional().nullable(),
-  baseSkill: external_exports.string().optional().nullable(),
-  // Ch9's four technique sections. 'Unarmed' arrived 2026-08-19; the category
-  // is part of the SAVED technique and half the app keys off it, so a section
-  // the enum does not know about fails validation on load rather than showing
-  // up in the wrong accordion.
-  category: external_exports.enum(["Melee", "Unarmed", "Ranged", "Universal"]).optional().nullable(),
-  /*
-      A row the player authored rather than took from a catalog.
-  
-      Additive and optional, so every saved sheet predating it reads falsy and
-      behaves exactly as before - no migration. It exists because a blank row and
-      a catalog row awaiting selection are otherwise indistinguishable, and the
-      controls have to differ: a custom entry needs a free-text name and the full
-      tier range, where a catalog entry needs the catalog's own options.
-    */
-  custom: external_exports.boolean().optional(),
-  /*
-      Per-tier effects for a player-authored ability, and which face to show.
-  
-      `effect` remains the live field every consumer reads; tierEffects is the
-      source it resolves from when the tier changes, mirroring what
-      handleLevelSelection does for a catalog row. `confirmed` is presentation
-      only - a custom row reads as a form while being authored and as prose
-      afterwards, and can be reopened. See lib/custom-tiers.ts.
-  
-      Both optional and additive, so every saved sheet predating them loads
-      unchanged and no migration is needed.
-    */
-  tierEffects: external_exports.array(external_exports.object({
-    level: external_exports.coerce.number().int(),
-    effect: external_exports.string().default("")
-  })).optional(),
-  confirmed: external_exports.boolean().optional(),
-  damageBonus: external_exports.string().optional().nullable(),
-  skillBonus: external_exports.number().optional().nullable(),
-  skillPenalty: external_exports.number().optional().nullable(),
-  selectedWeaponId: external_exports.string().optional().nullable(),
-  baselinePoints: external_exports.number().optional().nullable()
-  // For template mode
-});
-var knownLightsaberFormSchema = external_exports.object({
-  id: external_exports.string().uuid().optional(),
-  name: external_exports.string().optional().nullable(),
-  /*
-      A custom Form's resolved effect for the selected tier.
-  
-      A CATALOG form has none of its own - getFormDetails(name, level) reads the
-      text out of lightsaber-forms.ts, which is why this field never existed. A
-      player-authored one has no catalog row to read from, so the tier text has to
-      live on the sheet. Ch9 gives all three tiered types the same shape - a
-      Description, a Base Skill and a per-tier Effect table - so this brings Forms
-      into line with Powers and Techniques rather than inventing a concept.
-    */
-  effect: external_exports.string().optional().nullable(),
-  custom: external_exports.boolean().optional(),
-  /*
-      Per-tier effects for a player-authored ability, and which face to show.
-  
-      `effect` remains the live field every consumer reads; tierEffects is the
-      source it resolves from when the tier changes, mirroring what
-      handleLevelSelection does for a catalog row. `confirmed` is presentation
-      only - a custom row reads as a form while being authored and as prose
-      afterwards, and can be reopened. See lib/custom-tiers.ts.
-  
-      Both optional and additive, so every saved sheet predating them loads
-      unchanged and no migration is needed.
-    */
-  tierEffects: external_exports.array(external_exports.object({
-    level: external_exports.coerce.number().int(),
-    effect: external_exports.string().default("")
-  })).optional(),
-  confirmed: external_exports.boolean().optional(),
-  level: external_exports.coerce.number().int().min(1, "Level must be at least 1").optional().nullable(),
-  baselinePoints: external_exports.number().optional().nullable()
-  // For template mode
-});
-
-// src/components/character-sheet/schemas/equipment-and-weapons.ts
-var equipment_and_weapons_exports = {};
-__export(equipment_and_weapons_exports, {
-  ALL_MOD_CATEGORIES: () => ALL_MOD_CATEGORIES,
-  AMMUNITION_TYPES: () => AMMUNITION_TYPES,
-  ARMOR_MOD_CATEGORIES: () => ARMOR_MOD_CATEGORIES,
-  BODY_SIDES: () => BODY_SIDES,
-  EQUIPMENT_CONDITION: () => EQUIPMENT_CONDITION,
-  HIT_LOCATION_TYPES: () => HIT_LOCATION_TYPES,
-  LIGHTSABER_MOD_CATEGORIES: () => LIGHTSABER_MOD_CATEGORIES,
-  WEAPON_MOD_CATEGORIES: () => WEAPON_MOD_CATEGORIES,
-  ammunitionSchema: () => ammunitionSchema,
-  armorComponentSlotSchema: () => armorComponentSlotSchema,
-  armorDrEntrySchema: () => armorDrEntrySchema,
-  armorItemSchema: () => armorItemSchema,
-  armorModificationSchema: () => armorModificationSchema,
-  customBlasterSchema: () => customBlasterSchema,
-  customExplosiveSchema: () => customExplosiveSchema,
-  customMeleeWeaponSchema: () => customMeleeWeaponSchema,
-  customStarshipSchema: () => customStarshipSchema,
-  cyberneticLimbSchema: () => cyberneticLimbSchema,
-  cyberneticUpgradeSchema: () => cyberneticUpgradeSchema,
-  gearSetSchema: () => gearSetSchema,
-  generalEquipmentItemSchema: () => generalEquipmentItemSchema,
-  heldLocationIdsSchema: () => heldLocationIdsSchema,
-  hitLocationEntrySchema: () => hitLocationEntrySchema,
-  itemModifiersSchema: () => itemModifiersSchema,
-  lightsaberModificationSchema: () => lightsaberModificationSchema,
-  lightsaberSchema: () => lightsaberSchema,
-  lightsaberSlotSchema: () => lightsaberSlotSchema,
-  meleeComponentEntrySchema: () => meleeComponentEntrySchema,
-  meleeDamageModeSchema: () => meleeDamageModeSchema,
-  modularPieceSchema: () => modularPieceSchema,
-  neuralImplantSchema: () => neuralImplantSchema,
-  starshipArmamentSchema: () => starshipArmamentSchema,
-  starshipSystemSchema: () => starshipSystemSchema,
-  vehicleSchema: () => vehicleSchema,
-  weaponModificationSchema: () => weaponModificationSchema
-});
-
-// src/lib/blaster-gas-grades.ts
-var blaster_gas_grades_exports = {};
-__export(blaster_gas_grades_exports, {
-  GAS_GRADES: () => GAS_GRADES,
-  GAS_GRADE_IDS: () => GAS_GRADE_IDS,
-  damageDiceCount: () => damageDiceCount,
-  gasGradeEffect: () => gasGradeEffect,
-  getGasGrade: () => getGasGrade
-});
-var GAS_GRADE_IDS = [
-  "training",
-  "budget",
-  "standard",
-  "refined",
-  "ionized",
-  "spinSealed",
-  "invisible",
-  "purple"
-];
-var GAS_GRADES = [
-  {
-    id: "training",
-    label: "Training-grade",
-    boltColor: "Orange",
-    boltHex: "#f97316",
-    costPerLb: 30,
-    legalityClass: null,
-    effect: "Half damage, typed end (Endurance)",
-    damageBonus: 0,
-    perDie: false,
-    heavyOnly: false,
-    halveDamage: true,
-    retypeTo: "end",
-    surRider: false,
-    malfMod: 0,
-    foeDefenseMod: null,
-    hardToLocate: false,
-    ionVsDroids: false
-  },
-  {
-    id: "budget",
-    label: "Budget Blend",
-    boltColor: "Yellow",
-    boltHex: "#eab308",
-    costPerLb: 50,
-    legalityClass: null,
-    effect: "Printed stats; Malf 1 worse",
-    damageBonus: 0,
-    perDie: false,
-    heavyOnly: false,
-    halveDamage: false,
-    retypeTo: null,
-    surRider: false,
-    malfMod: -1,
-    foeDefenseMod: null,
-    hardToLocate: false,
-    ionVsDroids: false
-  },
-  {
-    id: "standard",
-    label: "Standard Tibanna",
-    boltColor: "Red",
-    boltHex: "#ef4444",
-    costPerLb: 75,
-    legalityClass: null,
-    effect: "Baseline \u2014 all printed weapon stats assume it",
-    damageBonus: 0,
-    perDie: false,
-    heavyOnly: false,
-    halveDamage: false,
-    retypeTo: null,
-    surRider: false,
-    malfMod: 0,
-    foeDefenseMod: null,
-    hardToLocate: false,
-    ionVsDroids: false
-  },
-  {
-    id: "refined",
-    label: "Refined Tibanna",
-    boltColor: "Green",
-    boltHex: "#22c55e",
-    costPerLb: 150,
-    legalityClass: null,
-    effect: "+1 flat damage",
-    damageBonus: 1,
-    perDie: false,
-    heavyOnly: false,
-    halveDamage: false,
-    retypeTo: null,
-    surRider: false,
-    malfMod: 0,
-    foeDefenseMod: null,
-    hardToLocate: false,
-    ionVsDroids: false
-  },
-  {
-    id: "ionized",
-    label: "Ionized Tibanna",
-    boltColor: "Blue",
-    boltHex: "#3b82f6",
-    costPerLb: 150,
-    legalityClass: null,
-    effect: "Damage gains the sur (Surge) rider; vs droids and electronics, treat as ion",
-    damageBonus: 0,
-    perDie: false,
-    heavyOnly: false,
-    halveDamage: false,
-    retypeTo: null,
-    surRider: true,
-    malfMod: 0,
-    foeDefenseMod: null,
-    hardToLocate: false,
-    ionVsDroids: true
-  },
-  {
-    id: "spinSealed",
-    label: "Spin-Sealed Tibanna",
-    boltColor: "White-hot",
-    boltHex: "#f8fafc",
-    costPerLb: 300,
-    legalityClass: "2",
-    effect: "+1 damage per die; heavy-class weapons only; LC 2",
-    damageBonus: 0,
-    perDie: true,
-    heavyOnly: true,
-    halveDamage: false,
-    retypeTo: null,
-    surRider: false,
-    malfMod: 0,
-    foeDefenseMod: null,
-    hardToLocate: false,
-    ionVsDroids: false
-  },
-  {
-    id: "invisible",
-    label: "Invisible-grade",
-    boltColor: "None (invisible beam)",
-    boltHex: null,
-    costPerLb: 500,
-    legalityClass: "1",
-    effect: "-2 to active defenses against it; the shooter is hard to locate; LC 1",
-    damageBonus: 0,
-    perDie: false,
-    heavyOnly: false,
-    halveDamage: false,
-    retypeTo: null,
-    surRider: false,
-    malfMod: 0,
-    foeDefenseMod: -2,
-    hardToLocate: true,
-    ionVsDroids: false
-  },
-  {
-    id: "purple",
-    label: "Purple Variants",
-    boltColor: "Purple",
-    boltHex: "#a855f7",
-    costPerLb: 200,
-    legalityClass: null,
-    effect: "No mechanical change",
-    damageBonus: 0,
-    perDie: false,
-    heavyOnly: false,
-    halveDamage: false,
-    retypeTo: null,
-    surRider: false,
-    malfMod: 0,
-    foeDefenseMod: null,
-    hardToLocate: false,
-    ionVsDroids: false
-  }
-];
-function getGasGrade(id) {
-  if (!id) return null;
-  return GAS_GRADES.find((g) => g.id === id) ?? null;
-}
-function damageDiceCount(damage) {
-  const m = String(damage).match(/^(\d+)\s*d/i);
-  return m ? Number(m[1]) : 0;
-}
-function gasGradeEffect(id, damage, isHeavyClass) {
-  const none = {
-    flatBonus: 0,
-    retypeTo: null,
-    typeSuffix: "",
-    malfMod: 0,
-    halveDamage: false,
-    notes: []
-  };
-  const g = getGasGrade(id);
-  if (!g || g.id === "standard") return none;
-  const notes = [];
-  let flatBonus = g.damageBonus;
-  if (g.perDie) {
-    if (isHeavyClass) {
-      flatBonus += damageDiceCount(damage);
-    } else {
-      notes.push(`${g.label} (${g.boltColor} bolt): +1 damage per die applies to heavy-class weapons only \u2014 no bonus on this weapon. LC ${g.legalityClass}.`);
-    }
-  }
-  if (g.halveDamage) {
-    notes.push(`${g.label} (${g.boltColor} bolt): roll the weapon's full damage, then halve it \u2014 round down, no minimum \u2014 and it lands as EP (Endurance), overriding the weapon's own damage type and riders.`);
-  }
-  if (g.surRider) {
-    notes.push(`${g.label} (${g.boltColor} bolt): the bolt gains the sur (Surge) rider. Vs droids and electronics, treat the damage as ion.`);
-  }
-  if (g.foeDefenseMod != null) {
-    notes.push(`${g.label} (no visible bolt): \u22122 to a defender's active defenses against this shot, and the shooter is hard to locate. LC ${g.legalityClass}.`);
-  }
-  if (g.id === "spinSealed" && isHeavyClass) {
-    notes.push(`${g.label} (${g.boltColor} bolt): +1 damage per die. LC ${g.legalityClass}.`);
-  }
-  if (g.id === "refined") {
-    notes.push(`${g.label} (${g.boltColor} bolt): +1 flat damage.`);
-  }
-  if (g.id === "budget") {
-    notes.push(`${g.label} (${g.boltColor} bolt): printed stats, but Malf 1 worse.`);
-  }
-  if (g.id === "purple") {
-    notes.push(`${g.label} (${g.boltColor} bolt): prestige load; no mechanical change.`);
-  }
-  return {
-    flatBonus,
-    retypeTo: g.retypeTo,
-    typeSuffix: g.surRider ? " sur" : "",
-    malfMod: g.malfMod,
-    halveDamage: g.halveDamage,
-    notes
-  };
-}
-
-// src/components/character-sheet/schemas/equipment-and-weapons.ts
-var AMMUNITION_TYPES = ["Power Packs", "Power Cell", "Magazine", "Fuel Canister", "Dart Magazine", "Rounds", "Missile"];
-var WEAPON_MOD_CATEGORIES = [
-  "Sights/Optics",
-  "Power Cell",
-  "Barrel/Emitter",
-  "Stock/Chassis",
-  "Trigger Assembly",
-  "Magazine/Feed System",
-  "Barrel/Muzzle",
-  "Fuel System",
-  "Nozzle/Igniter",
-  "Deployment Mechanism",
-  "Housing/Concealment",
-  "Payload / Feed Mechanism",
-  "Launch Tube / Projector",
-  "Melee Grip",
-  "Melee Head",
-  "Melee Guard",
-  "Melee Power Unit",
-  "Melee Power Cell",
-  // Melee modification categories, distinct from the part categories above.
-  "hiltGripMod",
-  "powerUnitMod",
-  "bladeHeadMod",
-  "edgeAccentMod",
-  "Ranged Grip",
-  "Ranged Receiver",
-  "Ranged Barrel",
-  "Ranged Targeting",
-  "Power Unit"
-];
-var ARMOR_MOD_CATEGORIES = [
-  "Underlay",
-  "Helmet Systems",
-  "Utility Hardpoint",
-  "Shield Emitter",
-  "Shield Power Core",
-  "Shield Capacitor",
-  "Droid Chassis",
-  "Droid Processor",
-  "Droid Sensor",
-  "Droid Appendage",
-  "Droid Motive",
-  "Integrated Mod",
-  "Overlay Mod",
-  "Underlay Mod",
-  "Utility Mod",
-  /*
-      Ch13 COMPONENTS - what a Piece is made OF - as distinct from the Mods
-      above, which are fitted into the slots a Piece's Frame provides.
-  
-      The chapter draws that line itself and prices the two sides differently:
-      components are marked up twice on the way to a wearable Piece (Phase 1
-      Assembly, Phase 2 Fitting), while "Mods are separate. They are built and
-      priced on their own ... and installed into a finished Piece without
-      changing the Piece's own price."
-  
-      They share `armorModifications` as storage because that array is already
-      taught to the eight layers a top-level array has to survive - the schema,
-      CHARACTER_FORM_ARRAY_KEYS, export, import, the collision prompt, storage
-      locations, the parts UI and the dead-code sweep - and every one of those is
-      a place an unnamed field gets silently dropped. `category` is what carries
-      the distinction, and the Overlay/Underlay selectors filter on it, so a
-      Shell can never be offered as an Overlay.
-    */
-  "Armor Shell",
-  "Armor Backing",
-  "Armor Frame",
-  "Armor Visor",
-  "Armor Trim"
-];
-var LIGHTSABER_MOD_CATEGORIES = [
-  "Emitter Part",
-  "Switch Part",
-  "Sleeve Part",
-  "Pommel Part",
-  "Coupler Part",
-  "Grip Wrap",
-  "Lightsaber Power Cell",
-  "Lightsaber Lens",
-  "Lightsaber Emitter Matrix",
-  "Lightsaber Primary Crystal",
-  "Lightsaber Power Crystal"
-];
-var ALL_MOD_CATEGORIES = [...WEAPON_MOD_CATEGORIES, ...LIGHTSABER_MOD_CATEGORIES];
-var HIT_LOCATION_TYPES = [
-  "Head",
-  "Face",
-  "Torso",
-  "Upper Torso",
-  "Vitals",
-  "Arm",
-  "Leg",
-  "Hand",
-  "Foot",
-  "Striker",
-  "Sensor",
-  "Processor",
-  "Utility Mount"
-];
-var EQUIPMENT_CONDITION = ["Fine", "Damaged", "Broken", "Destroyed"];
-var gearSetSchema = external_exports.object({
-  id: external_exports.string(),
-  name: external_exports.string(),
-  /** Ids into `armor`. An id that no longer resolves is shown as missing. */
-  memberIds: external_exports.array(external_exports.string()).default([])
-});
-var BODY_SIDES = ["Left", "Right", "Center", "Other"];
-var hitLocationEntrySchema = external_exports.object({
-  id: external_exports.string().uuid(),
-  name: external_exports.string(),
-  type: external_exports.enum(HIT_LOCATION_TYPES),
-  /*
-      Which side of the body this location sits on.
-  
-      Side used to live only inside `name`, which worked while every character was
-      a standard biped and broke as soon as Ch13 addressed the ones that are not:
-      an arm growing from the chest has no left or right to parse, and the paired
-      DR fields (drLeftArm/drRightArm) have nowhere to put a third. Stated rather
-      than inferred, it also pairs a hand to its arm - Ch13's rule that losing an
-      arm takes the hand with it needs to know which hand.
-  
-      Optional: older sheets have it derived from the name on read. See sideOf().
-    */
-  side: external_exports.enum(BODY_SIDES).optional().nullable(),
-  /*
-      Where this part actually sits, in the player's own words.
-  
-      `name`, `type` and `side` are as much as the rules need, and they stop short
-      of describing a body: Ch13 addresses characters who are not standard bipeds,
-      but "Arm / Center" says nothing about an arm growing from between the
-      shoulder blades, and a Besalisk's four arms are four rows that differ only
-      by side. This is free text for the parts the plan does not describe -
-      prosthetics, extra appendages, and everything on a droid.
-  
-      Never parsed. Nothing derives from it; it exists so the sheet can hold what
-      the character looks like.
-    */
-  locationNote: external_exports.string().optional().nullable(),
-  relativeSM: external_exports.coerce.number().default(0),
-  isOrganic: external_exports.boolean().default(true),
-  status: external_exports.enum(["Healthy", "Crippled", "Destroyed", "Corrupted"]).default("Healthy"),
-  innateDR: external_exports.number().default(0),
-  currentDegradation: external_exports.number().default(0),
-  isAmputated: external_exports.boolean().default(false),
-  parentRoll: external_exports.number().int().optional().nullable(),
-  installedHardwareIds: external_exports.array(external_exports.string().uuid()).default([])
-});
-var itemModifiersSchema = external_exports.object({
-  strength: external_exports.number().default(0),
-  dexterity: external_exports.number().default(0),
-  iq: external_exports.number().default(0),
-  health: external_exports.number().default(0),
-  will: external_exports.number().default(0),
-  perception: external_exports.number().default(0),
-  move: external_exports.number().default(0),
-  dodge: external_exports.number().default(0),
-  dr: external_exports.number().default(0),
-  carryCapacity: external_exports.number().default(0),
-  endurancePoints: external_exports.number().default(0),
-  forcePoints: external_exports.number().default(0),
-  toHit: external_exports.number().default(0),
-  basicSpeed: external_exports.number().default(0),
-  hitPoints: external_exports.number().default(0),
-  /** See the note on `traitModifiersSchema` - Fright is its own stack, not Will's. */
-  frightCheck: external_exports.number().default(0),
-  /** The active defences. Ch10's "+1 to Parry/Block" was written as Dodge
-      until these existed. See `NUMERIC_MODIFIER_CHANNELS`. */
-  parry: external_exports.number().default(0),
-  block: external_exports.number().default(0),
-  /* Ch9's roll to shake off stun - see modifier-channels.ts. */
-  stunRecovery: external_exports.number().default(0),
-  strikingSt: external_exports.number().default(0),
-  liftingSt: external_exports.number().default(0),
-  kickDamage: external_exports.number().default(0),
-  jumpDistance: external_exports.number().default(0),
-  /** A state, never a big number. See `traitModifiersSchema`. */
-  frightImmune: external_exports.boolean().default(false),
-  /** Ch2's proportional Move penalties - identity 1, harshest wins. See
-      `MULTIPLIER_MODIFIER_CHANNELS`. */
-  moveMultiplier: external_exports.number().default(1)
-});
-var neuralImplantSchema = external_exports.object({
-  id: external_exports.string().uuid(),
-  name: external_exports.string(),
-  cost: external_exports.number(),
-  /*
-    `.nullable()` is legacy tolerance, not a live convention: saves made
-    before 2026-08-27 went through a sanitizer that wrote every undefined as
-    null, so existing documents carry `baseCp: null` where the form held
-    nothing. The sanitizer now omits undefined keys; these accept the nulls
-    already in the wild so those characters can save again. Consumers read
-    both through `?? 0`.
-  */
-  baseCp: external_exports.number().optional().nullable(),
-  finalCp: external_exports.number().optional().nullable(),
-  effect: external_exports.string(),
-  pathways: external_exports.array(external_exports.string()),
-  category: external_exports.enum(["Neural", "Sensory", "Utility"]).default("Neural"),
-  modifiers: itemModifiersSchema.partial().optional().nullable(),
-  notes: external_exports.string().optional().nullable(),
-  installed: external_exports.boolean().default(false),
-  storageLocationId: external_exports.string().uuid().optional().nullable(),
-  location: external_exports.enum(["Head", "Face", "Torso", "Any"]).default("Head"),
-  slotType: external_exports.enum(["Neural", "Eye", "Ear", "Utility"]).default("Neural"),
-  weight: external_exports.number().default(0.1),
-  itemSizeModifier: external_exports.coerce.number().nullable().default(null)
-});
-var cyberneticUpgradeSchema = external_exports.object({
-  id: external_exports.string().uuid(),
-  name: external_exports.string(),
-  cost: external_exports.number(),
-  weight: external_exports.number().default(0),
-  effect: external_exports.string(),
-  requiresType: external_exports.string().optional().nullable(),
-  requiresExtent: external_exports.string().optional().nullable(),
-  equipped: external_exports.boolean().default(false),
-  quantity: external_exports.number().int().min(1).default(1),
-  storageLocationId: external_exports.string().uuid().optional().nullable(),
-  itemSizeModifier: external_exports.coerce.number().nullable().default(null)
-});
-var cyberneticLimbSchema = external_exports.object({
-  id: external_exports.string().uuid(),
-  name: external_exports.string(),
-  location: external_exports.enum(["Right Arm", "Left Arm", "Right Leg", "Left Leg", "Right Hand", "Left Hand", "Right Foot", "Left Foot", "Extra Arm", "Extra Leg", "Tail", "Tentacle", "Sensor Mast", "Striker"]),
-  extent: external_exports.enum(["Partial", "Full"]),
-  material: external_exports.string(),
-  cost: external_exports.number(),
-  weight: external_exports.number(),
-  dr: external_exports.number().default(0),
-  // Nullable for the same legacy-sanitizer reason as the implant CP pair.
-  currentDr: external_exports.number().optional().nullable(),
-  hasSynthskin: external_exports.boolean().default(false),
-  upgrades: external_exports.array(external_exports.object({
-    id: external_exports.string().uuid().optional(),
-    name: external_exports.string(),
-    cost: external_exports.number(),
-    effect: external_exports.string()
-  })).default([]),
-  effect: external_exports.string().optional().nullable(),
-  notes: external_exports.string().optional().nullable(),
-  installed: external_exports.boolean().default(false),
-  storageLocationId: external_exports.string().uuid().optional().nullable(),
-  baselinePoints: external_exports.number().default(0),
-  quantity: external_exports.number().default(1),
-  itemSizeModifier: external_exports.coerce.number().nullable().default(null)
-});
-var ammunitionSchema = external_exports.lazy(() => external_exports.object({
-  id: external_exports.string().uuid().optional(),
-  name: external_exports.string().min(1, "Name is required"),
-  type: external_exports.enum(AMMUNITION_TYPES),
-  currentCharges: external_exports.number().int().default(0),
-  maxCharges: external_exports.number().int().default(0),
-  cost: external_exports.number().default(0),
-  weight: external_exports.number().default(0),
-  quantity: external_exports.number().int().min(1).default(1),
-  notes: external_exports.string().optional().nullable(),
-  formula: external_exports.string().optional().nullable(),
-  damageTypeOverride: external_exports.string().optional().nullable(),
-  gasGrade: external_exports.enum(GAS_GRADE_IDS).optional().nullable(),
-  storageLocationId: external_exports.string().uuid().optional().nullable(),
-  isInstalled: external_exports.boolean().default(false).optional().nullable(),
-  installedInDroidId: external_exports.string().optional().nullable(),
-  isLibraryItem: external_exports.boolean().default(false).optional().nullable(),
-  isContainer: external_exports.boolean().default(false).optional().nullable(),
-  /*
-      Must match the Ammunition interface above, which allows Rounds and Magazine.
-  
-      It did not: the ten individual slugs in the catalog (Pistol Round
-      (Standard), the Rifle and Cycler rounds, and so on) all ship
-      containerType 'Rounds', so buying a single round produced a sheet that
-      TypeScript accepted and the save path rejected.
-    */
-  containerType: external_exports.enum(["Pistol", "Rifle", "Cycler", "Flamer", "Rounds", "Magazine", "None"]).optional().nullable(),
-  baseCost: external_exports.number().optional().nullable(),
-  baseWeight: external_exports.number().optional().nullable(),
-  contents: external_exports.array(ammunitionSchema).default([]),
-  _isEquipSource: external_exports.boolean().optional().nullable()
-}));
-var weaponModificationSchema = external_exports.object({
-  id: external_exports.string().uuid(),
-  name: external_exports.string(),
-  // Shared by weapon and lightsaber modifications, so it must span both sets.
-  category: external_exports.enum(ALL_MOD_CATEGORIES),
-  cost: external_exports.number(),
-  weight: external_exports.number().optional().nullable(),
-  notes: external_exports.string().optional().nullable(),
-  effect: external_exports.string().optional().nullable(),
-  equipped: external_exports.boolean().optional().default(false),
-  quantity: external_exports.number().int().min(1).default(1),
-  storageLocationId: external_exports.string().uuid().optional().nullable(),
-  isInstalled: external_exports.boolean().default(false).optional().nullable(),
-  installedInSaberId: external_exports.string().uuid().optional().nullable(),
-  installedInMeleeId: external_exports.string().uuid().optional().nullable(),
-  installedInBlasterId: external_exports.string().uuid().optional().nullable(),
-  installedInDroidId: external_exports.string().uuid().optional().nullable(),
-  energyResBonus: external_exports.number().default(0),
-  /*
-      Which Ch11/Ch12 component this row IS.
-  
-      Both structural resolvers already read it - melee-assembly's and
-      ranged-assembly's `InventoryRow` types each declare `partId` and each try
-      `meleePartById(row.partId)` / `rangedPartById(row.partId)` FIRST - but the
-      schema did not, and Zod strips what it does not declare. So the id was
-      written by the pickers, survived until the sheet was saved, and was gone on
-      load: every owned component fell through to the name branch forever.
-  
-      Name matching is not equivalent. It is what armorModificationSchema.partId
-      was added to escape, for the reason recorded there - the catalog prints one
-      "Standard Receiver", and the second one a character buys is a second row
-      with the same name and a different material. The same shape as
-      `materials` above and `armorItemSchema.materials`: a field read by the app,
-      declared in the reader's own type, and silently absent from the contract
-      that has to carry it across a save.
-    */
-  partId: external_exports.string().optional().nullable(),
-  materialId: external_exports.string().optional().nullable(),
-  wrapId: external_exports.string().optional().nullable(),
-  volume: external_exports.number().optional().nullable(),
-  density: external_exports.number().optional().nullable(),
-  durMod: external_exports.number().optional().nullable(),
-  componentClass: external_exports.string().optional().nullable(),
-  isFractured: external_exports.boolean().default(false).optional(),
-  /*
-      Ch11's Silicon gate reads this off the ROW, and Zod strips what it does not
-      declare - so without this line every modification lost its material list the
-      moment it went through the schema, and `modCarriesSilicon` returned false
-      for all 18 Silicon-bearing mods in the catalog.
-  
-      The consequence was not cosmetic. A Silicon mod install owes Ch11's Computer
-      Programming firmware handshake and 90 minutes (30 seating + 60 firmware);
-      read as mechanical it skipped the roll entirely and took 30. Installing a
-      Holographic Sight was free of the software phase after any save and load.
-  
-      Same defect and same repair as `armorItemSchema.materials`, whose comment
-      records the load-path strip that repriced Rokarr's Fatigue Boots. Three
-      layers strip unnamed fields; schema presence is what makes a field survive.
-    */
-  materials: external_exports.array(external_exports.object({
-    name: external_exports.string(),
-    amount: external_exports.number()
-  })).optional().nullable()
-});
-var armorModificationSchema = external_exports.object({
-  id: external_exports.string().uuid(),
-  name: external_exports.string(),
-  category: external_exports.enum(ARMOR_MOD_CATEGORIES),
-  cost: external_exports.number(),
-  weight: external_exports.number().optional().nullable(),
-  notes: external_exports.string().optional().nullable(),
-  equipped: external_exports.boolean().optional().default(false),
-  quantity: external_exports.number().int().min(1).default(1),
-  validSlots: external_exports.array(external_exports.string()).optional().default([]),
-  drBonus: external_exports.number().optional().nullable(),
-  storageLocationId: external_exports.string().uuid().optional().nullable(),
-  isInstalled: external_exports.boolean().default(false).optional().nullable(),
-  installedInDroidId: external_exports.string().optional().nullable(),
-  /*
-      Which Ch13 component this row IS, for rows in the five Armor * categories.
-  
-      Stats are read from the catalog through this id rather than by matching
-      `name`, which is how the melee path resolves its parts. Name matching
-      survives exactly until a player owns two of something: Ch13 prints one
-      "Torso Backing", and the second one a character buys is a second row with
-      the same name and different stats the moment either is damaged.
-  
-      Null on Mods, which have no component catalog behind them.
-    */
-  partId: external_exports.string().optional().nullable(),
-  /** Shell and Visor rows: the ARMOR_MATERIALS id they were cut from. */
-  materialId: external_exports.string().optional().nullable(),
-  /** Set while this component is consumed into a Piece being assembled. */
-  installedInArmorId: external_exports.string().optional().nullable()
-});
-var armorComponentSlotSchema = external_exports.object({
-  partId: external_exports.string().nullable().default(null),
-  inventoryId: external_exports.string().uuid().nullable().default(null)
-});
-var lightsaberModificationSchema = weaponModificationSchema;
-var generalEquipmentItemSchema = external_exports.object({
-  id: external_exports.string().uuid(),
-  name: external_exports.string().optional().nullable(),
-  weight: external_exports.coerce.number().default(0),
-  /*
-    Deliberately weightless gear - a Padawan's braid, a tattoo kit's ink, a
-    keepsake that weighs nothing worth tracking. The only thing that reads
-    this is the Zero-Weight warning, which skips a row that declares it; no
-    total, price or encumbrance figure counts it. Optional and nullable so
-    every sheet saved before it existed still parses.
-  */
-  weightless: external_exports.boolean().optional().nullable(),
-  cost: external_exports.coerce.number().default(0),
-  description: external_exports.string().optional().nullable(),
-  category: external_exports.string().optional().nullable(),
-  subCategory: external_exports.string().optional().nullable(),
-  quantity: external_exports.coerce.number().min(0).default(1),
-  dr: external_exports.coerce.number().optional().nullable(),
-  damage: external_exports.string().optional().nullable(),
-  modifier: external_exports.string().optional().nullable(),
-  skill: external_exports.string().optional().nullable(),
-  storageLocationId: external_exports.string().uuid().optional().nullable(),
-  isInstalled: external_exports.boolean().default(false).optional().nullable(),
-  installedInDroidId: external_exports.string().optional().nullable(),
-  installedInBlasterId: external_exports.string().optional().nullable(),
-  installedInArmorId: external_exports.string().optional().nullable(),
-  modifiers: itemModifiersSchema.partial().optional().nullable(),
-  condition: external_exports.enum(EQUIPMENT_CONDITION).default("Fine"),
-  storedValue: external_exports.number().optional().nullable(),
-  denominationValue: external_exports.number().optional().nullable(),
-  currentCharges: external_exports.number().int().optional().nullable(),
-  maxCharges: external_exports.number().int().optional().nullable(),
-  /*
-    Ch10 Blueprints. A Blueprint is a Datacard whose content is a construction
-    schematic; these fields are what the crafting dialog reads to price it,
-    apply its build bonus, and gate copying. Zod strips undeclared keys on
-    load, so absence here would silently delete every Blueprint on import.
-  */
-  blueprintOf: external_exports.string().optional().nullable(),
-  blueprintGeneration: external_exports.coerce.number().int().min(0).optional().nullable(),
-  blueprintProven: external_exports.boolean().optional().nullable(),
-  blueprintLocked: external_exports.boolean().optional().nullable(),
-  /*
-      A FUNCTION FIRMWARE DATACARD, and the same lattice one chapter over.
-  
-      Ch10 gives firmware the Blueprint's generation rules, and the penalty does
-      TWO jobs from one sentence: "-1 per generation of the source" on the copy
-      roll, and "-1 per generation to the Firmware Flashing roll of any device
-      flashed from it." The second is the one that half-wires, because a card that
-      stores its generation and never carries it into the build is correct on a
-      Generation 0 card - the only card anyone tests with.
-  
-      So the field exists to be READ at flash time, not only written at copy time.
-      `firmwareEncoded` is Ch10's licensed commercial card, which needs a Slicing
-      roll at -4 before it can be copied at all.
-    */
-  isFirmwareCard: external_exports.boolean().optional().nullable(),
-  firmwareGeneration: external_exports.coerce.number().int().min(0).optional().nullable(),
-  firmwareEncoded: external_exports.boolean().optional().nullable(),
-  firmwareFee: external_exports.coerce.number().min(0).optional().nullable(),
-  /*
-      TWO FLAWS, TWO LIFETIMES - and they must never be the same flag.
-  
-      `blueprintFlawed` is Ch10's Design Phase critical sitting on the SCHEMATIC.
-      `flawedBuild` sits on an ITEM that was built from one.
-  
-      The chapter now settles the question the old wording left open: "Correcting
-      it takes a fresh Design Phase roll at +2, and that correction reaches the
-      schematic only. Items already built keep the flaw, because a corrected
-      drawing does not reach a finished object; a flawed item is put right by
-      Deconstructing it and rebuilding from the corrected Blueprint."
-  
-      So clearing `blueprintFlawed` must NOT clear `flawedBuild` on anything - one
-      shared flag would have got that wrong silently, fixing every object ever
-      made the moment the drawing was corrected.
-    */
-  blueprintFlawed: external_exports.boolean().optional().nullable(),
-  /*
-    The composed components, so a saved card still knows what it is a schematic
-    of. Zod strips undeclared keys on load, so without this the parts would
-    survive the session and vanish on the next import.
-  */
-  blueprintParts: external_exports.array(external_exports.object({
-    name: external_exports.string(),
-    category: external_exports.string().optional().default(""),
-    cost: external_exports.coerce.number().default(0),
-    weight: external_exports.coerce.number().default(0)
-  })).optional().nullable(),
-  flawedBuild: external_exports.boolean().optional().nullable(),
-  /*
-      Ch10: a critically failed read leaves the card "bricked PENDING a Computer
-      Programming roll at -2 to unlock it". Pending is the whole clause - it is
-      the one degraded-but-recoverable state in the Datacard rules, and the app
-      used to delete the row instead, collapsing it into a fourth outcome the
-      book never states.
-  
-      The pattern it sits against: a failed write leaves the card "undamaged and
-      can be re-attempted", a failed read leaves it "undamaged", and Ch13's
-      flashing failure says "the Datacard itself is undamaged, no need to buy
-      another". Three undamaged outcomes and one bricked-pending; none destroyed.
-    */
-  blueprintBricked: external_exports.boolean().optional().nullable(),
-  blueprintOrigin: external_exports.enum(["catalog", "original"]).optional().nullable(),
-  /*
-      The design's Construction Markup, kept so locking and copying can re-derive
-      the price from the book's formula instead of rescaling the stored one.
-  
-      Ch10's price is media + a share of markup, and the stored cost has already
-      been ceiled. Doubling that on a lock compounds the rounding - 174 + 583x2
-      gives 1,340 where the formula gives 1,339 - which is the same "never scale
-      a price you already rounded" rule the armor and weapon paths follow.
-  
-      Optional because cards written before this field existed carry no markup;
-      those fall back to rescaling, which is what they were priced by anyway.
-    */
-  blueprintMarkup: external_exports.coerce.number().optional().nullable(),
-  /*
-      The CRAFTING_DEFINITIONS family this design is built under.
-  
-      Catalog Blueprints do not need it - planBlueprintBuild resolves their name
-      against craftableDesigns() and reads the family off the design. A HOMEBREW
-      card has no such design to resolve, and until this field existed it had
-      nothing else either: every custom Blueprint returned kind 'unknown' and was
-      unbuildable by construction, whatever the player paid for it.
-  
-      The custom dialog was already asking for the family - Ch10 prices a homebrew
-      design off "what the item is built like", and the phase multiplier comes
-      from the family - and then discarded it once the markup was computed. The
-      one value that could route the card was collected and thrown away.
-  
-      Optional because catalog cards do not carry it and cards written before this
-      field existed do not either.
-    */
-  blueprintFamily: external_exports.string().optional().nullable()
-});
-var armorDrEntrySchema = external_exports.object({
-  locationId: external_exports.string().uuid(),
-  dr: external_exports.number().default(0)
-});
-var heldLocationIdsSchema = external_exports.array(external_exports.string().uuid()).default([]);
-var armorItemSchema = external_exports.object({
-  id: external_exports.string().uuid(),
-  name: external_exports.string(),
-  type: external_exports.string().default("Clothing"),
-  slot: external_exports.enum(["Head", "Face", "Torso", "Legs", "Hands", "Feet", "Belt", "Utility", "Accessory", "Droid Head", "Droid Torso", "Droid Arm", "Droid Leg"]),
-  drHead: external_exports.number().nullable().optional(),
-  drFace: external_exports.number().nullable().optional(),
-  drTorso: external_exports.number().nullable().optional(),
-  drLeftArm: external_exports.number().nullable().optional(),
-  drRightArm: external_exports.number().nullable().optional(),
-  drLeftLeg: external_exports.number().nullable().optional(),
-  drRightLeg: external_exports.number().nullable().optional(),
-  drLeftHand: external_exports.number().nullable().optional(),
-  drRightHand: external_exports.number().nullable().optional(),
-  drLeftFoot: external_exports.number().nullable().optional(),
-  drRightFoot: external_exports.number().nullable().optional(),
-  dxPenalty: external_exports.number().nullable().optional(),
-  movePenalty: external_exports.number().nullable().optional(),
-  weight: external_exports.number(),
-  cost: external_exports.number(),
-  notes: external_exports.string().nullable().optional(),
-  penalties: external_exports.string().optional(),
-  effects: external_exports.string().optional(),
-  quantity: external_exports.number().int().default(1),
-  equipped: external_exports.boolean().default(false),
-  isActive: external_exports.boolean().default(false).optional(),
-  integratedSlots: external_exports.number().int().default(0),
-  overlaySlots: external_exports.number().int().default(0),
-  underlaySlots: external_exports.number().int().default(0),
-  utilitySlots: external_exports.number().int().default(0),
-  integratedModId: external_exports.string().uuid().nullable().optional(),
-  overlayModId: external_exports.string().uuid().nullable().optional(),
-  underlayModId: external_exports.string().uuid().nullable().optional(),
-  utilityModId: external_exports.string().uuid().nullable().optional(),
-  storageLocationId: external_exports.string().uuid().nullable().optional(),
-  finalCoveredLocations: external_exports.array(external_exports.string()).default([]),
-  coveredLocationIds: external_exports.array(external_exports.string().uuid()).default([]),
-  /*
-      The one limb this piece is worn on, for gear priced per extremity.
-  
-      Ch13: "A Hand Plate or Glove covers one hand; a Foot Plate or Boot covers
-      one foot", and it is explicit that "a Glove on one hand and a Gauntlet
-      weapon on the other is legal". One item covering every hand at once cannot
-      express that - there is a single `equipped` flag for the pair, so the second
-      glove comes off with the first.
-  
-      Bound to a hit location rather than a side. Anatomy here is arbitrary: the
-      Body tab lets a character add limbs, so an arm can come out of the middle of
-      the chest and Left/Right is not a model, only a common case. A location id
-      is the only thing that identifies a limb on a body with four arms, or three.
-  
-      Null on everything else. A Leg Plate covers both legs however many there
-      are, and a Torso Plate covers one torso, so those keep fanning out.
-    */
-  wornLocationId: external_exports.string().uuid().nullable().optional(),
-  /*
-    Which handbook set this piece was created AS part of (a handbookSets id,
-    e.g. 'preset-recon' or 'clothing-jedi-robes'). Identity, stamped at
-    creation - the set panel used to re-derive membership from names on every
-    render, so a lone worn piece could regroup out of Worn Gear into a 1/5
-    preset suit on reload. Null for pieces acquired on their own; those still
-    match sets by name, but can never be claimed AWAY from the set they were
-    stamped for.
-  */
-  setId: external_exports.string().nullable().optional(),
-  drEntries: external_exports.array(armorDrEntrySchema).default([]),
-  isInstalled: external_exports.boolean().default(false),
-  installedInDroidId: external_exports.string().nullable().optional(),
-  modifiers: itemModifiersSchema.partial().nullable().optional(),
-  /*
-      Cleared means "unsized", not zero.
-  
-      A number input yields "" while the player is mid-edit - clearing the box to
-      retype it, or typing a lone "-" - and a bare z.number() rejected that with
-      "Expected number, received string". Tailoring a piece to your own SM is
-      exactly when you clear this field, so the save failed at the worst moment.
-    */
-  itemSizeModifier: external_exports.preprocess((v) => {
-    if (v === null || v === void 0 || v === "") return null;
-    const n = Number(v);
-    return Number.isFinite(n) ? n : null;
-  }, external_exports.number().nullable().optional()),
-  modifiedForAnatomy: external_exports.boolean().default(false),
-  // Power System
-  loadedPowerCellId: external_exports.string().uuid().nullable().optional(),
-  loadedPowerCellData: ammunitionSchema.nullable().optional(),
-  currentCharges: external_exports.number().int().nullable().optional(),
-  maxCharges: external_exports.number().int().nullable().optional(),
-  // Damage System
-  condition: external_exports.enum(EQUIPMENT_CONDITION).default("Fine"),
-  durability: external_exports.number().int().default(10).optional(),
-  // Construction State
-  isConstructed: external_exports.boolean().default(false),
-  /*
-      Ch10's ghost glitch, on the ITEM rather than the schematic.
-  
-      Set when this was built from a flawed Blueprint. It has its own lifetime:
-      "that correction reaches the schematic only. Items already built keep the
-      flaw" - so clearing blueprintFlawed must never clear this. A flawed item is
-      put right by Deconstructing it and rebuilding from a corrected Blueprint.
-    */
-  flawedBuild: external_exports.boolean().optional().nullable(),
-  /*
-      Authored on this sheet, rather than loaded from a save written under the
-      old flat model.
-  
-      migrateArmorItem exists to resolve legacy armour onto a Ch13 Piece, and it
-      fires on anything carrying no pieceId - which is exactly what a brand-new
-      custom item looks like. So every custom Piece was silently migrated into
-      its tier's DEFAULT_MATERIAL_BY_TIER, which is Durasteel, and handed the
-      listed DR of a Piece nobody had chosen: the card showed a material the
-      player could not change and read Broken because it had not been given that
-      Piece's DR.
-  
-      A custom build has no Piece until the player picks one. Persisted, because
-      the migration runs again on every load.
-    */
-  isCustomBuild: external_exports.boolean().default(false).optional(),
-  /*
-      WHERE this Piece came from, and the reason it is stored rather than derived.
-  
-      Fulllion's ruling is that both routes exist: free placement for GMs and
-      pre-campaign gear, where any component may be fitted with no inventory
-      requirement, and staged construction from inventory for in-campaign builds,
-      where the components are consumed and the character rolls the chapter's
-      phases.
-  
-      The two produce the SAME finished item. Nothing about a built Piece's
-      stats, weight or price distinguishes it from a placed one - which means the
-      distinction cannot be recovered by looking at it, and while it lived only
-      in component state it did not survive a reload. That is the whole reason no
-      check could assert that an in-campaign build consumed inventory: after a
-      save there was nothing left that said a build had happened.
-  
-        'placed'  - materialised. The parts were created with the Piece.
-        'built'   - constructed. The parts came out of the player's inventory.
-        null      - a bought catalog Piece, or a sheet written before this field.
-  
-      Set ONCE, at creation. A later component swap does not rewrite it: swapping
-      a Frame on a GM-placed Piece does not turn it into something the character
-      built, and re-deriving provenance from the current component set would say
-      exactly that.
-    */
-  buildProvenance: external_exports.enum(["placed", "built"]).nullable().optional(),
-  // --- Chapter 13 three-tier model ---
-  // Set when the item resolves to a catalog Armor Piece. Legacy items saved
-  // under the old flat model have these undefined until migrated on load.
-  pieceId: external_exports.string().nullable().optional(),
-  tier: external_exports.enum(["Light", "Medium", "Heavy"]).nullable().optional(),
-  materialId: external_exports.string().nullable().optional(),
-  /*
-      The Frame/Mounting this Piece was built with, and the ONLY thing that sets
-      its Mod Slot count.
-  
-      Ch13's Quick-Build table is "Mod Slots by Frame", not by tier: "A Piece's
-      tier sets its default Frame (Light/Medium/Heavy tier -> Light/Standard/
-      Heavy Frame), but a crafter may fit any Frame to any Piece and take that
-      Frame's slot count instead."
-  
-      Every catalog Piece carries its tier's default, so reading slots off the
-      tier agreed with the book on all 70 of them - and would have gone on
-      agreeing forever, right up until a player fitted a Heavy Frame to a Light
-      Plate for the extra slots, which is the one case the rule exists for.
-    */
-  frame: external_exports.enum(["Light", "Standard", "Heavy"]).nullable().optional(),
-  /*
-      The five components this Piece is assembled from.
-  
-      Ch13: "assembly order is Components -> Piece -> Mods -> Fitting. A Piece is
-      built from its five components ... each is either fabricated from raw
-      material or bought pre-made, then assembled together." A bought catalog
-      Piece leaves all five empty and carries a pieceId instead; the two are
-      alternatives, not layers.
-    */
-  shellPart: armorComponentSlotSchema.nullable().optional(),
-  backingPart: armorComponentSlotSchema.nullable().optional(),
-  framePart: armorComponentSlotSchema.nullable().optional(),
-  visorPart: armorComponentSlotSchema.nullable().optional(),
-  trimPart: armorComponentSlotSchema.nullable().optional(),
-  /** Head Plates: Sealed also covers Face; Open-Face leaves Face DR 0. */
-  sealed: external_exports.boolean().nullable().optional(),
-  /*
-    Face gear only. Ch13: "Face Gear further subdivides into Upper Face, Lower
-    Face, and Full Face coverage - two Upper/Lower items can theoretically be
-    worn together, but a Full Face item takes the whole slot." The contest in
-    enforceBaseLayer keys on this, so it must survive a save - Zod strips
-    unknown keys, which is how a coverage stated only on the catalog row would
-    quietly stop applying to a renamed or custom item.
-  */
-  faceCoverage: external_exports.enum(["Upper Face", "Lower Face", "Full Face"]).nullable().optional(),
-  /** Torso Plates: a sleeveless design grants no Arm DR. */
-  sleeveless: external_exports.boolean().nullable().optional(),
-  /*
-      What is left of a Piece after the limb it covered was cut off.
-  
-      Ch13: "If a limb is severed ... the armor or clothing covering that specific
-      limb is severed with it in the same blow -- this is not a later alteration
-      or a trip to a workshop." The remnant is worth the limb's per-limb baseline
-      and "can be salvaged, not Deconstructed (combat damage leaves it too
-      irregular for a clean teardown)", so it is a scrap item that happens to live
-      in the armour list: never wearable, never deconstructable.
-    */
-  isSeveredRemnant: external_exports.boolean().nullable().optional(),
-  /** The limb it came off, for the item's name and for salvage provenance. */
-  severedFrom: external_exports.string().nullable().optional(),
-  /**
-   * Ready-made Belt or Personal Energy Shield from the Ch13 catalog. Belts and
-   * shields are Housing + Control Circuit + Power Cell + Function Datacard, so
-   * they are catalogued separately from Armor Pieces.
-   */
-  utilityId: external_exports.string().nullable().optional(),
-  // Calculated fields (Schema only)
-  finalDRValue: external_exports.number().optional().nullable(),
-  finalWeight: external_exports.number().optional().nullable(),
-  finalCost: external_exports.number().optional().nullable(),
-  finalMovePenalty: external_exports.number().optional().nullable(),
-  finalDXPenalty: external_exports.number().optional().nullable(),
-  notesAndEffects: external_exports.string().optional().nullable(),
-  baseArmorType: external_exports.string().optional().nullable(),
-  baseDRValue: external_exports.number().optional().nullable(),
-  baseDRNotes: external_exports.string().optional().nullable(),
-  baseWeight: external_exports.number().optional().nullable(),
-  baseCost: external_exports.number().optional().nullable(),
-  baseMovePenalty: external_exports.number().optional().nullable(),
-  baseDXPenalty: external_exports.number().optional().nullable(),
-  /*
-      What the Piece is made of, and which construction phase it takes.
-  
-      Not decoration: Ch13 prices a scaled garment off its scaled WEIGHT, so
-      calculateModifiedArmor needs the material list to re-derive at a non-zero
-      SM. Zod strips unknown keys, so leaving these out of the schema quietly
-      dropped them on load - the template carried them, the sheet did not, and
-      Rokarr's Fatigue Boots fell back to scaling the catalog price: 35 CR beside
-      the chapter's 34. Nothing else disagreed, because weight does not need the
-      list and every SM 0 character prices identically either way.
-  
-      They also have to survive Export/Import, which is the same field list.
-    */
-  materials: external_exports.array(external_exports.object({
-    name: external_exports.string(),
-    amount: external_exports.number()
-  })).optional().nullable(),
-  craftingCategory: external_exports.string().optional().nullable(),
-  craftingCP: external_exports.number().optional().nullable()
-});
-var meleeDamageModeSchema = external_exports.object({
-  label: external_exports.string(),
-  stType: external_exports.enum(["sw", "thr", "none"]),
-  bonus: external_exports.number(),
-  bonusDice: external_exports.number().optional(),
-  type: external_exports.string()
-});
-var modularPieceSchema = external_exports.object({
-  partId: external_exports.string().nullable().default(null),
-  materialId: external_exports.string().nullable().default(null),
-  inventoryId: external_exports.string().uuid().nullable().default(null)
-});
-var meleeComponentEntrySchema = external_exports.object({
-  partId: external_exports.string().nullable().default(null),
-  materialId: external_exports.string().nullable().default(null),
-  inventoryId: external_exports.string().nullable().default(null),
-  quantity: external_exports.number().int().min(1).default(1)
-});
-var customMeleeWeaponSchema = external_exports.object({
-  id: external_exports.string().uuid(),
-  customName: external_exports.string(),
-  baseType: external_exports.string(),
-  baseSkill: external_exports.string(),
-  damageModes: external_exports.array(meleeDamageModeSchema).optional(),
-  /*
-      Derived, not authored. useMeleeWeaponCalculations sets baseReach from the
-      fitted grip or head, and totals weight and cost from the parts into
-      finalWeight/finalCost - nothing ever adds these three in.
-  
-      Requiring them meant every melee weapon added from the library refused to
-      save: the selection dialog provisions the components and never writes these
-      fields, so the sheet failed validation with "Required" against a weapon the
-      player had just picked from a list.
-    */
-  baseReach: external_exports.string().default("1"),
-  baseWeight: external_exports.number().default(0),
-  baseCost: external_exports.number().default(0),
-  /*
-      Each slot holds a LIST of components, not one.
-  
-      Over half of Ch12's melee weapons need it - 19 of 37 - and in three
-      different ways, which is why nothing narrower works:
-  
-        17  Utility carrying a generator AND a power cell, priced separately
-         3  the same component twice, written "(x2)" - a Double-Bladed Sword is
-            two Light Blades, a Vibro Double-Blade two of nearly everything
-         2  two DIFFERENT components in a non-Utility slot - a Gaderffii's
-            Striking Head is a Heavy Cleaver and a Thrusting Point
-  
-      A quantity alone cannot express the Gaderffii, and a second Utility slot
-      cannot express the Double-Bladed Sword; both were the general case seen
-      through one weapon. A list of {component, quantity} per slot covers all
-      nineteen.
-  
-      Anything a slot cannot hold gets orphaned rather than rejected - installed,
-      paid for, and referenced by nothing - which is how a Power Cell went missing
-      from every powered weapon in the catalog and a Bowcaster's Magnetic Coils
-      from three more.
-    */
-  gripParts: external_exports.array(meleeComponentEntrySchema).default([]),
-  headParts: external_exports.array(meleeComponentEntrySchema).default([]),
-  guardParts: external_exports.array(meleeComponentEntrySchema).default([]),
-  // Ch12 "Step 4: Power Units" - structural components of the build, not
-  // treatments. Unpowered weapons leave this empty.
-  utilityParts: external_exports.array(meleeComponentEntrySchema).default([]),
-  /*
-    Superseded by the lists above and kept only so a saved sheet can be read
-    before migrateMeleeComponentLists converts it. Nothing writes these.
-  */
-  gripPart: modularPieceSchema.optional(),
-  headPart: modularPieceSchema.optional(),
-  guardPart: modularPieceSchema.nullable().optional(),
-  powerUnitId: external_exports.string().nullable().optional(),
-  powerCellId: external_exports.string().nullable().optional(),
-  hiltGripModId: external_exports.string().uuid().nullable().optional(),
-  bladeHeadModId: external_exports.string().uuid().nullable().optional(),
-  edgeAccentModId: external_exports.string().uuid().nullable().optional(),
-  maxCharges: external_exports.number().int().nullable().optional(),
-  currentCharges: external_exports.number().int().nullable().optional(),
-  finalDamage: external_exports.string().optional().nullable(),
-  finalDamageType: external_exports.string().optional().nullable(),
-  finalReach: external_exports.string().optional().nullable(),
-  finalWeight: external_exports.number().optional().nullable(),
-  finalCost: external_exports.number().optional().nullable(),
-  finalParryMod: external_exports.number().default(0),
-  /*
-      Ch12's U, and the two values that decide it, written by
-      useMeleeWeaponCalculations and DECLARED ON NO SCHEMA until now - so Zod
-      stripped all three on every save. They were computed, rendered, and gone on
-      reload, which is the same one-session lifetime `hiltType` had.
-  
-      `canParryWhileAttacking` is per-character, not per-weapon - "unless you have
-      1.5x the weapon's required ST" - so it is a cache of a derived answer rather
-      than authored data. It is stored anyway because the hook already writes it
-      and a field that is written must be a field that exists; the hook recomputes
-      it on mount either way.
-    */
-  finalStRequirement: external_exports.number().optional().nullable(),
-  isUnbalanced: external_exports.boolean().optional().nullable(),
-  canParryWhileAttacking: external_exports.boolean().optional().nullable(),
-  /*
-    The U/◊ turn-state gates, ENFORCED since the 2026-08-28 ruling (they were
-    display riders). `lastAttackTurn` is the turnCounter value when this
-    weapon last attacked - Ch12's U rule reads "in a turn you Attack", and
-    equality against the live counter is the whole test, so nothing sweeps
-    it. `isUnready` is Ch12's ◊ state: set by an attack below the 1.5x Min-ST
-    lift, cleared only by a Ready maneuver (Ch7) - it deliberately SURVIVES
-    the turn change, which is why it is state and not a same-turn comparison.
-  */
-  lastAttackTurn: external_exports.number().int().optional().nullable(),
-  isUnready: external_exports.boolean().optional().nullable(),
-  notesAndEffects: external_exports.string().optional().nullable(),
-  equipped: external_exports.boolean().default(false),
-  equippedAt: external_exports.number().optional().nullable(),
-  /** See heldLocationIdsSchema. */
-  heldLocationIds: heldLocationIdsSchema,
-  quantity: external_exports.number().int().default(1),
-  storageLocationId: external_exports.string().uuid().nullable().optional(),
-  selectedDamageMode: external_exports.number().int().default(0),
-  pendingHits: external_exports.number().int().default(0),
-  energyRes: external_exports.number().default(0),
-  isConstructed: external_exports.boolean().default(false),
-  /*
-      Ch10's ghost glitch, on the ITEM rather than the schematic.
-  
-      Set when this was built from a flawed Blueprint. It has its own lifetime:
-      "that correction reaches the schematic only. Items already built keep the
-      flaw" - so clearing blueprintFlawed must never clear this. A flawed item is
-      put right by Deconstructing it and rebuilding from a corrected Blueprint.
-    */
-  flawedBuild: external_exports.boolean().optional().nullable(),
-  // Damage System
-  /*
-      Null means "not measured yet", which is not the same as 0 - the same
-      distinction the lightsaber schema above already makes, arrived at the same
-      way and for the same reason.
-  
-      A melee weapon's Durability is derived from its components, so a design
-      with no parts has no figure. Defaulting BOTH of these to 10 did not make a
-      new weapon read Broken, which is why it went unnoticed; it did something
-      quieter and worse. hasBeenMeasured(10) is true, so the shared "unmeasured
-      is not destroyed" guard could never fire for this family at all - the
-      sentinel was destroyed at the schema, one layer below the guard written to
-      respect it. And the invented 10 then stuck: once components gave the weapon
-      a real maxDurability of, say, 26, `durability` was already 10 rather than
-      null, so the initialiser below could not fill it in, and a weapon that had
-      never been struck arrived at 10/26 - Damaged, with Field Repair offered on
-      a freshly forged blade.
-  
-      0 has to stay available as a real maxDurability, because that is what an
-      unbuilt weapon genuinely has, and -1 remains Destroyed.
-    */
-  durability: external_exports.number().int().nullable().default(null),
-  maxDurability: external_exports.number().int().default(0),
-  currentDurability: external_exports.number().int().optional().nullable(),
-  condition: external_exports.enum(EQUIPMENT_CONDITION).default("Fine"),
-  malfunction: external_exports.number().int().default(17),
-  /*
-    How this weapon came to exist: 'placed' by a GM or pre-campaign loadout,
-    'built' through Ch12's phases out of the player's own inventory, or null
-    for one that was simply bought. Set once at creation and never re-derived -
-    re-deriving it from the component set says a GM placement became a player
-    build the moment someone swapped a grip.
-  */
-  buildProvenance: external_exports.enum(["placed", "built"]).nullable().default(null)
-});
-var customBlasterSchema = external_exports.object({
-  id: external_exports.string().uuid(),
-  customName: external_exports.string(),
-  baseType: external_exports.string(),
-  baseSkill: external_exports.string(),
-  // Modular Structural Parts
-  /*
-    Five slots, one declaration. `targetingPart` was an inline literal holding
-    only `inventoryId` - the shape the other four had already outgrown - so it
-    would have been the one slot left unable to express a design while looking
-    like its siblings. Ch11 Step 4 buys targeting modules and power units
-    finished rather than milling them, so neither reads `materialId`; carrying
-    the field costs nothing and keeps the five slots one thing.
-  */
-  gripPart: modularPieceSchema.default({}),
-  receiverPart: modularPieceSchema.default({}),
-  barrelPart: modularPieceSchema.default({}),
-  targetingPart: modularPieceSchema.default({}),
-  powerUnitPart: modularPieceSchema.nullable().default(null),
-  // Legacy/Internal base stats
-  baseDamageDice: external_exports.number().int().default(0),
-  baseDamageAdds: external_exports.number().int().default(0),
-  baseDamageType: external_exports.string().default("burn"),
-  baseAccuracy: external_exports.number().int().default(0),
-  baseHalfDamageRange: external_exports.number().int().default(0),
-  baseRateOfFire: external_exports.number().int().default(1),
-  chargesPerShot: external_exports.number().int().default(1),
-  baseShots: external_exports.number().int().default(0),
-  baseRecoil: external_exports.number().int().default(1),
-  baseStrength: external_exports.coerce.string().default("0"),
-  baseWeight: external_exports.number().default(0),
-  baseCost: external_exports.number().default(0),
-  /*
-      Ch11's Modification Slots, each holding an OWNED weaponModifications row.
-  
-      Same wall as the saber internals, and the same additive fix: a `*PartId`
-      companion naming the WEAPON_MOD_DATA template, so a slot can record "this
-      weapon is designed around a Holographic Sight" without the character
-      owning one. These dropdowns never had a Direct Library Access branch at
-      all - not gated, absent - so a blaster's modification slots could only ever
-      be filled from stock the player had already bought.
-  
-      Bought finished goods, like the internals: Ch11 prints a shelf price for
-      each, so a design that names one owes that price outright and the build
-      plan lists it rather than deriving anything from a material.
-    */
-  sightsOpticsModId: external_exports.string().uuid().nullable().optional(),
-  sightsOpticsModPartId: external_exports.string().nullable().default(null),
-  powerCellModId: external_exports.string().uuid().nullable().optional(),
-  powerCellModPartId: external_exports.string().nullable().default(null),
-  barrelEmitterModId: external_exports.string().uuid().nullable().optional(),
-  barrelEmitterModPartId: external_exports.string().nullable().default(null),
-  stockChassisModId: external_exports.string().uuid().nullable().optional(),
-  stockChassisModPartId: external_exports.string().nullable().default(null),
-  triggerAssemblyModId: external_exports.string().uuid().nullable().optional(),
-  triggerAssemblyModPartId: external_exports.string().nullable().default(null),
-  magazineFeedModId: external_exports.string().uuid().nullable().optional(),
-  magazineFeedModPartId: external_exports.string().nullable().default(null),
-  barrelMuzzleModId: external_exports.string().uuid().nullable().optional(),
-  barrelMuzzleModPartId: external_exports.string().nullable().default(null),
-  fuelSystemModId: external_exports.string().uuid().nullable().optional(),
-  fuelSystemModPartId: external_exports.string().nullable().default(null),
-  nozzleIgniterModId: external_exports.string().uuid().nullable().optional(),
-  nozzleIgniterModPartId: external_exports.string().nullable().default(null),
-  deploymentModId: external_exports.string().uuid().nullable().optional(),
-  deploymentModPartId: external_exports.string().nullable().default(null),
-  housingModId: external_exports.string().uuid().nullable().optional(),
-  housingModPartId: external_exports.string().nullable().default(null),
-  payloadFeedModId: external_exports.string().uuid().nullable().optional(),
-  payloadFeedModPartId: external_exports.string().nullable().default(null),
-  launchTubeModId: external_exports.string().uuid().optional().nullable(),
-  launchTubeModPartId: external_exports.string().nullable().default(null),
-  loadedAmmunitionId: external_exports.string().uuid().nullable().optional(),
-  loadedAmmunitionData: ammunitionSchema.nullable().optional(),
-  loadedExplosiveId: external_exports.string().uuid().nullable().optional(),
-  loadedExplosiveData: external_exports.any().nullable().optional(),
-  lastFiredExplosive: external_exports.any().nullable().optional(),
-  stingerReservoir: external_exports.array(ammunitionSchema).default([]),
-  selectedVolleyIndices: external_exports.array(external_exports.number()).default([]),
-  lastVolley: external_exports.array(ammunitionSchema).default([]),
-  firedRounds: external_exports.array(external_exports.any()).default([]),
-  currentCharges: external_exports.number().int().nullable().optional(),
-  maxCharges: external_exports.number().int().nullable().optional(),
-  finalDamage: external_exports.string().optional().nullable(),
-  finalDamageType: external_exports.string().optional().nullable(),
-  finalAccuracy: external_exports.number().optional().nullable(),
-  /*
-      Ch11's range is a PAIR - "1/2D and Max" - and this field holds it as the
-      chapter prints it: "100/400", "180/2000", and for the short-ranged barrels
-      a bare "10" or "20".
-  
-      THIS WAS z.number(), AND IT BLOCKED SAVING. `calculateBlasterStats` writes
-      `barrel?.range || '100/400'` here, and the writeback loop copies every key
-      it returns onto the weapon - so the first time any blaster's card rendered,
-      a string landed in a number field and the whole sheet stopped validating.
-      All 51 ranged profiles produce a string; every barrel in ranged-parts-data
-      is one. The field could never legitimately hold a number.
-  
-      The preprocess is for the reverse case only: a sheet saved before this that
-      somehow banked a bare number keeps loading, as a string, rather than
-      becoming a validation error of its own.
-    */
-  finalHalfDamageRange: external_exports.preprocess(
-    (v) => typeof v === "number" ? String(v) : v,
-    external_exports.string().optional().nullable()
-  ),
-  finalRateOfFire: external_exports.string().optional().nullable(),
-  finalShots: external_exports.number().optional().nullable(),
-  finalRecoil: external_exports.number().optional().nullable(),
-  finalWeight: external_exports.number().optional().nullable(),
-  finalBulk: external_exports.number().optional().nullable(),
-  finalST: external_exports.string().optional().nullable(),
-  notesAndEffects: external_exports.string().optional().nullable(),
-  /*
-    Ch11's "Market Cost (CR)" - the assembled weapon, parts and fitted mods and
-    all. useBlasterCalculations has always computed it; it was simply never
-    declared here, so it was written through an `as any` and no reader could
-    see it. The sheet totalled `baseCost + totalUpgradesCost` instead, and
-    baseCost is a field only the starship and melee builders ever set - so
-    every constructed blaster was worth its mods and nothing else.
-  */
-  finalCost: external_exports.number().optional().nullable(),
-  totalUpgradesCost: external_exports.number().default(0),
-  equipped: external_exports.boolean().default(false),
-  equippedAt: external_exports.number().optional().nullable(),
-  /** See heldLocationIdsSchema. */
-  heldLocationIds: heldLocationIdsSchema,
-  stunMode: external_exports.boolean().default(false),
-  quantity: external_exports.number().int().default(1),
-  storageLocationId: external_exports.string().uuid().nullable().optional(),
-  pendingHits: external_exports.number().int().default(0),
-  preferredDefaultAttr: external_exports.enum(["DX", "IQ"]).default("DX"),
-  energyRes: external_exports.number().default(0),
-  isConstructed: external_exports.boolean().default(false),
-  /*
-      Ch10's ghost glitch, on the ITEM rather than the schematic.
-  
-      Set when this was built from a flawed Blueprint. It has its own lifetime:
-      "that correction reaches the schematic only. Items already built keep the
-      flaw" - so clearing blueprintFlawed must never clear this. A flawed item is
-      put right by Deconstructing it and rebuilding from a corrected Blueprint.
-    */
-  flawedBuild: external_exports.boolean().optional().nullable(),
-  /*
-      Null means "not measured yet", which is not the same as 10.
-  
-      This defaulted to 10/10, and 10 is a real Durability - so hasBeenMeasured
-      was satisfied by a figure nobody had derived, and the initialiser in
-      useBlasterCalculations ("if durability is null, fill it from the computed
-      maximum") could never fire. It did not surface as Broken, which is how the
-      saber failed; it surfaced one notch quieter. Pick a Rifle Stock, a Rifle
-      Receiver and a Long Emitter and the components measure 14, while
-      `durability` is still the 10 nobody chose: the weapon arrives at 10/14,
-      STATUS DAMAGED, with Field Repair offered on a design that has never been
-      built - and malfunctionOrBase grades 10-of-14 down to Malf 16, so it jams
-      on a 16 as well as a 17 before it exists.
-  
-      Same field, same rules, same reason as customMeleeWeaponSchema and
-      lightsaberSchema. 0 has to stay available as a real maxDurability, because
-      that is what an unbuilt design honestly has.
-    */
-  durability: external_exports.number().int().nullable().default(null),
-  maxDurability: external_exports.number().int().default(0),
-  currentDurability: external_exports.number().int().optional().nullable(),
-  condition: external_exports.enum(EQUIPMENT_CONDITION).default("Fine"),
-  malfunction: external_exports.number().int().default(17),
-  /* See customMeleeWeaponSchema.buildProvenance - same field, same rules. */
-  buildProvenance: external_exports.enum(["placed", "built"]).nullable().default(null)
-});
-var lightsaberSlotSchema = external_exports.object({
-  partId: external_exports.string().nullable().default(null),
-  materialId: external_exports.string().nullable().default(null),
-  wrapId: external_exports.string().nullable().default(null),
-  inventoryId: external_exports.string().uuid().nullable().default(null)
-});
-var lightsaberSchema = external_exports.object({
-  id: external_exports.string().uuid(),
-  name: external_exports.string(),
-  emitter: lightsaberSlotSchema.default({}),
-  switch: lightsaberSlotSchema.default({}),
-  sleeve: lightsaberSlotSchema.default({}),
-  pommel: lightsaberSlotSchema.nullable().default(null),
-  coupler: lightsaberSlotSchema.nullable().default(null),
-  emitterTwo: lightsaberSlotSchema.nullable().default(null),
-  switchTwo: lightsaberSlotSchema.nullable().default(null),
-  sleeveTwo: lightsaberSlotSchema.nullable().default(null),
-  couplerTwo: lightsaberSlotSchema.nullable().default(null),
-  /*
-      The internals: bought finished goods, not milled hardware.
-  
-      Each of these holds the uuid of an OWNED lightsaberModifications row, which
-      is the same wall the hilt slots hit - a field that can only name a row you
-      have cannot express a design, so the picker's catalog branch had to
-      materialise one. Choosing a Corusca Gem Cell made you own a 3,720 CR cell.
-  
-      The fix is a companion rather than a reshape. Turning `powerCell` into an
-      object would break every reader and every saved sheet; an added
-      `*PartId` is additive, so an old save loads unchanged and a reader that
-      has not been taught about designs keeps seeing exactly what it saw.
-  
-      These differ from hilt hardware in one way that matters, and it is why they
-      were held back from the hilt fix rather than folded into it: Ch12 prints a
-      finished price for each, so a design that names one owes that price outright
-      - it is a purchase deferred, not a component to be milled from a material.
-      planSaberBuild therefore prices them from `cost` and asks for no material.
-    */
-  powerCell: external_exports.string().uuid().nullable().optional(),
-  powerCellPartId: external_exports.string().nullable().default(null),
-  lens: external_exports.string().uuid().nullable().optional(),
-  lensPartId: external_exports.string().nullable().default(null),
-  emitterMatrix: external_exports.string().uuid().nullable().optional(),
-  emitterMatrixPartId: external_exports.string().nullable().default(null),
-  primaryCrystal: external_exports.string().uuid().nullable().optional(),
-  primaryCrystalPartId: external_exports.string().nullable().default(null),
-  primaryCrystalTwo: external_exports.string().uuid().nullable().optional(),
-  primaryCrystalTwoPartId: external_exports.string().nullable().default(null),
-  powerCrystal: external_exports.string().uuid().nullable().optional(),
-  powerCrystalPartId: external_exports.string().nullable().default(null),
-  powerCrystalTwo: external_exports.string().uuid().nullable().optional(),
-  powerCrystalTwoPartId: external_exports.string().nullable().default(null),
-  bladeLength: external_exports.number().default(90),
-  calculatedDamage: external_exports.string().optional().nullable(),
-  calculatedDamageTwo: external_exports.string().optional().nullable(),
-  calculatedDamageType: external_exports.string().default("burn"),
-  combinedEffects: external_exports.string().optional().nullable(),
-  combinedEffectsTwo: external_exports.string().optional().nullable(),
-  totalCost: external_exports.number().default(0),
-  totalWeight: external_exports.number().default(0),
-  finalWeight: external_exports.number().default(0),
-  /*
-    Ch12: a crystal that took micro-fractures during extraction imparts a
-    permanent -1 to attack rolls if reused. Persisted rather than derived at
-    render, because attackSkillFor - the shared resolver the card and the HUD
-    both use - reads the stored saber, not the calculation hook.
-  */
-  /*
-      Ch12's flat Parry bonus from the fitted hilt parts, summed by
-      `assembledSaberParryMod`.
-  
-      The same field `customMeleeWeaponSchema` has carried the whole time, and
-      the Tactical HUD already reads `weapon.finalParryMod` for every weapon it
-      offers a Parry with - so a vibrosword's grip moved the number and a
-      lightsaber's Curved Sleeve, printing +3, moved nothing. `.default(0)` so it
-      is always a number: an absent field is what let `hiltType` disappear.
-    */
-  finalParryMod: external_exports.number().default(0),
-  crystalAttackPenalty: external_exports.number().default(0).optional(),
-  powerCellMaxCharge: external_exports.number().default(0),
-  powerCellCurrentCharge: external_exports.number().default(0),
-  baseSkill: external_exports.string().default("Lightsaber Combat"),
-  equipped: external_exports.boolean().default(false),
-  equippedAt: external_exports.number().optional().nullable(),
-  /** See heldLocationIdsSchema. */
-  heldLocationIds: heldLocationIdsSchema,
-  quantity: external_exports.number().int().default(1),
-  storageLocationId: external_exports.string().uuid().nullable().optional(),
-  pendingHits: external_exports.number().int().default(0),
-  energyRes: external_exports.number().default(0),
-  energyResTwo: external_exports.number().default(0),
-  /*
-      Null means "not measured yet", which is not the same as 0.
-  
-      A saber's Durability is derived from its components, so a new one has no
-      figure until they are priced - and useLightsaberCalculations already fills
-      it in from the computed maximum the first time it sees null. Defaulting to
-      0 meant that initialiser could never fire, and 0 remaining reads as Broken:
-      every custom saber arrived on the sheet broken, and the effect then wrote
-      that Broken into the character. 0 has to stay available as a real value,
-      because that is what a genuinely destroyed blade is set to.
-    */
-  durability: external_exports.number().int().nullable().default(null),
-  maxDurability: external_exports.number().int().default(0),
-  condition: external_exports.enum(EQUIPMENT_CONDITION).default("Fine"),
-  malfunction: external_exports.number().int().default(17),
-  durabilityTwo: external_exports.number().int().nullable().default(null),
-  maxDurabilityTwo: external_exports.number().int().default(0),
-  conditionTwo: external_exports.enum(EQUIPMENT_CONDITION).default("Fine"),
-  malfunctionTwo: external_exports.number().int().default(17),
-  isSplit: external_exports.boolean().default(false),
-  isConstructed: external_exports.boolean().default(false),
-  /*
-      Ch10's ghost glitch, on the ITEM rather than the schematic.
-  
-      Set when this was built from a flawed Blueprint. It has its own lifetime:
-      "that correction reaches the schematic only. Items already built keep the
-      flaw" - so clearing blueprintFlawed must never clear this. A flawed item is
-      put right by Deconstructing it and rebuilding from a corrected Blueprint.
-    */
-  flawedBuild: external_exports.boolean().optional().nullable(),
-  hasHiddenFlaw: external_exports.boolean().default(false),
-  isUnattuned: external_exports.boolean().default(false),
-  classType: external_exports.string().optional().nullable(),
-  /* See customMeleeWeaponSchema.buildProvenance - same field, same rules. */
-  buildProvenance: external_exports.enum(["placed", "built"]).nullable().default(null)
-});
-var customExplosiveSchema = external_exports.object({
-  id: external_exports.string().uuid(),
-  baseExplosiveName: external_exports.string(),
-  type: external_exports.enum(["Grenade", "Mine", "Missile"]).nullable().optional(),
-  quantity: external_exports.number().int().min(1).default(1),
-  finalDamageEffect: external_exports.string().optional().nullable(),
-  finalWeight: external_exports.number().default(0),
-  finalCost: external_exports.number().default(0),
-  finalLegalityClass: external_exports.string().optional().nullable(),
-  baseSkill: external_exports.string().optional().nullable(),
-  customNotes: external_exports.string().optional().nullable(),
-  storageLocationId: external_exports.string().uuid().nullable().optional(),
-  preferredDefaultAttr: external_exports.enum(["DX", "IQ"]).default("DX")
-});
-var starshipSystemSchema = external_exports.object({
-  id: external_exports.string(),
-  name: external_exports.string(),
-  dr: external_exports.number().int(),
-  // `hp` is the player's CURRENT figure, edited on the Damage Control Matrix;
-  // `maxHp` is the ceiling the hull gives it. They were one field, and a
-  // re-derivation wrote the ceiling over the record of a fight. Optional
-  // because sheets saved before the split have no value for it.
-  hp: external_exports.number().int(),
-  maxHp: external_exports.number().int().optional().nullable(),
-  status: external_exports.enum(["Nominal", "Damaged", "Disabled"]),
-  notes: external_exports.string().optional().nullable()
-});
-var starshipArmamentSchema = external_exports.object({
-  name: external_exports.string(),
-  damage: external_exports.string(),
-  skill: external_exports.string()
-});
-var customStarshipSchema = external_exports.object({
-  id: external_exports.string().uuid(),
-  customName: external_exports.string(),
-  baseChassis: external_exports.string(),
-  baseHandling: external_exports.string(),
-  baseSpeed: external_exports.string(),
-  baseAccelDecel: external_exports.string(),
-  baseHp: external_exports.number().int(),
-  baseDr: external_exports.number().int(),
-  baseCrew: external_exports.string(),
-  basePassengers: external_exports.string(),
-  baseCargo: external_exports.string(),
-  baseCost: external_exports.number().int(),
-  baseWeapons: external_exports.string(),
-  baseWeaponSkill: external_exports.string(),
-  baseHyperdrive: external_exports.string(),
-  performanceMod: external_exports.string().nullable().optional(),
-  defensiveMod1: external_exports.string().nullable().optional(),
-  defensiveMod2: external_exports.string().nullable().optional(),
-  offensiveMod1: external_exports.string().nullable().optional(),
-  offensiveMod2: external_exports.string().nullable().optional(),
-  utilityMod1: external_exports.string().nullable().optional(),
-  utilityMod2: external_exports.string().nullable().optional(),
-  offensiveMod1Mount1: external_exports.string().nullable().optional(),
-  offensiveMod1Mount2: external_exports.string().nullable().optional(),
-  offensiveMod2Mount1: external_exports.string().nullable().optional(),
-  offensiveMod2Mount2: external_exports.string().nullable().optional(),
-  finalHandling: external_exports.string().optional().nullable(),
-  finalSpeed: external_exports.string().optional().nullable(),
-  finalHp: external_exports.number().int().optional().nullable(),
-  finalDr: external_exports.number().int().optional().nullable(),
-  finalCost: external_exports.number().int().optional().nullable(),
-  finalHyperdrive: external_exports.string().optional().nullable(),
-  finalNotesAndEffects: external_exports.string().optional().nullable(),
-  customNotes: external_exports.string().optional().nullable(),
-  dpHandlingMod: external_exports.number().int().default(0),
-  dpSpeedMod: external_exports.number().int().default(0),
-  dpAccelMod: external_exports.number().int().default(0),
-  dpHpMod: external_exports.number().int().default(0),
-  dpDrMod: external_exports.number().int().default(0),
-  dpWeaponHardpoints: external_exports.number().int().default(0),
-  dpWeaponMount1: external_exports.string().default("None"),
-  dpWeaponMount2: external_exports.string().default("None"),
-  dpWeaponMount3: external_exports.string().default("None"),
-  dpWeaponMount4: external_exports.string().default("None"),
-  dpHyperdriveMod: external_exports.number().int().default(0),
-  dpCargoMod: external_exports.number().int().default(0),
-  dpPassengerMod: external_exports.number().int().default(0),
-  dpQuirkPoints: external_exports.number().int().default(0),
-  dpSystemQuirks: external_exports.string().default(""),
-  quantity: external_exports.number().int().default(1),
-  storageLocationId: external_exports.string().uuid().nullable().optional(),
-  shipPosition: external_exports.string().nullable().optional(),
-  assignedStation: external_exports.string().nullable().optional(),
-  systems: external_exports.array(starshipSystemSchema).default([]),
-  armaments: external_exports.array(starshipArmamentSchema).default([])
-});
-var vehicleSchema = external_exports.object({
-  id: external_exports.string().uuid(),
-  name: external_exports.string(),
-  type: external_exports.string(),
-  handling: external_exports.string(),
-  speed: external_exports.string(),
-  accelDecel: external_exports.string(),
-  hp: external_exports.number().int(),
-  dr: external_exports.number().int(),
-  crew: external_exports.string(),
-  passengers: external_exports.string(),
-  cargo: external_exports.string(),
-  cost: external_exports.number().int(),
-  weapons: external_exports.string(),
-  weaponSkill: external_exports.string(),
-  hyperdrive: external_exports.string(),
-  notes: external_exports.string().optional().nullable(),
-  customNotes: external_exports.string().optional().nullable(),
-  quantity: external_exports.number().int().default(1),
-  storageLocationId: external_exports.string().uuid().nullable().optional(),
-  // Which of the two vehicle lists this belongs to. Catalog vehicles are placed
-  // by their VEHICLE_DATA category; this pins vehicles that are not in the
-  // catalog (imports, GM inventions) so they cannot fall between both lists.
-  category: external_exports.enum(["Atmospheric", "Terrestrial"]).optional().nullable()
-});
-
-// src/components/character-sheet/schemas/character-form-schema.ts
-var blankToNull = (val) => val === void 0 || val === "" ? null : val;
-var statusEffectPhaseSchema = external_exports.object({
-  name: external_exports.string(),
-  type: external_exports.enum(["buff", "debuff"]).default("debuff"),
-  description: external_exports.string().optional().nullable(),
-  duration: external_exports.string().optional().nullable(),
-  modifiers: external_exports.record(external_exports.string(), external_exports.number()).default({})
-});
-var statusEffectSchema = external_exports.object({
-  id: external_exports.string(),
-  name: external_exports.string().min(1, "Name is required"),
-  type: external_exports.enum(["buff", "debuff"]),
-  source: external_exports.string(),
-  description: external_exports.string().optional().nullable(),
-  isManual: external_exports.boolean().default(false),
-  isGear: external_exports.boolean().default(false),
-  duration: external_exports.string().optional().nullable(),
-  /**
-   * The last Global Turn Counter value this effect is active on; the turn
-   * tracker removes it once the counter passes this. Shock is the producer
-   * (Ch7: "-N to DX and IQ rolls on your next turn" - wound turn plus one):
-   * before this existed, its "NEXT TURN" label was text only and the -3
-   * lasted until someone deleted the row. Absent means the effect does not
-   * expire by turn.
-   */
-  expiresAfterTurn: external_exports.number().int().optional().nullable(),
-  /**
-   * Stages this effect moves through after the current one. A stimulant's
-   * crash, a drug wearing off - the player clicks through them in the HUD
-   * rather than the follow-up only appearing when the effect is dismissed.
-   */
-  phases: external_exports.array(statusEffectPhaseSchema).optional().nullable(),
-  /** Which entry in `phases` comes next. 0 means none have been applied yet. */
-  phaseIndex: external_exports.number().int().default(0).optional(),
-  modifiers: external_exports.object({
-    strength: external_exports.number().default(0),
-    dexterity: external_exports.number().default(0),
-    iq: external_exports.number().default(0),
-    health: external_exports.number().default(0),
-    will: external_exports.number().default(0),
-    perception: external_exports.number().default(0),
-    move: external_exports.number().default(0),
-    dodge: external_exports.number().default(0),
-    dr: external_exports.number().default(0),
-    carryCapacity: external_exports.number().default(0),
-    endurancePoints: external_exports.number().default(0),
-    forcePoints: external_exports.number().default(0),
-    toHit: external_exports.number().default(0),
-    basicSpeed: external_exports.number().default(0),
-    hitPoints: external_exports.number().default(0),
-    /** See the note on `traitModifiersSchema` - Fright is its own stack, not Will's. */
-    frightCheck: external_exports.number().default(0),
-    /** The active defences. Ch10's "+1 to Parry/Block" was written as Dodge
-        until these existed. See `NUMERIC_MODIFIER_CHANNELS`. */
-    parry: external_exports.number().default(0),
-    block: external_exports.number().default(0),
-    /* Ch9's roll to shake off stun - see modifier-channels.ts. */
-    stunRecovery: external_exports.number().default(0),
-    strikingSt: external_exports.number().default(0),
-    liftingSt: external_exports.number().default(0),
-    kickDamage: external_exports.number().default(0),
-    jumpDistance: external_exports.number().default(0),
-    /** A state, never a big number. See `traitModifiersSchema`. */
-    frightImmune: external_exports.boolean().default(false),
-    /**
-     * Ch2's proportional Move penalties - identity 1, reduced by the
-     * harshest rather than summed. This is the channel Force Stasis and
-     * Ch7's Motive System Damage arrive on: both are transient, so both
-     * are status effects rather than traits, and neither had anywhere to
-     * land while the halving was a boolean on a disadvantage row.
-     */
-    moveMultiplier: external_exports.number().default(1)
-  })
-});
-var pinnedNotificationSchema = external_exports.object({
-  id: external_exports.string(),
-  title: external_exports.string().default(""),
-  description: external_exports.string().default(""),
-  variant: external_exports.string().optional().nullable(),
-  /** Epoch ms, so the panel can still say "2h ago" after a reload. */
-  at: external_exports.number().default(0)
-});
-var CHARACTER_FORM_ARRAY_KEYS = [
-  "advantages",
-  "disadvantages",
-  "quirks",
-  "skills",
-  "forcePowers",
-  "combatTechniques",
-  "lightsaberForms",
-  "equipment",
-  "armor",
-  "customBlasters",
-  "customMeleeWeapons",
-  "lightsabers",
-  "customExplosives",
-  "customStarships",
-  "vehicles",
-  "ammunition",
-  "weaponModifications",
-  "lightsaberModifications",
-  "armorModifications",
-  "cyberneticUpgrades",
-  "implants",
-  "cybernetics",
-  "hitLocations"
-];
-var characterSheetSchema = external_exports.object({
-  characterName: external_exports.string().min(1, "Character name is required.").default("Unnamed Character").optional().nullable(),
-  playerName: external_exports.string().optional().nullable(),
-  species: external_exports.string().optional().nullable(),
-  /*
-    Ch2 makes homeworld a required part of character creation, with "Unknown"
-    an explicitly valid answer - Ch18 uses it for Kaelen, whose birth world was
-    never recorded - so this is not validated as non-empty. Ch3 ties a
-    character's free native language to it.
-  */
-  homeworld: external_exports.string().optional().nullable(),
-  characterPortrait: external_exports.string().optional().nullable(),
-  campaign: external_exports.string().optional().nullable(),
-  pointTotal: external_exports.preprocess((val) => val === "" || val === null || val === void 0 ? 150 : val, external_exports.coerce.number().int().default(150)),
-  lastSaved: external_exports.any().optional().nullable(),
-  turnCounter: external_exports.preprocess((val) => val ?? 0, external_exports.coerce.number().int().default(0)),
-  // Ch9 "Do Nothing": a stunned character may still attempt Active Defenses at
-  // -4, and rolls to recover each turn (HT for physical, IQ for mental stun).
-  stunType: external_exports.enum(["None", "Physical", "Mental"]).default("None").optional(),
-  /*
-      Ch7 "Facing", stored as two hexsides with the arc DERIVED from them.
-  
-      `facing` is the hexside the character faces; `incomingBearing` is the one a
-      threat stands on. Hexsides are 0-5 clockwise and purely relative, so which
-      real direction 0 points at is the table's business.
-  
-      Storing the arc instead - which this used to do - freezes a fact that stops
-      being true the moment either combatant moves, and hides the trade Ch7 is
-      built around: spending the free change to bring one attacker into your Front
-      is what puts another in your Rear. Derived, that happens by itself.
-    */
-  facing: external_exports.coerce.number().int().min(0).max(5).default(0).optional(),
-  incomingBearing: external_exports.coerce.number().int().min(0).max(5).default(0).optional(),
-  /*
-      Whether there is a threat to have an arc at all.
-  
-      Out of combat nothing is attacking from anywhere, so gating defences on an
-      arc would be answering a question nobody asked - the sheet would quietly
-      report Block unavailable to a character standing in a cantina. The bearing
-      itself is kept while disengaged rather than cleared, so stepping out of a
-      fight and back into it does not lose which side the enemy was on.
-    */
-  threatEngaged: external_exports.boolean().default(false).optional(),
-  /*
-      Every other threat on the board, by hexside.
-  
-      `incomingBearing` is the one the defence panel resolves against; these are
-      the rest. Ch7's arcs are per attack, not per character - three attackers are
-      in three arcs at once - so the sheet cannot answer for all of them with one
-      set of defences, but it can show where they are and let the player pick
-      which attack they are defending.
-  
-      That is also where the chapter's own point becomes visible: turning to bring
-      one into your Front is what puts another behind you, and with several on the
-      dial you watch it happen.
-    */
-  additionalBearings: external_exports.array(external_exports.coerce.number().int().min(0).max(5)).default([]).optional(),
-  /*
-      Superseded by the two above, and read only by migrateFacing on load so a
-      sheet saved under the old model keeps the arc its player left it on.
-      Nothing writes an arc to it.
-  
-      That last sentence was false for as long as it stood here. The defence
-      panel kept a dropdown bound to this field and gated all three Active
-      Defenses on whatever it held - a STORED arc, which is the one thing the
-      facing model exists to avoid. It could not be moved by turning, and no
-      vision trait could shift it, so the dial and the panel disagreed by
-      construction. The comment is what let the control look accounted for.
-    */
-  incomingArc: external_exports.enum(["Front", "Side", "Rear"]).optional().nullable(),
-  // Ch7: "A character may change facing once per round, freely" - so this is
-  // spent rather than paid for, and clears when the turn counter moves.
-  facingChangeUsed: external_exports.boolean().default(false).optional(),
-  /*
-    Ch9 "Change Posture": one of the chapter's seven postures, stored like
-    facing and derived from each time it is read (posture-rules.ts). Absent on
-    every sheet saved before 2026-09-10, and absent means standing - the only
-    posture that changes nothing. Whether the posture's modifiers reach the
-    derived numbers is a sheet PREFERENCE (applyPosture), not a field here:
-    the posture is a fact about the character, the toggle is how one player
-    likes to read the sheet.
-  */
-  posture: external_exports.enum(POSTURES).default(DEFAULT_POSTURE).optional(),
-  /*
-    Elevation in yards above (negative: below) the table's ground level, ruled
-    2026-09-10. A recorded value with no derived number keyed on it - the one
-    rule that reads it, Ch7's blast distance, needs two positions. Exported
-    beside posture so Waypoint can seed a token's elevation from it. Hidden
-    behind the trackElevation preference, which hides the field and keeps the
-    value. Blank and null are 0, as sizeModifier does it.
-  */
-  elevation: external_exports.preprocess((val) => val === "" || val === null || val === void 0 ? 0 : val, external_exports.coerce.number().default(0)),
-  /*
-    Parries rolled on the current turn, for Ch12's Multiple Parries advisory
-    (cumulative −4 per successive parry - WARN, not block, per the 2026-08-28
-    ruling). Incremented by the HUD's Parry roll, reset by the same turn
-    sweep that restores the free facing change.
-  */
-  parriesThisTurn: external_exports.preprocess((val) => val ?? 0, external_exports.coerce.number().int().default(0)),
-  height: external_exports.string().optional().nullable(),
-  weight: external_exports.string().optional().nullable(),
-  sizeModifier: external_exports.preprocess((val) => val === "" || val === null || val === void 0 ? 0 : val, external_exports.coerce.number().default(0)),
-  age: external_exports.preprocess((val) => val ?? 0, external_exports.coerce.number().int().default(0)),
-  appearance: external_exports.string().optional().nullable(),
-  techLevel: external_exports.string().optional().nullable(),
-  isDroid: external_exports.boolean().default(false),
-  powerPoints: external_exports.preprocess((val) => val ?? 100, external_exports.coerce.number().int().default(100)),
-  lightSidePoints: external_exports.coerce.number().int().optional().default(0),
-  darkSidePoints: external_exports.coerce.number().int().optional().default(0),
-  trackPurchases: external_exports.boolean().default(false).nullable().transform((val) => val ?? false),
-  /*
-      WHICH FORM OF MONEY THE SHEET DEDUCTS FROM, and whether it deducts at all.
-  
-      Ch2 makes buying gear a step of character creation - "Purchase Equipment:
-      Allocate starting wealth to acquire weapons, armor, tools, and other
-      necessary gear" - and Ch18's sheets carry the tally out loud: "Total
-      Equipment Cost: 204 CR (of 500 CR starting credits)". The deduction is
-      real, it is `creditsAfterCostChange` in lib/credit-tracking.ts, and
-      `check:starting-credits` asserts the arithmetic rather than the flag.
-  
-      BOTH DEFAULT OFF. Fulllion's call, 2026-08-22: "credit tracking should not
-      be active by default." So the Ch2 step is opt-in - a table that settles gear
-      between sessions, or a sheet kept as a reference, never has money moved
-      under it - and a player who wants the tally flips one toggle in Inventory.
-      The two are mutually exclusive by design; digital is the form a Credit Chip
-      already carries, so that is the one most players will turn on.
-  
-      THE ORDER MATTERS AND IT IS WHY PACKAGE GEAR STAYS FREE ONCE TRACKING IS ON.
-      `useTrackedCreditChange` takes its baseline from the gear already present
-      when the sheet loads, and only deducts CHANGES from it. So a template's
-      lightsaber arrives at no cost - Ch18 marks exactly that gear "(gift - not
-      deducted from starting credits)" - while the next thing bought is charged.
-    */
-  trackDigital: external_exports.boolean().default(false),
-  trackPhysical: external_exports.boolean().default(false),
-  totalCredits: external_exports.preprocess((val) => val ?? STARTING_CREDITS_BASELINE, external_exports.coerce.number().default(STARTING_CREDITS_BASELINE)),
-  forceAlignment: external_exports.coerce.number().int().min(-100).max(100).optional().default(0),
-  isStartingPointsMode: external_exports.boolean().default(true),
-  isConstructed: external_exports.boolean().default(false),
-  /*
-      Ch10's ghost glitch, on the ITEM rather than the schematic.
-  
-      Set when this was built from a flawed Blueprint. It has its own lifetime:
-      "that correction reaches the schematic only. Items already built keep the
-      flaw" - so clearing blueprintFlawed must never clear this. A flawed item is
-      put right by Deconstructing it and rebuilding from a corrected Blueprint.
-    */
-  flawedBuild: external_exports.boolean().optional().nullable(),
-  cpBaseline: external_exports.number().default(0),
-  stBaseline: external_exports.number().default(10),
-  dxBaseline: external_exports.number().default(10),
-  iqBaseline: external_exports.number().default(10),
-  htBaseline: external_exports.number().default(10),
-  hitPointsBaseline: external_exports.number().default(0),
-  endurancePointsBaseline: external_exports.number().default(0),
-  forcePointsBaseline: external_exports.number().default(0),
-  willBaseline: external_exports.number().default(0),
-  perceptionBaseline: external_exports.number().default(0),
-  frightCheckBaseline: external_exports.number().default(0),
-  basicSpeedBaseline: external_exports.number().default(0),
-  basicMoveBaseline: external_exports.number().default(0),
-  // The four senses are point-bought too (Ch2, 2 points per level), so they
-  // need the same "granted by a template, do not charge" record as the rest.
-  visionBaseline: external_exports.number().default(0),
-  hearingBaseline: external_exports.number().default(0),
-  tasteAndSmellBaseline: external_exports.number().default(0),
-  touchBaseline: external_exports.number().default(0),
-  /*
-    Languages, cultural familiarities and literacy are free text carrying their
-    own bracketed costs ("Galactic Basic (Accented) [4]"), and those costs were
-    billed to the player even when a template supplied the line. Ch18 does not
-    count them - Rokarr's 138 is 114 + 15 - 5 + 14, with his Illiterate [-10]
-    outside the total - so a template records what it granted here and only
-    what the player adds on top is charged.
-  */
-  languagesBaseline: external_exports.number().default(0),
-  culturalFamiliaritiesBaseline: external_exports.number().default(0),
-  literacyBaseline: external_exports.number().default(0),
-  /*
-    Languages as a structured NON-SKILL TRAIT (Fulllion, 2026-08-28): this
-    array is the one billing home. Ch3's ladder is flat per tier and caps at
-    Fluent (Broken 1, Accented 2, Fluent 3; Comprehension-only half rounded
-    up, 1/1/2; native and granted entries bill 0), priced in
-    lib/language-rows.ts. The
-    `languages` STRING above survives as a bracket-free display projection of
-    this array (the PDF reads it; the legacy bracket-scraping term reads 0
-    from it by construction), and `languagesBaseline` is retired to 0 by the
-    load migration - both stay for legacy sheets the migration has not seen.
-  */
-  languageEntries: external_exports.array(external_exports.object({
-    id: external_exports.string().optional(),
-    tongue: external_exports.string().default(""),
-    // The retired plus tiers (uncapped ladder, 2026-08-28 only) stay
-    // accepted here so an old save parses; the load migration clamps them
-    // to 'fluent', announced, before the form ever validates.
-    tier: external_exports.enum(["native", "broken", "accented", "fluent", "fluent-plus-1", "fluent-plus-2", "fluent-plus-3"]).default("accented"),
-    comprehensionOnly: external_exports.boolean().optional().nullable(),
-    granted: external_exports.boolean().optional().nullable(),
-    notes: external_exports.string().optional().nullable()
-  })).default([]),
-  /*
-    Ch3 (2026-08-25): "Republic-raised" swaps the one free native tongue to
-    Basic, +0 CP - a declaration, not a purchase, so it is a flag rather than
-    a row. Kept on the sheet so the toggle, species swaps and re-imports all
-    agree about which tongue the free [0] is.
-  */
-  republicRaised: external_exports.boolean().default(false),
-  drHead: external_exports.coerce.number().optional().nullable(),
-  drTorso: external_exports.coerce.number().optional().nullable(),
-  /*
-      Null means "not bought up - use the value derived from the attributes".
-  
-      calculateAttributePoints.getManualValue() already reads null that way, but
-      these used to coerce null into a hardcoded 10/5/5. Every template inherits
-      the blank sheet, so each one carried a blank sheet's derived figures, and
-      the engine read the gap as the player buying the stat *down* and refunded
-      it - Basic Speed 5 against a derived 6.5 alone gave back 30 points.
-  
-      An empty input box is "cleared", not zero, so it maps to null as well.
-    */
-  frightCheck: external_exports.preprocess(blankToNull, external_exports.coerce.number().int().nullable().optional()),
-  basicSpeed: external_exports.preprocess(blankToNull, external_exports.coerce.number().nullable().optional()),
-  basicMove: external_exports.preprocess(blankToNull, external_exports.coerce.number().int().nullable().optional()),
-  basicLift: external_exports.string().optional().nullable(),
-  damageThrust: external_exports.string().optional().nullable(),
-  damageSwing: external_exports.string().optional().nullable(),
-  currentValues: external_exports.object({
-    maxForcePoints: external_exports.number().optional().nullable(),
-    maxPowerPoints: external_exports.number().optional().nullable(),
-    hitPoints: external_exports.number().optional().nullable(),
-    will: external_exports.number().optional().nullable(),
-    perception: external_exports.number().optional().nullable(),
-    endurancePoints: external_exports.number().optional().nullable(),
-    forcePoints: external_exports.number().optional().nullable(),
-    frightCheck: external_exports.number().optional().nullable(),
-    vision: external_exports.number().optional().nullable(),
-    hearing: external_exports.number().optional().nullable(),
-    tasteAndSmell: external_exports.number().optional().nullable(),
-    touch: external_exports.number().optional().nullable(),
-    basicSpeed: external_exports.number().optional().nullable(),
-    basicMove: external_exports.number().optional().nullable()
-  }).optional().nullable(),
-  advantages: external_exports.array(advantageSchema).optional().nullable(),
-  disadvantages: external_exports.array(disadvantageSchema).optional().nullable(),
-  quirks: external_exports.array(quirkSchema).optional().nullable(),
-  skills: external_exports.array(skillSchema).optional(),
-  parry: external_exports.string().optional().nullable(),
-  block: external_exports.string().optional().nullable(),
-  selectedParrySkill: external_exports.string().optional().nullable(),
-  selectedBlockSkill: external_exports.string().optional().nullable(),
-  forcePowers: external_exports.array(forcePowerSchema).optional().nullable(),
-  combatTechniques: external_exports.array(combatTechniqueSchema).optional().nullable(),
-  lightsaberForms: external_exports.array(knownLightsaberFormSchema).optional().nullable(),
-  activeLightsaberForm: external_exports.string().optional().nullable(),
-  /*
-    Which readied lightsaber the active Form is being used WITH (2026-08-28,
-    user report): the binding lived in per-panel component state, so opening
-    and closing an accordion silently unselected the saber and the Form's
-    numbers fell back to a different weapon's. Sheet state survives the
-    remount and keeps the Forms card and the HUD on one answer.
-  */
-  activeFormWeaponId: external_exports.string().optional().nullable(),
-  equipment: external_exports.array(generalEquipmentItemSchema).optional().nullable(),
-  armor: external_exports.array(armorItemSchema).optional().nullable(),
-  /*
-      Player-defined outfits.
-  
-      Only the membership list is stored, never the pieces - Ch13 is emphatic that
-      a suit is "not a fixed bundle", and a set that owned its items would double
-      their weight and cost the moment it existed. Sets the chapter itself lists
-      are recognised from inventory rather than saved, so this array holds only
-      what the player assembled themselves: mismatched armour, a single favourite
-      piece, whatever they want to equip as a unit.
-    */
-  gearSets: external_exports.array(gearSetSchema).default([]).optional().nullable(),
-  customBlasters: external_exports.array(customBlasterSchema).optional().nullable(),
-  customMeleeWeapons: external_exports.array(customMeleeWeaponSchema).optional().nullable(),
-  lightsabers: external_exports.array(lightsaberSchema).optional().nullable(),
-  customExplosives: external_exports.array(customExplosiveSchema).optional().nullable(),
-  customStarships: external_exports.array(customStarshipSchema).optional().nullable(),
-  vehicles: external_exports.array(vehicleSchema).optional().nullable(),
-  ammunition: external_exports.array(ammunitionSchema).optional().nullable(),
-  weaponModifications: external_exports.array(weaponModificationSchema).optional().nullable(),
-  lightsaberModifications: external_exports.array(lightsaberModificationSchema).optional().nullable(),
-  armorModifications: external_exports.array(armorModificationSchema).optional().nullable(),
-  cyberneticUpgrades: external_exports.array(cyberneticUpgradeSchema).optional().nullable(),
-  implants: external_exports.array(neuralImplantSchema).optional().nullable(),
-  cybernetics: external_exports.array(cyberneticLimbSchema).optional().nullable(),
-  hitLocations: external_exports.array(hitLocationEntrySchema).optional().default([]),
-  languages: external_exports.string().optional().nullable(),
-  culturalFamiliarities: external_exports.string().optional().nullable(),
-  literacy: external_exports.string().optional().nullable(),
-  description: external_exports.string().optional().nullable(),
-  background: external_exports.string().optional().nullable(),
-  notes: external_exports.string().optional().nullable(),
-  pointsAttributes: external_exports.number().int().optional(),
-  pointsAdvantages: external_exports.number().int().optional(),
-  pointsDisadvantages: external_exports.number().int().optional(),
-  pointsSkills: external_exports.number().int().optional().nullable(),
-  pointsOther: external_exports.number().int().optional().nullable(),
-  /*
-    Ch2 "Trading CP for Credits": "you may trade 1 Character Point (CP) for 700
-    Credits ... capped at a maximum of 5 CP total to ensure campaign balance."
-    Stored as the number of CP traded, so the cap is enforceable and the spend
-    is visible in the point total; the credits themselves land in totalCredits.
-  */
-  cpTradedForCredits: external_exports.coerce.number().int().min(0).max(5).default(0).optional().nullable(),
-  /*
-    Which form the trade pays out in. Kept on the sheet rather than derived so
-    that lowering the traded CP takes the credits back out of the same place it
-    put them, across a save and reload.
-  */
-  cpCreditsForm: external_exports.enum(["digital", "physical"]).default("digital").optional().nullable(),
-  spentPoints: external_exports.number().int().optional().nullable(),
-  remainingPoints: external_exports.number().int().optional().nullable(),
-  /*
-      NULL MEANS FULL, and it is a sentinel rather than a value.
-  
-      These defaulted to a hard-coded 10 with no reference to the maximum, so a
-      fresh Jedi Guardian opened at 10 of 12 on all three tracks - neither wounded
-      nor drained, just three short of itself - and a character whose maximum is
-      below 10 would have started ABOVE its own ceiling.
-  
-      The maximum is derived from the attributes and from what the character
-      carries, so nothing here or in a template can know it. `fillUnrecordedPools`
-      answers on load, where the derived side exists. A real reading - a wounded
-      character at 4 of 12 - is a number and is never touched, which is the whole
-      reason the unrecorded state cannot also be a number.
-    */
-  currentHitPoints: external_exports.coerce.number().int().nullable().default(null),
-  currentEndurancePoints: external_exports.coerce.number().int().nullable().default(null),
-  currentForcePoints: external_exports.coerce.number().int().nullable().default(null),
-  strength: external_exports.preprocess((val) => val ?? 10, external_exports.coerce.number().int().min(1, "Min ST is 1").default(10)),
-  dexterity: external_exports.preprocess((val) => val ?? 10, external_exports.coerce.number().int().min(1, "Min DX is 1").default(10)),
-  iq: external_exports.preprocess((val) => val ?? 10, external_exports.coerce.number().int().min(1, "Min IQ is 1").default(10)),
-  health: external_exports.preprocess((val) => val ?? 10, external_exports.coerce.number().int().min(1, "Min HT is 1").default(10)),
-  hitPoints: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
-  will: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
-  perception: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
-  vision: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
-  hearing: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
-  tasteAndSmell: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
-  touch: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
-  endurancePoints: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
-  forcePoints: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
-  shipPosition: external_exports.string().optional().nullable(),
-  assignedStation: external_exports.string().optional().nullable(),
-  storageBoxes: external_exports.array(external_exports.object({
-    id: external_exports.string().uuid(),
-    name: external_exports.string(),
-    description: external_exports.string().optional().nullable()
-  })).default([]).optional().nullable(),
-  droidBuild: external_exports.object({
-    chassisId: external_exports.string().optional().nullable(),
-    powerCoreId: external_exports.string().optional().nullable(),
-    head: external_exports.object({
-      componentId: external_exports.string().optional().nullable(),
-      processorId: external_exports.string().optional().nullable(),
-      // Handbook Ch17 allows a secondary processor, e.g. "Heuristic + Combat Matrix".
-      coProcessorId: external_exports.string().optional().nullable(),
-      memoryCoreId: external_exports.string().optional().nullable(),
-      // Sparse for the same reason as the chassisMods slot arrays below:
-      // the workshop writes `head.sensorIds.${i}` per bay and null on clear.
-      sensorIds: external_exports.array(external_exports.string().nullish()).default([]),
-      externalModId: external_exports.string().optional().nullable(),
-      // A custom head (componentId null) has no catalog height, so the
-      // build carries the chapter's stated figure - the S6's 0.05 m -
-      // for the Ch17 SM derivation.
-      customHeightM: external_exports.number().optional().nullable()
-    }).optional().nullable(),
-    arms: external_exports.array(external_exports.object({
-      id: external_exports.string().uuid(),
-      componentId: external_exports.string(),
-      side: external_exports.string().default("Right"),
-      actuatorId: external_exports.string().optional().nullable(),
-      wiringId: external_exports.string().optional().nullable(),
-      manipulatorId: external_exports.string().optional().nullable(),
-      externalModId: external_exports.string().optional().nullable(),
-      utilityModId: external_exports.string().optional().nullable()
-    })).default([]),
-    legs: external_exports.array(external_exports.object({
-      id: external_exports.string().uuid(),
-      componentId: external_exports.string(),
-      side: external_exports.string().default("Right"),
-      motiveMountId: external_exports.string().optional().nullable(),
-      actuatorId: external_exports.string().optional().nullable(),
-      wiringId: external_exports.string().optional().nullable(),
-      externalModId: external_exports.string().optional().nullable()
-    })).default([]),
-    chassisMods: external_exports.object({
-      /*
-        Slot arrays are SPARSE by convention, so their elements are
-        nullish. The workshop writes each pick at its slot's index
-        (`externalIds.1`), leaving undefined holes below it, writes null
-        when a slot is cleared, and stores the Backup Power Array at
-        internalIds[BACKUP_POWER_INDEX] (99) so it never collides with a
-        real bay - a build using it makes the array length 100. Dense
-        z.array(z.string()) rejected every hole as "Required", which
-        blocked saving any droid carrying a Backup Power Array (99
-        validation errors at once). The index IS the slot identity, so the
-        holes must survive the round-trip - never "clean" these by
-        compacting. droid-workshop-rows.ts types the same shape.
-      */
-      internalIds: external_exports.array(external_exports.string().nullish()).default([]),
-      externalIds: external_exports.array(external_exports.string().nullish()).default([]),
-      utilityIds: external_exports.array(external_exports.string().nullish()).default([]),
-      auxiliaryIds: external_exports.array(external_exports.string().nullish()).default([]),
-      motiveMountIds: external_exports.array(external_exports.string().nullish()).default([]),
-      reinforcementId: external_exports.string().optional().nullable(),
-      armorId: external_exports.string().optional().nullable(),
-      /*
-                  Ch17: plating "degrades under stress (losing 1 point of DR for every
-                  full 5 points of basic damage rolled against it). If DR reaches 0,
-                  the plating is completely destroyed."
-      
-                  THE TRACKED CURRENT DR, not a counter of damage taken - the same
-                  convention as an armour piece's `entry.dr`, which IS its current
-                  figure rather than a percentage read off a condition label. Null
-                  means undamaged, so every sheet predating this reads as intact
-                  without a migration.
-      
-                  It is the PLATING's figure alone. The chassis DR underneath never
-                  wears down, which is why the two are separate numbers all the way
-                  through droid-dr.ts: a single total has nothing to stop the
-                  subtraction at the bare frame.
-                */
-      armorCurrentDr: external_exports.coerce.number().int().min(0).optional().nullable(),
-      /*
-        The Shield Projector's operating state (Ch17 2026-09-01 blurb).
-        `shieldActive` is the on/off toggle - off by default, so every
-        sheet predating the field reads as switched off. `shieldCurrentDr`
-        is the field's CURRENT output under the same convention as
-        `armorCurrentDr` above: null means unworn (full printed DR 20),
-        a stored figure is what Ch7 degradation has left of the emitter -
-        and it PERSISTS until repaired (Fulllion: a power cycle must NOT
-        reset it, or a 1-turn off/on erases all wear). The emitter itself
-        is a powered utility device: Damaged runs the field at -1 to its
-        output, Broken drops it entirely (Ch7 [243]/[244]); null = Fine.
-      */
-      shieldActive: external_exports.boolean().optional().nullable(),
-      shieldCurrentDr: external_exports.coerce.number().int().min(0).optional().nullable(),
-      shieldEmitterCondition: external_exports.enum(["Fine", "Damaged", "Broken"]).optional().nullable(),
-      motivatorId: external_exports.string().optional().nullable(),
-      actuatorId: external_exports.string().optional().nullable(),
-      wiringId: external_exports.string().optional().nullable()
-    }).optional().nullable(),
-    /*
-      Ch17's modification-crit rows 5-6 (2026-08-30, Fulllion's enforcement
-      ruling): "the mounting slot itself is violently warped. No new part
-      can be installed in this specific slot until the chassis undergoes
-      structural repairs." The full form paths of the warped slots - the
-      workshop refuses installs into them and its Structural Repair roll
-      (Mechanic (Droids), Ch17) clears one. Declared in the schema so a
-      warp survives the save round-trip; droidBuild rides the
-      exporter/importer whole.
-    */
-    // Optional-nullable rather than defaulted: a default would make the
-    // field required in every template literal's type; readers coerce
-    // absent to empty.
-    warpedSlots: external_exports.array(external_exports.string()).optional().nullable()
-  }).optional().nullable(),
-  statusEffects: external_exports.array(statusEffectSchema).default([]).optional().nullable(),
-  pinnedNotifications: external_exports.array(pinnedNotificationSchema).default([]).optional().nullable(),
-  /*
-      THE ORDER OF `.optional()` AND `.default()` DECIDES WHETHER THESE WORK.
-  
-      All three were `z.boolean().default(true).optional()`, which does NOT mean
-      "true when absent". `.optional()` wraps the defaulted schema, so an absent
-      key parses to `undefined` and the default never fires:
-  
-          z.boolean().default(true).optional().parse(undefined)  -> undefined
-          z.boolean().optional().default(true).parse(undefined)  -> true
-  
-      Nothing in the app writes any of the three - 0 of 65 templates set them,
-      `blankSheetData` does not, and only `useLiftingST` has a control (the switch
-      in encumbrance-section). So every character carried `undefined`, and
-      `useStrikingST ? strikingStLevels : 0` in the melee card was ALWAYS the
-      zero branch. Striking ST and Arm ST reached melee damage for nobody, ever.
-  
-      That is the fourth layer of the same defect, and the only one no headless
-      assertion could reach: the engine publishes `damageStLevels` correctly, and
-      the card threw it away. It took adding Arm ST (Cybernetic) to a sheet in a
-      browser and watching a Gaderffii stay at 1d+2 to find it.
-  
-      A flag that is read in one place, written in none, and defaults to off is
-      not a player choice - it is an off switch nobody can reach.
-    */
-  useLiftingST: external_exports.boolean().optional().default(true),
-  useStrikingST: external_exports.boolean().optional().default(true),
-  useArmST: external_exports.boolean().optional().default(true)
-});
-
-// src/lib/sanitizer-null-migration.ts
-var NULL_REJECTING_KEYS = new Set(
-  Object.entries(characterSheetSchema.shape).filter(([, fieldSchema]) => !fieldSchema.safeParse(null).success).map(([key]) => key)
-);
-function migrateSanitizerNulls(data) {
-  const healed = [];
-  for (const key of Object.keys(data)) {
-    if (data[key] === null && NULL_REJECTING_KEYS.has(key)) {
-      delete data[key];
-      healed.push(key);
-    }
-  }
-  return healed;
-}
-
-// src/lib/load-sheet.ts
-function applyLoadMigrations(data, blankSheetData2) {
-  const notices = [];
-  const incoming = { ...data };
-  migrateSanitizerNulls(incoming);
-  const dataToLoad = { ...blankSheetData2, ...incoming };
-  migrateSkillNames(dataToLoad);
-  migrateMeleePowerCells(dataToLoad);
-  migrateCyberneticNames(dataToLoad);
-  const renamedSpecies = migrateSpeciesNames(dataToLoad);
-  const renamedTraits = migrateTraitNames(dataToLoad);
-  migrateRacialTraitNames(dataToLoad);
-  migrateEnhancedDefenses(dataToLoad);
-  const migratedLanguages = migrateLanguages(dataToLoad);
-  const structuredLanguages = migrateLanguageEntries(
-    dataToLoad,
-    getCalculatedStats(dataToLoad).skillPricingAttributes
-  );
-  migrateFacing(dataToLoad);
-  const unfoldedBonuses = migrateFoldedSkillBonuses(dataToLoad);
-  const repairedSabers = migrateLightsaberDurability(dataToLoad);
-  dataToLoad.armor = (dataToLoad.armor || []).map((item) => ensureCompleteArmorItem(item, dataToLoad.hitLocations));
-  dataToLoad.customStarships = (dataToLoad.customStarships || []).map(ensureCompleteStarshipItem);
-  const displaced = enforceBaseLayer(dataToLoad.armor);
-  if (displaced.length > 0) {
-    const plates = displaced.filter((d) => d.wasPlate);
-    notices.push({
-      id: "armor-layering",
-      title: "Armor layering corrected",
-      description: [
-        `${displaced.map((d) => `${d.itemName} (${d.location})`).join(", ")} unequipped \u2014`,
-        "Chapter 13 allows one base layer per location.",
-        plates.length ? "Your DR at those locations is lower as a result." : null,
-        "Everything is still in your inventory; re-equip whichever piece you meant to wear."
-      ].filter(Boolean).join(" ")
-    });
-  }
-  const loadedStats = getCalculatedStats(dataToLoad);
-  fillUnrecordedPools(dataToLoad, {
-    currentHitPoints: loadedStats.currentValues.hitPoints,
-    currentEndurancePoints: loadedStats.currentValues.endurancePoints,
-    currentForcePoints: loadedStats.currentValues.maxForcePoints
+function migrateCulturalFamiliarities(data) {
+  if (!data || typeof data.culturalFamiliarities !== "string") return [];
+  const species6 = typeof data.species === "string" ? data.species.trim() : "";
+  const renames = CULTURAL_FAMILIARITY_RENAMES[species6] ?? [];
+  if (renames.length === 0) return [];
+  const changed = [];
+  const parts = data.culturalFamiliarities.split(/([;\n])/);
+  const next = parts.map((part, index) => {
+    if (index % 2 === 1) return part;
+    const rename = renames.find((r2) => part.trim() === r2.from);
+    if (!rename) return part;
+    changed.push(`"${rename.from}" \u2192 "${rename.to}"`);
+    return part.replace(rename.from, () => rename.to);
   });
-  const fpCeiling = loadedStats.currentValues.maxForcePoints;
-  const clamped = applyForcePointCeiling(dataToLoad, fpCeiling);
-  if (clamped) {
-    notices.push({
-      id: "force-point-ceiling",
-      title: "Force Points capped",
-      description: `Your maximum is now ${clamped.to}, so ${clamped.from} FP was reduced to ${clamped.to}. Losing a maximum never grants points back and never deepens Force Exhaustion.`
-    });
-  }
-  if (repairedSabers.length > 0) {
-    notices.push({
-      id: "lightsaber-durability",
-      title: "Lightsaber durability restored",
-      description: `${repairedSabers.join(", ")} carried a Durability an old default had written - 0, which read as Broken, or a figure above the hilt's own maximum, from a +10 base Ch12 does not have. Restored to full. If one was meant to be destroyed, set its Durability back to 0.`
-    });
-  }
-  if (renamedSpecies.length > 0) {
-    notices.push({
-      id: "species-name",
-      title: "Species name updated",
-      description: `${renamedSpecies.join(", ")} \u2014 the app had abbreviated the species' full handbook name. Racial traits were re-marked to match, so removing the species still removes them.`
-    });
-  }
-  if (renamedTraits.length > 0) {
-    notices.push({
-      id: "trait-name",
-      title: "Trait name updated",
-      description: renamedTraits.join(", ") + " - the catalog now carries this trait under its current name. Its cost is unchanged."
-    });
-  }
-  if (migratedLanguages.length > 0) {
-    notices.push({
-      id: "languages-rule",
-      title: "Languages updated to the new rule",
-      description: `Chapter 3 now grants one free native tongue \u2014 the species' own language \u2014 and Basic is bought. This sheet was updated: ${migratedLanguages.join("; ")}.`,
-      duration: 12e3
-    });
-  }
-  if (structuredLanguages.length > 0) {
-    notices.push({
-      id: "language-entries",
-      title: "Languages are structured rows now",
-      description: `Manage them in the Languages panel on the Details tab. ${structuredLanguages.join("; ")}.`,
-      duration: 12e3
-    });
-  }
-  if (unfoldedBonuses.length > 0) {
-    notices.push({
-      id: "folded-skill-bonus",
-      title: "Advantage skill bonus unfolded",
-      description: unfoldedBonuses.join(" "),
-      duration: 12e3
-    });
-  }
-  return { data: dataToLoad, notices, loadedStats };
+  if (changed.length > 0) data.culturalFamiliarities = next.join("");
+  return changed;
 }
+
+// src/lib/species-swap.ts
+var species_swap_exports = {};
+__export(species_swap_exports, {
+  SPECIES_ALIASES: () => SPECIES_ALIASES,
+  SPECIES_NAMES: () => SPECIES_NAMES,
+  SPECIES_PACKAGES: () => SPECIES_PACKAGES,
+  isKnownSpecies: () => isKnownSpecies,
+  matchedAlias: () => matchedAlias,
+  speciesForAlias: () => speciesForAlias,
+  speciesMatches: () => speciesMatches,
+  speciesPackageFor: () => speciesPackageFor,
+  swapSpecies: () => swapSpecies
+});
+
+// src/lib/template-categories.ts
+var template_categories_exports = {};
+__export(template_categories_exports, {
+  ARCHETYPE_KEYS: () => ARCHETYPE_KEYS,
+  PREMADE_CHARACTER_KEYS: () => PREMADE_CHARACTER_KEYS,
+  TEMPLATE_CATEGORY_ORDER: () => TEMPLATE_CATEGORY_ORDER,
+  groupTemplates: () => groupTemplates,
+  templateCategory: () => templateCategory
+});
+var TEMPLATE_CATEGORY_ORDER = [
+  "Blank",
+  "Example Player Characters",
+  "Character Archetypes",
+  "Species",
+  "Droids"
+];
+var PREMADE_CHARACTER_KEYS = /* @__PURE__ */ new Set([
+  "kaelenRarr",
+  "vexKorta",
+  "seraOrdo",
+  "rennVantik",
+  "rokarr",
+  "vashtu",
+  "vahnanCshar"
+]);
+var ARCHETYPE_KEYS = /* @__PURE__ */ new Set([
+  "jediPadawan",
+  "jediGuardian",
+  "jediSentinel",
+  "jediConsular",
+  "jediMaster",
+  "sithMarauder",
+  "sithAssassin",
+  "sithLord",
+  "darkJediAspirant",
+  "darkJedi",
+  "darkJediMaster",
+  "republicSoldier",
+  "sithTrooper",
+  "hackerSlicer",
+  "pilot",
+  "republicRefugee",
+  "scoundrel",
+  "bountyHunter",
+  "mandalorian"
+]);
+function templateCategory(key, template) {
+  if (key === "blank") return "Blank";
+  if (template?.data?.isDroid) return "Droids";
+  if (PREMADE_CHARACTER_KEYS.has(key)) return "Example Player Characters";
+  if (ARCHETYPE_KEYS.has(key)) return "Character Archetypes";
+  return "Species";
+}
+function groupTemplates(templates) {
+  const buckets = /* @__PURE__ */ new Map();
+  for (const [key, template] of Object.entries(templates)) {
+    const category = templateCategory(key, template);
+    if (!buckets.has(category)) buckets.set(category, []);
+    buckets.get(category).push([key, template]);
+  }
+  return TEMPLATE_CATEGORY_ORDER.filter((c) => buckets.get(c)?.length).map((category) => ({
+    category,
+    entries: buckets.get(category).sort((a, b) => a[1].name.localeCompare(b[1].name))
+  }));
+}
+
+// src/lib/species-row-markers.ts
+var SPECIES_ROW_LISTS = ["advantages", "disadvantages", "quirks", "forcePowers"];
+var nameOf = (row2) => String(row2?.name ?? "").trim();
+var markerOf = (row2) => typeof row2?.fromSpecies === "string" ? row2.fromSpecies.trim() : "";
+var levelOf2 = (row2) => {
+  const level = row2?.level;
+  return level === void 0 || level === null || level === "" ? null : Number(level);
+};
+var costOf = (row2, list) => Number((list === "forcePowers" ? row2?.cpCost : row2?.points) ?? 0);
+var baselineOf = (row2) => Number(row2?.baselinePoints ?? 0);
+var chargeOf = (row2, list) => costOf(row2, list) - baselineOf(row2);
+function isPackageRow(row2, packageRow, list) {
+  const name = nameOf(row2);
+  return name !== "" && name === nameOf(packageRow) && levelOf2(row2) === levelOf2(packageRow) && chargeOf(row2, list) === chargeOf(packageRow, list);
+}
+var isPackageShape = (row2, packageRow, list) => isPackageRow(row2, packageRow, list) && costOf(row2, list) === costOf(packageRow, list);
+function markPackageRows(sheet, pkg) {
+  if (!sheet || !pkg) return [];
+  const species6 = String(pkg.name ?? "").trim();
+  if (!species6) return [];
+  const own = (row2) => markerOf(row2).toLowerCase() === species6.toLowerCase();
+  const marked = [];
+  for (const list of SPECIES_ROW_LISTS) {
+    const rows = Array.isArray(sheet[list]) ? sheet[list] : null;
+    const granted = Array.isArray(pkg[list]) ? pkg[list] : [];
+    if (!rows || granted.length === 0) continue;
+    const taken = /* @__PURE__ */ new Set();
+    const claim = (test) => {
+      const at = rows.findIndex((row2, i) => !taken.has(i) && row2 != null && test(row2));
+      if (at !== -1) taken.add(at);
+      return at;
+    };
+    let next = null;
+    for (const packageRow of granted) {
+      if (claim((row2) => own(row2) && nameOf(row2) === nameOf(packageRow)) !== -1) continue;
+      const unmarked = (row2) => markerOf(row2) === "";
+      let at = claim((row2) => unmarked(row2) && isPackageShape(row2, packageRow, list));
+      if (at === -1) at = claim((row2) => unmarked(row2) && isPackageRow(row2, packageRow, list));
+      if (at === -1) continue;
+      next = next ?? [...rows];
+      next[at] = { ...rows[at], fromSpecies: species6 };
+      marked.push(`${list}:${nameOf(packageRow)}`);
+    }
+    if (next) sheet[list] = next;
+  }
+  return marked;
+}
+
+// src/lib/species-package-revision.ts
+var species_package_revision_exports = {};
+__export(species_package_revision_exports, {
+  SPECIES_PACKAGE_REVISION: () => SPECIES_PACKAGE_REVISION
+});
+var SPECIES_PACKAGE_REVISION = 2;
 
 // src/lib/templates/custom/blank-sheet-template.ts
 var blankSheetData = {
@@ -30048,6 +27675,9 @@ var blankSheetData = {
   // UI State
   isStartingPointsMode: true,
   isConstructed: false,
+  // A new sheet is born current: every template is built on this one, and
+  // their packages are the live ones, so none of them is ever migrated.
+  speciesPackageRevision: SPECIES_PACKAGE_REVISION,
   cpBaseline: 0,
   stBaseline: 10,
   dxBaseline: 10,
@@ -30356,8 +27986,10 @@ var twilekTemplate = {
       { ...advantagesList.find((a) => a.name === "Appearance" && a.description?.toLowerCase().includes("attractive")), baselinePoints: 4 },
       { ...advantagesList.find((a) => a.name === "Longevity"), baselinePoints: 2 },
       { ...advantagesList.find((a) => a.name === "Lekku Communication"), baselinePoints: 0 },
-      { ...advantagesList.find((a) => a.name === "Natural Dancer"), baselinePoints: 0 },
-      { ...advantagesList.find((a) => a.name === "Claim to Hospitality"), baselinePoints: 5 }
+      // Ch4's Twi'lek racial trait, which Ch18's entry gained on
+      // 2026-09-28. The Claim to Hospitality that sat beside it was in
+      // neither chapter and is gone.
+      { ...advantagesList.find((a) => a.name === "Natural Dancer"), baselinePoints: 0 }
     ],
     disadvantages: [
       { ...disadvantagesList.find((d) => d.name === "Vulnerability (Lekku)"), baselinePoints: -10 },
@@ -30370,7 +28002,9 @@ var twilekTemplate = {
     // stays the mechanical carrier.
     languages: "Ryl (Native, with silent lekku sign-channel) [0]",
     languagesBaseline: 0,
-    culturalFamiliarities: "Twi'lek Clans [0]",
+    // Ch18: "Cultural Familiarity (Twi'lek Culture)" - the one species
+    // entry that prints a familiarity, so the field takes its wording.
+    culturalFamiliarities: "Twi'lek Culture [0]",
     literacy: "Native Literacy [0]",
     notes: "Features: Prehensile head-tails (lekku) used for communication; expressive physiology. Many Twi'leks were caught in the crossfire of the war."
   },
@@ -30400,7 +28034,11 @@ var zabrakTemplate = {
       { ...advantagesList.find((a) => a.name === "Will +1 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "High Pain Threshold"), baselinePoints: 10 },
       { ...advantagesList.find((a) => a.name === "Fit"), baselinePoints: 5 },
-      { ...advantagesList.find((a) => a.name === "Unfazeable"), baselinePoints: 15 }
+      { ...advantagesList.find((a) => a.name === "Unfazeable"), baselinePoints: 15 },
+      // Ch4's Zabrak racial traits, which Ch18's entry gained on
+      // 2026-09-28 (Fulllion's ruling, Hardy's +1 HT included).
+      { ...advantagesList.find((a) => a.name === "Hardy (Zabrak)"), baselinePoints: 0 },
+      { ...advantagesList.find((a) => a.name === "Natural Intimidator (Zabrak)"), baselinePoints: 0 }
     ],
     disadvantages: [
       { ...disadvantagesList.find((d) => d.name === "Stubbornness"), baselinePoints: -5 },
@@ -30419,11 +28057,11 @@ var zabrakTemplate = {
 var force_powers_data_exports = {};
 __export(force_powers_data_exports, {
   ForcePowerAlignment: () => ForcePowerAlignment,
-  forcePowerSchema: () => forcePowerSchema2,
+  forcePowerSchema: () => forcePowerSchema,
   forcePowersData: () => forcePowersData
 });
 var ForcePowerAlignment = external_exports.enum(["LS", "Grey", "DS"]);
-var forcePowerSchema2 = external_exports.object({
+var forcePowerSchema = external_exports.object({
   name: external_exports.string(),
   description: external_exports.string().optional().nullable(),
   category: external_exports.string(),
@@ -32301,7 +29939,8 @@ var rodianTemplate = {
     disadvantages: [
       { ...disadvantagesList.find((d) => d.name === "Impulsiveness"), baselinePoints: -10 },
       { ...disadvantagesList.find((d) => d.name === "Greed"), baselinePoints: -15 },
-      { ...disadvantagesList.find((d) => d.name === "Reputation -1 (Untrustworthy)"), baselinePoints: -5 }
+      { ...disadvantagesList.find((d) => d.name === "Reputation -1 (Untrustworthy)"), baselinePoints: -5 },
+      { ...disadvantagesList.find((d) => d.name === "Appearance (Unattractive)"), baselinePoints: -4 }
     ],
     /*
       One free native tongue (Ch3, 2026-08-25) - the 2026-08-22 free-floor
@@ -32394,6 +30033,11 @@ var wookieeTemplate = {
       */
       { ...advantagesList.find((a) => a.name === "ST +4 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "Damage Resistance (DR)" && a.level === 1), baselinePoints: 5 },
+      // Ch18: "Damage Resistance 1 (Fur); Sharp Claws; Temperature
+      // Tolerance 1; Fit; High Pain Threshold." The middle two were
+      // missing; Rokarr, Ch18's own Wookiee, has always had both.
+      { ...advantagesList.find((a) => a.name === "Sharp Claws"), baselinePoints: 3 },
+      { ...advantagesList.find((a) => a.name === "Temperature Tolerance" && a.level === 1), baselinePoints: 1 },
       { ...advantagesList.find((a) => a.name === "Fit"), baselinePoints: 5 },
       { ...advantagesList.find((a) => a.name === "High Pain Threshold"), baselinePoints: 10 }
     ],
@@ -32470,7 +30114,9 @@ var mirialanTemplate = {
       { ...advantagesList.find((a) => a.name === "Cultural Adaptability"), baselinePoints: 10 }
     ],
     disadvantages: [
-      { ...disadvantagesList.find((d) => d.name === "Disciplines of Faith (Ritualism)"), baselinePoints: -5 },
+      // Ch18: "Vow (Ritual Observance)". This carried Disciplines of
+      // Faith (Ritualism), a trait Ch5 does not print.
+      { ...disadvantagesList.find((d) => d.name === "Vow"), baselinePoints: -5, description: "Ritual Observance." },
       { ...disadvantagesList.find((d) => d.name === "Sense of Duty (A People)"), baselinePoints: -20 },
       { ...disadvantagesList.find((d) => d.name === "Truthfulness"), baselinePoints: -5 },
       { ...disadvantagesList.find((d) => d.name === "Distinctive Features (Tattoos)"), baselinePoints: -1 }
@@ -32565,9 +30211,13 @@ var arkanianTemplate = {
     ],
     disadvantages: [
       { ...disadvantagesList.find((d) => d.name === "Overconfidence"), baselinePoints: -5 },
-      { ...disadvantagesList.find((d) => d.name === "Curiosity"), baselinePoints: -5 },
       { ...disadvantagesList.find((d) => d.name === "Truthfulness"), baselinePoints: -5 },
       { ...disadvantagesList.find((d) => d.name === "Distinctive Features (White Eyes)"), baselinePoints: -1 }
+    ],
+    // Ch18 prints "Curious", which is Ch6's quirk. This package carried
+    // Ch5's Curiosity [-5] instead - a different and heavier trait.
+    quirks: [
+      quirkFromLibrary("Curious", { points: -1, baselinePoints: -1 })
     ],
     // One free native tongue (Ch3, 2026-08-25); Basic is bought, so the
     // old free Accented row and its [4] offset are retired. Ch23: young
@@ -32616,7 +30266,11 @@ var echaniTemplate = {
       */
       { ...advantagesList.find((a) => a.name === "Echani Reflexes"), baselinePoints: 5, description: "+1 to Dodge." },
       { ...advantagesList.find((a) => a.name === "Fit"), baselinePoints: 5 },
-      { ...advantagesList.find((a) => a.name === "Fearlessness" && a.level === 1), baselinePoints: 2 }
+      { ...advantagesList.find((a) => a.name === "Fearlessness" && a.level === 1), baselinePoints: 2 },
+      // Ch4's Echani racial traits, which Ch18's entry gained on
+      // 2026-09-28 (Fulllion's ruling: they are part of the free package).
+      { ...advantagesList.find((a) => a.name === "Combat Aptitude (Echani)"), baselinePoints: 0 },
+      { ...advantagesList.find((a) => a.name === "Read Opponent (Echani)"), baselinePoints: 0 }
     ],
     disadvantages: [
       { ...disadvantagesList.find((d) => d.name === "Overconfidence (Martial)"), baselinePoints: -5 },
@@ -32661,7 +30315,9 @@ var bothanTemplate = {
     ],
     disadvantages: [
       { ...disadvantagesList.find((a) => a.name === "ST -1 (Racial)"), baselinePoints: 0 },
-      { ...disadvantagesList.find((d) => d.name === "Reputation -1 (Untrustworthy)"), baselinePoints: -5 },
+      // Ch18: "Reputation -2 (As manipulative spies; All non-Bothans; All
+      // the time)". This carried the Rodian's -1 row.
+      { ...disadvantagesList.find((d) => d.name === "Reputation -2 (Manipulative Spies)"), baselinePoints: -10 },
       { ...disadvantagesList.find((d) => d.name === "Paranoia"), baselinePoints: -10 },
       { ...disadvantagesList.find((d) => d.name === "Secret"), baselinePoints: -5, description: "Involved in espionage." }
     ],
@@ -32735,6 +30391,7 @@ var gandTemplate = {
       { ...advantagesList.find((a) => a.name === "HT +1 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "Perception +1 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "Damage Resistance (DR)" && a.level === 2), baselinePoints: 10 },
+      { ...advantagesList.find((a) => a.name === "Less Sleep" && a.level === 2), baselinePoints: 4 },
       { ...advantagesList.find((a) => a.name === "Infravision"), baselinePoints: 10 }
     ],
     disadvantages: [
@@ -32804,8 +30461,6 @@ var jawaTemplate = {
     ...blankSheetData,
     species: "Jawa",
     pointTotal: 150,
-    // Ch2: racial Wealth (Lower) at -10 is Ch5's Struggling - 1,900 CR.
-    totalCredits: 1900,
     strength: 10,
     dexterity: 10,
     iq: 10,
@@ -32821,12 +30476,19 @@ var jawaTemplate = {
       { ...advantagesList.find((a) => a.name === "DX +1 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "IQ +1 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "Night Vision" && a.level === 5), baselinePoints: 5 },
+      { ...advantagesList.find((a) => a.name === "Resistant" && a.level === 1), baselinePoints: 5, description: "Disease: +3 to resist." },
       { ...advantagesList.find((a) => a.name === "High Manual Dexterity" && a.level === 1), baselinePoints: 5 }
     ],
+    /*
+      Ch18: "Social Stigma (Scavenger); Appearance (Unattractive); Quirk
+      (...)". The package carried a Wealth (Lower) the chapter does not
+      print, and with it a 1,900 CR purse; a Jawa now starts on the same
+      money as anyone else.
+    */
     disadvantages: [
       { ...disadvantagesList.find((a) => a.name === "ST -2 (Racial)"), baselinePoints: 0 },
       { ...disadvantagesList.find((d) => d.name === "Social Stigma (Scavenger)"), baselinePoints: -10 },
-      { ...disadvantagesList.find((d) => d.name === "Wealth (Lower)"), baselinePoints: -10 }
+      { ...disadvantagesList.find((d) => d.name === "Appearance (Unattractive)"), baselinePoints: -4 }
     ],
     // Ch6 prices every quirk at -1, so the row carries -1. Ch18 lists this
     // one in the racial package, and racial traits "all cost 0 CP for these
@@ -32874,7 +30536,8 @@ var nautolanTemplate = {
       { ...advantagesList.find((a) => a.name === "Empathy (Scent/Pheromone-based)"), baselinePoints: 5 }
     ],
     disadvantages: [
-      { ...disadvantagesList.find((d) => d.name === "Dependency"), baselinePoints: -5, description: "Requires regular immersion in water." }
+      { ...disadvantagesList.find((d) => d.name === "Dependency"), baselinePoints: -5, description: "Requires regular immersion in water." },
+      { ...disadvantagesList.find((d) => d.name === "Appearance (Unattractive)"), baselinePoints: -4, description: "Unattractive to standard humanoids due to large black eyes." }
     ],
     // One free native tongue (Ch3, 2026-08-25); Basic is bought.
     languages: "Nautila (Native) [0]",
@@ -32912,7 +30575,8 @@ var quarrenTemplate = {
     disadvantages: [
       { ...disadvantagesList.find((d) => d.name === "Bad Temper"), baselinePoints: -10 },
       { ...disadvantagesList.find((d) => d.name === "Intolerance (Surface Dwellers)"), baselinePoints: -5 },
-      { ...disadvantagesList.find((d) => d.name === "Stubbornness"), baselinePoints: -5 }
+      { ...disadvantagesList.find((d) => d.name === "Stubbornness"), baselinePoints: -5 },
+      { ...disadvantagesList.find((d) => d.name === "Appearance (Unattractive)"), baselinePoints: -4 }
     ],
     // One free native tongue (Ch3, 2026-08-25); the Broken floor is
     // retired. Ch18: "Basic is bought like any language, ranging Broken
@@ -32986,7 +30650,9 @@ var selkathTemplate = {
     advantages: [
       { ...advantagesList.find((a) => a.name === "Amphibious"), baselinePoints: 10 },
       { ...advantagesList.find((a) => a.name === "Damage Resistance (DR)" && a.level === 1), baselinePoints: 5 },
-      { ...advantagesList.find((a) => a.name === "Striker (Venomous Claws)"), baselinePoints: 5 },
+      // Ch18: "Sharp Claws (Venomous)", Ch4's 3-point Sharp Claws. This
+      // carried Striker (Venomous Claws), a trait no chapter prints.
+      { ...advantagesList.find((a) => a.name === "Sharp Claws"), baselinePoints: 3, description: "Venomous." },
       { ...advantagesList.find((a) => a.name === "Fit"), baselinePoints: 5 }
     ],
     disadvantages: [
@@ -34885,6 +32551,7 @@ var tuskenRaiderTemplate = {
       { ...advantagesList.find((a) => a.name === "ST +1 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "HT +1 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "Night Vision" && a.level === 2), baselinePoints: 2 },
+      { ...advantagesList.find((a) => a.name === "Temperature Tolerance" && a.level === 2), baselinePoints: 2 },
       { ...advantagesList.find((a) => a.name === "High Pain Threshold"), baselinePoints: 10 }
     ],
     disadvantages: [
@@ -34927,9 +32594,12 @@ var weequayTemplate = {
       { ...advantagesList.find((a) => a.name === "HT +1 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "Will +1 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "Damage Resistance (DR)" && a.level === 1), baselinePoints: 5 },
-      { ...advantagesList.find((a) => a.name === "High Pain Threshold"), baselinePoints: 10 }
+      { ...advantagesList.find((a) => a.name === "High Pain Threshold"), baselinePoints: 10 },
+      { ...advantagesList.find((a) => a.name === "Telecommunication (Smell/Taste)"), baselinePoints: 0 }
     ],
     disadvantages: [
+      { ...disadvantagesList.find((d) => d.name === "Appearance (Unattractive)"), baselinePoints: -4 },
+      { ...disadvantagesList.find((d) => d.name === "Stubbornness"), baselinePoints: -5 },
       { ...disadvantagesList.find((d) => d.name === "Vow"), baselinePoints: -5, description: "Obey the Quay (clan spiritual authority)." }
     ],
     /*
@@ -34969,18 +32639,28 @@ var ugnaughtTemplate = {
     advantages: [
       { ...advantagesList.find((a) => a.name === "IQ +1 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "HT +1 (Racial)"), baselinePoints: 0 },
-      { ...advantagesList.find((a) => a.name === "Versatile"), baselinePoints: 5 }
+      /*
+        Ch18: "Tinker's Ingenuity: 10 bonus Character Points restricted
+        to repair, technical, and craft skills." A row that PAYS, stored
+        the way Versatility is (see human-template.ts): -10 on the row,
+        and the library's grantsBudget shows it at [0] "grants +10".
+        This slot held a generic "Versatile" [5] that granted nothing.
+      */
+      { ...advantagesList.find((a) => a.name === "Tinker's Ingenuity"), points: -10, baselinePoints: 0 },
+      { ...advantagesList.find((a) => a.name === "Temperature Tolerance" && a.level === 2), baselinePoints: 2 },
+      { ...advantagesList.find((a) => a.name === "Resistant" && a.level === 1), baselinePoints: 5, description: "Disease: +3 to resist." }
     ],
     disadvantages: [
       { ...disadvantagesList.find((a) => a.name === "ST -1 (Racial)"), baselinePoints: 0 },
       { ...disadvantagesList.find((d) => d.name === "Social Stigma (Second-Class Citizen)"), baselinePoints: -5 },
+      { ...disadvantagesList.find((d) => d.name === "Appearance (Unattractive)"), baselinePoints: -4 },
       { ...disadvantagesList.find((d) => d.name === "Stubbornness"), baselinePoints: -5 }
     ],
     // One free native tongue (Ch3, 2026-08-25); the Broken floor is
     // retired. Ch18: "Basic is bought like any language, typically
     // running Broken [1] to Accented [2]."
     languages: "Ugnaught (Native) [0]",
-    culturalFamiliarities: "Gentes / Cloud City [0]",
+    culturalFamiliarities: "Gentes [0]",
     literacy: "Native Literacy [0]"
   },
   portraitUrl: null
@@ -34994,12 +32674,6 @@ var dowutinTemplate = {
     ...blankSheetData,
     species: "Dowutin",
     pointTotal: 150,
-    /*
-      Ch2: the racial Wealth (Lower) at -10 is Ch5's Struggling tier, which
-      starts with 1,900 CR. The tier is in the points rather than the name -
-      see `check:starting-credits` for why that is resolved both ways.
-    */
-    totalCredits: 1900,
     strength: 10,
     dexterity: 10,
     iq: 10,
@@ -35015,12 +32689,20 @@ var dowutinTemplate = {
       { ...advantagesList.find((a) => a.name === "ST +4 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "HT +1 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "Damage Resistance (DR)" && a.level === 1), baselinePoints: 5 },
-      { ...advantagesList.find((a) => a.name === "Acute Senses" && a.level === 2), baselinePoints: 4, description: "+2 to Hearing." }
+      { ...advantagesList.find((a) => a.name === "Acute Senses" && a.level === 2), baselinePoints: 4, description: "+2 to Hearing." },
+      { ...advantagesList.find((a) => a.name === "Temperature Tolerance" && a.level === 2), baselinePoints: 2, description: "Cold." }
     ],
+    /*
+      Ch18: "Appearance (Unattractive); Bad Temper; Social Stigma (Valuable
+      Property ...)". The package carried a Wealth (Lower) the chapter does
+      not print, and with it a 1,900 CR purse; a Dowutin now starts on the
+      same money as anyone else.
+    */
     disadvantages: [
       { ...disadvantagesList.find((a) => a.name === "IQ -1 (Racial)"), baselinePoints: 0 },
-      { ...disadvantagesList.find((d) => d.name === "Wealth (Lower)"), baselinePoints: -10 },
-      { ...disadvantagesList.find((d) => d.name === "Bad Temper"), baselinePoints: -10 }
+      { ...disadvantagesList.find((d) => d.name === "Appearance (Unattractive)"), baselinePoints: -4 },
+      { ...disadvantagesList.find((d) => d.name === "Bad Temper"), baselinePoints: -10 },
+      { ...disadvantagesList.find((d) => d.name === "Social Stigma (Valuable Property)"), baselinePoints: -10 }
     ],
     // One free native tongue (Ch3, 2026-08-25); Basic is bought. Ch23
     // names the language: Dowuta (homeworld Dowut).
@@ -35054,10 +32736,15 @@ var tridactylTemplate = {
       { ...advantagesList.find((a) => a.name === "IQ +3 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "DX +2 (Racial)"), baselinePoints: 0 },
       { ...advantagesList.find((a) => a.name === "High Manual Dexterity" && a.level === 1), baselinePoints: 5 },
-      { ...advantagesList.find((a) => a.name === "Force Sensitive"), baselinePoints: 5 }
+      { ...advantagesList.find((a) => a.name === "Force Sensitive"), baselinePoints: 5 },
+      // Ch18: "Longevity 3 (max); Force Sensitive; Force Training 3
+      // (Master)". Neither was in the package.
+      { ...advantagesList.find((a) => a.name === "Longevity" && a.level === 3), baselinePoints: 6 },
+      { ...advantagesList.find((a) => a.name === "Force Training" && a.level === 3), baselinePoints: 45 }
     ],
     disadvantages: [
       { ...disadvantagesList.find((a) => a.name === "ST -3 (Racial)"), baselinePoints: 0 },
+      { ...disadvantagesList.find((d) => d.name === "Appearance (Unattractive)"), baselinePoints: -4 },
       { ...disadvantagesList.find((d) => d.name === "Social Stigma (Minority)"), baselinePoints: -10 },
       { ...disadvantagesList.find((d) => d.name === "Pacifism"), baselinePoints: -10, description: "Self-Defense Only." }
     ],
@@ -35764,7 +33451,7 @@ function clothingSet(setId, options = {}) {
   const { equipped = true, omit = [], carried = [], itemSizeModifier } = options;
   const set = COORDINATED_CLOTHING_SETS.find((s) => s.id === setId);
   if (!set) throw new Error(`clothing-common: no Coordinated Clothing Set with id '${setId}'`);
-  const unknown = [...omit, ...carried].filter((label) => !set.pieces.some((p) => p.label === label));
+  const unknown = [...omit, ...carried].filter((label2) => !set.pieces.some((p) => p.label === label2));
   if (unknown.length) {
     throw new Error(`clothing-common: '${setId}' has no row labelled ${unknown.map((u) => `'${u}'`).join(", ")}`);
   }
@@ -36589,7 +34276,7 @@ var sithTrooperTemplate = {
       { ...advantagesList.find((a) => a.name === "Sith Trooper Gear"), points: 20 }
     ],
     disadvantages: [
-      { name: "Fanaticism", points: -15, description: "Devotion to Empire." },
+      { name: "Fanaticism", points: -15, description: "Devotion to the Sith Empire." },
       { name: "Intolerance", points: -10, description: "Hate Republic." },
       // Ch18's Core Disadvantages - and the prerequisite Sith Trooper
       // Gear names, mirroring the Republic Soldier's Duty.
@@ -39146,7 +36833,29 @@ var vahnanCsharTemplate = {
 };
 
 // src/lib/character-templates.ts
-var characterTemplateStore = {
+function withRacialRowsMarked(templates) {
+  const packages = /* @__PURE__ */ new Map();
+  for (const [key, template] of Object.entries(templates)) {
+    if (templateCategory(key, template) !== "Species") continue;
+    const d = template.data ?? {};
+    const name = typeof d.species === "string" ? d.species : template.name;
+    packages.set(name, {
+      name,
+      advantages: d.advantages ?? [],
+      disadvantages: d.disadvantages ?? [],
+      quirks: d.quirks ?? [],
+      forcePowers: d.forcePowers ?? []
+    });
+  }
+  return Object.fromEntries(Object.entries(templates).map(([key, template]) => {
+    const species6 = template.data?.species;
+    const pkg = typeof species6 === "string" ? packages.get(species6) : void 0;
+    if (!pkg) return [key, template];
+    const data = { ...template.data };
+    return markPackageRows(data, pkg).length > 0 ? [key, { ...template, data }] : [key, template];
+  }));
+}
+var characterTemplateStore = withRacialRowsMarked({
   blank: blankSheetTemplate,
   kaelenRarr: kaelenRarrTemplate,
   vexKorta: vexKortaTemplate,
@@ -39212,7 +36921,3033 @@ var characterTemplateStore = {
   r8009Utility: r8009UtilityDroidTemplate,
   s6Security: s6SecurityMaintenanceDroidTemplate,
   sentinelDroid: sentinelDroidTemplate
+});
+
+// src/lib/species-swap.ts
+var str = (v, fallback = "") => typeof v === "string" ? v : fallback;
+var num2 = (v, fallback = 0) => Number.isFinite(Number(v)) ? Number(v) : fallback;
+var SPECIES_PACKAGES = new Map(
+  Object.entries(characterTemplateStore).filter(([key, template]) => templateCategory(key, template) === "Species").map(([, template]) => {
+    const d = template.data ?? {};
+    const name = str(d.species, template.name);
+    const mark = (rows) => (rows ?? []).map((row2) => ({ ...row2, fromSpecies: name }));
+    return [name, {
+      name,
+      advantages: mark(d.advantages),
+      disadvantages: mark(d.disadvantages),
+      quirks: mark(d.quirks),
+      forcePowers: mark(d.forcePowers),
+      sizeModifier: num2(d.sizeModifier, 0),
+      height: str(d.height),
+      weight: str(d.weight),
+      languages: str(d.languages),
+      languagesBaseline: num2(d.languagesBaseline, 0),
+      culturalFamiliarities: str(d.culturalFamiliarities),
+      culturalFamiliaritiesBaseline: num2(d.culturalFamiliaritiesBaseline, 0),
+      literacy: str(d.literacy),
+      literacyBaseline: num2(d.literacyBaseline, 0)
+    }];
+  })
+);
+var SPECIES_NAMES = [...SPECIES_PACKAGES.keys()].sort((a, b) => a.localeCompare(b));
+var SPECIES_ALIASES = {
+  "Tusken Raider": ["Sand Person", "Sand People", "Tusken", "Tuskens"]
 };
+var fold2 = (s) => str(s).toLowerCase().replace(/[‘’ʼ]/g, "'").replace(/\s+/g, " ").trim();
+function speciesMatches(name, query2) {
+  const q = fold2(query2);
+  if (!q) return true;
+  const candidates = [name, ...SPECIES_ALIASES[name] ?? []].map(fold2);
+  return candidates.some((c) => c.startsWith(q) || c.split(" ").some((word) => word.startsWith(q)));
+}
+function matchedAlias(name, query2) {
+  const q = fold2(query2);
+  if (!q || fold2(name).startsWith(q)) return null;
+  return (SPECIES_ALIASES[name] ?? []).find(
+    (a) => fold2(a).startsWith(q) || fold2(a).split(" ").some((w) => w.startsWith(q))
+  ) ?? null;
+}
+function speciesForAlias(text) {
+  const q = fold2(text);
+  if (!q) return null;
+  for (const [name, aliases] of Object.entries(SPECIES_ALIASES)) {
+    if (aliases.some((a) => fold2(a) === q)) return name;
+  }
+  return null;
+}
+function speciesPackageFor(name) {
+  const raw = str(name).trim();
+  if (!raw) return null;
+  const exact = SPECIES_PACKAGES.get(raw);
+  if (exact) return exact;
+  const wanted = fold2(raw);
+  for (const [key, pkg] of SPECIES_PACKAGES) {
+    if (fold2(key) === wanted) return pkg;
+  }
+  return null;
+}
+var isKnownSpecies = (name) => speciesPackageFor(name) !== null;
+var grantedBy = (row2, species6) => {
+  const from = species6.trim().toLowerCase();
+  if (!from) return false;
+  return str(row2?.fromSpecies).trim().toLowerCase() === from;
+};
+var withoutSpecies = (rows, species6) => (rows ?? []).filter((row2) => !grantedBy(row2, species6));
+function swapEntryString(current2, outgoingStr, incomingStr) {
+  const split2 = (s) => str(s).split(";").map((x) => x.trim()).filter(Boolean);
+  const incoming = split2(incomingStr);
+  const fromOldPackage = new Set(split2(outgoingStr).map(fold2));
+  const alreadyIncoming = new Set(incoming.map(fold2));
+  const kept = split2(current2).filter((e) => !fromOldPackage.has(fold2(e)) && !alreadyIncoming.has(fold2(e)));
+  return [...incoming, ...kept].join("; ");
+}
+function swapSpecies(values, next) {
+  const v = values ?? {};
+  const previous = str(v.species).trim();
+  const target = str(next).trim();
+  const incoming = speciesPackageFor(target);
+  const outgoing = SPECIES_PACKAGES.get(previous) ?? speciesPackageFor(previous);
+  const strippedAdv = withoutSpecies(v.advantages, previous);
+  const strippedDis = withoutSpecies(v.disadvantages, previous);
+  const strippedQrk = withoutSpecies(v.quirks, previous);
+  const strippedPwr = withoutSpecies(v.forcePowers, previous);
+  const heldPowers = new Set(strippedPwr.map((row2) => str(row2?.name).trim().toLowerCase()));
+  const grantedPowers = (incoming?.forcePowers ?? []).filter((row2) => !heldPowers.has(str(row2?.name).trim().toLowerCase()));
+  const removed = [
+    ...v.advantages ?? [],
+    ...v.disadvantages ?? [],
+    ...v.quirks ?? [],
+    ...v.forcePowers ?? []
+  ].filter((row2) => grantedBy(row2, previous)).map((row2) => str(row2?.name)).filter(Boolean);
+  const added = incoming ? [...incoming.advantages, ...incoming.disadvantages, ...incoming.quirks, ...grantedPowers].map((row2) => str(row2?.name)).filter(Boolean) : [];
+  const swap = {
+    species: target,
+    advantages: [...strippedAdv, ...incoming?.advantages ?? []],
+    disadvantages: [...strippedDis, ...incoming?.disadvantages ?? []],
+    quirks: [...strippedQrk, ...incoming?.quirks ?? []],
+    forcePowers: [...strippedPwr, ...grantedPowers],
+    /*
+      A written-in species has no Size Modifier of its own, so the character
+      returns to 0 rather than keeping the last species'. Ch2 treats SM 0 as
+      the human-scale default.
+    */
+    sizeModifier: incoming?.sizeModifier ?? 0,
+    /*
+      The species AVERAGE height and weight (Ch18's Height/Weight lines,
+      2026-08-26) travel with the package - height is the datum the SM
+      above derives from, so writing one without the other would leave the
+      sheet stating a pair the formula contradicts. A write-in clears both
+      for the same reason the SM returns to 0.
+    */
+    height: incoming?.height ?? "",
+    weight: incoming?.weight ?? "",
+    /*
+      Through swapEntryString, so a bought language, familiarity or
+      literacy entry survives the swap - only the outgoing PACKAGE's own
+      entries come off. The baselines are the incoming package's: what it
+      grants is what the baseline absorbs, and a kept bought entry keeps
+      billing above it.
+    */
+    languages: swapEntryString(v.languages, outgoing?.languages, incoming?.languages),
+    languagesBaseline: incoming?.languagesBaseline ?? 0,
+    culturalFamiliarities: swapEntryString(v.culturalFamiliarities, outgoing?.culturalFamiliarities, incoming?.culturalFamiliarities),
+    culturalFamiliaritiesBaseline: incoming?.culturalFamiliaritiesBaseline ?? 0,
+    literacy: swapEntryString(v.literacy, outgoing?.literacy, incoming?.literacy),
+    literacyBaseline: incoming?.literacyBaseline ?? 0,
+    removed,
+    added
+  };
+  return swap;
+}
+
+// src/lib/species-package-migration.ts
+var UNATTRACTIVE = { list: "disadvantages", name: "Appearance (Unattractive)" };
+var SPECIES_PACKAGE_DELTAS = {
+  Arkanian: {
+    retired: [{ list: "disadvantages", name: "Curiosity", points: -5, baselinePoints: -5, replacedBy: { list: "quirks", name: "Curious" } }],
+    added: []
+  },
+  Bothan: {
+    retired: [{
+      list: "disadvantages",
+      name: "Reputation -1 (Untrustworthy)",
+      points: -5,
+      baselinePoints: -5,
+      replacedBy: { list: "disadvantages", name: "Reputation -2 (Manipulative Spies)" }
+    }],
+    added: []
+  },
+  Dowutin: {
+    retired: [{ list: "disadvantages", name: "Wealth (Lower)", points: -10, baselinePoints: -10 }],
+    added: [
+      { list: "advantages", name: "Temperature Tolerance" },
+      UNATTRACTIVE,
+      { list: "disadvantages", name: "Social Stigma (Valuable Property)" }
+    ]
+  },
+  Echani: {
+    retired: [],
+    added: [{ list: "advantages", name: "Combat Aptitude (Echani)" }, { list: "advantages", name: "Read Opponent (Echani)" }]
+  },
+  Gand: { retired: [], added: [{ list: "advantages", name: "Less Sleep" }] },
+  Jawa: {
+    retired: [{ list: "disadvantages", name: "Wealth (Lower)", points: -10, baselinePoints: -10 }],
+    added: [{ list: "advantages", name: "Resistant" }, UNATTRACTIVE]
+  },
+  /*
+    The Miraluka package itself did not change - the PACKAGE a swap applies
+    did. Ch18 lists the Force power among the species' Advantages and only
+    the template granted it, so a Miraluka made by species swap has never
+    had it. One made from the template has, and is skipped by name.
+  */
+  Miraluka: { retired: [], added: [{ list: "forcePowers", name: "Miralukan Force Sight" }] },
+  Mirialan: {
+    retired: [{
+      list: "disadvantages",
+      name: "Disciplines of Faith (Ritualism)",
+      points: -5,
+      baselinePoints: -5,
+      replacedBy: { list: "disadvantages", name: "Vow" }
+    }],
+    added: []
+  },
+  Nautolan: { retired: [], added: [UNATTRACTIVE] },
+  Quarren: { retired: [], added: [UNATTRACTIVE] },
+  Rodian: { retired: [], added: [UNATTRACTIVE] },
+  Selkath: {
+    retired: [{
+      list: "advantages",
+      name: "Striker (Venomous Claws)",
+      points: 5,
+      baselinePoints: 5,
+      replacedBy: { list: "advantages", name: "Sharp Claws" }
+    }],
+    added: []
+  },
+  "Tusken Raider": { retired: [], added: [{ list: "advantages", name: "Temperature Tolerance" }] },
+  "Twi'lek": {
+    retired: [{ list: "advantages", name: "Claim to Hospitality", points: 5, baselinePoints: 5 }],
+    added: []
+  },
+  Ugnaught: {
+    /*
+      Tinker's Ingenuity is ADDED rather than put in Versatile's place. It
+      is not that row renamed: Versatile granted nothing, and this is
+      Ch4's 10-point budget, which an Ugnaught is owed whether or not the
+      old row is still on the sheet.
+    */
+    retired: [{ list: "advantages", name: "Versatile", points: 5, baselinePoints: 5 }],
+    added: [
+      { list: "advantages", name: "Tinker's Ingenuity" },
+      { list: "advantages", name: "Temperature Tolerance" },
+      { list: "advantages", name: "Resistant" },
+      UNATTRACTIVE
+    ]
+  },
+  Weequay: {
+    retired: [],
+    added: [
+      { list: "advantages", name: "Telecommunication (Smell/Taste)" },
+      UNATTRACTIVE,
+      { list: "disadvantages", name: "Stubbornness" }
+    ]
+  },
+  Wookiee: {
+    retired: [],
+    added: [{ list: "advantages", name: "Sharp Claws" }, { list: "advantages", name: "Temperature Tolerance" }]
+  },
+  "Yoda's Species (Tridactyls)": {
+    retired: [],
+    added: [
+      { list: "advantages", name: "Longevity" },
+      { list: "advantages", name: "Force Training" },
+      UNATTRACTIVE
+    ]
+  },
+  Zabrak: {
+    retired: [],
+    added: [{ list: "advantages", name: "Hardy (Zabrak)" }, { list: "advantages", name: "Natural Intimidator (Zabrak)" }]
+  }
+};
+var sameSpecies = (a, b) => typeof a === "string" && a.trim().toLowerCase() === b.trim().toLowerCase();
+var nameOf2 = (row2) => String(row2?.name ?? "").trim();
+var label = (row2) => row2?.level ? `${nameOf2(row2)} ${row2.level}` : nameOf2(row2);
+function isRetiredRow(row2, retired, species6) {
+  if (nameOf2(row2) !== retired.name) return false;
+  if (Number(row2?.points) !== retired.points) return false;
+  if (Number(row2?.baselinePoints ?? 0) !== retired.baselinePoints) return false;
+  const marker = typeof row2?.fromSpecies === "string" ? row2.fromSpecies.trim() : "";
+  return marker === "" || sameSpecies(marker, species6);
+}
+function migrateSpeciesPackage(data, revisionOnArrival, packageFor = speciesPackageFor) {
+  if (!data) return null;
+  const stated = Number(revisionOnArrival ?? 0);
+  const arrived = Number.isFinite(stated) ? stated : 0;
+  data.speciesPackageRevision = SPECIES_PACKAGE_REVISION;
+  if (arrived >= SPECIES_PACKAGE_REVISION) return null;
+  const pkg = packageFor(data.species);
+  if (!pkg) return null;
+  const update = arrived < 1 ? bringToChapter18(data, pkg) : null;
+  if (arrived < 2) markPackageRows(data, pkg);
+  return update;
+}
+function bringToChapter18(data, pkg) {
+  const delta = SPECIES_PACKAGE_DELTAS[pkg.name];
+  if (!delta) return null;
+  const update = { species: pkg.name, added: [], removed: [], budgetGranted: 0 };
+  const listOf = (list) => {
+    if (!Array.isArray(data[list])) data[list] = [];
+    return data[list];
+  };
+  const liveRow = (list, name) => pkg[list].find((r2) => nameOf2(r2) === name);
+  const has2 = (list, name) => listOf(list).some((r2) => nameOf2(r2) === name);
+  const grant = (list, name, at) => {
+    const row2 = liveRow(list, name);
+    if (!row2 || has2(list, name)) return;
+    const copy = { ...row2 };
+    const rows = listOf(list);
+    if (at === void 0 || at > rows.length) rows.push(copy);
+    else rows.splice(at, 0, copy);
+    update.added.push(label(copy));
+    if (Number(copy.points) < 0 && list === "advantages") update.budgetGranted += -Number(copy.points);
+  };
+  for (const retired of delta.retired) {
+    const rows = listOf(retired.list);
+    const at = rows.findIndex((r2) => isRetiredRow(r2, retired, pkg.name));
+    if (at === -1) continue;
+    const [gone] = rows.splice(at, 1);
+    update.removed.push(label(gone));
+    if (retired.replacedBy) {
+      grant(retired.replacedBy.list, retired.replacedBy.name, retired.replacedBy.list === retired.list ? at : void 0);
+    }
+  }
+  for (const added of delta.added) grant(added.list, added.name);
+  return update.added.length > 0 || update.removed.length > 0 ? update : null;
+}
+
+// src/lib/enhanced-defenses-migration.ts
+var enhanced_defenses_migration_exports = {};
+__export(enhanced_defenses_migration_exports, {
+  migrateEnhancedDefenses: () => migrateEnhancedDefenses
+});
+var OLD_UMBRELLA = "Enhanced Defenses";
+var OLD_ECHANI_RACIAL = "Enhanced Defense (Echani)";
+var OLD_EITHER_OR_DEFAULT = "+1 to Enhanced Block, or +1 to Enhanced Parry narrowed to a single weapon or skill \u2014 record the choice in this row's description; the narrowed bonus applies only to that weapon's Parry.";
+function migrateEnhancedDefenses(data) {
+  if (!data || typeof data !== "object") return 0;
+  let rewritten = 0;
+  for (const key of ["advantages", "disadvantages"]) {
+    const rows = data[key];
+    if (!Array.isArray(rows)) continue;
+    for (const row2 of rows) {
+      if (!row2 || typeof row2 !== "object") continue;
+      const name = String(row2.name ?? "").trim();
+      if (name === OLD_ECHANI_RACIAL) {
+        row2.name = ECHANI_REFLEXES;
+        rewritten += 1;
+        continue;
+      }
+      if (name !== OLD_UMBRELLA) continue;
+      const level = Number(row2.level);
+      if (level === 3 && (row2.baselinePoints ?? 0) > 0) {
+        const paid = Math.max(0, (row2.points ?? 15) - (row2.baselinePoints ?? 0));
+        row2.name = ECHANI_REFLEXES;
+        row2.level = null;
+        row2.points = 5 + paid;
+        row2.baselinePoints = 5;
+        row2.modifiers = { ...NO_MODIFIERS, dodge: 1 };
+        if (!String(row2.description ?? "").trim()) row2.description = "+1 to Dodge.";
+      } else if (level === 3) {
+        row2.name = ENHANCED_DODGE;
+        row2.level = 1;
+      } else if (level === 2) {
+        row2.name = ENHANCED_PARRY;
+        row2.level = 1;
+      } else {
+        const description = String(row2.description ?? "");
+        const isUnedited = description.trim() === OLD_EITHER_OR_DEFAULT;
+        if (!isUnedited && /block/i.test(description) && !/parry/i.test(description)) {
+          row2.name = ENHANCED_BLOCK;
+          row2.level = 1;
+        } else {
+          row2.name = ENHANCED_PARRY_NARROWED;
+          row2.level = 1;
+          if (isUnedited) row2.description = NARROWED_PARRY_NOTE;
+        }
+      }
+      rewritten += 1;
+    }
+  }
+  return rewritten;
+}
+
+// src/lib/language-migration.ts
+var language_migration_exports = {};
+__export(language_migration_exports, {
+  NATIVE_RENAMES: () => NATIVE_RENAMES,
+  migrateLanguages: () => migrateLanguages
+});
+var DROIDSPEAK_ROW = "Droidspeak (Native, binary) [0]";
+var splitEntries2 = (field) => String(field ?? "").split(";").map((e) => e.trim()).filter(Boolean);
+var FLOOR_ENTRIES = /* @__PURE__ */ new Set([
+  "Basic (Broken) [0]",
+  "Basic (Accented) [0]",
+  "Basic (Fluent) [0]",
+  "Galactic Basic (Broken) [0]",
+  "Galactic Basic (Accented) [0]",
+  "Galactic Basic (Fluent) [0]"
+]);
+var FLOOR_OFFSET_ENTRY = "Galactic Basic (Accented) [4]";
+var NATIVE_RENAMES = {
+  "Weequay": [{ from: "Weequay (Native) [0]", to: "Sriluurian (Native) [0]" }],
+  "Bothan": [{ from: "Bothan (Native) [0]", to: "Bothese (Native) [0]" }],
+  "Zabrak": [{ from: "Zabrak (Native) [0]", to: "Zabraki (Native) [0]" }],
+  "Sith Pureblood": [{ from: "Sith (Native) [0]", to: "Sith, Ancient (Native) [0]" }],
+  "Dowutin": [{ from: "Dowutin (Native) [0]", to: "Dowuta (Native) [0]" }],
+  // Ch23 ruled the invented dialect out: no attested tongue, Basic is native.
+  "Yoda's Species (Tridactyls)": [{ from: "Ancient Dialect (Native) [0]", to: "Basic (Native) [0]" }],
+  "Echani": [{ from: "Echani (Native) [0]", to: "The Echani tongue (Native) [0]" }],
+  // Ch23 folds the lekku channel into Ryl itself; the separate row goes below.
+  "Twi'lek": [{ from: "Ryl (Native) [0]", to: "Ryl (Native, with silent lekku sign-channel) [0]" }]
+};
+var BINARY_ONLY_DROIDS = /* @__PURE__ */ new Set([
+  "Droid (Astromech)",
+  "Droid (Utility)",
+  "Droid (Hybrid)",
+  "Droid (Assault)",
+  "Droid (Heavy Assault)",
+  "Droid (Elite Assault)"
+]);
+function migrateLanguages(data) {
+  const applied = [];
+  const species6 = String(data?.species ?? "").trim();
+  const isDroid = data?.isDroid === true || species6.startsWith("Droid");
+  let entries = splitEntries2(data?.languages);
+  const originalField = entries.join("; ");
+  if (isDroid) {
+    const quirks2 = Array.isArray(data?.quirks) ? data.quirks : [];
+    const kept = quirks2.filter((q) => String(q?.name ?? "").trim() !== "Droidspeak");
+    if (kept.length !== quirks2.length) {
+      data.quirks = kept;
+      applied.push("Droidspeak quirk removed - it is a Language now (+1 CP, unspent)");
+    }
+    entries = entries.map((e) => e === "Binary (Native) [0]" ? DROIDSPEAK_ROW : e).filter((e) => e !== "communicates in binary tones and direct system interfaces");
+    if (BINARY_ONLY_DROIDS.has(species6)) {
+      entries = entries.map((e) => e === "Basic (Native) [0]" || e === "Basic (comprehension only) [0]" ? "Basic (Comprehension-only) [0]" : e);
+    }
+    if (!entries.some((e) => e.startsWith("Droidspeak"))) entries.unshift(DROIDSPEAK_ROW);
+  } else {
+    const info = speciesLanguageInfo(species6);
+    if (info) {
+      for (const rename of NATIVE_RENAMES[species6] ?? []) {
+        entries = entries.map((e) => e === rename.from ? rename.to : e);
+      }
+      if (species6 === "Twi'lek" && entries.some((e) => e.startsWith("Ryl (Native"))) {
+        entries = entries.filter((e) => e !== "Lekku Sign Language [0]");
+      }
+      const dropFloors = !info.basicNative || entries.includes("Basic (Native) [0]");
+      if (dropFloors) {
+        const before = entries.length;
+        entries = entries.filter((e) => e !== FLOOR_OFFSET_ENTRY && !FLOOR_ENTRIES.has(e));
+        if (entries.length !== before && Number(data?.languagesBaseline ?? 0) >= 4) {
+          if (originalField.includes(FLOOR_OFFSET_ENTRY)) {
+            data.languagesBaseline = Number(data.languagesBaseline) - 4;
+          }
+        }
+      }
+      if (info.cannotSpeakBasic) {
+        const entryIdx = entries.indexOf("Basic, Comprehension-only [0]");
+        const row2 = (data?.skills ?? []).find((s) => String(s?.name ?? "").trim() === "Language (Basic, Comprehension-only)" && Number(s?.points ?? 0) === 0 && Number(s?.baselinePoints ?? 0) === 2);
+        if (row2) {
+          row2.points = 2;
+          row2.baselinePoints = 0;
+          row2.notes = "Fluent comprehension, bought - a Wookiee cannot physically speak Basic (Ch3, Wookiees).";
+          applied.push("comprehension-only Basic is bought now (+2 CP in Skills)");
+        }
+        if (entryIdx >= 0) {
+          entries[entryIdx] = "Basic (Comprehension-only) [2]";
+          if (row2) {
+            data.languagesBaseline = Number(data?.languagesBaseline ?? 0) + 2;
+          } else {
+            applied.push("comprehension-only Basic is bought now (+2 CP)");
+          }
+        }
+      }
+      if (!info.basicNative) {
+        for (const s of data?.skills ?? []) {
+          if (String(s?.name ?? "").trim() !== "Language (Basic)") continue;
+          if (Number(s?.points ?? 0) !== 0 || Number(s?.baselinePoints ?? 0) !== 3) continue;
+          const notes = String(s?.notes ?? "");
+          if (!/native/i.test(notes) || /bilingual/i.test(notes)) continue;
+          s.name = `Language (${info.tongue})`;
+          s.notes = "Native, Fluent - free (Ch3).";
+          applied.push(`free-Basic row became the native tongue: Language (${info.tongue})`);
+        }
+      }
+    }
+  }
+  const nextField = entries.join("; ");
+  if (nextField !== originalField) {
+    data.languages = nextField;
+    applied.push(`languages: "${originalField}" -> "${nextField}"`);
+  }
+  return applied;
+}
+
+// src/lib/sanitizer-null-migration.ts
+var sanitizer_null_migration_exports = {};
+__export(sanitizer_null_migration_exports, {
+  migrateSanitizerNulls: () => migrateSanitizerNulls
+});
+
+// src/components/character-sheet/schemas/character-form-schema.ts
+var character_form_schema_exports = {};
+__export(character_form_schema_exports, {
+  BASE_ATTRIBUTE_VALUE: () => BASE_ATTRIBUTE_VALUE,
+  CHARACTER_FORM_ARRAY_KEYS: () => CHARACTER_FORM_ARRAY_KEYS,
+  HIT_LOCATION_TYPES: () => HIT_LOCATION_TYPES,
+  POINT_COSTS_PRIMARY: () => POINT_COSTS_PRIMARY,
+  POINT_COSTS_SECONDARY: () => POINT_COSTS_SECONDARY,
+  advantageDataSchema: () => advantageDataSchema,
+  ammunitionSchema: () => ammunitionSchema,
+  armorItemSchema: () => armorItemSchema,
+  armorModificationSchema: () => armorModificationSchema,
+  characterSheetSchema: () => characterSheetSchema,
+  customStarshipSchema: () => customStarshipSchema,
+  cyberneticLimbSchema: () => cyberneticLimbSchema,
+  cyberneticUpgradeSchema: () => cyberneticUpgradeSchema,
+  disadvantageDataSchema: () => disadvantageDataSchema,
+  gearSetSchema: () => gearSetSchema,
+  generalEquipmentItemSchema: () => generalEquipmentItemSchema,
+  getCostForAttributeLevelFromBaseline: () => getCostForAttributeLevelFromBaseline,
+  getDamageString: () => getDamageString,
+  hitLocationEntrySchema: () => hitLocationEntrySchema,
+  knownLightsaberFormSchema: () => knownLightsaberFormSchema,
+  levelSchema: () => levelSchema,
+  lightsaberModificationSchema: () => lightsaberModificationSchema,
+  lightsaberSchema: () => lightsaberSchema,
+  neuralImplantSchema: () => neuralImplantSchema,
+  pinnedNotificationSchema: () => pinnedNotificationSchema,
+  starshipArmamentSchema: () => starshipArmamentSchema,
+  starshipSystemSchema: () => starshipSystemSchema,
+  statusEffectPhaseSchema: () => statusEffectPhaseSchema,
+  statusEffectSchema: () => statusEffectSchema,
+  vehicleSchema: () => vehicleSchema,
+  weaponModificationSchema: () => weaponModificationSchema
+});
+
+// src/components/character-sheet/schemas/skills-techniques-powers.ts
+var skills_techniques_powers_exports = {};
+__export(skills_techniques_powers_exports, {
+  combatTechniqueSchema: () => combatTechniqueSchema,
+  forcePowerSchema: () => forcePowerSchema2,
+  knownLightsaberFormSchema: () => knownLightsaberFormSchema,
+  skillSchema: () => skillSchema
+});
+var skillSchema = external_exports.object({
+  id: external_exports.string().uuid().optional(),
+  name: external_exports.string().optional().nullable(),
+  level: external_exports.string().optional().nullable(),
+  points: external_exports.number().optional().nullable(),
+  relativeLevel: external_exports.string().optional().nullable(),
+  notes: external_exports.string().optional().nullable(),
+  baselinePoints: external_exports.number().optional().nullable()
+  // For template mode
+});
+var ForcePowerAlignmentEnum = external_exports.enum(["LS", "Grey", "DS"]);
+var forcePowerSchema2 = external_exports.object({
+  id: external_exports.string().uuid().optional(),
+  name: external_exports.string().optional().nullable(),
+  description: external_exports.string().optional().nullable(),
+  category: external_exports.string().optional().nullable(),
+  level: external_exports.coerce.number().int().min(1).optional().nullable(),
+  cpCost: external_exports.coerce.number().int().optional().nullable(),
+  fpCost: external_exports.coerce.number().int().optional().nullable(),
+  epCost: external_exports.coerce.number().int().optional(),
+  effect: external_exports.string().optional().nullable(),
+  characterTier: external_exports.string().optional().nullable(),
+  baseSkill: external_exports.string().optional().nullable(),
+  alignment: ForcePowerAlignmentEnum.optional().nullable(),
+  requirements: external_exports.string().optional().nullable(),
+  /*
+      A row the player authored rather than took from a catalog.
+  
+      Additive and optional, so every saved sheet predating it reads falsy and
+      behaves exactly as before - no migration. It exists because a blank row and
+      a catalog row awaiting selection are otherwise indistinguishable, and the
+      controls have to differ: a custom entry needs a free-text name and the full
+      tier range, where a catalog entry needs the catalog's own options.
+    */
+  custom: external_exports.boolean().optional(),
+  /*
+      Per-tier effects for a player-authored ability, and which face to show.
+  
+      `effect` remains the live field every consumer reads; tierEffects is the
+      source it resolves from when the tier changes, mirroring what
+      handleLevelSelection does for a catalog row. `confirmed` is presentation
+      only - a custom row reads as a form while being authored and as prose
+      afterwards, and can be reopened. See lib/custom-tiers.ts.
+  
+      Both optional and additive, so every saved sheet predating them loads
+      unchanged and no migration is needed.
+    */
+  tierEffects: external_exports.array(external_exports.object({
+    level: external_exports.coerce.number().int(),
+    effect: external_exports.string().default("")
+  })).optional(),
+  confirmed: external_exports.boolean().optional(),
+  baselinePoints: external_exports.number().optional().nullable(),
+  // For template mode
+  /*
+    Which species granted this power, when one did (lib/species-swap.ts). The
+    same marker the trait rows carry, for the same reason: a swap away from the
+    species takes off the row it granted and never one the player learned.
+    Optional and additive - a sheet predating it reads unmarked.
+  */
+  fromSpecies: external_exports.string().optional().nullable()
+});
+var combatTechniqueSchema = external_exports.object({
+  id: external_exports.string().uuid().optional(),
+  name: external_exports.string().optional().nullable(),
+  level: external_exports.coerce.number().int().min(1).optional().nullable(),
+  cpCost: external_exports.coerce.number().int().optional().nullable(),
+  fpCost: external_exports.coerce.number().int().optional().nullable(),
+  epCost: external_exports.coerce.number().int().optional().nullable(),
+  effect: external_exports.string().optional().nullable(),
+  characterTier: external_exports.string().optional().nullable(),
+  baseSkill: external_exports.string().optional().nullable(),
+  // Ch9's four technique sections. 'Unarmed' arrived 2026-08-19; the category
+  // is part of the SAVED technique and half the app keys off it, so a section
+  // the enum does not know about fails validation on load rather than showing
+  // up in the wrong accordion.
+  category: external_exports.enum(["Melee", "Unarmed", "Ranged", "Universal"]).optional().nullable(),
+  /*
+      A row the player authored rather than took from a catalog.
+  
+      Additive and optional, so every saved sheet predating it reads falsy and
+      behaves exactly as before - no migration. It exists because a blank row and
+      a catalog row awaiting selection are otherwise indistinguishable, and the
+      controls have to differ: a custom entry needs a free-text name and the full
+      tier range, where a catalog entry needs the catalog's own options.
+    */
+  custom: external_exports.boolean().optional(),
+  /*
+      Per-tier effects for a player-authored ability, and which face to show.
+  
+      `effect` remains the live field every consumer reads; tierEffects is the
+      source it resolves from when the tier changes, mirroring what
+      handleLevelSelection does for a catalog row. `confirmed` is presentation
+      only - a custom row reads as a form while being authored and as prose
+      afterwards, and can be reopened. See lib/custom-tiers.ts.
+  
+      Both optional and additive, so every saved sheet predating them loads
+      unchanged and no migration is needed.
+    */
+  tierEffects: external_exports.array(external_exports.object({
+    level: external_exports.coerce.number().int(),
+    effect: external_exports.string().default("")
+  })).optional(),
+  confirmed: external_exports.boolean().optional(),
+  damageBonus: external_exports.string().optional().nullable(),
+  skillBonus: external_exports.number().optional().nullable(),
+  skillPenalty: external_exports.number().optional().nullable(),
+  selectedWeaponId: external_exports.string().optional().nullable(),
+  baselinePoints: external_exports.number().optional().nullable()
+  // For template mode
+});
+var knownLightsaberFormSchema = external_exports.object({
+  id: external_exports.string().uuid().optional(),
+  name: external_exports.string().optional().nullable(),
+  /*
+      A custom Form's resolved effect for the selected tier.
+  
+      A CATALOG form has none of its own - getFormDetails(name, level) reads the
+      text out of lightsaber-forms.ts, which is why this field never existed. A
+      player-authored one has no catalog row to read from, so the tier text has to
+      live on the sheet. Ch9 gives all three tiered types the same shape - a
+      Description, a Base Skill and a per-tier Effect table - so this brings Forms
+      into line with Powers and Techniques rather than inventing a concept.
+    */
+  effect: external_exports.string().optional().nullable(),
+  custom: external_exports.boolean().optional(),
+  /*
+      Per-tier effects for a player-authored ability, and which face to show.
+  
+      `effect` remains the live field every consumer reads; tierEffects is the
+      source it resolves from when the tier changes, mirroring what
+      handleLevelSelection does for a catalog row. `confirmed` is presentation
+      only - a custom row reads as a form while being authored and as prose
+      afterwards, and can be reopened. See lib/custom-tiers.ts.
+  
+      Both optional and additive, so every saved sheet predating them loads
+      unchanged and no migration is needed.
+    */
+  tierEffects: external_exports.array(external_exports.object({
+    level: external_exports.coerce.number().int(),
+    effect: external_exports.string().default("")
+  })).optional(),
+  confirmed: external_exports.boolean().optional(),
+  level: external_exports.coerce.number().int().min(1, "Level must be at least 1").optional().nullable(),
+  baselinePoints: external_exports.number().optional().nullable()
+  // For template mode
+});
+
+// src/components/character-sheet/schemas/equipment-and-weapons.ts
+var equipment_and_weapons_exports = {};
+__export(equipment_and_weapons_exports, {
+  ALL_MOD_CATEGORIES: () => ALL_MOD_CATEGORIES,
+  AMMUNITION_TYPES: () => AMMUNITION_TYPES,
+  ARMOR_MOD_CATEGORIES: () => ARMOR_MOD_CATEGORIES,
+  BODY_SIDES: () => BODY_SIDES,
+  EQUIPMENT_CONDITION: () => EQUIPMENT_CONDITION,
+  HIT_LOCATION_TYPES: () => HIT_LOCATION_TYPES,
+  LIGHTSABER_MOD_CATEGORIES: () => LIGHTSABER_MOD_CATEGORIES,
+  WEAPON_MOD_CATEGORIES: () => WEAPON_MOD_CATEGORIES,
+  ammunitionSchema: () => ammunitionSchema,
+  armorComponentSlotSchema: () => armorComponentSlotSchema,
+  armorDrEntrySchema: () => armorDrEntrySchema,
+  armorItemSchema: () => armorItemSchema,
+  armorModificationSchema: () => armorModificationSchema,
+  customBlasterSchema: () => customBlasterSchema,
+  customExplosiveSchema: () => customExplosiveSchema,
+  customMeleeWeaponSchema: () => customMeleeWeaponSchema,
+  customStarshipSchema: () => customStarshipSchema,
+  cyberneticLimbSchema: () => cyberneticLimbSchema,
+  cyberneticUpgradeSchema: () => cyberneticUpgradeSchema,
+  gearSetSchema: () => gearSetSchema,
+  generalEquipmentItemSchema: () => generalEquipmentItemSchema,
+  heldLocationIdsSchema: () => heldLocationIdsSchema,
+  hitLocationEntrySchema: () => hitLocationEntrySchema,
+  itemModifiersSchema: () => itemModifiersSchema,
+  lightsaberModificationSchema: () => lightsaberModificationSchema,
+  lightsaberSchema: () => lightsaberSchema,
+  lightsaberSlotSchema: () => lightsaberSlotSchema,
+  meleeComponentEntrySchema: () => meleeComponentEntrySchema,
+  meleeDamageModeSchema: () => meleeDamageModeSchema,
+  modularPieceSchema: () => modularPieceSchema,
+  neuralImplantSchema: () => neuralImplantSchema,
+  starshipArmamentSchema: () => starshipArmamentSchema,
+  starshipSystemSchema: () => starshipSystemSchema,
+  vehicleSchema: () => vehicleSchema,
+  weaponModificationSchema: () => weaponModificationSchema
+});
+
+// src/lib/blaster-gas-grades.ts
+var blaster_gas_grades_exports = {};
+__export(blaster_gas_grades_exports, {
+  GAS_GRADES: () => GAS_GRADES,
+  GAS_GRADE_IDS: () => GAS_GRADE_IDS,
+  damageDiceCount: () => damageDiceCount,
+  gasGradeEffect: () => gasGradeEffect,
+  getGasGrade: () => getGasGrade
+});
+var GAS_GRADE_IDS = [
+  "training",
+  "budget",
+  "standard",
+  "refined",
+  "ionized",
+  "spinSealed",
+  "invisible",
+  "purple"
+];
+var GAS_GRADES = [
+  {
+    id: "training",
+    label: "Training-grade",
+    boltColor: "Orange",
+    boltHex: "#f97316",
+    costPerLb: 30,
+    legalityClass: null,
+    effect: "Half damage, typed end (Endurance)",
+    damageBonus: 0,
+    perDie: false,
+    heavyOnly: false,
+    halveDamage: true,
+    retypeTo: "end",
+    surRider: false,
+    malfMod: 0,
+    foeDefenseMod: null,
+    hardToLocate: false,
+    ionVsDroids: false
+  },
+  {
+    id: "budget",
+    label: "Budget Blend",
+    boltColor: "Yellow",
+    boltHex: "#eab308",
+    costPerLb: 50,
+    legalityClass: null,
+    effect: "Printed stats; Malf 1 worse",
+    damageBonus: 0,
+    perDie: false,
+    heavyOnly: false,
+    halveDamage: false,
+    retypeTo: null,
+    surRider: false,
+    malfMod: -1,
+    foeDefenseMod: null,
+    hardToLocate: false,
+    ionVsDroids: false
+  },
+  {
+    id: "standard",
+    label: "Standard Tibanna",
+    boltColor: "Red",
+    boltHex: "#ef4444",
+    costPerLb: 75,
+    legalityClass: null,
+    effect: "Baseline \u2014 all printed weapon stats assume it",
+    damageBonus: 0,
+    perDie: false,
+    heavyOnly: false,
+    halveDamage: false,
+    retypeTo: null,
+    surRider: false,
+    malfMod: 0,
+    foeDefenseMod: null,
+    hardToLocate: false,
+    ionVsDroids: false
+  },
+  {
+    id: "refined",
+    label: "Refined Tibanna",
+    boltColor: "Green",
+    boltHex: "#22c55e",
+    costPerLb: 150,
+    legalityClass: null,
+    effect: "+1 flat damage",
+    damageBonus: 1,
+    perDie: false,
+    heavyOnly: false,
+    halveDamage: false,
+    retypeTo: null,
+    surRider: false,
+    malfMod: 0,
+    foeDefenseMod: null,
+    hardToLocate: false,
+    ionVsDroids: false
+  },
+  {
+    id: "ionized",
+    label: "Ionized Tibanna",
+    boltColor: "Blue",
+    boltHex: "#3b82f6",
+    costPerLb: 150,
+    legalityClass: null,
+    effect: "Damage gains the sur (Surge) rider; vs droids and electronics, treat as ion",
+    damageBonus: 0,
+    perDie: false,
+    heavyOnly: false,
+    halveDamage: false,
+    retypeTo: null,
+    surRider: true,
+    malfMod: 0,
+    foeDefenseMod: null,
+    hardToLocate: false,
+    ionVsDroids: true
+  },
+  {
+    id: "spinSealed",
+    label: "Spin-Sealed Tibanna",
+    boltColor: "White-hot",
+    boltHex: "#f8fafc",
+    costPerLb: 300,
+    legalityClass: "2",
+    effect: "+1 damage per die; heavy-class weapons only; LC 2",
+    damageBonus: 0,
+    perDie: true,
+    heavyOnly: true,
+    halveDamage: false,
+    retypeTo: null,
+    surRider: false,
+    malfMod: 0,
+    foeDefenseMod: null,
+    hardToLocate: false,
+    ionVsDroids: false
+  },
+  {
+    id: "invisible",
+    label: "Invisible-grade",
+    boltColor: "None (invisible beam)",
+    boltHex: null,
+    costPerLb: 500,
+    legalityClass: "1",
+    effect: "-2 to active defenses against it; the shooter is hard to locate; LC 1",
+    damageBonus: 0,
+    perDie: false,
+    heavyOnly: false,
+    halveDamage: false,
+    retypeTo: null,
+    surRider: false,
+    malfMod: 0,
+    foeDefenseMod: -2,
+    hardToLocate: true,
+    ionVsDroids: false
+  },
+  {
+    id: "purple",
+    label: "Purple Variants",
+    boltColor: "Purple",
+    boltHex: "#a855f7",
+    costPerLb: 200,
+    legalityClass: null,
+    effect: "No mechanical change",
+    damageBonus: 0,
+    perDie: false,
+    heavyOnly: false,
+    halveDamage: false,
+    retypeTo: null,
+    surRider: false,
+    malfMod: 0,
+    foeDefenseMod: null,
+    hardToLocate: false,
+    ionVsDroids: false
+  }
+];
+function getGasGrade(id) {
+  if (!id) return null;
+  return GAS_GRADES.find((g) => g.id === id) ?? null;
+}
+function damageDiceCount(damage) {
+  const m = String(damage).match(/^(\d+)\s*d/i);
+  return m ? Number(m[1]) : 0;
+}
+function gasGradeEffect(id, damage, isHeavyClass) {
+  const none = {
+    flatBonus: 0,
+    retypeTo: null,
+    typeSuffix: "",
+    malfMod: 0,
+    halveDamage: false,
+    notes: []
+  };
+  const g = getGasGrade(id);
+  if (!g || g.id === "standard") return none;
+  const notes = [];
+  let flatBonus = g.damageBonus;
+  if (g.perDie) {
+    if (isHeavyClass) {
+      flatBonus += damageDiceCount(damage);
+    } else {
+      notes.push(`${g.label} (${g.boltColor} bolt): +1 damage per die applies to heavy-class weapons only \u2014 no bonus on this weapon. LC ${g.legalityClass}.`);
+    }
+  }
+  if (g.halveDamage) {
+    notes.push(`${g.label} (${g.boltColor} bolt): roll the weapon's full damage, then halve it \u2014 round down, no minimum \u2014 and it lands as EP (Endurance), overriding the weapon's own damage type and riders.`);
+  }
+  if (g.surRider) {
+    notes.push(`${g.label} (${g.boltColor} bolt): the bolt gains the sur (Surge) rider. Vs droids and electronics, treat the damage as ion.`);
+  }
+  if (g.foeDefenseMod != null) {
+    notes.push(`${g.label} (no visible bolt): \u22122 to a defender's active defenses against this shot, and the shooter is hard to locate. LC ${g.legalityClass}.`);
+  }
+  if (g.id === "spinSealed" && isHeavyClass) {
+    notes.push(`${g.label} (${g.boltColor} bolt): +1 damage per die. LC ${g.legalityClass}.`);
+  }
+  if (g.id === "refined") {
+    notes.push(`${g.label} (${g.boltColor} bolt): +1 flat damage.`);
+  }
+  if (g.id === "budget") {
+    notes.push(`${g.label} (${g.boltColor} bolt): printed stats, but Malf 1 worse.`);
+  }
+  if (g.id === "purple") {
+    notes.push(`${g.label} (${g.boltColor} bolt): prestige load; no mechanical change.`);
+  }
+  return {
+    flatBonus,
+    retypeTo: g.retypeTo,
+    typeSuffix: g.surRider ? " sur" : "",
+    malfMod: g.malfMod,
+    halveDamage: g.halveDamage,
+    notes
+  };
+}
+
+// src/components/character-sheet/schemas/equipment-and-weapons.ts
+var AMMUNITION_TYPES = ["Power Packs", "Power Cell", "Magazine", "Fuel Canister", "Dart Magazine", "Rounds", "Missile"];
+var WEAPON_MOD_CATEGORIES = [
+  "Sights/Optics",
+  "Power Cell",
+  "Barrel/Emitter",
+  "Stock/Chassis",
+  "Trigger Assembly",
+  "Magazine/Feed System",
+  "Barrel/Muzzle",
+  "Fuel System",
+  "Nozzle/Igniter",
+  "Deployment Mechanism",
+  "Housing/Concealment",
+  "Payload / Feed Mechanism",
+  "Launch Tube / Projector",
+  "Melee Grip",
+  "Melee Head",
+  "Melee Guard",
+  "Melee Power Unit",
+  "Melee Power Cell",
+  // Melee modification categories, distinct from the part categories above.
+  "hiltGripMod",
+  "powerUnitMod",
+  "bladeHeadMod",
+  "edgeAccentMod",
+  "Ranged Grip",
+  "Ranged Receiver",
+  "Ranged Barrel",
+  "Ranged Targeting",
+  "Power Unit"
+];
+var ARMOR_MOD_CATEGORIES = [
+  "Underlay",
+  "Helmet Systems",
+  "Utility Hardpoint",
+  "Shield Emitter",
+  "Shield Power Core",
+  "Shield Capacitor",
+  "Droid Chassis",
+  "Droid Processor",
+  "Droid Sensor",
+  "Droid Appendage",
+  "Droid Motive",
+  "Integrated Mod",
+  "Overlay Mod",
+  "Underlay Mod",
+  "Utility Mod",
+  /*
+      Ch13 COMPONENTS - what a Piece is made OF - as distinct from the Mods
+      above, which are fitted into the slots a Piece's Frame provides.
+  
+      The chapter draws that line itself and prices the two sides differently:
+      components are marked up twice on the way to a wearable Piece (Phase 1
+      Assembly, Phase 2 Fitting), while "Mods are separate. They are built and
+      priced on their own ... and installed into a finished Piece without
+      changing the Piece's own price."
+  
+      They share `armorModifications` as storage because that array is already
+      taught to the eight layers a top-level array has to survive - the schema,
+      CHARACTER_FORM_ARRAY_KEYS, export, import, the collision prompt, storage
+      locations, the parts UI and the dead-code sweep - and every one of those is
+      a place an unnamed field gets silently dropped. `category` is what carries
+      the distinction, and the Overlay/Underlay selectors filter on it, so a
+      Shell can never be offered as an Overlay.
+    */
+  "Armor Shell",
+  "Armor Backing",
+  "Armor Frame",
+  "Armor Visor",
+  "Armor Trim"
+];
+var LIGHTSABER_MOD_CATEGORIES = [
+  "Emitter Part",
+  "Switch Part",
+  "Sleeve Part",
+  "Pommel Part",
+  "Coupler Part",
+  "Grip Wrap",
+  "Lightsaber Power Cell",
+  "Lightsaber Lens",
+  "Lightsaber Emitter Matrix",
+  "Lightsaber Primary Crystal",
+  "Lightsaber Power Crystal"
+];
+var ALL_MOD_CATEGORIES = [...WEAPON_MOD_CATEGORIES, ...LIGHTSABER_MOD_CATEGORIES];
+var HIT_LOCATION_TYPES = [
+  "Head",
+  "Face",
+  "Torso",
+  "Upper Torso",
+  "Vitals",
+  "Arm",
+  "Leg",
+  "Hand",
+  "Foot",
+  "Striker",
+  "Sensor",
+  "Processor",
+  "Utility Mount"
+];
+var EQUIPMENT_CONDITION = ["Fine", "Damaged", "Broken", "Destroyed"];
+var gearSetSchema = external_exports.object({
+  id: external_exports.string(),
+  name: external_exports.string(),
+  /** Ids into `armor`. An id that no longer resolves is shown as missing. */
+  memberIds: external_exports.array(external_exports.string()).default([])
+});
+var BODY_SIDES = ["Left", "Right", "Center", "Other"];
+var hitLocationEntrySchema = external_exports.object({
+  id: external_exports.string().uuid(),
+  name: external_exports.string(),
+  type: external_exports.enum(HIT_LOCATION_TYPES),
+  /*
+      Which side of the body this location sits on.
+  
+      Side used to live only inside `name`, which worked while every character was
+      a standard biped and broke as soon as Ch13 addressed the ones that are not:
+      an arm growing from the chest has no left or right to parse, and the paired
+      DR fields (drLeftArm/drRightArm) have nowhere to put a third. Stated rather
+      than inferred, it also pairs a hand to its arm - Ch13's rule that losing an
+      arm takes the hand with it needs to know which hand.
+  
+      Optional: older sheets have it derived from the name on read. See sideOf().
+    */
+  side: external_exports.enum(BODY_SIDES).optional().nullable(),
+  /*
+      Where this part actually sits, in the player's own words.
+  
+      `name`, `type` and `side` are as much as the rules need, and they stop short
+      of describing a body: Ch13 addresses characters who are not standard bipeds,
+      but "Arm / Center" says nothing about an arm growing from between the
+      shoulder blades, and a Besalisk's four arms are four rows that differ only
+      by side. This is free text for the parts the plan does not describe -
+      prosthetics, extra appendages, and everything on a droid.
+  
+      Never parsed. Nothing derives from it; it exists so the sheet can hold what
+      the character looks like.
+    */
+  locationNote: external_exports.string().optional().nullable(),
+  relativeSM: external_exports.coerce.number().default(0),
+  isOrganic: external_exports.boolean().default(true),
+  status: external_exports.enum(["Healthy", "Crippled", "Destroyed", "Corrupted"]).default("Healthy"),
+  innateDR: external_exports.number().default(0),
+  currentDegradation: external_exports.number().default(0),
+  isAmputated: external_exports.boolean().default(false),
+  parentRoll: external_exports.number().int().optional().nullable(),
+  installedHardwareIds: external_exports.array(external_exports.string().uuid()).default([])
+});
+var itemModifiersSchema = external_exports.object({
+  strength: external_exports.number().default(0),
+  dexterity: external_exports.number().default(0),
+  iq: external_exports.number().default(0),
+  health: external_exports.number().default(0),
+  will: external_exports.number().default(0),
+  perception: external_exports.number().default(0),
+  move: external_exports.number().default(0),
+  dodge: external_exports.number().default(0),
+  dr: external_exports.number().default(0),
+  carryCapacity: external_exports.number().default(0),
+  endurancePoints: external_exports.number().default(0),
+  forcePoints: external_exports.number().default(0),
+  toHit: external_exports.number().default(0),
+  basicSpeed: external_exports.number().default(0),
+  hitPoints: external_exports.number().default(0),
+  /** See the note on `traitModifiersSchema` - Fright is its own stack, not Will's. */
+  frightCheck: external_exports.number().default(0),
+  /** The active defences. Ch10's "+1 to Parry/Block" was written as Dodge
+      until these existed. See `NUMERIC_MODIFIER_CHANNELS`. */
+  parry: external_exports.number().default(0),
+  block: external_exports.number().default(0),
+  /* Ch9's roll to shake off stun - see modifier-channels.ts. */
+  stunRecovery: external_exports.number().default(0),
+  strikingSt: external_exports.number().default(0),
+  liftingSt: external_exports.number().default(0),
+  kickDamage: external_exports.number().default(0),
+  jumpDistance: external_exports.number().default(0),
+  /** A state, never a big number. See `traitModifiersSchema`. */
+  frightImmune: external_exports.boolean().default(false),
+  /** Ch2's proportional Move penalties - identity 1, harshest wins. See
+      `MULTIPLIER_MODIFIER_CHANNELS`. */
+  moveMultiplier: external_exports.number().default(1)
+});
+var neuralImplantSchema = external_exports.object({
+  id: external_exports.string().uuid(),
+  name: external_exports.string(),
+  cost: external_exports.number(),
+  /*
+    `.nullable()` is legacy tolerance, not a live convention: saves made
+    before 2026-08-27 went through a sanitizer that wrote every undefined as
+    null, so existing documents carry `baseCp: null` where the form held
+    nothing. The sanitizer now omits undefined keys; these accept the nulls
+    already in the wild so those characters can save again. Consumers read
+    both through `?? 0`.
+  */
+  baseCp: external_exports.number().optional().nullable(),
+  finalCp: external_exports.number().optional().nullable(),
+  effect: external_exports.string(),
+  pathways: external_exports.array(external_exports.string()),
+  category: external_exports.enum(["Neural", "Sensory", "Utility"]).default("Neural"),
+  modifiers: itemModifiersSchema.partial().optional().nullable(),
+  notes: external_exports.string().optional().nullable(),
+  installed: external_exports.boolean().default(false),
+  storageLocationId: external_exports.string().uuid().optional().nullable(),
+  location: external_exports.enum(["Head", "Face", "Torso", "Any"]).default("Head"),
+  slotType: external_exports.enum(["Neural", "Eye", "Ear", "Utility"]).default("Neural"),
+  weight: external_exports.number().default(0.1),
+  itemSizeModifier: external_exports.coerce.number().nullable().default(null)
+});
+var cyberneticUpgradeSchema = external_exports.object({
+  id: external_exports.string().uuid(),
+  name: external_exports.string(),
+  cost: external_exports.number(),
+  weight: external_exports.number().default(0),
+  effect: external_exports.string(),
+  requiresType: external_exports.string().optional().nullable(),
+  requiresExtent: external_exports.string().optional().nullable(),
+  equipped: external_exports.boolean().default(false),
+  quantity: external_exports.number().int().min(1).default(1),
+  storageLocationId: external_exports.string().uuid().optional().nullable(),
+  itemSizeModifier: external_exports.coerce.number().nullable().default(null)
+});
+var cyberneticLimbSchema = external_exports.object({
+  id: external_exports.string().uuid(),
+  name: external_exports.string(),
+  location: external_exports.enum(["Right Arm", "Left Arm", "Right Leg", "Left Leg", "Right Hand", "Left Hand", "Right Foot", "Left Foot", "Extra Arm", "Extra Leg", "Tail", "Tentacle", "Sensor Mast", "Striker"]),
+  extent: external_exports.enum(["Partial", "Full"]),
+  material: external_exports.string(),
+  cost: external_exports.number(),
+  weight: external_exports.number(),
+  dr: external_exports.number().default(0),
+  // Nullable for the same legacy-sanitizer reason as the implant CP pair.
+  currentDr: external_exports.number().optional().nullable(),
+  hasSynthskin: external_exports.boolean().default(false),
+  upgrades: external_exports.array(external_exports.object({
+    id: external_exports.string().uuid().optional(),
+    name: external_exports.string(),
+    cost: external_exports.number(),
+    effect: external_exports.string()
+  })).default([]),
+  effect: external_exports.string().optional().nullable(),
+  notes: external_exports.string().optional().nullable(),
+  installed: external_exports.boolean().default(false),
+  storageLocationId: external_exports.string().uuid().optional().nullable(),
+  baselinePoints: external_exports.number().default(0),
+  quantity: external_exports.number().default(1),
+  itemSizeModifier: external_exports.coerce.number().nullable().default(null)
+});
+var ammunitionSchema = external_exports.lazy(() => external_exports.object({
+  id: external_exports.string().uuid().optional(),
+  name: external_exports.string().min(1, "Name is required"),
+  type: external_exports.enum(AMMUNITION_TYPES),
+  currentCharges: external_exports.number().int().default(0),
+  maxCharges: external_exports.number().int().default(0),
+  cost: external_exports.number().default(0),
+  weight: external_exports.number().default(0),
+  quantity: external_exports.number().int().min(1).default(1),
+  notes: external_exports.string().optional().nullable(),
+  formula: external_exports.string().optional().nullable(),
+  damageTypeOverride: external_exports.string().optional().nullable(),
+  gasGrade: external_exports.enum(GAS_GRADE_IDS).optional().nullable(),
+  storageLocationId: external_exports.string().uuid().optional().nullable(),
+  isInstalled: external_exports.boolean().default(false).optional().nullable(),
+  installedInDroidId: external_exports.string().optional().nullable(),
+  isLibraryItem: external_exports.boolean().default(false).optional().nullable(),
+  isContainer: external_exports.boolean().default(false).optional().nullable(),
+  /*
+      Must match the Ammunition interface above, which allows Rounds and Magazine.
+  
+      It did not: the ten individual slugs in the catalog (Pistol Round
+      (Standard), the Rifle and Cycler rounds, and so on) all ship
+      containerType 'Rounds', so buying a single round produced a sheet that
+      TypeScript accepted and the save path rejected.
+    */
+  containerType: external_exports.enum(["Pistol", "Rifle", "Cycler", "Flamer", "Rounds", "Magazine", "None"]).optional().nullable(),
+  baseCost: external_exports.number().optional().nullable(),
+  baseWeight: external_exports.number().optional().nullable(),
+  contents: external_exports.array(ammunitionSchema).default([]),
+  _isEquipSource: external_exports.boolean().optional().nullable()
+}));
+var weaponModificationSchema = external_exports.object({
+  id: external_exports.string().uuid(),
+  name: external_exports.string(),
+  // Shared by weapon and lightsaber modifications, so it must span both sets.
+  category: external_exports.enum(ALL_MOD_CATEGORIES),
+  cost: external_exports.number(),
+  weight: external_exports.number().optional().nullable(),
+  notes: external_exports.string().optional().nullable(),
+  effect: external_exports.string().optional().nullable(),
+  equipped: external_exports.boolean().optional().default(false),
+  quantity: external_exports.number().int().min(1).default(1),
+  storageLocationId: external_exports.string().uuid().optional().nullable(),
+  isInstalled: external_exports.boolean().default(false).optional().nullable(),
+  installedInSaberId: external_exports.string().uuid().optional().nullable(),
+  installedInMeleeId: external_exports.string().uuid().optional().nullable(),
+  installedInBlasterId: external_exports.string().uuid().optional().nullable(),
+  installedInDroidId: external_exports.string().uuid().optional().nullable(),
+  energyResBonus: external_exports.number().default(0),
+  /*
+      Which Ch11/Ch12 component this row IS.
+  
+      Both structural resolvers already read it - melee-assembly's and
+      ranged-assembly's `InventoryRow` types each declare `partId` and each try
+      `meleePartById(row.partId)` / `rangedPartById(row.partId)` FIRST - but the
+      schema did not, and Zod strips what it does not declare. So the id was
+      written by the pickers, survived until the sheet was saved, and was gone on
+      load: every owned component fell through to the name branch forever.
+  
+      Name matching is not equivalent. It is what armorModificationSchema.partId
+      was added to escape, for the reason recorded there - the catalog prints one
+      "Standard Receiver", and the second one a character buys is a second row
+      with the same name and a different material. The same shape as
+      `materials` above and `armorItemSchema.materials`: a field read by the app,
+      declared in the reader's own type, and silently absent from the contract
+      that has to carry it across a save.
+    */
+  partId: external_exports.string().optional().nullable(),
+  materialId: external_exports.string().optional().nullable(),
+  wrapId: external_exports.string().optional().nullable(),
+  volume: external_exports.number().optional().nullable(),
+  density: external_exports.number().optional().nullable(),
+  durMod: external_exports.number().optional().nullable(),
+  componentClass: external_exports.string().optional().nullable(),
+  isFractured: external_exports.boolean().default(false).optional(),
+  /*
+      Ch11's Silicon gate reads this off the ROW, and Zod strips what it does not
+      declare - so without this line every modification lost its material list the
+      moment it went through the schema, and `modCarriesSilicon` returned false
+      for all 18 Silicon-bearing mods in the catalog.
+  
+      The consequence was not cosmetic. A Silicon mod install owes Ch11's Computer
+      Programming firmware handshake and 90 minutes (30 seating + 60 firmware);
+      read as mechanical it skipped the roll entirely and took 30. Installing a
+      Holographic Sight was free of the software phase after any save and load.
+  
+      Same defect and same repair as `armorItemSchema.materials`, whose comment
+      records the load-path strip that repriced Rokarr's Fatigue Boots. Three
+      layers strip unnamed fields; schema presence is what makes a field survive.
+    */
+  materials: external_exports.array(external_exports.object({
+    name: external_exports.string(),
+    amount: external_exports.number()
+  })).optional().nullable()
+});
+var armorModificationSchema = external_exports.object({
+  id: external_exports.string().uuid(),
+  name: external_exports.string(),
+  category: external_exports.enum(ARMOR_MOD_CATEGORIES),
+  cost: external_exports.number(),
+  weight: external_exports.number().optional().nullable(),
+  notes: external_exports.string().optional().nullable(),
+  equipped: external_exports.boolean().optional().default(false),
+  quantity: external_exports.number().int().min(1).default(1),
+  validSlots: external_exports.array(external_exports.string()).optional().default([]),
+  drBonus: external_exports.number().optional().nullable(),
+  storageLocationId: external_exports.string().uuid().optional().nullable(),
+  isInstalled: external_exports.boolean().default(false).optional().nullable(),
+  installedInDroidId: external_exports.string().optional().nullable(),
+  /*
+      Which Ch13 component this row IS, for rows in the five Armor * categories.
+  
+      Stats are read from the catalog through this id rather than by matching
+      `name`, which is how the melee path resolves its parts. Name matching
+      survives exactly until a player owns two of something: Ch13 prints one
+      "Torso Backing", and the second one a character buys is a second row with
+      the same name and different stats the moment either is damaged.
+  
+      Null on Mods, which have no component catalog behind them.
+    */
+  partId: external_exports.string().optional().nullable(),
+  /** Shell and Visor rows: the ARMOR_MATERIALS id they were cut from. */
+  materialId: external_exports.string().optional().nullable(),
+  /** Set while this component is consumed into a Piece being assembled. */
+  installedInArmorId: external_exports.string().optional().nullable()
+});
+var armorComponentSlotSchema = external_exports.object({
+  partId: external_exports.string().nullable().default(null),
+  inventoryId: external_exports.string().uuid().nullable().default(null)
+});
+var lightsaberModificationSchema = weaponModificationSchema;
+var generalEquipmentItemSchema = external_exports.object({
+  id: external_exports.string().uuid(),
+  name: external_exports.string().optional().nullable(),
+  weight: external_exports.coerce.number().default(0),
+  /*
+    Deliberately weightless gear - a Padawan's braid, a tattoo kit's ink, a
+    keepsake that weighs nothing worth tracking. The only thing that reads
+    this is the Zero-Weight warning, which skips a row that declares it; no
+    total, price or encumbrance figure counts it. Optional and nullable so
+    every sheet saved before it existed still parses.
+  */
+  weightless: external_exports.boolean().optional().nullable(),
+  cost: external_exports.coerce.number().default(0),
+  description: external_exports.string().optional().nullable(),
+  category: external_exports.string().optional().nullable(),
+  subCategory: external_exports.string().optional().nullable(),
+  quantity: external_exports.coerce.number().min(0).default(1),
+  dr: external_exports.coerce.number().optional().nullable(),
+  damage: external_exports.string().optional().nullable(),
+  modifier: external_exports.string().optional().nullable(),
+  skill: external_exports.string().optional().nullable(),
+  storageLocationId: external_exports.string().uuid().optional().nullable(),
+  isInstalled: external_exports.boolean().default(false).optional().nullable(),
+  installedInDroidId: external_exports.string().optional().nullable(),
+  installedInBlasterId: external_exports.string().optional().nullable(),
+  installedInArmorId: external_exports.string().optional().nullable(),
+  modifiers: itemModifiersSchema.partial().optional().nullable(),
+  condition: external_exports.enum(EQUIPMENT_CONDITION).default("Fine"),
+  storedValue: external_exports.number().optional().nullable(),
+  denominationValue: external_exports.number().optional().nullable(),
+  currentCharges: external_exports.number().int().optional().nullable(),
+  maxCharges: external_exports.number().int().optional().nullable(),
+  /*
+    Ch10 Blueprints. A Blueprint is a Datacard whose content is a construction
+    schematic; these fields are what the crafting dialog reads to price it,
+    apply its build bonus, and gate copying. Zod strips undeclared keys on
+    load, so absence here would silently delete every Blueprint on import.
+  */
+  blueprintOf: external_exports.string().optional().nullable(),
+  blueprintGeneration: external_exports.coerce.number().int().min(0).optional().nullable(),
+  blueprintProven: external_exports.boolean().optional().nullable(),
+  blueprintLocked: external_exports.boolean().optional().nullable(),
+  /*
+      A FUNCTION FIRMWARE DATACARD, and the same lattice one chapter over.
+  
+      Ch10 gives firmware the Blueprint's generation rules, and the penalty does
+      TWO jobs from one sentence: "-1 per generation of the source" on the copy
+      roll, and "-1 per generation to the Firmware Flashing roll of any device
+      flashed from it." The second is the one that half-wires, because a card that
+      stores its generation and never carries it into the build is correct on a
+      Generation 0 card - the only card anyone tests with.
+  
+      So the field exists to be READ at flash time, not only written at copy time.
+      `firmwareEncoded` is Ch10's licensed commercial card, which needs a Slicing
+      roll at -4 before it can be copied at all.
+    */
+  isFirmwareCard: external_exports.boolean().optional().nullable(),
+  firmwareGeneration: external_exports.coerce.number().int().min(0).optional().nullable(),
+  firmwareEncoded: external_exports.boolean().optional().nullable(),
+  firmwareFee: external_exports.coerce.number().min(0).optional().nullable(),
+  /*
+      TWO FLAWS, TWO LIFETIMES - and they must never be the same flag.
+  
+      `blueprintFlawed` is Ch10's Design Phase critical sitting on the SCHEMATIC.
+      `flawedBuild` sits on an ITEM that was built from one.
+  
+      The chapter now settles the question the old wording left open: "Correcting
+      it takes a fresh Design Phase roll at +2, and that correction reaches the
+      schematic only. Items already built keep the flaw, because a corrected
+      drawing does not reach a finished object; a flawed item is put right by
+      Deconstructing it and rebuilding from the corrected Blueprint."
+  
+      So clearing `blueprintFlawed` must NOT clear `flawedBuild` on anything - one
+      shared flag would have got that wrong silently, fixing every object ever
+      made the moment the drawing was corrected.
+    */
+  blueprintFlawed: external_exports.boolean().optional().nullable(),
+  /*
+    The composed components, so a saved card still knows what it is a schematic
+    of. Zod strips undeclared keys on load, so without this the parts would
+    survive the session and vanish on the next import.
+  */
+  blueprintParts: external_exports.array(external_exports.object({
+    name: external_exports.string(),
+    category: external_exports.string().optional().default(""),
+    cost: external_exports.coerce.number().default(0),
+    weight: external_exports.coerce.number().default(0)
+  })).optional().nullable(),
+  flawedBuild: external_exports.boolean().optional().nullable(),
+  /*
+      Ch10: a critically failed read leaves the card "bricked PENDING a Computer
+      Programming roll at -2 to unlock it". Pending is the whole clause - it is
+      the one degraded-but-recoverable state in the Datacard rules, and the app
+      used to delete the row instead, collapsing it into a fourth outcome the
+      book never states.
+  
+      The pattern it sits against: a failed write leaves the card "undamaged and
+      can be re-attempted", a failed read leaves it "undamaged", and Ch13's
+      flashing failure says "the Datacard itself is undamaged, no need to buy
+      another". Three undamaged outcomes and one bricked-pending; none destroyed.
+    */
+  blueprintBricked: external_exports.boolean().optional().nullable(),
+  blueprintOrigin: external_exports.enum(["catalog", "original"]).optional().nullable(),
+  /*
+      The design's Construction Markup, kept so locking and copying can re-derive
+      the price from the book's formula instead of rescaling the stored one.
+  
+      Ch10's price is media + a share of markup, and the stored cost has already
+      been ceiled. Doubling that on a lock compounds the rounding - 174 + 583x2
+      gives 1,340 where the formula gives 1,339 - which is the same "never scale
+      a price you already rounded" rule the armor and weapon paths follow.
+  
+      Optional because cards written before this field existed carry no markup;
+      those fall back to rescaling, which is what they were priced by anyway.
+    */
+  blueprintMarkup: external_exports.coerce.number().optional().nullable(),
+  /*
+      The CRAFTING_DEFINITIONS family this design is built under.
+  
+      Catalog Blueprints do not need it - planBlueprintBuild resolves their name
+      against craftableDesigns() and reads the family off the design. A HOMEBREW
+      card has no such design to resolve, and until this field existed it had
+      nothing else either: every custom Blueprint returned kind 'unknown' and was
+      unbuildable by construction, whatever the player paid for it.
+  
+      The custom dialog was already asking for the family - Ch10 prices a homebrew
+      design off "what the item is built like", and the phase multiplier comes
+      from the family - and then discarded it once the markup was computed. The
+      one value that could route the card was collected and thrown away.
+  
+      Optional because catalog cards do not carry it and cards written before this
+      field existed do not either.
+    */
+  blueprintFamily: external_exports.string().optional().nullable()
+});
+var armorDrEntrySchema = external_exports.object({
+  locationId: external_exports.string().uuid(),
+  dr: external_exports.number().default(0)
+});
+var heldLocationIdsSchema = external_exports.array(external_exports.string().uuid()).default([]);
+var armorItemSchema = external_exports.object({
+  id: external_exports.string().uuid(),
+  name: external_exports.string(),
+  type: external_exports.string().default("Clothing"),
+  slot: external_exports.enum(["Head", "Face", "Torso", "Legs", "Hands", "Feet", "Belt", "Utility", "Accessory", "Droid Head", "Droid Torso", "Droid Arm", "Droid Leg"]),
+  drHead: external_exports.number().nullable().optional(),
+  drFace: external_exports.number().nullable().optional(),
+  drTorso: external_exports.number().nullable().optional(),
+  drLeftArm: external_exports.number().nullable().optional(),
+  drRightArm: external_exports.number().nullable().optional(),
+  drLeftLeg: external_exports.number().nullable().optional(),
+  drRightLeg: external_exports.number().nullable().optional(),
+  drLeftHand: external_exports.number().nullable().optional(),
+  drRightHand: external_exports.number().nullable().optional(),
+  drLeftFoot: external_exports.number().nullable().optional(),
+  drRightFoot: external_exports.number().nullable().optional(),
+  dxPenalty: external_exports.number().nullable().optional(),
+  movePenalty: external_exports.number().nullable().optional(),
+  weight: external_exports.number(),
+  cost: external_exports.number(),
+  notes: external_exports.string().nullable().optional(),
+  penalties: external_exports.string().optional(),
+  effects: external_exports.string().optional(),
+  quantity: external_exports.number().int().default(1),
+  equipped: external_exports.boolean().default(false),
+  isActive: external_exports.boolean().default(false).optional(),
+  integratedSlots: external_exports.number().int().default(0),
+  overlaySlots: external_exports.number().int().default(0),
+  underlaySlots: external_exports.number().int().default(0),
+  utilitySlots: external_exports.number().int().default(0),
+  integratedModId: external_exports.string().uuid().nullable().optional(),
+  overlayModId: external_exports.string().uuid().nullable().optional(),
+  underlayModId: external_exports.string().uuid().nullable().optional(),
+  utilityModId: external_exports.string().uuid().nullable().optional(),
+  storageLocationId: external_exports.string().uuid().nullable().optional(),
+  finalCoveredLocations: external_exports.array(external_exports.string()).default([]),
+  coveredLocationIds: external_exports.array(external_exports.string().uuid()).default([]),
+  /*
+      The one limb this piece is worn on, for gear priced per extremity.
+  
+      Ch13: "A Hand Plate or Glove covers one hand; a Foot Plate or Boot covers
+      one foot", and it is explicit that "a Glove on one hand and a Gauntlet
+      weapon on the other is legal". One item covering every hand at once cannot
+      express that - there is a single `equipped` flag for the pair, so the second
+      glove comes off with the first.
+  
+      Bound to a hit location rather than a side. Anatomy here is arbitrary: the
+      Body tab lets a character add limbs, so an arm can come out of the middle of
+      the chest and Left/Right is not a model, only a common case. A location id
+      is the only thing that identifies a limb on a body with four arms, or three.
+  
+      Null on everything else. A Leg Plate covers both legs however many there
+      are, and a Torso Plate covers one torso, so those keep fanning out.
+    */
+  wornLocationId: external_exports.string().uuid().nullable().optional(),
+  /*
+    Which handbook set this piece was created AS part of (a handbookSets id,
+    e.g. 'preset-recon' or 'clothing-jedi-robes'). Identity, stamped at
+    creation - the set panel used to re-derive membership from names on every
+    render, so a lone worn piece could regroup out of Worn Gear into a 1/5
+    preset suit on reload. Null for pieces acquired on their own; those still
+    match sets by name, but can never be claimed AWAY from the set they were
+    stamped for.
+  */
+  setId: external_exports.string().nullable().optional(),
+  drEntries: external_exports.array(armorDrEntrySchema).default([]),
+  isInstalled: external_exports.boolean().default(false),
+  installedInDroidId: external_exports.string().nullable().optional(),
+  modifiers: itemModifiersSchema.partial().nullable().optional(),
+  /*
+      Cleared means "unsized", not zero.
+  
+      A number input yields "" while the player is mid-edit - clearing the box to
+      retype it, or typing a lone "-" - and a bare z.number() rejected that with
+      "Expected number, received string". Tailoring a piece to your own SM is
+      exactly when you clear this field, so the save failed at the worst moment.
+    */
+  itemSizeModifier: external_exports.preprocess((v) => {
+    if (v === null || v === void 0 || v === "") return null;
+    const n = Number(v);
+    return Number.isFinite(n) ? n : null;
+  }, external_exports.number().nullable().optional()),
+  modifiedForAnatomy: external_exports.boolean().default(false),
+  // Power System
+  loadedPowerCellId: external_exports.string().uuid().nullable().optional(),
+  loadedPowerCellData: ammunitionSchema.nullable().optional(),
+  currentCharges: external_exports.number().int().nullable().optional(),
+  maxCharges: external_exports.number().int().nullable().optional(),
+  // Damage System
+  condition: external_exports.enum(EQUIPMENT_CONDITION).default("Fine"),
+  durability: external_exports.number().int().default(10).optional(),
+  // Construction State
+  isConstructed: external_exports.boolean().default(false),
+  /*
+      Ch10's ghost glitch, on the ITEM rather than the schematic.
+  
+      Set when this was built from a flawed Blueprint. It has its own lifetime:
+      "that correction reaches the schematic only. Items already built keep the
+      flaw" - so clearing blueprintFlawed must never clear this. A flawed item is
+      put right by Deconstructing it and rebuilding from a corrected Blueprint.
+    */
+  flawedBuild: external_exports.boolean().optional().nullable(),
+  /*
+      Authored on this sheet, rather than loaded from a save written under the
+      old flat model.
+  
+      migrateArmorItem exists to resolve legacy armour onto a Ch13 Piece, and it
+      fires on anything carrying no pieceId - which is exactly what a brand-new
+      custom item looks like. So every custom Piece was silently migrated into
+      its tier's DEFAULT_MATERIAL_BY_TIER, which is Durasteel, and handed the
+      listed DR of a Piece nobody had chosen: the card showed a material the
+      player could not change and read Broken because it had not been given that
+      Piece's DR.
+  
+      A custom build has no Piece until the player picks one. Persisted, because
+      the migration runs again on every load.
+    */
+  isCustomBuild: external_exports.boolean().default(false).optional(),
+  /*
+      WHERE this Piece came from, and the reason it is stored rather than derived.
+  
+      Fulllion's ruling is that both routes exist: free placement for GMs and
+      pre-campaign gear, where any component may be fitted with no inventory
+      requirement, and staged construction from inventory for in-campaign builds,
+      where the components are consumed and the character rolls the chapter's
+      phases.
+  
+      The two produce the SAME finished item. Nothing about a built Piece's
+      stats, weight or price distinguishes it from a placed one - which means the
+      distinction cannot be recovered by looking at it, and while it lived only
+      in component state it did not survive a reload. That is the whole reason no
+      check could assert that an in-campaign build consumed inventory: after a
+      save there was nothing left that said a build had happened.
+  
+        'placed'  - materialised. The parts were created with the Piece.
+        'built'   - constructed. The parts came out of the player's inventory.
+        null      - a bought catalog Piece, or a sheet written before this field.
+  
+      Set ONCE, at creation. A later component swap does not rewrite it: swapping
+      a Frame on a GM-placed Piece does not turn it into something the character
+      built, and re-deriving provenance from the current component set would say
+      exactly that.
+    */
+  buildProvenance: external_exports.enum(["placed", "built"]).nullable().optional(),
+  // --- Chapter 13 three-tier model ---
+  // Set when the item resolves to a catalog Armor Piece. Legacy items saved
+  // under the old flat model have these undefined until migrated on load.
+  pieceId: external_exports.string().nullable().optional(),
+  tier: external_exports.enum(["Light", "Medium", "Heavy"]).nullable().optional(),
+  materialId: external_exports.string().nullable().optional(),
+  /*
+      The Frame/Mounting this Piece was built with, and the ONLY thing that sets
+      its Mod Slot count.
+  
+      Ch13's Quick-Build table is "Mod Slots by Frame", not by tier: "A Piece's
+      tier sets its default Frame (Light/Medium/Heavy tier -> Light/Standard/
+      Heavy Frame), but a crafter may fit any Frame to any Piece and take that
+      Frame's slot count instead."
+  
+      Every catalog Piece carries its tier's default, so reading slots off the
+      tier agreed with the book on all 70 of them - and would have gone on
+      agreeing forever, right up until a player fitted a Heavy Frame to a Light
+      Plate for the extra slots, which is the one case the rule exists for.
+    */
+  frame: external_exports.enum(["Light", "Standard", "Heavy"]).nullable().optional(),
+  /*
+      The five components this Piece is assembled from.
+  
+      Ch13: "assembly order is Components -> Piece -> Mods -> Fitting. A Piece is
+      built from its five components ... each is either fabricated from raw
+      material or bought pre-made, then assembled together." A bought catalog
+      Piece leaves all five empty and carries a pieceId instead; the two are
+      alternatives, not layers.
+    */
+  shellPart: armorComponentSlotSchema.nullable().optional(),
+  backingPart: armorComponentSlotSchema.nullable().optional(),
+  framePart: armorComponentSlotSchema.nullable().optional(),
+  visorPart: armorComponentSlotSchema.nullable().optional(),
+  trimPart: armorComponentSlotSchema.nullable().optional(),
+  /** Head Plates: Sealed also covers Face; Open-Face leaves Face DR 0. */
+  sealed: external_exports.boolean().nullable().optional(),
+  /*
+    Face gear only. Ch13: "Face Gear further subdivides into Upper Face, Lower
+    Face, and Full Face coverage - two Upper/Lower items can theoretically be
+    worn together, but a Full Face item takes the whole slot." The contest in
+    enforceBaseLayer keys on this, so it must survive a save - Zod strips
+    unknown keys, which is how a coverage stated only on the catalog row would
+    quietly stop applying to a renamed or custom item.
+  */
+  faceCoverage: external_exports.enum(["Upper Face", "Lower Face", "Full Face"]).nullable().optional(),
+  /** Torso Plates: a sleeveless design grants no Arm DR. */
+  sleeveless: external_exports.boolean().nullable().optional(),
+  /*
+      What is left of a Piece after the limb it covered was cut off.
+  
+      Ch13: "If a limb is severed ... the armor or clothing covering that specific
+      limb is severed with it in the same blow -- this is not a later alteration
+      or a trip to a workshop." The remnant is worth the limb's per-limb baseline
+      and "can be salvaged, not Deconstructed (combat damage leaves it too
+      irregular for a clean teardown)", so it is a scrap item that happens to live
+      in the armour list: never wearable, never deconstructable.
+    */
+  isSeveredRemnant: external_exports.boolean().nullable().optional(),
+  /** The limb it came off, for the item's name and for salvage provenance. */
+  severedFrom: external_exports.string().nullable().optional(),
+  /**
+   * Ready-made Belt or Personal Energy Shield from the Ch13 catalog. Belts and
+   * shields are Housing + Control Circuit + Power Cell + Function Datacard, so
+   * they are catalogued separately from Armor Pieces.
+   */
+  utilityId: external_exports.string().nullable().optional(),
+  // Calculated fields (Schema only)
+  finalDRValue: external_exports.number().optional().nullable(),
+  finalWeight: external_exports.number().optional().nullable(),
+  finalCost: external_exports.number().optional().nullable(),
+  finalMovePenalty: external_exports.number().optional().nullable(),
+  finalDXPenalty: external_exports.number().optional().nullable(),
+  notesAndEffects: external_exports.string().optional().nullable(),
+  baseArmorType: external_exports.string().optional().nullable(),
+  baseDRValue: external_exports.number().optional().nullable(),
+  baseDRNotes: external_exports.string().optional().nullable(),
+  baseWeight: external_exports.number().optional().nullable(),
+  baseCost: external_exports.number().optional().nullable(),
+  baseMovePenalty: external_exports.number().optional().nullable(),
+  baseDXPenalty: external_exports.number().optional().nullable(),
+  /*
+      What the Piece is made of, and which construction phase it takes.
+  
+      Not decoration: Ch13 prices a scaled garment off its scaled WEIGHT, so
+      calculateModifiedArmor needs the material list to re-derive at a non-zero
+      SM. Zod strips unknown keys, so leaving these out of the schema quietly
+      dropped them on load - the template carried them, the sheet did not, and
+      Rokarr's Fatigue Boots fell back to scaling the catalog price: 35 CR beside
+      the chapter's 34. Nothing else disagreed, because weight does not need the
+      list and every SM 0 character prices identically either way.
+  
+      They also have to survive Export/Import, which is the same field list.
+    */
+  materials: external_exports.array(external_exports.object({
+    name: external_exports.string(),
+    amount: external_exports.number()
+  })).optional().nullable(),
+  craftingCategory: external_exports.string().optional().nullable(),
+  craftingCP: external_exports.number().optional().nullable()
+});
+var meleeDamageModeSchema = external_exports.object({
+  label: external_exports.string(),
+  stType: external_exports.enum(["sw", "thr", "none"]),
+  bonus: external_exports.number(),
+  bonusDice: external_exports.number().optional(),
+  type: external_exports.string()
+});
+var modularPieceSchema = external_exports.object({
+  partId: external_exports.string().nullable().default(null),
+  materialId: external_exports.string().nullable().default(null),
+  inventoryId: external_exports.string().uuid().nullable().default(null)
+});
+var meleeComponentEntrySchema = external_exports.object({
+  partId: external_exports.string().nullable().default(null),
+  materialId: external_exports.string().nullable().default(null),
+  inventoryId: external_exports.string().nullable().default(null),
+  quantity: external_exports.number().int().min(1).default(1)
+});
+var customMeleeWeaponSchema = external_exports.object({
+  id: external_exports.string().uuid(),
+  customName: external_exports.string(),
+  baseType: external_exports.string(),
+  baseSkill: external_exports.string(),
+  damageModes: external_exports.array(meleeDamageModeSchema).optional(),
+  /*
+      Derived, not authored. useMeleeWeaponCalculations sets baseReach from the
+      fitted grip or head, and totals weight and cost from the parts into
+      finalWeight/finalCost - nothing ever adds these three in.
+  
+      Requiring them meant every melee weapon added from the library refused to
+      save: the selection dialog provisions the components and never writes these
+      fields, so the sheet failed validation with "Required" against a weapon the
+      player had just picked from a list.
+    */
+  baseReach: external_exports.string().default("1"),
+  baseWeight: external_exports.number().default(0),
+  baseCost: external_exports.number().default(0),
+  /*
+      Each slot holds a LIST of components, not one.
+  
+      Over half of Ch12's melee weapons need it - 19 of 37 - and in three
+      different ways, which is why nothing narrower works:
+  
+        17  Utility carrying a generator AND a power cell, priced separately
+         3  the same component twice, written "(x2)" - a Double-Bladed Sword is
+            two Light Blades, a Vibro Double-Blade two of nearly everything
+         2  two DIFFERENT components in a non-Utility slot - a Gaderffii's
+            Striking Head is a Heavy Cleaver and a Thrusting Point
+  
+      A quantity alone cannot express the Gaderffii, and a second Utility slot
+      cannot express the Double-Bladed Sword; both were the general case seen
+      through one weapon. A list of {component, quantity} per slot covers all
+      nineteen.
+  
+      Anything a slot cannot hold gets orphaned rather than rejected - installed,
+      paid for, and referenced by nothing - which is how a Power Cell went missing
+      from every powered weapon in the catalog and a Bowcaster's Magnetic Coils
+      from three more.
+    */
+  gripParts: external_exports.array(meleeComponentEntrySchema).default([]),
+  headParts: external_exports.array(meleeComponentEntrySchema).default([]),
+  guardParts: external_exports.array(meleeComponentEntrySchema).default([]),
+  // Ch12 "Step 4: Power Units" - structural components of the build, not
+  // treatments. Unpowered weapons leave this empty.
+  utilityParts: external_exports.array(meleeComponentEntrySchema).default([]),
+  /*
+    Superseded by the lists above and kept only so a saved sheet can be read
+    before migrateMeleeComponentLists converts it. Nothing writes these.
+  */
+  gripPart: modularPieceSchema.optional(),
+  headPart: modularPieceSchema.optional(),
+  guardPart: modularPieceSchema.nullable().optional(),
+  powerUnitId: external_exports.string().nullable().optional(),
+  powerCellId: external_exports.string().nullable().optional(),
+  hiltGripModId: external_exports.string().uuid().nullable().optional(),
+  bladeHeadModId: external_exports.string().uuid().nullable().optional(),
+  edgeAccentModId: external_exports.string().uuid().nullable().optional(),
+  maxCharges: external_exports.number().int().nullable().optional(),
+  currentCharges: external_exports.number().int().nullable().optional(),
+  finalDamage: external_exports.string().optional().nullable(),
+  finalDamageType: external_exports.string().optional().nullable(),
+  finalReach: external_exports.string().optional().nullable(),
+  finalWeight: external_exports.number().optional().nullable(),
+  finalCost: external_exports.number().optional().nullable(),
+  finalParryMod: external_exports.number().default(0),
+  /*
+      Ch12's U, and the two values that decide it, written by
+      useMeleeWeaponCalculations and DECLARED ON NO SCHEMA until now - so Zod
+      stripped all three on every save. They were computed, rendered, and gone on
+      reload, which is the same one-session lifetime `hiltType` had.
+  
+      `canParryWhileAttacking` is per-character, not per-weapon - "unless you have
+      1.5x the weapon's required ST" - so it is a cache of a derived answer rather
+      than authored data. It is stored anyway because the hook already writes it
+      and a field that is written must be a field that exists; the hook recomputes
+      it on mount either way.
+    */
+  finalStRequirement: external_exports.number().optional().nullable(),
+  isUnbalanced: external_exports.boolean().optional().nullable(),
+  canParryWhileAttacking: external_exports.boolean().optional().nullable(),
+  /*
+    The U/◊ turn-state gates, ENFORCED since the 2026-08-28 ruling (they were
+    display riders). `lastAttackTurn` is the turnCounter value when this
+    weapon last attacked - Ch12's U rule reads "in a turn you Attack", and
+    equality against the live counter is the whole test, so nothing sweeps
+    it. `isUnready` is Ch12's ◊ state: set by an attack below the 1.5x Min-ST
+    lift, cleared only by a Ready maneuver (Ch7) - it deliberately SURVIVES
+    the turn change, which is why it is state and not a same-turn comparison.
+  */
+  lastAttackTurn: external_exports.number().int().optional().nullable(),
+  isUnready: external_exports.boolean().optional().nullable(),
+  notesAndEffects: external_exports.string().optional().nullable(),
+  equipped: external_exports.boolean().default(false),
+  equippedAt: external_exports.number().optional().nullable(),
+  /** See heldLocationIdsSchema. */
+  heldLocationIds: heldLocationIdsSchema,
+  quantity: external_exports.number().int().default(1),
+  storageLocationId: external_exports.string().uuid().nullable().optional(),
+  selectedDamageMode: external_exports.number().int().default(0),
+  pendingHits: external_exports.number().int().default(0),
+  energyRes: external_exports.number().default(0),
+  isConstructed: external_exports.boolean().default(false),
+  /*
+      Ch10's ghost glitch, on the ITEM rather than the schematic.
+  
+      Set when this was built from a flawed Blueprint. It has its own lifetime:
+      "that correction reaches the schematic only. Items already built keep the
+      flaw" - so clearing blueprintFlawed must never clear this. A flawed item is
+      put right by Deconstructing it and rebuilding from a corrected Blueprint.
+    */
+  flawedBuild: external_exports.boolean().optional().nullable(),
+  // Damage System
+  /*
+      Null means "not measured yet", which is not the same as 0 - the same
+      distinction the lightsaber schema above already makes, arrived at the same
+      way and for the same reason.
+  
+      A melee weapon's Durability is derived from its components, so a design
+      with no parts has no figure. Defaulting BOTH of these to 10 did not make a
+      new weapon read Broken, which is why it went unnoticed; it did something
+      quieter and worse. hasBeenMeasured(10) is true, so the shared "unmeasured
+      is not destroyed" guard could never fire for this family at all - the
+      sentinel was destroyed at the schema, one layer below the guard written to
+      respect it. And the invented 10 then stuck: once components gave the weapon
+      a real maxDurability of, say, 26, `durability` was already 10 rather than
+      null, so the initialiser below could not fill it in, and a weapon that had
+      never been struck arrived at 10/26 - Damaged, with Field Repair offered on
+      a freshly forged blade.
+  
+      0 has to stay available as a real maxDurability, because that is what an
+      unbuilt weapon genuinely has, and -1 remains Destroyed.
+    */
+  durability: external_exports.number().int().nullable().default(null),
+  maxDurability: external_exports.number().int().default(0),
+  currentDurability: external_exports.number().int().optional().nullable(),
+  condition: external_exports.enum(EQUIPMENT_CONDITION).default("Fine"),
+  malfunction: external_exports.number().int().default(17),
+  /*
+    How this weapon came to exist: 'placed' by a GM or pre-campaign loadout,
+    'built' through Ch12's phases out of the player's own inventory, or null
+    for one that was simply bought. Set once at creation and never re-derived -
+    re-deriving it from the component set says a GM placement became a player
+    build the moment someone swapped a grip.
+  */
+  buildProvenance: external_exports.enum(["placed", "built"]).nullable().default(null)
+});
+var customBlasterSchema = external_exports.object({
+  id: external_exports.string().uuid(),
+  customName: external_exports.string(),
+  baseType: external_exports.string(),
+  baseSkill: external_exports.string(),
+  // Modular Structural Parts
+  /*
+    Five slots, one declaration. `targetingPart` was an inline literal holding
+    only `inventoryId` - the shape the other four had already outgrown - so it
+    would have been the one slot left unable to express a design while looking
+    like its siblings. Ch11 Step 4 buys targeting modules and power units
+    finished rather than milling them, so neither reads `materialId`; carrying
+    the field costs nothing and keeps the five slots one thing.
+  */
+  gripPart: modularPieceSchema.default({}),
+  receiverPart: modularPieceSchema.default({}),
+  barrelPart: modularPieceSchema.default({}),
+  targetingPart: modularPieceSchema.default({}),
+  powerUnitPart: modularPieceSchema.nullable().default(null),
+  // Legacy/Internal base stats
+  baseDamageDice: external_exports.number().int().default(0),
+  baseDamageAdds: external_exports.number().int().default(0),
+  baseDamageType: external_exports.string().default("burn"),
+  baseAccuracy: external_exports.number().int().default(0),
+  baseHalfDamageRange: external_exports.number().int().default(0),
+  baseRateOfFire: external_exports.number().int().default(1),
+  chargesPerShot: external_exports.number().int().default(1),
+  baseShots: external_exports.number().int().default(0),
+  baseRecoil: external_exports.number().int().default(1),
+  baseStrength: external_exports.coerce.string().default("0"),
+  baseWeight: external_exports.number().default(0),
+  baseCost: external_exports.number().default(0),
+  /*
+      Ch11's Modification Slots, each holding an OWNED weaponModifications row.
+  
+      Same wall as the saber internals, and the same additive fix: a `*PartId`
+      companion naming the WEAPON_MOD_DATA template, so a slot can record "this
+      weapon is designed around a Holographic Sight" without the character
+      owning one. These dropdowns never had a Direct Library Access branch at
+      all - not gated, absent - so a blaster's modification slots could only ever
+      be filled from stock the player had already bought.
+  
+      Bought finished goods, like the internals: Ch11 prints a shelf price for
+      each, so a design that names one owes that price outright and the build
+      plan lists it rather than deriving anything from a material.
+    */
+  sightsOpticsModId: external_exports.string().uuid().nullable().optional(),
+  sightsOpticsModPartId: external_exports.string().nullable().default(null),
+  powerCellModId: external_exports.string().uuid().nullable().optional(),
+  powerCellModPartId: external_exports.string().nullable().default(null),
+  barrelEmitterModId: external_exports.string().uuid().nullable().optional(),
+  barrelEmitterModPartId: external_exports.string().nullable().default(null),
+  stockChassisModId: external_exports.string().uuid().nullable().optional(),
+  stockChassisModPartId: external_exports.string().nullable().default(null),
+  triggerAssemblyModId: external_exports.string().uuid().nullable().optional(),
+  triggerAssemblyModPartId: external_exports.string().nullable().default(null),
+  magazineFeedModId: external_exports.string().uuid().nullable().optional(),
+  magazineFeedModPartId: external_exports.string().nullable().default(null),
+  barrelMuzzleModId: external_exports.string().uuid().nullable().optional(),
+  barrelMuzzleModPartId: external_exports.string().nullable().default(null),
+  fuelSystemModId: external_exports.string().uuid().nullable().optional(),
+  fuelSystemModPartId: external_exports.string().nullable().default(null),
+  nozzleIgniterModId: external_exports.string().uuid().nullable().optional(),
+  nozzleIgniterModPartId: external_exports.string().nullable().default(null),
+  deploymentModId: external_exports.string().uuid().nullable().optional(),
+  deploymentModPartId: external_exports.string().nullable().default(null),
+  housingModId: external_exports.string().uuid().nullable().optional(),
+  housingModPartId: external_exports.string().nullable().default(null),
+  payloadFeedModId: external_exports.string().uuid().nullable().optional(),
+  payloadFeedModPartId: external_exports.string().nullable().default(null),
+  launchTubeModId: external_exports.string().uuid().optional().nullable(),
+  launchTubeModPartId: external_exports.string().nullable().default(null),
+  loadedAmmunitionId: external_exports.string().uuid().nullable().optional(),
+  loadedAmmunitionData: ammunitionSchema.nullable().optional(),
+  loadedExplosiveId: external_exports.string().uuid().nullable().optional(),
+  loadedExplosiveData: external_exports.any().nullable().optional(),
+  lastFiredExplosive: external_exports.any().nullable().optional(),
+  stingerReservoir: external_exports.array(ammunitionSchema).default([]),
+  selectedVolleyIndices: external_exports.array(external_exports.number()).default([]),
+  lastVolley: external_exports.array(ammunitionSchema).default([]),
+  firedRounds: external_exports.array(external_exports.any()).default([]),
+  currentCharges: external_exports.number().int().nullable().optional(),
+  maxCharges: external_exports.number().int().nullable().optional(),
+  finalDamage: external_exports.string().optional().nullable(),
+  finalDamageType: external_exports.string().optional().nullable(),
+  finalAccuracy: external_exports.number().optional().nullable(),
+  /*
+      Ch11's range is a PAIR - "1/2D and Max" - and this field holds it as the
+      chapter prints it: "100/400", "180/2000", and for the short-ranged barrels
+      a bare "10" or "20".
+  
+      THIS WAS z.number(), AND IT BLOCKED SAVING. `calculateBlasterStats` writes
+      `barrel?.range || '100/400'` here, and the writeback loop copies every key
+      it returns onto the weapon - so the first time any blaster's card rendered,
+      a string landed in a number field and the whole sheet stopped validating.
+      All 51 ranged profiles produce a string; every barrel in ranged-parts-data
+      is one. The field could never legitimately hold a number.
+  
+      The preprocess is for the reverse case only: a sheet saved before this that
+      somehow banked a bare number keeps loading, as a string, rather than
+      becoming a validation error of its own.
+    */
+  finalHalfDamageRange: external_exports.preprocess(
+    (v) => typeof v === "number" ? String(v) : v,
+    external_exports.string().optional().nullable()
+  ),
+  finalRateOfFire: external_exports.string().optional().nullable(),
+  finalShots: external_exports.number().optional().nullable(),
+  finalRecoil: external_exports.number().optional().nullable(),
+  finalWeight: external_exports.number().optional().nullable(),
+  finalBulk: external_exports.number().optional().nullable(),
+  finalST: external_exports.string().optional().nullable(),
+  notesAndEffects: external_exports.string().optional().nullable(),
+  /*
+    Ch11's "Market Cost (CR)" - the assembled weapon, parts and fitted mods and
+    all. useBlasterCalculations has always computed it; it was simply never
+    declared here, so it was written through an `as any` and no reader could
+    see it. The sheet totalled `baseCost + totalUpgradesCost` instead, and
+    baseCost is a field only the starship and melee builders ever set - so
+    every constructed blaster was worth its mods and nothing else.
+  */
+  finalCost: external_exports.number().optional().nullable(),
+  totalUpgradesCost: external_exports.number().default(0),
+  equipped: external_exports.boolean().default(false),
+  equippedAt: external_exports.number().optional().nullable(),
+  /** See heldLocationIdsSchema. */
+  heldLocationIds: heldLocationIdsSchema,
+  stunMode: external_exports.boolean().default(false),
+  quantity: external_exports.number().int().default(1),
+  storageLocationId: external_exports.string().uuid().nullable().optional(),
+  pendingHits: external_exports.number().int().default(0),
+  preferredDefaultAttr: external_exports.enum(["DX", "IQ"]).default("DX"),
+  energyRes: external_exports.number().default(0),
+  isConstructed: external_exports.boolean().default(false),
+  /*
+      Ch10's ghost glitch, on the ITEM rather than the schematic.
+  
+      Set when this was built from a flawed Blueprint. It has its own lifetime:
+      "that correction reaches the schematic only. Items already built keep the
+      flaw" - so clearing blueprintFlawed must never clear this. A flawed item is
+      put right by Deconstructing it and rebuilding from a corrected Blueprint.
+    */
+  flawedBuild: external_exports.boolean().optional().nullable(),
+  /*
+      Null means "not measured yet", which is not the same as 10.
+  
+      This defaulted to 10/10, and 10 is a real Durability - so hasBeenMeasured
+      was satisfied by a figure nobody had derived, and the initialiser in
+      useBlasterCalculations ("if durability is null, fill it from the computed
+      maximum") could never fire. It did not surface as Broken, which is how the
+      saber failed; it surfaced one notch quieter. Pick a Rifle Stock, a Rifle
+      Receiver and a Long Emitter and the components measure 14, while
+      `durability` is still the 10 nobody chose: the weapon arrives at 10/14,
+      STATUS DAMAGED, with Field Repair offered on a design that has never been
+      built - and malfunctionOrBase grades 10-of-14 down to Malf 16, so it jams
+      on a 16 as well as a 17 before it exists.
+  
+      Same field, same rules, same reason as customMeleeWeaponSchema and
+      lightsaberSchema. 0 has to stay available as a real maxDurability, because
+      that is what an unbuilt design honestly has.
+    */
+  durability: external_exports.number().int().nullable().default(null),
+  maxDurability: external_exports.number().int().default(0),
+  currentDurability: external_exports.number().int().optional().nullable(),
+  condition: external_exports.enum(EQUIPMENT_CONDITION).default("Fine"),
+  malfunction: external_exports.number().int().default(17),
+  /* See customMeleeWeaponSchema.buildProvenance - same field, same rules. */
+  buildProvenance: external_exports.enum(["placed", "built"]).nullable().default(null)
+});
+var lightsaberSlotSchema = external_exports.object({
+  partId: external_exports.string().nullable().default(null),
+  materialId: external_exports.string().nullable().default(null),
+  wrapId: external_exports.string().nullable().default(null),
+  inventoryId: external_exports.string().uuid().nullable().default(null)
+});
+var lightsaberSchema = external_exports.object({
+  id: external_exports.string().uuid(),
+  name: external_exports.string(),
+  emitter: lightsaberSlotSchema.default({}),
+  switch: lightsaberSlotSchema.default({}),
+  sleeve: lightsaberSlotSchema.default({}),
+  pommel: lightsaberSlotSchema.nullable().default(null),
+  coupler: lightsaberSlotSchema.nullable().default(null),
+  emitterTwo: lightsaberSlotSchema.nullable().default(null),
+  switchTwo: lightsaberSlotSchema.nullable().default(null),
+  sleeveTwo: lightsaberSlotSchema.nullable().default(null),
+  couplerTwo: lightsaberSlotSchema.nullable().default(null),
+  /*
+      The internals: bought finished goods, not milled hardware.
+  
+      Each of these holds the uuid of an OWNED lightsaberModifications row, which
+      is the same wall the hilt slots hit - a field that can only name a row you
+      have cannot express a design, so the picker's catalog branch had to
+      materialise one. Choosing a Corusca Gem Cell made you own a 3,720 CR cell.
+  
+      The fix is a companion rather than a reshape. Turning `powerCell` into an
+      object would break every reader and every saved sheet; an added
+      `*PartId` is additive, so an old save loads unchanged and a reader that
+      has not been taught about designs keeps seeing exactly what it saw.
+  
+      These differ from hilt hardware in one way that matters, and it is why they
+      were held back from the hilt fix rather than folded into it: Ch12 prints a
+      finished price for each, so a design that names one owes that price outright
+      - it is a purchase deferred, not a component to be milled from a material.
+      planSaberBuild therefore prices them from `cost` and asks for no material.
+    */
+  powerCell: external_exports.string().uuid().nullable().optional(),
+  powerCellPartId: external_exports.string().nullable().default(null),
+  lens: external_exports.string().uuid().nullable().optional(),
+  lensPartId: external_exports.string().nullable().default(null),
+  emitterMatrix: external_exports.string().uuid().nullable().optional(),
+  emitterMatrixPartId: external_exports.string().nullable().default(null),
+  primaryCrystal: external_exports.string().uuid().nullable().optional(),
+  primaryCrystalPartId: external_exports.string().nullable().default(null),
+  primaryCrystalTwo: external_exports.string().uuid().nullable().optional(),
+  primaryCrystalTwoPartId: external_exports.string().nullable().default(null),
+  powerCrystal: external_exports.string().uuid().nullable().optional(),
+  powerCrystalPartId: external_exports.string().nullable().default(null),
+  powerCrystalTwo: external_exports.string().uuid().nullable().optional(),
+  powerCrystalTwoPartId: external_exports.string().nullable().default(null),
+  bladeLength: external_exports.number().default(90),
+  calculatedDamage: external_exports.string().optional().nullable(),
+  calculatedDamageTwo: external_exports.string().optional().nullable(),
+  calculatedDamageType: external_exports.string().default("burn"),
+  combinedEffects: external_exports.string().optional().nullable(),
+  combinedEffectsTwo: external_exports.string().optional().nullable(),
+  totalCost: external_exports.number().default(0),
+  totalWeight: external_exports.number().default(0),
+  finalWeight: external_exports.number().default(0),
+  /*
+    Ch12: a crystal that took micro-fractures during extraction imparts a
+    permanent -1 to attack rolls if reused. Persisted rather than derived at
+    render, because attackSkillFor - the shared resolver the card and the HUD
+    both use - reads the stored saber, not the calculation hook.
+  */
+  /*
+      Ch12's flat Parry bonus from the fitted hilt parts, summed by
+      `assembledSaberParryMod`.
+  
+      The same field `customMeleeWeaponSchema` has carried the whole time, and
+      the Tactical HUD already reads `weapon.finalParryMod` for every weapon it
+      offers a Parry with - so a vibrosword's grip moved the number and a
+      lightsaber's Curved Sleeve, printing +3, moved nothing. `.default(0)` so it
+      is always a number: an absent field is what let `hiltType` disappear.
+    */
+  finalParryMod: external_exports.number().default(0),
+  crystalAttackPenalty: external_exports.number().default(0).optional(),
+  powerCellMaxCharge: external_exports.number().default(0),
+  powerCellCurrentCharge: external_exports.number().default(0),
+  baseSkill: external_exports.string().default("Lightsaber Combat"),
+  equipped: external_exports.boolean().default(false),
+  equippedAt: external_exports.number().optional().nullable(),
+  /** See heldLocationIdsSchema. */
+  heldLocationIds: heldLocationIdsSchema,
+  quantity: external_exports.number().int().default(1),
+  storageLocationId: external_exports.string().uuid().nullable().optional(),
+  pendingHits: external_exports.number().int().default(0),
+  energyRes: external_exports.number().default(0),
+  energyResTwo: external_exports.number().default(0),
+  /*
+      Null means "not measured yet", which is not the same as 0.
+  
+      A saber's Durability is derived from its components, so a new one has no
+      figure until they are priced - and useLightsaberCalculations already fills
+      it in from the computed maximum the first time it sees null. Defaulting to
+      0 meant that initialiser could never fire, and 0 remaining reads as Broken:
+      every custom saber arrived on the sheet broken, and the effect then wrote
+      that Broken into the character. 0 has to stay available as a real value,
+      because that is what a genuinely destroyed blade is set to.
+    */
+  durability: external_exports.number().int().nullable().default(null),
+  maxDurability: external_exports.number().int().default(0),
+  condition: external_exports.enum(EQUIPMENT_CONDITION).default("Fine"),
+  malfunction: external_exports.number().int().default(17),
+  durabilityTwo: external_exports.number().int().nullable().default(null),
+  maxDurabilityTwo: external_exports.number().int().default(0),
+  conditionTwo: external_exports.enum(EQUIPMENT_CONDITION).default("Fine"),
+  malfunctionTwo: external_exports.number().int().default(17),
+  isSplit: external_exports.boolean().default(false),
+  isConstructed: external_exports.boolean().default(false),
+  /*
+      Ch10's ghost glitch, on the ITEM rather than the schematic.
+  
+      Set when this was built from a flawed Blueprint. It has its own lifetime:
+      "that correction reaches the schematic only. Items already built keep the
+      flaw" - so clearing blueprintFlawed must never clear this. A flawed item is
+      put right by Deconstructing it and rebuilding from a corrected Blueprint.
+    */
+  flawedBuild: external_exports.boolean().optional().nullable(),
+  hasHiddenFlaw: external_exports.boolean().default(false),
+  isUnattuned: external_exports.boolean().default(false),
+  classType: external_exports.string().optional().nullable(),
+  /* See customMeleeWeaponSchema.buildProvenance - same field, same rules. */
+  buildProvenance: external_exports.enum(["placed", "built"]).nullable().default(null)
+});
+var customExplosiveSchema = external_exports.object({
+  id: external_exports.string().uuid(),
+  baseExplosiveName: external_exports.string(),
+  type: external_exports.enum(["Grenade", "Mine", "Missile"]).nullable().optional(),
+  quantity: external_exports.number().int().min(1).default(1),
+  finalDamageEffect: external_exports.string().optional().nullable(),
+  finalWeight: external_exports.number().default(0),
+  finalCost: external_exports.number().default(0),
+  finalLegalityClass: external_exports.string().optional().nullable(),
+  baseSkill: external_exports.string().optional().nullable(),
+  customNotes: external_exports.string().optional().nullable(),
+  storageLocationId: external_exports.string().uuid().nullable().optional(),
+  preferredDefaultAttr: external_exports.enum(["DX", "IQ"]).default("DX")
+});
+var starshipSystemSchema = external_exports.object({
+  id: external_exports.string(),
+  name: external_exports.string(),
+  dr: external_exports.number().int(),
+  // `hp` is the player's CURRENT figure, edited on the Damage Control Matrix;
+  // `maxHp` is the ceiling the hull gives it. They were one field, and a
+  // re-derivation wrote the ceiling over the record of a fight. Optional
+  // because sheets saved before the split have no value for it.
+  hp: external_exports.number().int(),
+  maxHp: external_exports.number().int().optional().nullable(),
+  status: external_exports.enum(["Nominal", "Damaged", "Disabled"]),
+  notes: external_exports.string().optional().nullable()
+});
+var starshipArmamentSchema = external_exports.object({
+  name: external_exports.string(),
+  damage: external_exports.string(),
+  skill: external_exports.string()
+});
+var customStarshipSchema = external_exports.object({
+  id: external_exports.string().uuid(),
+  customName: external_exports.string(),
+  baseChassis: external_exports.string(),
+  baseHandling: external_exports.string(),
+  baseSpeed: external_exports.string(),
+  baseAccelDecel: external_exports.string(),
+  baseHp: external_exports.number().int(),
+  baseDr: external_exports.number().int(),
+  baseCrew: external_exports.string(),
+  basePassengers: external_exports.string(),
+  baseCargo: external_exports.string(),
+  baseCost: external_exports.number().int(),
+  baseWeapons: external_exports.string(),
+  baseWeaponSkill: external_exports.string(),
+  baseHyperdrive: external_exports.string(),
+  performanceMod: external_exports.string().nullable().optional(),
+  defensiveMod1: external_exports.string().nullable().optional(),
+  defensiveMod2: external_exports.string().nullable().optional(),
+  offensiveMod1: external_exports.string().nullable().optional(),
+  offensiveMod2: external_exports.string().nullable().optional(),
+  utilityMod1: external_exports.string().nullable().optional(),
+  utilityMod2: external_exports.string().nullable().optional(),
+  offensiveMod1Mount1: external_exports.string().nullable().optional(),
+  offensiveMod1Mount2: external_exports.string().nullable().optional(),
+  offensiveMod2Mount1: external_exports.string().nullable().optional(),
+  offensiveMod2Mount2: external_exports.string().nullable().optional(),
+  finalHandling: external_exports.string().optional().nullable(),
+  finalSpeed: external_exports.string().optional().nullable(),
+  finalHp: external_exports.number().int().optional().nullable(),
+  finalDr: external_exports.number().int().optional().nullable(),
+  finalCost: external_exports.number().int().optional().nullable(),
+  finalHyperdrive: external_exports.string().optional().nullable(),
+  finalNotesAndEffects: external_exports.string().optional().nullable(),
+  customNotes: external_exports.string().optional().nullable(),
+  dpHandlingMod: external_exports.number().int().default(0),
+  dpSpeedMod: external_exports.number().int().default(0),
+  dpAccelMod: external_exports.number().int().default(0),
+  dpHpMod: external_exports.number().int().default(0),
+  dpDrMod: external_exports.number().int().default(0),
+  dpWeaponHardpoints: external_exports.number().int().default(0),
+  dpWeaponMount1: external_exports.string().default("None"),
+  dpWeaponMount2: external_exports.string().default("None"),
+  dpWeaponMount3: external_exports.string().default("None"),
+  dpWeaponMount4: external_exports.string().default("None"),
+  dpHyperdriveMod: external_exports.number().int().default(0),
+  dpCargoMod: external_exports.number().int().default(0),
+  dpPassengerMod: external_exports.number().int().default(0),
+  dpQuirkPoints: external_exports.number().int().default(0),
+  dpSystemQuirks: external_exports.string().default(""),
+  quantity: external_exports.number().int().default(1),
+  storageLocationId: external_exports.string().uuid().nullable().optional(),
+  shipPosition: external_exports.string().nullable().optional(),
+  assignedStation: external_exports.string().nullable().optional(),
+  systems: external_exports.array(starshipSystemSchema).default([]),
+  armaments: external_exports.array(starshipArmamentSchema).default([])
+});
+var vehicleSchema = external_exports.object({
+  id: external_exports.string().uuid(),
+  name: external_exports.string(),
+  type: external_exports.string(),
+  handling: external_exports.string(),
+  speed: external_exports.string(),
+  accelDecel: external_exports.string(),
+  hp: external_exports.number().int(),
+  dr: external_exports.number().int(),
+  crew: external_exports.string(),
+  passengers: external_exports.string(),
+  cargo: external_exports.string(),
+  cost: external_exports.number().int(),
+  weapons: external_exports.string(),
+  weaponSkill: external_exports.string(),
+  hyperdrive: external_exports.string(),
+  notes: external_exports.string().optional().nullable(),
+  customNotes: external_exports.string().optional().nullable(),
+  quantity: external_exports.number().int().default(1),
+  storageLocationId: external_exports.string().uuid().nullable().optional(),
+  // Which of the two vehicle lists this belongs to. Catalog vehicles are placed
+  // by their VEHICLE_DATA category; this pins vehicles that are not in the
+  // catalog (imports, GM inventions) so they cannot fall between both lists.
+  category: external_exports.enum(["Atmospheric", "Terrestrial"]).optional().nullable()
+});
+
+// src/components/character-sheet/schemas/character-form-schema.ts
+var blankToNull = (val) => val === void 0 || val === "" ? null : val;
+var statusEffectPhaseSchema = external_exports.object({
+  name: external_exports.string(),
+  type: external_exports.enum(["buff", "debuff"]).default("debuff"),
+  description: external_exports.string().optional().nullable(),
+  duration: external_exports.string().optional().nullable(),
+  modifiers: external_exports.record(external_exports.string(), external_exports.number()).default({})
+});
+var statusEffectSchema = external_exports.object({
+  id: external_exports.string(),
+  name: external_exports.string().min(1, "Name is required"),
+  type: external_exports.enum(["buff", "debuff"]),
+  source: external_exports.string(),
+  description: external_exports.string().optional().nullable(),
+  isManual: external_exports.boolean().default(false),
+  isGear: external_exports.boolean().default(false),
+  duration: external_exports.string().optional().nullable(),
+  /**
+   * The last Global Turn Counter value this effect is active on; the turn
+   * tracker removes it once the counter passes this. Shock is the producer
+   * (Ch7: "-N to DX and IQ rolls on your next turn" - wound turn plus one):
+   * before this existed, its "NEXT TURN" label was text only and the -3
+   * lasted until someone deleted the row. Absent means the effect does not
+   * expire by turn.
+   */
+  expiresAfterTurn: external_exports.number().int().optional().nullable(),
+  /**
+   * Stages this effect moves through after the current one. A stimulant's
+   * crash, a drug wearing off - the player clicks through them in the HUD
+   * rather than the follow-up only appearing when the effect is dismissed.
+   */
+  phases: external_exports.array(statusEffectPhaseSchema).optional().nullable(),
+  /** Which entry in `phases` comes next. 0 means none have been applied yet. */
+  phaseIndex: external_exports.number().int().default(0).optional(),
+  modifiers: external_exports.object({
+    strength: external_exports.number().default(0),
+    dexterity: external_exports.number().default(0),
+    iq: external_exports.number().default(0),
+    health: external_exports.number().default(0),
+    will: external_exports.number().default(0),
+    perception: external_exports.number().default(0),
+    move: external_exports.number().default(0),
+    dodge: external_exports.number().default(0),
+    dr: external_exports.number().default(0),
+    carryCapacity: external_exports.number().default(0),
+    endurancePoints: external_exports.number().default(0),
+    forcePoints: external_exports.number().default(0),
+    toHit: external_exports.number().default(0),
+    basicSpeed: external_exports.number().default(0),
+    hitPoints: external_exports.number().default(0),
+    /** See the note on `traitModifiersSchema` - Fright is its own stack, not Will's. */
+    frightCheck: external_exports.number().default(0),
+    /** The active defences. Ch10's "+1 to Parry/Block" was written as Dodge
+        until these existed. See `NUMERIC_MODIFIER_CHANNELS`. */
+    parry: external_exports.number().default(0),
+    block: external_exports.number().default(0),
+    /* Ch9's roll to shake off stun - see modifier-channels.ts. */
+    stunRecovery: external_exports.number().default(0),
+    strikingSt: external_exports.number().default(0),
+    liftingSt: external_exports.number().default(0),
+    kickDamage: external_exports.number().default(0),
+    jumpDistance: external_exports.number().default(0),
+    /** A state, never a big number. See `traitModifiersSchema`. */
+    frightImmune: external_exports.boolean().default(false),
+    /**
+     * Ch2's proportional Move penalties - identity 1, reduced by the
+     * harshest rather than summed. This is the channel Force Stasis and
+     * Ch7's Motive System Damage arrive on: both are transient, so both
+     * are status effects rather than traits, and neither had anywhere to
+     * land while the halving was a boolean on a disadvantage row.
+     */
+    moveMultiplier: external_exports.number().default(1)
+  })
+});
+var pinnedNotificationSchema = external_exports.object({
+  id: external_exports.string(),
+  title: external_exports.string().default(""),
+  description: external_exports.string().default(""),
+  variant: external_exports.string().optional().nullable(),
+  /** Epoch ms, so the panel can still say "2h ago" after a reload. */
+  at: external_exports.number().default(0)
+});
+var CHARACTER_FORM_ARRAY_KEYS = [
+  "advantages",
+  "disadvantages",
+  "quirks",
+  "skills",
+  "forcePowers",
+  "combatTechniques",
+  "lightsaberForms",
+  "equipment",
+  "armor",
+  "customBlasters",
+  "customMeleeWeapons",
+  "lightsabers",
+  "customExplosives",
+  "customStarships",
+  "vehicles",
+  "ammunition",
+  "weaponModifications",
+  "lightsaberModifications",
+  "armorModifications",
+  "cyberneticUpgrades",
+  "implants",
+  "cybernetics",
+  "hitLocations"
+];
+var characterSheetSchema = external_exports.object({
+  characterName: external_exports.string().min(1, "Character name is required.").default("Unnamed Character").optional().nullable(),
+  playerName: external_exports.string().optional().nullable(),
+  species: external_exports.string().optional().nullable(),
+  /*
+    Ch2 makes homeworld a required part of character creation, with "Unknown"
+    an explicitly valid answer - Ch18 uses it for Kaelen, whose birth world was
+    never recorded - so this is not validated as non-empty. Ch3 ties a
+    character's free native language to it.
+  */
+  homeworld: external_exports.string().optional().nullable(),
+  characterPortrait: external_exports.string().optional().nullable(),
+  campaign: external_exports.string().optional().nullable(),
+  pointTotal: external_exports.preprocess((val) => val === "" || val === null || val === void 0 ? 150 : val, external_exports.coerce.number().int().default(150)),
+  lastSaved: external_exports.any().optional().nullable(),
+  turnCounter: external_exports.preprocess((val) => val ?? 0, external_exports.coerce.number().int().default(0)),
+  // Ch9 "Do Nothing": a stunned character may still attempt Active Defenses at
+  // -4, and rolls to recover each turn (HT for physical, IQ for mental stun).
+  stunType: external_exports.enum(["None", "Physical", "Mental"]).default("None").optional(),
+  /*
+      Ch7 "Facing", stored as two hexsides with the arc DERIVED from them.
+  
+      `facing` is the hexside the character faces; `incomingBearing` is the one a
+      threat stands on. Hexsides are 0-5 clockwise and purely relative, so which
+      real direction 0 points at is the table's business.
+  
+      Storing the arc instead - which this used to do - freezes a fact that stops
+      being true the moment either combatant moves, and hides the trade Ch7 is
+      built around: spending the free change to bring one attacker into your Front
+      is what puts another in your Rear. Derived, that happens by itself.
+    */
+  facing: external_exports.coerce.number().int().min(0).max(5).default(0).optional(),
+  incomingBearing: external_exports.coerce.number().int().min(0).max(5).default(0).optional(),
+  /*
+      Whether there is a threat to have an arc at all.
+  
+      Out of combat nothing is attacking from anywhere, so gating defences on an
+      arc would be answering a question nobody asked - the sheet would quietly
+      report Block unavailable to a character standing in a cantina. The bearing
+      itself is kept while disengaged rather than cleared, so stepping out of a
+      fight and back into it does not lose which side the enemy was on.
+    */
+  threatEngaged: external_exports.boolean().default(false).optional(),
+  /*
+      Every other threat on the board, by hexside.
+  
+      `incomingBearing` is the one the defence panel resolves against; these are
+      the rest. Ch7's arcs are per attack, not per character - three attackers are
+      in three arcs at once - so the sheet cannot answer for all of them with one
+      set of defences, but it can show where they are and let the player pick
+      which attack they are defending.
+  
+      That is also where the chapter's own point becomes visible: turning to bring
+      one into your Front is what puts another behind you, and with several on the
+      dial you watch it happen.
+    */
+  additionalBearings: external_exports.array(external_exports.coerce.number().int().min(0).max(5)).default([]).optional(),
+  /*
+      Superseded by the two above, and read only by migrateFacing on load so a
+      sheet saved under the old model keeps the arc its player left it on.
+      Nothing writes an arc to it.
+  
+      That last sentence was false for as long as it stood here. The defence
+      panel kept a dropdown bound to this field and gated all three Active
+      Defenses on whatever it held - a STORED arc, which is the one thing the
+      facing model exists to avoid. It could not be moved by turning, and no
+      vision trait could shift it, so the dial and the panel disagreed by
+      construction. The comment is what let the control look accounted for.
+    */
+  incomingArc: external_exports.enum(["Front", "Side", "Rear"]).optional().nullable(),
+  // Ch7: "A character may change facing once per round, freely" - so this is
+  // spent rather than paid for, and clears when the turn counter moves.
+  facingChangeUsed: external_exports.boolean().default(false).optional(),
+  /*
+    Ch9 "Change Posture": one of the chapter's seven postures, stored like
+    facing and derived from each time it is read (posture-rules.ts). Absent on
+    every sheet saved before 2026-09-10, and absent means standing - the only
+    posture that changes nothing. Whether the posture's modifiers reach the
+    derived numbers is a sheet PREFERENCE (applyPosture), not a field here:
+    the posture is a fact about the character, the toggle is how one player
+    likes to read the sheet.
+  */
+  posture: external_exports.enum(POSTURES).default(DEFAULT_POSTURE).optional(),
+  /*
+    Elevation in yards above (negative: below) the table's ground level, ruled
+    2026-09-10. A recorded value with no derived number keyed on it - the one
+    rule that reads it, Ch7's blast distance, needs two positions. Exported
+    beside posture so Waypoint can seed a token's elevation from it. Hidden
+    behind the trackElevation preference, which hides the field and keeps the
+    value. Blank and null are 0, as sizeModifier does it.
+  */
+  elevation: external_exports.preprocess((val) => val === "" || val === null || val === void 0 ? 0 : val, external_exports.coerce.number().default(0)),
+  /*
+    Parries rolled on the current turn, for Ch12's Multiple Parries advisory
+    (cumulative −4 per successive parry - WARN, not block, per the 2026-08-28
+    ruling). Incremented by the HUD's Parry roll, reset by the same turn
+    sweep that restores the free facing change.
+  */
+  parriesThisTurn: external_exports.preprocess((val) => val ?? 0, external_exports.coerce.number().int().default(0)),
+  height: external_exports.string().optional().nullable(),
+  weight: external_exports.string().optional().nullable(),
+  sizeModifier: external_exports.preprocess((val) => val === "" || val === null || val === void 0 ? 0 : val, external_exports.coerce.number().default(0)),
+  age: external_exports.preprocess((val) => val ?? 0, external_exports.coerce.number().int().default(0)),
+  appearance: external_exports.string().optional().nullable(),
+  techLevel: external_exports.string().optional().nullable(),
+  isDroid: external_exports.boolean().default(false),
+  powerPoints: external_exports.preprocess((val) => val ?? 100, external_exports.coerce.number().int().default(100)),
+  lightSidePoints: external_exports.coerce.number().int().optional().default(0),
+  darkSidePoints: external_exports.coerce.number().int().optional().default(0),
+  trackPurchases: external_exports.boolean().default(false).nullable().transform((val) => val ?? false),
+  /*
+      WHICH FORM OF MONEY THE SHEET DEDUCTS FROM, and whether it deducts at all.
+  
+      Ch2 makes buying gear a step of character creation - "Purchase Equipment:
+      Allocate starting wealth to acquire weapons, armor, tools, and other
+      necessary gear" - and Ch18's sheets carry the tally out loud: "Total
+      Equipment Cost: 204 CR (of 500 CR starting credits)". The deduction is
+      real, it is `creditsAfterCostChange` in lib/credit-tracking.ts, and
+      `check:starting-credits` asserts the arithmetic rather than the flag.
+  
+      BOTH DEFAULT OFF. Fulllion's call, 2026-08-22: "credit tracking should not
+      be active by default." So the Ch2 step is opt-in - a table that settles gear
+      between sessions, or a sheet kept as a reference, never has money moved
+      under it - and a player who wants the tally flips one toggle in Inventory.
+      The two are mutually exclusive by design; digital is the form a Credit Chip
+      already carries, so that is the one most players will turn on.
+  
+      THE ORDER MATTERS AND IT IS WHY PACKAGE GEAR STAYS FREE ONCE TRACKING IS ON.
+      `useTrackedCreditChange` takes its baseline from the gear already present
+      when the sheet loads, and only deducts CHANGES from it. So a template's
+      lightsaber arrives at no cost - Ch18 marks exactly that gear "(gift - not
+      deducted from starting credits)" - while the next thing bought is charged.
+    */
+  trackDigital: external_exports.boolean().default(false),
+  trackPhysical: external_exports.boolean().default(false),
+  totalCredits: external_exports.preprocess((val) => val ?? STARTING_CREDITS_BASELINE, external_exports.coerce.number().default(STARTING_CREDITS_BASELINE)),
+  forceAlignment: external_exports.coerce.number().int().min(-100).max(100).optional().default(0),
+  isStartingPointsMode: external_exports.boolean().default(true),
+  isConstructed: external_exports.boolean().default(false),
+  /*
+      Ch10's ghost glitch, on the ITEM rather than the schematic.
+  
+      Set when this was built from a flawed Blueprint. It has its own lifetime:
+      "that correction reaches the schematic only. Items already built keep the
+      flaw" - so clearing blueprintFlawed must never clear this. A flawed item is
+      put right by Deconstructing it and rebuilding from a corrected Blueprint.
+    */
+  flawedBuild: external_exports.boolean().optional().nullable(),
+  /*
+    Which revision of the species packages this sheet was last brought up to
+    (lib/species-package-revision.ts). Defaults to 0, not to the current
+    revision: a sheet that does not say is one the migration has not seen.
+  */
+  speciesPackageRevision: external_exports.number().int().default(0),
+  cpBaseline: external_exports.number().default(0),
+  stBaseline: external_exports.number().default(10),
+  dxBaseline: external_exports.number().default(10),
+  iqBaseline: external_exports.number().default(10),
+  htBaseline: external_exports.number().default(10),
+  hitPointsBaseline: external_exports.number().default(0),
+  endurancePointsBaseline: external_exports.number().default(0),
+  forcePointsBaseline: external_exports.number().default(0),
+  willBaseline: external_exports.number().default(0),
+  perceptionBaseline: external_exports.number().default(0),
+  frightCheckBaseline: external_exports.number().default(0),
+  basicSpeedBaseline: external_exports.number().default(0),
+  basicMoveBaseline: external_exports.number().default(0),
+  // The four senses are point-bought too (Ch2, 2 points per level), so they
+  // need the same "granted by a template, do not charge" record as the rest.
+  visionBaseline: external_exports.number().default(0),
+  hearingBaseline: external_exports.number().default(0),
+  tasteAndSmellBaseline: external_exports.number().default(0),
+  touchBaseline: external_exports.number().default(0),
+  /*
+    Languages, cultural familiarities and literacy are free text carrying their
+    own bracketed costs ("Galactic Basic (Accented) [4]"), and those costs were
+    billed to the player even when a template supplied the line. Ch18 does not
+    count them - Rokarr's 138 is 114 + 15 - 5 + 14, with his Illiterate [-10]
+    outside the total - so a template records what it granted here and only
+    what the player adds on top is charged.
+  */
+  languagesBaseline: external_exports.number().default(0),
+  culturalFamiliaritiesBaseline: external_exports.number().default(0),
+  literacyBaseline: external_exports.number().default(0),
+  /*
+    Languages as a structured NON-SKILL TRAIT (Fulllion, 2026-08-28): this
+    array is the one billing home. Ch3's ladder is flat per tier and caps at
+    Fluent (Broken 1, Accented 2, Fluent 3; Comprehension-only half rounded
+    up, 1/1/2; native and granted entries bill 0), priced in
+    lib/language-rows.ts. The
+    `languages` STRING above survives as a bracket-free display projection of
+    this array (the PDF reads it; the legacy bracket-scraping term reads 0
+    from it by construction), and `languagesBaseline` is retired to 0 by the
+    load migration - both stay for legacy sheets the migration has not seen.
+  */
+  languageEntries: external_exports.array(external_exports.object({
+    id: external_exports.string().optional(),
+    tongue: external_exports.string().default(""),
+    // The retired plus tiers (uncapped ladder, 2026-08-28 only) stay
+    // accepted here so an old save parses; the load migration clamps them
+    // to 'fluent', announced, before the form ever validates.
+    tier: external_exports.enum(["native", "broken", "accented", "fluent", "fluent-plus-1", "fluent-plus-2", "fluent-plus-3"]).default("accented"),
+    comprehensionOnly: external_exports.boolean().optional().nullable(),
+    granted: external_exports.boolean().optional().nullable(),
+    notes: external_exports.string().optional().nullable()
+  })).default([]),
+  /*
+    Ch3 (2026-08-25): "Republic-raised" swaps the one free native tongue to
+    Basic, +0 CP - a declaration, not a purchase, so it is a flag rather than
+    a row. Kept on the sheet so the toggle, species swaps and re-imports all
+    agree about which tongue the free [0] is.
+  */
+  republicRaised: external_exports.boolean().default(false),
+  drHead: external_exports.coerce.number().optional().nullable(),
+  drTorso: external_exports.coerce.number().optional().nullable(),
+  /*
+      Null means "not bought up - use the value derived from the attributes".
+  
+      calculateAttributePoints.getManualValue() already reads null that way, but
+      these used to coerce null into a hardcoded 10/5/5. Every template inherits
+      the blank sheet, so each one carried a blank sheet's derived figures, and
+      the engine read the gap as the player buying the stat *down* and refunded
+      it - Basic Speed 5 against a derived 6.5 alone gave back 30 points.
+  
+      An empty input box is "cleared", not zero, so it maps to null as well.
+    */
+  frightCheck: external_exports.preprocess(blankToNull, external_exports.coerce.number().int().nullable().optional()),
+  basicSpeed: external_exports.preprocess(blankToNull, external_exports.coerce.number().nullable().optional()),
+  basicMove: external_exports.preprocess(blankToNull, external_exports.coerce.number().int().nullable().optional()),
+  basicLift: external_exports.string().optional().nullable(),
+  damageThrust: external_exports.string().optional().nullable(),
+  damageSwing: external_exports.string().optional().nullable(),
+  currentValues: external_exports.object({
+    maxForcePoints: external_exports.number().optional().nullable(),
+    maxPowerPoints: external_exports.number().optional().nullable(),
+    hitPoints: external_exports.number().optional().nullable(),
+    will: external_exports.number().optional().nullable(),
+    perception: external_exports.number().optional().nullable(),
+    endurancePoints: external_exports.number().optional().nullable(),
+    forcePoints: external_exports.number().optional().nullable(),
+    frightCheck: external_exports.number().optional().nullable(),
+    vision: external_exports.number().optional().nullable(),
+    hearing: external_exports.number().optional().nullable(),
+    tasteAndSmell: external_exports.number().optional().nullable(),
+    touch: external_exports.number().optional().nullable(),
+    basicSpeed: external_exports.number().optional().nullable(),
+    basicMove: external_exports.number().optional().nullable()
+  }).optional().nullable(),
+  advantages: external_exports.array(advantageSchema).optional().nullable(),
+  disadvantages: external_exports.array(disadvantageSchema).optional().nullable(),
+  quirks: external_exports.array(quirkSchema).optional().nullable(),
+  skills: external_exports.array(skillSchema).optional(),
+  parry: external_exports.string().optional().nullable(),
+  block: external_exports.string().optional().nullable(),
+  selectedParrySkill: external_exports.string().optional().nullable(),
+  selectedBlockSkill: external_exports.string().optional().nullable(),
+  forcePowers: external_exports.array(forcePowerSchema2).optional().nullable(),
+  combatTechniques: external_exports.array(combatTechniqueSchema).optional().nullable(),
+  lightsaberForms: external_exports.array(knownLightsaberFormSchema).optional().nullable(),
+  activeLightsaberForm: external_exports.string().optional().nullable(),
+  /*
+    Which readied lightsaber the active Form is being used WITH (2026-08-28,
+    user report): the binding lived in per-panel component state, so opening
+    and closing an accordion silently unselected the saber and the Form's
+    numbers fell back to a different weapon's. Sheet state survives the
+    remount and keeps the Forms card and the HUD on one answer.
+  */
+  activeFormWeaponId: external_exports.string().optional().nullable(),
+  equipment: external_exports.array(generalEquipmentItemSchema).optional().nullable(),
+  armor: external_exports.array(armorItemSchema).optional().nullable(),
+  /*
+      Player-defined outfits.
+  
+      Only the membership list is stored, never the pieces - Ch13 is emphatic that
+      a suit is "not a fixed bundle", and a set that owned its items would double
+      their weight and cost the moment it existed. Sets the chapter itself lists
+      are recognised from inventory rather than saved, so this array holds only
+      what the player assembled themselves: mismatched armour, a single favourite
+      piece, whatever they want to equip as a unit.
+    */
+  gearSets: external_exports.array(gearSetSchema).default([]).optional().nullable(),
+  customBlasters: external_exports.array(customBlasterSchema).optional().nullable(),
+  customMeleeWeapons: external_exports.array(customMeleeWeaponSchema).optional().nullable(),
+  lightsabers: external_exports.array(lightsaberSchema).optional().nullable(),
+  customExplosives: external_exports.array(customExplosiveSchema).optional().nullable(),
+  customStarships: external_exports.array(customStarshipSchema).optional().nullable(),
+  vehicles: external_exports.array(vehicleSchema).optional().nullable(),
+  ammunition: external_exports.array(ammunitionSchema).optional().nullable(),
+  weaponModifications: external_exports.array(weaponModificationSchema).optional().nullable(),
+  lightsaberModifications: external_exports.array(lightsaberModificationSchema).optional().nullable(),
+  armorModifications: external_exports.array(armorModificationSchema).optional().nullable(),
+  cyberneticUpgrades: external_exports.array(cyberneticUpgradeSchema).optional().nullable(),
+  implants: external_exports.array(neuralImplantSchema).optional().nullable(),
+  cybernetics: external_exports.array(cyberneticLimbSchema).optional().nullable(),
+  hitLocations: external_exports.array(hitLocationEntrySchema).optional().default([]),
+  languages: external_exports.string().optional().nullable(),
+  culturalFamiliarities: external_exports.string().optional().nullable(),
+  literacy: external_exports.string().optional().nullable(),
+  description: external_exports.string().optional().nullable(),
+  background: external_exports.string().optional().nullable(),
+  notes: external_exports.string().optional().nullable(),
+  pointsAttributes: external_exports.number().int().optional(),
+  pointsAdvantages: external_exports.number().int().optional(),
+  pointsDisadvantages: external_exports.number().int().optional(),
+  pointsSkills: external_exports.number().int().optional().nullable(),
+  pointsOther: external_exports.number().int().optional().nullable(),
+  /*
+    Ch2 "Trading CP for Credits": "you may trade 1 Character Point (CP) for 700
+    Credits ... capped at a maximum of 5 CP total to ensure campaign balance."
+    Stored as the number of CP traded, so the cap is enforceable and the spend
+    is visible in the point total; the credits themselves land in totalCredits.
+  */
+  cpTradedForCredits: external_exports.coerce.number().int().min(0).max(5).default(0).optional().nullable(),
+  /*
+    Which form the trade pays out in. Kept on the sheet rather than derived so
+    that lowering the traded CP takes the credits back out of the same place it
+    put them, across a save and reload.
+  */
+  cpCreditsForm: external_exports.enum(["digital", "physical"]).default("digital").optional().nullable(),
+  spentPoints: external_exports.number().int().optional().nullable(),
+  remainingPoints: external_exports.number().int().optional().nullable(),
+  /*
+      NULL MEANS FULL, and it is a sentinel rather than a value.
+  
+      These defaulted to a hard-coded 10 with no reference to the maximum, so a
+      fresh Jedi Guardian opened at 10 of 12 on all three tracks - neither wounded
+      nor drained, just three short of itself - and a character whose maximum is
+      below 10 would have started ABOVE its own ceiling.
+  
+      The maximum is derived from the attributes and from what the character
+      carries, so nothing here or in a template can know it. `fillUnrecordedPools`
+      answers on load, where the derived side exists. A real reading - a wounded
+      character at 4 of 12 - is a number and is never touched, which is the whole
+      reason the unrecorded state cannot also be a number.
+    */
+  currentHitPoints: external_exports.coerce.number().int().nullable().default(null),
+  currentEndurancePoints: external_exports.coerce.number().int().nullable().default(null),
+  currentForcePoints: external_exports.coerce.number().int().nullable().default(null),
+  strength: external_exports.preprocess((val) => val ?? 10, external_exports.coerce.number().int().min(1, "Min ST is 1").default(10)),
+  dexterity: external_exports.preprocess((val) => val ?? 10, external_exports.coerce.number().int().min(1, "Min DX is 1").default(10)),
+  iq: external_exports.preprocess((val) => val ?? 10, external_exports.coerce.number().int().min(1, "Min IQ is 1").default(10)),
+  health: external_exports.preprocess((val) => val ?? 10, external_exports.coerce.number().int().min(1, "Min HT is 1").default(10)),
+  hitPoints: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
+  will: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
+  perception: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
+  vision: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
+  hearing: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
+  tasteAndSmell: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
+  touch: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
+  endurancePoints: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
+  forcePoints: external_exports.preprocess((val) => val ?? null, external_exports.coerce.number().int().optional().nullable()),
+  shipPosition: external_exports.string().optional().nullable(),
+  assignedStation: external_exports.string().optional().nullable(),
+  storageBoxes: external_exports.array(external_exports.object({
+    id: external_exports.string().uuid(),
+    name: external_exports.string(),
+    description: external_exports.string().optional().nullable()
+  })).default([]).optional().nullable(),
+  droidBuild: external_exports.object({
+    chassisId: external_exports.string().optional().nullable(),
+    powerCoreId: external_exports.string().optional().nullable(),
+    head: external_exports.object({
+      componentId: external_exports.string().optional().nullable(),
+      processorId: external_exports.string().optional().nullable(),
+      // Handbook Ch17 allows a secondary processor, e.g. "Heuristic + Combat Matrix".
+      coProcessorId: external_exports.string().optional().nullable(),
+      memoryCoreId: external_exports.string().optional().nullable(),
+      // Sparse for the same reason as the chassisMods slot arrays below:
+      // the workshop writes `head.sensorIds.${i}` per bay and null on clear.
+      sensorIds: external_exports.array(external_exports.string().nullish()).default([]),
+      externalModId: external_exports.string().optional().nullable(),
+      // A custom head (componentId null) has no catalog height, so the
+      // build carries the chapter's stated figure - the S6's 0.05 m -
+      // for the Ch17 SM derivation.
+      customHeightM: external_exports.number().optional().nullable()
+    }).optional().nullable(),
+    arms: external_exports.array(external_exports.object({
+      id: external_exports.string().uuid(),
+      componentId: external_exports.string(),
+      side: external_exports.string().default("Right"),
+      actuatorId: external_exports.string().optional().nullable(),
+      wiringId: external_exports.string().optional().nullable(),
+      manipulatorId: external_exports.string().optional().nullable(),
+      externalModId: external_exports.string().optional().nullable(),
+      utilityModId: external_exports.string().optional().nullable()
+    })).default([]),
+    legs: external_exports.array(external_exports.object({
+      id: external_exports.string().uuid(),
+      componentId: external_exports.string(),
+      side: external_exports.string().default("Right"),
+      motiveMountId: external_exports.string().optional().nullable(),
+      actuatorId: external_exports.string().optional().nullable(),
+      wiringId: external_exports.string().optional().nullable(),
+      externalModId: external_exports.string().optional().nullable()
+    })).default([]),
+    chassisMods: external_exports.object({
+      /*
+        Slot arrays are SPARSE by convention, so their elements are
+        nullish. The workshop writes each pick at its slot's index
+        (`externalIds.1`), leaving undefined holes below it, writes null
+        when a slot is cleared, and stores the Backup Power Array at
+        internalIds[BACKUP_POWER_INDEX] (99) so it never collides with a
+        real bay - a build using it makes the array length 100. Dense
+        z.array(z.string()) rejected every hole as "Required", which
+        blocked saving any droid carrying a Backup Power Array (99
+        validation errors at once). The index IS the slot identity, so the
+        holes must survive the round-trip - never "clean" these by
+        compacting. droid-workshop-rows.ts types the same shape.
+      */
+      internalIds: external_exports.array(external_exports.string().nullish()).default([]),
+      externalIds: external_exports.array(external_exports.string().nullish()).default([]),
+      utilityIds: external_exports.array(external_exports.string().nullish()).default([]),
+      auxiliaryIds: external_exports.array(external_exports.string().nullish()).default([]),
+      motiveMountIds: external_exports.array(external_exports.string().nullish()).default([]),
+      reinforcementId: external_exports.string().optional().nullable(),
+      armorId: external_exports.string().optional().nullable(),
+      /*
+                  Ch17: plating "degrades under stress (losing 1 point of DR for every
+                  full 5 points of basic damage rolled against it). If DR reaches 0,
+                  the plating is completely destroyed."
+      
+                  THE TRACKED CURRENT DR, not a counter of damage taken - the same
+                  convention as an armour piece's `entry.dr`, which IS its current
+                  figure rather than a percentage read off a condition label. Null
+                  means undamaged, so every sheet predating this reads as intact
+                  without a migration.
+      
+                  It is the PLATING's figure alone. The chassis DR underneath never
+                  wears down, which is why the two are separate numbers all the way
+                  through droid-dr.ts: a single total has nothing to stop the
+                  subtraction at the bare frame.
+                */
+      armorCurrentDr: external_exports.coerce.number().int().min(0).optional().nullable(),
+      /*
+        The Shield Projector's operating state (Ch17 2026-09-01 blurb).
+        `shieldActive` is the on/off toggle - off by default, so every
+        sheet predating the field reads as switched off. `shieldCurrentDr`
+        is the field's CURRENT output under the same convention as
+        `armorCurrentDr` above: null means unworn (full printed DR 20),
+        a stored figure is what Ch7 degradation has left of the emitter -
+        and it PERSISTS until repaired (Fulllion: a power cycle must NOT
+        reset it, or a 1-turn off/on erases all wear). The emitter itself
+        is a powered utility device: Damaged runs the field at -1 to its
+        output, Broken drops it entirely (Ch7 [243]/[244]); null = Fine.
+      */
+      shieldActive: external_exports.boolean().optional().nullable(),
+      shieldCurrentDr: external_exports.coerce.number().int().min(0).optional().nullable(),
+      shieldEmitterCondition: external_exports.enum(["Fine", "Damaged", "Broken"]).optional().nullable(),
+      motivatorId: external_exports.string().optional().nullable(),
+      actuatorId: external_exports.string().optional().nullable(),
+      wiringId: external_exports.string().optional().nullable()
+    }).optional().nullable(),
+    /*
+      Ch17's modification-crit rows 5-6 (2026-08-30, Fulllion's enforcement
+      ruling): "the mounting slot itself is violently warped. No new part
+      can be installed in this specific slot until the chassis undergoes
+      structural repairs." The full form paths of the warped slots - the
+      workshop refuses installs into them and its Structural Repair roll
+      (Mechanic (Droids), Ch17) clears one. Declared in the schema so a
+      warp survives the save round-trip; droidBuild rides the
+      exporter/importer whole.
+    */
+    // Optional-nullable rather than defaulted: a default would make the
+    // field required in every template literal's type; readers coerce
+    // absent to empty.
+    warpedSlots: external_exports.array(external_exports.string()).optional().nullable()
+  }).optional().nullable(),
+  statusEffects: external_exports.array(statusEffectSchema).default([]).optional().nullable(),
+  pinnedNotifications: external_exports.array(pinnedNotificationSchema).default([]).optional().nullable(),
+  /*
+      THE ORDER OF `.optional()` AND `.default()` DECIDES WHETHER THESE WORK.
+  
+      All three were `z.boolean().default(true).optional()`, which does NOT mean
+      "true when absent". `.optional()` wraps the defaulted schema, so an absent
+      key parses to `undefined` and the default never fires:
+  
+          z.boolean().default(true).optional().parse(undefined)  -> undefined
+          z.boolean().optional().default(true).parse(undefined)  -> true
+  
+      Nothing in the app writes any of the three - 0 of 65 templates set them,
+      `blankSheetData` does not, and only `useLiftingST` has a control (the switch
+      in encumbrance-section). So every character carried `undefined`, and
+      `useStrikingST ? strikingStLevels : 0` in the melee card was ALWAYS the
+      zero branch. Striking ST and Arm ST reached melee damage for nobody, ever.
+  
+      That is the fourth layer of the same defect, and the only one no headless
+      assertion could reach: the engine publishes `damageStLevels` correctly, and
+      the card threw it away. It took adding Arm ST (Cybernetic) to a sheet in a
+      browser and watching a Gaderffii stay at 1d+2 to find it.
+  
+      A flag that is read in one place, written in none, and defaults to off is
+      not a player choice - it is an off switch nobody can reach.
+    */
+  useLiftingST: external_exports.boolean().optional().default(true),
+  useStrikingST: external_exports.boolean().optional().default(true),
+  useArmST: external_exports.boolean().optional().default(true)
+});
+
+// src/lib/sanitizer-null-migration.ts
+var NULL_REJECTING_KEYS = new Set(
+  Object.entries(characterSheetSchema.shape).filter(([, fieldSchema]) => !fieldSchema.safeParse(null).success).map(([key]) => key)
+);
+function migrateSanitizerNulls(data) {
+  const healed = [];
+  for (const key of Object.keys(data)) {
+    if (data[key] === null && NULL_REJECTING_KEYS.has(key)) {
+      delete data[key];
+      healed.push(key);
+    }
+  }
+  return healed;
+}
+
+// src/lib/load-sheet.ts
+function applyLoadMigrations(data, blankSheetData2) {
+  const notices = [];
+  const incoming = { ...data };
+  migrateSanitizerNulls(incoming);
+  const packageRevisionOnArrival = incoming.speciesPackageRevision ?? 0;
+  const dataToLoad = { ...blankSheetData2, ...incoming };
+  migrateSkillNames(dataToLoad);
+  migrateMeleePowerCells(dataToLoad);
+  migrateCyberneticNames(dataToLoad);
+  const renamedSpecies = migrateSpeciesNames(dataToLoad);
+  const renamedTraits = migrateTraitNames(dataToLoad);
+  migrateRacialTraitNames(dataToLoad);
+  const renamedFamiliarities = migrateCulturalFamiliarities(dataToLoad);
+  migrateEnhancedDefenses(dataToLoad);
+  const updatedPackage = migrateSpeciesPackage(dataToLoad, packageRevisionOnArrival);
+  const migratedLanguages = migrateLanguages(dataToLoad);
+  const structuredLanguages = migrateLanguageEntries(
+    dataToLoad,
+    getCalculatedStats(dataToLoad).skillPricingAttributes
+  );
+  migrateFacing(dataToLoad);
+  const unfoldedBonuses = migrateFoldedSkillBonuses(dataToLoad);
+  const repairedSabers = migrateLightsaberDurability(dataToLoad);
+  dataToLoad.armor = (dataToLoad.armor || []).map((item) => ensureCompleteArmorItem(item, dataToLoad.hitLocations));
+  dataToLoad.customStarships = (dataToLoad.customStarships || []).map(ensureCompleteStarshipItem);
+  const displaced = enforceBaseLayer(dataToLoad.armor);
+  if (displaced.length > 0) {
+    const plates = displaced.filter((d) => d.wasPlate);
+    notices.push({
+      id: "armor-layering",
+      title: "Armor layering corrected",
+      description: [
+        `${displaced.map((d) => `${d.itemName} (${d.location})`).join(", ")} unequipped \u2014`,
+        "Chapter 13 allows one base layer per location.",
+        plates.length ? "Your DR at those locations is lower as a result." : null,
+        "Everything is still in your inventory; re-equip whichever piece you meant to wear."
+      ].filter(Boolean).join(" ")
+    });
+  }
+  const loadedStats = getCalculatedStats(dataToLoad);
+  fillUnrecordedPools(dataToLoad, {
+    currentHitPoints: loadedStats.currentValues.hitPoints,
+    currentEndurancePoints: loadedStats.currentValues.endurancePoints,
+    currentForcePoints: loadedStats.currentValues.maxForcePoints
+  });
+  const fpCeiling = loadedStats.currentValues.maxForcePoints;
+  const clamped = applyForcePointCeiling(dataToLoad, fpCeiling);
+  if (clamped) {
+    notices.push({
+      id: "force-point-ceiling",
+      title: "Force Points capped",
+      description: `Your maximum is now ${clamped.to}, so ${clamped.from} FP was reduced to ${clamped.to}. Losing a maximum never grants points back and never deepens Force Exhaustion.`
+    });
+  }
+  if (repairedSabers.length > 0) {
+    notices.push({
+      id: "lightsaber-durability",
+      title: "Lightsaber durability restored",
+      description: `${repairedSabers.join(", ")} carried a Durability an old default had written - 0, which read as Broken, or a figure above the hilt's own maximum, from a +10 base Ch12 does not have. Restored to full. If one was meant to be destroyed, set its Durability back to 0.`
+    });
+  }
+  if (renamedSpecies.length > 0) {
+    notices.push({
+      id: "species-name",
+      title: "Species name updated",
+      description: `${renamedSpecies.join(", ")} \u2014 the app had abbreviated the species' full handbook name. Racial traits were re-marked to match, so removing the species still removes them.`
+    });
+  }
+  if (renamedTraits.length > 0) {
+    notices.push({
+      id: "trait-name",
+      title: "Trait name updated",
+      description: renamedTraits.join(", ") + " - the catalog now carries this trait under its current name. Its cost is unchanged."
+    });
+  }
+  if (renamedFamiliarities.length > 0) {
+    notices.push({
+      id: "cultural-familiarity",
+      title: "Cultural familiarity updated",
+      description: renamedFamiliarities.join(", ") + " - the species entry was reworded to match the handbook. Its cost is unchanged."
+    });
+  }
+  if (updatedPackage) {
+    notices.push({
+      id: "species-package",
+      title: "Species traits updated",
+      description: [
+        `Chapter 18's ${updatedPackage.species} entry is now the racial package on this sheet.`,
+        updatedPackage.added.length > 0 ? `Added: ${updatedPackage.added.join(", ")}.` : null,
+        updatedPackage.removed.length > 0 ? `Removed: ${updatedPackage.removed.join(", ")}.` : null,
+        updatedPackage.budgetGranted > 0 ? `Racial traits are free; this one grants ${updatedPackage.budgetGranted} bonus Character Points.` : "Racial traits are free, so your point total is unchanged."
+      ].filter(Boolean).join(" "),
+      duration: 12e3
+    });
+  }
+  if (migratedLanguages.length > 0) {
+    notices.push({
+      id: "languages-rule",
+      title: "Languages updated to the new rule",
+      description: `Chapter 3 now grants one free native tongue \u2014 the species' own language \u2014 and Basic is bought. This sheet was updated: ${migratedLanguages.join("; ")}.`,
+      duration: 12e3
+    });
+  }
+  if (structuredLanguages.length > 0) {
+    notices.push({
+      id: "language-entries",
+      title: "Languages are structured rows now",
+      description: `Manage them in the Languages panel on the Details tab. ${structuredLanguages.join("; ")}.`,
+      duration: 12e3
+    });
+  }
+  if (unfoldedBonuses.length > 0) {
+    notices.push({
+      id: "folded-skill-bonus",
+      title: "Advantage skill bonus unfolded",
+      description: unfoldedBonuses.join(" "),
+      duration: 12e3
+    });
+  }
+  return { data: dataToLoad, notices, loadedStats };
+}
 
 // src/lib/roll-outcome.ts
 function resolveRollOutcome(total, target, malfunctionThreshold) {
@@ -39360,13 +40095,16 @@ var MANEUVER_ECONOMY_NOTES = [
 // src/lib/social-rolls.ts
 var social_rolls_exports = {};
 __export(social_rolls_exports, {
+  APPEARANCE_TIERS: () => APPEARANCE_TIERS,
   NOT_SOCIAL_IN_SECTION: () => NOT_SOCIAL_IN_SECTION,
   REACTION_CAP: () => REACTION_CAP,
   REACTION_CP_PER_POINT: () => REACTION_CP_PER_POINT,
+  REACTION_MEDIA: () => REACTION_MEDIA,
   SOCIAL_ROLL_SKILLS: () => SOCIAL_ROLL_SKILLS,
   WEALTH_NEGATIVE_LADDER: () => WEALTH_NEGATIVE_LADDER,
   WEALTH_STATUS_LEVEL: () => WEALTH_STATUS_LEVEL,
   WEALTH_TIERS_LEVEL_INDEXED: () => WEALTH_TIERS_LEVEL_INDEXED,
+  appearanceFigure: () => appearanceFigure,
   isSocialRoll: () => isSocialRoll,
   netReactionModifier: () => netReactionModifier,
   reactionFromCost: () => reactionFromCost,
@@ -39440,7 +40178,13 @@ function wealthStatusLevel(traitName, level) {
   }
   return WEALTH_STATUS_LEVEL[tier] ?? null;
 }
+var REACTION_MEDIA = {
+  faceToFace: ["seen", "heard", "known"],
+  comlink: ["heard", "known"],
+  writing: ["known"]
+};
 var REACTION_TRAITS = {
+  Appearance: "seen",
   Charisma: "known",
   Status: "known",
   Voice: "heard",
@@ -39460,6 +40204,25 @@ function statedReactionFigure(traitName) {
   return Number.isFinite(value) ? clampToCap(value) : null;
 }
 var FIGURE_IS_STATED = /* @__PURE__ */ new Set(["Reputation"]);
+var APPEARANCE_TIERS = {
+  unattractive: -1,
+  attractive: 1,
+  handsome: 2,
+  beautiful: 2,
+  "very handsome": 3,
+  "very beautiful": 3,
+  stunning: 4
+};
+var startsWithTier = (qualifier, tier) => qualifier === tier || [" ", ",", ";"].some((stop) => qualifier.startsWith(`${tier}${stop}`));
+function appearanceFigure(traitName, level) {
+  const qualifier = /\(([^)]*)\)/.exec(String(traitName ?? ""))?.[1]?.trim().toLowerCase();
+  if (qualifier) {
+    const key = Object.keys(APPEARANCE_TIERS).find((tier2) => startsWithTier(qualifier, tier2));
+    return key ? APPEARANCE_TIERS[key] : null;
+  }
+  const tier = Number(level);
+  return Number.isInteger(tier) && tier >= 1 && tier <= REACTION_CAP ? tier : null;
+}
 var PRICED_PER_LEVEL = /* @__PURE__ */ new Set(["Charisma", "Status"]);
 var baseTraitName = (name) => String(name ?? "").split("(")[0].replace(/\s*[+-]\d+\s*$/, "").trim();
 var SCOPABLE_TRAITS = /* @__PURE__ */ new Set(["Status"]);
@@ -39478,7 +40241,7 @@ function reactionSourcesFor(advantages16, disadvantages16) {
     if (!sense) continue;
     if (base === "Status") explicitStatus = true;
     const traitLevel = Number(row2?.level);
-    const figure = FIGURE_IS_STATED.has(base) ? statedReactionFigure(row2?.name) : PRICED_PER_LEVEL.has(base) && Number.isFinite(traitLevel) && traitLevel > 0 ? clampToCap(traitLevel) : reactionFromCost(Number(row2?.points ?? 0));
+    const figure = FIGURE_IS_STATED.has(base) ? statedReactionFigure(row2?.name) : base === "Appearance" ? appearanceFigure(row2?.name, row2?.level) : PRICED_PER_LEVEL.has(base) && Number.isFinite(traitLevel) && traitLevel > 0 ? clampToCap(traitLevel) : reactionFromCost(Number(row2?.points ?? 0));
     if (figure !== null && figure !== 0) {
       sources.push({ trait: String(row2?.name ?? base), figure, sense, sphere: scopeOf(row2?.name, base) });
     }
@@ -39505,6 +40268,10 @@ function unresolvedReactionRows(advantages16, disadvantages16) {
     const base = baseTraitName(name);
     if (FIGURE_IS_STATED.has(base) && statedReactionFigure(name) === null) {
       out.push({ trait: name, why: "Reputation states no figure, and its cost cannot supply one" });
+      continue;
+    }
+    if (base === "Appearance" && appearanceFigure(name, row2?.level) === null) {
+      out.push({ trait: name, why: "Appearance names no tier the book prints, and its cost is not on the rate" });
       continue;
     }
     if (base === "Wealth" && wealthStatusLevel(name, row2?.level) === null) {
@@ -39602,7 +40369,7 @@ function applyCrashPhase(args) {
   };
 }
 
-// ../Shadowbase-FoundryVTT-System/tools/stubs/react-hook-form.js
+// ../../Claude Code/ShadowBase/Shadowbase-FoundryVTT-System/tools/stubs/react-hook-form.js
 var never2 = (name) => () => {
   throw new Error(`react-hook-form.${name} called inside the ShadowBase engine bundle`);
 };
@@ -44242,212 +45009,6 @@ var shieldActiveDR = (item) => {
   return shieldProfileForItem(item)?.dr ?? 0;
 };
 
-// src/lib/species-swap.ts
-var species_swap_exports = {};
-__export(species_swap_exports, {
-  SPECIES_ALIASES: () => SPECIES_ALIASES,
-  SPECIES_NAMES: () => SPECIES_NAMES,
-  SPECIES_PACKAGES: () => SPECIES_PACKAGES,
-  isKnownSpecies: () => isKnownSpecies,
-  matchedAlias: () => matchedAlias,
-  speciesForAlias: () => speciesForAlias,
-  speciesMatches: () => speciesMatches,
-  speciesPackageFor: () => speciesPackageFor,
-  swapSpecies: () => swapSpecies
-});
-
-// src/lib/template-categories.ts
-var template_categories_exports = {};
-__export(template_categories_exports, {
-  ARCHETYPE_KEYS: () => ARCHETYPE_KEYS,
-  PREMADE_CHARACTER_KEYS: () => PREMADE_CHARACTER_KEYS,
-  TEMPLATE_CATEGORY_ORDER: () => TEMPLATE_CATEGORY_ORDER,
-  groupTemplates: () => groupTemplates,
-  templateCategory: () => templateCategory
-});
-var TEMPLATE_CATEGORY_ORDER = [
-  "Blank",
-  "Example Player Characters",
-  "Character Archetypes",
-  "Species",
-  "Droids"
-];
-var PREMADE_CHARACTER_KEYS = /* @__PURE__ */ new Set([
-  "kaelenRarr",
-  "vexKorta",
-  "seraOrdo",
-  "rennVantik",
-  "rokarr",
-  "vashtu",
-  "vahnanCshar"
-]);
-var ARCHETYPE_KEYS = /* @__PURE__ */ new Set([
-  "jediPadawan",
-  "jediGuardian",
-  "jediSentinel",
-  "jediConsular",
-  "jediMaster",
-  "sithMarauder",
-  "sithAssassin",
-  "sithLord",
-  "darkJediAspirant",
-  "darkJedi",
-  "darkJediMaster",
-  "republicSoldier",
-  "sithTrooper",
-  "hackerSlicer",
-  "pilot",
-  "republicRefugee",
-  "scoundrel",
-  "bountyHunter",
-  "mandalorian"
-]);
-function templateCategory(key, template) {
-  if (key === "blank") return "Blank";
-  if (template?.data?.isDroid) return "Droids";
-  if (PREMADE_CHARACTER_KEYS.has(key)) return "Example Player Characters";
-  if (ARCHETYPE_KEYS.has(key)) return "Character Archetypes";
-  return "Species";
-}
-function groupTemplates(templates) {
-  const buckets = /* @__PURE__ */ new Map();
-  for (const [key, template] of Object.entries(templates)) {
-    const category = templateCategory(key, template);
-    if (!buckets.has(category)) buckets.set(category, []);
-    buckets.get(category).push([key, template]);
-  }
-  return TEMPLATE_CATEGORY_ORDER.filter((c) => buckets.get(c)?.length).map((category) => ({
-    category,
-    entries: buckets.get(category).sort((a, b) => a[1].name.localeCompare(b[1].name))
-  }));
-}
-
-// src/lib/species-swap.ts
-var str = (v, fallback = "") => typeof v === "string" ? v : fallback;
-var num2 = (v, fallback = 0) => Number.isFinite(Number(v)) ? Number(v) : fallback;
-var SPECIES_PACKAGES = new Map(
-  Object.entries(characterTemplateStore).filter(([key, template]) => templateCategory(key, template) === "Species").map(([, template]) => {
-    const d = template.data ?? {};
-    const name = str(d.species, template.name);
-    const mark = (rows) => (rows ?? []).map((row2) => ({ ...row2, fromSpecies: name }));
-    return [name, {
-      name,
-      advantages: mark(d.advantages),
-      disadvantages: mark(d.disadvantages),
-      quirks: mark(d.quirks),
-      sizeModifier: num2(d.sizeModifier, 0),
-      height: str(d.height),
-      weight: str(d.weight),
-      languages: str(d.languages),
-      languagesBaseline: num2(d.languagesBaseline, 0),
-      culturalFamiliarities: str(d.culturalFamiliarities),
-      culturalFamiliaritiesBaseline: num2(d.culturalFamiliaritiesBaseline, 0),
-      literacy: str(d.literacy),
-      literacyBaseline: num2(d.literacyBaseline, 0)
-    }];
-  })
-);
-var SPECIES_NAMES = [...SPECIES_PACKAGES.keys()].sort((a, b) => a.localeCompare(b));
-var SPECIES_ALIASES = {
-  "Tusken Raider": ["Sand Person", "Sand People", "Tusken", "Tuskens"]
-};
-var fold2 = (s) => str(s).toLowerCase().replace(/[‘’ʼ]/g, "'").replace(/\s+/g, " ").trim();
-function speciesMatches(name, query2) {
-  const q = fold2(query2);
-  if (!q) return true;
-  const candidates = [name, ...SPECIES_ALIASES[name] ?? []].map(fold2);
-  return candidates.some((c) => c.startsWith(q) || c.split(" ").some((word) => word.startsWith(q)));
-}
-function matchedAlias(name, query2) {
-  const q = fold2(query2);
-  if (!q || fold2(name).startsWith(q)) return null;
-  return (SPECIES_ALIASES[name] ?? []).find(
-    (a) => fold2(a).startsWith(q) || fold2(a).split(" ").some((w) => w.startsWith(q))
-  ) ?? null;
-}
-function speciesForAlias(text) {
-  const q = fold2(text);
-  if (!q) return null;
-  for (const [name, aliases] of Object.entries(SPECIES_ALIASES)) {
-    if (aliases.some((a) => fold2(a) === q)) return name;
-  }
-  return null;
-}
-function speciesPackageFor(name) {
-  const raw = str(name).trim();
-  if (!raw) return null;
-  const exact = SPECIES_PACKAGES.get(raw);
-  if (exact) return exact;
-  const wanted = fold2(raw);
-  for (const [key, pkg] of SPECIES_PACKAGES) {
-    if (fold2(key) === wanted) return pkg;
-  }
-  return null;
-}
-var isKnownSpecies = (name) => speciesPackageFor(name) !== null;
-var withoutSpecies = (rows, species6) => (rows ?? []).filter((row2) => str(row2?.fromSpecies).trim().toLowerCase() !== species6.trim().toLowerCase());
-function swapEntryString(current2, outgoingStr, incomingStr) {
-  const split2 = (s) => str(s).split(";").map((x) => x.trim()).filter(Boolean);
-  const incoming = split2(incomingStr);
-  const fromOldPackage = new Set(split2(outgoingStr).map(fold2));
-  const alreadyIncoming = new Set(incoming.map(fold2));
-  const kept = split2(current2).filter((e) => !fromOldPackage.has(fold2(e)) && !alreadyIncoming.has(fold2(e)));
-  return [...incoming, ...kept].join("; ");
-}
-function swapSpecies(values, next) {
-  const v = values ?? {};
-  const previous = str(v.species).trim();
-  const target = str(next).trim();
-  const incoming = speciesPackageFor(target);
-  const outgoing = SPECIES_PACKAGES.get(previous) ?? speciesPackageFor(previous);
-  const strippedAdv = withoutSpecies(v.advantages, previous);
-  const strippedDis = withoutSpecies(v.disadvantages, previous);
-  const strippedQrk = withoutSpecies(v.quirks, previous);
-  const removed = [
-    ...v.advantages ?? [],
-    ...v.disadvantages ?? [],
-    ...v.quirks ?? []
-  ].filter((row2) => str(row2?.fromSpecies).trim().toLowerCase() === previous.toLowerCase()).map((row2) => str(row2?.name)).filter(Boolean);
-  const added = incoming ? [...incoming.advantages, ...incoming.disadvantages, ...incoming.quirks].map((row2) => str(row2?.name)).filter(Boolean) : [];
-  const swap = {
-    species: target,
-    advantages: [...strippedAdv, ...incoming?.advantages ?? []],
-    disadvantages: [...strippedDis, ...incoming?.disadvantages ?? []],
-    quirks: [...strippedQrk, ...incoming?.quirks ?? []],
-    /*
-      A written-in species has no Size Modifier of its own, so the character
-      returns to 0 rather than keeping the last species'. Ch2 treats SM 0 as
-      the human-scale default.
-    */
-    sizeModifier: incoming?.sizeModifier ?? 0,
-    /*
-      The species AVERAGE height and weight (Ch18's Height/Weight lines,
-      2026-08-26) travel with the package - height is the datum the SM
-      above derives from, so writing one without the other would leave the
-      sheet stating a pair the formula contradicts. A write-in clears both
-      for the same reason the SM returns to 0.
-    */
-    height: incoming?.height ?? "",
-    weight: incoming?.weight ?? "",
-    /*
-      Through swapEntryString, so a bought language, familiarity or
-      literacy entry survives the swap - only the outgoing PACKAGE's own
-      entries come off. The baselines are the incoming package's: what it
-      grants is what the baseline absorbs, and a kept bought entry keeps
-      billing above it.
-    */
-    languages: swapEntryString(v.languages, outgoing?.languages, incoming?.languages),
-    languagesBaseline: incoming?.languagesBaseline ?? 0,
-    culturalFamiliarities: swapEntryString(v.culturalFamiliarities, outgoing?.culturalFamiliarities, incoming?.culturalFamiliarities),
-    culturalFamiliaritiesBaseline: incoming?.culturalFamiliaritiesBaseline ?? 0,
-    literacy: swapEntryString(v.literacy, outgoing?.literacy, incoming?.literacy),
-    literacyBaseline: incoming?.literacyBaseline ?? 0,
-    removed,
-    added
-  };
-  return swap;
-}
-
 // src/lib/missing-skills.ts
 var missing_skills_exports = {};
 __export(missing_skills_exports, {
@@ -45809,7 +46370,7 @@ __export(anatomy_conformance_exports, {
   liveLocationIds: () => liveLocationIds,
   partitionByPresence: () => partitionByPresence
 });
-var nameOf = (item) => String(item?.customName || item?.name || "Item");
+var nameOf3 = (item) => String(item?.customName || item?.name || "Item");
 function partitionByPresence(changes, values) {
   const present = /* @__PURE__ */ new Set();
   for (const list of [values?.armor, values?.customBlasters, values?.customMeleeWeapons, values?.lightsabers, values?.customExplosives]) {
@@ -45842,7 +46403,7 @@ function conformArmor(armor10, hitLocations2, isDroid) {
       item.equipped = false;
       changes.push({
         itemId: String(item.id),
-        itemName: nameOf(item),
+        itemName: nameOf3(item),
         reason: "droid-conversion",
         detail: "a droid chassis cannot wear biological apparel"
       });
@@ -45852,7 +46413,7 @@ function conformArmor(armor10, hitLocations2, isDroid) {
       item.equipped = false;
       changes.push({
         itemId: String(item.id),
-        itemName: nameOf(item),
+        itemName: nameOf3(item),
         reason: "location-gone",
         detail: "the body part it was worn on is gone"
       });
@@ -45876,7 +46437,7 @@ function conformWeapons(values, hitLocations2) {
       w.equipped = false;
       changes.push({
         itemId: String(w.id),
-        itemName: nameOf(w),
+        itemName: nameOf3(w),
         reason: "location-gone",
         detail: "the limb holding it is gone"
       });
@@ -45890,7 +46451,7 @@ function conformWeapons(values, hitLocations2) {
       row2.equipped = false;
       changes.push({
         itemId: String(row2.id),
-        itemName: nameOf(row2),
+        itemName: nameOf3(row2),
         reason: "location-gone",
         detail: "nothing is left to hold it"
       });
@@ -47448,7 +48009,7 @@ __export(handbook_search_exports, {
   searchChapters: () => searchChapters
 });
 
-// ../Shadowbase-FoundryVTT-System/tools/shims/handbook-loader.ts
+// ../../Claude Code/ShadowBase/Shadowbase-FoundryVTT-System/tools/shims/handbook-loader.ts
 var handbook_loader_exports = {};
 __export(handbook_loader_exports, {
   clearHandbookCache: () => clearHandbookCache,
@@ -47846,8 +48407,10 @@ var DERIVED_FIELDS = /* @__PURE__ */ new Set([
   // mirror of forceAlignment, which is tracked itself
   "darkSidePoints",
   // mirror of forceAlignment, which is tracked itself
-  "cpBaseline"
+  "cpBaseline",
   // internal point-spend bookkeeping
+  "speciesPackageRevision"
+  // migration bookkeeping; the rows it moved are tracked themselves
 ]);
 var LOAD_REWRITTEN_FIELDS = /* @__PURE__ */ new Set([
   "lightSidePoints",
@@ -47857,7 +48420,8 @@ var LOAD_REWRITTEN_FIELDS = /* @__PURE__ */ new Set([
   "basicSpeed",
   "basicMove",
   "characterPortrait",
-  "cpBaseline"
+  "cpBaseline",
+  "speciesPackageRevision"
 ]);
 function onlyLoadRewrites(dirtyFieldNames) {
   return dirtyFieldNames.every((name) => LOAD_REWRITTEN_FIELDS.has(name));
@@ -48320,6 +48884,7 @@ export {
   specialty_required_exports as specialtyRequired,
   species_languages_exports as speciesLanguages,
   species_name_migration_exports as speciesNameMigration,
+  species_package_revision_exports as speciesPackageRevision,
   species_swap_exports as speciesSwap,
   starship_chassis_data_exports as starshipChassisData,
   starship_derivation_exports as starshipDerivation,

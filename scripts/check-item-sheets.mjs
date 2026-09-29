@@ -168,7 +168,7 @@ const subjects = [];
 for (const key of ['rokarr', 'kaelenRarr', 'vexKorta']) {
   const t = engine.characterTemplateStore[key];
   let sheet = t.data ?? t;
-  sheet = engine.applyLoadMigrations({ ...engine.blank(), ...structuredClone(sheet) }, engine.blankSheetData).data;
+  sheet = engine.loadIncomingSheet(structuredClone(sheet)).data;
   subjects.push({ name: `template:${key}`, sheet, actorName: t.name });
 }
 for (const c of corpus) if (/cyberneticsOwnerFixture|droidVesselOwnerFixture/.test(c.name)) subjects.push({ name: c.name, sheet: c.sheet, actorName: c.name });

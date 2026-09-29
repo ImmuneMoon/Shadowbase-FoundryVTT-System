@@ -132,10 +132,25 @@ export function hasExport(name) {
 }
 
 /**
- * The bundle plus the four helpers above, as one object. `engine.getCalculatedStats(sheet)`
+ * The website's load path over an incoming sheet (a parsed file, a template, an actor's own sheet):
+ * load-sheet.ts `applyLoadMigrations(data, blankSheetData)`, exactly as use-character-form.ts calls it.
+ * The incoming sheet goes in AS IS. applyLoadMigrations reads `speciesPackageRevision` off it BEFORE it
+ * spreads the defaults under it; the blank sheet is born at the current revision, so spreading the blank
+ * under the sheet here first (as both callers did until 2026-09-28) made every old save read as up to
+ * date and skipped its species-package update. The defaults are a fresh-id blank (see blank()) so two
+ * loaded actors never share a row id.
+ * @param {object} incoming
+ * @returns {{ data: object, notices: object[], loadedStats: object }}
+ */
+export function loadIncomingSheet(incoming) {
+  return requireExport('applyLoadMigrations')(incoming, blank());
+}
+
+/**
+ * The bundle plus the helpers above, as one object. `engine.getCalculatedStats(sheet)`
  * reads exactly like the website's `getCalculatedStats(values)`.
  */
-export const engine = Object.freeze(Object.assign(Object.create(null), bundle, { rowId, blank, catalog, requireExport, hasExport, U01_EXPORTS }));
+export const engine = Object.freeze(Object.assign(Object.create(null), bundle, { rowId, blank, catalog, requireExport, hasExport, loadIncomingSheet, U01_EXPORTS }));
 
 export default engine;
 export * from '../engine/shadowbase-engine.mjs';

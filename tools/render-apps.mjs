@@ -96,7 +96,7 @@ export function buildFromKey(env, key) {
     const t = engine.characterTemplateStore[key];
     sheet = unwrap(t);
     name = t.name ?? sheet.characterName ?? key;
-    sheet = engine.applyLoadMigrations({ ...engine.blank(), ...structuredClone(sheet) }, engine.blankSheetData).data;
+    sheet = engine.loadIncomingSheet(structuredClone(sheet)).data;
   } else {
     const entry = loadCorpus(engine, { templates: false, coverage: false }).find((c) => c.file === key || c.file === `${key}.json` || c.name === key);
     if (!entry) throw new Error(`render-apps: "${key}" is neither a characterTemplateStore key nor a fixtures/*.json file`);

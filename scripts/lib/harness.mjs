@@ -14,10 +14,11 @@ import { createRequire } from 'node:module';
 import { dirname, join, resolve, basename } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { WEB } from '../../tools/website-path.mjs';
 
 export const HERE = dirname(fileURLToPath(import.meta.url));
 export const ROOT = resolve(HERE, '..', '..');
-export const WEB = resolve(process.env.SHADOWBASE_WEBSITE ?? join(ROOT, '..', 'ShadowBase Website'));
+export { WEB };
 
 /** Create the assertion pair for one check. `ok` counts every call; `report` exits. */
 export function makeReporter(name) {

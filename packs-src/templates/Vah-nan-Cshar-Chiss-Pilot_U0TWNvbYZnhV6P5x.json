@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 126,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -371,7 +372,8 @@
             "jumpDistance": 0,
             "frightImmune": false,
             "moveMultiplier": 1
-          }
+          },
+          "fromSpecies": "Chiss"
         },
         "source": "advantages"
       },
@@ -392,7 +394,8 @@
           "description": "See heat signatures. Natural biological thermal sight.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Chiss"
         },
         "source": "advantages"
       },
@@ -440,7 +443,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Chiss"
         },
         "source": "advantages"
       },
@@ -503,7 +507,8 @@
           "description": "Never strike first. You are bound by a strict military and cultural doctrine to only engage in hostilities defensively or after a clear provocation.",
           "level": null,
           "category": "Cultural / Background",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Chiss"
         },
         "source": "disadvantages"
       },
@@ -524,7 +529,8 @@
           "description": "Involved with Chiss Ascendancy interests.",
           "level": null,
           "category": "Social",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Chiss"
         },
         "source": "disadvantages"
       },

@@ -81,7 +81,7 @@
         "level": 1
       },
       "text": {
-        "content": "<p>During the campaign, if a character is replacing a cybernetic they already possess—such as swapping a heavily damaged Combat-Grade arm for a new one of the exact same type—they do not need to spend Character Points again on the Mandatory Traits.</p>\n<ul><li><strong>Credit (CR) Cost Only:</strong> The character only needs to pay the in-game economic cost. This means paying the CR value for the replacement hardware and the surgeon’s fee.</li><li><strong>Medical Recovery:</strong> The character must undergo the standard downtime, deal with the after-effects of the surgery, and risk the potential complications of the procedure (e.g., tissue rejection or temporary stat penalties on a failed Surgery roll).</li></ul>",
+        "content": "<p>During the campaign, if a character is replacing a cybernetic they already possess—such as swapping a heavily damaged Combat-Grade arm for a new one of the exact same type—they do not need to spend Character Points again on the Mandatory Traits.</p>\n<ul><li><strong>Credit (CR) Cost Only:</strong> The character only needs to pay the in-game economic cost. This means paying the CR value for the replacement hardware and the surgeon’s fee.</li><li><strong>Medical Recovery:</strong> The character must undergo the standard downtime (defined under Time, the Calendar, and Downtime, @UUID[Compendium.shadowbase.handbook.JournalEntry.SQjNPFSBwLhhCFQ2]{Chapter 20}), deal with the after-effects of the surgery, and risk the potential complications of the procedure (e.g., tissue rejection or temporary stat penalties on a failed Surgery roll).</li></ul>",
         "format": 1,
         "markdown": ""
       },
@@ -697,7 +697,7 @@
       "key": "ch14-implants-cybernetics",
       "handbook": {
         "chapterId": "ch14-implants-cybernetics",
-        "generatedAt": "2026-09-19T09:02:30.342Z",
+        "generatedAt": "2026-09-28T21:12:02.351Z",
         "headings": 77,
         "tables": 8
       }

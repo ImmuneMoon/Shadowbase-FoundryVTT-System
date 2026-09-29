@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -365,7 +366,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Tusken Raider"
         },
         "source": "advantages"
       },
@@ -413,7 +415,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Tusken Raider"
         },
         "source": "advantages"
       },
@@ -434,7 +437,8 @@
           "level": 2,
           "description": "Level 2",
           "category": "Physical",
-          "baselinePoints": 2
+          "baselinePoints": 2,
+          "fromSpecies": "Tusken Raider"
         },
         "source": "advantages"
       },
@@ -444,18 +448,19 @@
     {
       "_id": "gPrFKJDF0yM2HPnp",
       "_key": "!actors.items!QDmGa3lvZ4oyCpGI.gPrFKJDF0yM2HPnp",
-      "name": "High Pain Threshold",
+      "name": "Temperature Tolerance",
       "type": "advantage",
       "img": "icons/svg/upgrade.svg",
       "sort": 400000,
       "system": {
         "row": {
-          "name": "High Pain Threshold",
-          "points": 10,
-          "description": "You are unusually resistant to the effects of pain, suffering fewer penalties from injury. Allows you to endure torture or continue fighting effectively even when severely wounded, a vital trait for a survivor in a brutal war.",
-          "level": null,
-          "category": "Mental",
-          "baselinePoints": 10
+          "name": "Temperature Tolerance",
+          "points": 2,
+          "level": 2,
+          "description": "Level 2",
+          "category": "Physical",
+          "baselinePoints": 2,
+          "fromSpecies": "Tusken Raider"
         },
         "source": "advantages"
       },
@@ -465,6 +470,28 @@
     {
       "_id": "oy6RpCVjHllZgLlT",
       "_key": "!actors.items!QDmGa3lvZ4oyCpGI.oy6RpCVjHllZgLlT",
+      "name": "High Pain Threshold",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "High Pain Threshold",
+          "points": 10,
+          "description": "You are unusually resistant to the effects of pain, suffering fewer penalties from injury. Allows you to endure torture or continue fighting effectively even when severely wounded, a vital trait for a survivor in a brutal war.",
+          "level": null,
+          "category": "Mental",
+          "baselinePoints": 10,
+          "fromSpecies": "Tusken Raider"
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "H9Cq2ma8QSKsNK9g",
+      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.H9Cq2ma8QSKsNK9g",
       "name": "Social Stigma (Barbarian)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -476,7 +503,8 @@
           "description": "Primitive warriors. You are viewed as an uncultured brawler by the wider galaxy.",
           "level": null,
           "category": "Social",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Tusken Raider"
         },
         "source": "disadvantages"
       },
@@ -484,8 +512,8 @@
       "flags": {}
     },
     {
-      "_id": "H9Cq2ma8QSKsNK9g",
-      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.H9Cq2ma8QSKsNK9g",
+      "_id": "B3kfyaoBB9WOCHwz",
+      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.B3kfyaoBB9WOCHwz",
       "name": "Bad Temper",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -497,7 +525,8 @@
           "description": "You are prone to anger and easily provoked, often leading to rash decisions or confrontations.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Tusken Raider"
         },
         "source": "disadvantages"
       },
@@ -505,8 +534,8 @@
       "flags": {}
     },
     {
-      "_id": "B3kfyaoBB9WOCHwz",
-      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.B3kfyaoBB9WOCHwz",
+      "_id": "wx3TUhsTYUg9lS6w",
+      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.wx3TUhsTYUg9lS6w",
       "name": "Intolerance",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -518,7 +547,8 @@
           "description": "Xenophobic - hostile to all off-worlders.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Tusken Raider"
         },
         "source": "disadvantages"
       },
@@ -526,8 +556,8 @@
       "flags": {}
     },
     {
-      "_id": "wx3TUhsTYUg9lS6w",
-      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.wx3TUhsTYUg9lS6w",
+      "_id": "oAadQirTWwMwRJ6Y",
+      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.oAadQirTWwMwRJ6Y",
       "name": "Vow",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -539,7 +569,8 @@
           "description": "Never remove tribal gear in front of outsiders.",
           "level": null,
           "category": "Social",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Tusken Raider"
         },
         "source": "disadvantages"
       },
@@ -547,8 +578,8 @@
       "flags": {}
     },
     {
-      "_id": "oAadQirTWwMwRJ6Y",
-      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.oAadQirTWwMwRJ6Y",
+      "_id": "CUWGigcplwvOrUBH",
+      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.CUWGigcplwvOrUBH",
       "name": "Credit Chip",
       "type": "equipment",
       "img": "icons/svg/item-bag.svg",
@@ -571,8 +602,8 @@
       "flags": {}
     },
     {
-      "_id": "CUWGigcplwvOrUBH",
-      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.CUWGigcplwvOrUBH",
+      "_id": "AEwxsZrPaC47EV7m",
+      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.AEwxsZrPaC47EV7m",
       "name": "Tusken Cycler Rifle",
       "type": "blaster",
       "img": "icons/svg/target.svg",
@@ -709,8 +740,8 @@
       "flags": {}
     },
     {
-      "_id": "AEwxsZrPaC47EV7m",
-      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.AEwxsZrPaC47EV7m",
+      "_id": "6IKMoq85EAvNPjMg",
+      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.6IKMoq85EAvNPjMg",
       "name": "Gaderffii (Gaffi Stick)",
       "type": "meleeWeapon",
       "img": "icons/svg/sword.svg",
@@ -761,8 +792,8 @@
       "flags": {}
     },
     {
-      "_id": "6IKMoq85EAvNPjMg",
-      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.6IKMoq85EAvNPjMg",
+      "_id": "5WVboKrivfCg9vYp",
+      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.5WVboKrivfCg9vYp",
       "name": "Rifle Stock",
       "type": "weaponPart",
       "img": "icons/svg/clockwork.svg",
@@ -789,8 +820,8 @@
       "flags": {}
     },
     {
-      "_id": "5WVboKrivfCg9vYp",
-      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.5WVboKrivfCg9vYp",
+      "_id": "De7lm7cp9wyUArhC",
+      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.De7lm7cp9wyUArhC",
       "name": "Cycler Mechanical Action",
       "type": "weaponPart",
       "img": "icons/svg/clockwork.svg",
@@ -817,8 +848,8 @@
       "flags": {}
     },
     {
-      "_id": "De7lm7cp9wyUArhC",
-      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.De7lm7cp9wyUArhC",
+      "_id": "53zGVhyRBBfHijvr",
+      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.53zGVhyRBBfHijvr",
       "name": "Rifled Barrel",
       "type": "weaponPart",
       "img": "icons/svg/clockwork.svg",
@@ -845,8 +876,8 @@
       "flags": {}
     },
     {
-      "_id": "53zGVhyRBBfHijvr",
-      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.53zGVhyRBBfHijvr",
+      "_id": "UNU9hvARnhYIzd58",
+      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.UNU9hvARnhYIzd58",
       "name": "Iron Sights",
       "type": "weaponPart",
       "img": "icons/svg/clockwork.svg",
@@ -872,8 +903,8 @@
       "flags": {}
     },
     {
-      "_id": "UNU9hvARnhYIzd58",
-      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.UNU9hvARnhYIzd58",
+      "_id": "vytqWN2owN11UQbw",
+      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.vytqWN2owN11UQbw",
       "name": "Long Shaft",
       "type": "weaponPart",
       "img": "icons/svg/clockwork.svg",
@@ -900,8 +931,8 @@
       "flags": {}
     },
     {
-      "_id": "vytqWN2owN11UQbw",
-      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.vytqWN2owN11UQbw",
+      "_id": "BkH7owfCtTK7lKQC",
+      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.BkH7owfCtTK7lKQC",
       "name": "Heavy Cleaver",
       "type": "weaponPart",
       "img": "icons/svg/clockwork.svg",
@@ -928,8 +959,8 @@
       "flags": {}
     },
     {
-      "_id": "BkH7owfCtTK7lKQC",
-      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.BkH7owfCtTK7lKQC",
+      "_id": "kXHmjtPJhJ3cwAUy",
+      "_key": "!actors.items!QDmGa3lvZ4oyCpGI.kXHmjtPJhJ3cwAUy",
       "name": "Thrusting Point",
       "type": "weaponPart",
       "img": "icons/svg/clockwork.svg",

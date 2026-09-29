@@ -5,7 +5,7 @@
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "folder": "mTXYblXUqFOk3xNT",
-  "sort": 5900000,
+  "sort": 6100000,
   "system": {
     "row": {
       "name": "Fex-M3",
@@ -16,7 +16,7 @@
       "subCategory": "Chemical",
       "weight": 1,
       "quantity": 1,
-      "description": "A deadly, fast-acting nerve gas favored by the Imperial underworld and elite bounty hunters. Ideal for aerosol payloads in gas grenades or proximity traps. Usually dispensed into a Chemical Storage Vessel. If the carrying container is breached, or it is dispensed without one: Deals 1d toxic damage to all targets in the immediate vicinity. If not deployed via a tailored explosive or aerosol device, the gas cloud expands unevenly, increasing its radius by 5 feet per second. Exposure: Targets must make an HT-3 (or Poison Resistance-3) roll. Failure: The victim suffers 1d-2 (minimum 1) toxic damage per second for 5 minutes. This effect can only be halted by an Antidote Kit.",
+      "description": "A deadly, fast-acting nerve gas favored by the criminal underworld and elite bounty hunters. Ideal for aerosol payloads in gas grenades or proximity traps. Usually dispensed into a Chemical Storage Vessel. If the carrying container is breached, or it is dispensed without one: Deals 1d toxic damage to all targets in the immediate vicinity. If not deployed via a tailored explosive or aerosol device, the gas cloud expands unevenly, increasing its radius by 5 feet per second. Exposure: Targets must make an HT-3 (or Poison Resistance-3) roll. Failure: The victim suffers 1d-2 (minimum 1) toxic damage per second for 5 minutes. This effect can only be halted by an Antidote Kit.",
       "id": "4405d4b3-0a8e-4241-8bcb-1d9ddb5f0b91",
       "condition": "Fine",
       "isInstalled": false,

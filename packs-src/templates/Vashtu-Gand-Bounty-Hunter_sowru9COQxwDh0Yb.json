@@ -39,6 +39,7 @@
     "forceAlignment": -15,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 113,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -365,7 +366,8 @@
             "jumpDistance": 0,
             "frightImmune": false,
             "moveMultiplier": 1
-          }
+          },
+          "fromSpecies": "Gand"
         },
         "source": "advantages"
       },
@@ -413,7 +415,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Gand"
         },
         "source": "advantages"
       },
@@ -434,7 +437,8 @@
           "level": 2,
           "description": "DR 2 (Exoskeleton).",
           "category": "Cybernetic",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Gand"
         },
         "source": "advantages"
       },
@@ -455,7 +459,8 @@
           "level": 2,
           "description": "Two hours less sleep per day.",
           "category": "Physical",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Gand"
         },
         "source": "advantages"
       },
@@ -476,7 +481,8 @@
           "description": "See heat signatures. Natural biological thermal sight.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Gand"
         },
         "source": "advantages"
       },
@@ -545,7 +551,8 @@
           "description": "Ammonia atmosphere; breather mask required off-world.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Gand"
         },
         "source": "disadvantages"
       },
@@ -566,7 +573,8 @@
           "description": "Refers to self in third person until earning a name.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Gand"
         },
         "source": "disadvantages"
       },

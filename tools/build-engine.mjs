@@ -19,13 +19,13 @@
 
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
-import { dirname, join, resolve } from 'node:path';
+import { basename, dirname, join, relative, resolve, sep } from 'node:path';
 import { existsSync, mkdirSync, statSync, writeFileSync, readFileSync } from 'node:fs';
 import { execSync } from 'node:child_process';
+import { WEB } from './website-path.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(HERE, '..');
-const WEB = resolve(process.env.SHADOWBASE_WEBSITE ?? join(ROOT, '..', 'ShadowBase Website'));
 const OUT_DIR = resolve(process.env.ENGINE_OUT_DIR ?? join(ROOT, 'engine'));
 const OUT = join(OUT_DIR, 'shadowbase-engine.mjs');
 const ENTRY = resolve(process.env.ENGINE_ENTRY ?? join(HERE, 'engine-entry.ts'));
@@ -112,11 +112,15 @@ let websiteCommit = null;
 try { websiteCommit = execSync('git rev-parse --short HEAD', { cwd: WEB, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim(); } catch { /* not a repo or no git */ }
 let websiteDirty = null;
 try { websiteDirty = execSync('git status --porcelain', { cwd: WEB, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim().length > 0; } catch { /* ignore */ }
+// BUILD-INFO is tracked, so it names the website by its repository (the remote URL, which with websiteCommit
+// pins the source exactly) and the entry by its path in THIS repository - never a machine's absolute paths.
+let websiteRepo = null;
+try { websiteRepo = execSync('git remote get-url origin', { cwd: WEB, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim() || null; } catch { /* not a repo */ }
 
 mkdirSync(OUT_DIR, { recursive: true });
 const info = {
   generatedAt: new Date().toISOString(),
-  website: WEB,
+  website: websiteRepo ?? basename(WEB),
   websiteCommit,
   websiteDirty,
   esbuild: require('esbuild/package.json').version,
@@ -126,7 +130,7 @@ const info = {
   websiteSourceFiles: inputs.filter((p) => p.startsWith('src/')).length,
   packages: [...packages].sort(),
   warnings: result.warnings.length,
-  entry: ENTRY,
+  entry: relative(ROOT, ENTRY).split(sep).join('/'),
   entryExports: (() => {
     try {
       const src = readFileSync(ENTRY, 'utf8');

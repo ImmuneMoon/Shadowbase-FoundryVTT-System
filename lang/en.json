@@ -864,7 +864,7 @@
         "ReactionWhat": "Modifies this character's rolls to persuade, impress, charm, intimidate, bargain with or command anyone who can perceive the trait (Ch4).",
         "From": "From",
         "Within": "Within",
-        "Perception": "Over a comlink {heard}; in writing {seen} — a modifier applies only where the other party can perceive the trait.",
+        "Perception": "Over a comlink {comlink}; in writing {writing} — a modifier applies only where the other party can perceive the trait.",
         "NotCounted": "Not counted: {list}.",
         "NotApplied": "Not applied to any roll on this sheet — the figures above are alternatives, and the GM adds whichever one fits the scene."
       },
@@ -2291,6 +2291,13 @@
         "Done": "Dossiers imported: {imported} written, {skipped} skipped, {invalid} invalid, {failed} failed.",
         "HiddenNote": "New actors are hidden from players (ownership None) until you share them."
       }
+    },
+    "WorldUpdate": {
+      "Title": "World update to species-package revision {revision}",
+      "Summary": "{count} actor(s) in this world were brought to what the website gives a saved character on load (revision {revision}).",
+      "MarkedOnly": "{count} of them only had their racial rows marked as their species' own (no trait added, removed or repriced).",
+      "Failed": "Could not update: {names}. They stay below the revision and will be tried again when the world next loads.",
+      "Notify": "ShadowBase: {count} actor(s) updated to species-package revision {revision}. The details are in chat (GM only)."
     }
   }
 }

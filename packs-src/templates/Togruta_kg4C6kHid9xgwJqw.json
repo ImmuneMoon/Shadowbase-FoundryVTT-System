@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Togruta"
         },
         "source": "advantages"
       },
@@ -380,7 +382,8 @@
           "description": "You have a 360-degree field of vision, making it impossible to surprise you from behind. This is common for species with eyestalks or unusual eye placement.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 15
+          "baselinePoints": 15,
+          "fromSpecies": "Togruta"
         },
         "source": "advantages"
       },
@@ -401,7 +404,8 @@
           "description": "Ultrasonic awareness. Gives you an intuitive grasp of your surroundings in three dimensions.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 10
+          "baselinePoints": 10,
+          "fromSpecies": "Togruta"
         },
         "source": "advantages"
       },
@@ -422,7 +426,8 @@
           "description": "Bold colors and patterns that make hiding difficult.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": -1
+          "baselinePoints": -1,
+          "fromSpecies": "Togruta"
         },
         "source": "disadvantages"
       },
@@ -443,7 +448,8 @@
           "description": "A Twi'lek's lekku are sensitive and can be used to control them. Damage to the lekku is extremely painful, and sufficient injury or manipulation can render them helpless or unconscious. This physical vulnerability can be exploited by captors or torturers.",
           "level": null,
           "category": "Racial",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Togruta"
         },
         "source": "disadvantages"
       },

@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -256,7 +257,7 @@
     "cpTradedForCredits": 0,
     "cpCreditsForm": "digital",
     "currentHitPoints": 10,
-    "currentEndurancePoints": 10,
+    "currentEndurancePoints": 11,
     "currentForcePoints": 11,
     "strength": 10,
     "dexterity": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Zabrak"
         },
         "source": "advantages"
       },
@@ -380,7 +382,8 @@
           "description": "You are unusually resistant to the effects of pain, suffering fewer penalties from injury. Allows you to endure torture or continue fighting effectively even when severely wounded, a vital trait for a survivor in a brutal war.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 10
+          "baselinePoints": 10,
+          "fromSpecies": "Zabrak"
         },
         "source": "advantages"
       },
@@ -401,7 +404,8 @@
           "description": "You are unusually robust and healthy, granting bonuses to Endurance Point (EP) recovery and resistance to illness. Ensures you can endure long campaigns, torture, or the rigors of galactic travel, serving any master or cause.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Zabrak"
         },
         "source": "advantages"
       },
@@ -422,7 +426,8 @@
           "description": "You are immune to mundane surprise and are mentally unshakable when faced with horrific sights. This is the mark of a veteran soldier who has seen the worst of war, or a cold-blooded assassin. (This is listed here as a general option, though it is part of the Zabrak racial template).",
           "level": null,
           "category": "Mental",
-          "baselinePoints": 15
+          "baselinePoints": 15,
+          "fromSpecies": "Zabrak"
         },
         "source": "advantages"
       },
@@ -432,6 +437,53 @@
     {
       "_id": "msefvDB7HLv5PcGK",
       "_key": "!actors.items!gfJbFUiph4RBYdOc.msefvDB7HLv5PcGK",
+      "name": "Hardy (Zabrak)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Hardy (Zabrak)",
+          "points": 0,
+          "description": "Zabraks are known for their resilience and spirit. They gain +1 to HT. Allows them to endure more punishment, whether on the battlefield or in a harsh environment.",
+          "level": null,
+          "category": "Racial",
+          "modifiers": {
+            "health": 1
+          },
+          "baselinePoints": 0,
+          "fromSpecies": "Zabrak"
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "VKob7ubc1HQFVDYr",
+      "_key": "!actors.items!gfJbFUiph4RBYdOc.VKob7ubc1HQFVDYr",
+      "name": "Natural Intimidator (Zabrak)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 600000,
+      "system": {
+        "row": {
+          "name": "Natural Intimidator (Zabrak)",
+          "points": 0,
+          "description": "Their distinctive facial horns and often stern demeanor grant Zabraks a natural advantage in asserting dominance. They gain a +1 bonus to Intimidation (Will/Average) skill rolls. A valuable trait for asserting dominance, demanding compliance, or striking fear into enemies.",
+          "level": null,
+          "category": "Racial",
+          "baselinePoints": 0,
+          "fromSpecies": "Zabrak"
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "3Rknt3prXXrJdcnE",
+      "_key": "!actors.items!gfJbFUiph4RBYdOc.3Rknt3prXXrJdcnE",
       "name": "Stubbornness",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -443,7 +495,8 @@
           "description": "The character is unusually resistant to changing their mind or admitting they are wrong, even in the face of overwhelming evidence. This can lead to missed opportunities or continued pursuit of flawed plans despite clear warning signs.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Zabrak"
         },
         "source": "disadvantages"
       },
@@ -451,8 +504,8 @@
       "flags": {}
     },
     {
-      "_id": "VKob7ubc1HQFVDYr",
-      "_key": "!actors.items!gfJbFUiph4RBYdOc.VKob7ubc1HQFVDYr",
+      "_id": "57T8sCdPNurX3K8u",
+      "_key": "!actors.items!gfJbFUiph4RBYdOc.57T8sCdPNurX3K8u",
       "name": "Unusual Appearance (Horns)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -464,7 +517,8 @@
           "description": "While not necessarily a severe social penalty, Zabrak horns make them instantly recognizable and can sometimes elicit fear or apprehension from species unfamiliar with them. This can sometimes lead to social discomfort or being singled out.",
           "level": null,
           "category": "Racial",
-          "baselinePoints": -1
+          "baselinePoints": -1,
+          "fromSpecies": "Zabrak"
         },
         "source": "disadvantages"
       },
@@ -472,8 +526,8 @@
       "flags": {}
     },
     {
-      "_id": "3Rknt3prXXrJdcnE",
-      "_key": "!actors.items!gfJbFUiph4RBYdOc.3Rknt3prXXrJdcnE",
+      "_id": "vHavI4zQ5gh2PTV6",
+      "_key": "!actors.items!gfJbFUiph4RBYdOc.vHavI4zQ5gh2PTV6",
       "name": "Credit Chip",
       "type": "equipment",
       "img": "icons/svg/item-bag.svg",

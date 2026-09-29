@@ -39,6 +39,7 @@
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Echani"
         },
         "source": "advantages"
       },
@@ -407,7 +409,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Echani"
         },
         "source": "advantages"
       },
@@ -428,7 +431,8 @@
           "description": "You have an extraordinary sense of balance, making you very difficult to knock down or unbalance. Enables acrobatic feats in combat or traversing treacherous terrain, valuable for both daring escapes and precise infiltration. Prerequisite: Force Sensitive (if taken as a Force-related advantage, indicating Force-enhanced proprioception).",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 15
+          "baselinePoints": 15,
+          "fromSpecies": "Echani"
         },
         "source": "advantages"
       },
@@ -452,7 +456,8 @@
           "modifiers": {
             "dodge": 1
           },
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Echani"
         },
         "source": "advantages"
       },
@@ -473,7 +478,8 @@
           "description": "You are unusually robust and healthy, granting bonuses to Endurance Point (EP) recovery and resistance to illness. Ensures you can endure long campaigns, torture, or the rigors of galactic travel, serving any master or cause.",
           "level": null,
           "category": "Physical",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Echani"
         },
         "source": "advantages"
       },
@@ -521,7 +527,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 2
+          "baselinePoints": 2,
+          "fromSpecies": "Echani"
         },
         "source": "advantages"
       },
@@ -531,6 +538,50 @@
     {
       "_id": "5wn7Iyid7kGFVw8L",
       "_key": "!actors.items!wVdUG0HGPQrTzcOp.5wn7Iyid7kGFVw8L",
+      "name": "Combat Aptitude (Echani)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 700000,
+      "system": {
+        "row": {
+          "name": "Combat Aptitude (Echani)",
+          "points": 0,
+          "description": "Echani are renowned for their martial prowess and highly refined combat techniques. They gain a +1 bonus to either Brawling (DX/Easy) or any one Melee Weapon (DX/Average) skill. This makes them inherently more effective combatants, capable of executing deadly precision strikes.",
+          "level": null,
+          "category": "Racial",
+          "baselinePoints": 0,
+          "fromSpecies": "Echani"
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "MlA477qhsWabhPxo",
+      "_key": "!actors.items!wVdUG0HGPQrTzcOp.MlA477qhsWabhPxo",
+      "name": "Read Opponent (Echani)",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 800000,
+      "system": {
+        "row": {
+          "name": "Read Opponent (Echani)",
+          "points": 0,
+          "description": "Echani can instinctively \"read\" an opponent's fighting style, emotions, and intentions through their movements. This grants a +1 bonus to Evaluate maneuvers used against a sentient opponent. When successful, the Echani gains a +1 bonus to all Active Defenses against that specific opponent for the next turn, representing their ability to predict and counter attacks. This analytical approach to combat removes sentiment, making them coldly efficient in dispatching foes. Cost: 1 point (Perk).",
+          "level": null,
+          "category": "Racial",
+          "baselinePoints": 0,
+          "fromSpecies": "Echani"
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "D1zteD61fCPx6NEt",
+      "_key": "!actors.items!wVdUG0HGPQrTzcOp.D1zteD61fCPx6NEt",
       "name": "Overconfidence (Martial)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -542,7 +593,8 @@
           "description": "Echani can sometimes be overly confident in their martial prowess, believing their disciplined training and ability to read opponents makes them superior. This can lead them to underestimate foes, dismiss non-combat solutions, or take unnecessary risks in combat against unconventional threats.",
           "level": null,
           "category": "Racial",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Echani"
         },
         "source": "disadvantages"
       },
@@ -550,8 +602,8 @@
       "flags": {}
     },
     {
-      "_id": "MlA477qhsWabhPxo",
-      "_key": "!actors.items!wVdUG0HGPQrTzcOp.MlA477qhsWabhPxo",
+      "_id": "4UlUt1QxbC19C8k8",
+      "_key": "!actors.items!wVdUG0HGPQrTzcOp.4UlUt1QxbC19C8k8",
       "name": "Obsession (Perfection)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -563,7 +615,8 @@
           "description": "Some Echani develop an obsessive drive for martial perfection, constantly seeking to refine their skills and overcome any perceived flaw. This can make them overly critical of themselves and others, or lead to dangerous pursuits of challenging opponents, making them predictable to those who know their drive.",
           "level": null,
           "category": "Racial",
-          "baselinePoints": -5
+          "baselinePoints": -5,
+          "fromSpecies": "Echani"
         },
         "source": "disadvantages"
       },
@@ -571,8 +624,8 @@
       "flags": {}
     },
     {
-      "_id": "D1zteD61fCPx6NEt",
-      "_key": "!actors.items!wVdUG0HGPQrTzcOp.D1zteD61fCPx6NEt",
+      "_id": "h5WLCcfMioyIXo8n",
+      "_key": "!actors.items!wVdUG0HGPQrTzcOp.h5WLCcfMioyIXo8n",
       "name": "Credit Chip",
       "type": "equipment",
       "img": "icons/svg/item-bag.svg",

@@ -137,8 +137,12 @@
 .shadowbase .sb-section--sub > .sb-section__summary:hover .sb-section__title {
   text-decoration: none;
 }
-/* the sticky-header preference (accordion.tsx) */
-.shadowbase[data-sticky-headers="true"] .sb-section > summary {
+/* the sticky-header preference (accordion.tsx). The website pins only the character sheet's top-level section
+   headers (the `sticky` prop at its call sites); nested sub-accordions (Weapons > Melee Weapons) and the HUD never
+   stick. So: the actor sheet only - refreshPreferenceRoots stamps the attribute on EVERY open .shadowbase window,
+   HUD included, whose headers would otherwise stick inside their own scroller - and never a section inside another
+   section, which would park on top of its parent's stuck header. The offset is the sheet's (sheet.css ONE SCROLLER). */
+.shadowbase[data-sticky-headers="true"].sheet.actor .sb-section:not(.sb-section .sb-section) > summary {
   position: sticky;
   z-index: 30;
   top: var(--sheet-section-sticky-top, 8rem);

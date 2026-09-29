@@ -314,7 +314,7 @@ export class HandbookBrowser {
 
   #emit(reason) { this.onChange?.(this, reason); }
 
-  /** Load the index once (the chapter list and 1459 headings, ~5 KB). */
+  /** Load the index once (the chapter list and 1466 headings, ~39 KB). */
   async ensureIndex() {
     const s = this.state;
     if (s.index || s.loadingIndex) return s.index;

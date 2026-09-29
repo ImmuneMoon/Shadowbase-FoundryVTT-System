@@ -39,6 +39,7 @@
     "forceAlignment": 35,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 211,
     "stBaseline": 10,
     "dxBaseline": 10,

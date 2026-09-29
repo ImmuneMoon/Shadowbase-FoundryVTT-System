@@ -19,6 +19,7 @@ import { spawn } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
 import { dirname, join, resolve } from 'node:path'
 import { cpus } from 'node:os'
+import { WEB } from '../tools/website-path.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const ROOT = resolve(HERE, '..')
@@ -36,7 +37,6 @@ const JOBS = Math.max(1, Number(value('--jobs', Math.min(4, cpus().length))) || 
 const TAIL = Math.max(1, Number(value('--tail', 15)) || 15)
 
 // ---- pre-flight ------------------------------------------------------------
-const WEB = resolve(process.env.SHADOWBASE_WEBSITE ?? join(ROOT, '..', 'ShadowBase Website'))
 const ENGINE = resolve(process.env.ENGINE_BUNDLE ?? join(ROOT, 'engine', 'shadowbase-engine.mjs'))
 const preflight = []
 if (!existsSync(join(WEB, 'package.json'))) preflight.push(`website checkout not found at ${WEB} (set SHADOWBASE_WEBSITE)`)

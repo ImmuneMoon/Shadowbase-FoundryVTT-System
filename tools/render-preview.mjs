@@ -50,7 +50,7 @@ export function buildActorFrom(env, { template, fixture }) {
     if (!t) throw new Error(`render-preview: "${template}" is not a characterTemplateStore key (${Object.keys(engine.characterTemplateStore).slice(0, 8).join(', ')} ...)`);
     sheet = typeof t.data === 'function' ? t.data() : (t.data ?? t);
     name = t.name ?? sheet.characterName ?? template;
-    if (engine.hasExport('applyLoadMigrations')) sheet = engine.applyLoadMigrations({ ...engine.blank(), ...structuredClone(sheet) }, engine.blankSheetData).data;
+    if (engine.hasExport('applyLoadMigrations')) sheet = engine.loadIncomingSheet(structuredClone(sheet)).data;
   }
   const actor = shim.buildActor(adapter.sheetToActorData(sheet, { actorName: name }));
   globalThis.game.actors.set(actor.id, actor);

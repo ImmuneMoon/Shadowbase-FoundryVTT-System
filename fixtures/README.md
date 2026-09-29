@@ -28,6 +28,12 @@ own contract is `portrait: characterPortrait || null`, so `null` is a value the
 importer already handles. The files were re-serialised with two-space
 indentation (JSON content otherwise identical to the download).
 
+### Player names
+
+The two 2026 exports named their players (`"player"`). A public repository
+carries no player's name, so both are blanked to `""` (2026-09-28); no check
+reads the field, and `""` is what the website's blank sheet stores.
+
 Kaelen's portrait is a 211 × 270 PNG (105,358 characters) and stays: it is
 under the 512 px line and the file is kept byte-for-byte as the 2025 system
 shipped it, which is the point of a legacy fixture.

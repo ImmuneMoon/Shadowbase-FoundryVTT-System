@@ -35,10 +35,11 @@
     "darkSidePoints": 0,
     "trackDigital": false,
     "trackPhysical": false,
-    "totalCredits": 1900,
+    "totalCredits": 7000,
     "forceAlignment": 0,
     "isStartingPointsMode": true,
     "isConstructed": false,
+    "speciesPackageRevision": 2,
     "cpBaseline": 0,
     "stBaseline": 10,
     "dxBaseline": 10,
@@ -359,7 +360,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Dowutin"
         },
         "source": "advantages"
       },
@@ -407,7 +409,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
+          "baselinePoints": 0,
+          "fromSpecies": "Dowutin"
         },
         "source": "advantages"
       },
@@ -428,7 +431,8 @@
           "level": 1,
           "description": "DR 1",
           "category": "Cybernetic",
-          "baselinePoints": 5
+          "baselinePoints": 5,
+          "fromSpecies": "Dowutin"
         },
         "source": "advantages"
       },
@@ -449,7 +453,8 @@
           "level": 2,
           "description": "+2 to Hearing.",
           "category": "Mental",
-          "baselinePoints": 4
+          "baselinePoints": 4,
+          "fromSpecies": "Dowutin"
         },
         "source": "advantages"
       },
@@ -459,6 +464,28 @@
     {
       "_id": "yPSon7soVz7AyMQv",
       "_key": "!actors.items!I5r1XhBFjUrgt3ml.yPSon7soVz7AyMQv",
+      "name": "Temperature Tolerance",
+      "type": "advantage",
+      "img": "icons/svg/upgrade.svg",
+      "sort": 500000,
+      "system": {
+        "row": {
+          "name": "Temperature Tolerance",
+          "points": 2,
+          "level": 2,
+          "description": "Cold.",
+          "category": "Physical",
+          "baselinePoints": 2,
+          "fromSpecies": "Dowutin"
+        },
+        "source": "advantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "B7bHidLkzTqIWXNv",
+      "_key": "!actors.items!I5r1XhBFjUrgt3ml.B7bHidLkzTqIWXNv",
       "name": "IQ -1 (Racial)",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -497,28 +524,8 @@
             "frightImmune": false,
             "moveMultiplier": 1
           },
-          "baselinePoints": 0
-        },
-        "source": "disadvantages"
-      },
-      "effects": [],
-      "flags": {}
-    },
-    {
-      "_id": "B7bHidLkzTqIWXNv",
-      "_key": "!actors.items!I5r1XhBFjUrgt3ml.B7bHidLkzTqIWXNv",
-      "name": "Wealth (Lower)",
-      "type": "disadvantage",
-      "img": "icons/svg/downgrade.svg",
-      "sort": 200000,
-      "system": {
-        "row": {
-          "name": "Wealth (Lower)",
-          "points": -10,
-          "level": 1,
-          "description": "Struggling: 1,900 CR, Status -1",
-          "category": "Social",
-          "baselinePoints": -10
+          "baselinePoints": 0,
+          "fromSpecies": "Dowutin"
         },
         "source": "disadvantages"
       },
@@ -528,6 +535,28 @@
     {
       "_id": "E19i1uW7V39m6mbg",
       "_key": "!actors.items!I5r1XhBFjUrgt3ml.E19i1uW7V39m6mbg",
+      "name": "Appearance (Unattractive)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 200000,
+      "system": {
+        "row": {
+          "name": "Appearance (Unattractive)",
+          "points": -4,
+          "description": "You are unpleasant to look at by the standards of most of the galaxy. This is the mirror of Appearance (Attractive) in Chapter 4: -1 to reaction, and it applies only where you can be seen. Several species carry it as part of their racial package in Chapter 18.",
+          "level": null,
+          "category": "Physical",
+          "baselinePoints": -4,
+          "fromSpecies": "Dowutin"
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "9iUgyr6MKcd3WbZD",
+      "_key": "!actors.items!I5r1XhBFjUrgt3ml.9iUgyr6MKcd3WbZD",
       "name": "Bad Temper",
       "type": "disadvantage",
       "img": "icons/svg/downgrade.svg",
@@ -539,7 +568,8 @@
           "description": "You are prone to anger and easily provoked, often leading to rash decisions or confrontations.",
           "level": null,
           "category": "Mental",
-          "baselinePoints": -10
+          "baselinePoints": -10,
+          "fromSpecies": "Dowutin"
         },
         "source": "disadvantages"
       },
@@ -547,8 +577,30 @@
       "flags": {}
     },
     {
-      "_id": "9iUgyr6MKcd3WbZD",
-      "_key": "!actors.items!I5r1XhBFjUrgt3ml.9iUgyr6MKcd3WbZD",
+      "_id": "Tpt5byedfatOy3uW",
+      "_key": "!actors.items!I5r1XhBFjUrgt3ml.Tpt5byedfatOy3uW",
+      "name": "Social Stigma (Valuable Property)",
+      "type": "disadvantage",
+      "img": "icons/svg/downgrade.svg",
+      "sort": 400000,
+      "system": {
+        "row": {
+          "name": "Social Stigma (Valuable Property)",
+          "points": -10,
+          "description": "Viewed as beasts of burden or slaves rather than sentient beings.",
+          "level": null,
+          "category": "Social",
+          "baselinePoints": -10,
+          "fromSpecies": "Dowutin"
+        },
+        "source": "disadvantages"
+      },
+      "effects": [],
+      "flags": {}
+    },
+    {
+      "_id": "4B9kfhQYByvKQvVm",
+      "_key": "!actors.items!I5r1XhBFjUrgt3ml.4B9kfhQYByvKQvVm",
       "name": "Credit Chip",
       "type": "equipment",
       "img": "icons/svg/item-bag.svg",

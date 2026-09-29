@@ -159,7 +159,7 @@ ok('coerce: booleans from "on"/"true"/1, a listed depth as a number, an unknown 
 
 // ---- 4. root attributes ------------------------------------------------------------------------------------------
 const rokarr = engine.characterTemplateStore.rokarr;
-const sheet = engine.applyLoadMigrations({ ...engine.blank(), ...structuredClone(rokarr.data) }, engine.blankSheetData).data;
+const sheet = engine.loadIncomingSheet(structuredClone(rokarr.data)).data;
 const actor = shim.buildActor(adapter.sheetToActorData(sheet, { actorName: rokarr.name }));
 globalThis.game.actors.set(actor.id, actor);
 const ATTRS = ['data-compact-rows', 'data-reduce-motion', 'data-point-costs', 'data-handbook-chips', 'data-sticky-headers', 'data-remember-sections'];
