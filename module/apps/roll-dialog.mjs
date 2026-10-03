@@ -3,10 +3,13 @@
 // The roll prompt (docs/ARCHITECTURE.md §6.3): the website's RollButton
 // popover (roll-button.tsx:210-341) as a DialogV2 form - the label, the base
 // target (read-only), a situational modifier, the Off-Hand toggle when the
-// character is dual wielding, and Foundry's roll-mode chooser (ASSUMPTION Q14
-// c). Enter rolls. The dialog decides NOTHING about the target: it hands back
-// `{ modifier, offHand, rollMode }` and module/rolls.mjs stacks them
-// (roll-button.tsx:127 is the one stacking rule).
+// character is dual wielding, Ch11's "Past 1/2D" switch on the Damage roll of
+// a weapon whose printed range is a pair (and the halvings that roll always
+// carries, listed), and Foundry's roll-mode chooser (ASSUMPTION Q14 c). Enter
+// rolls. The dialog decides NOTHING about the target or the damage: it hands
+// back `{ modifier, offHand, rollMode, pastHalfDamage }` and module/rolls.mjs
+// stacks them (roll-button.tsx:127 is the one stacking rule) and hands the
+// halvings to the engine's reducer.
 //
 // DialogV2 is resolved late (foundry.applications.api.DialogV2) so the module
 // loads headlessly: tools/foundry-shim.mjs declares no applications API, and a
@@ -53,8 +56,16 @@ export function rollModeOptions() {
   ];
 }
 
-/** The form's HTML (a plain string; DialogV2 takes content as HTML). */
-export function renderPromptContent({ label, target, damage, dualWielding = false, defaultOffHand = false, rollMode, malfunctionThreshold = null, shots = 1 }) {
+/**
+ * The form's HTML (a plain string; DialogV2 takes content as HTML).
+ *
+ * A Damage prompt carries Ch11's post-roll halvings the way the website's popover does (roll-button.tsx
+ * "Halved after the roll"): `halvings` are the ones the weapon's roll always carries (Training-grade gas),
+ * listed as facts; `halfDamageRange` is the weapon's printed range WHEN IT IS A PAIR, and puts the
+ * "Past 1/2D" switch in the form - off by default and per roll, since the sheet holds no target distance.
+ * The caller passes the range only where there is a 1/2D to be past (module/rolls.mjs damageHalvingsFor).
+ */
+export function renderPromptContent({ label, target, damage, dualWielding = false, defaultOffHand = false, rollMode, malfunctionThreshold = null, shots = 1, halvings = [], halfDamageRange = null }) {
   const modeOptions = rollModeOptions().map((o) => `<option value="${esc(o.value)}"${o.value === rollMode ? ' selected' : ''}>${esc(o.label)}</option>`).join('');
   const baseLine = target !== null && target !== undefined
     ? `<p class="sb-roll-dialog__base">${esc(fmt('SHADOWBASE.Roll.BaseTarget', { target }))}${shots > 1 ? ` · ${esc(fmt('SHADOWBASE.Roll.VolleyShots', { shots }))}` : ''}</p>`
@@ -64,6 +75,13 @@ export function renderPromptContent({ label, target, damage, dualWielding = fals
     : '';
   const offHand = dualWielding
     ? `<div class="form-group"><label for="sb-roll-offhand">${esc(loc('SHADOWBASE.Roll.OffHandAction'))}</label><input type="checkbox" id="sb-roll-offhand" name="offHand"${defaultOffHand ? ' checked' : ''}></div>`
+    : '';
+  const standing = (Array.isArray(halvings) ? halvings : []).map((h) => `<p class="sb-roll-dialog__halving"><span>${esc(h?.label)}</span> <strong>&divide;2</strong></p>`).join('');
+  const pastHalf = halfDamageRange
+    ? `<div class="form-group"><label for="sb-roll-past-half" title="${esc(fmt('SHADOWBASE.Roll.PastHalfDamageHint', { range: halfDamageRange }))}">${esc(fmt('SHADOWBASE.Roll.PastHalfDamage', { yards: String(halfDamageRange).split('/')[0].trim() }))}</label><input type="checkbox" id="sb-roll-past-half" name="pastHalfDamage"></div>`
+    : '';
+  const halved = standing || pastHalf
+    ? `<p class="sb-roll-dialog__halved">${esc(loc('SHADOWBASE.Roll.HalvedAfterRoll'))}</p>${standing}${pastHalf}`
     : '';
   return `
 <div class="shadowbase sb-roll-dialog">
@@ -75,6 +93,7 @@ export function renderPromptContent({ label, target, damage, dualWielding = fals
     <input type="number" id="sb-roll-modifier" name="modifier" value="0" step="1" autofocus>
   </div>
   ${offHand}
+  ${halved}
   <div class="form-group">
     <label for="sb-roll-mode">${esc(loc('SHADOWBASE.Roll.RollMode'))}</label>
     <select id="sb-roll-mode" name="rollMode">${modeOptions}</select>
@@ -90,14 +109,17 @@ export function readPromptForm(form) {
     modifier: Number.isNaN(modifier) ? 0 : modifier,
     offHand: !!(el.offHand && el.offHand.checked),
     rollMode: el.rollMode?.value || undefined,
+    // Ch11 "Past 1/2D": absent from the form (no 1/2D to be past) reads false, like an unticked switch.
+    pastHalfDamage: !!(el.pastHalfDamage && el.pastHalfDamage.checked),
   };
 }
 
 export class RollDialog {
   /**
-   * Ask the player for the situational modifier, the off-hand toggle and the
-   * roll mode. Resolves `{ modifier, offHand, rollMode }` or null when closed.
-   * @param {{ label: string, target?: number|null, damage?: string|null, dualWielding?: boolean, defaultOffHand?: boolean, rollMode?: string, malfunctionThreshold?: number|null, shots?: number }} spec
+   * Ask the player for the situational modifier, the off-hand toggle, the roll
+   * mode and - on a Damage roll of a weapon with a 1/2D - whether the target is
+   * past it. Resolves `{ modifier, offHand, rollMode, pastHalfDamage }` or null when closed.
+   * @param {{ label: string, target?: number|null, damage?: string|null, dualWielding?: boolean, defaultOffHand?: boolean, rollMode?: string, malfunctionThreshold?: number|null, shots?: number, halvings?: { id: string, label: string }[], halfDamageRange?: string|null }} spec
    */
   static async prompt(spec) {
     const DialogV2 = dialogClass();

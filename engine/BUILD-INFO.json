@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-29T00:40:57.276Z",
+  "generatedAt": "2026-10-03T05:36:57.466Z",
   "website": "https://github.com/ImmuneMoon/ShadowBase-Website.git",
-  "websiteCommit": "3f3072b",
+  "websiteCommit": "631ebe9",
   "websiteDirty": false,
   "esbuild": "0.28.2",
-  "bytes": 2294866,
+  "bytes": 2303516,
   "minified": false,
-  "inputFiles": 327,
-  "websiteSourceFiles": 310,
+  "inputFiles": 332,
+  "websiteSourceFiles": 315,
   "packages": [
     "clsx",
     "tailwind-merge",
@@ -15,5 +15,5 @@
   ],
   "warnings": 0,
   "entry": "tools/engine-entry.ts",
-  "entryExports": 206
+  "entryExports": 209
 }

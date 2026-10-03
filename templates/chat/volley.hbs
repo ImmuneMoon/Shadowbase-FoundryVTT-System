@@ -16,7 +16,7 @@
     <li class="sb-chat-card__shot{{#if this.success}} is-hit{{/if}}{{#if this.isMalfunction}} is-malfunction{{/if}}{{#if this.notRollable}} is-unrollable{{/if}}">
       <span class="sb-chat-card__shot-label">{{this.label}}</span>
       {{#if ../damage}}
-        <span class="sb-chat-card__shot-total"><strong>{{this.total}}</strong> <span class="sb-chat-card__dice">[{{this.diceText}}]</span> <span class="sb-chat-card__muted">{{this.websiteFormula}}</span></span>
+        <span class="sb-chat-card__shot-total"><strong>{{this.total}}</strong> <span class="sb-chat-card__dice">[{{this.diceText}}]</span> <span class="sb-chat-card__muted">{{this.websiteFormula}}</span>{{#if this.halvingText}} <span class="sb-chat-card__muted sb-chat-card__halved">{{localize "SHADOWBASE.Roll.HalvedShot" text=this.halvingText}}</span>{{/if}}</span>
       {{else}}
         <span class="sb-chat-card__shot-total">{{this.total}} <span class="sb-chat-card__muted">vs {{this.target}}</span> <span class="sb-chat-card__dice">[{{this.diceText}}]</span></span>
         <span class="sb-chat-card__tag">{{this.tagText}}</span>

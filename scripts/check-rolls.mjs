@@ -62,6 +62,23 @@
 //     routing, the bypasses, the Shock row's shape, the armor degradation,
 //     crippling and severing, the prompts - with the `|| 0` threshold fallback
 //     (any torso injury cripples) as the rejected alternative;
+//   - Ch7's Reeling (the website's 2026-10-02 ruling) at the ONE place this port adds to Dodge outside
+//     the engine: an active Form's bonus joins the unhalved figure the engine publishes for exactly
+//     this (stats.reeling.dodgeBeforeReeling) and the SUM is halved through engine.reeling.reelingDodge;
+//     the bonus added to the already halved figure is the rejected alternative (Dodge 9 with Soresu I
+//     would read 6, not 5);
+//   - Ch11's post-roll halvings (2026-09-29 / 10-03) on every Damage roll, through the engine's reducer
+//     (postRollHalving.resolveDamageRoll over damageRollHalvings): a weapon whose printed range is a
+//     pair asks "Past 1/2D?" in the roll prompt (off by default, per roll); Training-grade gas rides the
+//     roll as a standing halving read from the loaded pack; the two stack; each rounds down with NO
+//     minimum after it (a full roll of 1 deals 0 - the 1-point floor stays on the full roll); a volley
+//     halves every hit; a single-figure range and a melee weapon are never asked; and a fitted Focusing
+//     Emitter moves the 1/2D the switch names (the bundle's calculateBlasterStats - no port code);
+//   - the launcher test is the website's one (engine.launcherWeapons.firesExplosivePayload): every Ch11
+//     launcher - the Mortar and the Underslung Grenade among them, which the HUD's old name test missed -
+//     refuses to fire unloaded, fires the round it holds, rolls that round's blast, takes the Magnetic
+//     Accelerator Coils on both figures, and is never asked "Past 1/2D" though it prints a pair (an
+//     explosive round never halves for range);
 //   - every i18n key the four modules and six templates name is in lang/en.json
 //     (U02c folded U04's key block in) and every SHADOWBASE.Roll/Combat/Damage
 //     key of lang/en.json is named somewhere (no dead keys); every template
@@ -89,6 +106,23 @@
 //     `resolved.target` used as the target with hitBonus still added (the review's M3 fold) (U02c)
 //       -> "to-hit applied once: card target = base - 4" (reads 5) + "the -4 card's rolled target (9) equals ..."
 //          + "every readied weapon of the corpus composes ..."
+//   2026-10-03, the website's 2026-09-29..10-03 round (each file restored byte-identical, checked by hash):
+//   - rolls.mjs defenseTargetFor: `reelingDodge(dodgeBeforeReeling + form.dodge, active)` -> `currentEncumbrance.dodge + form.dodge`
+//       -> "reeling with Soresu I ..." + "and the Dodge roll is made against that 5" (reads 6)
+//   - rolls.mjs firesExplosivePayload: the bundle's test -> the HUD's old inline one (category, "Launcher", "Tube")
+//       -> the Underslung Grenade and the Mortar fail "a launcher end to end" + "every launcher (4) ..."
+//   - rolls.mjs rollDamage: `total = resolved.total` -> `Math.max(1, resolved.total)` (the floor moved after the halving)
+//       -> "no minimum after the halving: a full roll of 1 deals 0" (reads 1)
+//   - rolls.mjs damageHalvingsFor: the damage source always 'weapon' -> all four launchers fail (asked "Past 1/2D")
+//   - rolls.mjs damageHalvingsFor: `standing: []` -> the five Training-grade legs
+//   - rolls.mjs resolveDamageOptions: the `halving.canBePast` clause dropped (a Damage roll never asks)
+//       -> "a weapon with a 1/2D asks before its Damage roll" and the legs behind it. The first firing CRASHED the
+//          check on the unanswered prompt (`seen.content` of null); made null-safe, re-fired, now a clean red
+//   - rolls.mjs rollDamageVolley: `resolveDamageRoll(roll.total, 0, [])` -> "each hit of a damage volley is halved ..."
+//   - roll-dialog.mjs readPromptForm: `pastHalfDamage: false` -> "readPromptForm reads the four answers"
+//   - roll-dialog.mjs renderPromptContent: the switch never rendered -> the three prompt-content legs
+//   - templates/chat/damage.hbs: the Halved line removed -> "the card, its flags and the roll history all say so"
+//   - templates/chat/volley.hbs: the per-hit "halved ..." note removed -> "each hit of a damage volley ..."
 //
 //   node scripts/check-rolls.mjs
 
@@ -141,6 +175,9 @@ const NO = engine.NO_MODIFIERS;
 const build = (sheet, extra = {}) => shim.buildActor(sheetToActorData({ ...sheet, ...extra }));
 const lastMessage = () => ChatMessage.log[ChatMessage.log.length - 1];
 const queue = (...totals) => { Roll._queue.length = 0; Roll.queueResults(totals); };
+// The roll prompt's answers (tools/foundry-shim-apps.mjs: an empty queue answers null, as a closed dialog does).
+const DialogV2 = foundry.applications.api.DialogV2;
+const answerDamage = (answer = {}) => DialogV2.queueResponses([{ modifier: 0, offHand: false, rollMode: 'public', pastHalfDamage: false, ...answer }]);
 
 // ---- 1. the 368-cell grid through rollTarget -----------------------------------------------------------------
 {
@@ -407,9 +444,10 @@ const corpus = loadCorpus(engine);
     await rolls.rollAttack(actor, gun, { modifier: 0 });
     const dmgFormula = rolls.damageFormulaFor(actor, gun);
     ok('damageFormulaFor reads the derived finalDamage', dmgFormula.formula === gun.derived.finalDamage && dmgFormula.pendingHits === 1);
-    queue(7);
+    // Its printed range is a pair, so the Damage roll asks "Past 1/2D?" first (section 7b); the answer here is no.
+    answerDamage(); queue(7);
     const d = await rolls.rollDamage(actor, { item: gun });
-    ok('rollDamage clears pendingHits and posts the damage card with the translated formula', gun.system.row.pendingHits === 0 && d.total === 7 && lastMessage().flags.shadowbase.kind === 'damage' && lastMessage().flags.shadowbase.formula === rolls.toFoundryFormula(gun.derived.finalDamage).formula);
+    ok('rollDamage clears pendingHits and posts the damage card with the translated formula', gun.system.row.pendingHits === 0 && d.total === 7 && lastMessage().flags.shadowbase.kind === 'damage' && lastMessage().flags.shadowbase.formula === rolls.toFoundryFormula(gun.derived.finalDamage).formula && DialogV2._queue.length === 0);
     // Empty: the gate refuses.
     await gun.updateRow({ currentCharges: 0 });
     ok('no charge left: the attack is refused', rolls.attackBlockedReason(actor, gun) !== null && (await rolls.rollAttack(actor, gun, { modifier: 0 })) === null);
@@ -425,7 +463,7 @@ const corpus = loadCorpus(engine);
   ok('the volley card lists the shots and the halt', lastMessage().flags.shadowbase.kind === 'volley' && lastMessage().flags.shadowbase.results.length === 3 && /Shot #3|Shot/.test(lastMessage().content));
   const dv = rolls.damageFormulaFor(rok, bow);
   ok('two banked hits become a damage volley of two "4d" items', dv.volley?.length === 2 && dv.volley.every((i) => i.formula === '4d'));
-  queue(12, 14);
+  answerDamage(); queue(12, 14);
   const dd = await rolls.rollDamage(rok, { item: bow });
   ok('the damage volley rolls each hit and clears the bank', dd?.results?.length === 2 && dd.results[0].total === 12 && dd.results[1].total === 14 && bow.system.row.pendingHits === 0, dd?.results ? `${dd.results.length}` : 'no volley (pendingHits not banked?)');
   // Melee ◊: Arg'garok in ST 10 hands goes unready; the turn is stamped.
@@ -494,6 +532,153 @@ const corpus = loadCorpus(engine);
   ok('the Off-Hand toggle on the main weapon still takes -4 (the toggle decides)', offForced.modifier === -4);
 }
 
+// ---- 7b. Ch11's post-roll halvings and the one launcher test (website round 2026-09-29..10-03) ---------------------
+{
+  const P = engine.postRollHalving;
+  const prompts = () => DialogV2.log.filter((l) => l.kind === 'wait').length;
+  const history0 = (actor) => rolls.rollHistory(actor)[0]?.description ?? '';
+  const pistolKit = engine.blasterCommon.buildTemplateBlaster({ profileName: 'Blaster Pistol' });
+  const actor = build(template('blank'), { customBlasters: [{ ...pistolKit.blaster, equipped: true }], weaponModifications: pistolKit.parts });
+  const gun = actor.items.find((i) => i.type === 'blaster');
+  const range = String(gun.derived.finalHalfDamageRange);
+  const [half, max] = range.split('/').map(Number);
+  const h = rolls.damageHalvingsFor(gun);
+  ok(`Blaster Pistol prints a pair (${range}): there is a 1/2D to be past, and Standard gas puts no standing halving on the roll`, /^\d+\/\d+$/.test(range) && h.canBePast === true && h.range === range && h.standing.length === 0, JSON.stringify(h));
+
+  // The prompt opens for exactly this case and carries the switch; unticked, the full roll stands.
+  await gun.updateRow({ pendingHits: 1 });
+  let seen = null;
+  DialogV2.queueAnswer((config) => { seen = config; return { modifier: 0, rollMode: 'public', pastHalfDamage: false }; });
+  queue(11);
+  let r = await rolls.rollDamage(actor, { item: gun });
+  ok('a weapon with a 1/2D asks before its Damage roll: the prompt carries the Past 1/2D switch (unticked), naming the 1/2D figure and the whole range', !!seen && /name="pastHalfDamage"/.test(seen.content) && !/name="pastHalfDamage"[^>]*checked/.test(seen.content) && seen.content.includes(`Past 1/2D (${half} yd)`) && seen.content.includes(`(${range})`), String(seen?.content).replace(/\s+/g, ' ').slice(0, 300));
+  ok('unticked, the full roll stands (11) and neither the card nor the history carries a Halved line', r.total === 11 && r.halvingText === '' && r.halvings.length === 0 && !/Halved/.test(lastMessage().content) && !/Halved/.test(history0(actor)));
+  answerDamage({ pastHalfDamage: true }); queue(11);
+  r = await rolls.rollDamage(actor, { item: gun });
+  const expected = P.resolveDamageRoll(11, 0, [P.PAST_HALF_DAMAGE_RANGE_HALVING]);
+  ok('past 1/2D: 11 -> 5, rounded DOWN, by the engine\'s own reducer (rounding to nearest would answer 6)', r.total === 5 && r.beforeHalving === 11 && r.total === expected.total && r.halvingText === expected.halvingText && r.halvingText === '11 -> 5 (past 1/2D)', JSON.stringify({ t: r.total, h: r.halvingText }));
+  ok('the card, its flags and the roll history all say so', lastMessage().flags.shadowbase.total === 5 && lastMessage().flags.shadowbase.beforeHalving === 11 && JSON.stringify(lastMessage().flags.shadowbase.halvings) === JSON.stringify([P.PAST_HALF_DAMAGE_RANGE_HALVING.id])
+    && /Halved/.test(lastMessage().content) && lastMessage().content.includes('11 -&gt; 5 (past 1/2D)') && history0(actor).includes('Total: 5\nHalved: 11 -> 5 (past 1/2D)'), `${lastMessage().content.replace(/\s+/g, ' ').slice(0, 300)} | ${history0(actor)}`);
+  // Ch11 "There is no minimum, so a weak hit can deal 0": the 1-point floor sits on the FULL roll, nothing floors the halved one.
+  answerDamage({ pastHalfDamage: true }); queue(1);
+  r = await rolls.rollDamage(actor, { item: gun });
+  ok('no minimum after the halving: a full roll of 1 deals 0 (the old clamp applied last - the rejected alternative - would answer 1)', r.total === 0 && r.beforeHalving === 1 && lastMessage().flags.shadowbase.total === 0, `${r.total}`);
+  answerDamage(); queue(-3);
+  r = await rolls.rollDamage(actor, { item: gun });
+  ok('the minimum of 1 still sits on the full roll, before any halving (a -3 reads 1, noted as clamped)', r.total === 1 && r.beforeHalving === 1 && r.clamped === true && r.rawTotal === -3);
+  // The caller decided: no prompt.
+  const asked = prompts();
+  queue(9); r = await rolls.rollDamage(actor, { item: gun, pastHalfDamage: true });
+  ok('a caller that states pastHalfDamage is not asked, and the halving lands (9 -> 4)', prompts() === asked && r.total === 4, `${prompts() - asked} prompt(s), total ${r?.total}`);
+  queue(9); r = await rolls.rollDamage(actor, { item: gun, modifier: 0 });
+  ok('a caller that states the modifier is not asked, and nothing halves (9)', prompts() === asked && r.total === 9 && r.halvingText === '');
+  queue(9); r = await rolls.rollDamage(actor, { item: gun, prompt: false });
+  ok('prompt: false rolls unasked (9)', prompts() === asked && r.total === 9);
+  await gun.updateRow({ pendingHits: 1 });
+  const cards = ChatMessage.log.length;
+  r = await rolls.rollDamage(actor, { item: gun });
+  ok('closing the prompt cancels the Damage roll: no card, and the banked hit stays', r === null && ChatMessage.log.length === cards && gun.system.row.pendingHits === 1 && prompts() === asked + 1);
+
+  // Training-grade gas: a STANDING halving, read at the roll from the loaded pack - never a pre-halved dice string.
+  const fullDice = gun.derived.finalDamage;
+  await gun.updateRow({ loadedAmmunitionData: { ...(gun.system.row.loadedAmmunitionData ?? {}), gasGrade: 'training' } });
+  const ht = rolls.damageHalvingsFor(gun);
+  ok('Training-grade loaded: the weapon keeps its FULL dice string, retyped to end (a pre-halved string is the rejected alternative), and its Damage roll carries the Training halving - the bundle\'s loadedGasHalvings, not a list kept here',
+    gun.derived.finalDamage === fullDice && gun.derived.finalDamageType === 'end' && JSON.stringify(ht.standing) === JSON.stringify([P.TRAINING_GAS_HALVING]) && JSON.stringify(ht.standing) === JSON.stringify(engine.blasterGasGrades.loadedGasHalvings(gun.rowWithDerived())), JSON.stringify(ht));
+  ok('the weapon\'s own note says "The Damage roll halves the full roll for you" - true only because the roll now does', /The Damage roll halves the full roll for you/.test(String(gun.derived.notesAndEffects)), String(gun.derived.notesAndEffects).slice(-260));
+  seen = null;
+  DialogV2.queueAnswer((config) => { seen = config; return { modifier: 0, rollMode: 'public', pastHalfDamage: false }; });
+  queue(11);
+  r = await rolls.rollDamage(actor, { item: gun });
+  ok('Training alone: 11 -> 5, and the prompt lists it as a fact under "Halved after the roll"', r.total === 5 && r.halvingText === '11 -> 5 (Training)' && /Halved after the roll/.test(String(seen?.content)) && /Training<\/span> <strong>&divide;2<\/strong>/.test(String(seen?.content)), `${r.total} | ${String(seen?.content).replace(/\s+/g, ' ').slice(0, 300)}`);
+  answerDamage({ pastHalfDamage: true }); queue(11);
+  r = await rolls.rollDamage(actor, { item: gun });
+  ok('Training and past 1/2D both apply - halve, then halve again: 11 -> 5 -> 2, the full roll over 4 rounded down', r.total === 2 && r.total === Math.floor(11 / 4) && r.halvingText === '11 -> 5 (Training) -> 2 (past 1/2D)' && lastMessage().content.includes('11 -&gt; 5 (Training) -&gt; 2 (past 1/2D)'), r.halvingText);
+  queue(11); r = await rolls.rollDamage(actor, { item: gun, modifier: 0 });
+  ok('the standing halving needs no answer: an unprompted roll is still halved by the loaded gas (11 -> 5)', r.total === 5 && JSON.stringify(r.halvings.map((x) => x.id)) === JSON.stringify([P.TRAINING_GAS_HALVING.id]));
+  // A damage volley: one answer, every hit halved the same way.
+  await gun.updateRow({ pendingHits: 2 });
+  ok('two banked hits are a damage volley (denominator)', rolls.damageFormulaFor(actor, gun).volley?.length === 2);
+  answerDamage({ pastHalfDamage: true }); queue(11, 7);
+  const vol = await rolls.rollDamage(actor, { item: gun });
+  ok('each hit of a damage volley is halved the same way (11 -> 2, 7 -> 1) and the card says so per hit', vol?.results?.length === 2 && vol.results[0].total === 2 && vol.results[1].total === 1 && vol.results[1].halvingText === '7 -> 3 (Training) -> 1 (past 1/2D)'
+    && lastMessage().flags.shadowbase.kind === 'damage-volley' && lastMessage().content.includes('halved 11 -&gt; 5 (Training) -&gt; 2 (past 1/2D)') && gun.system.row.pendingHits === 0, JSON.stringify(vol?.results?.map((x) => [x.total, x.halvingText])));
+  await gun.updateRow({ loadedAmmunitionData: { ...(gun.system.row.loadedAmmunitionData ?? {}), gasGrade: null } });
+  ok('reloading Standard gas takes the Training halving off (derived at the roll from the loaded pack, never stored on the weapon)', rolls.damageHalvingsFor(gun).standing.length === 0);
+
+  // A single figure is Max only (Ch11: "It has no 1/2D and never halves for range"); a melee weapon prints no range at all.
+  const maxOnly = engine.rangedWeaponProfiles.RANGED_WEAPON_PROFILES.map((p) => engine.blasterCommon.buildTemplateBlaster({ profileName: p.name })).find((k) => /^\d+$/.test(String(engine.calculateBlasterStats(k.blaster, k.parts).finalHalfDamageRange)));
+  ok('a ranged kit that prints a single figure exists (denominator)', !!maxOnly, 'none');
+  if (maxOnly) {
+    const a = build(template('blank'), { customBlasters: [{ ...maxOnly.blaster, equipped: true }], weaponModifications: maxOnly.parts });
+    const hv = rolls.damageHalvingsFor(a.items.find((i) => i.type === 'blaster'));
+    ok(`${maxOnly.blaster.baseType} (range "${hv.range}"): a single figure is Max only - nothing to be past, no switch`, /^\d+$/.test(String(hv.range)) && hv.canBePast === false, JSON.stringify(hv));
+  }
+  const axeKit = engine.meleeCommon.buildTemplateMeleeWeapon({ profileName: "Arg'garok" });
+  const fighter = build(template('blank'), { customMeleeWeapons: [{ ...axeKit.weapon, equipped: true, pendingHits: 1 }], weaponModifications: axeKit.parts });
+  const axe = fighter.items.find((i) => i.type === 'meleeWeapon');
+  const before = prompts();
+  queue(8);
+  r = await rolls.rollDamage(fighter, { item: axe });
+  ok('a melee weapon has no range and loads no gas: its Damage roll is never asked and never halved', JSON.stringify(rolls.damageHalvingsFor(axe)) === JSON.stringify({ standing: [], range: null, canBePast: false }) && prompts() === before && r?.total === 8 && r.halvingText === '');
+
+  // A fitted range mod moves the printed range the switch names - through the bundle's calculateBlasterStats, no port code.
+  const F = engine.fittedGoods;
+  const mod = (name) => { const def = engine.weaponModData.WEAPON_MOD_DATA.find((m) => m.name === name); return { id: engine.rowId(), name: def.name, category: def.category, cost: def.cost, weight: def.weight }; };
+  const emitterSlot = F.rangedModSlot('Barrel/Emitter');
+  const emitter = mod('Focusing Emitter');
+  const focused = build(template('blank'), { customBlasters: [{ ...pistolKit.blaster, equipped: true, pendingHits: 1, [emitterSlot.idField]: emitter.id, [emitterSlot.partIdField]: null }], weaponModifications: [...pistolKit.parts, emitter] });
+  const fg = focused.items.find((i) => i.type === 'blaster');
+  const scaled = `${Math.floor(half * 1.25)}/${max}`;
+  ok(`a fitted Focusing Emitter scales the 1/2D figure only, rounding down (${range} -> ${scaled}), on the Item's derived line and on the row the engine reads`, fg.derived.finalHalfDamageRange === scaled && scaled !== range && focused.sheetData.customBlasters[0].finalHalfDamageRange === scaled, `${fg.derived.finalHalfDamageRange}`);
+  seen = null;
+  DialogV2.queueAnswer((config) => { seen = config; return { modifier: 0, rollMode: 'public', pastHalfDamage: false }; });
+  queue(4);
+  await rolls.rollDamage(focused, { item: fg });
+  ok('and the Past 1/2D switch names the scaled figure', !!seen && seen.content.includes(`Past 1/2D (${Math.floor(half * 1.25)} yd)`), String(seen?.content).replace(/\s+/g, ' ').slice(0, 300));
+
+  // The launcher test is the website's ONE (lib/launcher-weapons.ts): Ch11's category, or the name for a row with no profile.
+  const oldHudTest = (row) => row.category === 'Grenade Launchers' || String(row.baseType ?? '').includes('Launcher') || String(row.baseType ?? '').includes('Tube');
+  const launchers = engine.rangedWeaponProfiles.RANGED_WEAPON_PROFILES.filter((p) => ['Grenade Launchers', 'Missile Launchers'].includes(p.category));
+  const missed = launchers.filter((p) => !oldHudTest(engine.blasterCommon.buildTemplateBlaster({ profileName: p.name }).blaster)).map((p) => p.name);
+  ok(`Ch11 prints launchers (${launchers.length}), and the HUD's old test - a category the row does not carry, then "Launcher" / "Tube" - misses the Mortar and the Underslung Grenade (the rejected alternative has rows to fail on)`, launchers.length >= 4 && missed.includes('Merr-Sonn MM-s1 Mortar') && missed.includes('Czerka Underslung Grenade'), `${launchers.length}; missed: ${missed.join(', ')}`);
+  const round = engine.explosiveData.ALL_EXPLOSIVES_DATA.find((e) => rolls.toFoundryFormula(e.damageEffect).ok);
+  ok('an explosive with a rollable blast exists (denominator)', !!round, 'none');
+  const coilSlot = F.rangedModSlot('Launch Tube / Projector');
+  let asLaunchers = 0;
+  for (const p of launchers) {
+    const kit = engine.blasterCommon.buildTemplateBlaster({ profileName: p.name });
+    const coils = mod('Magnetic Accelerator Coils');
+    const a = build(template('blank'), { customBlasters: [{ ...kit.blaster, equipped: true }], weaponModifications: kit.parts });
+    const coiled = build(template('blank'), { customBlasters: [{ ...kit.blaster, equipped: true, [coilSlot.idField]: coils.id, [coilSlot.partIdField]: null }], weaponModifications: [...kit.parts, coils] });
+    const tube = a.items.find((i) => i.type === 'blaster');
+    const name = tube.displayName ?? tube.name;
+    const printed = String(tube.derived.finalHalfDamageRange);
+    const [th, tm] = printed.split('/').map(Number);
+    const facts = {
+      isLauncher: rolls.firesExplosivePayload(tube.rowWithDerived()),
+      refusedUnloaded: rolls.attackBlockedReason(a, tube) === game.i18n.format('SHADOWBASE.Roll.NoExplosiveLoaded', { weapon: name }),
+      coilsScaleBoth: coiled.items.find((i) => i.type === 'blaster').derived.finalHalfDamageRange === `${Math.floor(th * 1.25)}/${Math.floor(tm * 1.25)}`,
+    };
+    await tube.updateRow({ loadedExplosiveId: 'round-1', loadedExplosiveData: { id: 'round-1', name: round.name, baseExplosiveName: round.name, finalDamageEffect: round.damageEffect } });
+    facts.allowedLoaded = rolls.attackBlockedReason(a, tube) === null;
+    queue(3); // a 3 always hits
+    const atk = await rolls.rollAttack(a, tube, { modifier: 0 });
+    facts.firedTheRound = !!atk && tube.system.row.lastFiredExplosive?.finalDamageEffect === round.damageEffect && tube.system.row.loadedExplosiveId === null && tube.system.row.pendingHits === 1;
+    facts.rollsTheBlast = rolls.damageFormulaFor(a, tube).formula === round.damageEffect;
+    const hv = rolls.damageHalvingsFor(tube);
+    facts.printsAPair = /^\d+\/\d+$/.test(printed);
+    facts.neverPast = hv.range === null && hv.canBePast === false;
+    const promptsBefore = prompts();
+    queue(13);
+    const dmg = await rolls.rollDamage(a, { item: tube });
+    facts.unaskedAndWhole = prompts() === promptsBefore && dmg?.total === 13 && dmg.halvingText === '' && tube.system.row.lastFiredExplosive === null;
+    if (Object.values(facts).every(Boolean)) asLaunchers++;
+    else ok(`${p.name}: a launcher end to end`, false, JSON.stringify(facts));
+  }
+  ok(`every launcher (${launchers.length}), the Mortar and the Underslung Grenade among them: refuses to fire unloaded, fires the round it holds, rolls that round's blast, takes the Coils on both figures, and is never asked "Past 1/2D" though it prints a pair (an explosive round never halves for range)`, asLaunchers === launchers.length, `${asLaunchers}/${launchers.length}`);
+}
+
 // ---- 8. defenses: dodge with a Form, parry with a saber, gates ---------------------------------------------------
 {
   const jedi = build(template('kaelenRarr'));
@@ -530,6 +715,30 @@ const corpus = loadCorpus(engine);
   queue(10);
   const dodge = await rolls.rollDefense(rok, 'dodge', {}, { modifier: 0 });
   ok('rollDefense dodge posts a defense card against 10', dodge.baseTarget === 10 && lastMessage().flags.shadowbase.kind === 'defense' && lastMessage().flags.shadowbase.defense === 'dodge');
+  // Ch7 Reeling (2026-10-02): below one third of maximum HP, the third rounded up. The engine halves Move (a multiplier,
+  // harshest only) and Dodge (after its other modifiers, rounding up) itself; the ONE modifier that lands outside it is
+  // an active Form's Dodge bonus, which must join the unhalved figure before the halving.
+  {
+    const R = engine.reeling;
+    const offBalance = { id: 'off-balance', name: 'Off balance', type: 'debuff', source: 'Manual / DM', isManual: true, modifiers: { ...NO, dodge: -1 } };
+    const hurt = build(template('kaelenRarr'), { statusEffects: [offBalance] });
+    const thr = hurt.stats.reeling.threshold;
+    const move = hurt.stats.currentEncumbrance.move;
+    ok('Kaelen with a -1 Dodge effect: HP 12, Dodge 9, Move 6; reels below 4 HP (one third, rounded up)', hurt.stats.currentValues.hitPoints === 12 && thr === 4 && thr === R.reelingThreshold(12) && hurt.stats.reeling.active === false && rolls.defenseTargetFor(hurt, 'dodge').target === 9 && move === 6, `${thr} / ${rolls.defenseTargetFor(hurt, 'dodge').target} / ${move}`);
+    await hurt.update({ 'system.currentHitPoints': thr });
+    ok('AT the threshold is not reeling ("at or below" is the rejected reading)', hurt.stats.reeling.active === false && rolls.defenseTargetFor(hurt, 'dodge').target === 9);
+    await hurt.update({ 'system.currentHitPoints': thr - 1 });
+    ok('below it: Dodge 9 -> 5 (halved, rounding UP) and Move 6 -> 3, both through the engine', hurt.stats.reeling.active === true && hurt.stats.reeling.dodgeBeforeReeling === 9 && hurt.stats.currentEncumbrance.dodge === 5 && rolls.defenseTargetFor(hurt, 'dodge').target === 5 && hurt.stats.currentEncumbrance.move === 3, `${hurt.stats.currentEncumbrance.dodge} / ${hurt.stats.currentEncumbrance.move}`);
+    await hurt.update({ 'system.activeLightsaberForm': 'Form III: Soresu' });
+    const form = rolls.activeFormEffectFor(hurt);
+    ok('reeling with Soresu I (+1 Dodge): the bonus joins the UNHALVED 9 and the SUM is halved - 5, the engine\'s reelingDodge over its own dodgeBeforeReeling. Added to the already halved figure (the rejected alternative) it would read 6',
+      form.dodge === 1 && R.reelingDodge(hurt.stats.reeling.dodgeBeforeReeling + form.dodge, true) === 5 && rolls.defenseTargetFor(hurt, 'dodge').target === 5 && hurt.stats.currentEncumbrance.dodge + form.dodge === 6, `${rolls.defenseTargetFor(hurt, 'dodge').target}`);
+    queue(9);
+    const reelingDodge = await rolls.rollDefense(hurt, 'dodge', {}, { modifier: 0 });
+    ok('and the Dodge roll is made against that 5', reelingDodge.baseTarget === 5, `${reelingDodge.baseTarget}`);
+    await hurt.update({ 'system.currentHitPoints': null });
+    ok('an unset current HP is FULL, not 0: no reeling, and the Form\'s +1 lands whole again (Dodge 10)', hurt.stats.reeling.active === false && rolls.defenseTargetFor(hurt, 'dodge').target === 10, `${rolls.defenseTargetFor(hurt, 'dodge').target}`);
+  }
 }
 
 // ---- 9. Force powers, techniques, crew actions -------------------------------------------------------------------
@@ -769,7 +978,14 @@ const corpus = loadCorpus(engine);
   // The dialog's headless surface.
   ok('the roll prompt content carries the label, the base target, the modifier input, the off-hand toggle and the roll modes', (() => { const html = dialogMod.renderPromptContent({ label: 'Guns (Blaster Pistol)', target: 11, dualWielding: true, rollMode: 'gm' }); return /Guns \(Blaster Pistol\)/.test(html) && /11/.test(html) && /name="modifier"/.test(html) && /name="offHand"/.test(html) && /name="rollMode"/.test(html) && /value="gm" selected/.test(html); })());
   ok('without dual wielding the off-hand toggle is absent', !/name="offHand"/.test(dialogMod.renderPromptContent({ label: 'x', target: 10, dualWielding: false })));
-  ok('readPromptForm reads the three answers', JSON.stringify(dialogMod.readPromptForm({ elements: { modifier: { value: '-2' }, offHand: { checked: true }, rollMode: { value: 'blind' } } })) === JSON.stringify({ modifier: -2, offHand: true, rollMode: 'blind' }));
+  ok('readPromptForm reads the four answers (Past 1/2D absent from the form reads false)', JSON.stringify(dialogMod.readPromptForm({ elements: { modifier: { value: '-2' }, offHand: { checked: true }, rollMode: { value: 'blind' }, pastHalfDamage: { checked: true } } })) === JSON.stringify({ modifier: -2, offHand: true, rollMode: 'blind', pastHalfDamage: true })
+    && JSON.stringify(dialogMod.readPromptForm({ elements: { modifier: { value: '-2' }, offHand: { checked: true }, rollMode: { value: 'blind' } } })) === JSON.stringify({ modifier: -2, offHand: true, rollMode: 'blind', pastHalfDamage: false }));
+  ok('a Damage prompt handed a paired range carries the Past 1/2D switch (unticked) and lists the standing halvings; handed neither it carries neither (every other prompt is as it was)', (() => {
+    const withRange = dialogMod.renderPromptContent({ label: 'x', target: null, damage: '3d', halvings: [{ id: 'training-gas', label: 'Training' }], halfDamageRange: '100/400' });
+    const without = dialogMod.renderPromptContent({ label: 'x', target: null, damage: '3d' });
+    return /name="pastHalfDamage"/.test(withRange) && !/name="pastHalfDamage"[^>]*checked/.test(withRange) && withRange.includes('Past 1/2D (100 yd)') && /Halved after the roll/.test(withRange) && /Training/.test(withRange)
+      && !/pastHalfDamage/.test(without) && !/Halved after the roll/.test(without);
+  })());
   // The shim carries an AppV2 layer since U05 (tools/foundry-shim-apps.mjs); the guard is probed with DialogV2 hidden.
   ok('headless: with DialogV2 absent the prompt says so instead of guessing', await (async () => {
     const api = foundry.applications.api;

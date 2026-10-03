@@ -1380,6 +1380,11 @@
       "Riders": "Riders",
       "ArmorDivisor": "Armor divisor",
       "MinimumApplied": "(minimum 1; rolled {raw})",
+      "Halved": "Halved",
+      "HalvedShot": "halved {text}",
+      "HalvedAfterRoll": "Halved after the roll",
+      "PastHalfDamage": "Past 1/2D ({yards} yd)",
+      "PastHalfDamageHint": "The target is beyond this weapon's 1/2D ({range}). Chapter 11: roll full damage, halve it, round down - no minimum.",
       "ApplyHint": "Apply through the Tactical HUD's Damage Processor.",
       "RollDamage": "Roll damage",
       "MalfLine": "Malf {malf}",
@@ -2296,6 +2301,7 @@
       "Title": "World update to species-package revision {revision}",
       "Summary": "{count} actor(s) in this world were brought to what the website gives a saved character on load (revision {revision}).",
       "MarkedOnly": "{count} of them only had their racial rows marked as their species' own (no trait added, removed or repriced).",
+      "Unchanged": "{count} of them needed no change at all: nothing in this revision applies to their species, so only the revision was recorded.",
       "Failed": "Could not update: {names}. They stay below the revision and will be tried again when the world next loads.",
       "Notify": "ShadowBase: {count} actor(s) updated to species-package revision {revision}. The details are in chat (GM only)."
     }

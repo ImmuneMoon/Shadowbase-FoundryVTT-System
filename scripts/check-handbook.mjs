@@ -11,7 +11,7 @@
 //   3. layout B: per chapter, pages = h2 count + 1 Overview when prose precedes the
 //      first h2 (171 today: 149 h2 + 22 overviews; Ch7 and Ch19 open on an h2);
 //      page names are the h2 headings in order; every page carries its LevelDB key;
-//   4. every heading the index lists (1466) is in handbook-map.json for its chapter,
+//   4. every heading the index lists (1467) is in handbook-map.json for its chapter,
 //      in order, pointing at a page of that entry, with an in-page anchor that exists
 //      as an `id` in that page's HTML (h2 pages resolve to the page itself);
 //   5. every sidecar table (279) is rendered exactly once, at its marker;
@@ -30,6 +30,15 @@
 // Downtime" pages, Ch1 "Eating Well" / "Day, Night, and Watches" / "Rest and
 // Recovery", Ch19 "Regional Fare" and its table), each traced to its fix-log
 // addendum. The per-chapter measured pins above held throughout.
+// The heading total moved again on 2026-10-03, 1466 -> 1467: the website's
+// 2026-09-29..10-03 book sync (631ebe9) added ONE heading, Ch7 "Reeling" (level 4,
+// between "Major Wounds" and "Crippling Injuries", on the Injury page - below one
+// third of HP, Move and Dodge halved). It is named below, in its place, so the
+// total cannot be met by some other heading. Pages (171) and tables (279) did
+// not move: the round's other text (the range table's "1 yard or less" and "70
+// yards" rows, past 1/2D, the senses wording, a lit lightsaber's light,
+// Meditation's FP recovery, the calendar's holidays, the Miraluka lore) landed
+// inside sections and tables that already existed.
 //
 // THE REJECTED ALTERNATIVE, against the app's own code path: one page per
 // chapter (layout A). Ch19 is 367 headings and 921 sections; a 171-page
@@ -52,6 +61,10 @@
 //   - 'the Empire' added to ERA_ALLOWED_PHRASES -> "bare ... still fail" + "load-bearing" (the four "the Empire" entries)
 //   - 'old Empire' added to ERA_ALLOWED_PHRASES (the rejected alternative) -> "bare ... still fail" + "load-bearing"
 //   - 'see Chapter 3' added -> "quotes a Chapter N link" (+ stale, load-bearing)
+//   2026-10-03, restored byte-identical:
+//   - handbook/handbook-map.json: both "Reeling" entries renamed -> "ch07-combat: map lists the index's 55 headings in
+//     order", "byHeading resolves every heading name" and "the new heading is Ch7 \"Reeling\"" (the total alone, still
+//     1467, would not have noticed)
 //
 //   node scripts/check-handbook.mjs
 
@@ -160,7 +173,19 @@ ok('page total equals ARCHITECTURE §8\'s 171', pagesTotal === 171, `${pagesTota
 const indexHeadings = index.chapters.reduce((n, c) => n + c.headings.length, 0);
 const mappedHeadings = Object.values(map.chapters).reduce((n, m) => n + m.headings.length, 0);
 ok(`headings mapped equals the index total (${indexHeadings})`, mappedHeadings === indexHeadings, `${mappedHeadings}`);
-ok('1466 headings mapped (ARCHITECTURE §9)', mappedHeadings === 1466, `${mappedHeadings}`);
+ok('1467 headings mapped (ARCHITECTURE §9)', mappedHeadings === 1467, `${mappedHeadings}`);
+// The 1467th (2026-10-03): Ch7 "Reeling", a level-4 heading between "Major Wounds" and "Crippling Injuries", resolving to
+// an anchor on the same page as its neighbours - so the HUD's handbook browser and "Open in Journal" land on the rule.
+{
+  const ch7 = map.chapters['ch07-combat'];
+  const names = (ch7?.headings ?? []).map((h) => h.heading);
+  const at = names.indexOf('Reeling');
+  const hit = ch7?.byHeading?.Reeling;
+  const page = byChapter.get('ch07-combat')?.pages.find((p) => p._id === hit?.pageId);
+  ok('the new heading is Ch7 "Reeling": level 4, between "Major Wounds" and "Crippling Injuries", anchored in the page that states the rule',
+    at > 0 && names[at - 1] === 'Major Wounds' && names[at + 1] === 'Crippling Injuries' && hit?.level === 4 && hit.anchor === 'reeling' && hit.pageId === ch7.byHeading['Major Wounds']?.pageId
+      && !!page && page.text.content.includes(' id="reeling"') && /below one third of their maximum HP/.test(page.text.content), JSON.stringify(hit ?? null));
+}
 ok('279 tables rendered (ARCHITECTURE §9)', tablesRendered === 279 && tablesTotal === 279, `${tablesRendered} rendered of ${tablesTotal}`);
 ok('no `**` markup survives rendering', doubleStar === 0, `${doubleStar} pages`);
 ok('chapter links present and every one names an entry', linksTotal > 400, `${linksTotal}`);

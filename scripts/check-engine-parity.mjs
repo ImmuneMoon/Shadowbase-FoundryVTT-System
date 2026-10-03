@@ -25,7 +25,11 @@
 // the entry, and the four exports the built code calls on every prepare or
 // roll must be there: applyLoadMigrations, calculateMeleeWeaponStats,
 // calculateLightsaberStats (U01's extractions) and the weaponAttackSkill
-// namespace with attackSkillFor / attackHitBonus (module/rolls.mjs §5.1).
+// namespace with attackSkillFor / attackHitBonus (module/rolls.mjs §5.1); and,
+// since the website's 2026-09-29..10-03 round, reeling.reelingDodge,
+// launcherWeapons.firesExplosivePayload, the postRollHalving reducer and
+// blasterGasGrades.loadedGasHalvings (module/rolls.mjs: a Dodge under Reeling,
+// the launcher test, a Damage roll's Ch11 halvings).
 // Mutations fired for these (each turned the check red, then was restored):
 // BUILD-INFO.entry pointed at a scratchpad path; one `export` line appended to
 // tools/engine-entry.ts without a rebuild.
@@ -108,6 +112,12 @@ for (const name of ['applyLoadMigrations', 'calculateMeleeWeaponStats', 'calcula
 }
 ok('bundle exports the weaponAttackSkill namespace with attackSkillFor and attackHitBonus (ARCHITECTURE.md §5.1)', E.weaponAttackSkill && typeof E.weaponAttackSkill.attackSkillFor === 'function' && typeof E.weaponAttackSkill.attackHitBonus === 'function', `weaponAttackSkill: ${E.weaponAttackSkill ? Object.keys(E.weaponAttackSkill).join(',') : 'undefined'}`);
 ok('the entry file itself lists weaponAttackSkill (the bundle export is not an accident of a variant entry)', /export \* as weaponAttackSkill from '@\/lib\/weapon-attack-skill'/.test(readFileSync(ENTRY, 'utf8')));
+// The website's 2026-09-29..10-03 round (631ebe9): the three rule homes module/rolls.mjs calls for a Dodge under Ch7's
+// Reeling, for the launcher test and for a Damage roll's Ch11 halvings - each a bundle export, never a restatement.
+ok('bundle exports reeling.reelingDodge (Ch7: the Form\'s Dodge bonus joins the unhalved figure)', typeof E.reeling?.reelingDodge === 'function', `reeling: ${E.reeling ? Object.keys(E.reeling).join(',') : 'undefined'}`);
+ok('bundle exports launcherWeapons.firesExplosivePayload (Ch11: the ONE launcher test)', typeof E.launcherWeapons?.firesExplosivePayload === 'function', `launcherWeapons: ${E.launcherWeapons ? Object.keys(E.launcherWeapons).join(',') : 'undefined'}`);
+ok('bundle exports postRollHalving (resolveDamageRoll, damageRollHalvings, rangeForDamageSource, hasHalfDamageRange) and blasterGasGrades.loadedGasHalvings (Ch11: the Damage roll\'s halvings)',
+  ['resolveDamageRoll', 'damageRollHalvings', 'rangeForDamageSource', 'hasHalfDamageRange'].every((n) => typeof E.postRollHalving?.[n] === 'function') && typeof E.blasterGasGrades?.loadedGasHalvings === 'function', `postRollHalving: ${E.postRollHalving ? Object.keys(E.postRollHalving).join(',') : 'undefined'}`);
 
 // ---- corpus ----------------------------------------------------------------
 const unwrap = (t) => (typeof t?.data === 'function' ? t.data() : (t?.data ?? t));
@@ -188,7 +198,7 @@ for (const c of corpus) {
   compared++;
 }
 ok('every corpus entry was compared', compared === corpus.length, `${compared}/${corpus.length}`);
-ok('CalculatedStatsResult has the website\'s 31 keys', (resultKeys ?? []).length >= 31, `got ${(resultKeys ?? []).length}`);
+ok('CalculatedStatsResult has the website\'s 32 keys (31 until the 2026-10-02 round added `reeling`)', (resultKeys ?? []).length >= 32 && (resultKeys ?? []).includes('reeling'), `got ${(resultKeys ?? []).length}`);
 ok(`bundle and website agree on every key of every corpus entry (${compared} entries x ${(resultKeys ?? []).length} keys)`, diffs.length === 0, diffs.slice(0, 5).join('\n    '));
 
 // ---- the rejected alternative: the husk's Dodge -----------------------------

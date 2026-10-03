@@ -5355,7 +5355,7 @@ var advantagesLibrary = [
     name: "Force Sight (Miraluka Specialized Vision)",
     category: "Racial",
     points: 0,
-    description: `Miraluka do not perceive light, but instead "see" via their connection to the Force. This unique form of perception allows them to bypass many conventional visual obstructions such as darkness, smoke, and even some non-Force-resistant solid objects at close range (at the GM's discretion, based on the Miraluka's Force sensitivity). Effect for Miraluka: Miraluka characters possess an inherent and passive form of Force Sight as a racial trait. They always perceive the world through the Force and intrinsically possess 360-degree vision. For Miraluka, using their Force Sight does not cost Force Points (FP). Purchasing levels in the Force Sight Power (as detailed in Chapter 8: Force Powers) for a Miraluka primarily enhances the range and specific Force-related perceptive abilities of their natural Force Sight, rather than granting the basic ability to "see" through the Force. This unique vision allows for unparalleled situational awareness, making them superb scouts, spies, or tactical commanders, regardless of loyalty.`
+    description: 'Miraluka do not perceive light, but instead "see" via their connection to the Force. This unique form of perception allows them to bypass many conventional visual obstructions such as darkness, smoke, and, as their Miralukan Force Sight grows, solid objects at close range: living beings through thin objects within 5 yards at level 2, and anything through heavier objects within 10 yards at level 3 (Chapter 8). Effect for Miraluka: Miraluka characters possess an inherent and passive form of Force Sight as a racial trait. They always perceive the world through the Force and intrinsically possess 360-degree vision. For Miraluka, using their Force Sight does not cost Force Points (FP). Purchasing levels in the Force Sight Power (as detailed in Chapter 8: Force Powers) for a Miraluka primarily enhances the range and specific Force-related perceptive abilities of their natural Force Sight, rather than granting the basic ability to "see" through the Force. This unique vision allows for unparalleled situational awareness, making them superb scouts, spies, or tactical commanders, regardless of loyalty.'
   },
   {
     name: "Field Detection (Miraluka)",
@@ -5851,7 +5851,7 @@ var advantagesLibrary = [
     name: "Infravision (Cybernetic)",
     category: "Cybernetic",
     points: 0,
-    description: "Thermal imaging. Costs 0 points if replacing normal vision entirely, or 10 points to have it as a switchable overlay.",
+    description: "Thermal imaging. You see heat: ignore darkness penalties when spotting or attacking anything warmer than its surroundings -- living beings, running engines, a recent blaster bolt. It does not help you read, see colour, or pick out cold objects. Costs 0 points if replacing normal vision entirely, or 10 points to have it as a switchable overlay.",
     levels: [
       { level: 1, points: 0, description: "Replacing normal vision" },
       { level: 2, points: 10, description: "Switchable overlay" }
@@ -6366,7 +6366,7 @@ var advantagesLibrary = [
   {
     name: "Night Vision",
     category: "Physical",
-    description: "You can see in low-light conditions, reducing darkness penalties. This is common among nocturnal species. Cost range: 1 point/level.",
+    description: "You can see in low-light conditions: each level cancels 1 point of darkness penalty, so Night Vision 5 turns a -5 into 0 and a -9 into -4. This is common among nocturnal species. Cost range: 1 point/level.",
     // Ch4 states 1 point/level and sets no cap; Ch18's Jawa template takes
     // Night Vision 5, so the ladder runs at least that far.
     levels: [
@@ -6511,7 +6511,7 @@ var advantagesLibrary = [
     name: "Infravision",
     category: "Physical",
     points: 10,
-    description: "See heat signatures. Natural biological thermal sight."
+    description: "See heat signatures. Natural biological thermal sight. You see heat: ignore darkness penalties when spotting or attacking anything warmer than its surroundings -- living beings, running engines, a recent blaster bolt. It does not help you read, see colour, or pick out cold objects."
   },
   {
     name: "Innate Attack (Sonic Bellow)",
@@ -6751,8 +6751,8 @@ function harshestMoveMultiplier(...candidates) {
 }
 function applyMoveMultiplier(basicMove, flatBonus, multiplier) {
   const base = (Number(basicMove) || 0) + (Number(flatBonus) || 0);
-  const scaled2 = base * (Number.isFinite(multiplier) ? multiplier : MULTIPLIER_IDENTITY);
-  return Math.max(1, Math.round(scaled2));
+  const scaled3 = base * (Number.isFinite(multiplier) ? multiplier : MULTIPLIER_IDENTITY);
+  return Math.max(1, Math.round(scaled3));
 }
 
 // src/lib/trait-specifier.ts
@@ -17602,7 +17602,7 @@ function resolveTypedDR(base, typed, attack) {
   return { dr: base + applied.reduce((sum, t) => sum + t.bonus, 0), applied };
 }
 
-// ../../Claude Code/ShadowBase/Shadowbase-FoundryVTT-System/tools/stubs/firebase.js
+// ../Shadowbase-FoundryVTT-System/tools/stubs/firebase.js
 var FieldValue = class {
 };
 var never = (name) => () => {
@@ -19832,7 +19832,7 @@ var SENSORY_IMPLANTS = [
     effect: "Infravision",
     slotType: "Eye",
     location: "Face",
-    description: "Allows the user to see in total darkness by detecting heat signatures.",
+    description: "Thermal imaging, working as the Infravision advantage (Chapter 4).",
     notes: "Materials: Plastoid: 0.08 lbs (3 cr), Silicon: 0.05 lbs (3 cr).",
     materials: [{ name: "Plastoid", amount: 0.08 }, { name: "Silicon", amount: 0.05 }]
   },
@@ -24100,11 +24100,11 @@ var storedFigures = (item) => ({
   weight: Number(item.weight) || 0,
   cost: Number(item.cost) || 0
 });
-var totals = (pieces, scaled2 = storedFigures) => pieces.reduce(
+var totals = (pieces, scaled3 = storedFigures) => pieces.reduce(
   (acc, p) => {
     for (const item of p.items ?? []) {
       const q = Number(item.quantity) || 1;
-      const f = scaled2(item);
+      const f = scaled3(item);
       acc.weight += (Number(f.weight) || 0) * q;
       acc.cost += (Number(f.cost) || 0) * q;
     }
@@ -24113,7 +24113,7 @@ var totals = (pieces, scaled2 = storedFigures) => pieces.reduce(
   { weight: 0, cost: 0 }
 );
 var RECOGNITION_THRESHOLD = 2;
-function recogniseSets(armor10, hitLocations2, scaled2) {
+function recogniseSets(armor10, hitLocations2, scaled3) {
   const owned = armor10 ?? [];
   const out = [];
   for (const set of handbookSets()) {
@@ -24149,7 +24149,7 @@ function recogniseSets(armor10, hitLocations2, scaled2) {
       applicableCount: applicable.length,
       ownedCount,
       equippedCount,
-      ...totals(pieces, scaled2),
+      ...totals(pieces, scaled3),
       note: set.note,
       missingIds: []
     });
@@ -24159,7 +24159,7 @@ function recogniseSets(armor10, hitLocations2, scaled2) {
   );
 }
 var WORN_GEAR_SET_ID = "worn-gear";
-function unmatchedWornGear(armor10, hitLocations2, shown, scaled2) {
+function unmatchedWornGear(armor10, hitLocations2, shown, scaled3) {
   const accounted = new Set(
     shown.flatMap((s) => s.pieces.flatMap((p) => (p.items ?? []).map((i) => i.id)))
   );
@@ -24188,12 +24188,12 @@ function unmatchedWornGear(armor10, hitLocations2, shown, scaled2) {
     applicableCount: applicable.length,
     ownedCount: applicable.length,
     equippedCount: applicable.length,
-    ...totals(pieces, scaled2),
+    ...totals(pieces, scaled3),
     note: "Worn items that are not part of a set above. Customise to save them as one.",
     missingIds: []
   };
 }
-function resolveCustomSet(record, armor10, hitLocations2, scaled2) {
+function resolveCustomSet(record, armor10, hitLocations2, scaled3) {
   const owned = armor10 ?? [];
   const byId = new Map(owned.map((a) => [a.id, a]));
   const missingIds = [];
@@ -24227,7 +24227,7 @@ function resolveCustomSet(record, armor10, hitLocations2, scaled2) {
     applicableCount: applicable.length,
     ownedCount: applicable.length,
     equippedCount: applicable.filter((p) => p.equipped).length,
-    ...totals(pieces, scaled2),
+    ...totals(pieces, scaled3),
     missingIds
   };
 }
@@ -24289,6 +24289,35 @@ function applySetEquip(armor10, memberIds, equip) {
     displaced
   };
 }
+
+// src/lib/reeling.ts
+var reeling_exports = {};
+__export(reeling_exports, {
+  REELING_DESCRIPTION: () => REELING_DESCRIPTION,
+  REELING_MOVE_MULTIPLIER: () => REELING_MOVE_MULTIPLIER,
+  isReeling: () => isReeling,
+  reelingDodge: () => reelingDodge,
+  reelingLabel: () => reelingLabel,
+  reelingThreshold: () => reelingThreshold
+});
+var REELING_MOVE_MULTIPLIER = HALVED;
+function reelingThreshold(maxHitPoints) {
+  return Math.ceil(maxHitPoints / 3);
+}
+function isReeling(currentHitPoints, maxHitPoints) {
+  if (currentHitPoints === null || currentHitPoints === void 0) return false;
+  const current2 = Number(currentHitPoints);
+  const max = Number(maxHitPoints);
+  if (!Number.isFinite(current2) || !Number.isFinite(max) || max <= 0) return false;
+  return current2 < reelingThreshold(max);
+}
+function reelingDodge(dodge, reeling) {
+  return reeling ? Math.ceil(dodge / 2) : dodge;
+}
+function reelingLabel(isDroid) {
+  return isDroid ? "Damaged systems (below 1/3 HP)" : "Reeling (below 1/3 HP)";
+}
+var REELING_DESCRIPTION = "Move and Dodge halved until healed to one third";
 
 // src/hooks/use-sheet-preferences.ts
 var STORAGE_KEY = "shadowbase.sheet-preferences";
@@ -24935,6 +24964,7 @@ var WEAPON_MOD_DATA = [
     weight: 1,
     notes: "Increases the weapon's Half-Damage Range (1/2D) by 25%.",
     rangeMult: 1.25,
+    rangeScope: "half-damage",
     materials: [
       { name: "Durasteel", amount: 0.8 },
       { name: "Clari-crystalline", amount: 0.2 }
@@ -25021,8 +25051,9 @@ var WEAPON_MOD_DATA = [
     category: "Launch Tube / Projector",
     cost: 350,
     weight: 2,
-    notes: "Mag-field launches grenades further. Range +25%.",
+    notes: "Mag-field launches grenades further. Range +25% (both 1/2D and Max).",
     rangeMult: 1.25,
+    rangeScope: "both",
     materials: [
       { name: "Durasteel", amount: 1 },
       { name: "Silicon", amount: 1 }
@@ -25445,7 +25476,8 @@ function tallyRangedMods(blaster, rows) {
     energyResBonus: 0,
     damageBonus: 0,
     accuracyBonus: 0,
-    rangeMult: 1,
+    halfDamageRangeMult: 1,
+    maxRangeMult: 1,
     rofOverride: null,
     cpsMod: 0,
     recoilMod: 0,
@@ -25469,7 +25501,10 @@ function tallyRangedMods(blaster, rows) {
     t.energyResBonus += Number(row2?.energyResBonus) || 0;
     t.damageBonus += Number(def.damageBonus) || 0;
     t.accuracyBonus += Number(def.accuracyBonus) || 0;
-    if (def.rangeMult) t.rangeMult *= def.rangeMult;
+    if (def.rangeMult && def.rangeScope) {
+      t.halfDamageRangeMult *= def.rangeMult;
+      if (def.rangeScope === "both") t.maxRangeMult *= def.rangeMult;
+    }
     if (def.rofOverride) t.rofOverride = def.rofOverride;
     t.cpsMod += Number(def.cpsMod) || 0;
     t.recoilMod += Number(def.recoilMod) || 0;
@@ -26649,6 +26684,7 @@ var getCalculatedStats = (values, options = {}) => {
   const finalSpent = Math.round(rawSpentTotal);
   const racialBudgetBonus = totalBudgetGrant(values.advantages);
   const combatStats = calculateCombatStats(values, primaryAttributes, globalModifiers);
+  const reeling = isReeling(values.currentHitPoints, currentValues.hitPoints);
   const encumbrance = calculateEncumbranceDetails(
     totalEquipmentWeight,
     values,
@@ -26657,7 +26693,7 @@ var getCalculatedStats = (values, options = {}) => {
     globalModifiers.carryCapacity,
     innateDrBonus,
     globalModifiers.move,
-    [...traitMoveMultipliers(allTraits), globalModifiers.moveMultiplier],
+    [...traitMoveMultipliers(allTraits), globalModifiers.moveMultiplier, ...reeling ? [REELING_MOVE_MULTIPLIER] : []],
     // Ch9's Move rule for the posture in force - full when standing or
     // when the preference is off, the same `postureInForce` the Active
     // Effects entry above was built from.
@@ -26678,6 +26714,21 @@ var getCalculatedStats = (values, options = {}) => {
       // Not dismissable: it follows the load, so it would return instantly.
       isGear: true,
       modifiers: { ...noMods, move: enc.move - freeMove, dodge: enc.dodge - freeDodge }
+    });
+  }
+  const dodgeBeforeReeling = encumbrance.currentEncumbrance.dodge;
+  encumbrance.currentEncumbrance.dodge = reelingDodge(dodgeBeforeReeling, reeling);
+  if (reeling) {
+    activeStatusEffects.push({
+      id: "reeling",
+      name: reelingLabel(Boolean(values.isDroid)),
+      type: "debuff",
+      source: "Chapter 7",
+      description: REELING_DESCRIPTION,
+      isManual: false,
+      // Not dismissable: it follows current HP, so it would return instantly.
+      isGear: true,
+      modifiers: { ...noMods }
     });
   }
   const dynamicHitLocations = encumbrance.dynamicHitLocations.map((loc) => {
@@ -26819,6 +26870,7 @@ var getCalculatedStats = (values, options = {}) => {
     dualWielding: dualWieldingResult,
     ...combatStats,
     ...encumbrance,
+    reeling: { active: reeling, threshold: reelingThreshold(currentValues.hitPoints), dodgeBeforeReeling },
     dynamicHitLocations,
     /*
               DERIVED FROM ST, WHICH IT WAS NOT. These were the literal strings
@@ -27638,7 +27690,7 @@ var species_package_revision_exports = {};
 __export(species_package_revision_exports, {
   SPECIES_PACKAGE_REVISION: () => SPECIES_PACKAGE_REVISION
 });
-var SPECIES_PACKAGE_REVISION = 2;
+var SPECIES_PACKAGE_REVISION = 3;
 
 // src/lib/templates/custom/blank-sheet-template.ts
 var blankSheetData = {
@@ -29864,6 +29916,32 @@ var forcePowersData = [
   }
 ].sort((a, b) => a.name.localeCompare(b.name));
 
+// src/lib/species-lore.ts
+var SPECIES_LORE_LINES = {
+  Miraluka: [
+    "Homeworld: Alpheridies, in the Aborn system, hidden behind a molecular cloud called the Veil and far from the trade routes. Its red dwarf star gives light only in the infrared, and over generations the species lost its eyes. Katarr is a thriving Miraluka colony in this era; Darth Nihilus consumes it in 3952 BBY (Chapter 19).",
+    "Eye coverings: Full-blooded Miraluka cover their empty sockets with a mask, headband or veil, mostly to put sighted people at ease.",
+    "Culture: Cautious and slow to trust outsiders, Miraluka rarely settle off-world. By tradition, many infants are surrendered to the Jedi Order.",
+    "Life as their light: The Force is a Miraluka's light, and it comes from living things. Living beings stand out sharply; objects are fainter impressions. This is why Miralukan Force Sight picks out living beings through thin objects before it sees through anything else (Chapter 8).",
+    "Half-Miraluka: A child of Miraluka and near-human parents may be born with eyes. There is no template; build one with the GM."
+  ]
+};
+var speciesLoreLines = (species6) => SPECIES_LORE_LINES[species6] ?? [];
+function appendLoreLines(notes, lines) {
+  let out = typeof notes === "string" ? notes : "";
+  for (const line of lines) {
+    if (out.includes(line)) continue;
+    out += (out === "" ? "" : "\n") + line;
+  }
+  return out;
+}
+function loreLinesAdded(before, after) {
+  const was = typeof before === "string" ? before : "";
+  const now = typeof after === "string" ? after : "";
+  if (was === now) return [];
+  return Object.values(SPECIES_LORE_LINES).flat().filter((line) => now.includes(line) && !was.includes(line)).map((line) => line.slice(0, line.indexOf(":")));
+}
+
 // src/lib/templates/species/miraluka-template.ts
 var miralukaTemplate = {
   name: "Miraluka",
@@ -29907,7 +29985,7 @@ var miralukaTemplate = {
     languages: "Miralukese (Native) [0]",
     culturalFamiliarities: "Jedi Enclaves [0]",
     literacy: "Native Literacy [0]",
-    notes: "Features: Appear human but lack eyes; perceive the world through the Force. Highly sensitive to Force disturbances, making them potentially crucial in an era where the Force's balance is shifting. True Blindness applies if in a Force-null area."
+    notes: "Features: Appear human but lack eyes; perceive the world through the Force. Highly sensitive to Force disturbances, making them potentially crucial in an era where the Force's balance is shifting. True Blindness applies if in a Force-null area." + speciesLoreLines("Miraluka").map((line) => "\n" + line).join("")
   },
   portraitUrl: null
 };
@@ -33423,14 +33501,14 @@ var CLOTHING_PHASE = 1.5;
 var fromLibrary = (name, equipped, mult = 1) => {
   const row2 = ARMOR_DATA.find((a) => a.name === name);
   if (!row2) return null;
-  const scaled2 = scaledFor(row2, mult);
+  const scaled3 = scaledFor(row2, mult);
   return {
     id: crypto.randomUUID(),
     name: row2.name,
     type: row2.type,
     slot: row2.slot,
-    weight: scaled2.weight,
-    cost: scaled2.cost,
+    weight: scaled3.weight,
+    cost: scaled3.cost,
     /*
       Carried through so the render path can re-derive from the scaled weight.
       Without it calculateModifiedArmor has no material list, falls back to
@@ -37189,6 +37267,10 @@ function migrateSpeciesPackage(data, revisionOnArrival, packageFor = speciesPack
   if (!pkg) return null;
   const update = arrived < 1 ? bringToChapter18(data, pkg) : null;
   if (arrived < 2) markPackageRows(data, pkg);
+  if (arrived < 3) {
+    const lore = speciesLoreLines(pkg.name);
+    if (lore.length) data.notes = appendLoreLines(data.notes, lore);
+  }
   return update;
 }
 function bringToChapter18(data, pkg) {
@@ -37639,8 +37721,47 @@ __export(blaster_gas_grades_exports, {
   GAS_GRADE_IDS: () => GAS_GRADE_IDS,
   damageDiceCount: () => damageDiceCount,
   gasGradeEffect: () => gasGradeEffect,
-  getGasGrade: () => getGasGrade
+  getGasGrade: () => getGasGrade,
+  loadedGasHalvings: () => loadedGasHalvings
 });
+
+// src/lib/post-roll-halving.ts
+var post_roll_halving_exports = {};
+__export(post_roll_halving_exports, {
+  PAST_HALF_DAMAGE_RANGE_HALVING: () => PAST_HALF_DAMAGE_RANGE_HALVING,
+  TRAINING_GAS_HALVING: () => TRAINING_GAS_HALVING,
+  damageRollHalvings: () => damageRollHalvings,
+  hasHalfDamageRange: () => hasHalfDamageRange,
+  rangeForDamageSource: () => rangeForDamageSource,
+  resolveDamageRoll: () => resolveDamageRoll
+});
+var TRAINING_GAS_HALVING = { id: "training-gas", label: "Training" };
+var PAST_HALF_DAMAGE_RANGE_HALVING = { id: "past-half-damage-range", label: "past 1/2D" };
+function resolveDamageRoll(rolledTotal, modifier = 0, halvings = []) {
+  const beforeHalving = Math.max(1, rolledTotal + modifier);
+  let total = beforeHalving;
+  const steps = [];
+  for (const h of halvings) {
+    total = Math.floor(total / 2);
+    steps.push({ label: h.label, value: total });
+  }
+  const halvingText = steps.length ? `${beforeHalving}${steps.map((s) => ` -> ${s.value} (${s.label})`).join("")}` : "";
+  return { beforeHalving, total, steps, halvingText };
+}
+function hasHalfDamageRange(range) {
+  if (range === null || range === void 0) return false;
+  return /^\s*\d[\d,]*\s*\/\s*\d[\d,]*\s*$/.test(String(range));
+}
+function rangeForDamageSource(range, source) {
+  return source === "explosive-payload" ? null : range ?? null;
+}
+function damageRollHalvings(standing, range, pastHalfDamage) {
+  const out = [...standing ?? []];
+  if (pastHalfDamage && hasHalfDamageRange(range)) out.push(PAST_HALF_DAMAGE_RANGE_HALVING);
+  return out;
+}
+
+// src/lib/blaster-gas-grades.ts
 var GAS_GRADE_IDS = [
   "training",
   "budget",
@@ -37820,6 +37941,7 @@ function gasGradeEffect(id, damage, isHeavyClass) {
     typeSuffix: "",
     malfMod: 0,
     halveDamage: false,
+    postRollHalvings: [],
     notes: []
   };
   const g = getGasGrade(id);
@@ -37834,7 +37956,7 @@ function gasGradeEffect(id, damage, isHeavyClass) {
     }
   }
   if (g.halveDamage) {
-    notes.push(`${g.label} (${g.boltColor} bolt): roll the weapon's full damage, then halve it \u2014 round down, no minimum \u2014 and it lands as EP (Endurance), overriding the weapon's own damage type and riders.`);
+    notes.push(`${g.label} (${g.boltColor} bolt): half damage, landing as EP (Endurance) and overriding the weapon's own damage type and riders. The Damage roll halves the full roll for you \u2014 round down, no minimum, so a weak hit can deal 0.`);
   }
   if (g.surRider) {
     notes.push(`${g.label} (${g.boltColor} bolt): the bolt gains the sur (Surge) rider. Vs droids and electronics, treat the damage as ion.`);
@@ -37860,8 +37982,12 @@ function gasGradeEffect(id, damage, isHeavyClass) {
     typeSuffix: g.surRider ? " sur" : "",
     malfMod: g.malfMod,
     halveDamage: g.halveDamage,
+    postRollHalvings: g.halveDamage ? [TRAINING_GAS_HALVING] : [],
     notes
   };
+}
+function loadedGasHalvings(weapon) {
+  return gasGradeEffect(weapon?.loadedAmmunitionData?.gasGrade, String(weapon?.finalDamage ?? ""), false).postRollHalvings;
 }
 
 // src/components/character-sheet/schemas/equipment-and-weapons.ts
@@ -39841,7 +39967,9 @@ function applyLoadMigrations(data, blankSheetData2) {
   migrateRacialTraitNames(dataToLoad);
   const renamedFamiliarities = migrateCulturalFamiliarities(dataToLoad);
   migrateEnhancedDefenses(dataToLoad);
+  const notesOnArrival = String(dataToLoad.notes ?? "");
   const updatedPackage = migrateSpeciesPackage(dataToLoad, packageRevisionOnArrival);
+  const loreAdded = loreLinesAdded(notesOnArrival, dataToLoad.notes);
   const migratedLanguages = migrateLanguages(dataToLoad);
   const structuredLanguages = migrateLanguageEntries(
     dataToLoad,
@@ -39919,6 +40047,14 @@ function applyLoadMigrations(data, blankSheetData2) {
         updatedPackage.removed.length > 0 ? `Removed: ${updatedPackage.removed.join(", ")}.` : null,
         updatedPackage.budgetGranted > 0 ? `Racial traits are free; this one grants ${updatedPackage.budgetGranted} bonus Character Points.` : "Racial traits are free, so your point total is unchanged."
       ].filter(Boolean).join(" "),
+      duration: 12e3
+    });
+  }
+  if (loreAdded.length > 0) {
+    notices.push({
+      id: "species-lore",
+      title: "Species notes added",
+      description: `Chapter 18 now prints more about this species, and it was added to the end of this sheet's Notes: ${loreAdded.join(", ")}. Nothing you wrote there was changed, and no points moved. This happens once; delete any line you do not want.`,
       duration: 12e3
     });
   }
@@ -40241,9 +40377,9 @@ function reactionSourcesFor(advantages16, disadvantages16) {
     if (!sense) continue;
     if (base === "Status") explicitStatus = true;
     const traitLevel = Number(row2?.level);
-    const figure = FIGURE_IS_STATED.has(base) ? statedReactionFigure(row2?.name) : base === "Appearance" ? appearanceFigure(row2?.name, row2?.level) : PRICED_PER_LEVEL.has(base) && Number.isFinite(traitLevel) && traitLevel > 0 ? clampToCap(traitLevel) : reactionFromCost(Number(row2?.points ?? 0));
-    if (figure !== null && figure !== 0) {
-      sources.push({ trait: String(row2?.name ?? base), figure, sense, sphere: scopeOf(row2?.name, base) });
+    const figure2 = FIGURE_IS_STATED.has(base) ? statedReactionFigure(row2?.name) : base === "Appearance" ? appearanceFigure(row2?.name, row2?.level) : PRICED_PER_LEVEL.has(base) && Number.isFinite(traitLevel) && traitLevel > 0 ? clampToCap(traitLevel) : reactionFromCost(Number(row2?.points ?? 0));
+    if (figure2 !== null && figure2 !== 0) {
+      sources.push({ trait: String(row2?.name ?? base), figure: figure2, sense, sphere: scopeOf(row2?.name, base) });
     }
   }
   if (!explicitStatus) {
@@ -40369,7 +40505,22 @@ function applyCrashPhase(args) {
   };
 }
 
-// ../../Claude Code/ShadowBase/Shadowbase-FoundryVTT-System/tools/stubs/react-hook-form.js
+// src/lib/launcher-weapons.ts
+var launcher_weapons_exports = {};
+__export(launcher_weapons_exports, {
+  firesExplosivePayload: () => firesExplosivePayload
+});
+var LAUNCHER_CATEGORIES = ["Grenade Launchers", "Missile Launchers"];
+var LAUNCHER_NAME = /Launcher|Missile|Tube|Mortar|Grenade/;
+function firesExplosivePayload(weapon) {
+  const baseType = String(weapon?.baseType ?? "");
+  if (!baseType) return false;
+  if (LAUNCHER_NAME.test(baseType)) return true;
+  const category = RANGED_WEAPON_PROFILES.find((p) => p.name === baseType)?.category;
+  return LAUNCHER_CATEGORIES.includes(String(category));
+}
+
+// ../Shadowbase-FoundryVTT-System/tools/stubs/react-hook-form.js
 var never2 = (name) => () => {
   throw new Error(`react-hook-form.${name} called inside the ShadowBase engine bundle`);
 };
@@ -40560,6 +40711,21 @@ function rangedReclassification(blaster, rows) {
   return derived;
 }
 
+// src/lib/printed-range.ts
+var PAIR = /^\s*(\d[\d,]*)\s*\/\s*(\d[\d,]*)\s*$/;
+var SINGLE = /^\s*(\d[\d,]*)\s*$/;
+var figure = (text) => Number(text.replace(/,/g, ""));
+var scaled = (yards, multiplier) => multiplier === 1 ? yards : Math.floor(yards * multiplier);
+function scalePrintedRange(range, halfDamageMult = 1, maxMult = 1) {
+  const text = String(range ?? "");
+  if (halfDamageMult === 1 && maxMult === 1) return text;
+  const pair = PAIR.exec(text);
+  if (pair) return `${scaled(figure(pair[1]), halfDamageMult)}/${scaled(figure(pair[2]), maxMult)}`;
+  const single = SINGLE.exec(text);
+  if (single) return String(scaled(figure(single[1]), maxMult));
+  return text;
+}
+
 // src/hooks/use-blaster-calculations.ts
 var calculateBlasterStats = (blasterData, allMods) => {
   if (!blasterData) return null;
@@ -40584,7 +40750,6 @@ var calculateBlasterStats = (blasterData, allMods) => {
   let energyResBonus = 0;
   const notes = [];
   let modDamageBonus = 0;
-  let modRangeMult = 1;
   let modAccBonus = 0;
   let modRofOverride = null;
   let modCpsBonus = 0;
@@ -40630,7 +40795,6 @@ var calculateBlasterStats = (blasterData, allMods) => {
   energyResBonus += fittedMods.energyResBonus;
   modDamageBonus += fittedMods.damageBonus;
   modAccBonus += fittedMods.accuracyBonus;
-  modRangeMult *= fittedMods.rangeMult;
   if (fittedMods.rofOverride) modRofOverride = fittedMods.rofOverride;
   modCpsBonus += fittedMods.cpsMod;
   modRecoilBonus += fittedMods.recoilMod;
@@ -40666,7 +40830,12 @@ var calculateBlasterStats = (blasterData, allMods) => {
     finalDamage: gradedDamage,
     finalDamageType: gradedDamageType,
     finalAccuracy: finalAccuracy + modAccBonus,
-    finalHalfDamageRange: finalRange,
+    /*
+      Ch11 range mods land here. The multipliers were tallied into a local
+      and never applied, so the Focusing Emitter and the Magnetic
+      Accelerator Coils cost credits and weight and moved nothing.
+    */
+    finalHalfDamageRange: scalePrintedRange(finalRange, fittedMods.halfDamageRangeMult, fittedMods.maxRangeMult),
     finalRateOfFire: String(modRofOverride || finalRof),
     /*
       The SAME rounding as the acquisition path (blaster-common's round1,
@@ -46083,7 +46252,7 @@ var SCOPE_CHASSIS_SIZE = {
 };
 var interfaceForSize = (size) => PROSTHETIC_COMPONENTS.find((c) => c.name === `Neural Interface (${size})`);
 var POWER_CELL = () => PROSTHETIC_COMPONENTS.find((c) => /power cell/i.test(c.name));
-var scaled = (value, sm, scales) => scales ? value * getSMMultiplier(sm) : value;
+var scaled2 = (value, sm, scales) => scales ? value * getSMMultiplier(sm) : value;
 function planProstheticBuild(build) {
   const problems = [];
   const sm = Number(build.sizeModifier) || 0;
@@ -46097,8 +46266,8 @@ function planProstheticBuild(build) {
   if (chassis) {
     parts.push({
       name: chassis.name,
-      weight: scaled(chassis.weight, sm, true),
-      cost: ceilPrice(scaled(chassis.cost, sm, true)),
+      weight: scaled2(chassis.weight, sm, true),
+      cost: ceilPrice(scaled2(chassis.cost, sm, true)),
       scaled: true
     });
   }
@@ -46106,8 +46275,8 @@ function planProstheticBuild(build) {
   if (iface) {
     parts.push({
       name: iface.name,
-      weight: scaled(iface.weight, sm, iface.scalesWithSm),
-      cost: ceilPrice(scaled(iface.cost, sm, iface.scalesWithSm)),
+      weight: scaled2(iface.weight, sm, iface.scalesWithSm),
+      cost: ceilPrice(scaled2(iface.cost, sm, iface.scalesWithSm)),
       scaled: iface.scalesWithSm
     });
   } else {
@@ -48009,7 +48178,7 @@ __export(handbook_search_exports, {
   searchChapters: () => searchChapters
 });
 
-// ../../Claude Code/ShadowBase/Shadowbase-FoundryVTT-System/tools/shims/handbook-loader.ts
+// ../Shadowbase-FoundryVTT-System/tools/shims/handbook-loader.ts
 var handbook_loader_exports = {};
 __export(handbook_loader_exports, {
   clearHandbookCache: () => clearHandbookCache,
@@ -48822,6 +48991,7 @@ export {
   jumping_exports as jumping,
   language_migration_exports as languageMigration,
   language_rows_exports as languageRows,
+  launcher_weapons_exports as launcherWeapons,
   learning_gates_exports as learningGates,
   lightsaber_assembly_exports as lightsaberAssembly,
   lightsaber_class_type_exports as lightsaberClassType,
@@ -48848,6 +49018,7 @@ export {
   move_multipliers_exports as moveMultipliers,
   parsing_exports as parsing,
   part_acquisition_exports as partAcquisition,
+  post_roll_halving_exports as postRollHalving,
   posture_rules_exports as postureRules,
   pricesItself,
   prosthetic_build_exports as prostheticBuild,
@@ -48860,6 +49031,7 @@ export {
   ranged_profile_pricing_exports as rangedProfilePricing,
   ranged_weapon_profiles_exports as rangedWeaponProfiles,
   ready_to_play_exports as readyToPlay,
+  reeling_exports as reeling,
   resolveRollOutcome,
   resource_pools_exports as resourcePools,
   rollAttributes,

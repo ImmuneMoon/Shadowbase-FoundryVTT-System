@@ -27,9 +27,19 @@
 // load; the chain converges (a retired row is matched by its whole shape, an added row is skipped where its name
 // is already held, marking is exact-match).
 //
-// WHAT IT SAYS. The chain's notices (id 'species-package' names what was added and removed) go to the GM in
-// one whispered chat card. An actor that was only MARKED produces no notice - the markers move no row and no
-// point - so it is counted, not listed: an empty notice list is not "nothing happened".
+// REVISION 3 (2026-10-03) needed no code here, which is the point of running the chain rather than porting it:
+// Ch18's lore lines are appended to the notes of a saved character whose species prints any (only Miraluka
+// does), once. `notes` is a stored field, so the field diff below writes it - the chain only ever APPENDS, so
+// what the player wrote still opens the field - and its 'species-lore' notice ("Species notes added") reaches
+// the GM's card like any other. What revision 3 did change is the card's count: it is the first revision that
+// leaves MOST actors exactly as they were (every species but Miraluka), so an actor with no notice is no longer
+// always a marked one.
+//
+// WHAT IT SAYS. The chain's notices (id 'species-package' names what was added and removed, 'species-lore' the
+// lines the notes gained) go to the GM in one whispered chat card. An actor that was only MARKED produces no
+// notice - the markers move no row and no point - so it is counted, not listed: an empty notice list is not
+// "nothing happened". An actor the chain left exactly as it was (only the revision recorded) is counted apart,
+// so the card never says rows were marked where none were.
 //
 // Not touched: compendium actors (the template pack is rebuilt at the current revision), and the item
 // overrides an unlinked token keeps in its own delta (its base actor is updated).
@@ -139,17 +149,29 @@ export async function updateActor(actor) {
   return { actor: actor.name, notices, rows, fields: Object.keys(changes).map((k) => k.slice('system.'.length)) };
 }
 
-/** The GM's card: listed actors (with notices), the count of marked-only ones, and any failures. */
+/**
+ * How the updated actors divide for the card: `listed` have a notice from the chain; `marked` have none but the
+ * chain changed their rows or a stored field (the racial markers of revision 2); `unchanged` are exactly as they
+ * were - nothing in the revisions they crossed applies to them, and only the revision was recorded.
+ */
+export function reportCounts(updated = []) {
+  const listed = updated.filter((u) => u.notices.length);
+  const silent = updated.filter((u) => !u.notices.length);
+  const marked = silent.filter((u) => (u.rows?.length ?? 0) > 0 || (u.fields?.length ?? 0) > 0).length;
+  return { listed, marked, unchanged: silent.length - marked };
+}
+
+/** The GM's card: listed actors (with notices), the counts of marked-only and of unchanged ones, and any failures. */
 export function reportHtml({ revision, updated, failed }) {
   const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  const listed = updated.filter((u) => u.notices.length);
-  const quiet = updated.length - listed.length;
+  const { listed, marked, unchanged } = reportCounts(updated);
   const loc = (key, data) => globalThis.game?.i18n?.format?.(`SHADOWBASE.WorldUpdate.${key}`, data) ?? key;
   const items = listed.map((u) => `<li><strong>${esc(u.actor)}</strong>: ${u.notices.map((n) => esc([n.title, n.description].filter(Boolean).join(' — '))).join('; ')}</li>`).join('');
   return `<div class="shadowbase sb-world-update"><h3>${esc(loc('Title', { revision }))}</h3>`
     + `<p>${esc(loc('Summary', { count: updated.length, revision }))}</p>`
     + (items ? `<ul>${items}</ul>` : '')
-    + (quiet ? `<p>${esc(loc('MarkedOnly', { count: quiet }))}</p>` : '')
+    + (marked ? `<p>${esc(loc('MarkedOnly', { count: marked }))}</p>` : '')
+    + (unchanged ? `<p>${esc(loc('Unchanged', { count: unchanged }))}</p>` : '')
     + (failed.length ? `<p>${esc(loc('Failed', { names: failed.map((f) => `${f.actor} (${f.error})`).join(', ') }))}</p>` : '')
     + '</div>';
 }

@@ -298,4 +298,31 @@ const settle = () => new Promise((r) => setTimeout(r, 0));
   ok('toggleStatus on a non-stun id adds a manual stored effect carrying the status', actor.effects.some((e) => isStatusEffect(e) && effects.hasStatus(e, 'shock')));
 }
 
+// ---- Ch7 Reeling (2026-10-02): a DERIVED card, like Stunned and Encumbered - never a stored row -------------------------------------
+// The engine lists "Reeling (below 1/3 HP)" among the active effects while current HP is below one third of the
+// maximum, with an EMPTY bag (the Move and Dodge halves are applied in its derivation - a bag would state both
+// twice) and isGear (not dismissable: it follows current HP and would return at once). Nothing here stores it, so
+// nothing reaches an ActiveEffect, the sheet's statusEffects or an export; a droid reads "Damaged systems".
+{
+  const cardsOf = (actor) => actor.system.derived.activeStatusEffects.filter((c) => c.id === 'reeling');
+  const organic = build([]);
+  const droid = build([], { isDroid: true });
+  ok('at full (unset) HP nobody reels: no card', cardsOf(organic).length === 0 && organic.system.derived.reeling.active === false && cardsOf(droid).length === 0);
+  for (const [actor, label] of [[organic, engine.reeling.reelingLabel(false)], [droid, engine.reeling.reelingLabel(true)]]) {
+    const threshold = actor.system.derived.reeling.threshold;
+    const moveBefore = actor.system.derived.currentEncumbrance.move;
+    const dodgeBefore = actor.system.derived.currentEncumbrance.dodge;
+    await actor.update({ 'system.currentHitPoints': threshold - 1 });
+    const cards = cardsOf(actor);
+    const card = cards[0] ?? {};
+    ok(`${label}: below one third of HP the engine lists exactly one card - a debuff from Chapter 7, isGear, with an empty bag`, cards.length === 1 && card.name === label && card.type === 'debuff' && card.source === 'Chapter 7' && card.isGear === true && card.isManual === false && !engine.hasAnyModifier(card.modifiers), JSON.stringify(card).slice(0, 200));
+    ok(`${label}: and still halves Move and Dodge (in the derivation, not through the card's bag)`, actor.system.derived.currentEncumbrance.dodge === Math.ceil(dodgeBefore / 2) && actor.system.derived.currentEncumbrance.move < moveBefore, `dodge ${dodgeBefore} -> ${actor.system.derived.currentEncumbrance.dodge}, move ${moveBefore} -> ${actor.system.derived.currentEncumbrance.move}`);
+    ok(`${label}: it is derived, not stored - no ActiveEffect, no row on the sheet, nothing in the export, nothing to dismiss`, effects.derivedEffects(actor).some((e) => e.id === 'reeling') && actor.effects.size === 0 && actorToSheet(actor).statusEffects.length === 0
+      && !JSON.stringify(actor.exportSheet()).includes(label) && effects.findEffect(actor, 'reeling') === null && (await effects.dismissEffect(actor, 'reeling')) === null && cardsOf(actor).length === 1);
+    await actor.update({ 'system.currentHitPoints': threshold });
+    ok(`${label}: healed back to one third, the card goes`, cardsOf(actor).length === 0 && actor.system.derived.currentEncumbrance.dodge === dodgeBefore);
+  }
+  ok('the two labels differ (a droid "reels the same way" under its own name)', engine.reeling.reelingLabel(true) !== engine.reeling.reelingLabel(false) && /Damaged systems/.test(engine.reeling.reelingLabel(true)));
+}
+
 report(`${ROWS.length} producer rows, ${corpus.length} corpus entries (${corpusRows} stored rows), ${cfgIds.length} statuses`);

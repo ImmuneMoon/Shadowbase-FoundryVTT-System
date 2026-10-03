@@ -82,6 +82,8 @@
 .sb-chat-card__dice { font-family: var(--font-mono, ui-monospace, monospace); color: var(--sb-card-muted); }
 .sb-chat-card__muted { color: var(--sb-card-muted); }
 .sb-chat-card__total { font-size: 1.15rem; color: var(--sb-card-destructive); }
+/* Ch11's post-roll halvings, step by step: "11 -> 5 (Training) -> 2 (past 1/2D)". */
+.sb-chat-card__halved { font-family: var(--font-mono, ui-monospace, monospace); }
 
 .sb-chat-card__result { font-weight: 700; white-space: pre-wrap; }
 .sb-chat-card__result-line { display: block; }
@@ -168,5 +170,8 @@
 .sb-roll-dialog .sb-roll-dialog__label { margin: 0 0 0.25rem; color: var(--sb-card-primary, hsl(199 89% 48%)); }
 .sb-roll-dialog .sb-roll-dialog__base { margin: 0 0 0.5rem; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75; }
 .sb-roll-dialog .sb-roll-dialog__malf { margin: 0 0 0.5rem; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; color: hsl(var(--accent, 38 92% 50%)); }
+/* Ch11's post-roll halvings on a Damage prompt (roll-button.tsx "Halved after the roll"): the standing ones as facts, then the Past 1/2D switch. */
+.sb-roll-dialog .sb-roll-dialog__halved { margin: 0.5rem 0 0.15rem; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: hsl(var(--destructive, 0 60% 50%)); }
+.sb-roll-dialog .sb-roll-dialog__halving { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin: 0.15rem 0; font-size: 0.75rem; }
 .sb-roll-dialog .form-group { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin: 0.35rem 0; }
 .sb-roll-dialog input[type="number"], .sb-roll-dialog select { max-width: 9rem; }

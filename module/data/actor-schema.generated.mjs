@@ -4,11 +4,11 @@
 // DO NOT EDIT - regenerate (node tools/gen-actor-schema.mjs); check:actor-schema pins it byte-identical.
 // Every hand exception lives in the generator (its header lists them), never here.
 //
-// Source bundle: website commit 3f3072b, built 2026-09-29T00:40:57.276Z, 2294866 bytes.
+// Source bundle: website commit 631ebe9, built 2026-10-03T05:36:57.466Z, 2303516 bytes.
 // 139 zod keys -> 101 fields + legacy; skipped: characterName, lastSaved, trackPurchases, flawedBuild, drHead, drTorso, basicLift, damageThrust, damageSwing, currentValues, advantages, disadvantages, quirks, skills, parry, block, forcePowers, combatTechniques, lightsaberForms, equipment, armor, customBlasters, customMeleeWeapons, lightsabers, customExplosives, customStarships, vehicles, ammunition, weaponModifications, lightsaberModifications, armorModifications, cyberneticUpgrades, implants, cybernetics, pointsSkills, spentPoints, remainingPoints, statusEffects.
 
 /** Provenance of this file, for check:actor-schema and the smoke. */
-export const GENERATED_FROM = Object.freeze({"websiteCommit":"3f3072b","websiteDirty":false,"bundleGeneratedAt":"2026-09-29T00:40:57.276Z","bundleBytes":2294866,"schemaKeys":139});
+export const GENERATED_FROM = Object.freeze({"websiteCommit":"631ebe9","websiteDirty":false,"bundleGeneratedAt":"2026-10-03T05:36:57.466Z","bundleBytes":2303516,"schemaKeys":139});
 
 /** The website's CHARACTER_FORM_ARRAY_KEYS at generation time (23 row arrays). */
 export const ROW_ARRAY_KEYS = Object.freeze(["advantages","disadvantages","quirks","skills","forcePowers","combatTechniques","lightsaberForms","equipment","armor","customBlasters","customMeleeWeapons","lightsabers","customExplosives","customStarships","vehicles","ammunition","weaponModifications","lightsaberModifications","armorModifications","cyberneticUpgrades","implants","cybernetics","hitLocations"]);

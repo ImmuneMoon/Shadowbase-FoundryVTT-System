@@ -1,5 +1,6 @@
 {{!-- templates/chat/damage.hbs - a damage roll (use-dice-roller.ts rollDamage: Formula / Total / Rolls), the
-     website formula beside the Foundry one, riders as flavor, the minimum-1 clamp noted. Context: module/rolls.mjs rollDamage. --}}
+     website formula beside the Foundry one, riders as flavor, the minimum-1 clamp noted, and Ch11's post-roll halvings
+     as the website prints them ("Halved: 11 -> 5 (Training) -> 2 (past 1/2D)"). Context: module/rolls.mjs rollDamage. --}}
 <div class="shadowbase sb-chat-card sb-chat-card--damage" data-actor-id="{{actorId}}"{{#if itemId}} data-item-id="{{itemId}}"{{/if}}>
   <header class="sb-chat-card__header">
     <h3 class="sb-chat-card__title">{{title}}</h3>
@@ -8,6 +9,7 @@
   <dl class="sb-chat-card__lines">
     <dt>{{localize "SHADOWBASE.Roll.Formula"}}</dt><dd>{{websiteFormula}}{{#if modifierText}} <span class="sb-chat-card__muted">({{modifierText}})</span>{{/if}} <span class="sb-chat-card__muted">&rarr; {{formula}}</span></dd>
     <dt>{{localize "SHADOWBASE.Roll.Total"}}</dt><dd><strong class="sb-chat-card__total">{{total}}</strong>{{#if clamped}} <span class="sb-chat-card__muted">{{localize "SHADOWBASE.Roll.MinimumApplied" raw=rawTotal}}</span>{{/if}}</dd>
+    {{#if halvingText}}<dt>{{localize "SHADOWBASE.Roll.Halved"}}</dt><dd class="sb-chat-card__halved">{{halvingText}}</dd>{{/if}}
     <dt>{{localize "SHADOWBASE.Roll.Rolls"}}</dt><dd><span class="sb-chat-card__dice">[{{diceText}}]</span></dd>
     {{#if flavor}}<dt>{{localize "SHADOWBASE.Roll.Riders"}}</dt><dd>{{flavor}}</dd>{{/if}}
     {{#if armorDivisor}}<dt>{{localize "SHADOWBASE.Roll.ArmorDivisor"}}</dt><dd>({{armorDivisor}})</dd>{{/if}}

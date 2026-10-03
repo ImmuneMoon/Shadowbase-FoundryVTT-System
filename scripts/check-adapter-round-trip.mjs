@@ -26,7 +26,9 @@
 //   (e) a blank characterName becomes the zod default "Unnamed Character";
 //   (f) an empty characterPortrait comes back null (the exporter's own `|| null`);
 //   (g) a stored status-effect row comes back with NO_MODIFIERS spread under modifiers and phaseIndex 0.
-// AND getCalculatedStats parity on all 31 result keys. The website computes stats on a sheet whose
+// AND getCalculatedStats parity on all 32 result keys (31 until the website's 2026-10-02 round added `reeling` -
+// Ch7's "below one third of HP": { active, threshold, dodgeBeforeReeling }, the last being the figure an active
+// Form's Dodge bonus joins before the halving, module/rolls.mjs). The website computes stats on a sheet whose
 // cards have MOUNTED and written their live figures back (engine-load-path: the engine reads stored
 // final* fields); Foundry lays the same live figures over the rows on every prepare. So parity is pinned
 // against that after-mount sheet on every key of every entry, and against the PRE-mount sheet (the raw
@@ -245,9 +247,16 @@ for (const entry of corpus) {
 ok('every corpus entry built through the shim', built === corpus.length, `${built}/${corpus.length}`);
 ok('every family with a derivation reported its persisted keys (declaration read back)', ['blaster', 'armor', 'starship', 'meleeWeapon', 'lightsaber'].every((t) => persistedKeysByType[t]?.size), Object.keys(persistedKeysByType).join(','));
 ok('actorToSheet round-trips every entry (declared masks only)', structural.length === 0, `\n    ${structural.slice(0, 6).join('\n    ')}`);
-ok(`CalculatedStatsResult has the website's 31 keys`, resultKeyCount === 31, `${resultKeyCount}`);
+ok(`CalculatedStatsResult has the website's 32 keys`, resultKeyCount === 32, `${resultKeyCount}`);
+// The 32nd (2026-10-02): `reeling`. Named, so a count that stays 32 while a key is swapped for another still fails.
+{
+  const blankStats = engine.getCalculatedStats(engine.blank());
+  const shape = blankStats.reeling ?? {};
+  ok('the 32nd key is `reeling` { active, threshold, dodgeBeforeReeling }: a blank sheet (HP 10, never wounded) is not reeling, reels below 4, Dodge 8 unhalved',
+    'reeling' in blankStats && Object.keys(shape).sort().join(',') === 'active,dodgeBeforeReeling,threshold' && shape.active === false && shape.threshold === 4 && shape.dodgeBeforeReeling === 8 && shape.dodgeBeforeReeling === blankStats.currentEncumbrance.dodge, JSON.stringify(shape));
+}
 ok('points.spent agrees on every entry (persisted figures never move it)', spentEqual === corpus.length, `${spentEqual}/${corpus.length}`);
-ok('the actor\'s stats equal the engine\'s on the after-mount sheet, all 31 keys, every entry', afterMountParity === corpus.length && unexplained.length === 0, `${afterMountParity}/${corpus.length}\n    ${unexplained.slice(0, 6).join('\n    ')}`);
+ok('the actor\'s stats equal the engine\'s on the after-mount sheet, all 32 keys, every entry', afterMountParity === corpus.length && unexplained.length === 0, `${afterMountParity}/${corpus.length}\n    ${unexplained.slice(0, 6).join('\n    ')}`);
 ok('pre-mount differences are bounded to points.totalWeight / points.totalCost (stale stored figures)', unexplained.length === 0, `\n    ${unexplained.slice(0, 6).join('\n    ')}`);
 ok('the corpus contains stale stored figures, so the allowance is exercised (denominator)', staleEntries.length > 0, '0 entries - the allowance above is untested');
 ok('most entries agree with the engine pre-mount too (the allowance is the exception, not the rule)', preMountParity > corpus.length / 2, `${preMountParity}/${corpus.length}`);

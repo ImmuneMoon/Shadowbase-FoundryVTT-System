@@ -27,3 +27,12 @@ website's engine is the rules implementation, bundled into the system.
 ### Known limits (deliberate, documented)
 - No Foundry is installed on the build machine: rendering, form binding, drag-drop, chat cards, the token HUD and sockets are verified by `docs/MANUAL-TEST.md`, not by the checks. Every Foundry v13 behaviour assumed without a client is marked UNVERIFIED in the code.
 - Four website exports the sheets restate locally until the entry exports them (`equipmentPanes`, `attributeCharging` / `appliedModifier`, the blaster ammunition alias tables); the handbook loader shim's index shape; the website observations listed in `docs/REQUESTS.md` under "Fulllion".
+
+### Book sync — 2026-10-03 (website `631ebe9`)
+- **Reeling** (Chapter 7): below one third of maximum HP the sheet, the HUD and every Dodge roll show Move and Dodge halved, and the active effects list "Reeling (below 1/3 HP)" ("Damaged systems" for a droid). An active lightsaber Form's Dodge bonus joins the figure before it is halved, as on the website.
+- **Damage past 1/2D** (Chapter 11): the Damage roll of a weapon that prints a paired range opens the roll prompt, which carries a "Past 1/2D" switch; Training-grade gas halves the roll by itself; the chat card and the roll history show each halving, and a volley halves every hit. An explosive round never halves.
+- **Launchers**: the Merr-Sonn MM-s1 Mortar and the Czerka Underslung Grenade fire their loaded round like the other launchers (one test, the website's own).
+- **Range** follows a fitted Focusing Emitter or Magnetic Accelerator Coils.
+- **Species package revision 3**: a saved Miraluka gains the species' five lore lines once, with a "Species notes added" notice, on import and through the one-time world update, whose card now counts the actors it left untouched apart from the ones it marked.
+- **Handbook and compendia** rebuilt from the book as of 2026-10-03: the range table's "1 yard or less" and "70 yards" rows, Infravision, Night Vision, Force Sight, a lit lightsaber's light, Meditation, the calendar's holidays.
+- Still to be seen in a running Foundry (the checks cannot open one): the new switch in the roll prompt, the Halved lines on chat cards, the Reeling entry following a token's HP bar, and the world update on a world made from the earlier packs.

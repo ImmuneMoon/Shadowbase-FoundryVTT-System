@@ -40,7 +40,10 @@
 //     damage.applyDamage (HP down, Shock stored, the ledger and its HT prompts on
 //     the tab); pools reset; the form pipeline stores a blank pool as null
 //     (null-means-full) and a number as a number; a pin is written to
-//     system.pinnedNotifications and the pin cap (depth-1) holds;
+//     system.pinnedNotifications and the pin cap (depth-1) holds; since 2026-10-03: a weapon that prints a 1/2D
+//     asks "Past 1/2D?" on its Damage click and the answer halves every hit; a launcher's card (the Mortar) reads
+//     through the website's one launcher test; and Ch7's Reeling shows as the engine's own non-dismissable card
+//     with the halved Dodge and Move on the tiles and on Base Dodge;
 //   - HANDBOOK: the tier-1 heading filter (every word, any order) and the full
 //     text (searchChapters through the bundle, over the chapters the browser
 //     loads itself) with the website's UX rules - Enter/button at 2+, the auto
@@ -77,6 +80,17 @@
 //       -> "a gear row (isGear) shows no dismiss button"
 //   - hud.mjs modifierBadges: `val > mc.MULTIPLIER_IDENTITY` -> `val > 0`
 //       -> "a x0.5 MOVE badge is negative (red)"
+//   2026-10-03, the website's 2026-09-29..10-03 round (restored byte-identical after each):
+//   - hud.mjs isGrenadeLauncher: `rolls.firesExplosivePayload(row)` -> the old inline test (category, "Launcher", "Tube")
+//       -> "the Mortar's card is a launcher's ..." (a charges badge, gated on charges) + the source pin
+//   - rolls.mjs firesExplosivePayload: the bundle's test -> the same old test -> "the Mortar's card is a launcher's ..."
+//   - rolls.mjs resolveDamageOptions: a Damage roll never asks -> 'damage: the click asked "Past 1/2D (200 yd)" ...'
+//       (and, the unconsumed answer left in the queue, the prompt-queue legs after it)
+//   - rolls.mjs rollDamageVolley: the halvings not applied / templates/chat/volley.hbs: the "halved ..." note removed
+//       -> "... the answer halved every hit of the volley (9 -> 4)"
+//   - templates/hud/status.hbs: the dismiss guard removed again -> also "reeling ...: ... with no dismiss X"
+//   Ch7's Reeling has no code in the HUD: its legs (the derived card, the halved tiles, Base Dodge) pin the engine's
+//   figures arriving through the existing effects list and rolls.defenseTargetFor, and fail with those paths.
 //
 //   node scripts/check-hud.mjs
 
@@ -344,6 +358,21 @@ for (const key of ['rokarr', 'kaelenRarr', 'assassinDroid']) {
   ok('droid: the table is Droid DR with 13 locations', /Droid DR/.test(st) && (hud.parts.status.match(/data-action="select-location"/g) ?? []).length === 13);
   ok('droid: the header pools are HP and PP', /HP 12 \/12 PP 100 \/100/.test(text(hud.parts.header)));
 }
+// A launcher's card: the website's ONE launcher test (lib/launcher-weapons.ts, through rolls.firesExplosivePayload). The
+// inline test this file kept - a `category` the row does not carry, then "Launcher" / "Tube" - read the Mortar as an
+// ordinary gun: a charges badge, and an attack gated on charges it never has.
+{
+  const kit = engine.blasterCommon.buildTemplateBlaster({ profileName: 'Merr-Sonn MM-s1 Mortar' });
+  const sheet = { ...engine.blank(), characterName: 'Mortar crew', customBlasters: [{ ...kit.blaster, equipped: true }], weaponModifications: kit.parts };
+  const actor = shim.buildActor(adapter.sheetToActorData(sheet, { actorName: 'Mortar crew' }));
+  globalThis.game.actors.set(actor.id, actor);
+  const hud = await TacticalHud.open(actor);
+  const mortar = rolls.equippedWeapons(actor)[0];
+  const html = text(hud.parts.actions);
+  ok('the Mortar\'s card is a launcher\'s: the tube badge reads "No explosive loaded" (never a charges count) and the attack is gated on the round', !!mortar && rolls.firesExplosivePayload(mortar.rowWithDerived()) && html.includes(game.i18n.localize('SHADOWBASE.Hud.NoExplosive')) && !/\d+\/\S+ charges/.test(html)
+    && html.includes(game.i18n.format('SHADOWBASE.Roll.NoExplosiveLoaded', { weapon: mortar.displayName ?? mortar.name })) && new RegExp(`data-action="roll-attack" data-item-id="${mortar.id}" disabled`).test(hud.parts.actions), html.slice(html.indexOf('Readied Weapons'), html.indexOf('Readied Weapons') + 260));
+  ok('hud.mjs keeps no launcher test of its own (it asks module/rolls.mjs, which asks the bundle)', /const isGrenadeLauncher = \(row\) => rolls\.firesExplosivePayload\(row\);/.test(HUD_SRC) && !/includes\('Launcher'\)/.test(HUD_SRC));
+}
 
 // ---- 8. actions through the click dispatch (Rokarr) ------------------------------------------------------------------
 {
@@ -359,8 +388,14 @@ for (const key of ['rokarr', 'kaelenRarr', 'assassinDroid']) {
   ok('attack: every shot hit at 5, so pendingHits = shots and charges dropped by the shots', bowcaster.system.row.pendingHits === shots && bowcaster.system.row.currentCharges === 100 - shots);
   await hud.render();
   ok('attack: the Damage button is enabled with the hit count', hud.parts.actions.includes(`data-action="roll-weapon-damage" data-item-id="${bowcaster.id}"`) && !new RegExp(`data-action="roll-weapon-damage" data-item-id="${bowcaster.id}" disabled`).test(hud.parts.actions) && text(hud.parts.actions).includes(`Damage ×${shots}`));
+  // The Bowcaster prints a pair (200/800), so its Damage roll asks "Past 1/2D?" in the roll prompt first (Ch11, 2026-10-03).
+  let damagePrompt = null;
+  DialogV2.queueAnswer((config) => { damagePrompt = config; return { modifier: 0, offHand: false, rollMode: 'publicroll', pastHalfDamage: true }; });
+  queue(...Array.from({ length: shots }, () => 9));
   const r2 = await invoke(hud, 'roll-weapon-damage', { itemId: bowcaster.id });
   ok('damage: rolls.rollDamage posted and cleared pendingHits', r2.handled && lastMessage().flags.shadowbase.kind.startsWith('damage') && bowcaster.system.row.pendingHits === 0);
+  ok('damage: the click asked "Past 1/2D (200 yd)" in the roll prompt, and the answer halved every hit of the volley (9 -> 4)', !!damagePrompt && damagePrompt.content.includes('Past 1/2D (200 yd)') && DialogV2._queue.length === 0
+    && lastMessage().flags.shadowbase.results.length === shots && lastMessage().flags.shadowbase.results.every((x) => x.total === 4) && lastMessage().content.includes('halved 9 -&gt; 4 (past 1/2D)'), String(damagePrompt?.content).replace(/\s+/g, ' ').slice(0, 240));
   answerPrompt(); queue(9);
   await invoke(hud, 'roll-skill', { skill: 'Guns (Bowcaster)' });
   ok('skill: the card targets 13 (Guns (Bowcaster) trained)', lastMessage().flags.shadowbase.kind === 'skill' && lastMessage().flags.shadowbase.target === 13);
@@ -426,6 +461,21 @@ for (const key of ['rokarr', 'kaelenRarr', 'assassinDroid']) {
   await submit(hud, { 'system.currentHitPoints': '2', 'system.currentForcePoints': '1' });
   await invoke(hud, 'reset-all-pools');
   ok('reset-all-pools refills HP/EP/FP (not PP) for an organic', actor.system.currentHitPoints === maxHp && actor.system.currentForcePoints === actor.stats.currentValues.maxForcePoints);
+  // Ch7 Reeling (2026-10-02) on the HUD, with no code of its own here: the engine's derived card (isGear - it follows
+  // current HP, so it would return at once), the halved tiles, and the Dodge the Actions tab rolls against.
+  {
+    const threshold = actor.stats.reeling.threshold;
+    await submit(hud, { 'system.currentHitPoints': String(threshold - 1) });
+    await hud.render();
+    const reeling = text(hud.parts.status);
+    ok(`reeling (HP ${threshold - 1} of ${maxHp}, below one third): the Status tab lists the engine's "Reeling (below 1/3 HP)" card from Chapter 7, with no dismiss X`, actor.stats.reeling.active === true && /Reeling \(below 1\/3 HP\)/.test(reeling) && /Chapter 7/.test(reeling) && /Move and Dodge halved until healed to one third/.test(reeling)
+      && hud.parts.status.includes('data-effect-id="reeling"') && !hud.parts.status.includes('data-action="dismiss-effect" data-effect-id="reeling"'));
+    ok('reeling: the tiles read Dodge 5 · Move 3 (halved from 10 and 6) and the Actions tab rolls Base Dodge (5) = defenseTargetFor', rolls.defenseTargetFor(actor, 'dodge').target === 5 && /Dodge 5 Move 3 Encumbrance/.test(reeling) && /Base Dodge \(5\)/.test(text(hud.parts.actions)), reeling.slice(reeling.indexOf('Dodge'), reeling.indexOf('Dodge') + 60));
+    ok('reeling: the card is derived, never stored - there is no ActiveEffect to dismiss and the state stands', effects.derivedEffects(actor).some((e) => e.id === 'reeling' && e.isGear === true) && !effects.findEffect(actor, 'reeling') && (await effects.dismissEffect(actor, 'reeling')) === null && actor.stats.reeling.active === true);
+    await submit(hud, { 'system.currentHitPoints': '' });
+    await hud.render();
+    ok('healed (a blank pool is full): the card goes and the tiles read Dodge 10 · Move 6 again', actor.stats.reeling.active === false && !/Reeling/.test(text(hud.parts.status)) && /Dodge 10 Move 6 Encumbrance/.test(text(hud.parts.status)));
+  }
   // Add Custom -> effects.addManualEffect with the dialog's bag (the dialog's answer is what its Apply callback returns).
   const dialogHtml = renderEffectDialogContent();
   ok('the Add Custom dialog offers the 23 numeric channels, the fright-immune box and the move select', (dialogHtml.match(/name="mod\./g) ?? []).length === 25 && dialogHtml.includes('name="mod.frightImmune"') && dialogHtml.includes('name="mod.moveMultiplier"'));

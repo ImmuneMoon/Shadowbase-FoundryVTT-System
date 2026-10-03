@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T21:12:02.351Z",
+  "generatedAt": "2026-10-03T04:39:33.961Z",
   "pack": "handbook",
   "system": "shadowbase",
   "chapters": {
@@ -3846,6 +3846,13 @@
           "anchor": "major-wounds"
         },
         {
+          "heading": "Reeling",
+          "level": 4,
+          "entryId": "JJ04T5LHImjlILs1",
+          "pageId": "gpSJPkZavQOfoejV",
+          "anchor": "reeling"
+        },
+        {
           "heading": "Crippling Injuries",
           "level": 4,
           "entryId": "JJ04T5LHImjlILs1",
@@ -4224,6 +4231,13 @@
           "entryId": "JJ04T5LHImjlILs1",
           "pageId": "gpSJPkZavQOfoejV",
           "anchor": "major-wounds"
+        },
+        "Reeling": {
+          "heading": "Reeling",
+          "level": 4,
+          "entryId": "JJ04T5LHImjlILs1",
+          "pageId": "gpSJPkZavQOfoejV",
+          "anchor": "reeling"
         },
         "Crippling Injuries": {
           "heading": "Crippling Injuries",

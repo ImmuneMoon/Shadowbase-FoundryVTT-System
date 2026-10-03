@@ -560,7 +560,16 @@ const isMeleeItem = (item) => item?.type === 'meleeWeapon';
 const lower = (v) => String(v ?? '').toLowerCase();
 /** roller-window.tsx:1300-1309 - the shapes, no dead names. */
 const isStinger = (row) => lower(row.baseType).includes('stinger');
-const isGrenadeLauncher = (row) => row.category === 'Grenade Launchers' || String(row.baseType ?? '').includes('Launcher') || String(row.baseType ?? '').includes('Tube');
+/**
+ * A grenade launcher, mortar or missile tube - a weapon that fires the explosive round it was loaded with
+ * instead of rolling a damage line of its own. The website's ONE test (lib/launcher-weapons.ts
+ * firesExplosivePayload, 2026-10-03: the weapon card's and the HUD's alike), through the bundle. The HUD's
+ * old test - a `category` a blaster row does not carry, then the name fragments "Launcher" and "Tube" - is the
+ * rejected alternative: under it the Merr-Sonn MM-s1 Mortar and the Czerka Underslung Grenade attacked without
+ * a round loaded, spent charges and rolled "By Ammo" as ordinary guns (check:rolls pins both).
+ */
+export const firesExplosivePayload = (row) => engine.launcherWeapons.firesExplosivePayload(row);
+const isGrenadeLauncher = firesExplosivePayload;
 const isSlugthrower = (row) => ['slugthrower', 'ripper', 'cycler'].some((w) => lower(row.baseType).includes(w));
 
 /**
@@ -868,13 +877,57 @@ export function withDamageBonus(formula, bonus) {
 }
 
 /**
- * Roll damage (use-dice-roller.ts rollDamage, 324-346): the website formula is
+ * What a weapon's Damage roll is halved by (Ch11, Core Terms, Range), exactly as the website's Damage button
+ * is handed it (roller-window.tsx `postRollHalvings` / `halfDamageRange`; BlasterFinalStats.tsx): ranged rows
+ * only - a melee weapon or a saber prints no range and loads no gas.
+ *   standing   the halvings the roll always carries: the LOADED pack's (Training-grade gas), read at the roll
+ *              from the pack that is loaded (blaster-gas-grades.ts loadedGasHalvings) and never stored;
+ *   range      the printed range the "Past 1/2D" switch keys on, or null: a launcher rolls the round it fired,
+ *              and an explosive round's blast never halves past 1/2D (post-roll-halving.ts rangeForDamageSource);
+ *   canBePast  whether that range is a pair - a single figure is Max only and never halves for range.
+ * Nothing is restated here: the three answers are the bundle's.
+ * @param {object|null} item
+ * @returns {{ standing: { id: string, label: string }[], range: string|null, canBePast: boolean }}
+ */
+export function damageHalvingsFor(item) {
+  if (item?.type !== 'blaster') return { standing: [], range: null, canBePast: false };
+  const row = rowWithDerived(item);
+  const P = engine.postRollHalving;
+  const range = P.rangeForDamageSource(row.finalHalfDamageRange, isGrenadeLauncher(row) ? 'explosive-payload' : 'weapon');
+  return { standing: engine.blasterGasGrades.loadedGasHalvings(row), range: range == null ? null : String(range), canBePast: P.hasHalfDamageRange(range) };
+}
+
+/**
+ * The answers a Damage roll needs before the dice: the situational modifier, the roll mode and - for a weapon
+ * with a 1/2D to be past - whether the target is past it. The website asks in the Damage button's popover
+ * (roll-button.tsx: a switch, off by default and per roll, "since the sheet holds no target distance"); here
+ * the roll prompt opens for exactly that case, unless the caller decided (a modifier or `pastHalfDamage` given,
+ * or `prompt: false`). Every other damage roll goes unprompted, as it always has.
+ * @returns {Promise<null|{ modifier: number, rollMode: string|undefined, pastHalfDamage: boolean }>} null when the prompt was closed
+ */
+async function resolveDamageOptions(spec, opts, { label, damage, halving }) {
+  const asked = spec.prompt === true || (spec.modifier === undefined && opts.prompt === true);
+  const decided = spec.modifier !== undefined || opts.modifier !== undefined || spec.pastHalfDamage !== undefined || spec.prompt === false || opts.prompt === false;
+  if (!asked && !(halving.canBePast && !decided)) {
+    return { modifier: Number(spec.modifier ?? opts.modifier) || 0, rollMode: spec.rollMode ?? opts.rollMode, pastHalfDamage: spec.pastHalfDamage === true };
+  }
+  const answer = await promptRoll({ label, target: null, damage, rollMode: spec.rollMode, halvings: halving.standing, halfDamageRange: halving.canBePast ? halving.range : null });
+  if (!answer) return null;
+  return { modifier: Number(answer.modifier) || 0, rollMode: answer.rollMode, pastHalfDamage: answer.pastHalfDamage === true };
+}
+
+/**
+ * Roll damage (use-dice-roller.ts rollDamage): the website formula is
  * translated to Foundry's grammar (toFoundryFormula), the situational modifier
- * rides on the formula, and the evaluated total is clamped to a minimum of 1.
+ * rides on the formula, the evaluated total is clamped to a minimum of 1, and
+ * then Ch11's post-roll halvings land on that total - the loaded pack's
+ * Training-grade gas, and "past 1/2D" when the player says so - each rounding
+ * down, with NO minimum after them (post-roll-halving.ts resolveDamageRoll: a
+ * halving is a transform on the rolled total, never a pre-halved dice string).
  * With an `item`, the formula comes from damageFormulaFor and the item's
  * pending hits are cleared afterwards.
  * @param {object} actor
- * @param {{ label?: string, formula?: string, damageType?: string, item?: object, bonus?: string, modifier?: number, rollMode?: string, prompt?: boolean }} spec
+ * @param {{ label?: string, formula?: string, damageType?: string, item?: object, bonus?: string, modifier?: number, rollMode?: string, prompt?: boolean, pastHalfDamage?: boolean }} spec
  */
 export async function rollDamage(actor, spec = {}, opts = {}) {
   const item = spec.item ?? null;
@@ -890,38 +943,48 @@ export async function rollDamage(actor, spec = {}, opts = {}) {
     notify('warn', fmt('SHADOWBASE.Roll.NotRollable', { formula: String(full ?? ''), reason: translated.reason ?? '' }));
     return null;
   }
-  const answer = spec.prompt === true || (spec.modifier === undefined && opts.prompt === true)
-    ? await promptRoll({ label: title, target: null, damage: full, rollMode: spec.rollMode })
-    : { modifier: Number(spec.modifier ?? opts.modifier) || 0, rollMode: spec.rollMode ?? opts.rollMode };
+  const halving = damageHalvingsFor(item);
+  const answer = await resolveDamageOptions(spec, opts, { label: title, damage: full, halving });
   if (!answer) return null;
   const modifier = Number(answer.modifier) || 0;
+  const halvings = engine.postRollHalving.damageRollHalvings(halving.standing, halving.range, answer.pastHalfDamage);
   const formula = modifier ? `${translated.formula}${signed(modifier)}` : translated.formula;
   const roll = await new Roll(formula).evaluate();
   const clamped = roll.total < 1;
-  const total = Math.max(1, roll.total);
+  // resolveDamageRoll: the 1-point floor sits on the FULL roll (the situational modifier already rides the Foundry
+  // formula, hence the 0 here), then each halving rounds down - and nothing floors the result after them.
+  const resolved = engine.postRollHalving.resolveDamageRoll(roll.total, 0, halvings);
+  const total = resolved.total;
   const damageType = spec.damageType ?? derived?.damageType ?? translated.damageType ?? null;
   const context = {
     title, label: baseLabel, websiteFormula: full, formula, flavor: translated.flavor, damageType, armorDivisor: translated.armorDivisor,
-    total, rawTotal: roll.total, clamped, dice: diceOf(roll), diceText: diceOf(roll).join(', '), modifier, modifierText: modifier ? signed(modifier) : '',
+    total, rawTotal: roll.total, clamped, beforeHalving: resolved.beforeHalving, halvingText: resolved.halvingText,
+    dice: diceOf(roll), diceText: diceOf(roll).join(', '), modifier, modifierText: modifier ? signed(modifier) : '',
     itemId: item?.id ?? null, itemName: item ? (item.displayName ?? item.name) : null, actorId: actor.id,
   };
-  const message = await postCard(actor, TEMPLATES.damage, context, { rollMode: answer.rollMode, rolls: [roll], flags: { kind: 'damage', itemId: item?.id ?? null, websiteFormula: full, formula, total, damageType, armorDivisor: translated.armorDivisor, flavor: translated.flavor } });
-  const description = `${loc('SHADOWBASE.Roll.Formula')}: ${full}${modifier ? ` (${signed(modifier)})` : ''}\n${loc('SHADOWBASE.Roll.Total')}: ${total}\n${loc('SHADOWBASE.Roll.Rolls')}: ${context.diceText}`;
+  const message = await postCard(actor, TEMPLATES.damage, context, { rollMode: answer.rollMode, rolls: [roll], flags: { kind: 'damage', itemId: item?.id ?? null, websiteFormula: full, formula, total, beforeHalving: resolved.beforeHalving, halvings: halvings.map((h) => h.id), halvingText: resolved.halvingText, damageType, armorDivisor: translated.armorDivisor, flavor: translated.flavor } });
+  const description = `${loc('SHADOWBASE.Roll.Formula')}: ${full}${modifier ? ` (${signed(modifier)})` : ''}\n${loc('SHADOWBASE.Roll.Total')}: ${total}${resolved.halvingText ? `\n${loc('SHADOWBASE.Roll.Halved')}: ${resolved.halvingText}` : ''}\n${loc('SHADOWBASE.Roll.Rolls')}: ${context.diceText}`;
   await pushHistory(actor, { title, description, timestamp: Date.now() });
   if (item) await clearPendingHits(item);
-  return { total, rawTotal: roll.total, clamped, formula, websiteFormula: full, damageType, flavor: translated.flavor, armorDivisor: translated.armorDivisor, roll, message };
+  return { total, rawTotal: roll.total, clamped, beforeHalving: resolved.beforeHalving, halvings, halvingText: resolved.halvingText, formula, websiteFormula: full, damageType, flavor: translated.flavor, armorDivisor: translated.armorDivisor, roll, message };
 }
 
 /**
- * Several damage rolls at once (use-dice-roller.ts rollDamageVolley, 386-403):
- * each item's formula rolled, each total clamped to 1.
+ * Several damage rolls at once (use-dice-roller.ts rollDamageVolley): each
+ * item's formula rolled, each total clamped to 1 and then halved by the same
+ * post-roll halvings a single roll carries (one answer for the whole volley,
+ * as the website's one popover gives).
  * @param {object} actor
  * @param {{ label: string, formula: string }[]} items
  */
 export async function rollDamageVolley(actor, items, spec = {}, opts = {}) {
   const baseLabel = spec.label ?? loc('SHADOWBASE.Roll.Damage');
   const title = fmt('SHADOWBASE.Roll.VolleyDamageTitle', { label: baseLabel });
-  const modifier = Number(spec.modifier ?? opts.modifier) || 0;
+  const halving = damageHalvingsFor(spec.item ?? null);
+  const answer = await resolveDamageOptions(spec, opts, { label: title, damage: `${[...new Set(items.map((it) => it.formula || '1d'))].join(' / ')} x${items.length}`, halving });
+  if (!answer) return null;
+  const modifier = Number(answer.modifier) || 0;
+  const halvings = engine.postRollHalving.damageRollHalvings(halving.standing, halving.range, answer.pastHalfDamage);
   const results = [];
   const rolls = [];
   for (const it of items) {
@@ -931,13 +994,14 @@ export async function rollDamageVolley(actor, items, spec = {}, opts = {}) {
     const formula = modifier ? `${t.formula}${signed(modifier)}` : t.formula;
     const roll = await new Roll(formula).evaluate();
     rolls.push(roll);
-    results.push({ label: it.label, websiteFormula: full, formula, flavor: t.flavor, total: Math.max(1, roll.total), rawTotal: roll.total, dice: diceOf(roll), diceText: diceOf(roll).join(', ') });
+    const resolved = engine.postRollHalving.resolveDamageRoll(roll.total, 0, halvings);
+    results.push({ label: it.label, websiteFormula: full, formula, flavor: t.flavor, total: resolved.total, rawTotal: roll.total, beforeHalving: resolved.beforeHalving, halvingText: resolved.halvingText, dice: diceOf(roll), diceText: diceOf(roll).join(', ') });
   }
   const context = { title, label: baseLabel, results, modifier, modifierText: modifier ? signed(modifier) : '', itemId: spec.item?.id ?? null, actorId: actor.id, damage: true };
-  const message = await postCard(actor, TEMPLATES.volley, context, { rollMode: spec.rollMode ?? opts.rollMode, rolls, flags: { kind: 'damage-volley', itemId: spec.item?.id ?? null, results: results.map(({ label, total, formula }) => ({ label, total, formula })) } });
-  await pushHistory(actor, { title, description: results.map((r) => `${r.label}: ${r.total ?? '-'} [${r.diceText ?? ''}]`).join('\n'), timestamp: Date.now() });
+  const message = await postCard(actor, TEMPLATES.volley, context, { rollMode: answer.rollMode, rolls, flags: { kind: 'damage-volley', itemId: spec.item?.id ?? null, halvings: halvings.map((h) => h.id), results: results.map(({ label, total, formula }) => ({ label, total, formula })) } });
+  await pushHistory(actor, { title, description: results.map((r) => `${r.label}: ${r.total ?? '-'} [${r.diceText ?? ''}]${r.halvingText ? ` ${fmt('SHADOWBASE.Roll.HalvedShot', { text: r.halvingText })}` : ''}`).join('\n'), timestamp: Date.now() });
   if (spec.item) await clearPendingHits(spec.item);
-  return { results, rolls, message };
+  return { results, halvings, rolls, message };
 }
 
 // ---------------------------------------------------------------------------
@@ -1014,7 +1078,12 @@ export function defenseTargetFor(actor, kind, { weaponItem = null } = {}) {
   const form = activeFormEffectFor(actor);
   if (kind === 'dodge') {
     // Dodge is one number on currentEncumbrance (stun and the channel inside), plus the Form's dodge with a saber readied.
-    const target = stats.currentEncumbrance.dodge + form.dodge;
+    // Ch7's Reeling (below one third of HP) halves Dodge "after its other modifiers, rounding up", and the Form's
+    // bonus is the one modifier that lands HERE rather than in the calculator - so it joins the UNHALVED figure the
+    // engine publishes for exactly this (stats.reeling.dodgeBeforeReeling) and the SUM is halved, as the website's
+    // use-character-form.ts finalDodge does. `currentEncumbrance.dodge + form.dodge` - the figure already halved,
+    // the bonus added whole - is the rejected alternative: Dodge 9 with Soresu's +1 would read 6, not 5.
+    const target = engine.reeling.reelingDodge(stats.reeling.dodgeBeforeReeling + form.dodge, stats.reeling.active);
     return { target, available: !!adj.dodgeAvailable, reason: adj.dodgeAvailable ? null : fmt('SHADOWBASE.Roll.ArcGate', { arc: adj.arc }), label: loc('SHADOWBASE.Roll.Dodge'), isOffHand: false, caveat: null };
   }
   if (!weaponItem) {
@@ -1329,7 +1398,7 @@ export const rolls = Object.freeze({
   ATTRIBUTE_KEYS, CHARACTERISTIC_KEYS, attributeTarget, characteristicTarget, skillTargetFor,
   rollAttribute, rollCharacteristic, rollSkill, rollCustom,
   equippedWeapons, isOffHandWeapon, malfunctionThresholdFor, attackTargetFor, attackBlockedReason, shotsFor, applyAttackSideEffects,
-  rollAttack, rollVolley, damageFormulaFor, withDamageBonus, rollDamage, rollDamageVolley,
+  firesExplosivePayload, rollAttack, rollVolley, damageFormulaFor, damageHalvingsFor, withDamageBonus, rollDamage, rollDamageVolley,
   unarmedTargetFor, rollUnarmed, rollUnarmedDamage,
   activeFormEffectFor, defenseTargetFor, rollDefense,
   forcePowerTargetFor, forcePowerCostsFor, rollForcePower, applyForcePowerCosts,

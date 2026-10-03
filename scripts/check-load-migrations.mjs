@@ -12,7 +12,10 @@
 // For every one of the 27 species, saved unmarked and saved with the rows marked
 // by a swap, the Foundry actor must hold exactly the rows the website's load
 // produces (name, level, points, baseline, fromSpecies marker) and leave at the
-// current speciesPackageRevision.
+// current speciesPackageRevision. Since revision 3 (2026-10-03: Ch18's lore lines
+// appended once to a saved sheet's notes, where its species prints any - only
+// Miraluka does) the NOTES are part of that comparison, and the website's
+// "Species notes added" notice must come back from every entry point.
 //
 // THE REJECTED ALTERNATIVE, against the app's own code path: spreading the blank
 // sheet under the incoming one BEFORE the call - applyLoadMigrations({ ...blank,
@@ -38,6 +41,9 @@
 //     -> A-raw and D-raw 8/54
 //   The FILE shapes (A, B, C) stay green under both: convertJsonToSheet writes an
 //   explicit revision 0, which survives the spread - the raw shape is the one at risk.
+// 2026-10-03 (revision 3; restored byte-identical):
+//   - documents/actor.mjs importSheet returning `{ notices: [] }` (the load's notices dropped on the way out)
+//     -> the "Species notes added" leg, 4/8 (both importSheet shapes of both Miraluka saves)
 //
 //   node scripts/check-load-migrations.mjs
 
@@ -53,8 +59,11 @@ const { bulkImportFiles } = await import(pathToFileURL(join(ROOT, 'module', 'imp
 const clone = (v) => structuredClone(v);
 const LISTS = ['advantages', 'disadvantages', 'quirks', 'forcePowers'];
 const sig = (r, list) => `${list}|${r?.name ?? ''}|${r?.level ?? ''}|${r?.points ?? ''}|${r?.baselinePoints ?? 0}|${r?.fromSpecies ?? ''}`;
-const sheetSig = (d) => LISTS.flatMap((list) => (d?.[list] ?? []).map((r) => sig(r, list))).sort();
-const actorSig = (actor) => LISTS.flatMap((list) => actor.rowsOf(list).map((i) => sig(i.system.row, list))).sort();
+// The notes ride the signature since 2026-10-03: species-package revision 3 appends Ch18's lore lines to a saved
+// sheet's notes (only Miraluka prints any), so "loads as the website loads it" now includes a text field.
+const notesSig = (notes) => `notes|${String(notes ?? '')}`;
+const sheetSig = (d) => [...LISTS.flatMap((list) => (d?.[list] ?? []).map((r) => sig(r, list))).sort(), notesSig(d?.notes)];
+const actorSig = (actor) => [...LISTS.flatMap((list) => actor.rowsOf(list).map((i) => sig(i.system.row, list))).sort(), notesSig(actor.system.notes)];
 const REVISION = engine.speciesPackageRevision?.SPECIES_PACKAGE_REVISION ?? engine.blankSheetData.speciesPackageRevision;
 
 // ---- the corpus: the website's own record of the packages as they shipped at 63eedd3 ---------------------------
@@ -88,6 +97,8 @@ const freshActor = (name) => {
 // the field existed - is where a blank spread first would hand it the current revision: the case the
 // website's check:species-packages tests as "the object states no revision at all".
 let changing = 0; let rawChanging = 0; let trapShown = 0; let trapOnFiles = 0;
+let notesChanging = 0; const loreSpecies = new Set(); let loreAnnounced = 0; let loreEntries = 0;
+const hasLoreNotice = (notices) => (notices ?? []).some((n) => n.id === 'species-lore' && n.title === 'Species notes added');
 const tally = { A: 0, B: 0, C: 0, D: 0, 'A-raw': 0, 'D-raw': 0 };
 const cases = species.flatMap((name) => [false, true].map((marked) => ({ name, marked })));
 const check = (tag, want, leg, got, revision) => {
@@ -100,26 +111,35 @@ for (const { name, marked } of cases) {
   const tag = `${name}${marked ? ' (marked by a swap)' : ''}`;
   const { file, sheet } = savedBefore(name, { marked });
   ok(`${tag}: the converted save states revision 0`, sheet.speciesPackageRevision === 0, `${sheet.speciesPackageRevision}`);
-  const want = sheetSig(engine.applyLoadMigrations(clone(sheet), engine.blankSheetData).data);
+  const website = engine.applyLoadMigrations(clone(sheet), engine.blankSheetData);
+  const want = sheetSig(website.data);
   if (JSON.stringify(want) !== JSON.stringify(sheetSig(sheet))) changing++;
+  // Revision 3: the website's load appended lore lines to this save's notes (and says so).
+  const gainsLore = notesSig(website.data.notes) !== notesSig(sheet.notes);
+  if (gainsLore) { notesChanging++; loreSpecies.add(name); ok(`${tag}: the website announces the lines it appended ("Species notes added")`, hasLoreNotice(website.notices)); }
   // With the explicit 0, even the rejected spread loads correctly - counted, not required, so the report says so.
   if (JSON.stringify(sheetSig(engine.applyLoadMigrations({ ...engine.blank(), ...clone(sheet) }, engine.blankSheetData).data)) !== JSON.stringify(want)) trapOnFiles++;
 
   // A. importSheet with a sheet object
-  { const actor = freshActor(`A ${tag}`); await actor.importSheet(clone(sheet)); check(tag, want, 'A', actorSig(actor), actor.system.speciesPackageRevision); }
+  // Each entry point also hands the website's notices on (the sheet's Import button and the batch importer show them):
+  // where the load appended lore lines, 'species-lore' must arrive through every one of the four.
+  const announced = (notices) => { if (!gainsLore) return; loreEntries++; if (hasLoreNotice(notices)) loreAnnounced++; };
+  { const actor = freshActor(`A ${tag}`); const r = await actor.importSheet(clone(sheet)); check(tag, want, 'A', actorSig(actor), actor.system.speciesPackageRevision); announced(r?.notices); }
   // B. importSheet with the character file
-  { const actor = freshActor(`B ${tag}`); await actor.importSheet(clone(file)); check(tag, want, 'B', actorSig(actor), actor.system.speciesPackageRevision); }
+  { const actor = freshActor(`B ${tag}`); const r = await actor.importSheet(clone(file)); check(tag, want, 'B', actorSig(actor), actor.system.speciesPackageRevision); announced(r?.notices); }
   // C. the batch importer (copy policy: always writes a new actor)
   {
     const { results } = await bulkImportFiles([{ name: `${name}.json`, text: JSON.stringify(file) }], 'copy');
     const actor = results[0]?.actorId ? globalThis.game.actors.get(results[0].actorId) : null;
     if (actor) check(tag, want, 'C', actorSig(actor), actor.system.speciesPackageRevision);
     else ok(`${tag} via C: the batch importer created an actor`, false, JSON.stringify(results[0] ?? null).slice(0, 200));
+    announced(results[0]?.notices);
   }
   // D. the shared helper
   if (typeof engine.loadIncomingSheet === 'function') {
     const loaded = engine.loadIncomingSheet(clone(sheet));
     check(tag, want, 'D', sheetSig(loaded.data), loaded.data.speciesPackageRevision);
+    announced(loaded.notices);
   } else ok(`${tag} via D: engine.loadIncomingSheet exists`, false);
 
   // The RAW object: same save, the revision key absent.
@@ -138,6 +158,9 @@ for (const { name, marked } of cases) {
 }
 ok(`saves that CHANGE on load, the rows that could fail (${changing}/${cases.length})`, changing >= species.length, `${changing}`);
 ok(`raw saves (no revision key) that change on load (${rawChanging}/${cases.length})`, rawChanging >= species.length, `${rawChanging}`);
+// Revision 3 (2026-10-03): the denominator for the notes half of every signature above, and the notice's way through.
+ok(`saves whose NOTES gain Ch18's lore lines on load: Miraluka, unmarked and marked (${notesChanging}; ${[...loreSpecies].join(', ')})`, notesChanging === 2 && JSON.stringify([...loreSpecies]) === JSON.stringify(['Miraluka']), `${notesChanging}; ${[...loreSpecies].join(', ')}`);
+ok(`the "Species notes added" notice arrives through every entry point that loaded such a save (${loreAnnounced}/${loreEntries}: importSheet with a sheet, with a file, the batch importer, the shared helper)`, loreEntries === notesChanging * 4 && loreAnnounced === loreEntries, `${loreAnnounced}/${loreEntries}`);
 ok(`the rejected alternative (blank spread under the save first) loads a raw save differently from the website every time it changes (${trapShown}/${rawChanging})`, trapShown === rawChanging && trapShown > 0, `${trapShown}`);
 for (const leg of Object.keys(tally)) ok(`${leg}: all ${cases.length} old saves load exactly as the website loads them (${tally[leg]}/${cases.length})`, tally[leg] === cases.length);
 console.log(`check:load-migrations: the rejected spread also mis-loads ${trapOnFiles}/${changing} converted FILE saves (0 expected: the importer's explicit 0 survives the spread)`);

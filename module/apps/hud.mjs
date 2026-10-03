@@ -88,7 +88,9 @@ export function maxPinned() { return notificationDepth() - 1; }
 
 /** roller-window.tsx:1300-1309 - the ranged shapes (the same predicates module/rolls.mjs keeps private). */
 const isStinger = (row) => lower(row.baseType).includes('stinger');
-const isGrenadeLauncher = (row) => row.category === 'Grenade Launchers' || String(row.baseType ?? '').includes('Launcher') || String(row.baseType ?? '').includes('Tube');
+// The launcher test is the website's ONE (lib/launcher-weapons.ts, through module/rolls.mjs): the old inline one read a
+// `category` a blaster row does not carry and missed the Mortar and the Underslung Grenade.
+const isGrenadeLauncher = (row) => rolls.firesExplosivePayload(row);
 const isSlugthrower = (row) => ['slugthrower', 'ripper', 'cycler'].some((w) => lower(row.baseType).includes(w));
 
 /** The composed sheet and the engine result, as module/rolls.mjs reads them. */

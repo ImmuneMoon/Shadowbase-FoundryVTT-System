@@ -46,7 +46,7 @@
 // that a human reviews.
 //
 // handbook/handbook-map.json: chapterId + heading -> { entryId, pageId,
-// anchor, level } for every heading (1466), first occurrence per name kept
+// anchor, level } for every heading (1467), first occurrence per name kept
 // in `byHeading`, every occurrence in `headings`; the HUD's chips resolve
 // through it (handbookRegistry.HANDBOOK_CHIP_TARGETS) and check:handbook pins
 // every chip target.

@@ -50,6 +50,10 @@ export * as socialRolls from '@/lib/social-rolls';
 export * as defenseSkills from '@/lib/defense-skills';
 export * as shipStations from '@/lib/ship-stations';
 export * as stimulantCrash from '@/lib/stimulant-crash';
+// The Damage roll's Ch11 halvings (past 1/2D, Training-grade gas: resolveDamageRoll, damageRollHalvings,
+// rangeForDamageSource) and the ONE launcher test they and the attack gates key on (2026-10-03).
+export * as postRollHalving from '@/lib/post-roll-halving';
+export * as launcherWeapons from '@/lib/launcher-weapons';
 
 // ---- Modifiers, traits, effects --------------------------------------------
 export * as modifierChannels from '@/lib/modifier-channels';
@@ -62,6 +66,9 @@ export * as conditionalBonuses from '@/lib/conditional-bonuses';
 export * as typedResistance from '@/lib/typed-resistance';
 export * as enhancedDefenses from '@/lib/enhanced-defenses';
 export * as moveMultipliers from '@/lib/move-multipliers';
+// Ch7 Reeling (2026-10-02): reelingDodge, for the one Dodge modifier that lands outside the calculator
+// (an active lightsaber Form's bonus joins the UNHALVED figure and the sum is halved - module/rolls.mjs).
+export * as reeling from '@/lib/reeling';
 export * as utilityCondition from '@/lib/utility-condition';
 export * as implantEffects from '@/lib/implant-effects';
 export * as advantageSkillBonuses from '@/lib/advantage-skill-bonuses';
