@@ -1,5 +1,9 @@
 # ShadowBase — Foundry VTT system (v13 / v14)
 
+![Foundry VTT v13 and v14](https://img.shields.io/badge/Foundry%20VTT-v13%20%7C%20v14-FE6A1F?logo=foundryvirtualtabletop&logoColor=white)
+[![System version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FImmuneMoon%2FShadowbase-FoundryVTT-System%2Fmain%2Fsystem.json&query=%24.version&label=system&color=blue)](https://github.com/ImmuneMoon/Shadowbase-FoundryVTT-System/blob/main/system.json)
+[![shadow-base.com](https://img.shields.io/website?url=https%3A%2F%2Fshadow-base.com&label=live%20site&up_message=online&down_message=offline)](https://shadow-base.com)
+
 The Foundry VTT system for *Shadows of the Mandalorian War* (3964 BBY): the
 character sheet, the Tactical HUD, the roll and damage processing, the item
 builders, the compendia and the rulebook as a journal — all driven by the
